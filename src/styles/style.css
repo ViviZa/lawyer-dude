@@ -5,3 +5,23 @@
 h1 {
   color: green;
 }
+
+.info-section {
+    display: flex;
+      flex-direction: row-reverse;
+      margin: 50px;
+}
+
+.info-section > .defaultImg {
+    order: 2;
+    height: 150px;
+    width: 250px;
+    margin: 30px;
+}
+
+.info-section > .story-text {
+    order: 1;
+    margin: 30px;
+    text-align: justify;
+
+}
