@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Startpage from './pages/Startpage';
+import Storypage from './pages/Storypage';
+import Decisionpage from './pages/Decisionpage';
+import Jailpage from './pages/Jailpage';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Startpage/>
+        _______________________________________________________________________________________________________________
+        <Storypage/>
+         _______________________________________________________________________________________________________________
+        <Decisionpage/>
+         _______________________________________________________________________________________________________________
+         <Jailpage/>
       </div>
     );
   }
