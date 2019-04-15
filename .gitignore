@@ -11,6 +11,12 @@
 # production
 /build
 
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
 # misc
 .DS_Store
 .env.local
