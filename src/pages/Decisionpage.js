@@ -12,6 +12,7 @@ class Decisionpage extends Component {
         <button>Option B</button>
         <p></p>
         <p></p>
+        <p></p>
         <button>go back</button>
         <button>go forward</button>
       </div>
