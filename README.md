@@ -1,4 +1,4 @@
-# lawyer-dude
+# lawyer-dude [![Build Status](https://api.travis-ci.com/ViviZa/lawyer-dude.svg?branch=master)](https://travis-ci.com/ViviZa/lawyer-dude)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
