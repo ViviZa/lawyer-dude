@@ -10,8 +10,8 @@ constructor(props) {
     this.onSetNewPage = this.onSetNewPage.bind(this);
     this.onSetUsername = this.onSetUsername.bind(this);
     this.state = {
-    currentPage: <Startpage onSaveUsername={this.onSetUsername} />,
-    username: ''
+    username : "",
+    currentPage: <Startpage onSaveUsername={this.onSetUsername} />
     };
   }
 
@@ -19,15 +19,14 @@ constructor(props) {
         this.setState({currentPage: <Storypage/>});
   }
 
-  onSetUsername(name) {
-    this.setState({username: name});
-    alert('A name was submitted: ' + this.state.username);
+  onSetUsername(uname) {
+    this.setState({username: uname});
     this.onSetNewPage();
   }
 
   render() {
     return (
-      <div className="Game">
+      <div className="App">
         {this.state.currentPage}
       </div>
     );
