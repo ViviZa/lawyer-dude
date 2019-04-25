@@ -17,6 +17,8 @@ class Startpage extends Component {
   }
 
   handleSubmit(event) {
+    this.props.setUserName(this.state.username);
+    this.props.goToNextPage(this.props.nextPage);
     event.preventDefault();
   }
 

@@ -5,21 +5,23 @@ import './App.css';
 
 class App extends Component {
 
-constructor(props) {
-    super(props);
-    this.onLoadPage = this.onLoadPage.bind(this);
-    this.state = {
-        pageArray : [],
-        currentPageIndex : 2, //change manually to render new page
-        username : ""
-    };
-  }
+    constructor(props) {
+        super(props);
+        this.onLoadPage = this.onLoadPage.bind(this);
+        this.onSetUsername = this.onSetUsername.bind(this);
+        this.onSetNextPage = this.onSetNextPage.bind(this);
+        this.state = {
+            pageArray : [],
+            currentPageIndex : 0,
+            username : ""
+        };
+      }
 
-  componentWillMount() {
-    this.onLoadPage();
-  }
+      componentWillMount() {
+        this.onLoadPage();
+      }
 
-   onLoadPage() {
+      onLoadPage() {
         const dataString = JSON.stringify(data);
         let jsonData = JSON.parse(dataString);
         let pages = [];
@@ -28,17 +30,26 @@ constructor(props) {
             pages.push(jsonData[i]);
         }
         this.setState({pageArray: pages});
-    }
+       }
+
+      onSetUsername(uname) {
+        this.setState({username: uname});
+        }
+
+      onSetNextPage(page) {
+          this.setState({currentPageIndex: page});
+        }
 
 
-  render() {
-    const currentPage = getCurrentPage(this.state.pageArray[this.state.currentPageIndex]);
-    return (
-      <div className="App">
-        {currentPage}
-      </div>
-    );
-  }
+      render() {
+        console.log("#########" + this.state.username + "#########");
+        const currentPage = getCurrentPage(this.state.pageArray[this.state.currentPageIndex], this.onSetUsername, this.onSetNextPage);
+        return (
+          <div className="App">
+            {currentPage}
+          </div>
+        );
+      }
 
  }
 

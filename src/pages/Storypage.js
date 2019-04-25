@@ -4,6 +4,16 @@ import defaultImg from './index.png';
 
 
 class Storypage extends Component {
+
+ constructor(props) {
+        super(props);
+        this.renderNextPage = this.renderNextPage.bind(this);
+      }
+
+  renderNextPage(){
+    this.props.goToNextPage(this.props.nextPage);
+  }
+
   render() {
     return (
       <div className="Storypage">
@@ -15,7 +25,7 @@ class Storypage extends Component {
             </div>
         </div>
         <button>go back</button>
-        <button>go forward</button>
+        <button onClick={this.renderNextPage}>go forward</button>
       </div>
 
     );

@@ -5,14 +5,14 @@ import Decisionpage from './Decisionpage';
 import Jailpage from './Jailpage';
 
 
-export const getCurrentPage = (currentPage) => {
+export const getCurrentPage = (currentPage, onSetUsername, onSetNewPage) => {
         let reactPage;
 
         if (currentPage.pageType === "StartPage")  {
-            reactPage = <Startpage headline={currentPage.headline} text={currentPage.text}/> ;
+            reactPage = <Startpage setUserName={onSetUsername} goToNextPage={onSetNewPage} headline={currentPage.headline} text={currentPage.text} nextPage={currentPage.nextPage}/> ;
 
         } else if (currentPage.pageType === "StoryPage") {
-             reactPage = <Storypage headline={currentPage.headline} text={currentPage.text}/>;
+             reactPage = <Storypage goToNextPage={onSetNewPage} headline={currentPage.headline} text={currentPage.text} nextPage={currentPage.nextPage}/>;
 
         } else if (currentPage.pageType === "DecisionPage") {
                        reactPage = <Decisionpage text={currentPage.text}/>;
