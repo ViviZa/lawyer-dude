@@ -1,37 +1,47 @@
 import React, { Component } from 'react';
-import Startpage from './pages/Startpage';
-import Storypage from './pages/Storypage';
+import {getCurrentPage} from "./pages/HelperFunction";
+import data from "./data";
 import './App.css';
 
 class App extends Component {
 
 constructor(props) {
     super(props);
-    this.onSetNewPage = this.onSetNewPage.bind(this);
-    this.onSetUsername = this.onSetUsername.bind(this);
+    this.onLoadPage = this.onLoadPage.bind(this);
     this.state = {
-    username : "",
-    currentPage: <Startpage onSaveUsername={this.onSetUsername} />
+        pageArray : [],
+        currentPageIndex : 2, //change manually to render new page
+        username : ""
     };
   }
 
-  onSetNewPage() {
-        this.setState({currentPage: <Storypage/>});
+  componentWillMount() {
+    this.onLoadPage();
   }
 
-  onSetUsername(uname) {
-    this.setState({username: uname});
-    this.onSetNewPage();
-  }
+   onLoadPage() {
+        const dataString = JSON.stringify(data);
+        let jsonData = JSON.parse(dataString);
+        let pages = [];
+
+        for (let i = 0; i < jsonData.length; i++) {
+            pages.push(jsonData[i]);
+        }
+        this.setState({pageArray: pages});
+    }
+
 
   render() {
+    const currentPage = getCurrentPage(this.state.pageArray[this.state.currentPageIndex]);
     return (
       <div className="App">
-        {this.state.currentPage}
+        {currentPage}
       </div>
     );
   }
 
-  }
+ }
+
+
 
 export default App;
