@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../styles/style.css';
 
 
+
 class Decisionpage extends Component {
   render() {
     return (

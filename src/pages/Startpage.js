@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import '../styles/style.css';
-
+import { withRouter } from 'react-router';
 
 class Startpage extends Component {
+  redirectToNextPage(){
+    const {history} = this.props;
+    history.push("/story");
+  }
+
   render() {
     return (
       <div className="Startpage">
@@ -12,10 +17,12 @@ class Startpage extends Component {
             Enter your name:
             <input type="text" name="name" />
           </label>
-        <button>Let's go</button>
+        <button onClick={() => this.redirectToNextPage()}>
+          Let's go
+        </button>
       </div>
     );
   }
 }
 
-export default Startpage;
+export default withRouter(Startpage);
