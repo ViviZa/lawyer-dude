@@ -9,7 +9,7 @@ export const getCurrentPage = (currentPage, onSetUsername, onSetNewPage) => {
         let reactPage;
 
         if (currentPage.pageType === "StartPage")  {
-            reactPage = <Startpage setUserName={onSetUsername} goToNextPage={onSetNewPage} headline={currentPage.headline} text={currentPage.text} nextPage={currentPage.nextPage}/> ;
+            reactPage = <Startpage setUserName={onSetUsername} goToNextPage={onSetNewPage} headline={currentPage.headline} panels={currentPage.panels} nextPage={currentPage.nextPage}/> ;
 
         } else if (currentPage.pageType === "StoryPage") {
              reactPage = <Storypage goToNextPage={onSetNewPage} headline={currentPage.headline} text={currentPage.text} nextPage={currentPage.nextPage}/>;
