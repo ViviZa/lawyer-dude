@@ -12,10 +12,10 @@ export const getCurrentPage = (currentPage, onSetUsername, onSetNewPage) => {
             reactPage = <Startpage setUserName={onSetUsername} goToNextPage={onSetNewPage} headline={currentPage.headline} panels={currentPage.panels} nextPage={currentPage.nextPage}/> ;
 
         } else if (currentPage.pageType === "StoryPage") {
-             reactPage = <Storypage goToNextPage={onSetNewPage} headline={currentPage.headline} text={currentPage.text} nextPage={currentPage.nextPage}/>;
+             reactPage = <Storypage goToNextPage={onSetNewPage} headline={currentPage.headline} panels={currentPage.panels} nextPage={currentPage.nextPage}/>;
 
         } else if (currentPage.pageType === "DecisionPage") {
-                       reactPage = <Decisionpage text={currentPage.text}/>;
+                       reactPage = <Decisionpage panels={currentPage.panels}/>;
 
         } else if (currentPage.pageType === "JailPage") {
                         reactPage = <Jailpage headline={currentPage.headline} text={currentPage.text}/>;

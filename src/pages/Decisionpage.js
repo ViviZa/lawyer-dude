@@ -7,7 +7,8 @@ class Decisionpage extends Component {
     return (
       <div className="Decisionpage">
         <h1>{this.props.headline}</h1>
-        <p>{this.props.text}</p>
+        <p>{this.props.panels[0]}</p>
+        {/*TODO: remove hardcoded textindex*/}
         <button>Option A</button>
         <button>Option B</button>
         <p></p>

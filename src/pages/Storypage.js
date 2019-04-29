@@ -21,7 +21,8 @@ class Storypage extends Component {
         <div className="info-section">
             <img src={defaultImg} className="defaultImg" alt="logo" />
             <div className="story-text">
-            <p>{this.props.text}</p>
+            <p>{this.props.panels[0]}</p>
+            {/*TODO: remove hardcoded textindex*/}
             </div>
         </div>
         <button>go back</button>
