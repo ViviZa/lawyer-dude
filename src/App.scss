@@ -1,5 +1,11 @@
 @import "styles/variables";
 @import "styles/sidebar";
+@import "styles/pagecontent";
+
+body {
+  font-family: "Rubik", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.2em;
+}
 
 .App {
   text-align: center;

@@ -47,18 +47,40 @@ class Startpage extends Component {
     return (
       <div className="Startpage">
         <SideNavigation/>
-        <h1>{this.props.headline}</h1>
-        <p>{this.props.panels[this.state.textIndex]}</p>
-        <button onClick={this.previousText}>go back</button>
-        <button onClick={this.nextText}>go forward</button>
-        <p></p>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Enter your name:
-            <input type="text" value={this.state.username} onChange={this.handleChange} />
-          </label>
-          <input type="submit" value="Let's go" />
-        </form>
+        <div className="pagecontent">
+          <h1>{this.props.headline}</h1>
+          <p>{this.props.panels[this.state.textIndex]}</p>
+          <button onClick={this.previousText} className="BackButton">
+            <svg width="21px" height="36px" viewBox="0 0 21 36" version="1.1">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Enter-your-name_v2" transform="translate(-787.000000, -903.000000)" stroke="#FFFFFF" stroke-width="3">
+                        <g id="next_btn" transform="translate(767.000000, 888.000000)">
+                            <polyline id="Path" transform="translate(31.500000, 33.000000) scale(-1, 1) rotate(-270.000000) translate(-31.500000, -33.000000) " points="15.5 41.5 31.5 24.5 31.5 24.5 47.5 41.5"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+          </button>
+          <button onClick={this.nextText} className="ForthButton">
+            <svg width="21px" height="35px" viewBox="0 0 21 35" version="1.1">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Enter-your-name_v2" transform="translate(-876.000000, -904.000000)" stroke="#FFFFFF" stroke-width="3">
+                        <g id="next_btn" transform="translate(851.000000, 888.000000)">
+                            <polyline id="Path" transform="translate(35.000000, 33.500000) rotate(-270.000000) translate(-35.000000, -33.500000) " points="19 42 35 25 35 25 51 42"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+          </button>
+          <p></p>
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Enter your name:
+              <input type="text" value={this.state.username} onChange={this.handleChange} />
+            </label>
+            <input type="submit" value="Let's go" />
+          </form>
+        </div>
       </div>
     );
   }
