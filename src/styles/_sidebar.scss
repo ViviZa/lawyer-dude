@@ -1,0 +1,35 @@
+@import "variables";
+
+.SideNavigation {
+	background-color: $pm-petrolblue;
+	width: 245px;
+	height: 100%;
+	display: block;
+	position: fixed;
+	top: 0; 
+	left: 0;
+
+	ul {
+
+		padding-top: 150px; 
+
+
+		li {
+		
+			list-style-type: none;
+			padding: 10px 10px; 
+
+			a {
+
+				color: $nav-reached;
+				text-decoration: none;
+
+			}
+		}
+	}
+}
+
+.logo-box {
+	background-color: $pm-yellow;
+	height: 165px; 
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SideNavigation from '../components/SideNavigation';
 import '../styles/style.css';
 
 
@@ -45,6 +46,7 @@ class Startpage extends Component {
   render() {
     return (
       <div className="Startpage">
+        <SideNavigation/>
         <h1>{this.props.headline}</h1>
         <p>{this.props.panels[this.state.textIndex]}</p>
         <button onClick={this.previousText}>go back</button>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {getCurrentPage} from "./pages/HelperFunction";
 import data from "./data";
-import './App.css';
+import './App.scss';
 
 class App extends Component {
 
