@@ -1,17 +1,18 @@
 @import "variables";
 
-.SideNavigation {
-	background-color: $darkblue;
-	width: 245px;
+.SideNavigation{
 	height: 100%;
-	display: block;
+	width: 6%;
+	background-color: $darkblue;
+	float: left;
 	position: fixed;
 	top: 0; 
 	left: 0;
-
 	ul {
 
-		padding-top: 150px; 
+		padding-top: 20px; 
+		padding-inline-start: 15px;
+		text-align: left;
 
 
 		li {
@@ -27,9 +28,50 @@
 			}
 		}
 	}
+
 }
+.navNarrow {
+
+	i {
+		float: left;
+		.fa-bars{
+			color: white;
+		}
+	}
+
+	.narrowLinks {
+		display: none;
+
+		a {
+			display: block;
+			float: left;
+			clear: left;
+		}
+	}
+}
+.navWide {
+	display: none;
+  }
 
 .logo-box {
 	background-color: $yellow;
 	height: 165px; 
+}
+
+@media (min-width: 1060px) {
+	.SideNavigation{
+		display: block;
+		width: 15%;
+	}
+
+    nav {
+
+        .navWide {
+            display: block;
+        }
+
+        .navNarrow {
+            display: none;
+        }
+    }
 }

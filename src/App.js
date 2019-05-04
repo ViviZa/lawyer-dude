@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import {getCurrentPage} from "./pages/HelperFunction";
 import data from "./data";
 import './App.scss';
+
+library.add(faBars);
 
 class App extends Component {
 
