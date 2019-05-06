@@ -1,0 +1,42 @@
+[
+  {
+    "id": 0,
+    "pageType" : "StartPage",
+    "headline" : "Welcome",
+    "panels": [
+        "Hi <username>! Welcome to the Lawyerdude Tutorial. I am the Lawyerdude and I am here to help you.",
+        "Don’t worry. I know that there is a lot of confusion about using pictures from the internet. But it is actually not that complicated. Let’s just do it together, alright?",
+        "Do you have anything in mind yet?"
+      ],
+    "nextPage" : "1"
+  },
+  {
+    "id": 1,
+    "pageType" : "StoryPage",
+    "headline" : "Use Case 1",
+    "panels": [
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At vero eos et accusam et justo duo dolores et ea rebum.",
+      "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua",
+      "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takima"
+    ],
+    "nextPage" : "2"
+  },
+  {
+    "id": 2,
+    "pageType" : "DecisionPage",
+    "headline" : "Decision 1",
+    "panels": [
+      "Take a decision.",
+      "sText Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text",
+      "Please take a decision now"
+    ],
+    "nextPage" : "3"
+  },
+  {
+    "id": 3,
+    "pageType" : "JailPage",
+    "headline" : "Uh oh!",
+    "text": "You're in jail. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum.",
+    "nextPage" : "4"
+  }
+]
