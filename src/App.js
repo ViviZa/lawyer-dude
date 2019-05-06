@@ -6,8 +6,11 @@ import Jailpage from './pages/Jailpage';
 import {Route, Router} from 'react-router-dom';
 import './App.scss';
 import { createBrowserHistory } from "history";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 const history = createBrowserHistory()
+library.add(faBars);
 
 class App extends Component {
   render() {
