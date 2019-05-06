@@ -4,7 +4,7 @@ import Storypage from './pages/Storypage';
 import Decisionpage from './pages/Decisionpage';
 import Jailpage from './pages/Jailpage';
 import {Route, Router} from 'react-router-dom';
-import './App.css';
+import './App.scss';
 import { createBrowserHistory } from "history";
 
 const history = createBrowserHistory()

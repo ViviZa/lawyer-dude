@@ -5,6 +5,8 @@ import { withRouter } from 'react-router';
 
 
 class Storypage extends Component {
+
+
   redirectPage(pageName){
     const {history} = this.props;
     history.push("/" + pageName);
