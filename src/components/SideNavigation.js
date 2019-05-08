@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../styles/style.css';
+import { Link } from 'react-router-dom';
 
 
 class SideNavigation extends Component {
@@ -25,9 +26,9 @@ class SideNavigation extends Component {
         <div className="navWide">
         <div className="wideDiv">
         <ul>
-          <li><a href="#startpage">Startpage</a></li>
-          <li><a href="#storypage">Storypage</a></li>
-          <li><a href="#decisionpage">Decisionpage</a></li>
+          <li><Link to="/">Startpage</Link></li>
+          <li><Link to="/story">Storypage</Link></li>
+          <li><Link to="/decision">Decisionpage</Link></li>
         </ul>
         </div>         
       </div>
