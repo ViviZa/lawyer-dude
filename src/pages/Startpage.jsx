@@ -54,7 +54,7 @@ class Startpage extends Component {
   }
 
   previousText() {
-    const theSize = this.props.panels.length-1;
+    const theSize = this.state.panels.length-1;
     if(this.state.textIndex > 0 && this.state.textIndex <= theSize){
         this.state.textIndex--;
         this.setState({textIndex: this.state.textIndex});
