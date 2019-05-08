@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import SideNavigation from '../components/SideNavigation';
 import '../styles/style.css';
 import defaultImg from './index.png';
 import { withRouter } from 'react-router';
 
-
 class Storypage extends Component {
-
 
   redirectPage(pageName){
     const {history} = this.props;
@@ -14,7 +13,9 @@ class Storypage extends Component {
 
   render() {
     return (
-      <div className="Storypage">
+     <div className="Storypage">
+      <SideNavigation/>
+      <div className="pagecontent">
         <h1>Use Case 1</h1>
         <div className="info-section">
             <img src={defaultImg} className="defaultImg" alt="logo" />
@@ -29,7 +30,7 @@ class Storypage extends Component {
             go forward
         </button>
       </div>
-
+    </div>
     );
   }
 }
