@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SideNavigation from '../components/SideNavigation';
 import '../styles/style.css';
 import data from './Decision.json';
 
@@ -47,37 +48,40 @@ class Decisionpage extends Component {
     const {headline, panels} = this.state;
     return (
       <div className="Decisionpage">
-        <h1>{headline}</h1>
-        <p></p>
-        <p>
-         {panels[this.state.textIndex]}
-        </p>
-          <button onClick={this.previousText} className="BackButton">
-            <svg width="21px" height="36px" viewBox="0 0 21 36" version="1.1">
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g id="Enter-your-name_v2" transform="translate(-787.000000, -903.000000)" stroke="#FFFFFF" stroke-width="3">
-                        <g id="next_btn" transform="translate(767.000000, 888.000000)">
-                            <polyline id="Path" transform="translate(31.500000, 33.000000) scale(-1, 1) rotate(-270.000000) translate(-31.500000, -33.000000) " points="15.5 41.5 31.5 24.5 31.5 24.5 47.5 41.5"></polyline>
+        <SideNavigation/>
+        <div className="pagecontent">
+            <h1>{headline}</h1>
+            <p></p>
+            <p>
+             {panels[this.state.textIndex]}
+            </p>
+              <button onClick={this.previousText} className="BackButton">
+                <svg width="21px" height="36px" viewBox="0 0 21 36" version="1.1">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Enter-your-name_v2" transform="translate(-787.000000, -903.000000)" stroke="#FFFFFF" stroke-width="3">
+                            <g id="next_btn" transform="translate(767.000000, 888.000000)">
+                                <polyline id="Path" transform="translate(31.500000, 33.000000) scale(-1, 1) rotate(-270.000000) translate(-31.500000, -33.000000) " points="15.5 41.5 31.5 24.5 31.5 24.5 47.5 41.5"></polyline>
+                            </g>
                         </g>
                     </g>
-                </g>
-            </svg>
-          </button>
-          <button onClick={this.nextText} className="ForthButton">
-                      <svg width="21px" height="35px" viewBox="0 0 21 35" version="1.1">
-                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                              <g id="Enter-your-name_v2" transform="translate(-876.000000, -904.000000)" stroke="#FFFFFF" stroke-width="3">
-                                  <g id="next_btn" transform="translate(851.000000, 888.000000)">
-                                      <polyline id="Path" transform="translate(35.000000, 33.500000) rotate(-270.000000) translate(-35.000000, -33.500000) " points="19 42 35 25 35 25 51 42"></polyline>
+                </svg>
+              </button>
+              <button onClick={this.nextText} className="ForthButton">
+                          <svg width="21px" height="35px" viewBox="0 0 21 35" version="1.1">
+                              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                  <g id="Enter-your-name_v2" transform="translate(-876.000000, -904.000000)" stroke="#FFFFFF" stroke-width="3">
+                                      <g id="next_btn" transform="translate(851.000000, 888.000000)">
+                                          <polyline id="Path" transform="translate(35.000000, 33.500000) rotate(-270.000000) translate(-35.000000, -33.500000) " points="19 42 35 25 35 25 51 42"></polyline>
+                                      </g>
                                   </g>
                               </g>
-                          </g>
-                      </svg>
-           </button>
-           <p></p>
-           <p></p>
-           <button>Option A</button>
-           <button>Option B</button>
+                          </svg>
+               </button>
+               <p></p>
+               <p></p>
+               <button>Option A</button>
+               <button>Option B</button>
+          </div>
       </div>
     );
   }
