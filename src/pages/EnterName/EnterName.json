@@ -1,0 +1,12 @@
+[{
+  "id": 0,
+  "pageType" : "Enter Name",
+  "headline" : "Enter Your Name",
+  "panels": [
+      "Hello. You are interested in learning about licenses? That’s great, you are at the right address.",
+      "But, how rude of me to be. I totally forgot to introduce myself. I am the Lawyerdude and I am here to help you.",
+      "Before we start our exciting journey through the beautiful world of licenses, what shall I call you?"
+    ],
+  "nextPage" : "2"  
+}
+]

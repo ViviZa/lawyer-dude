@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import SideNavigation from '../components/SideNavigation';
-import '../styles/style.css';
+import SideNavigation from '../../components/SideNavigation';
+import '../../styles/style.css';
 import data from './Decision.json';
 
 

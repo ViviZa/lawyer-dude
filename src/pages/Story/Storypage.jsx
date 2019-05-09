@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import SideNavigation from '../components/SideNavigation';
-import '../styles/style.css';
+import SideNavigation from '../../components/SideNavigation';
+import '../../styles/style.css';
 import data from './Story.json';
-import defaultImg from './index.png';
+import defaultImg from '../index.png';
 import { withRouter } from 'react-router';
 
 class Storypage extends Component {
