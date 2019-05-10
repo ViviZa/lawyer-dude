@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import SideNavigation from '../../components/SideNavigation';
-import '../../styles/style.css';
+import SideNavigation from '../components/SideNavigation';
+import '../styles/style.css';
 import { withRouter } from 'react-router';
-import data from './Start.json';
-import ForthButton from '../../components/ForthButton';
+import data from '../data.json';
+import ForthButton from '../components/ForthButton';
 
 class Startpage extends Component {
  constructor(props) {
@@ -12,7 +12,9 @@ class Startpage extends Component {
       username: '',
       textIndex: 0,
       panels: [],
-      headline: ''
+      headline: '',
+      nextPage: '',
+      nextPageID: 0,
     };
 
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
@@ -21,15 +23,23 @@ class Startpage extends Component {
   componentDidMount(){
     const dataString = JSON.stringify(data);
     let jsonData = JSON.parse(dataString);
+    const filteredJSON = jsonData.filter( values => values.id === 0);
+    const nextPageID = filteredJSON[0].nextPageIDs;
     this.setState({
-      panels: jsonData[0].panels,
-      headline: jsonData[0].headline
+      panels: filteredJSON[0].panels,
+      headline: filteredJSON[0].headline,
+      nextPage: filteredJSON[0].nextPage,
+      nextPageID: nextPageID,
     })
   }
 
   redirectToNextPage(){
     const {history} = this.props;
-    history.push("/learninggoals");
+    const {nextPageID, nextPage} = this.state;
+    history.push({
+      pathname: nextPage,
+      state: {ID: nextPageID},
+    });
   }
 
   render() {

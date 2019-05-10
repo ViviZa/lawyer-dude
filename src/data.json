@@ -2,41 +2,266 @@
   {
     "id": 0,
     "pageType" : "StartPage",
-    "headline" : "Welcome",
-    "panels": [
-        "Hi <username>! Welcome to the Lawyerdude Tutorial. I am the Lawyerdude and I am here to help you.",
-        "Don’t worry. I know that there is a lot of confusion about using pictures from the internet. But it is actually not that complicated. Let’s just do it together, alright?",
-        "Do you have anything in mind yet?"
-      ],
-    "nextPage" : "1"
+    "headline" : "The Lawyer Dude",
+    "nextPage" : "/learninggoals",
+    "nextPageIDs": 1
   },
   {
     "id": 1,
-    "pageType" : "StoryPage",
-    "headline" : "Use Case 1",
+    "pageType" : "LearningGoals",
+    "headline" : "What you learn in this story",
     "panels": [
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At vero eos et accusam et justo duo dolores et ea rebum.",
-      "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua",
-      "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takima"
-    ],
-    "nextPage" : "2"
+        "This online learning unit will help you to understand how to use pictures from the internet.",
+        "You will get to know the difference between some rights, all rights and no rights reserved pictures and which information you need to provide in order to use them.",
+        "You will also learn about different tools and repositories that can help you find free to use pictures on the internet.",
+        "Find your own way through the game and be rewarded with a lot of helpful knowledge.",
+        "Ok, let’s learn how to use pictures from the internet without going to jail."
+      ],
+    "nextPage" : "/entername",  
+    "nextPageIDs": 2
   },
   {
     "id": 2,
-    "pageType" : "DecisionPage",
-    "headline" : "Decision 1",
+    "pageType" : "EnterName",
+    "headline" : "Enter Your Name",
     "panels": [
-      "Take a decision.",
-      "sText Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text",
-      "Please take a decision now"
-    ],
-    "nextPage" : "3"
+        "Hello. You are interested in learning about licenses? That’s great, you are at the right address.",
+        "But, how rude of me to be. I totally forgot to introduce myself. I am the Lawyerdude and I am here to help you.",
+        "Before we start our exciting journey through the beautiful world of licenses, what shall I call you?"
+      ],
+    "nextPage" : "/introduction",  
+    "nextPageIDs" : 3  
   },
   {
     "id": 3,
+    "pageType" : "Introduction",
+    "headline" : "Introduction",
+    "panels": [
+        "Okay, <username>.",
+        "Don’t worry. I know that there is a lot of confusion about using pictures from the internet. But it is actually not that complicated. Let’s just do it together, alright?",
+        "What brought you here anyway?"
+      ],
+      "decisions": [
+        "I found a nice picture online that I want to use. Can you show me how I do it correctly?",
+        "I am not sure where to look for a picture that I can use for my own purpose. Can you help me?"
+      ],
+    "nextPage": ["/picturesfrominternet", "/searchingonline"],
+    "nextPageIDs": [4,5]  
+  },
+  {
+    "id": 4,
+    "pageType" : "picturesfrominternet",
+    "headline" : "Using pictures from the internet",
+    "panels": [
+        "Great, let's find out if and how you can use a picture from the internet.",
+        "<INTRODUCTION TO LICENSE LAW>",
+        "Alright, I think you got to know the basics now. Do you know which case applies to your picture?"
+      ],
+      "decisions": [
+        "Phhh, that is way too complicated. I could just use the picture, nobody will ever find out anyway.",
+        "I don’t know, to be honest.",
+        "Forget about the picture! Isn’t there a way to get those free to use pictures you just talked about?"
+      ],
+    "nextPage": ["/jail", "/understandingsource", "/usingfreelicences"],
+    "nextPageIDs": [300,6,7]  
+  },
+  {
+    "id": 5,
+    "pageType" : "searchingonline",
+    "headline" : "Searching for pictures online",
+    "panels": [
+        "Alright then. Let’s find a nice picture that fits your purpose.",
+        "<INTRODUCTION TO LICENSE LAW>",
+        "So, where do you want to look?"
+      ],
+      "decisions": [
+        "Google it.",
+        "I don’t know. You tell me!"
+      ],
+    "nextPage": ["placeholder1", "placeholder2"],
+    "nextPageIDs": [4,5]  
+  },
+  {
+    "id": 6,
+    "pageType" : "understandingthesource",
+    "headline" : "Understanding the Source",
+    "panels": [
+        "No problem. I can help you to find all the information you need. First let’s start with the source of the picture",
+        "<Unterscheidung zwischen all rights und some rights reserved>",
+        "Where did you find your picture?"
+      ],
+      "decisions": [
+        "Seriously? I don't remember, I just downloaded it I guess.",
+        "On some page on the internet. I can show you!",
+        "Wikimedia Commons or Wikipedia."
+      ],
+    "nextPage": ["/jail", "/findingholder", "usingwiki"],
+    "nextPageIDs": [300,8,9]  
+  },
+  {
+    "id": 7,
+    "pageType" : "usingfreelicences",
+    "headline" : "Using free licenses",
+    "panels": [
+        "I know, you probably expect me to show you a magical way of finding pictures, that you can easily use. Well, there is something just like that.",
+        "<EXPLAINING REPOSITORIES>"
+      ],
+      "decisions": [
+        "Wow, tell me more!",
+        "I am not convinced. That sounds limited to me."
+      ],
+    "nextPage": ["/jail", "placeholder2"],
+    "nextPageIDs": [300,5]  
+  },
+  {
+    "id": 8,
+    "pageType" : "findingthecopyrightholder",
+    "headline" : "Finding the copyright holder",
+    "panels": [
+        "That’s good! The source of the picture is one of the components of the license notice.",
+        "Another very important thing is to know the copyright holder of the picture.",
+        "...",
+        "Do you know who created the picture?"
+      ],
+      "decisions": [
+        "I don’t care!",
+        "Of course!",
+        "No, I can not find any information on that."
+      ],
+    "nextPage": ["/jail", "copyrightinfo"],
+    "nextPageIDs": [300,10]  
+  },
+  {
+    "id": 9,
+    "pageType" : "usingwiki",
+    "headline" : "Using Wikimedia Commons 1",
+    "panels": [
+        "..."
+      ],
+      "decisions": [
+        "That’s it? So how do I use these pictures then?",
+        "Cool, that's very easy. Thanks for showing me where to get pictures without licenses!"
+      ],
+    "nextPage": ["/jail", "placeholder2"],
+    "nextPageIDs": [300,5]  
+  },
+  {
+    "id": 10,
+    "pageType" : "findingcopyrightinfo",
+    "headline" : "Finding the copyright information",
+    "panels": [
+        "That’s good! The source of the picture is one of the components of the license notice.",
+        "...",
+        "Did the author provide information about the usage of the picture?"
+      ],
+      "decisions": [
+        "No! But I will use it anyway.",
+        "I don’t know. Where can I find this?",
+        "Yes, I already found out."
+      ],
+    "nextPage": ["/jail", "/gettinglicence", "usinglicence"],
+    "nextPageIDs": [300,11,12]  
+  },
+  {
+    "id": 11,
+    "pageType" : "gettinglicence",
+    "headline" : "Getting the licence",
+    "panels": [
+        "Don't worry. I know that sometimes it can be difficult to find these information on a website.",
+        "Lawyerdude explains where licenses are placed typically",
+        "Let’s just try, if you can find the license information in the following examples."
+      ],
+    "nextPage":  "/usinglicence",
+    "nextPageIDs": 12  
+  },
+  {
+    "id": 12,
+    "pageType" : "usinglicence",
+    "headline" : "Using the licence",
+    "panels": [
+      "Good. You collected all the information you need to create a license notice. Do you feel ready to learn how to do it?"
+      ],
+      "decisions": [
+        "Let me try it to find the license information again.",
+        "Sure.",
+        "I could not find the license information for my picture."
+      ],
+      "nextPage": ["/placeholder", "/creatingnotice"],
+      "nextPageIDs": [123,13]  
+  },
+  {
+    "id": 13,
+    "pageType" : "creatingnotice",
+    "headline" : "Creating the licence notice",
+    "panels": [
+      "Of course you need to create a license notice.",
+      "<CREATING A LICENSE NOTICE>",
+      "Good. Do you think you got everything together now?"
+      ],
+      "decisions": [
+        "Yes, let's go!",
+        "Actually, I’m not sure.."
+      ],
+      "nextPage": ["/usingpicture", "/gettinglicence"],
+      "nextPageIDs": [14,11]  
+  },
+  {
+    "id": 14,
+    "pageType" : "usingpicture",
+    "headline" : "Using the picture",
+    "panels": [
+      "Great! Now you have all the information you need to use your picture from the internet without going to jail."
+      ],
+      "decisions": [
+        "Not sure, tell me more.",
+        "Cool."
+      ],
+      "nextPage": ["/moreinformation", "/placeholder"],
+      "nextPageIDs": [15,112235]  
+  },
+  {
+    "id": 15,
+    "pageType" : "moreinformation",
+    "headline" : "More information",
+    "panels": [
+      "..."
+      ],
+      "decisions": [
+        "Ok, continue"
+      ],
+      "nextPage": ["/success"],
+      "nextPageIDs": [16]  
+  },
+  {
+    "id": 16,
+    "pageType" : "success",
+    "headline" : "Success",
+    "panels": [
+      "Well done! Now you can use the picture without going to jail. But there are more ways to get here. Do you want to learn more?"
+      ],
+      "decisions": [
+        "Thanks, that's enough licenses for now!",
+        "Tell me more."
+      ],
+      "nextPage": ["/finish"],
+      "nextPageIDs": [17]  
+  },
+  {
+    "id": 17,
+    "pageType" : "finish",
+    "headline" : "Finish",
+    "panels": [
+      "...",
+      "<DISCLAIMER>"
+      ],
+      "nextPage": ["/placeholder"],
+      "nextPageIDs": [123]  
+  },
+  {
+    "id": 300,
     "pageType" : "JailPage",
     "headline" : "Uh oh!",
     "text": "You're in jail. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum.",
-    "nextPage" : "4"
+    "nextPage" : 5
   }
 ]

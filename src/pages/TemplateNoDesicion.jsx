@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
-import SideNavigation from '../../components/SideNavigation';
-import '../../styles/style.css';
+import SideNavigation from '../components/SideNavigation';
+import '../styles/style.css';
 import { withRouter } from 'react-router';
-import data from './EnterName.json';
-import BackButton from '../../components/BackButton';
-import ForthButton from '../../components/ForthButton';
+import data from '../data.json';
+import BackButton from '../components/BackButton';
+import ForthButton from '../components/ForthButton';
 
-class EnterName extends Component {
+class NoDecision extends Component {
  constructor(props) {
     super(props);
     this.state = {
       textIndex: 0,
       panels: [],
-      headline: ''
+      headline: '',
+      nextPageID: 0,
+      nextPage: '',
     };
     this.nextText = this.nextText.bind(this);
     this.previousText = this.previousText.bind(this);
@@ -21,18 +23,26 @@ class EnterName extends Component {
   }
 
   componentDidMount(){
+    const {ID} = this.props.location.state;
     const dataString = JSON.stringify(data);
     let jsonData = JSON.parse(dataString);
+    const filteredJSON = jsonData.filter( values => values.id === ID);
+    const nextPageID = filteredJSON[0].nextPageIDs;
     this.setState({
-      panels: jsonData[0].panels,
-      headline: jsonData[0].headline
+      panels: filteredJSON[0].panels,
+      headline: filteredJSON[0].headline,
+      nextPage: filteredJSON[0].nextPage,
+      nextPageID: nextPageID,
     })
   }
 
-  redirectToNextPage(event){
+  redirectToNextPage(){
     const {history} = this.props;
-    this.setState({username: event.target.value});
-    history.push("/story");
+    const {nextPageID, nextPage} = this.state;
+    history.push({
+      pathname: nextPage,
+      state: {ID: nextPageID},
+    });
   }
 
   handleSubmit(event) {
@@ -79,13 +89,7 @@ class EnterName extends Component {
                 </div>
               ) : (
                   <div>
-                    <form onSubmit={this.handleSubmit}>
-                      <label>
-                        Enter your name:
-                        <input type="text" value={this.state.username} onChange={this.handleChange} />
-                      </label>
-                      <input type="submit" value="Let's go" onClick={(event) => this.redirectToNextPage(event)}/>
-                    </form>
+                      <ForthButton nextText={this.redirectToNextPage} />
                   </div>
               )
             }
@@ -97,4 +101,4 @@ class EnterName extends Component {
   }
 }
 
-export default withRouter(EnterName);
+export default withRouter(NoDecision);
