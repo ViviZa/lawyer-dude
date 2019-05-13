@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import Storypage from './pages/Story/Storypage';
 import StartPage from './pages/Startpage';
-import Decisionpage from './pages/Decision/Decisionpage';
 import Jailpage from './pages/Jailpage';
 import {Route, Router} from 'react-router-dom';
 import './App.scss';
@@ -37,8 +35,6 @@ class App extends Component {
           <Route exact path="/moreinformation" component={() => <TemplateDecision/>}/>
           <Route exact path="/success" component={() => <TemplateDecision/>}/>
           <Route exact path="/finish" component={() => <TemplateDecision/>}/>
-          <Route exact path="/story" component={() => <Storypage/>}/>
-          <Route exact path="/decision" component={() => <Decisionpage/>}/>
           <Route exact path="/jail" component={() => <Jailpage/>}/>
       </Router>
     );

@@ -41,7 +41,6 @@ class LearningGoals extends Component {
   redirectToNextPage(index){
     const {history} = this.props;
     const {nextPageIDs, nextPages} = this.state;
-    console.log(nextPageIDs)
     history.push({
       pathname: nextPages[index],
       state: {ID: nextPageIDs[index]},
