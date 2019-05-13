@@ -6,11 +6,10 @@ import data from '../data.json';
 import ForthButton from '../components/ForthButton';
 
 class Startpage extends Component {
- constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
       username: '',
-      textIndex: 0,
       panels: [],
       headline: '',
       nextPage: '',
@@ -20,7 +19,7 @@ class Startpage extends Component {
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     const dataString = JSON.stringify(data);
     let jsonData = JSON.parse(dataString);
     const filteredJSON = jsonData.filter( values => values.id === 0);
@@ -47,7 +46,7 @@ class Startpage extends Component {
 
     return (
       <div className="Startpage">
-        <SideNavigation/>
+        <SideNavigation />
         <div className="pagecontent">
           <h1>{headline}</h1>
           <h3>an e-learning unit on using pictures from the internet without going to jail</h3>
