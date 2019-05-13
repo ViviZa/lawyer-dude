@@ -27,6 +27,8 @@ class SideNavigation extends Component {
         <div className="wideDiv">
         <ul>
           <li><Link to="/">Startpage</Link></li>
+          <li><Link to="/learninggoals">Learning Goals</Link></li>
+          <li><Link to="/entername">Enter Name</Link></li>
           <li><Link to="/story">Storypage</Link></li>
           <li><Link to="/decision">Decisionpage</Link></li>
         </ul>

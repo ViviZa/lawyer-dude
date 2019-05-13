@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import SideNavigation from '../components/SideNavigation';
 import '../styles/style.css';
 import { withRouter } from 'react-router';
-import data from './Start.json';
-import Buttons from '../components/Buttons';
+import data from '../data.json';
+import ForthButton from '../components/ForthButton';
 
 class Startpage extends Component {
   constructor(props) {
@@ -11,56 +11,47 @@ class Startpage extends Component {
     this.state = {
       username: '',
       panels: [],
-      headline: ''
+      headline: '',
+      nextPage: '',
+      nextPageID: 0,
     };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+
+    this.redirectToNextPage = this.redirectToNextPage.bind(this);
   }
 
   componentDidMount() {
     const dataString = JSON.stringify(data);
     let jsonData = JSON.parse(dataString);
-    console.log(jsonData);
+    const filteredJSON = jsonData.filter( values => values.id === 0);
+    const nextPageID = filteredJSON[0].nextPageIDs;
     this.setState({
-      panels: jsonData[0].panels,
-      headline: jsonData[0].headline
+      panels: filteredJSON[0].panels,
+      headline: filteredJSON[0].headline,
+      nextPage: filteredJSON[0].nextPage,
+      nextPageID: nextPageID,
     })
   }
 
-  redirectToNextPage() {
-    const { history } = this.props;
-    history.push("/story");
-  }
-
-  handleChange(event) {
-    this.setState({ username: event.target.value });
-  }
-
-  handleSubmit(event) {
-    this.props.setUserName(this.state.username);
-    this.props.goToNextPage(this.props.nextPage);
-    event.preventDefault();
+  redirectToNextPage(){
+    const {history} = this.props;
+    const {nextPageID, nextPage} = this.state;
+    history.push({
+      pathname: nextPage,
+      state: {ID: nextPageID},
+    });
   }
 
   render() {
-    const { panels, textIndex, headline } = this.state;
+    const { headline} = this.state;
 
     return (
       <div className="Startpage">
         <SideNavigation />
         <div className="pagecontent">
-          <h1>
-            {headline}
-          </h1>
-          <Buttons panels={panels} />
+          <h1>{headline}</h1>
+          <h3>an e-learning unit on using pictures from the internet without going to jail</h3>
+          <ForthButton nextText={this.redirectToNextPage} />
           <p></p>
-          <form onSubmit={this.handleSubmit}>
-            <label>
-              Enter your name:
-              <input type="text" value={this.state.username} onChange={this.handleChange} />
-            </label>
-            <input type="submit" value="Let's go" onClick={() => this.redirectToNextPage()} />
-          </form>
         </div>
       </div>
     );
