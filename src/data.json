@@ -17,7 +17,7 @@
         "Find your own way through the game and be rewarded with a lot of helpful knowledge.",
         "Ok, let’s learn how to use pictures from the internet without going to jail."
       ],
-    "nextPage" : "/entername",  
+    "nextPage" : "/entername",
     "nextPageIDs": 2
   },
   {
@@ -29,8 +29,8 @@
         "But, how rude of me to be. I totally forgot to introduce myself. I am the Lawyerdude and I am here to help you.",
         "Before we start our exciting journey through the beautiful world of licenses, what shall I call you?"
       ],
-    "nextPage" : "/introduction",  
-    "nextPageIDs" : 3  
+    "nextPage" : "/introduction",
+    "nextPageIDs" : 3
   },
   {
     "id": 3,
@@ -46,7 +46,7 @@
         "I am not sure where to look for a picture that I can use for my own purpose. Can you help me?"
       ],
     "nextPage": ["/picturesfrominternet", "/searchingonline"],
-    "nextPageIDs": [4,5]  
+    "nextPageIDs": [4,5]
   },
   {
     "id": 4,
@@ -62,8 +62,8 @@
         "I don’t know, to be honest.",
         "Forget about the picture! Isn’t there a way to get those free to use pictures you just talked about?"
       ],
-    "nextPage": ["/jail", "/understandingsource", "/usingfreelicences"],
-    "nextPageIDs": [300,6,7]  
+    "nextPage": ["/stealingpictures1", "/understandingsource", "/usingfreelicences"],
+    "nextPageIDs": [301,6,7]
   },
   {
     "id": 5,
@@ -79,7 +79,7 @@
         "I don’t know. You tell me!"
       ],
     "nextPage": ["/usingfreelicences", "/usingsearchengines"],
-    "nextPageIDs": [7,18]  
+    "nextPageIDs": [7,18]
   },
   {
     "id": 6,
@@ -95,8 +95,8 @@
         "On some page on the internet. I can show you!",
         "Wikimedia Commons or Wikipedia."
       ],
-    "nextPage": ["/jail", "/findingholder", "usingwiki"],
-    "nextPageIDs": [300,8,9]  
+    "nextPage": ["/stealingpictures", "/findingholder", "usingwiki"],
+    "nextPageIDs": [300,8,9]
   },
   {
     "id": 7,
@@ -111,7 +111,7 @@
         "I am not convinced. That sounds limited to me."
       ],
     "nextPage": ["/usingwiki", "/usingsearchengines"],
-    "nextPageIDs": [9,18]  
+    "nextPageIDs": [9,18]
   },
   {
     "id": 8,
@@ -128,8 +128,8 @@
         "Of course!",
         "No, I can not find any information on that."
       ],
-    "nextPage": ["/jail", "copyrightinfo"],
-    "nextPageIDs": [300,10]  
+    "nextPage": ["/stealingpictures2", "copyrightinfo"],
+    "nextPageIDs": [302,10]
   },
   {
     "id": 9,
@@ -142,8 +142,8 @@
         "That’s it? So how do I use these pictures then?",
         "Cool, that's very easy. Thanks for showing me where to get pictures without licenses!"
       ],
-    "nextPage": ["/usingwiki2", "/jail"],
-    "nextPageIDs": [20,300]  
+    "nextPage": ["/usingwiki2", "/missinglicence"],
+    "nextPageIDs": [20,304]
   },
   {
     "id": 10,
@@ -159,8 +159,8 @@
         "I don’t know. Where can I find this?",
         "Yes, I already found out."
       ],
-    "nextPage": ["/jail", "/gettinglicence", "usinglicence"],
-    "nextPageIDs": [300,11,12]  
+    "nextPage": ["/stealingpictures3", "/gettinglicence", "usinglicence"],
+    "nextPageIDs": [303,11,12]
   },
   {
     "id": 11,
@@ -172,7 +172,7 @@
         "Let’s just try, if you can find the license information in the following examples."
       ],
     "nextPage":  "/usinglicence",
-    "nextPageIDs": 12  
+    "nextPageIDs": 12
   },
   {
     "id": 12,
@@ -187,7 +187,7 @@
         "I could not find the license information for my picture."
       ],
       "nextPage": ["/placeholder", "/creatingnotice"],
-      "nextPageIDs": [123,13]  
+      "nextPageIDs": [123,13]
   },
   {
     "id": 13,
@@ -203,7 +203,7 @@
         "Actually, I’m not sure.."
       ],
       "nextPage": ["/usingpicture", "/gettinglicence"],
-      "nextPageIDs": [14,11]  
+      "nextPageIDs": [14,11]
   },
   {
     "id": 14,
@@ -217,7 +217,7 @@
         "Cool."
       ],
       "nextPage": ["/moreinformation", "/placeholder"],
-      "nextPageIDs": [15,112235]  
+      "nextPageIDs": [15,112235]
   },
   {
     "id": 15,
@@ -230,7 +230,7 @@
         "Ok, continue"
       ],
       "nextPage": ["/success"],
-      "nextPageIDs": [16]  
+      "nextPageIDs": [16]
   },
   {
     "id": 16,
@@ -244,7 +244,7 @@
         "Tell me more."
       ],
       "nextPage": ["/finish"],
-      "nextPageIDs": [17]  
+      "nextPageIDs": [17]
   },
   {
     "id": 17,
@@ -255,7 +255,7 @@
       "<DISCLAIMER>"
       ],
       "nextPage": ["/placeholder"],
-      "nextPageIDs": [123]  
+      "nextPageIDs": [123]
   },
   {
     "id": 18,
@@ -269,8 +269,8 @@
         "It cannot be that difficult..",
         "..."
       ],
-      "nextPage": ["/usingfreelicences", "/usingsearchtool", "/jail"],
-      "nextPageIDs": [7, 19, 300]  
+      "nextPage": ["/usingfreelicences", "/usingsearchtool", "/stealingpictures4"],
+      "nextPageIDs": [7, 19, 305]
   },
   {
     "id": 19,
@@ -306,13 +306,48 @@
         "Alright, found one."
       ],
       "nextPage": ["/placeholder", "/usingpicture"],
-      "nextPageIDs": [2324, 14]  
+      "nextPageIDs": [2324, 14]
   },
   {
     "id": 300,
-    "pageType" : "JailPage",
-    "headline" : "Uh oh!",
-    "text": "You're in jail. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum.",
-    "nextPage" : 5
+    "headline" : "Stealing pictures!",
+    "panels": ["You're in jail. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum.", ""],
+    "nextPage": "/understandingsource",
+    "nextPageIDs" : 6
+  },
+  {
+    "id": 301,
+    "headline" : "Stealing pictures!",
+    "panels": ["You're in jail. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum.", ""],
+    "nextPage": "/picturesfrominternet",
+    "nextPageIDs" : 4
+  },
+  {
+    "id": 302,
+    "headline" : "Stealing pictures!",
+    "panels": ["You're in jail. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum.", ""],
+    "nextPage": "/findingholder",
+    "nextPageIDs" : 8
+  },
+  {
+    "id": 303,
+    "headline" : "Stealing pictures!",
+    "panels": ["You're in jail. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum.", ""],
+    "nextPage": "/findingcopyrightinfo",
+    "nextPageIDs" : 10
+  },
+  {
+    "id": 304,
+    "headline" : "Stealing pictures!",
+    "panels": ["You're in jail. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum.", ""],
+    "nextPage": "/usingwiki",
+    "nextPageIDs" : 9
+  },
+  {
+    "id": 305,
+    "headline" : "Missing licence notice!",
+    "panels": ["You're in jail. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum.", ""],
+    "nextPage": "/usingsearchengines",
+    "nextPageIDs" : 18
   }
 ]

@@ -1,62 +1,40 @@
 import React, { Component } from 'react';
-import SideNavigation from '../components/SideNavigation';
 import '../styles/style.css';
-import { withRouter } from 'react-router';
+import defaultImg from './index.png';
+import ForthButton from './../components/ForthButton';
+import BackButton from './../components/BackButton';
+import SideNavigation from './../components/SideNavigation';
 import data from '../data.json';
-import BackButton from '../components/BackButton';
-import ForthButton from '../components/ForthButton';
+import { withRouter } from 'react-router';
 
-class TemplateDecision extends Component {
+class Jailpage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       textIndex: 0,
       panels: [],
-      decisions: [],
-      nextPageIDs: [],
-      nextPages: [],
+      headline: '',
+      nextPageID: 0,
+      nextPage: '',
     };
     this.nextText = this.nextText.bind(this);
     this.previousText = this.previousText.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
-    this.replaceUsername = this.replaceUsername.bind(this);
   }
 
   componentDidMount() {
     const { ID } = this.props.location.state;
-    const { addingPages } = this.props;
-    addingPages(ID);
     const dataString = JSON.stringify(data);
     let jsonData = JSON.parse(dataString);
     const filteredJSON = jsonData.filter(values => values.id === ID);
-    const nextPageIDs = filteredJSON[0].nextPageIDs;
+    const nextPageID = filteredJSON[0].nextPageIDs;
     this.setState({
       panels: filteredJSON[0].panels,
-      decisions: filteredJSON[0].decisions,
       headline: filteredJSON[0].headline,
-      nextPages: filteredJSON[0].nextPage,
-      nextPageIDs: nextPageIDs,
-    }, () => this.replaceUsername())
-  }
-
-  replaceUsername() {
-     const {panels} = this.state;
-     const username = localStorage.getItem('username');
-     let usernameParsed = JSON.parse(username);
-     const newPanels = panels.map( (panel) => {
-        return panel.replace('{username}', usernameParsed);
-     });
-     this.setState({panels : newPanels});
-  }
-
-  redirectToNextPage(index) {
-    const { history } = this.props;
-    const { nextPageIDs, nextPages } = this.state;
-    history.push({
-      pathname: nextPages[index],
-      state: { ID: nextPageIDs[index] },
-    });
+      nextPage: filteredJSON[0].nextPage,
+      nextPageID: nextPageID,
+    })
   }
 
   handleSubmit(event) {
@@ -75,27 +53,33 @@ class TemplateDecision extends Component {
     }
   }
 
+  redirectToNextPage() {
+    const { history } = this.props;
+    const { nextPageID, nextPage } = this.state;
+    history.push({
+      pathname: nextPage,
+      state: { ID: nextPageID },
+    });
+  }
+
   previousText() {
     const theSize = this.state.panels.length - 1;
     if (this.state.textIndex > 0 && this.state.textIndex <= theSize) {
       this.setState(prevState => {
-        return {textIndex: prevState.textIndex -1 }
+        return {textIndex: prevState.textIndex - 1}
      })
     }
   }
-
+  
   render() {
-    const { panels, textIndex, headline, decisions } = this.state;
-
+    const { panels, textIndex, headline } = this.state;
     return (
-      <div className="Startpage">
-        <button onClick={() => this.props.history.goBack()}>Go Back</button>
+      <div className="Jailpage">
         <SideNavigation />
         <div className="pagecontent">
-          <h1>
-            {headline}
-          </h1>
-          <p>
+        <h1>{headline}</h1>
+        <img src={defaultImg} className="defaultImg" alt="logo" />
+        <p>
             {panels[textIndex]}
           </p>
           {
@@ -111,21 +95,14 @@ class TemplateDecision extends Component {
                   </div>
                 ) : (
                     <div>
-                      {
-                        decisions.map((decision, index) => {
-                          return (
-                            <button onClick={() => this.redirectToNextPage(index)}>{decision}</button>
-                          )
-                        })
-                      }
+                      <ForthButton nextText={this.redirectToNextPage} />
                     </div>
                   ))
           }
-          <p></p>
-        </div>
+          </div>
       </div>
     );
   }
 }
 
-export default withRouter(TemplateDecision);
+export default withRouter(Jailpage);
