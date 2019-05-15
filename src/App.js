@@ -57,7 +57,12 @@ class App extends Component {
           <Route exact path="/usinggoogle" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/success" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/finish" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
-          <Route exact path="/jail" component={() => <Jailpage addingPages={this.addingPages}/>}/>
+          <Route exact path="/stealingpictures" component={() => <Jailpage addingPages={this.addingPages}/>}/>
+          <Route exact path="/stealingpictures1" component={() => <Jailpage addingPages={this.addingPages}/>}/>
+          <Route exact path="/stealingpictures2" component={() => <Jailpage addingPages={this.addingPages}/>}/>
+          <Route exact path="/stealingpictures3" component={() => <Jailpage addingPages={this.addingPages}/>}/>
+          <Route exact path="/stealingpictures4" component={() => <Jailpage addingPages={this.addingPages}/>}/>
+          <Route exact path="/missinglicence" component={() => <Jailpage addingPages={this.addingPages}/>}/>
       </Router>
     );
   }
