@@ -20,6 +20,7 @@ class LearningGoals extends Component {
     this.previousText = this.previousText.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
+
   }
 
   componentDidMount(){
@@ -75,6 +76,7 @@ class LearningGoals extends Component {
 
     return (
       <div className="Startpage">
+        <button onClick={() =>  this.props.history.goBack()}>Go Back</button>
         <SideNavigation/>
         <div className="pagecontent">
           <h1>
