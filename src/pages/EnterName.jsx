@@ -4,6 +4,7 @@ import { withRouter } from 'react-router';
 import data from '../data.json';
 import ForthButton from '../components/ForthButton';
 import BackButton from './../components/BackButton';
+import BackButtonInactive from '../components/BackButtonInactive';
 
 class EnterName extends Component {
   constructor(props) {
@@ -90,12 +91,13 @@ class EnterName extends Component {
           </p>
           {
             textIndex === 0 ? (
-              <div>
+              <div className="buttoncontainer">
+                <BackButtonInactive/>
                 <ForthButton nextText={this.nextText} />
               </div>
             ) : (
                 textIndex + 1 < panels.length ? (
-                  <div>
+                  <div className="buttoncontainer">
                   <BackButton previousText={this.previousText} />
                   <ForthButton nextText={this.nextText} />
                 </div>
