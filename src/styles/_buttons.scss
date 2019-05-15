@@ -1,0 +1,37 @@
+@import "variables";
+
+.StartButton {
+	color: $button-text;
+	border-radius: 100px;
+	border-style: none; 
+	background-color: $darkred;
+	padding: 14px 25px;
+	margin: 55px;
+	height: 65px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 3px;
+}
+
+.BackButton {
+	border-radius: 50%;
+	border-style: none; 
+	background-color: $darkred;
+	padding: 14px 16px 14px 12px;
+	margin: 6px;
+	width: 65px;
+	height: 65px;
+	text-align: center;
+}
+
+.ForthButton {
+	border-radius: 50%;
+	border-style: none; 
+	background-color: $darkred;
+	padding: 14px 12px 14px 16px;
+	margin: 6px;
+	width: 65px;
+	height: 65px;
+	text-align: center;
+}
