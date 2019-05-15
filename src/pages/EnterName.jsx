@@ -86,6 +86,11 @@ class EnterName extends Component {
               {panels[textIndex]}
             </p>
             {
+               textIndex === 0 ?(
+                <div>
+                  <ForthButton nextText={this.nextText} />
+                </div>
+              ) : (
               textIndex+1 < panels.length ? (
                 <div>
                   <BackButton previousText={this.previousText} />
@@ -101,9 +106,8 @@ class EnterName extends Component {
                       <input type="submit" value="Let's go" onClick={(event) => this.redirectToNextPage(event)}/>
                     </form>
                   </div>
-              )
+              ))
             }
-          
           <p></p>
         </div>
       </div>
