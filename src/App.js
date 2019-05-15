@@ -14,34 +14,48 @@ const history = createBrowserHistory()
 library.add(faBars);
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      visitedPages: 1,
+    };
 
+    this.addingPages = this.addingPages.bind(this);
+  }
+
+  addingPages = (ID) => {
+    const visitedPages = localStorage.getItem('visitedPages');
+    let visitedPagesParsed = JSON.parse(visitedPages);
+    visitedPagesParsed.push(ID);
+    localStorage.setItem('visitedPages', JSON.stringify(visitedPagesParsed));
+  }
 
   render() {
     return (
       <Router history={history}>
           <Route exact path="/" component={() => <StartPage/>}/>
-          <Route exact path="/learninggoals" component={() => <NoDesicion/>}/>
-          <Route exact path="/entername" component={() => <EnterName/>}/>
-          <Route exact path="/introduction" component={() => <TemplateDecision/>}/>
-          <Route exact path="/picturesfrominternet" component={() => <TemplateDecision/>}/>
-          <Route exact path="/searchingonline" component={() => <TemplateDecision/>}/>
-          <Route exact path="/understandingsource" component={() => <TemplateDecision/>}/>
-          <Route exact path="/usingfreelicences" component={() => <TemplateDecision/>}/>
-          <Route exact path="/findingholder" component={() => <TemplateDecision/>}/>
-          <Route exact path="/usingwiki" component={() => <TemplateDecision/>}/>
-          <Route exact path="/copyrightinfo" component={() => <TemplateDecision/>}/>
-          <Route exact path="/gettinglicence" component={() => <NoDesicion/>}/>
-          <Route exact path="/usinglicence" component={() => <TemplateDecision/>}/>
-          <Route exact path="/creatingnotice" component={() => <TemplateDecision/>}/>
-          <Route exact path="/usingpicture" component={() => <TemplateDecision/>}/>
-          <Route exact path="/moreinformation" component={() => <TemplateDecision/>}/>
-          <Route exact path="/usingsearchengines" component={() => <TemplateDecision/>}/>
-          <Route exact path="/usingsearchtool" component={() => <NoDesicion/>}/>
-          <Route exact path="/usingwiki2" component={() => <NoDesicion/>}/>
-          <Route exact path="/usinggoogle" component={() => <TemplateDecision/>}/>
-          <Route exact path="/success" component={() => <TemplateDecision/>}/>
-          <Route exact path="/finish" component={() => <NoDesicion/>}/>
-          <Route exact path="/jail" component={() => <Jailpage/>}/>
+          <Route exact path="/learninggoals" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
+          <Route exact path="/entername" component={() => <EnterName addingPages={this.addingPages}/>}/>
+          <Route exact path="/introduction" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/picturesfrominternet" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/searchingonline" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/understandingsource" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/usingfreelicences" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/findingholder" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/usingwiki" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/copyrightinfo" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/gettinglicence" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
+          <Route exact path="/usinglicence" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/creatingnotice" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/usingpicture" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/moreinformation" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/usingsearchengines" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/usingsearchtool" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
+          <Route exact path="/usingwiki2" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
+          <Route exact path="/usinggoogle" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/success" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/finish" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
+          <Route exact path="/jail" component={() => <Jailpage addingPages={this.addingPages}/>}/>
       </Router>
     );
   }
