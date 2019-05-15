@@ -15,10 +15,11 @@ class EnterName extends Component {
       headline: '',
       nextPageID: 0,
       nextPage: '',
+      username : ''
     };
     this.nextText = this.nextText.bind(this);
     this.previousText = this.previousText.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
   }
 
@@ -39,6 +40,7 @@ class EnterName extends Component {
   }
 
   redirectToNextPage(event){
+    localStorage.setItem('username', JSON.stringify(this.state.username));
     const {history} = this.props;
     this.setState({username: event.target.value});
     const {nextPageID, nextPage} = this.state;
@@ -48,10 +50,8 @@ class EnterName extends Component {
     });
   }
 
-  handleSubmit(event) {
-    this.props.setUserName(this.state.username);
-    this.props.goToNextPage(this.props.nextPage);
-    event.preventDefault();
+  handleChange(event) {
+      this.setState({username: event.target.value});
   }
 
   nextText() {
@@ -70,6 +70,8 @@ class EnterName extends Component {
         this.setState({textIndex: this.state.textIndex});
     }
   }
+
+
 
   render() {
     const {panels, textIndex, headline} = this.state;
@@ -93,12 +95,12 @@ class EnterName extends Component {
                 </div>
               ) : (
                   <div>
-                    <form onSubmit={this.handleSubmit}>
+                    <form onSubmit={(event) => this.redirectToNextPage(event)}>
                       <label>
                         Enter your name:
                         <input type="text" value={this.state.username} onChange={this.handleChange} />
                       </label>
-                      <input type="submit" value="Let's go" onClick={(event) => this.redirectToNextPage(event)}/>
+                      <input type="submit" value="Let's go"/>
                     </form>
                   </div>
               )
