@@ -26,7 +26,9 @@ class App extends Component {
   addingPages = (ID) => {
     const visitedPages = localStorage.getItem('visitedPages');
     let visitedPagesParsed = JSON.parse(visitedPages);
-    visitedPagesParsed.push(ID);
+    if(visitedPages.indexOf(ID) === -1){
+      visitedPagesParsed.push(ID);
+    }
     localStorage.setItem('visitedPages', JSON.stringify(visitedPagesParsed));
   }
 
