@@ -83,7 +83,7 @@ class Jailpage extends Component {
             {panels[textIndex]}
           </p>
           {
-            textIndex === 0 ? (
+            (textIndex === 0 && panels.length > 1) ? (
               <div>
                 <ForthButton nextText={this.nextText} />
               </div>
