@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import SideNavigation from '../components/SideNavigation';
-import '../styles/style.css';
 import { withRouter } from 'react-router';
 import data from '../data.json';
 import BackButton from '../components/BackButton';

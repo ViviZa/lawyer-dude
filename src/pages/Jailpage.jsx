@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../styles/style.css';
 import defaultImg from './index.png';
 import ForthButton from './../components/ForthButton';
 import BackButton from './../components/BackButton';

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import SideNavigation from '../components/SideNavigation';
-import '../styles/style.css';
 import { withRouter } from 'react-router';
 import Select from 'react-select';
 
