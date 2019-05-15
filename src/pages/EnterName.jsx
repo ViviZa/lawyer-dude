@@ -3,8 +3,8 @@ import SideNavigation from '../components/SideNavigation';
 import '../styles/style.css';
 import { withRouter } from 'react-router';
 import data from '../data.json';
-import BackButton from '../components/BackButton';
 import ForthButton from '../components/ForthButton';
+import BackButton from './../components/BackButton';
 
 class EnterName extends Component {
   constructor(props) {
@@ -97,24 +97,19 @@ class EnterName extends Component {
             ) : (
                 textIndex + 1 < panels.length ? (
                   <div>
-                    <form onSubmit={(event) => this.redirectToNextPage(event)}>
-                      <label>
-                        Enter your name:
-                        <input type="text" value={this.state.username} onChange={this.handleChange} />
-                      </label>
-                      <input type="submit" value="Let's go"/>
-                    </form>
-                  </div>
+                  <BackButton previousText={this.previousText} />
+                  <ForthButton nextText={this.nextText} />
+                </div>
                 ) : (
-                    <div>
-                      <form onSubmit={this.handleSubmit}>
-                        <label>
-                          Enter your name:
-                        <input type="text" value={this.state.username} onChange={this.handleChange} />
-                        </label>
-                        <input type="submit" value="Let's go" onClick={(event) => this.redirectToNextPage(event)} />
-                      </form>
-                    </div>
+                  <div>
+                  <form onSubmit={(event) => this.redirectToNextPage(event)}>
+                    <label>
+                      Enter your name:
+                      <input type="text" value={this.state.username} onChange={this.handleChange} />
+                    </label>
+                    <input type="submit" value="Let's go"/>
+                  </form>
+                </div>
                   ))
           }
           <p></p>
