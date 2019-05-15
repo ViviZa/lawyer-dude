@@ -15,6 +15,9 @@ class MatchTheLicense extends Component {
     super(props);
     this.state = {
           selectedOption: null,
+          selectHeadlines : ["CR und CC", "CC-*", "unklar, da kommenzielle Nutzung nicht angegeben",
+          "unklar, da Modifizierung und kommenzielle Nutzung nicht angegeben", "unklar, da keine Angabe zur Modifizierung",
+          "CC-BY", "CC-0"]
     };
   }
 
@@ -24,7 +27,22 @@ class MatchTheLicense extends Component {
   }
 
   render() {
-  const { selectedOption } = this.state;
+  const { selectedOption, selectHeadlines } = this.state;
+  const dropDowns = selectHeadlines.map( (headline) => {
+        return (
+        <div>
+            <p>{headline}</p>
+            <Select
+              value={selectedOption}
+              onChange={this.handleChange}
+              options={options}
+              />
+              <p></p>
+              <p></p>
+        </div>
+          )
+     });
+
     return (
       <div className="Startpage">
         <button onClick={() => this.props.history.goBack()}>Go Back</button>
@@ -33,12 +51,7 @@ class MatchTheLicense extends Component {
           <h1>
             Match the License
           </h1>
-          <p>CR und OC</p>
-          <Select
-                  value={selectedOption}
-                  onChange={this.handleChange}
-                  options={options}
-                />
+          {dropDowns}
         </div>
       </div>
     );
