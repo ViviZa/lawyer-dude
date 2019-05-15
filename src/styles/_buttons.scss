@@ -1,6 +1,6 @@
 @import "variables";
 
-.StartButton {
+.StartButton, .save-name-btn {
 	color: $button-text;
 	border-radius: 100px;
 	border-style: none; 
@@ -12,6 +12,10 @@
 	font-size: 18px;
 	font-weight: 700;
 	letter-spacing: 3px;
+
+	.save-name-btn {
+		height: 20px;
+	}
 }
 
 .BackButton {
