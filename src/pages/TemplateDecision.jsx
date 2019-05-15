@@ -25,7 +25,8 @@ class LearningGoals extends Component {
 
   componentDidMount(){
     const {ID} = this.props.location.state;
-    console.log(ID);
+    const {addingPages} = this.props;
+    addingPages(ID);
     const dataString = JSON.stringify(data);
     let jsonData = JSON.parse(dataString);
     const filteredJSON = jsonData.filter( values => values.id === ID);
