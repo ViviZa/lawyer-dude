@@ -14,6 +14,8 @@ const history = createBrowserHistory()
 library.add(faBars);
 
 class App extends Component {
+
+
   render() {
     return (
       <Router history={history}>
@@ -33,8 +35,12 @@ class App extends Component {
           <Route exact path="/creatingnotice" component={() => <TemplateDecision/>}/>
           <Route exact path="/usingpicture" component={() => <TemplateDecision/>}/>
           <Route exact path="/moreinformation" component={() => <TemplateDecision/>}/>
+          <Route exact path="/usingsearchengines" component={() => <TemplateDecision/>}/>
+          <Route exact path="/usingsearchtool" component={() => <NoDesicion/>}/>
+          <Route exact path="/usingwiki2" component={() => <NoDesicion/>}/>
+          <Route exact path="/usinggoogle" component={() => <TemplateDecision/>}/>
           <Route exact path="/success" component={() => <TemplateDecision/>}/>
-          <Route exact path="/finish" component={() => <TemplateDecision/>}/>
+          <Route exact path="/finish" component={() => <NoDesicion/>}/>
           <Route exact path="/jail" component={() => <Jailpage/>}/>
       </Router>
     );
