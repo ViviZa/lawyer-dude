@@ -37,7 +37,7 @@
     "pageType" : "Introduction",
     "headline" : "Introduction",
     "panels": [
-        "Okay, <username>.",
+        "Okay, {username}.",
         "Don’t worry. I know that there is a lot of confusion about using pictures from the internet. But it is actually not that complicated. Let’s just do it together, alright?",
         "What brought you here anyway?"
       ],

@@ -20,7 +20,7 @@ class LearningGoals extends Component {
     this.previousText = this.previousText.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
-
+    this.replaceUsername = this.replaceUsername.bind(this);
   }
 
   componentDidMount(){
@@ -37,7 +37,17 @@ class LearningGoals extends Component {
       headline: filteredJSON[0].headline,
       nextPages: filteredJSON[0].nextPage,
       nextPageIDs: nextPageIDs,
-    })
+    }, () => this.replaceUsername())
+  }
+
+  replaceUsername() {
+     const {panels} = this.state;
+     const username = localStorage.getItem('username');
+     let usernameParsed = JSON.parse(username);
+     const newPanels = panels.map( (panel) => {
+        return panel.replace('{username}', usernameParsed);
+     });
+     this.setState({panels : newPanels});
   }
 
   redirectToNextPage(index){
