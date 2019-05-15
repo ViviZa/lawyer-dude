@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
+import { ReactComponent as LDicon } from '../images/Lawyerdude-head-icon.svg';
 
 
 class SideNavigation extends Component {
@@ -20,30 +21,32 @@ class SideNavigation extends Component {
   render() {
     return (
       <nav>
-      <div className="SideNavigation">
-        <div className="logo-box"></div>
-        <div className="navWide">
-        <div className="wideDiv">
-        <ul>
-          <li><Link to="/">Startpage</Link></li>
-          <li><Link to="/learninggoals">Learning Goals</Link></li>
-          <li><Link to="/entername">Enter Name</Link></li>
-          <li><Link to="/story">Storypage</Link></li>
-          <li><Link to="/decision">Decisionpage</Link></li>
-        </ul>
-        </div>         
-      </div>
-      <div className="navNarrow">
-      <i><FontAwesomeIcon icon="bars" size='lg' onClick={this.burgerToggle}/></i>
-        <div className="narrowLinks">
-        <ul>
-          <li><a href="#startpage" onClick={this.burgerToggle} >Startpage</a></li>
-          <li><a href="#storypage" onClick={this.burgerToggle}>Storypage</a></li>
-          <li><a href="#decisionpage" onClick={this.burgerToggle}>Decisionpage</a></li>
-        </ul>
-        </div>         
-      </div>
-      </div>
+        <div className="SideNavigation">
+          <div className="logo-box">
+            <LDicon className="lawyericon"/>
+          </div>
+          <div className="navWide">
+            <div className="wideDiv">
+              <ul>
+                <li><Link to="/">Startpage</Link></li>
+                <li><Link to="/learninggoals">Learning Goals</Link></li>
+                <li><Link to="/entername">Enter Name</Link></li>
+                <li><Link to="/story">Storypage</Link></li>
+                <li><Link to="/decision">Decisionpage</Link></li>
+              </ul>
+            </div>         
+          </div>
+          <div className="navNarrow">
+            <i><FontAwesomeIcon icon="bars" size='lg' onClick={this.burgerToggle}/></i>
+              <div className="narrowLinks">
+                <ul>
+                  <li><a href="#startpage" onClick={this.burgerToggle} >Startpage</a></li>
+                  <li><a href="#storypage" onClick={this.burgerToggle}>Storypage</a></li>
+                  <li><a href="#decisionpage" onClick={this.burgerToggle}>Decisionpage</a></li>
+                </ul>
+              </div>         
+          </div>
+        </div>
       </nav>
     );
   }
