@@ -58,16 +58,18 @@ class EnterName extends Component {
     const { panels, textIndex } = this.state
     const theSize = panels.length - 1;
     if (textIndex >= 0 && textIndex < theSize) {
-      this.state.textIndex++;
-      this.setState({ textIndex: this.state.textIndex });
+      this.setState(prevState => {
+        return {textIndex: prevState.textIndex + 1}
+     })
     }
   }
 
   previousText() {
     const theSize = this.state.panels.length - 1;
     if (this.state.textIndex > 0 && this.state.textIndex <= theSize) {
-      this.state.textIndex--;
-      this.setState({ textIndex: this.state.textIndex });
+      this.setState(prevState => {
+        return {textIndex: prevState.textIndex - 1}
+     })
     }
   }
 
