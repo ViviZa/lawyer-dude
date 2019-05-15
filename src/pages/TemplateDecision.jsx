@@ -65,7 +65,7 @@ class LearningGoals extends Component {
   previousText() {
     const theSize = this.state.panels.length-1;
     if(this.state.textIndex > 0 && this.state.textIndex <= theSize){
-        this.state.textIndex--;
+        this.state.trshextIndex--;
         this.setState({textIndex: this.state.textIndex});
     }
   }

@@ -78,8 +78,8 @@
         "Google it.",
         "I don’t know. You tell me!"
       ],
-    "nextPage": ["placeholder1", "placeholder2"],
-    "nextPageIDs": [4,5]  
+    "nextPage": ["/usingfreelicences", "/usingsearchengines"],
+    "nextPageIDs": [7,18]  
   },
   {
     "id": 6,
@@ -110,8 +110,8 @@
         "Wow, tell me more!",
         "I am not convinced. That sounds limited to me."
       ],
-    "nextPage": ["/jail", "placeholder2"],
-    "nextPageIDs": [300,5]  
+    "nextPage": ["/usingwiki", "/usingsearchengines"],
+    "nextPageIDs": [9,18]  
   },
   {
     "id": 8,
@@ -142,8 +142,8 @@
         "That’s it? So how do I use these pictures then?",
         "Cool, that's very easy. Thanks for showing me where to get pictures without licenses!"
       ],
-    "nextPage": ["/jail", "placeholder2"],
-    "nextPageIDs": [300,5]  
+    "nextPage": ["/usingwiki2", "/jail"],
+    "nextPageIDs": [20,300]  
   },
   {
     "id": 10,
@@ -256,6 +256,57 @@
       ],
       "nextPage": ["/placeholder"],
       "nextPageIDs": [123]  
+  },
+  {
+    "id": 18,
+    "headline" : "Using search engines",
+    "panels": [
+      "Google sure is a great place to find pictures online.",
+      "..."
+      ],
+      "decisions": [
+        "There must be something easier!",
+        "It cannot be that difficult..",
+        "..."
+      ],
+      "nextPage": ["/usingfreelicences", "/usingsearchtool", "/jail"],
+      "nextPageIDs": [7, 19, 300]  
+  },
+  {
+    "id": 19,
+    "headline" : "Using search engine tools",
+    "panels": [
+      "Google helps you to find pictures under free licenses.",
+      "<Lawyerdude explains that there is a tool that helps to find pictures under free licenses>",
+      "Just try it yourself!"
+      ],
+      "nextPage": "/usinggoogle",
+      "nextPageIDs": 21
+  },
+  {
+    "id": 20,
+    "headline" : "Using Wikimedia Commons 2",
+    "panels": [
+        "Of course you need to create a license notice for every picture you use from the internet.",
+        "<CREATING A LICENSE NOTICE>",
+        "But don't worry. There is a tool that helps you."
+      ],
+    "nextPage": "/usingpicture",
+    "nextPageIDs": 14
+  },
+  {
+    "id": 21,
+    "headline" : "Using Google",
+    "panels": [
+      "Good. Now use you knowledge to find a nice picture that is free to use with the help of a search engine.",
+      "Whenever you feel like you found your picture, we can continue."
+      ],
+      "decisions": [
+        "Wait, why are we doing this?",
+        "Alright, found one."
+      ],
+      "nextPage": ["/placeholder", "/usingpicture"],
+      "nextPageIDs": [2324, 14]  
   },
   {
     "id": 300,
