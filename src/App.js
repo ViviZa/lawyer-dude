@@ -9,6 +9,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import NoDesicion from './pages/TemplateNoDesicion';
 import EnterName from './pages/EnterName.jsx';
 import TemplateDecision from './pages/TemplateDecision';
+import MatchTheLicense from './games/MatchTheLicense';
 
 const history = createBrowserHistory()
 library.add(faBars);
@@ -58,6 +59,7 @@ class App extends Component {
           <Route exact path="/success" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/finish" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
           <Route exact path="/jail" component={() => <Jailpage addingPages={this.addingPages}/>}/>
+          <Route exact path="/matchthelicense" component={() => <MatchTheLicense/>}/>
       </Router>
     );
   }
