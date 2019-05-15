@@ -7,7 +7,7 @@ import BackButton from '../components/BackButton';
 import ForthButton from '../components/ForthButton';
 
 class NoDecision extends Component {
- constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
       textIndex: 0,
@@ -22,13 +22,13 @@ class NoDecision extends Component {
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
   }
 
-  componentDidMount(){
-    const {ID} = this.props.location.state;
-    const {addingPages} = this.props;
+  componentDidMount() {
+    const { ID } = this.props.location.state;
+    const { addingPages } = this.props;
     addingPages(ID);
     const dataString = JSON.stringify(data);
     let jsonData = JSON.parse(dataString);
-    const filteredJSON = jsonData.filter( values => values.id === ID);
+    const filteredJSON = jsonData.filter(values => values.id === ID);
     const nextPageID = filteredJSON[0].nextPageIDs;
     this.setState({
       panels: filteredJSON[0].panels,
@@ -38,12 +38,12 @@ class NoDecision extends Component {
     })
   }
 
-  redirectToNextPage(){
-    const {history} = this.props;
-    const {nextPageID, nextPage} = this.state;
+  redirectToNextPage() {
+    const { history } = this.props;
+    const { nextPageID, nextPage } = this.state;
     history.push({
       pathname: nextPage,
-      state: {ID: nextPageID},
+      state: { ID: nextPageID },
     });
   }
 
@@ -54,53 +54,53 @@ class NoDecision extends Component {
   }
 
   nextText() {
-    const {panels, textIndex} = this.state
-    const theSize = panels.length-1;
-    if(textIndex >= 0 && textIndex < theSize){
-        this.state.textIndex++;
-        this.setState({textIndex: this.state.textIndex});
+    const { panels, textIndex } = this.state
+    const theSize = panels.length - 1;
+    if (textIndex >= 0 && textIndex < theSize) {
+      this.state.textIndex++;
+      this.setState({ textIndex: this.state.textIndex });
     }
   }
 
   previousText() {
-    const theSize = this.state.panels.length-1;
-    if(this.state.textIndex > 0 && this.state.textIndex <= theSize){
-        this.state.textIndex--;
-        this.setState({textIndex: this.state.textIndex});
+    const theSize = this.state.panels.length - 1;
+    if (this.state.textIndex > 0 && this.state.textIndex <= theSize) {
+      this.state.textIndex--;
+      this.setState({ textIndex: this.state.textIndex });
     }
   }
 
   render() {
-    const {panels, textIndex, headline} = this.state;
+    const { panels, textIndex, headline } = this.state;
 
     return (
       <div className="Startpage">
-        <button onClick={() =>  this.props.history.goBack()}>Go Back</button>
-        <SideNavigation/>
+        <button onClick={() => this.props.history.goBack()}>Go Back</button>
+        <SideNavigation />
         <div className="pagecontent">
           <h1>
-              {headline}
+            {headline}
           </h1>
-            <p>
-              {panels[textIndex]}
-            </p>
-            {
-              textIndex === 0 ? (
-                <div>
-                  <ForthButton nextText={this.nextText} />
-                </div>
-              ) : (
-              textIndex+1 < panels.length ? (
-                <div>
-                  <BackButton previousText={this.previousText} />
-                  <ForthButton nextText={this.nextText} />
-                </div>
-              ) : (
+          <p>
+            {panels[textIndex]}
+          </p>
+          {
+            textIndex === 0 ? (
+              <div>
+                <ForthButton nextText={this.nextText} />
+              </div>
+            ) : (
+                textIndex + 1 < panels.length ? (
                   <div>
-                      <ForthButton nextText={this.redirectToNextPage} />
+                    <BackButton previousText={this.previousText} />
+                    <ForthButton nextText={this.nextText} />
                   </div>
-              ))
-            }
+                ) : (
+                    <div>
+                      <ForthButton nextText={this.redirectToNextPage} />
+                    </div>
+                  ))
+          }
           <p></p>
         </div>
       </div>

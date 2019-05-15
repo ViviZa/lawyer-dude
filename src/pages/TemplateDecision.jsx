@@ -7,7 +7,7 @@ import BackButton from '../components/BackButton';
 import ForthButton from '../components/ForthButton';
 
 class LearningGoals extends Component {
- constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
       textIndex: 0,
@@ -23,13 +23,13 @@ class LearningGoals extends Component {
 
   }
 
-  componentDidMount(){
-    const {ID} = this.props.location.state;
-    const {addingPages} = this.props;
+  componentDidMount() {
+    const { ID } = this.props.location.state;
+    const { addingPages } = this.props;
     addingPages(ID);
     const dataString = JSON.stringify(data);
     let jsonData = JSON.parse(dataString);
-    const filteredJSON = jsonData.filter( values => values.id === ID);
+    const filteredJSON = jsonData.filter(values => values.id === ID);
     const nextPageIDs = filteredJSON[0].nextPageIDs;
     this.setState({
       panels: filteredJSON[0].panels,
@@ -40,12 +40,12 @@ class LearningGoals extends Component {
     })
   }
 
-  redirectToNextPage(index){
-    const {history} = this.props;
-    const {nextPageIDs, nextPages} = this.state;
+  redirectToNextPage(index) {
+    const { history } = this.props;
+    const { nextPageIDs, nextPages } = this.state;
     history.push({
       pathname: nextPages[index],
-      state: {ID: nextPageIDs[index]},
+      state: { ID: nextPageIDs[index] },
     });
   }
 
@@ -56,59 +56,59 @@ class LearningGoals extends Component {
   }
 
   nextText() {
-    const {panels, textIndex} = this.state
-    const theSize = panels.length-1;
-    if(textIndex >= 0 && textIndex < theSize){
-        this.state.textIndex++;
-        this.setState({textIndex: this.state.textIndex});
+    const { panels, textIndex } = this.state
+    const theSize = panels.length - 1;
+    if (textIndex >= 0 && textIndex < theSize) {
+      this.state.textIndex++;
+      this.setState({ textIndex: this.state.textIndex });
     }
   }
 
   previousText() {
-    const theSize = this.state.panels.length-1;
-    if(this.state.textIndex > 0 && this.state.textIndex <= theSize){
-        this.state.trshextIndex--;
-        this.setState({textIndex: this.state.textIndex});
+    const theSize = this.state.panels.length - 1;
+    if (this.state.textIndex > 0 && this.state.textIndex <= theSize) {
+      this.state.trshextIndex--;
+      this.setState({ textIndex: this.state.textIndex });
     }
   }
 
   render() {
-    const {panels, textIndex, headline, decisions} = this.state;
+    const { panels, textIndex, headline, decisions } = this.state;
 
     return (
       <div className="Startpage">
-        <button onClick={() =>  this.props.history.goBack()}>Go Back</button>
-        <SideNavigation/>
+        <button onClick={() => this.props.history.goBack()}>Go Back</button>
+        <SideNavigation />
         <div className="pagecontent">
           <h1>
-              {headline}
+            {headline}
           </h1>
-            <p>
-              {panels[textIndex]}
-            </p>
-            {
-              textIndex === 0 ?(
-                <div>
-                  <ForthButton nextText={this.nextText} />
-                </div>
-              ) : (
-              textIndex+1 < panels.length ? (
-                <div>
-                  <BackButton previousText={this.previousText} />
-                  <ForthButton nextText={this.nextText} />
-                </div>
-              ) : (
+          <p>
+            {panels[textIndex]}
+          </p>
+          {
+            textIndex === 0 ? (
+              <div>
+                <ForthButton nextText={this.nextText} />
+              </div>
+            ) : (
+                textIndex + 1 < panels.length ? (
                   <div>
-                    {
-                      decisions.map( (decision, index) => {
-                        return (
-                          <button onClick={() => this.redirectToNextPage(index)}>{decision}</button>
-                        )
-                      })
-                    }
+                    <BackButton previousText={this.previousText} />
+                    <ForthButton nextText={this.nextText} />
                   </div>
-              ))
-            }
+                ) : (
+                    <div>
+                      {
+                        decisions.map((decision, index) => {
+                          return (
+                            <button onClick={() => this.redirectToNextPage(index)}>{decision}</button>
+                          )
+                        })
+                      }
+                    </div>
+                  ))
+          }
           <p></p>
         </div>
       </div>
