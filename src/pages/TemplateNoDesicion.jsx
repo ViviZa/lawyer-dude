@@ -74,11 +74,12 @@ class NoDecision extends Component {
 
   render() {
     const { panels, textIndex, headline } = this.state;
+    const { ID } = this.props.location.state;
 
     return (
       <div className="Startpage">
         <button onClick={() => this.props.history.goBack()}>Go Back</button>
-        <SideNavigation />
+        <SideNavigation ID={ID}/>
         <div className="pagecontent">
           <h1>
             {headline}
