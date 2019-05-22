@@ -2,46 +2,30 @@ import React, { Component } from 'react';
 import SideNavigation from '../components/SideNavigation';
 import '../styles/style.css';
 import { withRouter } from 'react-router';
-import Select from 'react-select';
+import DropDown from './../components/DropDown';
 
-const options = [
-  { value: 'CRundCC', label: 'Alle' },
-  { value: 'unklar', label: 'Kann kostenlos geändert, freigegeben und verwendet werden' },
-  { value: 'CC-O', label: 'Öffentliche Domäne' }
-];
 
 class MatchTheLicense extends Component {
   constructor(props) {
     super(props);
     this.state = {
-          selectedOption: null,
-          selectHeadlines : ["CR und CC", "CC-*", "unklar, da kommenzielle Nutzung nicht angegeben",
-          "unklar, da Modifizierung und kommenzielle Nutzung nicht angegeben", "unklar, da keine Angabe zur Modifizierung",
-          "CC-BY", "CC-0"]
+          selectHeadlines : ["Alle", " Kann kostenlos geändert, freigegeben und verwendet werden", "Öffentliche Domäne",
+          "Kann kostenlos geändert, freigegeben und kommerziell verwendet werden", "Kann kostenlos freigegeben und verändert werden",
+          "Kann kostenlos freigegeben und kommerziell verwendet werden", "Alle Creative Commons"]
     };
   }
 
-  handleChange = (selectedOption) => {
-     this.setState({ selectedOption });
-     console.log(`Option selected:`, selectedOption);
-  }
-
   render() {
-  const { selectedOption, selectHeadlines } = this.state;
-  const dropDowns = selectHeadlines.map( (headline) => {
-        return (
-        <div>
-            <p>{headline}</p>
-            <Select
-              value={selectedOption}
-              onChange={this.handleChange}
-              options={options}
-              />
-              <p></p>
-              <p></p>
-        </div>
-          )
-     });
+    const {selectHeadlines } = this.state;
+    const dropDowns = selectHeadlines.map( (headline) => {
+      return (
+      <div>
+          <DropDown headline={headline}/>
+            <p></p>
+            <p></p>
+      </div>
+        )
+});
 
     return (
       <div className="Startpage">
