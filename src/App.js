@@ -36,7 +36,7 @@ class App extends Component {
   render() {
     return (
       <Router history={history}>
-          <Route exact path="/" component={() => <StartPage/>}/>
+          <Route exact path="/" component={() => <StartPage addingPages={this.addingPages}/>}/>
           <Route exact path="/learninggoals" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
           <Route exact path="/entername" component={() => <EnterName addingPages={this.addingPages}/>}/>
           <Route exact path="/introduction" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>

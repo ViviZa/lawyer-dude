@@ -18,29 +18,31 @@ class SideNavigation extends Component {
     let visitedPages = JSON.parse(localStorage.getItem('visitedPages'));
     const dataString = JSON.stringify(data);
     const jsonData = JSON.parse(dataString);
-    let filteredJSON = jsonData.filter(values => visitedPages.includes(values.id));
-    let nextPageIDs = [];
+    const ids = visitedPages.map(page => page.id);
+    const filteredJSON = jsonData.filter(values => ids.includes(values.id));
+    let nextPageIDs = 0;
     for (let [index, val] of filteredJSON.entries()) {
       if(Array.isArray(val.nextPageIDs)){
         if (val.nextPageIDs.includes(ID)){
-          nextPageIDs.push( index+1);
+          nextPageIDs = index+1;
         }
       } else {
         if (val.nextPageIDs === ID){
-          nextPageIDs.push( index+1);
+          nextPageIDs= index+1;
         }
       }    
   }
-    const visitedNextPage = filteredJSON.filter(value => value.id === ID );
-    if (visitedNextPage.length > 0){
-      filteredJSON.length = nextPageIDs;
+    const visitedNextPage = filteredJSON.filter(value => value.nextPageIDs.includes( ID) );
+    if (visitedNextPage.length > 0 &&  !ids.includes(ID)){
       visitedPages.length = nextPageIDs;
-      localStorage.setItem('visitedPages', JSON.stringify(visitedPages));
     }
    
-    const currentPage = jsonData.filter(values => values.id === ID);
-    filteredJSON.push(currentPage[0]);
-    this.setState({visitedPages: filteredJSON});
+    if(!ids.includes(ID)){
+      const currentPage = jsonData.filter(values => values.id === ID);
+      visitedPages.push(currentPage[0]);
+    }
+    this.setState({visitedPages: visitedPages});
+    localStorage.setItem('visitedPages', JSON.stringify(visitedPages));
   }
 
   redirectToNextPage(url, id) {

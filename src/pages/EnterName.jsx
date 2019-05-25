@@ -30,7 +30,7 @@ class EnterName extends Component {
     const dataString = JSON.stringify(data);
     let jsonData = JSON.parse(dataString);
     const filteredJSON = jsonData.filter(values => values.id === ID);
-    const nextPageID = filteredJSON[0].nextPageIDs;
+    const nextPageID = filteredJSON[0].nextPageIDs[0];
     this.setState({
       panels: filteredJSON[0].panels,
       headline: filteredJSON[0].headline,
