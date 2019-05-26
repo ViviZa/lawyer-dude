@@ -1,14 +1,14 @@
 [
   {
     "id": 0,
-    "pageType" : "StartPage",
+    "pageurl" : "/",
     "headline" : "The Lawyer Dude",
     "nextPage" : "/learninggoals",
-    "nextPageIDs": 1
+    "nextPageIDs": [1]
   },
   {
     "id": 1,
-    "pageType" : "LearningGoals",
+    "pageurl" : "/learninggoals",
     "headline" : "What you learn in this story",
     "panels": [
         "This online learning unit will help you to understand how to use pictures from the internet.",
@@ -18,11 +18,11 @@
         "Ok, let’s learn how to use pictures from the internet without going to jail."
       ],
     "nextPage" : "/entername",
-    "nextPageIDs": 2
+    "nextPageIDs": [2]
   },
   {
     "id": 2,
-    "pageType" : "EnterName",
+    "pageurl" : "/entername",
     "headline" : "Enter Your Name",
     "panels": [
         "Hello. You are interested in learning about licenses? That’s great, you are at the right address.",
@@ -30,11 +30,11 @@
         "Before we start our exciting journey through the beautiful world of licenses, what shall I call you?"
       ],
     "nextPage" : "/introduction",
-    "nextPageIDs" : 3
+    "nextPageIDs" : [3]
   },
   {
     "id": 3,
-    "pageType" : "Introduction",
+    "pageurl" : "/introduction",
     "headline" : "Introduction",
     "panels": [
         "Okay, {username}.",
@@ -50,7 +50,7 @@
   },
   {
     "id": 4,
-    "pageType" : "picturesfrominternet",
+    "pageurl" : "/picturesfrominternet",
     "headline" : "Using pictures from the internet",
     "panels": [
         "Great, let's find out if and how you can use a picture from the internet.",
@@ -67,7 +67,7 @@
   },
   {
     "id": 5,
-    "pageType" : "searchingonline",
+    "pageurl" : "/searchingonline",
     "headline" : "Searching for pictures online",
     "panels": [
         "Alright then. Let’s find a nice picture that fits your purpose.",
@@ -83,7 +83,7 @@
   },
   {
     "id": 6,
-    "pageType" : "understandingthesource",
+    "pageurl" : "/understandingsource",
     "headline" : "Understanding the Source",
     "panels": [
         "No problem. I can help you to find all the information you need. First let’s start with the source of the picture",
@@ -100,7 +100,7 @@
   },
   {
     "id": 7,
-    "pageType" : "usingfreelicences",
+    "pageurl" : "/usingfreelicences",
     "headline" : "Using free licenses",
     "panels": [
         "I know, you probably expect me to show you a magical way of finding pictures, that you can easily use. Well, there is something just like that.",
@@ -115,7 +115,7 @@
   },
   {
     "id": 8,
-    "pageType" : "findingthecopyrightholder",
+    "pageurl" : "/findingholder",
     "headline" : "Finding the copyright holder",
     "panels": [
         "That’s good! The source of the picture is one of the components of the license notice.",
@@ -133,7 +133,7 @@
   },
   {
     "id": 9,
-    "pageType" : "usingwiki",
+    "pageurl" : "/usingwiki",
     "headline" : "Using Wikimedia Commons 1",
     "panels": [
         "..."
@@ -147,7 +147,7 @@
   },
   {
     "id": 10,
-    "pageType" : "findingcopyrightinfo",
+    "pageurl" : "/copyrightinfo",
     "headline" : "Finding the copyright information",
     "panels": [
         "That’s good! The source of the picture is one of the components of the license notice.",
@@ -164,7 +164,7 @@
   },
   {
     "id": 11,
-    "pageType" : "gettinglicence",
+    "pageurl" : "/gettinglicence",
     "headline" : "Getting the licence",
     "panels": [
         "Don't worry. I know that sometimes it can be difficult to find these information on a website.",
@@ -172,11 +172,11 @@
         "Let’s just try, if you can find the license information in the following examples."
       ],
     "nextPage":  "/usinglicence",
-    "nextPageIDs": 12
+    "nextPageIDs": [12]
   },
   {
     "id": 12,
-    "pageType" : "usinglicence",
+    "pageurl" : "/usinglicence",
     "headline" : "Using the licence",
     "panels": [
       "Good. You collected all the information you need to create a license notice. Do you feel ready to learn how to do it?"
@@ -191,7 +191,7 @@
   },
   {
     "id": 13,
-    "pageType" : "creatingnotice",
+    "pageurl" : "/creatingnotice",
     "headline" : "Creating the licence notice",
     "panels": [
       "Of course you need to create a license notice.",
@@ -207,7 +207,7 @@
   },
   {
     "id": 14,
-    "pageType" : "usingpicture",
+    "pageurl" : "/usingpicture",
     "headline" : "Using the picture",
     "panels": [
       "Great! Now you have all the information you need to use your picture from the internet without going to jail."
@@ -221,7 +221,7 @@
   },
   {
     "id": 15,
-    "pageType" : "moreinformation",
+    "pageurl" : "/moreinformation",
     "headline" : "More information",
     "panels": [
       "..."
@@ -234,7 +234,7 @@
   },
   {
     "id": 16,
-    "pageType" : "success",
+    "pageurl" : "/success",
     "headline" : "Success",
     "panels": [
       "Well done! Now you can use the picture without going to jail. But there are more ways to get here. Do you want to learn more?"
@@ -248,7 +248,7 @@
   },
   {
     "id": 17,
-    "pageType" : "finish",
+    "pageurl" : "/finish",
     "headline" : "Finish",
     "panels": [
       "...",
@@ -259,6 +259,7 @@
   },
   {
     "id": 18,
+    "pageurl": "/usingsearchengines",
     "headline" : "Using search engines",
     "panels": [
       "Google sure is a great place to find pictures online.",
@@ -274,6 +275,7 @@
   },
   {
     "id": 19,
+    "pageurl": "/usingsearchtool",
     "headline" : "Using search engine tools",
     "panels": [
       "Google helps you to find pictures under free licenses.",
@@ -281,10 +283,11 @@
       "Just try it yourself!"
       ],
       "nextPage": "/usinggoogle",
-      "nextPageIDs": 21
+      "nextPageIDs": [21]
   },
   {
     "id": 20,
+    "pageurl": "usingwiki2",
     "headline" : "Using Wikimedia Commons 2",
     "panels": [
         "Of course you need to create a license notice for every picture you use from the internet.",
@@ -292,10 +295,11 @@
         "But don't worry. There is a tool that helps you."
       ],
     "nextPage": "/usingpicture",
-    "nextPageIDs": 14
+    "nextPageIDs": [14]
   },
   {
     "id": 21,
+    "pageurl": "/usinggoogle",
     "headline" : "Using Google",
     "panels": [
       "Good. Now use you knowledge to find a nice picture that is free to use with the help of a search engine.",
@@ -310,44 +314,50 @@
   },
   {
     "id": 300,
+    "pageurl": "/stealingpictures",
     "headline" : "Stealing pictures!",
     "panels": ["You're in jail. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum."],
     "nextPage": "/understandingsource",
-    "nextPageIDs" : 6
+    "nextPageIDs" : [6]
   },
   {
     "id": 301,
+    "pageurl": "/stealingpictures1",
     "headline" : "Stealing pictures!",
     "panels": ["You're in jail. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum."],
     "nextPage": "/picturesfrominternet",
-    "nextPageIDs" : 4
+    "nextPageIDs" : [4]
   },
   {
     "id": 302,
+    "pageurl": "/stealingpictures2",
     "headline" : "Stealing pictures!",
     "panels": ["You're in jail. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum."],
     "nextPage": "/findingholder",
-    "nextPageIDs" : 8
+    "nextPageIDs" : [8]
   },
   {
     "id": 303,
+    "pageurl": "/stealingpictures3",
     "headline" : "Stealing pictures!",
     "panels": ["You're in jail. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum."],
     "nextPage": "/findingcopyrightinfo",
-    "nextPageIDs" : 10
+    "nextPageIDs" : [10]
   },
   {
     "id": 304,
+    "pageurl": "/stealingpictures4",
     "headline" : "Stealing pictures!",
     "panels": ["You're in jail. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum."],
     "nextPage": "/usingwiki",
-    "nextPageIDs" : 9
+    "nextPageIDs" : [9]
   },
   {
     "id": 305,
+    "pageurl": "/missinglicence",
     "headline" : "Missing licence notice!",
     "panels": ["You're in jail. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum."],
     "nextPage": "/usingsearchengines",
-    "nextPageIDs" : 18
+    "nextPageIDs" : [18]
   }
 ]

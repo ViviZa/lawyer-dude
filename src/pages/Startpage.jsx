@@ -23,8 +23,8 @@ class Startpage extends Component {
     const dataString = JSON.stringify(data);
     let jsonData = JSON.parse(dataString);
     const filteredJSON = jsonData.filter( values => values.id === 0);
-    localStorage.setItem('visitedPages', JSON.stringify([0]));
-    const nextPageID = filteredJSON[0].nextPageIDs;
+    localStorage.setItem('visitedPages', JSON.stringify(filteredJSON));
+    const nextPageID = filteredJSON[0].nextPageIDs[0];
     this.setState({
       panels: filteredJSON[0].panels,
       headline: filteredJSON[0].headline,
@@ -47,7 +47,7 @@ class Startpage extends Component {
 
     return (
       <div className="Startpage">
-        <SideNavigation />
+        <SideNavigation ID={0}/>
         <div className="pagecontent">
           <h1>{headline}</h1>
           <h3>an e-learning unit on using pictures from the internet without going to jail</h3>
