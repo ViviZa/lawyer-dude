@@ -20,8 +20,9 @@ class SideNavigation extends Component {
     const jsonData = JSON.parse(dataString);
     const ids = visitedPages.map(page => page.id);
     const filteredJSON = jsonData.filter(values => ids.includes(values.id));
+
     let nextPageIDs = 0;
-    for (let [index, val] of filteredJSON.entries()) {
+    for (let [index, val] of visitedPages.entries()) {
       if(Array.isArray(val.nextPageIDs)){
         if (val.nextPageIDs.includes(ID)){
           nextPageIDs = index+1;
