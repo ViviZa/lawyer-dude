@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import SideNavigation from '../components/SideNavigation';
-import '../styles/style.css';
 import { withRouter } from 'react-router';
 import data from '../data.json';
-import ForthButton from '../components/ForthButton';
+import StartButton from '../components/StartButton';
+import { ReactComponent as LDhappy } from '../images/Lawyerdude-head-happy.svg';
 
 class Startpage extends Component {
   constructor(props) {
@@ -48,11 +48,12 @@ class Startpage extends Component {
     return (
       <div className="Startpage">
         <SideNavigation ID={0}/>
-        <div className="pagecontent">
+        <div className="startpagecontent">
           <h1>{headline}</h1>
-          <h3>an e-learning unit on using pictures from the internet without going to jail</h3>
-          <ForthButton nextText={this.redirectToNextPage} />
+          <h3>An interactive eLearning unit on how to correctly use pictures from the internet without going to jail.</h3>
+          <StartButton nextText={this.redirectToNextPage} />
           <p></p>
+          <LDhappy className="startlawyer"/>  
         </div>
       </div>
     );

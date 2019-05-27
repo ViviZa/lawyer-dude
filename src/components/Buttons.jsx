@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../styles/style.css';
 
 class Buttons extends Component {
     constructor(props) {
