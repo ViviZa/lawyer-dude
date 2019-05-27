@@ -47,7 +47,7 @@ class Startpage extends Component {
 
     return (
       <div className="Startpage">
-        <SideNavigation ID={0}/>
+        {/* <SideNavigation ID={0}/> */}
         <div className="startpagecontent">
           <h1>{headline}</h1>
           <h3>An interactive eLearning unit on how to correctly use pictures from the internet without going to jail.</h3>
