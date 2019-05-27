@@ -1,31 +1,37 @@
 import React, { Component } from 'react';
 
 class ExternalImage extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            submitted: false,
+            imgUrl: '',
+        };
+
+    this.changeImgUrl = this.changeImgUrl.bind(this);
+    this.appendExtImage = this.appendExtImage.bind(this);
+    }
 
     changeImgUrl(event) {
-        this.setState({ imgUrl: event.target.value })
+        this.setState({ imgUrl: event.target.value, submitted: false })
     }
 
     appendExtImage(event) {
         event.preventDefault();
-        this.setState({ imgUrl: event.target.value })
-
-        return (
-            <div id="externalImage">
-                <img src={this.props.imgUrl} alt="externalImage" />
-            </div>
-        )
+        this.setState({ submitted: true })
     }
 
     render() {
 
-        let {imgUrl} = this.state;
-        let $imgView = null;
-        if (imgUrl) {
+        let { imgUrl } = this.state;
+        let { submitted } = this.state;
+        let imgView;
+        if (submitted) {
             // TODO resize external image
-            $imgView = (<img src={imgUrl} className={'img-view'} />);
+            // TODO is it a valid image url?
+            imgView = (<img src={imgUrl} className='img-view' alt={imgUrl} />);
         } else {
-            $imgView = (<div className="previewText">Please submit an image URL.</div>);
+            imgView = (<div className="previewText">Please submit an image URL.</div>);
         }
 
         return (
@@ -33,14 +39,16 @@ class ExternalImage extends Component {
             <div>
                 <form onSubmit={(event) => this.appendExtImage(event)}>
                     <label>
-                        Paste your image URL here:
-                        <input type="text" value={this.state.imgUrl} onChange={this.changeImgUrl} />
+                        Paste an image URL here:
+                        <input type="text" value={imgUrl} onChange={this.changeImgUrl} />
                     </label>
                     <input type="submit" value="Load image" />
                 </form>
                 <p></p>
+                <p></p>
+                <p></p>
                 <div className="imgView">
-                    {$imgView}
+                    {imgView}
                 </div>
             </div>
 
