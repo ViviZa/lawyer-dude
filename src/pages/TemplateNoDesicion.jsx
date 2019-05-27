@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import SideNavigation from '../components/SideNavigation';
-import '../styles/style.css';
 import { withRouter } from 'react-router';
 import data from '../data.json';
 import BackButton from '../components/BackButton';
+import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
 
 class NoDecision extends Component {
@@ -29,7 +29,7 @@ class NoDecision extends Component {
     const dataString = JSON.stringify(data);
     let jsonData = JSON.parse(dataString);
     const filteredJSON = jsonData.filter(values => values.id === ID);
-    const nextPageID = filteredJSON[0].nextPageIDs;
+    const nextPageID = filteredJSON[0].nextPageIDs[0];
     this.setState({
       panels: filteredJSON[0].panels,
       headline: filteredJSON[0].headline,
@@ -74,11 +74,12 @@ class NoDecision extends Component {
 
   render() {
     const { panels, textIndex, headline } = this.state;
+    const { ID } = this.props.location.state;
 
     return (
       <div className="Startpage">
         <button onClick={() => this.props.history.goBack()}>Go Back</button>
-        <SideNavigation />
+        <SideNavigation ID={ID}/>
         <div className="pagecontent">
           <h1>
             {headline}
@@ -88,17 +89,19 @@ class NoDecision extends Component {
           </p>
           {
             (textIndex === 0 && panels.length > 1) ? (
-              <div>
+              <div className="buttoncontainer">
+                <BackButtonInactive/>
                 <ForthButton nextText={this.nextText} />
               </div>
             ) : (
                 textIndex + 1 < panels.length ? (
-                  <div>
+                  <div className="buttoncontainer">
                     <BackButton previousText={this.previousText} />
                     <ForthButton nextText={this.nextText} />
                   </div>
                 ) : (
-                    <div>
+                    <div className="buttoncontainer">
+                      <BackButtonInactive/>
                       <ForthButton nextText={this.redirectToNextPage} />
                     </div>
                   ))

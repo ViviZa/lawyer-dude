@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import SideNavigation from '../components/SideNavigation';
-import '../styles/style.css';
 import { withRouter } from 'react-router';
 import data from '../data.json';
 import ForthButton from '../components/ForthButton';
 import BackButton from './../components/BackButton';
+import BackButtonInactive from '../components/BackButtonInactive';
 
 class EnterName extends Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class EnterName extends Component {
     const dataString = JSON.stringify(data);
     let jsonData = JSON.parse(dataString);
     const filteredJSON = jsonData.filter(values => values.id === ID);
-    const nextPageID = filteredJSON[0].nextPageIDs;
+    const nextPageID = filteredJSON[0].nextPageIDs[0];
     this.setState({
       panels: filteredJSON[0].panels,
       headline: filteredJSON[0].headline,
@@ -77,11 +77,11 @@ class EnterName extends Component {
 
   render() {
     const { panels, textIndex, headline } = this.state;
-
+    const { ID } = this.props.location.state;
     return (
       <div className="Startpage">
         <button onClick={() => this.props.history.goBack()}>Go Back</button>
-        <SideNavigation />
+        <SideNavigation ID={ID}/>
         <div className="pagecontent">
           <h1>
             {headline}
@@ -91,12 +91,13 @@ class EnterName extends Component {
           </p>
           {
             textIndex === 0 ? (
-              <div>
+              <div className="buttoncontainer">
+                <BackButtonInactive/>
                 <ForthButton nextText={this.nextText} />
               </div>
             ) : (
                 textIndex + 1 < panels.length ? (
-                  <div>
+                  <div className="buttoncontainer">
                   <BackButton previousText={this.previousText} />
                   <ForthButton nextText={this.nextText} />
                 </div>
@@ -107,7 +108,7 @@ class EnterName extends Component {
                       Enter your name:
                       <input type="text" value={this.state.username} onChange={this.handleChange} />
                     </label>
-                    <input type="submit" value="Let's go"/>
+                    <input className="save-name-btn" type="submit" value="Let's go"/>
                   </form>
                 </div>
                   ))

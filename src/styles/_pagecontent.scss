@@ -1,31 +1,41 @@
 @import "variables";
 
+h1 {
+	margin: 25px;
+}
+
+.startpagecontent {
+	background-color: lighten($darkblue, 72%);
+	padding-top: 14%;
+	height: 100%;
+	text-align: center;
+
+	h1 {
+		color: $darkblue;
+		font-size: 68px; 
+		margin: 25px;
+	}
+
+	h3 {
+		color: $darkblue;
+		line-height: 1.8;
+		width: 70%; 
+		margin: auto; 
+	}
+}
+
 .pagecontent {
 	background-color: $background-white;
 	height: 100%;
 	display: block;
 	margin-left: 245px;
-	padding: 65px 130px;
-}
-
-.BackButton {
-	border-radius: 50%;
-	border-style: none; 
-	background-color: $darkred;
-	padding: 14px 16px 14px 12px;
-	margin: 6px;
-	width: 65px;
-	height: 65px;
+	padding: 25px 130px;
 	text-align: center;
 }
 
-.ForthButton {
-	border-radius: 50%;
-	border-style: none; 
-	background-color: $darkred;
-	padding: 14px 12px 14px 16px;
-	margin: 6px;
-	width: 65px;
-	height: 65px;
-	text-align: center;
+.buttoncontainer {
+	position: absolute;
+	bottom: 8%;
+    left: 59%;
+    transform: translate(-50%);
 }
