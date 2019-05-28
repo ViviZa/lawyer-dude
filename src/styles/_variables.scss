@@ -24,5 +24,7 @@ $lightbrown: #A66B38;
 
 $background-white: #FFFFFF; 
 $nav-reached: #FFFFFF; 
+$nav-hover: lighten($yellow, 20%);
+$nav-active: $yellow;
 
 $button-text: #FFFFFF;

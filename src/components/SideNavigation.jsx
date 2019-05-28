@@ -93,6 +93,9 @@ class SideNavigation extends Component {
               )
             })
           }
+          <li className="li-inactive">
+            <a href="#">Unlock first</a>
+          </li>
         </ul>
         </div>         
       </div>
@@ -103,6 +106,7 @@ class SideNavigation extends Component {
           <li><a href="#startpage" onClick={this.burgerToggle} >Startpage</a></li>
           <li><a href="#storypage" onClick={this.burgerToggle}>Storypage</a></li>
           <li><a href="#decisionpage" onClick={this.burgerToggle}>Decisionpage</a></li>
+          <li><a href="#">Unlock first</a></li>
         </ul>
         </div>         
       </div>

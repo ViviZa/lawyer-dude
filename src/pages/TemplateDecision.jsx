@@ -97,9 +97,11 @@ class TemplateDecision extends Component {
           <h1>
             {headline}
           </h1>
-          <p>
-            {panels[textIndex]}
-          </p>
+          <div className="speech">
+            <p className="speechbubbletext">
+              {panels[textIndex]}
+            </p>
+          </div>
           {
             (textIndex === 0 && panels.length > 1) ? (
               <div className="buttoncontainer">
@@ -113,14 +115,20 @@ class TemplateDecision extends Component {
                     <ForthButton nextText={this.nextText} />
                   </div>
                 ) : (
-                    <div>
-                      {
-                        decisions.map((decision, index) => {
-                          return (
-                            <button onClick={() => this.redirectToNextPage(index)}>{decision}</button>
-                          )
-                        })
-                      }
+                    <div className="answer">
+                        <div className="answerbubbletext">
+                          <ol type="A">
+                            {
+                              decisions.map((decision, index) => {
+                                return (
+                                      <li>
+                                        <button className="option_btn" onClick={() => this.redirectToNextPage(index)}>{decision}</button>
+                                      </li>
+                                )
+                              })
+                            }
+                          </ol>
+                        </div>
                     </div>
                   ))
           }

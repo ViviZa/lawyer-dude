@@ -24,6 +24,18 @@ h1 {
 	}
 }
 
+ol {
+	margin: 0;
+
+	li:first-of-type {
+		padding-top: 0;
+	}
+
+	li {
+		padding: 5px 0;
+	}
+}
+
 .pagecontent {
 	background-color: $background-white;
 	height: 100%;
@@ -38,4 +50,10 @@ h1 {
 	bottom: 8%;
     left: 59%;
     transform: translate(-50%);
+}
+
+.speechbubbletext, .answerbubbletext {
+	padding: 8%;
+	position: relative;
+	letter-spacing: 1.1px;
 }

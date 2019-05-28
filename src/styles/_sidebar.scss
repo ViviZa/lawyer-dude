@@ -2,7 +2,7 @@
 
 .SideNavigation{
 	height: 100%;
-	width: 6%;
+	width: 8%;
 	background-color: $darkblue;
 	float: left;
 	position: fixed;
@@ -17,15 +17,39 @@
 
 
 		li {
-		
 			list-style-type: none;
-			padding: 10px 10px; 
+			padding: 15px 10px; 
 
 			a {
-
+				font-weight: 600;
+				text-transform: uppercase;
+				height: 42px;
 				color: $nav-reached;
 				text-decoration: none;
 
+				&:hover {
+					color: $nav-hover;
+				}
+
+				&:active {
+					color: $nav-active;
+
+					&:before {
+						content: "";
+						padding-top: 52px;
+					    background-color: $nav-active;
+					    position: absolute;
+					    width: 7px;
+					    left: 0;
+					}
+				}
+
+			}
+
+			&.li-inactive 
+				a {
+					pointer-events: none;
+					color: #7D7D7D;
 			}
 		}
 	}
@@ -52,6 +76,11 @@
 }
 .navWide {
 	display: none;
+	margin: 0;
+	position: absolute;
+	top: 52%;
+	-ms-transform: translateY(-52%);
+	transform: translateY(-52%); 
   }
 
 .logo-box {
@@ -62,7 +91,7 @@
 @media (min-width: 1060px) {
 	.SideNavigation{
 		display: block;
-		width: 15%;
+		width: 18%;
 	}
 
     nav {
