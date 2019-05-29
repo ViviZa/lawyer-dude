@@ -71,10 +71,11 @@ class Jailpage extends Component {
   }
   
   render() {
+    const { ID } = this.props.location.state;
     const { panels, textIndex, headline } = this.state;
     return (
       <div className="Jailpage">
-        <SideNavigation />
+        <SideNavigation ID={ID}/>
         <div className="pagecontent">
         <h1>{headline}</h1>
         <img src={defaultImg} className="defaultImg" alt="logo" />
