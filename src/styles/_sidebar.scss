@@ -17,20 +17,28 @@
 
 
 		li {
-		
 			list-style-type: none;
 			padding: 10px 10px; 
-
-			a {
-
-				color: $nav-reached;
-				text-decoration: none;
-
-			}
 		}
 	}
 
 }
+
+.sideNavigationLink {
+	color: $nav-reached;
+	text-decoration: none;
+}
+
+.highlightedLink {
+	color: $yellow;
+	text-decoration: none;
+}
+
+.disabledLink {
+	color: grey;
+	text-decoration: none;
+}
+
 .navNarrow {
 
 	i {
