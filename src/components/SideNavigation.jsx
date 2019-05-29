@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import '../styles/style.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ReactComponent as LDicon } from '../images/Lawyerdude-head-icon.svg';
 import { Link } from 'react-router-dom';
 import data from '../data.json';
 import { withRouter } from 'react-router';
@@ -72,7 +72,9 @@ class SideNavigation extends Component {
     return (
       <nav>
       <div className="SideNavigation">
-        <div className="logo-box"></div>
+        <div className="logo-box">
+            <LDicon className="lawyericon"/>
+        </div>
         <div className="navWide">
         <div className="wideDiv">
         <ul>
