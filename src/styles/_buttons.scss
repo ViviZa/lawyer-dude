@@ -27,6 +27,10 @@
 	width: 65px;
 	height: 65px;
 	text-align: center;
+
+	&:focus {
+		outline: none;
+	}
 }
 
 .ForthButton {
@@ -38,6 +42,10 @@
 	width: 65px;
 	height: 65px;
 	text-align: center;
+
+	&:focus {
+		outline: none;
+	}
 }
 
 .btn_inactive {
