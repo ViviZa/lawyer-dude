@@ -14,7 +14,7 @@ body {
 html, body, #root, #root > div {
     height: 100%;
     margin: 0;
-    overflow: hidden; 
+    overflow: visible; 
 }
 
 .App {
