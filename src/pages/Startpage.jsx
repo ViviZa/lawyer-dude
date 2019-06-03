@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SideNavigation from '../components/SideNavigation';
 import { withRouter } from 'react-router';
 import data from '../data.json';
 import StartButton from '../components/StartButton';
@@ -23,6 +22,7 @@ class Startpage extends Component {
     const dataString = JSON.stringify(data);
     let jsonData = JSON.parse(dataString);
     const filteredJSON = jsonData.filter( values => values.id === 0);
+    localStorage.removeItem('visitedPages');
     localStorage.setItem('visitedPages', JSON.stringify(filteredJSON));
     const nextPageID = filteredJSON[0].nextPageIDs[0];
     this.setState({

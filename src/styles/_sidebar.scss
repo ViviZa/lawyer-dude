@@ -26,6 +26,10 @@
 				height: 42px;
 				color: $nav-reached;
 				text-decoration: none;
+.sideNavigationLink {
+	color: $nav-reached;
+	text-decoration: none;
+}
 
 				&:hover {
 					color: $nav-hover;
@@ -54,7 +58,11 @@
 		}
 	}
 
+.disabledLink {
+	color: grey;
+	text-decoration: none;
 }
+
 .navNarrow {
 
 	i {

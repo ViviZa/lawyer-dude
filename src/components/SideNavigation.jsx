@@ -11,6 +11,9 @@ class SideNavigation extends Component {
     this.state = {
       visitedPages: [],
     };
+
+    this.highlightedLink = React.createRef();
+    this.scrollToBottom = this.scrollToBottom.bind(this);
   }
 
   componentDidMount(){
@@ -44,6 +47,16 @@ class SideNavigation extends Component {
     }
     this.setState({visitedPages: visitedPages});
     localStorage.setItem('visitedPages', JSON.stringify(visitedPages));
+
+    if(this.highlightedLink.current){
+      this.scrollToBottom();
+    }
+  }
+
+  componentDidUpdate(){
+    if(this.highlightedLink.current !== null){
+      this.scrollToBottom(this.highlightedLink.current);
+    }
   }
 
   redirectToNextPage(url, id) {
@@ -66,8 +79,13 @@ class SideNavigation extends Component {
       sideNavigation.style.width = '15%';
     }
 }
+
+scrollToBottom(highlightedLink) {
+  highlightedLink.scrollIntoView();
+}
   
   render() {
+    const {ID} = this.props;
     const {visitedPages} = this.state;
     return (
       <nav>
@@ -81,14 +99,21 @@ class SideNavigation extends Component {
           {
             visitedPages.map( page => {
               return (
-                <li> 
+                <li
+                  key={page.id}
+                > 
                   <Link
-                   to={{
-                    pathname: page.pageurl,
-                    state: { ID:  page.id }}}
-                  >
-                {page.headline}
-                </Link>
+                    className={page.id === ID ? 'highlightedLink' : 'sideNavigationLink'}
+                    to={{
+                      pathname: page.pageurl,
+                      state: { ID:  page.id }
+                    }}
+                    >
+                      <div 
+                    ref={page.id === ID ? this.highlightedLink : ''}
+                      />
+                    {page.headline}
+                  </Link>
                 </li>
               )
             })

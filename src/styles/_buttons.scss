@@ -16,6 +16,10 @@
 	.save-name-btn {
 		height: 20px;
 	}
+
+	&:focus {
+		outline: none;
+	}
 }
 
 .BackButton {
@@ -27,6 +31,10 @@
 	width: 65px;
 	height: 65px;
 	text-align: center;
+
+	&:focus {
+		outline: none;
+	}
 }
 
 .ForthButton {
@@ -38,6 +46,10 @@
 	width: 65px;
 	height: 65px;
 	text-align: center;
+
+	&:focus {
+		outline: none;
+	}
 }
 
 .btn_inactive {
@@ -49,6 +61,10 @@
 	width: 65px;
 	height: 65px;
 	text-align: center;
+
+	&:focus {
+		outline: none;
+	}
 }
 
 .option_btn {
