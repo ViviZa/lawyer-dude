@@ -50,18 +50,30 @@
 		text-decoration: none;
 	}
 
+	.linkWrapper {
+		display: inline-block;
+		width: calc(100% - 27px);
+	}
+
 	.highlightedLink {
 		color: $nav-active;
 		text-decoration: none;
 
-		&:before {
-			content: "";
-			position: absolute;
-			padding-top: 52px;
-			background-color: $nav-active;
-			width: 7px;
-			left: 0;
-		}
+		// &:before {
+		// 	content: "";
+		// 	position: absolute;
+		// 	padding-top: 52px;
+		// 	background-color: $nav-active;
+		// 	width: 7px;
+		// 	left: 0;
+		// }
+	}
+
+	.focusIndicator {
+		background-color: $nav-active;
+		width: 7px;
+		display: inline-block;
+    	height: 42px;
 	}
 
 	.navNarrow {
