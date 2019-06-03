@@ -196,10 +196,10 @@
     "panels": [
       "Of course you need to create a license notice.",
       "A license notice consists of four components: ",
-      "1. Title - What is the name of the material? \n If a title was provided for the material, include it. Sometimes a title is not provided; in that case, don't worry about it.",
-      "2. Author - Who owns the material? \n Name the author or authors of the material in question. Sometimes, the licensor may want you to give credit to some other entity, like a company or pseudonym. In rare cases, the licensor may not want to be attributed at all. In all of these cases, just do what they request.",
-      "3. Source - Where can I find it? \n Since you somehow accessed the material, you know where to find it. Provide the source of the material so others can, too. Since we live in the age of the Internet, this is usually a URL or hyperlink where the material resides.",
-      "4. License - How can I use it?  \n There are six different CC licenses; which one is the material under? Name and provide a link to it, eg. http://creativecommons.org/licenses/by/4.0/ for CC BY.\n→ If the licensor included a license notice with more information, include that as well.",
+      "1. Title - What is the name of the material?&#013;If a title was provided for the material, include it. Sometimes a title is not provided; in that case, don't worry about it.",
+      "2. Author - Who owns the material?&#013;Name the author or authors of the material in question. Sometimes, the licensor may want you to give credit to some other entity, like a company or pseudonym. In rare cases, the licensor may not want to be attributed at all. In all of these cases, just do what they request.",
+      "3. Source - Where can I find it?&#013;Since you somehow accessed the material, you know where to find it. Provide the source of the material so others can, too. Since we live in the age of the Internet, this is usually a URL or hyperlink where the material resides.",
+      "4. License - How can I use it?&#013;There are six different CC licenses; which one is the material under? Name and provide a link to it, eg. http://creativecommons.org/licenses/by/4.0/ for CC BY.\n→ If the licensor included a license notice with more information, include that as well.",
       "Good. Do you think you got everything together now?"
       ],
       "decisions": [
@@ -286,8 +286,8 @@
       "<Lawyerdude explains that there is a tool that helps to find pictures under free licenses>",
       "Just try it yourself!"
       ],
-      "nextPage": "/usinggoogle",
-      "nextPageIDs": [21]
+      "nextPage": "/matchthelicense",
+      "nextPageIDs": [22]
   },
   {
     "id": 20,
@@ -315,6 +315,13 @@
       ],
       "nextPage": ["/matchthelicense", "/usingpicture"],
       "nextPageIDs": [2324, 14]
+  },
+  {
+    "id": 22,
+    "pageurl": "/matchthelicense",
+    "headline" : "Match the License",
+    "nextPage": ["/usinggoogle"],
+    "nextPageIDs": [21]
   },
   {
     "id": 300,
