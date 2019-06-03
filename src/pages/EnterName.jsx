@@ -15,7 +15,8 @@ class EnterName extends Component {
       headline: '',
       nextPageID: 0,
       nextPage: '',
-      username : ''
+      username : '',
+      errorText: ''
     };
     this.nextText = this.nextText.bind(this);
     this.previousText = this.previousText.bind(this);
@@ -40,14 +41,21 @@ class EnterName extends Component {
   }
 
   redirectToNextPage(event){
-    localStorage.setItem('username', JSON.stringify(this.state.username));
-    const {history} = this.props;
-    this.setState({username: event.target.value});
-    const {nextPageID, nextPage} = this.state;
-    history.push({
-      pathname: nextPage,
-      state: { ID: nextPageID },
-    });
+    if(this.state.username === ""){
+      event.preventDefault();
+      this.setState({errorText: "Please enter a name!"});
+    } else {
+      this.setState({errorText: ""});
+      localStorage.setItem('username', JSON.stringify(this.state.username));
+      const {history} = this.props;
+      this.setState({username: event.target.value});
+      const {nextPageID, nextPage} = this.state;
+      history.push({
+        pathname: nextPage,
+        state: { ID: nextPageID },
+      });
+    }
+ 
   }
 
   handleChange(event) {
@@ -76,7 +84,7 @@ class EnterName extends Component {
 
 
   render() {
-    const { panels, textIndex, headline } = this.state;
+    const { panels, textIndex, headline, errorText } = this.state;
     const { ID } = this.props.location.state;
     return (
       <div className="Startpage">
@@ -104,6 +112,9 @@ class EnterName extends Component {
                 ) : (
                   <div>
                   <form onSubmit={(event) => this.redirectToNextPage(event)}>
+                    <div className={"errorMessage"}>
+                      {errorText}
+                    </div>
                     <label>
                       Enter your name:
                       <input type="text" value={this.state.username} onChange={this.handleChange} />
