@@ -82,7 +82,7 @@ class SideNavigation extends Component {
 
 scrollToBottom(highlightedLink) {
   console.log(highlightedLink)
-  highlightedLink.scrollIntoView({ behavior: "smooth" });
+  highlightedLink.scrollIntoView();
 }
   
   render() {
