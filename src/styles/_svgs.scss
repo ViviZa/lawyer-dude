@@ -1,7 +1,7 @@
 @import "variables";
 
 .startlawyer {
-	position: absolute;
+	position: absolute; 
 	bottom: -20px;
 	width: 12%;
     left: 50%;
@@ -10,4 +10,42 @@
 
 .lawyericon {
 	margin: 50px 25px;
+}
+
+.speech {
+	font-size: 22px;
+	position: relative;
+	margin-top: 5%;
+	margin-left: 25%;
+
+	&:before {
+	 	content: "";
+		padding-bottom: 65%;
+		padding-left: 100%;
+	 	position: absolute;
+	 	background: url(./images/speechbubble-s.svg) no-repeat;
+	 	background-size: 100%;
+	    left: 0;
+	    top: 0;
+	}
+}
+
+.answer {
+	font-size: 16px;
+	font-weight: 600;
+	position: relative;
+	width: 48%;
+	margin-top: 15%;
+	margin-left: 5%;
+
+	&:before {
+	 	content: "";
+		padding-bottom: 65%;
+		padding-left: 100%;
+	 	position: absolute;
+	 	background: url(./images/answerbubble-s.svg) no-repeat;
+	 	background-size: 100%;
+	    left: 0;
+	    top: 0;
+	}
 }

@@ -66,3 +66,19 @@
 		outline: none;
 	}
 }
+
+.option_btn {
+	text-align: left;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.8;
+	cursor: pointer;
+	background-color: transparent;
+	border-style: none;
+	margin: 0;
+	padding: 0;
+
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.2);
+	}
+}

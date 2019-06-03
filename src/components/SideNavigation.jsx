@@ -118,15 +118,9 @@ scrollToBottom(highlightedLink) {
               )
             })
           }
-            <li>
-              <Link 
-                className="disabledLink"
-                to={""}
-                onClick={e => e.preventDefault()}
-              >
-                  Unlock more chapters!
-              </Link>
-            </li>
+          <li className="li-inactive">
+            <a href="#">Unlock first</a>
+          </li>
         </ul>
         </div>         
       </div>
@@ -137,6 +131,7 @@ scrollToBottom(highlightedLink) {
           <li><a href="#startpage" onClick={this.burgerToggle} >Startpage</a></li>
           <li><a href="#storypage" onClick={this.burgerToggle}>Storypage</a></li>
           <li><a href="#decisionpage" onClick={this.burgerToggle}>Decisionpage</a></li>
+          <li><a href="#">Unlock first</a></li>
         </ul>
         </div>         
       </div>

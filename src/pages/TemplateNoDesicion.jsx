@@ -84,9 +84,11 @@ class NoDecision extends Component {
           <h1>
             {headline}
           </h1>
-          <p>
-            {panels[textIndex]}
-          </p>
+          <div className="speech">
+            <p className="speechbubbletext">
+              {panels[textIndex]}
+            </p>
+          </div>
           {
             (textIndex === 0 && panels.length > 1) ? (
               <div className="buttoncontainer">
