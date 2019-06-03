@@ -81,7 +81,6 @@ class SideNavigation extends Component {
 }
 
 scrollToBottom(highlightedLink) {
-  console.log(highlightedLink)
   highlightedLink.scrollIntoView();
 }
   
@@ -101,6 +100,7 @@ scrollToBottom(highlightedLink) {
             visitedPages.map( page => {
               return (
                 <li
+                  key={page.id}
                 > 
                   <Link
                     className={page.id === ID ? 'highlightedLink' : 'sideNavigationLink'}
@@ -121,6 +121,7 @@ scrollToBottom(highlightedLink) {
             <li>
               <Link 
                 className="disabledLink"
+                to={""}
                 onClick={e => e.preventDefault()}
               >
                   Unlock more chapters!
