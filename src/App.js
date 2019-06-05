@@ -10,6 +10,7 @@ import NoDesicion from './pages/TemplateNoDesicion';
 import EnterName from './pages/EnterName.jsx';
 import TemplateDecision from './pages/TemplateDecision';
 import MatchTheLicense from './games/MatchTheLicense';
+import UsingThePicture from './games/UsingThePicture';
 
 const history = createBrowserHistory()
 library.add(faBars);
@@ -50,7 +51,7 @@ class App extends Component {
           <Route exact path="/gettinglicence" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
           <Route exact path="/usinglicence" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/creatingnotice" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
-          <Route exact path="/usingpicture" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/usingpicture" component={() => <UsingThePicture addingPages={this.addingPages}/>}/>
           <Route exact path="/moreinformation" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/usingsearchengines" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/usingsearchtool" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
