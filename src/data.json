@@ -313,13 +313,14 @@
         "Wait, why are we doing this?",
         "Alright, found one."
       ],
-      "nextPage": ["/matchthelicense", "/usingpicture"],
+      "nextPage": ["/usingpicture"],
       "nextPageIDs": [2324, 14]
   },
   {
     "id": 22,
     "pageurl": "/matchthelicense",
     "headline" : "Match the License",
+    "panels": [],
     "nextPage": ["/usinggoogle"],
     "nextPageIDs": [21]
   },

@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import SideNavigation from '../components/SideNavigation';
 import { withRouter } from 'react-router';
+import data from '../data.json';
 import DropDown from './../components/DropDown';
+import BackButtonInactive from '../components/BackButtonInactive';
+import ForthButton from '../components/ForthButton';
 
 const licenses = [
   {explanation: "Alle", license: "CR und OC" },
@@ -23,8 +26,39 @@ class MatchTheLicense extends Component {
     this.child4 = React.createRef();
     this.child5 = React.createRef();
     this.child6 = React.createRef();
-
+    this.state = {
+      headline: '',
+      nextPageID: 0,
+      nextPage: '',
+    };
     this.validateSelection = this.validateSelection.bind(this);
+    this.redirectToNextPage = this.redirectToNextPage.bind(this);
+
+  }
+
+  componentDidMount() {
+    const { ID } = this.props.location.state;
+    const { addingPages } = this.props;
+    addingPages(ID);
+    const dataString = JSON.stringify(data);
+    let jsonData = JSON.parse(dataString);
+    const filteredJSON = jsonData.filter(values => values.id === ID);
+    const nextPageID = filteredJSON[0].nextPageIDs[0];
+    this.setState({
+      headline: filteredJSON[0].headline,
+      nextPage: filteredJSON[0].nextPage,
+      nextPageID: nextPageID,
+    })
+  }
+
+
+  redirectToNextPage() {
+    const { history } = this.props;
+    const { nextPageID, nextPage } = this.state;
+    history.push({
+      pathname: nextPage,
+      state: { ID: nextPageID },
+    });
   }
 
   validateSelection() {
@@ -58,6 +92,11 @@ class MatchTheLicense extends Component {
           <DropDown ref={this.child6} explanation={licenses[6].explanation} license={licenses[6].license}/>
           <p></p>
           <button onClick={this.validateSelection}>Validate</button>
+        </div>
+        <p></p>
+        <div className="buttoncontainer">
+        <BackButtonInactive/>
+        <ForthButton nextText={this.redirectToNextPage} />
         </div>
       </div>
     );
