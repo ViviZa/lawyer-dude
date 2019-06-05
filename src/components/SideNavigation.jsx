@@ -99,7 +99,10 @@ scrollToBottom(highlightedLink) {
           {
             visitedPages.map( page => {
               return (
+                <div>
+                <div className={page.id === ID ? "focusIndicator" : ""}/>
                 <li
+                  className="linkWrapper"
                   key={page.id}
                 > 
                   <Link
@@ -115,6 +118,7 @@ scrollToBottom(highlightedLink) {
                     {page.headline}
                   </Link>
                 </li>
+                </div>
               )
             })
           }

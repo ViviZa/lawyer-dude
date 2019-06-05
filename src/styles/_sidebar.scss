@@ -6,9 +6,10 @@
 	background-color: $darkblue;
 	float: left;
 	position: fixed;
-	overflow: scroll;
 	top: 0;
 	left: 0;
+	display: flex;
+	flex-direction: column;
 
 	ul {
 
@@ -49,18 +50,30 @@
 		text-decoration: none;
 	}
 
+	.linkWrapper {
+		display: inline-block;
+		width: calc(100% - 27px);
+	}
+
 	.highlightedLink {
 		color: $nav-active;
 		text-decoration: none;
 
-		&:before {
-			content: "";
-			padding-top: 52px;
-			background-color: $nav-active;
-			position: absolute;
-			width: 7px;
-			left: 0;
-		}
+		// &:before {
+		// 	content: "";
+		// 	position: absolute;
+		// 	padding-top: 52px;
+		// 	background-color: $nav-active;
+		// 	width: 7px;
+		// 	left: 0;
+		// }
+	}
+
+	.focusIndicator {
+		background-color: $nav-active;
+		width: 7px;
+		display: inline-block;
+    	height: 42px;
 	}
 
 	.navNarrow {
@@ -87,10 +100,9 @@
 	.navWide {
 		display: none;
 		margin: 0;
-		position: absolute;
-		top: 52%;
-		-ms-transform: translateY(-52%);
-		transform: translateY(-52%);
+		height: calc(100% - 165px);
+		overflow: scroll;
+		margin-top: auto;
 	}
 
 	.logo-box {
@@ -100,7 +112,7 @@
 
 	@media (min-width: 1060px) {
 		.SideNavigation {
-			display: block;
+			display: flex;
 			width: 18%;
 		}
 
