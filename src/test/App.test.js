@@ -1,17 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from '../App';
-import { create } from "react-test-renderer";
+import { MemoryRouter } from 'react-router';
+import StartButton from '../components/StartButton';
+import {configure, mount} from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  expect(div.toJSON()).toMatchSnapshot();
-  ReactDOM.unmountComponentAtNode(div);
+configure({ adapter: new Adapter() });
+
+
+test("startpage is rendered correctly", () => {
+  const wrapper = mount(
+    <MemoryRouter initialEntries={[ '/' ]}>
+      <App/>
+    </MemoryRouter>
+  );
+  expect(wrapper.find('.headline').text()).toBe("The Lawyer Dude");
+  expect(wrapper.find('.startlawyer')).toBeDefined();
+  expect(wrapper.find(StartButton)).toHaveLength(1);
 });
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
