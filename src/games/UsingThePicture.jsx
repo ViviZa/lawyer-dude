@@ -155,13 +155,12 @@ appendExtImage(event) {
                 <p>{title}</p>
                 License: {copywriter}, {license.label},
                 <p>{link}</p>
+                <BackButtonInactive/>
+                <ForthButton nextText={this.redirectToNextPage} />
             </div>
           )
           }
         </div>
-        <p></p>
-        <BackButtonInactive/>
-        <ForthButton nextText={this.redirectToNextPage} />
         </div>
     );
   }

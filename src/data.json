@@ -220,8 +220,8 @@
         "Not sure, tell me more.",
         "Cool."
       ],
-      "nextPage": ["/moreinformation", "/placeholder"],
-      "nextPageIDs": [15,112235]
+      "nextPage": ["success"],
+      "nextPageIDs": [16]
   },
   {
     "id": 15,
