@@ -99,12 +99,11 @@ scrollToBottom(highlightedLink) {
           {
             visitedPages.map( page => {
               return (
-                <div>
-                <div className={page.id === ID ? "focusIndicator" : ""}/>
                 <li
-                  className="linkWrapper"
-                  key={page.id}
+                className="linkWrapper"
+                key={page.id}
                 > 
+                <div className={page.id === ID ? "focusIndicator" : ""}>&nbsp;</div>
                   <Link
                     className={page.id === ID ? 'highlightedLink' : 'sideNavigationLink'}
                     to={{
@@ -112,13 +111,12 @@ scrollToBottom(highlightedLink) {
                       state: { ID:  page.id }
                     }}
                     >
-                      <div 
-                    ref={page.id === ID ? this.highlightedLink : ''}
-                      />
+                    <div 
+                      ref={page.id === ID ? this.highlightedLink : ''}
+                    />
                     {page.headline}
                   </Link>
                 </li>
-                </div>
               )
             })
           }
