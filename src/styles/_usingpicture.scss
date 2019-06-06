@@ -1,0 +1,21 @@
+@import "variables";
+
+
+.imgView {
+    margin: 0 auto;
+	width: 700px;
+	height: 400px;
+}
+
+.imageContent {
+    width: 100%;
+    height: -webkit-fill-available;
+}
+
+.licenceProperty {
+    display: inline-block;
+}
+
+.licenseDropdown {
+    width: 200px;
+}
