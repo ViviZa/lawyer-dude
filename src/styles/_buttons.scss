@@ -1,6 +1,6 @@
 @import "variables";
 
-.StartButton, .save-name-btn, .load-img-btn {
+.StartButton, .save-name-btn, .load-img-btn, .url-upload-btn {
 	color: $button-text;
 	border-radius: 100px;
 	border-style: none; 
@@ -17,9 +17,11 @@
 		height: 20px;
 	}
 
-	&.load-img-btn {
-		height: 55px;
+	&.load-img-btn, &.url-upload-btn {
+		font-size: 16px;
+		height: 40px;
 		margin: 35px;
+		padding: 2px 25px;
 	}
 
 	&:focus {

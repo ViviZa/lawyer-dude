@@ -7,16 +7,20 @@ input, label {
 	vertical-align: middle;
 }
 
-.picture-upload-input {
+.picture-upload-input, .picture-specs-input {
 	border-top: none;
 	border-left: none;
 	border-right: none;
 	margin-top: 55px;
 	margin-bottom: 10px;
 	width: 100%;
+
+	&.picture-specs-input {
+		margin-top: 20px;
+	}		
 }
 
-.url-label {
+.url-label, .licenceProperty, .selectProperty {
 	font-size: 14px;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -25,6 +29,21 @@ input, label {
 	margin-left: auto;
 	margin-right: auto;
 	padding-right: 25px;
+
+	&.licenceProperty {
+		width: 100%;
+		text-align: left;
+		letter-spacing: 1px;
+	}
+
+	&.selectProperty {
+		float: left;
+		width: 15%;
+		text-align: left;
+		letter-spacing: 1px;
+		margin: 0;
+		padding-top: 25px;
+	}
 }
 
 .url-form {
@@ -34,5 +53,15 @@ input, label {
 	  display: inline-block;
 	  vertical-align: middle;
 	  height: 100%;
+	}
 }
+
+.licenceProperty-container, .selectProperty-container {
+	width: 70%;
+	margin: auto;
+}
+
+.license-select-wrap {
+	width: 100%;
+	padding-top: 15px;
 }
