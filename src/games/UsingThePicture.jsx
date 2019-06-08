@@ -98,6 +98,7 @@ appendExtImage(event) {
 
     return (
       <div className="MatchTheLicense">
+       <button onClick={() => this.props.history.goBack()}>Go Back</button>
          <SideNavigation ID={ID}/>
         <div className="pagecontent">
           <h1>
@@ -105,12 +106,12 @@ appendExtImage(event) {
           </h1>
           {
             !noticeCreated && (
-              <form onSubmit={(event) => this.appendExtImage(event)}>
-                <label>
-                    Paste an image URL here:
-                    <input type="text" value={imgUrl} onChange={this.changeImgUrl} />
+              <form className="url-form" onSubmit={(event) => this.appendExtImage(event)}>
+                <label className="url-label">
+                    <input className="picture-upload-input" type="text" value={imgUrl} onChange={this.changeImgUrl} />
+                    Paste your image URL
                 </label>
-                <input type="submit" value="Load image" />
+                <input className="load-img-btn" type="submit" value="Load image" />
             </form>
             )
           }

@@ -1,0 +1,38 @@
+@import "variables";
+
+input, label {
+	display: inline-block;
+	letter-spacing: 1px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.picture-upload-input {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	margin-top: 55px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.url-label {
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: rgb(132, 132, 132);
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 25px;
+}
+
+.url-form {
+
+	&:before {
+	  content: "";
+	  display: inline-block;
+	  vertical-align: middle;
+	  height: 100%;
+}
+}
