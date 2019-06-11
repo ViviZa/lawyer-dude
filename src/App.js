@@ -52,6 +52,7 @@ class App extends Component {
           <Route exact path="/usinglicence" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/creatingnotice" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/usingpicture" component={() => <UsingThePicture addingPages={this.addingPages}/>}/>
+          <Route exact path="/dontusetheimage" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/moreinformation" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/usingsearchengines" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/usingsearchtool" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
@@ -61,12 +62,8 @@ class App extends Component {
           <Route exact path="/finish" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
           <Route exact path="/jail" component={() => <Jailpage addingPages={this.addingPages}/>}/>
           <Route exact path="/matchthelicense" component={() => <MatchTheLicense addingPages={this.addingPages}/>}/>
+          <Route exact path="/collectinfo" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/stealingpictures" component={() => <Jailpage addingPages={this.addingPages}/>}/>
-          <Route exact path="/stealingpictures1" component={() => <Jailpage addingPages={this.addingPages}/>}/>
-          <Route exact path="/stealingpictures2" component={() => <Jailpage addingPages={this.addingPages}/>}/>
-          <Route exact path="/stealingpictures3" component={() => <Jailpage addingPages={this.addingPages}/>}/>
-          <Route exact path="/stealingpictures4" component={() => <Jailpage addingPages={this.addingPages}/>}/>
-          <Route exact path="/missinglicence" component={() => <Jailpage addingPages={this.addingPages}/>}/>
       </Router>
     );
   }

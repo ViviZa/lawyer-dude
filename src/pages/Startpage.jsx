@@ -50,7 +50,7 @@ class Startpage extends Component {
         {/* <SideNavigation ID={0}/> */}
         <div className="startpagecontent">
           <h1 className="headline">{headline}</h1>
-          <h3>An interactive eLearning unit on how to correctly use pictures from the internet without going to jail.</h3>
+          <h3>An e-learning unit on using images from the internet without going to jail</h3>
           <StartButton nextText={this.redirectToNextPage} />
           <p></p>
           <LDhappy className="startlawyer"/>  
