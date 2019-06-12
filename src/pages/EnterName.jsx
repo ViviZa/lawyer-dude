@@ -98,9 +98,11 @@ class EnterName extends Component {
           <div className="llama-container">
             <Llama className="entername-llama"/>  
           </div>
-          <p>
-            {panels[textIndex]}
-          </p>
+          <div className="speech">
+            <p className="speechbubbletext">
+              {panels[textIndex]}
+            </p>
+          </div>
           {
             textIndex === 0 ? (
               <div className="buttoncontainer">
