@@ -6,6 +6,7 @@ import ForthButton from '../components/ForthButton';
 import BackButton from './../components/BackButton';
 import BackButtonInactive from '../components/BackButtonInactive';
 import { ReactComponent as Llama } from '../images/Lawyerdude-llama.svg';
+import { ReactComponent as LDHeadHappy } from '../images/Lawyerdude-head-happy.svg';
 
 class EnterName extends Component {
   constructor(props) {
@@ -102,6 +103,9 @@ class EnterName extends Component {
             <p className="speechbubbletext">
               {panels[textIndex]}
             </p>
+          </div>
+          <div className="speechlawyer-container">
+            <LDHeadHappy className="speechlawyer-happy"/>
           </div>
           {
             textIndex === 0 ? (
