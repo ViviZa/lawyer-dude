@@ -48,7 +48,7 @@ class TemplateDecision extends Component {
         if (!panel["text"]) {
           return panel.replace('{username}', usernameParsed);
         } else {
-          return panel["text"].replace('{username}', usernameParsed);;
+          return panel;
         }
      });
      this.setState({panels : newPanels});

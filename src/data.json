@@ -206,19 +206,19 @@
       "Now that you collected all necessary information it’s time to create the license notice..",
       "A license notice consists of four components: ",
       {
-        "text": "1. Title - What is the name of the material? &#013; If a title was provided for the material, include it. Sometimes a title is not provided; in that case, don't worry about it.",
+        "text": "1. Title - What is the name of the material? \n  If a title was provided for the material, include it. Sometimes a title is not provided; in that case, don't worry about it.",
         "cssClass": "resourceContainer"
       },
       {
-        "text": "2. Author - Who owns the material? &#013; Name the author or authors of the material in question. Sometimes, the licensor may want you to give credit to some other entity, like a company or pseudonym. In rare cases, the licensor may not want to be attributed at all. In all of these cases, just do what they request.",
+        "text": "2. Author - Who owns the material? \n Name the author or authors of the material in question. Sometimes, the licensor may want you to give credit to some other entity, like a company or pseudonym. In rare cases, the licensor may not want to be attributed at all. In all of these cases, just do what they request.",
         "cssClass": "resourceContainer"
       },
       {
-        "text": "3. Source - Where can I find it? &#013; Since you somehow accessed the material, you know where to find it. Provide the source of the material so others can, too. Since we live in the age of the Internet, this is usually a URL or hyperlink where the material resides.",
+        "text": "3. Source - Where can I find it? \n Since you somehow accessed the material, you know where to find it. Provide the source of the material so others can, too. Since we live in the age of the Internet, this is usually a URL or hyperlink where the material resides.",
         "cssClass": "resourceContainer"
       },
       {
-        "text": "4. License - How can I use it? &#013; There are six different CC licenses; which one is the material under? Name and provide a link to it, eg. http://creativecommons.org/licenses/by/4.0/ for CC BY.\n→ If the licensor included a license notice with more information, include that as well.",
+        "text": "4. License - How can I use it? \n There are six different CC licenses; which one is the material under? Name and provide a link to it, eg. http://creativecommons.org/licenses/by/4.0/ for CC BY.\n→ If the licensor included a license notice with more information, include that as well.",
         "cssClass": "resourceContainer"
       },
       "Good. Should we do it?"

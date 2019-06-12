@@ -50,6 +50,7 @@ ol {
 
 .resourceContainer {
 	border: 1px solid black;
+	white-space: pre-line;
 }
 
 .buttoncontainer {
@@ -69,9 +70,6 @@ ol {
 	color: $darkred;
 }
 
-.dropdown {
-	
-}
 .validation {
 	width: 10px;
 	height: 10px;
