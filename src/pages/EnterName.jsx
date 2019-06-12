@@ -127,7 +127,7 @@ class EnterName extends Component {
                     </div>
                     <label className="entername-label">
                       <input className="entername-input" type="text" value={this.state.username} onChange={this.handleChange} />
-                      Enter your name:
+                      Enter your name
                     </label>
                     <input className="save-name-btn" type="submit" value="Let's go"/>
                   </form>

@@ -13,8 +13,8 @@
 	font-weight: 700;
 	letter-spacing: 3px;
 
-	.save-name-btn {
-		height: 20px;
+	&.save-name-btn {
+		margin: 55px 25px;
 	}
 
 	&.load-img-btn, &.url-upload-btn {

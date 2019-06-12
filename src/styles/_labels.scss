@@ -5,6 +5,13 @@ input, label {
 	letter-spacing: 1px;
 	text-align: left;
 	vertical-align: middle;
+	height: 30px;
+
+	&:focus {
+		outline-color: none !important;
+		border: 1px solid $lightblue;
+		box-shadow: 0 0 5px $lightblue;
+	} 
 }
 
 .picture-upload-input, .picture-specs-input, .entername-input {
@@ -18,6 +25,10 @@ input, label {
 	&.picture-specs-input {
 		margin-top: 20px;
 	}	
+
+	&.entername-input {
+		margin: 10px 0;
+	}
 }
 
 .url-label, .licenceProperty, .selectProperty, .entername-label {
@@ -55,6 +66,8 @@ input, label {
 	  height: 100%;
 	}
 }
+
+
 
 .licenceProperty-container, .selectProperty-container {
 	width: 70%;
