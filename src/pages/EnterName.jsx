@@ -5,6 +5,7 @@ import data from '../data.json';
 import ForthButton from '../components/ForthButton';
 import BackButton from './../components/BackButton';
 import BackButtonInactive from '../components/BackButtonInactive';
+import { ReactComponent as Llama } from '../images/Lawyerdude-llama.svg';
 
 class EnterName extends Component {
   constructor(props) {
@@ -94,6 +95,9 @@ class EnterName extends Component {
           <h1>
             {headline}
           </h1>
+          <div className="llama-container">
+            <Llama className="entername-llama"/>  
+          </div>
           <p>
             {panels[textIndex]}
           </p>
