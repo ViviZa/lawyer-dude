@@ -1,242 +1,253 @@
-[
-  {
+[{
     "id": 0,
-    "pageurl" : "/",
-    "headline" : "The Lawyer Dude",
-    "nextPage" : "/learninggoals",
+    "pageurl": "/",
+    "headline": "The Lawyer Dude",
+    "nextPage": "/learninggoals",
     "nextPageIDs": [1]
   },
   {
     "id": 1,
-    "pageurl" : "/learninggoals",
-    "headline" : "What you learn in this story",
+    "pageurl": "/learninggoals",
+    "headline": "What you learn in this story",
     "panels": [
-        "This online learning unit will help you to understand how to use images from the internet.",
-        "You will learn about the differences of all rights reserved, some rights reserved and no rights reserved images and what information is mandatory in order to legally use them.",
-        "You will also be introduced to different tools and repositories that can help you find free licensed images on the internet.",
-        "Find your own path through the game and be rewarded by acquiring a lot of helpful knowledge.",
-        "OK, lets learn how to use images from the internet without going to jail!"
-      ],
-    "nextPage" : "/entername",
+      "This online learning unit will help you to understand how to use images from the internet.",
+      "You will learn about the differences of all rights reserved, some rights reserved and no rights reserved images and what information is mandatory in order to legally use them.",
+      "You will also be introduced to different tools and repositories that can help you find free licensed images on the internet.",
+      "Find your own path through the game and be rewarded by acquiring a lot of helpful knowledge.",
+      "OK, lets learn how to use images from the internet without going to jail!"
+    ],
+    "nextPage": "/entername",
     "nextPageIDs": [2]
   },
   {
     "id": 2,
-    "pageurl" : "/entername",
-    "headline" : "Introduce yourself",
+    "pageurl": "/entername",
+    "headline": "Introduce yourself",
     "panels": [
-        "Hello. Are you interested in learning about copyright and free licenses? That’s great, you came to the right place.",
-        "But, how rude of mine! I totally forgot to introduce myself. I am the Lawyerdude, your legal advisor and I am here to help you.",
-        "Before we start our exciting journey through the beautiful world of licenses, how shall I call you?"
-      ],
-    "nextPage" : "/introduction",
-    "nextPageIDs" : [3]
+      "Hello. Are you interested in learning about copyright and free licenses? That’s great, you came to the right place.",
+      "But, how rude of mine! I totally forgot to introduce myself. I am the Lawyerdude, your legal advisor and I am here to help you.",
+      "Before we start our exciting journey through the beautiful world of licenses, how shall I call you?"
+    ],
+    "nextPage": "/introduction",
+    "nextPageIDs": [3]
   },
   {
     "id": 3,
-    "pageurl" : "/introduction",
-    "headline" : "Getting started",
+    "pageurl": "/introduction",
+    "headline": "Getting started",
     "panels": [
-        "Hey {username}, nice to meet you.",
-        "Don’t worry. I know that there is a lot of confusion about using images from the internet. But it is actually not that complicated. Let’s just do it together, alright?",
-        "What brought you here anyway?"
-      ],
-      "decisions": [
-        "I found a nice image on the internet that I would like to use. Can you show me how I do it correctly?",
-        "I am not sure where to look for an image that I can use for my own purpose. Can you help me?"
-      ],
+      "Hey {username}, nice to meet you.",
+      "Don’t worry. I know that there is a lot of confusion about using images from the internet. But it is actually not that complicated. Let’s just do it together, alright?",
+      "What brought you here anyway?"
+    ],
+    "decisions": [
+      "I found a nice image on the internet that I would like to use. Can you show me how I do it correctly?",
+      "I am not sure where to look for an image that I can use for my own purpose. Can you help me?"
+    ],
     "nextPage": ["/picturesfrominternet", "/searchingonline"],
-    "nextPageIDs": [4,5]
+    "nextPageIDs": [4, 5]
   },
   {
     "id": 4,
-    "pageurl" : "/picturesfrominternet",
-    "headline" : "Using images from the internet",
+    "pageurl": "/picturesfrominternet",
+    "headline": "Using images from the internet",
     "panels": [
-        "Of course I can help you. Let me show you how to find out if you are allowed to and how to use an image from the internet.",
-        "<INTRODUCTION TO OPEN CONTENT>",
-        "Alright, I believe you now know the very basics of open licensing.",
-        "Now let’s take a look at the licenses.",
-        "<EXPLAINING CC LICENSES>",
-        "Are you aware of which of the licenses I just explained applies to your image?"
-      ],
-      "decisions": [
-        "Phhh, that is way too complicated. I will just use the image. No one ever will find out anyways.",
-        "To be honest, I don’t know.",
-        "Forget about the image! Is there a way to directly access those freely licensed images you just mentioned?"
-      ],
+      "Of course I can help you. Let me show you how to find out if you are allowed to and how to use an image from the internet.",
+      "<INTRODUCTION TO OPEN CONTENT>",
+      "Alright, I believe you now know the very basics of open licensing.",
+      "Now let’s take a look at the licenses.",
+      "<EXPLAINING CC LICENSES>",
+      "Are you aware of which of the licenses I just explained applies to your image?"
+    ],
+    "decisions": [
+      "Phhh, that is way too complicated. I will just use the image. No one ever will find out anyways.",
+      "To be honest, I don’t know.",
+      "Forget about the image! Is there a way to directly access those freely licensed images you just mentioned?"
+    ],
     "nextPage": ["/stealingpictures", "/understandingsource", "/usingfreelicences"],
-    "nextPageIDs": [300,6,7]
+    "nextPageIDs": [300, 6, 7]
   },
   {
     "id": 5,
-    "pageurl" : "/searchingonline",
-    "headline" : "Searching for images online",
+    "pageurl": "/searchingonline",
+    "headline": "Searching for images online",
     "panels": [
-        "Alright then. Let’s find a nice image that fits your needs.",
-        "<INTRODUCTION TO LICENSE LAW>",
-        "Where do you usually look for images?"
-      ],
-      "decisions": [
-        "Google.",
-        "I don’t know. You tell me!"
-      ],
-    "nextPage": ["/usingsearchengines" ,"/usingfreelicences"],
-    "nextPageIDs": [18,7]
+      "Alright then. Let’s find a nice image that fits your needs.",
+      "<INTRODUCTION TO LICENSE LAW>",
+      "Where do you usually look for images?"
+    ],
+    "decisions": [
+      "Google.",
+      "I don’t know. You tell me!"
+    ],
+    "nextPage": ["/usingsearchengines", "/usingfreelicences"],
+    "nextPageIDs": [18, 7]
   },
   {
     "id": 6,
-    "pageurl" : "/understandingsource",
-    "headline" : "Understanding the Source",
+    "pageurl": "/understandingsource",
+    "headline": "Understanding the Source",
     "panels": [
-        "No problem. I can help you to find all the information you need. First let’s start with the source of an image.",
-        "As I already mentioned before, there are three different ways of licensing images. Most images that can be found online have rights reserved. Here you need to ask for permission to use the image. Many images have some rights reserved. Those are covered by the CC licenses. And some images are under the public domain, so there are no rights reserved. These images are free to use without any further restrictions.",
-        "If you want to use the image, you need to tell others where the picture is from and how it is licensed.So first, where did you find your image??"
-      ],
-      "decisions": [
-        "Seriously? I don't remember. Somewhere on the internet.",
-        "I’ve saved the source link.",
-        "I found it somewhere on Wikimedia Commons or Wikipedia."
-      ],
+      "No problem. I can help you to find all the information you need. First let’s start with the source of an image.",
+      "As I already mentioned before, there are three different ways of licensing images. Most images that can be found online have rights reserved. Here you need to ask for permission to use the image. Many images have some rights reserved. Those are covered by the CC licenses. And some images are under the public domain, so there are no rights reserved. These images are free to use without any further restrictions.",
+      "If you want to use the image, you need to tell others where the picture is from and how it is licensed.So first, where did you find your image??"
+    ],
+    "decisions": [
+      "Seriously? I don't remember. Somewhere on the internet.",
+      "I’ve saved the source link.",
+      "I found it somewhere on Wikimedia Commons or Wikipedia."
+    ],
     "nextPage": ["/dontusetheimage", "/findingholder", "usingwiki"],
-    "nextPageIDs": [15,8,9]
+    "nextPageIDs": [15, 8, 9]
   },
   {
     "id": 7,
-    "pageurl" : "/usingfreelicences",
-    "headline" : "Using free licenses",
+    "pageurl": "/usingfreelicences",
+    "headline": "Using free licenses",
     "panels": [
-        "I know, you probably expect me to show you a magical way on how to find images, that you can easily use. Well, there is something just like that.",
-        "<EXPLAINING REPOSITORIES>",
-        "Now I’ve told you a lot about repositories. What do you think so far?"
-      ],
-      "decisions": [
-        "Wow, I love it. Tell me more about Wikimedia Commons!",
-        "I am not convinced yet. Aren’t there more possibilities?"
-      ],
+      "I know, you probably expect me to show you a magical way on how to find images, that you can easily use. Well, there is something just like that.",
+      "<EXPLAINING REPOSITORIES>",
+      "Now I’ve told you a lot about repositories. What do you think so far?"
+    ],
+    "decisions": [
+      "Wow, I love it. Tell me more about Wikimedia Commons!",
+      "I am not convinced yet. Aren’t there more possibilities?"
+    ],
     "nextPage": ["/usingwiki", "/usingsearchengines"],
-    "nextPageIDs": [9,18]
+    "nextPageIDs": [9, 18]
   },
   {
     "id": 8,
-    "pageurl" : "/findingholder",
-    "headline" : "Finding the copyright holder",
+    "pageurl": "/findingholder",
+    "headline": "Finding the copyright holder",
     "panels": [
-        "That’s good! The image source is one of the main components of the so called license notice that we will have to create. You should write down or copy the link now, in order to use it for the license notice later.",
-        "Another very important thing is to know the copyright holder of the image.",
-        "The copyright holder is the creator of the image and the one who decides what other people are allowed or not allowed to do with it.",
-        "Are you able to find out the name of the creator of your image?"
-      ],
-      "decisions": [
-        "I don’t care!",
-        "Found it!",
-        "No, I can not find any information on that."
-      ],
+      "That’s good! The image source is one of the main components of the so called license notice that we will have to create. You should write down or copy the link now, in order to use it for the license notice later.",
+      "Another very important thing is to know the copyright holder of the image.",
+      "The copyright holder is the creator of the image and the one who decides what other people are allowed or not allowed to do with it.",
+      "Are you able to find out the name of the creator of your image?"
+    ],
+    "decisions": [
+      "I don’t care!",
+      "Found it!",
+      "No, I can not find any information on that."
+    ],
     "nextPage": ["/stealingpictures", "/copyrightinfo", "/dontusetheimage"],
-    "nextPageIDs": [300,10, 15]
+    "nextPageIDs": [300, 10, 15]
   },
   {
     "id": 9,
-    "pageurl" : "/usingwiki",
-    "headline" : "Using Wikimedia Commons",
+    "pageurl": "/usingwiki",
+    "headline": "Using Wikimedia Commons",
     "panels": [
-        "Wikimedia Commons is one of the most popular repositories...",
-        "<EXPLAINING WIKIMEDIA COMMONS>"
-      ],
-      "decisions": [
-        "That’s it? So how do I use these images?",
-        "Cool, that's very easy. Thank you for showing me where to get images that don’t need an annoying license notice!"
-      ],
+      "Wikimedia Commons is one of the most popular repositories...",
+      "<EXPLAINING WIKIMEDIA COMMONS>"
+    ],
+    "decisions": [
+      "That’s it? So how do I use these images?",
+      "Cool, that's very easy. Thank you for showing me where to get images that don’t need an annoying license notice!"
+    ],
     "nextPage": ["/usingwiki2", "/stealingpictures"],
-    "nextPageIDs": [20,300]
+    "nextPageIDs": [20, 300]
   },
   {
     "id": 10,
-    "pageurl" : "/copyrightinfo",
-    "headline" : "Finding the copyright information",
+    "pageurl": "/copyrightinfo",
+    "headline": "Finding the copyright information",
     "panels": [
-        "Good. You already found two important components for the license notice. Don’t forget to note the copyright holder now. You will need it later.",
-        "Now it is time to have a look at the copyright information itself.",
-        "Did the author provide any information on how to use the image?"
-      ],
-      "decisions": [
-        "No, I was looking for it but couldn’t find anything!",
-        "I don’t know. Where should I search for it?",
-        "Yes, I already found the license notice."
-      ],
+      "Good. You already found two important components for the license notice. Don’t forget to note the copyright holder now. You will need it later.",
+      "Now it is time to have a look at the copyright information itself.",
+      "Did the author provide any information on how to use the image?"
+    ],
+    "decisions": [
+      "No, I was looking for it but couldn’t find anything!",
+      "I don’t know. Where should I search for it?",
+      "Yes, I already found the license notice."
+    ],
     "nextPage": ["/stealingpictures", "/gettinglicence", "/usinglicence"],
-    "nextPageIDs": [300,11,12]
+    "nextPageIDs": [300, 11, 12]
   },
   {
     "id": 11,
-    "pageurl" : "/gettinglicence",
-    "headline" : "Getting the licence",
+    "pageurl": "/gettinglicence",
+    "headline": "Getting the licence",
     "panels": [
-        "Don't worry. I know that it can be difficult to find that information on a website.",
-        "If you use online repositories like i.e. Wikimedia Commons, most of those have a special page on which they inform you on how to use their images legally but it might not be that easy to find out what those copyright information mean.",
-        "Let’s have a look at some examples."
-      ],
+      "Don't worry. I know that it can be difficult to find that information on a website.",
+      "If you use online repositories like i.e. Wikimedia Commons, most of those have a special page on which they inform you on how to use their images legally but it might not be that easy to find out what those copyright information mean.",
+      "Let’s have a look at some examples."
+    ],
     "decisions": [
       "OK.",
       "But my image is from a private blog or website, not from a repository. What should I do?"
     ],
-    "nextPage":  ["/usinglicence", "/stealingpictures"],
-    "nextPageIDs": [12,15]
+    "nextPage": ["/usinglicence", "/stealingpictures"],
+    "nextPageIDs": [12, 15]
   },
   {
     "id": 12,
-    "pageurl" : "/usinglicence",
-    "headline" : "Using the licence",
+    "pageurl": "/usinglicence",
+    "headline": "Using the licence",
     "panels": [
       "Well done. Now you should feel comfortable to apply your knowledge.",
       "Again, have a look at the source of your image. Can you find out, which license applies to the image?"
     ],
     "decisions": [
-        "Let me have a look at the examples again.",
-        "Sure, it is one of the CC licenses.",
-        "I still don’t understand the license information for my image."
+      "Let me have a look at the examples again.",
+      "Sure, it is one of the CC licenses.",
+      "I still don’t understand the license information for my image."
     ],
     "nextPage": ["/placeholder", "/creatingnotice", "/stealingpictures"],
-    "nextPageIDs": [123,13,15]
+    "nextPageIDs": [123, 13, 15]
   },
   {
     "id": 13,
-    "pageurl" : "/creatingnotice",
-    "headline" : "Creating the licence notice",
+    "pageurl": "/creatingnotice",
+    "headline": "Creating the license notice",
     "panels": [
       "Now that you collected all necessary information it’s time to create the license notice..",
       "A license notice consists of four components: ",
-      "1. Title - What is the name of the material?&#013;If a title was provided for the material, include it. Sometimes a title is not provided; in that case, don't worry about it.",
-      "2. Author - Who owns the material?&#013;Name the author or authors of the material in question. Sometimes, the licensor may want you to give credit to some other entity, like a company or pseudonym. In rare cases, the licensor may not want to be attributed at all. In all of these cases, just do what they request.",
-      "3. Source - Where can I find it?&#013;Since you somehow accessed the material, you know where to find it. Provide the source of the material so others can, too. Since we live in the age of the Internet, this is usually a URL or hyperlink where the material resides.",
-      "4. License - How can I use it?&#013;There are six different CC licenses; which one is the material under? Name and provide a link to it, eg. http://creativecommons.org/licenses/by/4.0/ for CC BY.\n→ If the licensor included a license notice with more information, include that as well.",
+      {
+        "text": "1. Title - What is the name of the material? &#013; If a title was provided for the material, include it. Sometimes a title is not provided; in that case, don't worry about it.",
+        "cssClass": "resourceContainer"
+      },
+      {
+        "text": "2. Author - Who owns the material? &#013; Name the author or authors of the material in question. Sometimes, the licensor may want you to give credit to some other entity, like a company or pseudonym. In rare cases, the licensor may not want to be attributed at all. In all of these cases, just do what they request.",
+        "cssClass": "resourceContainer"
+      },
+      {
+        "text": "3. Source - Where can I find it? &#013; Since you somehow accessed the material, you know where to find it. Provide the source of the material so others can, too. Since we live in the age of the Internet, this is usually a URL or hyperlink where the material resides.",
+        "cssClass": "resourceContainer"
+      },
+      {
+        "text": "4. License - How can I use it? &#013; There are six different CC licenses; which one is the material under? Name and provide a link to it, eg. http://creativecommons.org/licenses/by/4.0/ for CC BY.\n→ If the licensor included a license notice with more information, include that as well.",
+        "cssClass": "resourceContainer"
+      },
       "Good. Should we do it?"
-      ],
-      "decisions": [
-        "Yeah, let's go!",
-        "Actually, I’m still not sure about it..."
-      ],
-      "nextPage": ["/usingpicture", "/placeholder"],
-      "nextPageIDs": [14,11]
+    ],
+    "decisions": [
+      "Yeah, let's go!",
+      "Actually, I’m still not sure about it..."
+    ],
+    "nextPage": ["/usingpicture", "/placeholder"],
+    "nextPageIDs": [14, 11]
   },
   {
     "id": 14,
-    "pageurl" : "/usingpicture",
-    "headline" : "Using the picture",
+    "pageurl": "/usingpicture",
+    "headline": "Using the picture",
     "panels": [
       "Great! Now you have all the information you need to use your picture from the internet without going to jail."
-      ],
-      "decisions": [
-        "Not sure, tell me more.",
-        "Cool."
-      ],
-      "nextPage": ["success"],
-      "nextPageIDs": [16]
+    ],
+    "decisions": [
+      "Not sure, tell me more.",
+      "Cool."
+    ],
+    "nextPage": ["success"],
+    "nextPageIDs": [16]
   },
   {
     "id": 15,
-    "pageurl" : "/dontusetheimage",
-    "headline" : "Don't use the image",
+    "pageurl": "/dontusetheimage",
+    "headline": "Don't use the image",
     "panels": [
       "If you cannot find any specific information about your image or if you are not sure whether the information you found is correct, I would advise you to look for an alternative and not use that one.",
       "<EXPLAINING THE CONSEQUENCES>",
@@ -249,97 +260,97 @@
       "Show me how to use a search engine, please."
     ],
     "nextPage": ["/usingfreelicences", "/stealingpictures", "/usingsearchengines"],
-    "nextPageIDs": [7,300,18]
+    "nextPageIDs": [7, 300, 18]
   },
   {
     "id": 16,
-    "pageurl" : "/success",
-    "headline" : "Success",
+    "pageurl": "/success",
+    "headline": "Success",
     "panels": [
       "Well done! Following the steps you just learned will help you using images the legal way and avoid going to jail.",
       "<DISCLAIMER>",
       "Actually, there are multiple ways to get here. Would you like to learn more about this topic?"
-      ],
-      "decisions": [
-        "Thanks, that's enough licenses for now!",
-        "Tell me more about the use of repositories like Wikimedia Commons.",
-        "Is there a way to find free images on Google?",
-        "What about a specific image I found on a website?"
-      ],
-      "nextPage": ["/finish", "/usingfreelicences", "/searchingonline", "/picturesfrominternet"],
-      "nextPageIDs": [17,7,5,4]
+    ],
+    "decisions": [
+      "Thanks, that's enough licenses for now!",
+      "Tell me more about the use of repositories like Wikimedia Commons.",
+      "Is there a way to find free images on Google?",
+      "What about a specific image I found on a website?"
+    ],
+    "nextPage": ["/finish", "/usingfreelicences", "/searchingonline", "/picturesfrominternet"],
+    "nextPageIDs": [17, 7, 5, 4]
   },
   {
     "id": 17,
-    "pageurl" : "/finish",
-    "headline" : "Finish",
+    "pageurl": "/finish",
+    "headline": "Finish",
     "panels": [
       "Thank you {username}, it’s been a pleasure to introduce you to the world of licenses and open content.",
       "If you would like to get more information, you are always very welcome to return to this tutorial. Or even start right now by exploring our resources.",
       "Would you like to test yourself on your newly acquired knowledge or just want to have some fun? Go ahead and play all the tutorial games in our “Games” section."
-      ],
-      "nextPage": ["/placeholder"],
-      "nextPageIDs": [123]
+    ],
+    "nextPage": ["/placeholder"],
+    "nextPageIDs": [123]
   },
   {
     "id": 18,
     "pageurl": "/usingsearchengines",
-    "headline" : "Using search engines",
+    "headline": "Using search engines",
     "panels": [
       "Google sure is a great place to find pictures online.",
       "<EXPLAINING SEARCH ENGINES>"
-      ],
-      "decisions": [
-        "There must be something easier!",
-        "It cannot be that difficult..",
-        "..."
-      ],
-      "nextPage": ["/usingfreelicences", "/usingsearchtool", "/stealingpictures4"],
-      "nextPageIDs": [7, 19, 300]
+    ],
+    "decisions": [
+      "There must be something easier!",
+      "It cannot be that difficult..",
+      "..."
+    ],
+    "nextPage": ["/usingfreelicences", "/usingsearchtool", "/stealingpictures4"],
+    "nextPageIDs": [7, 19, 300]
   },
   {
     "id": 19,
     "pageurl": "/usingsearchtool",
-    "headline" : "Using search engine tools",
+    "headline": "Using search engine tools",
     "panels": [
       "Google helps you to find free licensed images.",
       "<EXPLAINING SEARCH ENGINE TOOLS>",
       "Go for it, try it yourself!"
-      ],
-      "nextPage": "/matchthelicense",
-      "nextPageIDs": [22]
+    ],
+    "nextPage": "/matchthelicense",
+    "nextPageIDs": [22]
   },
   {
     "id": 20,
     "pageurl": "usingwiki2",
-    "headline" : "Using Wikimedia Commons 2",
+    "headline": "Using Wikimedia Commons 2",
     "panels": [
-        "That depends. You need to create a license notice for most images from the internet if you want to use them. But - surprise - there are a few exceptions.",
-        "<CREATING A LICENSE NOTICE>",
-        "But don't worry. There is a tool that will help you."
-      ],
+      "That depends. You need to create a license notice for most images from the internet if you want to use them. But - surprise - there are a few exceptions.",
+      "<CREATING A LICENSE NOTICE>",
+      "But don't worry. There is a tool that will help you."
+    ],
     "nextPage": "/usingpicture",
     "nextPageIDs": [14]
   },
   {
     "id": 21,
     "pageurl": "/usinggoogle",
-    "headline" : "Using the search engine",
+    "headline": "Using the search engine",
     "panels": [
       "Good. Now apply your knowledge to find a nice free licensed image with the help of a search engine of your choice.",
       "Whenever you feel like you found a nice image, we can continue."
-      ],
-      "decisions": [
-        "Let me see those examples again.",
-        "Alright, found one."
-      ],
-      "nextPage": ["/matchthelicense", "/collectinfo"],
-      "nextPageIDs": [22, 23]
+    ],
+    "decisions": [
+      "Let me see those examples again.",
+      "Alright, found one."
+    ],
+    "nextPage": ["/matchthelicense", "/collectinfo"],
+    "nextPageIDs": [22, 23]
   },
   {
     "id": 22,
     "pageurl": "/matchthelicense",
-    "headline" : "Match the License",
+    "headline": "Match the License",
     "panels": [],
     "nextPage": ["/usinggoogle"],
     "nextPageIDs": [21]
@@ -347,7 +358,7 @@
   {
     "id": 23,
     "pageurl": "/collectinfo",
-    "headline" : "Collecting information",
+    "headline": "Collecting information",
     "panels": [
       "Fine. Now that you found an image, you have to collect the legal information in order to be able to use it.",
       "The search engine helped you to find a free licensed image, but there is more information needed to create a license notice.",
@@ -359,18 +370,18 @@
       "Really? That already sounds like a lot of work to me. Please tell me, that there is an easier way to use the image."
     ],
     "nextPage": ["/understandingsource", "/usingfreelicences"],
-    "nextPageIDs": [6,7]
+    "nextPageIDs": [6, 7]
   },
   {
     "id": 300,
     "pageurl": "/stealingpictures",
-    "headline" : "You are in jail!",
+    "headline": "You are in jail!",
     "panels": [
       "Uh oh. I'm afraid that was the wrong answer. But don’t worry, I am here to help you out.",
       "<EXPLAINING THE CONSEQUENCES>",
       "Do you want me to explain something again? Otherwise I don’t want to see you here ever again."
     ],
     "nextPage": "/",
-    "nextPageIDs" : [0]
+    "nextPageIDs": [0]
   }
 ]

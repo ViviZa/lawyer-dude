@@ -45,7 +45,11 @@ class TemplateDecision extends Component {
      const username = localStorage.getItem('username');
      let usernameParsed = JSON.parse(username);
      const newPanels = panels.map( (panel) => {
-        return panel.replace('{username}', usernameParsed);
+        if (!panel["text"]) {
+          return panel.replace('{username}', usernameParsed);
+        } else {
+          return panel["text"].replace('{username}', usernameParsed);;
+        }
      });
      this.setState({panels : newPanels});
   }
@@ -97,11 +101,21 @@ class TemplateDecision extends Component {
           <h1>
             {headline}
           </h1>
-          <div className="speech">
-            <p className="speechbubbletext">
-              {panels[textIndex]}
-            </p>
-          </div>
+            {
+              (panels[textIndex] && panels[textIndex].text !== undefined) ? (
+              <div className={panels[textIndex].cssClass}>
+                  <p className="speechbubbletext">
+                  {panels[textIndex].text}
+                </p>
+              </div>
+              ) : (
+                <div className="speech">
+                  <p className="speechbubbletext">
+                    {panels[textIndex]}
+                  </p>
+                </div>
+              )
+            }
           {
             (textIndex === 0 && panels.length > 1) ? (
               <div className="buttoncontainer">
