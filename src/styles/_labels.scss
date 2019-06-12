@@ -7,7 +7,7 @@ input, label {
 	vertical-align: middle;
 }
 
-.picture-upload-input, .picture-specs-input {
+.picture-upload-input, .picture-specs-input, .entername-input {
 	border-top: none;
 	border-left: none;
 	border-right: none;
@@ -17,10 +17,10 @@ input, label {
 
 	&.picture-specs-input {
 		margin-top: 20px;
-	}		
+	}	
 }
 
-.url-label, .licenceProperty, .selectProperty {
+.url-label, .licenceProperty, .selectProperty, .entername-label {
 	font-size: 14px;
 	font-weight: bold;
 	text-transform: uppercase;

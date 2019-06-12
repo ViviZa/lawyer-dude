@@ -120,14 +120,14 @@ class EnterName extends Component {
                   <ForthButton nextText={this.nextText} />
                 </div>
                 ) : (
-                  <div>
+                  <div className="entername-form">
                   <form onSubmit={(event) => this.redirectToNextPage(event)}>
                     <div className={"errorMessage"}>
                       {errorText}
                     </div>
-                    <label>
+                    <label className="entername-label">
+                      <input className="entername-input" type="text" value={this.state.username} onChange={this.handleChange} />
                       Enter your name:
-                      <input type="text" value={this.state.username} onChange={this.handleChange} />
                     </label>
                     <input className="save-name-btn" type="submit" value="Let's go"/>
                   </form>
