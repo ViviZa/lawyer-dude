@@ -5,6 +5,7 @@ import data from '../data.json';
 import BackButton from '../components/BackButton';
 import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
+import { ReactComponent as LDHeadHappy } from '../images/Lawyerdude-head-happy.svg';
 
 class TemplateDecision extends Component {
   constructor(props) {
@@ -116,6 +117,9 @@ class TemplateDecision extends Component {
                 </div>
               )
             }
+          <div className="speechlawyer-container">
+            <LDHeadHappy className="speechlawyer-happy"/>
+          </div>
           {
             (textIndex === 0 && panels.length > 1) ? (
               <div className="buttoncontainer">

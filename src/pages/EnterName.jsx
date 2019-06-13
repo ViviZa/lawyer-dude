@@ -5,6 +5,8 @@ import data from '../data.json';
 import ForthButton from '../components/ForthButton';
 import BackButton from './../components/BackButton';
 import BackButtonInactive from '../components/BackButtonInactive';
+import { ReactComponent as Llama } from '../images/Lawyerdude-llama.svg';
+import { ReactComponent as LDHeadHappy } from '../images/Lawyerdude-head-happy.svg';
 
 class EnterName extends Component {
   constructor(props) {
@@ -94,9 +96,17 @@ class EnterName extends Component {
           <h1>
             {headline}
           </h1>
-          <p>
-            {panels[textIndex]}
-          </p>
+          <div className="llama-container">
+            <Llama className="entername-llama"/>  
+          </div>
+          <div className="speech">
+            <p className="speechbubbletext">
+              {panels[textIndex]}
+            </p>
+          </div>
+          <div className="speechlawyer-container">
+            <LDHeadHappy className="speechlawyer-happy"/>
+          </div>
           {
             textIndex === 0 ? (
               <div className="buttoncontainer">
@@ -110,14 +120,14 @@ class EnterName extends Component {
                   <ForthButton nextText={this.nextText} />
                 </div>
                 ) : (
-                  <div>
+                  <div className="entername-form">
                   <form onSubmit={(event) => this.redirectToNextPage(event)}>
                     <div className={"errorMessage"}>
                       {errorText}
                     </div>
-                    <label>
-                      Enter your name:
-                      <input type="text" value={this.state.username} onChange={this.handleChange} />
+                    <label className="entername-label">
+                      <input className="entername-input" type="text" value={this.state.username} onChange={this.handleChange} />
+                      Enter your name
                     </label>
                     <input className="save-name-btn" type="submit" value="Let's go"/>
                   </form>

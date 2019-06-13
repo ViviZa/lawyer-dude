@@ -1,0 +1,88 @@
+@import "variables";
+
+input, label {
+	font-size: 18px;
+  	letter-spacing: 3px;
+	display: inline-block;
+	text-align: left;
+	vertical-align: middle;
+
+	&:focus {
+		outline-color: none !important;
+		border: 1px solid $lightblue;
+		box-shadow: 0 0 5px $lightblue;
+	} 
+}
+
+input {
+	padding: 10px;
+}
+
+label {
+	letter-spacing: 1px;
+}
+
+.picture-upload-input, .picture-specs-input, .entername-input {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	margin-top: 55px;
+	margin-bottom: 10px;
+	width: 100%;
+
+	&.picture-specs-input {
+		margin-top: 20px;
+	}	
+
+	&.entername-input {
+		margin: 10px 0;
+	}
+}
+
+.url-label, .licenceProperty, .selectProperty, .entername-label {
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: rgb(132, 132, 132);
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 25px;
+
+	&.licenceProperty {
+		width: 100%;
+		text-align: left;
+		letter-spacing: 1px;
+	}
+
+	&.selectProperty {
+		float: left;
+		width: 15%;
+		text-align: left;
+		letter-spacing: 1px;
+		margin: 0;
+		padding-top: 25px;
+	}
+}
+
+.url-form {
+
+	&:before {
+	  content: "";
+	  display: inline-block;
+	  vertical-align: middle;
+	  height: 100%;
+	}
+}
+
+
+
+.licenceProperty-container, .selectProperty-container {
+	width: 70%;
+	margin: auto;
+}
+
+.license-select-wrap {
+	width: 100%;
+	padding-top: 15px;
+}
