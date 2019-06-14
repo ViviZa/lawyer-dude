@@ -12,6 +12,11 @@
 	margin: 50px 25px;
 }
 
+.speechlawyer-sceptical {
+	margin-top: 5%;
+	width: 85%;
+}
+
 .speech {
 	font-size: 22px;
 	position: relative;
@@ -25,6 +30,25 @@
 	 	position: absolute;
 	 	background: url(./images/speechbubble-s.svg) no-repeat;
 	 	background-size: 100%;
+	    left: 0;
+	    top: 0;
+	}
+}
+
+.jail-speech {
+	font-size: 22px;
+	position: relative;
+	margin-top: 5%;
+	margin-left: 45%;
+
+	&:before {
+	 	content: "";
+		padding-bottom: 65%;
+		padding-left: 100%;
+	 	position: absolute;
+	 	background: url(./images/speechbubble-jail.svg) no-repeat;
+	 	background-size: 100%;
+		opacity: 0.85;
 	    left: 0;
 	    top: 0;
 	}
@@ -48,6 +72,12 @@
 	    left: 0;
 	    top: 0;
 	}
+}
+
+.Jailpage {
+	background: url(./images/Jail.svg) no-repeat;
+		 background-size: 100%;
+	background-position: left bottom;
 }
 
 #llama {

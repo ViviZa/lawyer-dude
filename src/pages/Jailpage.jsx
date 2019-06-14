@@ -5,6 +5,8 @@ import BackButton from './../components/BackButton';
 import SideNavigation from './../components/SideNavigation';
 import data from '../data.json';
 import { withRouter } from 'react-router';
+import { ReactComponent as LDHeadSceptical } from '../images/Lawyerdude-head-sceptical.svg';
+
 
 class Jailpage extends Component {
   constructor(props) {
@@ -75,13 +77,16 @@ class Jailpage extends Component {
     const { panels, textIndex, headline } = this.state;
     return (
       <div className="Jailpage">
-        <SideNavigation ID={ID}/>
-        <div className="pagecontent">
-        <h1>{headline}</h1>
-        <img src={defaultImg} className="defaultImg" alt="logo" />
-        <p>
-            {panels[textIndex]}
-          </p>
+        <div className="jailpagecontent">
+          <div className="jail-speech">
+            <p className="speechbubbletext-jail">
+              {panels[textIndex]}
+            </p>
+          </div>
+          <div className="speechlawyer-sceptical-container">
+            <LDHeadSceptical className="speechlawyer-sceptical"/>
+          </div>
+        {/*
           {
             (textIndex === 0 && panels.length > 1) ? (
               <div>
@@ -99,6 +104,7 @@ class Jailpage extends Component {
                     </div>
                   ))
           }
+          */}
           </div>
       </div>
     );

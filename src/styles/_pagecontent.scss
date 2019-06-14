@@ -49,6 +49,12 @@ ol {
 	text-align: center;
 }
 
+.jailpagecontent {
+	width: 90%;
+	position: absolute;
+	z-index: 10;
+}
+
 .resourceContainer {
 	border: 1px solid black;
 	white-space: pre-line;
@@ -61,10 +67,16 @@ ol {
     transform: translate(-50%);
 }
 
-.speechbubbletext, .answerbubbletext {
+.speechbubbletext, .answerbubbletext, .speechbubbletext-jail {
 	padding: 8%;
 	position: relative;
 	letter-spacing: 1.1px;
+}
+
+.speechbubbletext-jail {
+	color: $button-text;
+	font-size: 26px;
+	font-weight: 700;
 }
 
 .entername-form {
@@ -88,11 +100,15 @@ ol {
 	width: 20%;
 }
 
-.speechlawyer-container {
+.speechlawyer-container, .speechlawyer-sceptical-container {
 	display: inline-block; 
 	float: right;
 	margin-top: 15%;
 	margin-right: -13%;
 	width: 20%;
 	transform: rotate(-45deg);
+}
+
+.speechlawyer-sceptical-container {
+	margin-top: 8%;
 }
