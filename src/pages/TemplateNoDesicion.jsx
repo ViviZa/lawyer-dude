@@ -6,6 +6,7 @@ import BackButton from '../components/BackButton';
 import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
 import { ReactComponent as LDHeadHappy } from '../images/Lawyerdude-head-happy.svg';
+import Screencast from '../images/attribution-generator.gif'
 
 class NoDecision extends Component {
   constructor(props) {
@@ -79,7 +80,6 @@ class NoDecision extends Component {
 
     return (
       <div className="Startpage">
-        <button onClick={() => this.props.history.goBack()}>Go Back</button>
         <SideNavigation ID={ID}/>
         <div className="pagecontent">
           <h1 className="headline">
@@ -93,6 +93,11 @@ class NoDecision extends Component {
           <div className="speechlawyer-container">
             <LDHeadHappy className="speechlawyer-happy"/>
           </div>
+          {ID === 25 &&
+            <h2>
+             <img src={Screencast} href="https://lizenzhinweisgenerator.de/?lang=en" className="defaultImg" alt="logo" />
+            </h2>
+          }
           {
             (textIndex === 0 && panels.length > 1) ? (
               <div className="buttoncontainer">
