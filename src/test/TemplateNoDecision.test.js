@@ -13,7 +13,7 @@ test("components of nodescision-page are rendered", () => {
 
   let mock = jest.fn();
   const location = {
-      state: { ID: "3" }
+      state: { ID: 3 }
   };
 
   const wrapper = shallow(
@@ -22,7 +22,7 @@ test("components of nodescision-page are rendered", () => {
       addingPages={() =>{}}
       location = {location}
       history = {mock}/>
-    </MemoryRouter>  
+    </MemoryRouter>
   );  
 
   expect(wrapper.find(SideNavigation)).toBeDefined();

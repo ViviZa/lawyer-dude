@@ -11,6 +11,7 @@ import EnterName from './pages/EnterName.jsx';
 import TemplateDecision from './pages/TemplateDecision';
 import MatchTheLicense from './games/MatchTheLicense';
 import UsingThePicture from './games/UsingThePicture';
+import WelcomePage from './pages/WelcomePage';
 
 const history = createBrowserHistory()
 library.add(faBars);
@@ -38,7 +39,7 @@ class App extends Component {
     return (
       <Router history={history}>
           <Route exact path="/" component={() => <StartPage addingPages={this.addingPages}/>}/>
-          <Route exact path="/learninggoals" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
+          <Route exact path="/learninggoals" component={() => <WelcomePage addingPages={this.addingPages}/>}/>
           <Route exact path="/entername" component={() => <EnterName addingPages={this.addingPages}/>}/>
           <Route exact path="/introduction" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/picturesfrominternet" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
