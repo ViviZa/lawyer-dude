@@ -151,5 +151,16 @@
 			}
 		}
 	}
+
+	.answer {
+		width: 88%;
+		margin-top: 50%;
+		margin-left: 0;
+
+		&:before {
+			padding-bottom: 95%;
+			background: url(./images/answerbubble-320.svg) no-repeat;
+		}
+	}
 } 
 
