@@ -85,11 +85,21 @@ class NoDecision extends Component {
           <h1 className="headline">
             {headline}
           </h1>
-          <div className="speech">
-            <p className="speechbubbletext">
-              {panels[textIndex]}
-            </p>
-          </div>
+          {
+              (panels[textIndex] && panels[textIndex].text !== undefined) ? (
+              <div className={panels[textIndex].cssClass}>
+                  <p className="speechbubbletext">
+                  {panels[textIndex].text}
+                </p>
+              </div>
+              ) : (
+                <div className="speech">
+                  <p className="speechbubbletext">
+                    {panels[textIndex]}
+                  </p>
+                </div>
+              )
+          }
           <div className="speechlawyer-container">
             <LDHeadHappy className="speechlawyer-happy"/>
           </div>

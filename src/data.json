@@ -323,7 +323,7 @@
   {
     "id": 20,
     "pageurl": "usingwiki2",
-    "headline": "Using Wikimedia Commons 2",
+    "headline": "Creating a license notice",
     "panels": [
       "That depends. You need to create a license notice for most images from the internet if you want to use them. But - surprise - there are a few exceptions.",
       "<CREATING A LICENSE NOTICE>",
@@ -380,7 +380,7 @@
       "Wikimedia Commons offers a tool called “Attribution Generator”.",
       "This tool makes it easy to reuse images from Wikipedia and the free media archive Wikimedia Commons by generating license information. That means that you can easily comply the license conditions by using the tool.",
       "These license information are based on a near-verbatim translation of the initial German text snippets, which were drafted with the copyright law of Germany in mind. With the help of this tool you can easily comply the license conditions.",
-      "On the next page I will explain how you can use the Attribution Generator: "
+      "To use the Attribution Generator follow these steps:"
     ],
     "nextPage": "/attributionGenerator2",
     "nextPageIDs": [25]
@@ -390,12 +390,23 @@
     "pageurl": "/attributionGenerator2",
     "headline": "Attribution Generator 2",
     "panels": [
-      "To use the Attribution Generator follow these steps:",
-      "1. Insert a web address of a Wikimedia Commons image or a Wikipedia article.",
-      "2. Answer the questions about the intended use to create a correct license notice.",
-      "3. Read how to use the license notice",
-       "4. Copy the generated license notice and insert it into your publication to use the image correctly."
-    ],
+      {
+        "text": "1. Insert a web address of a Wikimedia Commons image or a Wikipedia article.",
+        "cssClass": "resourceContainer"
+      },
+      {
+        "text": "2. Answer the questions about the intended use to create a correct license notice.",
+        "cssClass": "resourceContainer"
+      },
+      {
+        "text": "3. Read how to use the license notice.",
+        "cssClass": "resourceContainer"
+      },
+      {
+        "text": "4. Copy the generated license notice and insert it into your publication to use the image correctly.",
+        "cssClass": "resourceContainer"
+      }
+      ],
     "nextPage": "/success",
     "nextPageIDs": [16]
   },
