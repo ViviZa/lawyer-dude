@@ -39,87 +39,109 @@
 		}
 	}
 }
-	.disabledLink {
-		color: grey;
-		text-decoration: none;
+
+.disabledLink {
+	color: grey;
+	text-decoration: none;
+}
+
+.sideNavigationLink {
+	color: $nav-reached;
+	text-decoration: none;
+	width: calc(100% - 27px);
+	display: inline-block;
+}
+
+.linkWrapper {
+	display: flex;
+}
+
+.highlightedLink {
+	color: $nav-active;
+	text-decoration: none;
+	width: calc(100% - 27px);
+	display: inline-block;
+	padding-left: 5px;
+}
+
+.focusIndicator {
+	background-color: $nav-active;
+	width: 7px;
+	display: inline-block;
+	flex: 0.2;
+	margin-left: -25px;
+	margin-right: 15px;
+}
+
+.navNarrow {
+
+	i {
+		float: left;
+
+		.fa-bars, .fa-times {
+			color: $darkblue;
+		}
 	}
 
-	.sideNavigationLink {
-		color: $nav-reached;
-		text-decoration: none;
-		width: calc(100% - 27px);
-		display: inline-block;
-	}
+	.narrowLinks {
+		display: none;
 
-	.linkWrapper {
+		a {
+			display: block;
+			float: left;
+			clear: left;
+		}
+	}
+}
+
+.navWide {
+	display: none;
+	margin: 0;
+	height: calc(100% - 165px);
+	overflow: auto;
+	margin-top: auto;
+}
+
+.logo-box {
+	background-color: $yellow;
+	height: 165px;
+}
+
+@media (min-width: 1060px) {
+	.SideNavigation {
 		display: flex;
+		width: 18%;
 	}
 
-	.highlightedLink {
-		color: $nav-active;
-		text-decoration: none;
-		width: calc(100% - 27px);
-		display: inline-block;
-		padding-left: 5px;
+	nav {
+
+		.navWide {
+			display: block;
+		}
+
+		.navNarrow {
+			display: none;
+		}
+	}
+}
+
+@media only screen and (min-width: 320px) {
+	
+	.SideNavigation {
+		width: 100%;
+		height: 5%;
+		background-color: $yellow;
 	}
 
-	.focusIndicator {
-		background-color: $nav-active;
-		width: 7px;
-		display: inline-block;
-		flex: 0.2;
-		margin-left: -25px;
-		margin-right: 15px;
+	.logo-box {
+		display: none;
 	}
 
 	.navNarrow {
 
 		i {
-			float: left;
-
-			.fa-bars {
-				color: white;
-			}
-		}
-
-		.narrowLinks {
-			display: none;
-
-			a {
-				display: block;
-				float: left;
-				clear: left;
-			}
+			float: right;
+			padding: 5px 15px;
 		}
 	}
-
-	.navWide {
-		display: none;
-		margin: 0;
-		height: calc(100% - 165px);
-		overflow: auto;
-		margin-top: auto;
-	}
-
-	.logo-box {
-		background-color: $yellow;
-		height: 165px;
-	}
-
-	@media (min-width: 1060px) {
-		.SideNavigation {
-			display: flex;
-			width: 18%;
-		}
-
-		nav {
-
-			.navWide {
-				display: block;
-			}
-
-			.navNarrow {
-				display: none;
-			}
-		}
-	}
+} 
