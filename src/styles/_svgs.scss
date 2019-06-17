@@ -113,3 +113,26 @@
 	.st7{fill:#C61A2F;}
 	.st8{fill:#FFCC00;}
 }
+
+@media only screen and (min-width: 320px) {
+  
+	.startlawyer {
+		position: absolute; 
+		bottom: -4px;
+		width: 30%;
+	}
+
+	.speech {
+		font-size: 14px;
+		margin-left: 0;
+	
+		&:before {
+			padding-bottom: 75%;
+			 background: url(./images/speechbubble-320.svg) no-repeat;
+			 background-size: 100%;
+			left: 0;
+			top: 0;
+		}
+	}
+} 
+

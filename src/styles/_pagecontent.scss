@@ -41,7 +41,6 @@ ol {
 }
 
 .pagecontent {
-	background-color: $background-white;
 	height: 100%;
 	display: block;
 	margin-left: 245px;
@@ -112,3 +111,39 @@ ol {
 .speechlawyer-sceptical-container {
 	margin-top: 8%;
 }
+
+@media only screen and (min-width: 320px) {
+  
+	h1 {
+		font-size: 22px;
+		line-height: 1.5;
+		margin: 15px;
+	}
+
+	.startpagecontent {
+
+		h1 {
+			font-size: 48px;
+			margin: 75px 25px 35px 25px;
+		}
+
+		h3 {
+			line-height: 1.4;
+		}
+	}
+
+	.pagecontent {
+		margin-left: 15px;
+		padding: 25px;
+		text-align: center;
+	}
+
+	.buttoncontainer {
+		bottom: 2%;
+		left: 52%;
+	}
+
+	.speechlawyer-container {
+		margin-right: -10%;
+	}
+} 
