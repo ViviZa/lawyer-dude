@@ -114,7 +114,7 @@
 	.st8{fill:#FFCC00;}
 }
 
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 599px) {
   
 	.startlawyer {
 		position: absolute; 
@@ -132,6 +132,23 @@
 			 background-size: 100%;
 			left: 0;
 			top: 0;
+		}
+	}
+
+	.speech {
+
+		&.entername {
+
+			font-size: 14px;
+			margin-left: 0;
+		
+			&:before {
+				padding-bottom: 75%;
+				 background: url(./images/speechbubble-s.svg) no-repeat;
+				 background-size: 100%;
+				left: 0;
+				top: 0;
+			}
 		}
 	}
 } 

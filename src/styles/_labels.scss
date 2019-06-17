@@ -86,3 +86,21 @@ label {
 	width: 100%;
 	padding-top: 15px;
 }
+
+@media only screen and (max-width: 599px) {
+	
+	.entername-label {
+		width: 65%;
+		margin-left: 0;
+		margin-right: 0;
+		float: left;
+	}
+
+	.entername-input {
+
+		&.entername-input {
+			margin: 0;
+		}
+	}
+
+}

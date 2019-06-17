@@ -89,9 +89,17 @@
 	}
 }
 
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 599px) {
   
 	.StartButton {
 		padding: 14px;
+	}
+
+	.save-name-btn {
+
+		&.save-name-btn {
+			margin: 44px 25px 25px 55px;
+			padding: 22px 25px;
+		}
 	}
 } 

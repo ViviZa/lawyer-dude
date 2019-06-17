@@ -99,12 +99,12 @@ class EnterName extends Component {
           <div className="llama-container">
             <Llama className="entername-llama"/>  
           </div>
-          <div className="speech">
-            <p className="speechbubbletext">
+          <div className="speech entername">
+            <p className="speechbubbletext entername">
               {panels[textIndex]}
             </p>
           </div>
-          <div className="speechlawyer-container">
+          <div className="speechlawyer-container entername">
             <LDHeadHappy className="speechlawyer-happy"/>
           </div>
           {
