@@ -5,6 +5,7 @@ import data from '../data.json';
 import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
 import { ReactComponent as LDFull } from '../images/Lawyerdude-side.svg';
+import SettingsButton from '../components/SettingsButton';
 
 class WelcomePage extends Component {
   constructor(props) {
@@ -50,15 +51,17 @@ class WelcomePage extends Component {
     return (
       <div className="Startpage">
         <SideNavigation ID={ID}/>
+        <SettingsButton/>
         <div className="pagecontent">
+          
           <h1 className="headline">
             {headline}
           </h1>
           <div className="welcomeblock">
             <LDFull className="fulllawyer"/>  
-            <div className="welcomepanel">
+            <div className="welcomepanels">
                 <p>
-                    {panels.map((panel) => <li>{panel}</li>)}
+                    {panels.map((panel) => <li className="welcomepanel">{panel}</li>)}
                 </p>
             </div>
           </div>

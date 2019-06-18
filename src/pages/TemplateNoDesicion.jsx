@@ -5,6 +5,7 @@ import data from '../data.json';
 import BackButton from '../components/BackButton';
 import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
+import SettingsButton from '../components/SettingsButton';
 import { ReactComponent as LDHeadHappy } from '../images/Lawyerdude-head-happy.svg';
 import Screencast from '../images/attribution-generator.gif'
 
@@ -81,6 +82,7 @@ class NoDecision extends Component {
     return (
       <div className="Startpage">
         <SideNavigation ID={ID}/>
+        <SettingsButton/>
         <div className="pagecontent">
           <h1 className="headline">
             {headline}

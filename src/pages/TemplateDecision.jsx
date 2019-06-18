@@ -6,6 +6,7 @@ import BackButton from '../components/BackButton';
 import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
 import { ReactComponent as LDHeadHappy } from '../images/Lawyerdude-head-happy.svg';
+import SettingsButton from '../components/SettingsButton';
 
 class TemplateDecision extends Component {
   constructor(props) {
@@ -98,6 +99,7 @@ class TemplateDecision extends Component {
       <div className="Startpage">
         <button onClick={() => this.props.history.goBack()}>Go Back</button>
         <SideNavigation ID={ID}/>
+        <SettingsButton/>
         <div className="pagecontent">
           <h1>
             {headline}
