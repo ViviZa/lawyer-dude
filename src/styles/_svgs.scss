@@ -152,6 +152,17 @@
 		}
 	}
 
+	.jail-speech {
+		margin-top: 0;
+		margin-left: 5%;
+	
+		&:before {
+			padding-bottom: 75%;
+			 background: url(./images/speechbubble-jail-320.svg) no-repeat;
+			 background-size: 100%;
+		}
+	}
+
 	.answer {
 		width: 88%;
 		margin-top: 50%;
@@ -161,6 +172,12 @@
 			padding-bottom: 95%;
 			background: url(./images/answerbubble-320.svg) no-repeat;
 		}
+	}
+
+	.Jailpage {
+		background: url(./images/Jail.svg) no-repeat;
+		background-size: cover;
+		background-position: center center;
 	}
 } 
 

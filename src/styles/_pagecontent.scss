@@ -155,18 +155,24 @@ ol {
 		}
 	}
 
-	.speechlawyer-container {
-		margin-right: -10%;
-
-		&.entername {
-			margin-top: 5%;
-		}
+	.speechbubbletext-jail {
+		color: $button-text;
+		font-size: 16px;
+		font-weight: 700;
 	}
 
 	.entername-form {
 		margin-top: 12%;
 		margin-left: 0;
 		z-index: 10px;
+	}
+
+	.speechlawyer-container {
+		margin-right: -10%;
+
+		&.entername {
+			margin-top: 5%;
+		}
 	}
 
 	.llama-container {
