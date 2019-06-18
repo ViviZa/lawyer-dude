@@ -82,7 +82,6 @@ class SideNavigation extends Component {
       linksEl.style.display = 'block';
       linksEl.style.background = 'rgba(13, 62, 89, 0.9)';
       linksEl.style.height = '100%';
-      linksEl.style.margin = '34px 0 0 0';
       speechEl.style.zIndex = '-10';
     }
 }

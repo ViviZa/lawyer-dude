@@ -143,5 +143,34 @@
 			float: right;
 			padding: 5px 15px;
 		}
+		
+		.narrowLinks {
+			margin: 34px 0 0 0;
+		}
 	}
 } 
+
+@media (min-width: 600px) and (max-width: 768px) {
+	
+	.SideNavigation {
+		width: 100%;
+		height: 5%;
+		background-color: $yellow;
+	}
+
+	.logo-box {
+		display: none;
+	}
+
+	.navNarrow {
+
+		i {
+			float: right;
+			padding: 12px 15px;
+		}
+
+		.narrowLinks {
+			margin: 50px 0 0 0;
+		}
+	}
+}

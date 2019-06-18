@@ -179,3 +179,39 @@ ol {
 		float: none;
 	}
 } 
+
+@media (min-width: 600px) and (max-width: 768px) {
+
+	.startpagecontent {
+
+		h1 {
+			font-size: 68px;
+			margin: 285px 25px 25px 25px;
+			line-height: 1.3;
+		}
+
+		h3 {
+			line-height: 1.4;
+		}
+	}
+
+	.pagecontent {
+		margin-left: 0;
+		padding: 25px;
+	}
+
+	.buttoncontainer {
+		bottom: 2%;
+		left: 50%;
+	}
+
+	.speechlawyer-container {
+		margin-right: -4%;
+	}
+
+	.entername-form {
+		margin-top: 55%;
+		margin-left: 0;
+		z-index: 10px;
+	}
+}

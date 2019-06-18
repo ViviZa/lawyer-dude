@@ -181,3 +181,38 @@
 	}
 } 
 
+@media (min-width: 600px) and (max-width: 768px) {
+
+	.startlawyer {
+		width: 23%;
+	}	
+	
+	.answer {
+		width: 70%;
+		margin-top: 15%;
+		margin-left: 0;
+
+		&:before {
+			padding-bottom: 95%;
+			background: url(./images/answerbubble-320.svg) no-repeat;
+		}
+	}
+
+	.jail-speech {
+		margin-top: 5%;
+		margin-left: 25%;
+	
+		&:before {
+			padding-bottom: 70%;
+			 background: url(./images/speechbubble-jail-320.svg) no-repeat;
+			 background-size: 100%;
+		}
+	}
+
+	.Jailpage {
+		background: url(./images/Jail.svg) no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+}
+
