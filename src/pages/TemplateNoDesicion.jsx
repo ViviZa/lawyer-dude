@@ -82,7 +82,7 @@ class NoDecision extends Component {
     return (
       <div className="Startpage">
         <SideNavigation ID={ID}/>
-        <SettingsButton/>
+        <SettingsButton goBack={() => this.props.history.goBack()}/>
         <div className="pagecontent">
           <h1 className="headline">
             {headline}
