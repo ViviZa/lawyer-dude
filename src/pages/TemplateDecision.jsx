@@ -141,7 +141,7 @@ class TemplateDecision extends Component {
                               decisions.map((decision, index) => {
                                 return (
                                       <li>
-                                        <button className="option_btn" onClick={() => this.redirectToNextPage(index)}>{decision}</button>
+                                        <div className="option_btn" onClick={() => this.redirectToNextPage(index)}>{decision}</div>
                                       </li>
                                 )
                               })
