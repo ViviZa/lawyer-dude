@@ -97,9 +97,8 @@ class TemplateDecision extends Component {
 
     return (
       <div className="Startpage">
-        <button onClick={() => this.props.history.goBack()}>Go Back</button>
         <SideNavigation ID={ID}/>
-        <SettingsButton/>
+        <SettingsButton goBack={() => this.props.history.goBack()}/>
         <div className="pagecontent">
           <h1>
             {headline}
