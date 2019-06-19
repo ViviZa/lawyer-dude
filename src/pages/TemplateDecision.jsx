@@ -107,13 +107,13 @@ class TemplateDecision extends Component {
               (panels[textIndex] && panels[textIndex].text !== undefined) ? (
               <div className={panels[textIndex].cssClass}>
                   <p className="speechbubbletext">
-                  {panels[textIndex].text}
+                 <div dangerouslySetInnerHTML={{ __html: panels[textIndex].text}}/>
                 </p>
               </div>
               ) : (
                 <div className="speech">
                   <p className="speechbubbletext">
-                    {panels[textIndex]}
+                  <div dangerouslySetInnerHTML={{ __html: panels[textIndex]}}/>
                   </p>
                 </div>
               )

@@ -102,7 +102,7 @@ class EnterName extends Component {
           </div>
           <div className="speech">
             <p className="speechbubbletext">
-              {panels[textIndex]}
+            <div dangerouslySetInnerHTML={{ __html: panels[textIndex]}}/>
             </p>
           </div>
           <div className="speechlawyer-container">

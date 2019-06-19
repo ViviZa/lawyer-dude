@@ -82,7 +82,7 @@ class Jailpage extends Component {
         <h1>{headline}</h1>
         <img src={defaultImg} className="defaultImg" alt="logo" />
         <p>
-            {panels[textIndex]}
+          <div dangerouslySetInnerHTML={{ __html: panels[textIndex]}}/>
           </p>
           {
             (textIndex === 0 && panels.length > 1) ? (
