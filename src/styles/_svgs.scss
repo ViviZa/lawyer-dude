@@ -19,6 +19,11 @@
 	margin: 50px 25px;
 }
 
+.speechlawyer-sceptical {
+	margin-top: 5%;
+	width: 85%;
+}
+
 .speech {
 	font-size: 22px;
 	position: relative;
@@ -32,6 +37,25 @@
 	 	position: absolute;
 	 	background: url(./images/speechbubble-s.svg) no-repeat;
 	 	background-size: 100%;
+	    left: 0;
+	    top: 0;
+	}
+}
+
+.jail-speech {
+	font-size: 22px;
+	position: relative;
+	margin-top: 5%;
+	margin-left: 45%;
+
+	&:before {
+	 	content: "";
+		padding-bottom: 65%;
+		padding-left: 100%;
+	 	position: absolute;
+	 	background: url(./images/speechbubble-jail.svg) no-repeat;
+	 	background-size: 100%;
+		opacity: 0.85;
 	    left: 0;
 	    top: 0;
 	}
@@ -55,6 +79,12 @@
 	    left: 0;
 	    top: 0;
 	}
+}
+
+.Jailpage {
+	background: url(./images/Jail.svg) no-repeat;
+		 background-size: 100%;
+	background-position: left bottom;
 }
 
 #llama {
@@ -96,3 +126,106 @@
 	.st7{fill:#C61A2F;}
 	.st8{fill:#FFCC00;}
 }
+
+@media only screen and (max-width: 599px) {
+  
+	.startlawyer {
+		position: absolute; 
+		bottom: -4px;
+		width: 30%;
+	}
+
+	.speech {
+		font-size: 14px;
+		margin-left: 0;
+	
+		&:before {
+			padding-bottom: 75%;
+			 background: url(./images/speechbubble-320.svg) no-repeat;
+			 background-size: 100%;
+			left: 0;
+			top: 0;
+		}
+	}
+
+	.speech {
+
+		&.entername {
+
+			font-size: 14px;
+			margin-left: 0;
+		
+			&:before {
+				padding-bottom: 75%;
+				 background: url(./images/speechbubble-s.svg) no-repeat;
+				 background-size: 100%;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
+
+	.jail-speech {
+		margin-top: 0;
+		margin-left: 5%;
+	
+		&:before {
+			padding-bottom: 75%;
+			 background: url(./images/speechbubble-jail-320.svg) no-repeat;
+			 background-size: 100%;
+		}
+	}
+
+	.answer {
+		width: 88%;
+		margin-top: 50%;
+		margin-left: 0;
+
+		&:before {
+			padding-bottom: 95%;
+			background: url(./images/answerbubble-320.svg) no-repeat;
+		}
+	}
+
+	.Jailpage {
+		background: url(./images/Jail.svg) no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+} 
+
+@media (min-width: 600px) and (max-width: 768px) {
+
+	.startlawyer {
+		width: 23%;
+	}	
+	
+	.answer {
+		width: 70%;
+		margin-top: 15%;
+		margin-left: 0;
+
+		&:before {
+			padding-bottom: 95%;
+			background: url(./images/answerbubble-320.svg) no-repeat;
+		}
+	}
+
+	.jail-speech {
+		margin-top: 5%;
+		margin-left: 25%;
+	
+		&:before {
+			padding-bottom: 70%;
+			 background: url(./images/speechbubble-jail-320.svg) no-repeat;
+			 background-size: 100%;
+		}
+	}
+
+	.Jailpage {
+		background: url(./images/Jail.svg) no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+}
+

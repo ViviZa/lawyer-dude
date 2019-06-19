@@ -10,8 +10,10 @@ class SideNavigation extends Component {
     super(props);
     this.state = {
       visitedPages: [],
+      open: false,
     };
 
+    this.burgerToggle = this.burgerToggle.bind(this);
     this.highlightedLink = React.createRef();
     this.scrollToBottom = this.scrollToBottom.bind(this);
   }
@@ -68,15 +70,19 @@ class SideNavigation extends Component {
   }
 
   burgerToggle() {
+    let {open} = this.state;
+    let isOpen = !open;
+    this.setState({ open: isOpen});
     var linksEl = document.querySelector('.narrowLinks');
-    var sideNavigation = document.querySelector('.SideNavigation')
+    var speechEl = document.querySelector('.speech');
     if (linksEl.style.display === 'block') {
       linksEl.style.display = 'none';
-      sideNavigation.style.width = '6%';
     } 
     else {
       linksEl.style.display = 'block';
-      sideNavigation.style.width = '15%';
+      linksEl.style.background = 'rgba(13, 62, 89, 0.9)';
+      linksEl.style.height = '100%';
+      speechEl.style.zIndex = '-10';
     }
 }
 
@@ -86,7 +92,14 @@ scrollToBottom(highlightedLink) {
   
   render() {
     const {ID} = this.props;
-    const {visitedPages} = this.state;
+    const {visitedPages, open} = this.state;
+
+    let menuIcon;
+    if (open) {
+        menuIcon = (<FontAwesomeIcon icon="times" size='lg' onClick={this.burgerToggle}/>);
+    } else {
+        menuIcon = (<FontAwesomeIcon icon="bars" size='lg' onClick={this.burgerToggle}/>);
+    }
     return (
       <nav>
       <div className="SideNavigation">
@@ -127,7 +140,7 @@ scrollToBottom(highlightedLink) {
         </div>         
       </div>
       <div className="navNarrow">
-      <i><FontAwesomeIcon icon="bars" size='lg' onClick={this.burgerToggle}/></i>
+        <i>{menuIcon}</i>
         <div className="narrowLinks">
         <ul>
           <li><a href="#startpage" onClick={this.burgerToggle} >Startpage</a></li>

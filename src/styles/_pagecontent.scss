@@ -41,12 +41,17 @@ ol {
 }
 
 .pagecontent {
-	background-color: $background-white;
 	height: 100%;
 	display: block;
 	margin-left: 245px;
 	padding: 25px 130px;
 	text-align: center;
+}
+
+.jailpagecontent {
+	width: 90%;
+	position: absolute;
+	z-index: 10;
 }
 
 .resourceContainer {
@@ -61,10 +66,16 @@ ol {
     transform: translate(-50%);
 }
 
-.speechbubbletext, .answerbubbletext {
+.speechbubbletext, .answerbubbletext, .speechbubbletext-jail {
 	padding: 8%;
 	position: relative;
 	letter-spacing: 1.1px;
+}
+
+.speechbubbletext-jail {
+	color: $button-text;
+	font-size: 26px;
+	font-weight: 700;
 }
 
 .entername-form {
@@ -88,24 +99,11 @@ ol {
 	width: 20%;
 }
 
-.speechlawyer-container {
+.speechlawyer-container, .speechlawyer-sceptical-container {
 	display: inline-block; 
 	float: right;
 	margin-top: 15%;
 	margin-right: -13%;
 	width: 20%;
 	transform: rotate(-45deg);
-}
-
-.welcomepanels {
-	position: relative;
-	margin-right: 5%;
-	font-size: 22px;
-	letter-spacing: 1.1px;
-	width: 60%;
-}
-
-.welcomepanel {
-	text-align: left;
-	margin-bottom: 5px;
 }
