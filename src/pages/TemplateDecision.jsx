@@ -12,15 +12,11 @@ class TemplateDecision extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      textIndex: 0,
       panels: [],
       decisions: [],
       nextPageIDs: [],
       nextPages: [],
     };
-    this.nextText = this.nextText.bind(this);
-    this.previousText = this.previousText.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
     this.replaceUsername = this.replaceUsername.bind(this);
   }
@@ -66,34 +62,11 @@ class TemplateDecision extends Component {
     });
   }
 
-  handleSubmit(event) {
-    this.props.setUserName(this.state.username);
-    this.props.goToNextPage(this.props.nextPage);
-    event.preventDefault();
-  }
-
-  nextText() {
-    const { panels, textIndex } = this.state
-    const theSize = panels.length - 1;
-    if (textIndex >= 0 && textIndex < theSize) {
-      this.setState(prevState => {
-        return {textIndex: prevState.textIndex + 1}
-     })
-    }
-  }
-
-  previousText() {
-    const theSize = this.state.panels.length - 1;
-    if (this.state.textIndex > 0 && this.state.textIndex <= theSize) {
-      this.setState(prevState => {
-        return {textIndex: prevState.textIndex -1 }
-     })
-    }
-  }
-
   render() {
-    const { panels, textIndex, headline, decisions } = this.state;
+    const { panels, headline, decisions } = this.state;
+    const {textIndex, nextText, previousText} = this.props;
     const { ID } = this.props.location.state;
+    console.log({textIndex});
 
     return (
       <div className="Startpage">
@@ -125,13 +98,13 @@ class TemplateDecision extends Component {
             (textIndex === 0 && panels.length > 1) ? (
               <div className="buttoncontainer">
                 <BackButtonInactive/>
-                <ForthButton nextText={this.nextText} />
+                <ForthButton nextText={() => nextText(panels)} />
               </div>
             ) : (
                 textIndex + 1 < panels.length ? (
                   <div className="buttoncontainer">
-                    <BackButton previousText={this.previousText} />
-                    <ForthButton nextText={this.nextText} />
+                    <BackButton previousText={() => previousText(panels)} />
+                    <ForthButton nextText={() => nextText(panels)} />
                   </div>
                 ) : (
                     <div className="answer">

@@ -13,7 +13,6 @@ class EnterName extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      textIndex: 0,
       panels: [],
       headline: '',
       nextPageID: 0,
@@ -21,15 +20,14 @@ class EnterName extends Component {
       username : '',
       errorText: ''
     };
-    this.nextText = this.nextText.bind(this);
-    this.previousText = this.previousText.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
   }
 
   componentDidMount() {
     const { ID } = this.props.location.state;
-    const { addingPages } = this.props;
+    const { addingPages, resetTextIndex } = this.props;
+    // resetTextIndex();
     addingPages(ID);
     const dataString = JSON.stringify(data);
     let jsonData = JSON.parse(dataString);
@@ -65,29 +63,9 @@ class EnterName extends Component {
       this.setState({username: event.target.value});
   }
 
-  nextText() {
-    const { panels, textIndex } = this.state
-    const theSize = panels.length - 1;
-    if (textIndex >= 0 && textIndex < theSize) {
-      this.setState(prevState => {
-        return {textIndex: prevState.textIndex + 1}
-     })
-    }
-  }
-
-  previousText() {
-    const theSize = this.state.panels.length - 1;
-    if (this.state.textIndex > 0 && this.state.textIndex <= theSize) {
-      this.setState(prevState => {
-        return {textIndex: prevState.textIndex - 1}
-     })
-    }
-  }
-
-
-
   render() {
-    const { panels, textIndex, headline, errorText } = this.state;
+    const { panels, headline, errorText,  } = this.state;
+    const {textIndex, nextText, previousText} = this.props;
     const { ID } = this.props.location.state;
     return (
       <div className="Startpage">
@@ -112,13 +90,13 @@ class EnterName extends Component {
             textIndex === 0 ? (
               <div className="buttoncontainer">
                 <BackButtonInactive/>
-                <ForthButton nextText={this.nextText} />
+                <ForthButton nextText={() => nextText(panels)} />
               </div>
             ) : (
                 textIndex + 1 < panels.length ? (
                   <div className="buttoncontainer">
-                  <BackButton previousText={this.previousText} />
-                  <ForthButton nextText={this.nextText} />
+                  <BackButton previousText={() => previousText(panels)} />
+                  <ForthButton nextText={() => nextText(panels)} />
                 </div>
                 ) : (
                   <div className="entername-form">
