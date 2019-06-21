@@ -1,39 +1,39 @@
-import React, { Component } from 'react';
-import SideNavigation from '../components/SideNavigation';
-import { withRouter } from 'react-router';
-import data from '../data.json';
-import DropDown from './../components/DropDown';
-import BackButtonInactive from '../components/BackButtonInactive';
-import ForthButton from '../components/ForthButton';
+import React, { Component } from "react";
+import SideNavigation from "../components/SideNavigation";
+import { withRouter } from "react-router";
+import data from "../data.json";
+import BackButtonInactive from "../components/BackButtonInactive";
+import ForthButton from "../components/ForthButton";
+import Select from "react-select";
 
-const licenses = [
-  {explanation: "Alle", license: "CR und OC" },
-  {explanation: "Kann kostenlos geändert, freigegeben und verwendet werden", license: "unklar, da kommenzielle Nutzung nicht angegeben" } ,
-  {explanation: "Öffentliche Domäne", license: "CC-0" },
-  {explanation: "Kann kostenlos geändert, freigegeben und kommerziell verwendet werden", license: "CC-BY" },
-  {explanation: "Kann kostenlos freigegeben und verändert werden", license: "unklar, da Modifizierung und kommenzielle Nutzung nicht angegeben" },
-  {explanation: "Kann kostenlos freigegeben und kommerziell verwendet werden", license: "unklar, da keine Angabe zur Modifizierung" },
-  {explanation: "Alle Creative Commons", license: "CC-*" },
+import matchTheLicenseData from "./MatchTheLicense.json";
+
+const options = [
+  { value: "CC0", label: "CC0" },
+  { value: "CC-BY", label: "CC-BY" },
+  { value: "CC-BY-SA", label: "CC-BY-SA" },
+  { value: "CC-BY-ND", label: "CC-BY-ND" },
+  { value: "CC-BY-NC-SA", label: "CC-BY-NC-SA" },
+  { value: "CC-BY-NC-ND", label: "CC-BY-NC-ND" }
 ];
 
 class MatchTheLicense extends Component {
   constructor(props) {
     super(props);
-    this.child0 = React.createRef();
-    this.child1 = React.createRef();
-    this.child2 = React.createRef();
-    this.child3 = React.createRef();
-    this.child4 = React.createRef();
-    this.child5 = React.createRef();
-    this.child6 = React.createRef();
     this.state = {
-      headline: '',
+      headline: "",
       nextPageID: 0,
-      nextPage: '',
+      nextPage: "",
+      questions: [],
+      selectedOption1: null,
+      selectedOption2: null,
+      selectedOption3: null,
+      errorText1: "",
+      errorText2: "",
+      errorText3: ""
     };
-    this.validateSelection = this.validateSelection.bind(this);
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
-
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -47,56 +47,133 @@ class MatchTheLicense extends Component {
     this.setState({
       headline: filteredJSON[0].headline,
       nextPage: filteredJSON[0].nextPage,
-      nextPageID: nextPageID,
-    })
-  }
+      nextPageID: nextPageID
+    });
 
+    const matchTheLicenseString = JSON.stringify(matchTheLicenseData);
+    const licenseArray = JSON.parse(matchTheLicenseString);
+    this.setState({ questions: licenseArray });
+  }
 
   redirectToNextPage() {
     const { history } = this.props;
     const { nextPageID, nextPage } = this.state;
     history.push({
       pathname: nextPage,
-      state: { ID: nextPageID },
+      state: { ID: nextPageID }
     });
   }
 
-  validateSelection() {
-    this.child0.current.validate();
-    this.child1.current.validate();
-    this.child2.current.validate();
-    this.child3.current.validate();
-    this.child4.current.validate();
-    this.child5.current.validate();
-    this.child6.current.validate();
+  handleChange(key, selectedOption) {
+    console.log({ selectedOption });
+    this.setState({ [key]: selectedOption });
   }
 
+  validate() {
+    const {
+      selectedOption1,
+      selectedOption2,
+      selectedOption3,
+      questions
+    } = this.state;
+    if (
+      questions[0].validOptions.length === selectedOption1.length &&
+      questions[0].validOptions.every(
+        (value, index) => value === selectedOption1[index]
+      )
+    ) {
+    } else {
+      this.setState({
+        errorText1:
+          "Wrong, correct solution would have been: " +
+          questions[0].validOptions.map(option => option)
+      });
+    }
+    if (
+      questions[1].validOptions.length === selectedOption2.length &&
+      questions[1].validOptions.every(
+        (value, index) => value === selectedOption2[index]
+      )
+    ) {
+    } else {
+      this.setState({
+        errorText2:
+          "Wrong, correct solution would have been: " +
+          questions[1].validOptions.map(option => option)
+      });
+    }
+    if (
+      questions[2].validOptions.length === selectedOption3.length &&
+      questions[2].validOptions.every(
+        (value, index) => value === selectedOption3[index]
+      )
+    ) {
+    } else {
+      this.setState({
+        errorText3:
+          "Wrong, correct solution would have been: " +
+          questions[2].validOptions.map(option => option)
+      });
+    }
+  }
 
   render() {
-   // const { headline} = this.state;
     const { ID } = this.props.location.state;
+    const {
+      selectedOption1,
+      selectedOption2,
+      selectedOption3,
+      errorText1,
+      errorText2,
+      errorText3,
+      questions
+    } = this.state;
 
     return (
       <div className="MatchTheLicense">
-         <SideNavigation ID={ID}/>
+        <SideNavigation ID={ID} />
         <div className="pagecontent">
-          <h1>
-          Match the License
-          </h1>
-          <DropDown ref={this.child0} explanation={licenses[0].explanation} license={licenses[0].license}/>
-          <DropDown ref={this.child1} explanation={licenses[1].explanation} license={licenses[1].license}/>
-          <DropDown ref={this.child2} explanation={licenses[2].explanation} license={licenses[2].license}/>
-          <DropDown ref={this.child3} explanation={licenses[3].explanation} license={licenses[3].license}/>
-          <DropDown ref={this.child4} explanation={licenses[4].explanation} license={licenses[4].license}/>
-          <DropDown ref={this.child5} explanation={licenses[5].explanation} license={licenses[5].license}/>
-          <DropDown ref={this.child6} explanation={licenses[6].explanation} license={licenses[6].license}/>
-          <p></p>
-          <button onClick={this.validateSelection}>Validate</button>
+          <h1>Match the License</h1>
+          <div>
+            <div>{questions.length > 0 && questions[0].text}</div>
+            <div className="errorMessage">{errorText1}</div>
+            <Select
+              value={selectedOption1}
+              onChange={ev => this.handleChange("selectedOption1", ev)}
+              options={options}
+              isMulti
+              className="basic-multi-select"
+              classNamePrefix="select"
+              isSearchable={false}
+            />
+            <div>{questions.length > 0 && questions[1].text}</div>
+            <div className="errorMessage">{errorText2}</div>
+            <Select
+              value={selectedOption2}
+              onChange={ev => this.handleChange("selectedOption2", ev)}
+              options={options}
+              isMulti
+              className="basic-multi-select"
+              classNamePrefix="select"
+              isSearchable={false}
+            />
+            <div>{questions.length > 0 && questions[2].text}</div>
+            <div className="errorMessage">{errorText3}</div>
+            <Select
+              value={selectedOption3}
+              onChange={ev => this.handleChange("selectedOption3", ev)}
+              options={options}
+              isMulti
+              className="basic-multi-select"
+              classNamePrefix="select"
+              isSearchable={false}
+            />
+          </div>
+          <button onClick={() => this.validate()}>Check</button>
         </div>
-        <p></p>
         <div className="buttoncontainer">
-        <BackButtonInactive/>
-        <ForthButton nextText={this.redirectToNextPage} />
+          <BackButtonInactive />
+          <ForthButton nextText={this.redirectToNextPage} />
         </div>
       </div>
     );
