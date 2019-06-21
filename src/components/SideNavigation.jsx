@@ -143,10 +143,33 @@ scrollToBottom(highlightedLink) {
         <i>{menuIcon}</i>
         <div className="narrowLinks">
         <ul>
-          <li><a href="#startpage" onClick={this.burgerToggle} >Startpage</a></li>
-          <li><a href="#storypage" onClick={this.burgerToggle}>Storypage</a></li>
-          <li><a href="#decisionpage" onClick={this.burgerToggle}>Decisionpage</a></li>
-          <li><a href="#">Unlock first</a></li>
+          {
+            visitedPages.map( page => {
+              return (
+                <li
+                className="linkWrapper"
+                key={page.id}
+                > 
+                <div className={page.id === ID ? "focusIndicator" : ""}>&nbsp;</div>
+                  <Link
+                    className={page.id === ID ? 'highlightedLink' : 'sideNavigationLink'}
+                    to={{
+                      pathname: page.pageurl,
+                      state: { ID:  page.id }
+                    }}
+                    >
+                    <div 
+                      ref={page.id === ID ? this.highlightedLink : ''}
+                    />
+                    {page.headline}
+                  </Link>
+                </li>
+              )
+            })
+          }
+          <li className="li-inactive">
+            <a href="#">Unlock first</a>
+          </li>
         </ul>
         </div>         
       </div>
