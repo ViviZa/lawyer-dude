@@ -25,8 +25,24 @@ class MatchTheLicense extends Component {
       headline: "",
       nextPageID: 0,
       nextPage: "",
+      count: 0,
       questions: [],
       selectedOption: [
+        {
+          option: [],
+          errorText: "",
+          solutionText: ""
+        },
+        {
+          option: [],
+          errorText: "",
+          solutionText: ""
+        },
+        {
+          option: [],
+          errorText: "",
+          solutionText: ""
+        },
         {
           option: [],
           errorText: "",
@@ -47,6 +63,7 @@ class MatchTheLicense extends Component {
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.validate = this.validate.bind(this);
+    this.incCount = this.incCount.bind(this);
   }
 
   componentDidMount() {
@@ -78,39 +95,44 @@ class MatchTheLicense extends Component {
   }
 
   handleChange(index, checkedOption) {
+    const {count} = this.state;
     this.setState({
       selectedOption: update(this.state.selectedOption, {
-        [index]: { option: { $set: checkedOption } }
+        [index + count]: { option: { $set: checkedOption } }
       })
     });
   }
 
+  incCount(){
+    this.setState({count: 3});
+  }
+
   validate() {
-    const { selectedOption, questions } = this.state;
+    const { selectedOption, questions, count } = this.state;
     let newState = selectedOption;
     for (let i = 0; i < 3; i++) {
-      const selectedOptionValues = selectedOption[i].option.map(
+      const selectedOptionValues = selectedOption[i + count].option.map(
         option => option.value
       );
       if (
-        questions[i].validOptions.length === selectedOptionValues.length &&
-        questions[i].validOptions.every(
+        questions[i + count].validOptions.length === selectedOptionValues.length &&
+        questions[i + count].validOptions.every(
           (value, index) => value === selectedOptionValues[index]
         )
       ) {
-        newState[i].solutionText = "Correct Solution!";
+        newState[i + count].solutionText = "Correct Solution!";
       } else {
-        newState[i].errorText =
+        newState[i + count].errorText =
           "Wrong, correct solution would have been: " +
-          questions[i].validOptions.map(option => option);
+          questions[i + count].validOptions.map(option => option);
       }
     }
-    this.setState({selectedOption: newState});
+    this.setState({ selectedOption: newState });
   }
 
   render() {
     const { ID } = this.props.location.state;
-    const { selectedOption, questions } = this.state;
+    const { selectedOption, questions, count } = this.state;
 
     return (
       <div className="MatchTheLicense">
@@ -121,13 +143,13 @@ class MatchTheLicense extends Component {
             {Array.from(Array(3), (e, i) => {
               return (
                 <div>
-                  <div>{questions.length > 0 && questions[i].text}</div>
+                  <div>{questions.length > 0 && questions[i + count].text}</div>
                   <div className="errorMessage">
-                    {selectedOption[i].errorText}
+                    {selectedOption[i + count].errorText}
                   </div>
-                  <div>{selectedOption[i].solutionText}</div>
+                  <div>{selectedOption[i + count].solutionText}</div>
                   <Select
-                    value={selectedOption[i].option}
+                    value={selectedOption[i + count].option}
                     onChange={ev => this.handleChange(i, ev)}
                     options={options}
                     isMulti
@@ -141,10 +163,17 @@ class MatchTheLicense extends Component {
           </div>
           <button onClick={() => this.validate()}>Check</button>
         </div>
-        <div className="buttoncontainer">
-          <BackButtonInactive />
-          <ForthButton nextText={this.redirectToNextPage} />
-        </div>
+        {count !== 3 ? (
+          <div className="buttoncontainer">
+            <BackButtonInactive />
+            <ForthButton nextText={this.incCount} />
+          </div>
+        ) : (
+          <div className="buttoncontainer">
+            <BackButtonInactive />
+            <ForthButton nextText={this.redirectToNextPage} />
+          </div>
+        )}
       </div>
     );
   }
