@@ -12,6 +12,7 @@ import TemplateDecision from './pages/TemplateDecision';
 import MatchTheLicense from './games/MatchTheLicense';
 import UsingThePicture from './games/UsingThePicture';
 import WelcomePage from './pages/WelcomePage';
+import FindTheLicence from './games/FindTheLicence';
 
 const history = createBrowserHistory()
 library.add(faBars);
@@ -68,6 +69,7 @@ class App extends Component {
           <Route exact path="/stealingpictures" component={() => <Jailpage addingPages={this.addingPages}/>}/>
           <Route exact path="/attributionGenerator1" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
           <Route exact path="/attributionGenerator2" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
+          <Route exact path="/findthelicence" component={() => <FindTheLicence addingPages={this.addingPages}/>}/>
       </Router>
     );
   }
