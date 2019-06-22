@@ -5,6 +5,7 @@ import data from '../data.json';
 import BackButton from '../components/BackButton';
 import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
+import SettingsButton from '../components/SettingsButton';
 import QuizQuestion from './../components/QuizQuestion';
 
 
@@ -104,6 +105,8 @@ class FindTheLicense extends Component {
   validate() {
     const { panels, textIndex } = this.state;
     console.log(panels[textIndex].correctAnswers);
+    console.log(this.state.quizAnswers);
+
   }
 
   render() {
@@ -112,6 +115,7 @@ class FindTheLicense extends Component {
     return (
       <div className="FindTheLicense">
          <SideNavigation ID={ID}/>
+         <SettingsButton goBack={() => this.props.history.goBack()}/>
         <div className="pagecontent">
           <h1>{headline}</h1>
           {(panels[textIndex] !== undefined) ? (
@@ -129,7 +133,6 @@ class FindTheLicense extends Component {
             <button onClick={this.validate}>Check</button>
           </div>
           ) : ( <div></div>)}
-          
           {
             (textIndex === 0 && panels.length > 1) ? (
               <div className="buttoncontainer">

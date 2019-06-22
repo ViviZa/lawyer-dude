@@ -8,18 +8,18 @@ class Question extends Component {
         color : "white",
         isChecked : false,
       };
-     // this.handleInputChange = this.handleInputChange.bind(this);
   }
 
     render(){
+      const { isChecked } = this.state; 
         return (
             <div style={{background: this.state.color}}>
                 <label className="choice">
                 <input
                   name="isChecked"
                   type="checkbox"
-                  //checked={this.state.isChecked}
-                  //onChange={this.props.handleInputChange}
+                  checked={isChecked.active}
+                  onChange={this.props.handleInputChange}
                   id={this.props.id} />
                   {this.props.choice}
               </label>
