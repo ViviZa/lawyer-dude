@@ -116,19 +116,20 @@ class FindTheLicense extends Component {
           <h1>{headline}</h1>
           {(panels[textIndex] !== undefined) ? (
           <div className="quizQuestions">
-            <div>{panels[textIndex].question}</div>        
-            <QuizQuestion ref={this.child1} handleInputChange={this.handleInputChange} id={choices[0].id} choice={choices[0].choice}/>              
-            <QuizQuestion ref={this.child2} handleInputChange={this.handleInputChange} id={choices[1].id} choice={choices[1].choice}/>              
-            <QuizQuestion ref={this.child3} handleInputChange={this.handleInputChange} id={choices[2].id} choice={choices[2].choice} />              
-            <QuizQuestion ref={this.child4} handleInputChange={this.handleInputChange} id={choices[3].id} choice={choices[3].choice} />              
-            <QuizQuestion ref={this.child5} handleInputChange={this.handleInputChange} id={choices[4].id} choice={choices[4].choice}/>              
-            <QuizQuestion ref={this.child6} handleInputChange={this.handleInputChange} id={choices[5].id} choice={choices[5].choice}/>              
-            <QuizQuestion ref={this.child7} handleInputChange={this.handleInputChange} id={choices[6].id} choice={choices[6].choice}/>              
-            <QuizQuestion ref={this.child8} handleInputChange={this.handleInputChange} id={choices[7].id} choice={choices[7].choice}/>              
-            <QuizQuestion ref={this.child9} handleInputChange={this.handleInputChange} id={choices[8].id} choice={choices[8].choice} />   
-          </div>  
-          ) : (<div></div>)}          
-          <button onClick={this.validate}>Check</button> 
+            <div>{panels[textIndex].question}</div>
+            <QuizQuestion ref={this.child1} handleInputChange={this.handleInputChange} id={choices[0].id} choice={choices[0].choice}/>
+            <QuizQuestion ref={this.child2} handleInputChange={this.handleInputChange} id={choices[1].id} choice={choices[1].choice}/>
+            <QuizQuestion ref={this.child3} handleInputChange={this.handleInputChange} id={choices[2].id} choice={choices[2].choice} />
+            <QuizQuestion ref={this.child4} handleInputChange={this.handleInputChange} id={choices[3].id} choice={choices[3].choice} />
+            <QuizQuestion ref={this.child5} handleInputChange={this.handleInputChange} id={choices[4].id} choice={choices[4].choice}/>
+            <QuizQuestion ref={this.child6} handleInputChange={this.handleInputChange} id={choices[5].id} choice={choices[5].choice}/>
+            <QuizQuestion ref={this.child7} handleInputChange={this.handleInputChange} id={choices[6].id} choice={choices[6].choice}/>
+            <QuizQuestion ref={this.child8} handleInputChange={this.handleInputChange} id={choices[7].id} choice={choices[7].choice}/>
+            <QuizQuestion ref={this.child9} handleInputChange={this.handleInputChange} id={choices[8].id} choice={choices[8].choice} />
+            <button onClick={this.validate}>Check</button>
+          </div>
+          ) : ( <div></div>)}
+          
           {
             (textIndex === 0 && panels.length > 1) ? (
               <div className="buttoncontainer">

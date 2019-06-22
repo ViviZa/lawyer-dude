@@ -194,7 +194,7 @@
       "OK.",
       "But my image is from a private blog or website, not from a repository. What should I do?"
     ],
-    "nextPage": ["/usinglicence", "/stealingpictures", "/findthelicence"],
+    "nextPage": ["/usinglicence", "/stealingpictures", "/findthelicence1"],
     "nextPageIDs": [12, 15, 26]
   },
   {
@@ -210,7 +210,7 @@
       "Sure, it is one of the CC licenses.",
       "I still don’t understand the license information for my image."
     ],
-    "nextPage": ["/findthelicence", "/creatingnotice", "/stealingpictures"],
+    "nextPage": ["/findthelicence1", "/creatingnotice", "/stealingpictures"],
     "nextPageIDs": [26, 13, 15]
   },
   {
@@ -427,7 +427,18 @@
   },
   {
     "id": 26,
-    "pageurl": "findthelicence",
+    "pageurl": "/findthelicence1",
+    "headline": "CC Licenses and their Use Cases",
+    "panels": [
+      "The cc licenses itself are easy to understand but how about it’s usage in real life? In the following you have to decide if the given use cases are legal under the given license. If so, please mark them as correct."
+    ],
+    "nextPage": "/findthelicence2",
+    "nextPageIDs": [27]
+  },
+
+  {
+    "id": 27,
+    "pageurl": "/findthelicence2",
     "headline": "CC Licenses and their Use Cases",
     "panels": [
       { "question": "What is allowed under a CC0?",
@@ -469,8 +480,8 @@
         "choice": "Use the image for a birthday invitation."
       }
     ],
-    "nextPage": "/usinglicence",
-    "nextPageIDs": [12]
+    "nextPage": "/placeholder",
+    "nextPageIDs": [123]
   },
   {
     "id": 300,
