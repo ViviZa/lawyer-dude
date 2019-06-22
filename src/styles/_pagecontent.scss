@@ -126,12 +126,26 @@ ol {
 
 .quizQuestions{
 	text-align: left;
+	width: 90%;
+	.question {
+		margin-top: 3em;
+		margin-bottom: 1em;
+		letter-spacing: 1.1px;
+		font-size: 20px;
+	}
+	button {
+		background-color: $darkred;
+		border-style: none; 
+		color: white;
+		padding: 14px 20px;
+		float: right;
+		margin-right: 10px;
+	}
 }
 
 .choice {
-	margin-top: 0.5em;
+	margin-bottom: 0.5em;
 	letter-spacing: 1.1px;
-
 }
 
 @media only screen and (max-width: 599px) {

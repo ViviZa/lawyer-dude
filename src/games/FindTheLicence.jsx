@@ -116,7 +116,7 @@ class FindTheLicense extends Component {
           <h1>{headline}</h1>
           {(panels[textIndex] !== undefined) ? (
           <div className="quizQuestions">
-            <div>{panels[textIndex].question}</div>
+            <div className="question">{panels[textIndex].question}</div>
             <QuizQuestion ref={this.child1} handleInputChange={this.handleInputChange} id={choices[0].id} choice={choices[0].choice}/>
             <QuizQuestion ref={this.child2} handleInputChange={this.handleInputChange} id={choices[1].id} choice={choices[1].choice}/>
             <QuizQuestion ref={this.child3} handleInputChange={this.handleInputChange} id={choices[2].id} choice={choices[2].choice} />
@@ -144,7 +144,7 @@ class FindTheLicense extends Component {
                   </div>
                 ) : (
                     <div className="buttoncontainer">
-                      <BackButtonInactive/>
+                      <BackButton previousText={this.previousText} />
                       <ForthButton nextText={this.redirectToNextPage} />
                     </div>
                   ))
