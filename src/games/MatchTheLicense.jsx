@@ -5,8 +5,9 @@ import data from "../data.json";
 import BackButtonInactive from "../components/BackButtonInactive";
 import ForthButton from "../components/ForthButton";
 import Select from "react-select";
+import update from "immutability-helper";
 
-import matchTheLicenseData from "./MatchTheLicense.json";
+import matchTheLicenseData from "./MatchTheLicenseData.json";
 
 const options = [
   { value: "CC0", label: "CC0" },
@@ -25,15 +26,27 @@ class MatchTheLicense extends Component {
       nextPageID: 0,
       nextPage: "",
       questions: [],
-      selectedOption1: null,
-      selectedOption2: null,
-      selectedOption3: null,
-      errorText1: "",
-      errorText2: "",
-      errorText3: ""
+      selectedOption: [
+        {
+          option: [],
+          errorText: "",
+          solutionText: ""
+        },
+        {
+          option: [],
+          errorText: "",
+          solutionText: ""
+        },
+        {
+          option: [],
+          errorText: "",
+          solutionText: ""
+        }
+      ]
     };
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.validate = this.validate.bind(this);
   }
 
   componentDidMount() {
@@ -64,70 +77,40 @@ class MatchTheLicense extends Component {
     });
   }
 
-  handleChange(key, selectedOption) {
-    console.log({ selectedOption });
-    this.setState({ [key]: selectedOption });
+  handleChange(index, checkedOption) {
+    this.setState({
+      selectedOption: update(this.state.selectedOption, {
+        [index]: { option: { $set: checkedOption } }
+      })
+    });
   }
 
   validate() {
-    const {
-      selectedOption1,
-      selectedOption2,
-      selectedOption3,
-      questions
-    } = this.state;
-    if (
-      questions[0].validOptions.length === selectedOption1.length &&
-      questions[0].validOptions.every(
-        (value, index) => value === selectedOption1[index]
-      )
-    ) {
-    } else {
-      this.setState({
-        errorText1:
+    const { selectedOption, questions } = this.state;
+    let newState = selectedOption;
+    for (let i = 0; i < 3; i++) {
+      const selectedOptionValues = selectedOption[i].option.map(
+        option => option.value
+      );
+      if (
+        questions[i].validOptions.length === selectedOptionValues.length &&
+        questions[i].validOptions.every(
+          (value, index) => value === selectedOptionValues[index]
+        )
+      ) {
+        newState[i].solutionText = "Correct Solution!";
+      } else {
+        newState[i].errorText =
           "Wrong, correct solution would have been: " +
-          questions[0].validOptions.map(option => option)
-      });
+          questions[i].validOptions.map(option => option);
+      }
     }
-    if (
-      questions[1].validOptions.length === selectedOption2.length &&
-      questions[1].validOptions.every(
-        (value, index) => value === selectedOption2[index]
-      )
-    ) {
-    } else {
-      this.setState({
-        errorText2:
-          "Wrong, correct solution would have been: " +
-          questions[1].validOptions.map(option => option)
-      });
-    }
-    if (
-      questions[2].validOptions.length === selectedOption3.length &&
-      questions[2].validOptions.every(
-        (value, index) => value === selectedOption3[index]
-      )
-    ) {
-    } else {
-      this.setState({
-        errorText3:
-          "Wrong, correct solution would have been: " +
-          questions[2].validOptions.map(option => option)
-      });
-    }
+    this.setState({selectedOption: newState});
   }
 
   render() {
     const { ID } = this.props.location.state;
-    const {
-      selectedOption1,
-      selectedOption2,
-      selectedOption3,
-      errorText1,
-      errorText2,
-      errorText3,
-      questions
-    } = this.state;
+    const { selectedOption, questions } = this.state;
 
     return (
       <div className="MatchTheLicense">
@@ -135,39 +118,26 @@ class MatchTheLicense extends Component {
         <div className="pagecontent">
           <h1>Match the License</h1>
           <div>
-            <div>{questions.length > 0 && questions[0].text}</div>
-            <div className="errorMessage">{errorText1}</div>
-            <Select
-              value={selectedOption1}
-              onChange={ev => this.handleChange("selectedOption1", ev)}
-              options={options}
-              isMulti
-              className="basic-multi-select"
-              classNamePrefix="select"
-              isSearchable={false}
-            />
-            <div>{questions.length > 0 && questions[1].text}</div>
-            <div className="errorMessage">{errorText2}</div>
-            <Select
-              value={selectedOption2}
-              onChange={ev => this.handleChange("selectedOption2", ev)}
-              options={options}
-              isMulti
-              className="basic-multi-select"
-              classNamePrefix="select"
-              isSearchable={false}
-            />
-            <div>{questions.length > 0 && questions[2].text}</div>
-            <div className="errorMessage">{errorText3}</div>
-            <Select
-              value={selectedOption3}
-              onChange={ev => this.handleChange("selectedOption3", ev)}
-              options={options}
-              isMulti
-              className="basic-multi-select"
-              classNamePrefix="select"
-              isSearchable={false}
-            />
+            {Array.from(Array(3), (e, i) => {
+              return (
+                <div>
+                  <div>{questions.length > 0 && questions[i].text}</div>
+                  <div className="errorMessage">
+                    {selectedOption[i].errorText}
+                  </div>
+                  <div>{selectedOption[i].solutionText}</div>
+                  <Select
+                    value={selectedOption[i].option}
+                    onChange={ev => this.handleChange(i, ev)}
+                    options={options}
+                    isMulti
+                    className="basic-multi-select"
+                    classNamePrefix="select"
+                    isSearchable={false}
+                  />
+                </div>
+              );
+            })}
           </div>
           <button onClick={() => this.validate()}>Check</button>
         </div>
