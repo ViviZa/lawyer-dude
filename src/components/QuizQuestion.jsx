@@ -7,22 +7,46 @@ class Question extends Component {
       this.state = {
         color : "white",
         isChecked : false,
+        isChosenCorrectly : false,
       };
+      this.handleInputChange = this.handleInputChange.bind(this);
+      this.validate = this.validate.bind(this);
+  }
+
+  validate() {
+    const {rightAnswers, id} = this.props;
+    if(!rightAnswers.includes(id) && this.state.isChecked === true ) {
+      this.setState({ color : "red" });
+    }else if (rightAnswers.includes(id) && this.state.isChecked===false){
+      this.setState({ color : "red" });
+    } else{
+      this.setState({ color : "#69BFAF" });
+    }
+  }
+
+  handleInputChange() {
+    const boolVal = !this.state.isChecked;
+    this.setState({ isChecked : boolVal});
   }
 
     render(){
-      const { isChecked } = this.state; 
+      const { isChecked, color } = this.state; 
+      let textYouAreWrong;
+      if (color === "red") {
+        textYouAreWrong = <p className="wrong"> Oh Wrong answer</p>
+      }
         return (
-            <div style={{background: this.state.color}}>
+            <div className="quizQuestion" style={{background: color}}>
                 <label className="choice">
                 <input
                   name="isChecked"
                   type="checkbox"
                   checked={isChecked.active}
-                  onChange={this.props.handleInputChange}
+                  onChange={this.handleInputChange}
                   id={this.props.id} />
                   {this.props.choice}
               </label>
+              {textYouAreWrong}
             </div>
         )
     }

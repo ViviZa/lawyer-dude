@@ -33,7 +33,6 @@ class FindTheLicense extends Component {
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
     this.nextText = this.nextText.bind(this);
     this.previousText = this.previousText.bind(this);
-    this.handleInputChange = this.handleInputChange.bind(this);
     this.validate = this.validate.bind(this);
   }
 
@@ -82,31 +81,16 @@ class FindTheLicense extends Component {
     });
   }
 
-  handleInputChange(event){
-    const target = event.target;
-    const id = target.id;
-
-    if(this.state.quizAnswers.has(id))  {
-      console.log(id);
-      this.setState(({ quizAnswers }) => {
-       quizAnswers.delete(id);
-        return {
-          quizAnswers: quizAnswers
-        };
-      });
-    } else {
-      console.log(id);
-      this.setState(({ quizAnswers }) => {
-        quizAnswers.add(id);
-      });
-    }
-  }
-
   validate() {
-    const { panels, textIndex } = this.state;
-    console.log(panels[textIndex].correctAnswers);
-    console.log(this.state.quizAnswers);
-
+    this.child1.current.validate();
+    this.child2.current.validate();
+    this.child3.current.validate();
+    this.child4.current.validate();
+    this.child5.current.validate();
+    this.child6.current.validate();
+    this.child7.current.validate();
+    this.child8.current.validate();
+    this.child9.current.validate();
   }
 
   render() {
@@ -121,15 +105,15 @@ class FindTheLicense extends Component {
           {(panels[textIndex] !== undefined) ? (
           <div className="quizQuestions">
             <div className="question">{panels[textIndex].question}</div>
-            <QuizQuestion ref={this.child1} handleInputChange={this.handleInputChange} id={choices[0].id} choice={choices[0].choice}/>
-            <QuizQuestion ref={this.child2} handleInputChange={this.handleInputChange} id={choices[1].id} choice={choices[1].choice}/>
-            <QuizQuestion ref={this.child3} handleInputChange={this.handleInputChange} id={choices[2].id} choice={choices[2].choice} />
-            <QuizQuestion ref={this.child4} handleInputChange={this.handleInputChange} id={choices[3].id} choice={choices[3].choice} />
-            <QuizQuestion ref={this.child5} handleInputChange={this.handleInputChange} id={choices[4].id} choice={choices[4].choice}/>
-            <QuizQuestion ref={this.child6} handleInputChange={this.handleInputChange} id={choices[5].id} choice={choices[5].choice}/>
-            <QuizQuestion ref={this.child7} handleInputChange={this.handleInputChange} id={choices[6].id} choice={choices[6].choice}/>
-            <QuizQuestion ref={this.child8} handleInputChange={this.handleInputChange} id={choices[7].id} choice={choices[7].choice}/>
-            <QuizQuestion ref={this.child9} handleInputChange={this.handleInputChange} id={choices[8].id} choice={choices[8].choice} />
+            <QuizQuestion ref={this.child1} id={choices[0].id} choice={choices[0].choice} rightAnswers={panels[textIndex].correctAnswers} />
+            <QuizQuestion ref={this.child2} id={choices[1].id} choice={choices[1].choice} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion ref={this.child3} id={choices[2].id} choice={choices[2].choice} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion ref={this.child4} id={choices[3].id} choice={choices[3].choice} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion ref={this.child5} id={choices[4].id} choice={choices[4].choice} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion ref={this.child6} id={choices[5].id} choice={choices[5].choice} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion ref={this.child7} id={choices[6].id} choice={choices[6].choice} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion ref={this.child8} id={choices[7].id} choice={choices[7].choice} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion ref={this.child9} id={choices[8].id} choice={choices[8].choice} rightAnswers={panels[textIndex].correctAnswers}/>
             <button onClick={this.validate}>Check</button>
           </div>
           ) : ( <div></div>)}
