@@ -58,7 +58,6 @@ class App extends Component {
           <Route exact path="/dontusetheimage" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/moreinformation" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/usingsearchengines" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
-          <Route exact path="/usingsearchtool" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
           <Route exact path="/usingwiki2" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
           <Route exact path="/usinggoogle" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/success" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
