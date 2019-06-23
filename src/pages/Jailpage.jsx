@@ -79,6 +79,7 @@ class Jailpage extends Component {
     return (
       <div className="Jailpage">
         <div className="jailpagecontent">
+        <button onClick={() => this.props.history.goBack()}> ← GO BACK AND TRY AGAIN</button>
           <div className="jail-speech">
             <p className="speechbubbletext-jail">
               <div dangerouslySetInnerHTML={{ __html: panels[textIndex]}}/>
