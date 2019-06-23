@@ -420,8 +420,8 @@
       "That doesn’t sound too bad.",
       "Well, if the search engines already filters the images for me I should be able to just use them without taking further action."
     ],
-    "nextPage": ["/usingfreelicences", "/findthelicence1", "/stealingpictures"],
-    "nextPageIDs": [7, 26, 300]
+    "nextPage": ["/usingfreelicences", "/usinggoogle", "/stealingpictures"],
+    "nextPageIDs": [7, 21, 300]
   },
   {
     "id": 20,
@@ -462,8 +462,8 @@
       "Let me see those use cases again.",
       "Alright, found one."
     ],
-    "nextPage": ["/attributionGenerator1", "/collectinfo"],
-    "nextPageIDs": [24, 23]
+    "nextPage": ["/usingsearchengines", "/collectinfo"],
+    "nextPageIDs": [18, 23]
   },
   {
     "id": 23,
@@ -589,8 +589,8 @@
         "choice": "Use the image for a birthday invitation."
       }
     ],
-    "nextPage": "/placeholder",
-    "nextPageIDs": [123]
+    "nextPage": "/usinglicence",
+    "nextPageIDs": [12]
   },
   {
     "id": 300,
