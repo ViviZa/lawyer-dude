@@ -98,6 +98,7 @@ appendExtImage(event) {
 
     return (
       <div className="MatchTheLicense">
+       <button onClick={() => this.props.history.goBack()}>Go Back</button>
          <SideNavigation ID={ID}/>
         <div className="pagecontent">
           <h1>
@@ -105,12 +106,12 @@ appendExtImage(event) {
           </h1>
           {
             !noticeCreated && (
-              <form onSubmit={(event) => this.appendExtImage(event)}>
-                <label>
-                    Paste an image URL here:
-                    <input type="text" value={imgUrl} onChange={this.changeImgUrl} />
+              <form className="url-form" onSubmit={(event) => this.appendExtImage(event)}>
+                <label className="url-label">
+                    <input className="picture-upload-input" type="text" value={imgUrl} onChange={this.changeImgUrl} />
+                    Paste your image URL
                 </label>
-                <input type="submit" value="Load image" />
+                <input className="load-img-btn" type="submit" value="Load image" />
             </form>
             )
           }
@@ -120,35 +121,37 @@ appendExtImage(event) {
          { !noticeCreated ? ( 
         <div>
           <div>
-            <div className="licenceProperty">Title:</div>
-            <div className="licenceProperty">
-              <input type="text" value={title} onChange={(ev) => this.updateTextFieldValue(ev, 'title')} />
+            <div className="licenceProperty-container">
+              <input className="picture-specs-input" type="text" value={title} onChange={(ev) => this.updateTextFieldValue(ev, 'title')} />
+              <div className="licenceProperty">Title</div>
             </div>
           </div>
           <div>
-            <div className="licenceProperty">Link:</div>
-            <div className="licenceProperty">
-              <input type="text" value={link} onChange={(ev) => this.updateTextFieldValue(ev, 'link')} />
+            <div className="licenceProperty-container">
+              <input className="picture-specs-input" type="text" value={link} onChange={(ev) => this.updateTextFieldValue(ev, 'link')} />
+              <div className="licenceProperty">Link</div>
             </div>
           </div>
           <div>
-            <div className="licenceProperty">Copywriter:</div>
-            <div className="licenceProperty">
-              <input type="text" value={copywriter} onChange={(ev) => this.updateTextFieldValue(ev, 'copywriter')} />
+            <div className="licenceProperty-container">
+              <input className="picture-specs-input" type="text" value={copywriter} onChange={(ev) => this.updateTextFieldValue(ev, 'copywriter')} />
+              <div className="licenceProperty">Copywriter</div>
             </div>
           </div>
           <div>
-            <div className="licenceProperty">License:</div>
-            <div className="licenceProperty">
-              <Select
-                    value={license}
-                    onChange={this.handleDropdownChange}
-                    options={options}
-                    className="licenseDropdown"
-                />
+            <div className="selectProperty-container">
+              <div className="selectProperty">License</div>
+              <div className="license-select-wrap">
+                <Select
+                      value={license}
+                      onChange={this.handleDropdownChange}
+                      options={options}
+                      className="licenseDropdown"
+                  />
+              </div>
             </div>
           </div>
-          <button onClick={this.createNotice}>Go</button>
+          <button className="url-upload-btn" onClick={this.createNotice}>Save</button>
           </div>
           ) : (
             <div>

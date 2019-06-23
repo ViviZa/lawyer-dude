@@ -39,87 +39,138 @@
 		}
 	}
 }
-	.disabledLink {
-		color: grey;
-		text-decoration: none;
+
+.disabledLink {
+	color: grey;
+	text-decoration: none;
+}
+
+.sideNavigationLink {
+	color: $nav-reached;
+	text-decoration: none;
+	width: calc(100% - 27px);
+	display: inline-block;
+}
+
+.linkWrapper {
+	display: flex;
+}
+
+.highlightedLink {
+	color: $nav-active;
+	text-decoration: none;
+	width: calc(100% - 27px);
+	display: inline-block;
+	padding-left: 5px;
+}
+
+.focusIndicator {
+	background-color: $nav-active;
+	width: 7px;
+	display: inline-block;
+	flex: 0.2;
+	margin-left: -25px;
+	margin-right: 15px;
+}
+
+.navNarrow {
+
+	i {
+		float: left;
+
+		.fa-bars, .fa-times {
+			color: $darkblue;
+		}
 	}
 
-	.sideNavigationLink {
-		color: $nav-reached;
-		text-decoration: none;
-		width: calc(100% - 27px);
-		display: inline-block;
-	}
+	.narrowLinks {
+		display: none;
 
-	.linkWrapper {
+		a {
+			display: block;
+			float: left;
+			clear: left;
+		}
+	}
+}
+
+.navWide {
+	display: none;
+	margin: 0;
+	height: calc(100% - 165px);
+	overflow: auto;
+	margin-top: auto;
+}
+
+.logo-box {
+	background-color: $yellow;
+	height: 165px;
+}
+
+@media (min-width: 1060px) {
+	.SideNavigation {
 		display: flex;
+		width: 18%;
 	}
 
-	.highlightedLink {
-		color: $nav-active;
-		text-decoration: none;
-		width: calc(100% - 27px);
-		display: inline-block;
-		padding-left: 5px;
+	nav {
+
+		.navWide {
+			display: block;
+		}
+
+		.navNarrow {
+			display: none;
+		}
+	}
+}
+
+@media only screen and (max-width: 599px) {
+	
+	.SideNavigation {
+		width: 100%;
+		height: 5%;
+		background-color: $yellow;
 	}
 
-	.focusIndicator {
-		background-color: $nav-active;
-		width: 7px;
-		display: inline-block;
-		flex: 0.2;
-		margin-left: -25px;
-		margin-right: 15px;
+	.logo-box {
+		display: none;
 	}
 
 	.navNarrow {
 
 		i {
-			float: left;
-
-			.fa-bars {
-				color: white;
-			}
+			float: right;
+			padding: 5px 15px;
 		}
-
+		
 		.narrowLinks {
-			display: none;
-
-			a {
-				display: block;
-				float: left;
-				clear: left;
-			}
+			margin: 34px 0 0 0;
 		}
 	}
+} 
 
-	.navWide {
-		display: none;
-		margin: 0;
-		height: calc(100% - 165px);
-		overflow: auto;
-		margin-top: auto;
+@media (min-width: 600px) and (max-width: 768px) {
+	
+	.SideNavigation {
+		width: 100%;
+		height: 5%;
+		background-color: $yellow;
 	}
 
 	.logo-box {
-		background-color: $yellow;
-		height: 165px;
+		display: none;
 	}
 
-	@media (min-width: 1060px) {
-		.SideNavigation {
-			display: flex;
-			width: 18%;
+	.navNarrow {
+
+		i {
+			float: right;
+			padding: 12px 15px;
 		}
 
-		nav {
-
-			.navWide {
-				display: block;
-			}
-
-			.navNarrow {
-				display: none;
-			}
+		.narrowLinks {
+			margin: 50px 0 0 0;
 		}
 	}
+}

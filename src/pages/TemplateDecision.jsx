@@ -5,6 +5,8 @@ import data from '../data.json';
 import BackButton from '../components/BackButton';
 import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
+import { ReactComponent as LDHeadHappy } from '../images/Lawyerdude-head-happy.svg';
+import SettingsButton from '../components/SettingsButton';
 
 class TemplateDecision extends Component {
   constructor(props) {
@@ -45,7 +47,11 @@ class TemplateDecision extends Component {
      const username = localStorage.getItem('username');
      let usernameParsed = JSON.parse(username);
      const newPanels = panels.map( (panel) => {
-        return panel.replace('{username}', usernameParsed);
+        if (!panel["text"]) {
+          return panel.replace('{username}', usernameParsed);
+        } else {
+          return panel;
+        }
      });
      this.setState({panels : newPanels});
   }
@@ -91,16 +97,29 @@ class TemplateDecision extends Component {
 
     return (
       <div className="Startpage">
-        <button onClick={() => this.props.history.goBack()}>Go Back</button>
         <SideNavigation ID={ID}/>
+        <SettingsButton goBack={() => this.props.history.goBack()}/>
         <div className="pagecontent">
           <h1>
             {headline}
           </h1>
-          <div className="speech">
-            <p className="speechbubbletext">
-              {panels[textIndex]}
-            </p>
+            {
+              (panels[textIndex] && panels[textIndex].text !== undefined) ? (
+              <div className={panels[textIndex].cssClass}>
+                  <p className="speechbubbletext">
+                 <div dangerouslySetInnerHTML={{ __html: panels[textIndex].text}}/>
+                </p>
+              </div>
+              ) : (
+                <div className="speech">
+                  <p className="speechbubbletext">
+                  <div dangerouslySetInnerHTML={{ __html: panels[textIndex]}}/>
+                  </p>
+                </div>
+              )
+            }
+          <div className="speechlawyer-container">
+            <LDHeadHappy className="speechlawyer-happy"/>
           </div>
           {
             (textIndex === 0 && panels.length > 1) ? (
@@ -122,7 +141,7 @@ class TemplateDecision extends Component {
                               decisions.map((decision, index) => {
                                 return (
                                       <li>
-                                        <button className="option_btn" onClick={() => this.redirectToNextPage(index)}>{decision}</button>
+                                        <div className="option_btn" onClick={() => this.redirectToNextPage(index)}>{decision}</div>
                                       </li>
                                 )
                               })

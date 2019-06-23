@@ -8,8 +8,20 @@
     transform: translate(-50%);
 }
 
+.fulllawyer  {
+	display: inline-block; 
+	float: right;
+	width: 30%;
+	margin: 5%;
+}
+
 .lawyericon {
 	margin: 50px 25px;
+}
+
+.speechlawyer-sceptical {
+	margin-top: 5%;
+	width: 85%;
 }
 
 .speech {
@@ -20,11 +32,30 @@
 
 	&:before {
 	 	content: "";
-		padding-bottom: 65%;
+		padding-bottom: 55%;
 		padding-left: 100%;
 	 	position: absolute;
 	 	background: url(./images/speechbubble-s.svg) no-repeat;
 	 	background-size: 100%;
+	    left: 0;
+	    top: 0;
+	}
+}
+
+.jail-speech {
+	font-size: 22px;
+	position: relative;
+	margin-top: 5%;
+	margin-left: 45%;
+
+	&:before {
+	 	content: "";
+		padding-bottom: 65%;
+		padding-left: 100%;
+	 	position: absolute;
+	 	background: url(./images/speechbubble-jail.svg) no-repeat;
+	 	background-size: 100%;
+		opacity: 0.85;
 	    left: 0;
 	    top: 0;
 	}
@@ -49,3 +80,152 @@
 	    top: 0;
 	}
 }
+
+.Jailpage {
+	background: url(./images/Jail.svg) no-repeat;
+		 background-size: 100%;
+	background-position: left bottom;
+}
+
+#llama {
+	.st0{fill:#C49A6E;}
+	.st1{fill:#D8BA9E;}
+	.st2{fill:#A57C56;}
+	.st3{fill:#E0CAB8;}
+	.st4{fill:#C1A085;}
+	.st5{fill:#4D4D4D;}
+	.st6{fill:#666666;}
+	.st7{fill:#686868;}
+	.st8{fill:#353535;}
+	.st9{fill:#1BB267;}
+	.st10{fill:#2FD37D;}
+	.st11{fill:#F2F2F2;}
+}
+
+.settings-svg{
+	height: 58px;
+	width: 58px;
+	padding: 5px;
+}
+
+#lawyer-icon {
+	
+	.st0{fill:#0D3E59;}
+	.st1{fill:#F2CC16;}
+}
+
+#lawyer-happy {
+	
+	.st0{fill:#603813;}
+	.st1{fill:#754C24;}
+	.st2{fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;}
+	.st3{fill:#FFFFFF;}
+	.st4{fill:#601717;}
+	.st5{fill:#CC6969;}
+	.st6{fill:#FFCC33;}
+	.st7{fill:#C61A2F;}
+	.st8{fill:#FFCC00;}
+}
+
+@media only screen and (max-width: 599px) {
+  
+	.startlawyer {
+		position: absolute; 
+		bottom: -4px;
+		width: 30%;
+	}
+
+	.speech {
+		font-size: 14px;
+		margin-left: 0;
+	
+		&:before {
+			padding-bottom: 75%;
+			 background: url(./images/speechbubble-320.svg) no-repeat;
+			 background-size: 100%;
+			left: 0;
+			top: 0;
+		}
+	}
+
+	.speech {
+
+		&.entername {
+
+			font-size: 14px;
+			margin-left: 0;
+		
+			&:before {
+				padding-bottom: 75%;
+				 background: url(./images/speechbubble-s.svg) no-repeat;
+				 background-size: 100%;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
+
+	.jail-speech {
+		margin-top: 0;
+		margin-left: 5%;
+	
+		&:before {
+			padding-bottom: 75%;
+			 background: url(./images/speechbubble-jail-320.svg) no-repeat;
+			 background-size: 100%;
+		}
+	}
+
+	.answer {
+		width: 88%;
+		margin-top: 50%;
+		margin-left: 0;
+
+		&:before {
+			padding-bottom: 95%;
+			background: url(./images/answerbubble-320.svg) no-repeat;
+		}
+	}
+
+	.Jailpage {
+		background: url(./images/Jail.svg) no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+} 
+
+@media (min-width: 600px) and (max-width: 768px) {
+
+	.startlawyer {
+		width: 23%;
+	}	
+	
+	.answer {
+		width: 70%;
+		margin-top: 15%;
+		margin-left: 0;
+
+		&:before {
+			padding-bottom: 95%;
+			background: url(./images/answerbubble-320.svg) no-repeat;
+		}
+	}
+
+	.jail-speech {
+		margin-top: 5%;
+		margin-left: 25%;
+	
+		&:before {
+			padding-bottom: 70%;
+			 background: url(./images/speechbubble-jail-320.svg) no-repeat;
+			 background-size: 100%;
+		}
+	}
+
+	.Jailpage {
+		background: url(./images/Jail.svg) no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+}
+

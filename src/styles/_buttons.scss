@@ -1,25 +1,101 @@
 @import "variables";
 
-.StartButton, .save-name-btn {
+.StartButton, .save-name-btn, .load-img-btn, .url-upload-btn {
 	color: $button-text;
 	border-radius: 100px;
 	border-style: none; 
 	background-color: $darkred;
 	padding: 14px 25px;
 	margin: 55px;
-	height: 65px;
 	text-align: center;
 	font-size: 18px;
 	font-weight: 700;
 	letter-spacing: 3px;
 
-	.save-name-btn {
-		height: 20px;
+	&.save-name-btn {
+		margin: 55px 25px;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&.load-img-btn, &.url-upload-btn {
+		font-size: 16px;
+		height: 40px;
+		margin: 35px;
+		padding: 2px 25px;
 	}
 
 	&:focus {
 		outline: none;
 	}
+}
+
+.SettingsButton {
+	border-style: none; 
+	background-color: $darkred;
+	float: right;
+	margin-right: 15px;
+	margin-top: 15px;
+	text-align: center;
+	letter-spacing: 3px;
+}
+.Overlay {
+	position: fixed;;
+	background: white;
+	padding: 2%;
+	width: 60%;
+	height: 40%;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	.button-close-overlay {
+		float: right;
+		background: white;
+		font-size: 18px;
+	}
+	a {
+		text-decoration:none;
+	}
+	a:visited {color: inherit;}
+	button {
+		border-style: none;
+		padding-left: 1px;
+		font-family: inherit;
+		background: white;
+		font-size: 16px;
+		letter-spacing: 3px;
+	}
+
+	ul li a:hover, ul li a:focus {
+		color:$yellow;
+	   }
+	ul li button:hover, ul li button:focus {
+		color: $yellow;
+	}   
+
+	li {
+		color: inherit;
+		display: block;
+		margin-bottom: 6px;
+		list-style-type: none;
+	}	
+}
+
+.overlay-shown {
+	display : block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 10;
+}
+
+.overlay-hidden {
+	display: none; 
 }
 
 .BackButton {
@@ -81,4 +157,29 @@
 	&:hover {
 		background-color: rgba(255, 255, 255, 0.2);
 	}
+}
+
+@media only screen and (max-width: 599px) {
+  
+	.StartButton {
+		padding: 14px;
+	}
+
+	.save-name-btn {
+
+		&.save-name-btn {
+			margin: 44px 25px 25px 55px;
+			padding: 22px 25px;
+		}
+	}
+
+	.option_btn {
+		font-size: 12px;
+		padding-left: 5px;
+		line-height: 1.3;
+	}
+} 
+
+@media (min-width: 600px) and (max-width: 768px) {
+
 }
