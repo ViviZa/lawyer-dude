@@ -142,10 +142,17 @@ ol {
 		margin-right: 10px;
 	}
 }
-
-.choice {
+.quizQuestion {
 	margin-bottom: 0.5em;
 	letter-spacing: 1.1px;
+	border-radius: 10px;
+	label {
+		display: inline-block;
+	}
+	.wrong {
+		font-size: 12px;
+	}
+
 }
 
 @media only screen and (max-width: 599px) {
