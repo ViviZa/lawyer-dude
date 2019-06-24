@@ -12,6 +12,7 @@ import TemplateDecision from './pages/TemplateDecision';
 import MatchTheLicense from './games/MatchTheLicense';
 import UsingThePicture from './games/UsingThePicture';
 import WelcomePage from './pages/WelcomePage';
+import FindTheLicence from './games/FindTheLicence';
 
 const history = createBrowserHistory()
 library.add(faBars);
@@ -57,7 +58,6 @@ class App extends Component {
           <Route exact path="/dontusetheimage" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/moreinformation" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/usingsearchengines" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
-          <Route exact path="/usingsearchtool" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
           <Route exact path="/usingwiki2" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
           <Route exact path="/usinggoogle" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/success" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
@@ -66,8 +66,9 @@ class App extends Component {
           <Route exact path="/matchthelicense" component={() => <MatchTheLicense addingPages={this.addingPages}/>}/>
           <Route exact path="/collectinfo" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/stealingpictures" component={() => <Jailpage addingPages={this.addingPages}/>}/>
-          <Route exact path="/attributionGenerator1" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
-          <Route exact path="/attributionGenerator2" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
+          <Route exact path="/attributionGenerator" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
+          <Route exact path="/findthelicence1" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
+          <Route exact path="/findthelicence2" component={() => <FindTheLicence addingPages={this.addingPages}/>}/>
       </Router>
     );
   }

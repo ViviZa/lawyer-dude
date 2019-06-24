@@ -7,7 +7,8 @@ import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
 import SettingsButton from '../components/SettingsButton';
 import { ReactComponent as LDHeadHappy } from '../images/Lawyerdude-head-happy.svg';
-import Screencast from '../images/attribution-generator.gif'
+import Screencast from '../images/attribution-generator.gif';
+import  { ReactComponent as LDLamaSceptical } from '../images/Lawyerdude-llama-head-sceptical.svg';
 
 class NoDecision extends Component {
   constructor(props) {
@@ -78,6 +79,11 @@ class NoDecision extends Component {
   render() {
     const { panels, textIndex, headline } = this.state;
     const { ID } = this.props.location.state;
+    let attributionGenerator = <div />;
+
+    if (ID === 24 && textIndex===4) {
+      attributionGenerator = <img src={Screencast} className="defaultImg" alt="logo" />
+    };
 
     return (
       <div className="Startpage">
@@ -90,26 +96,28 @@ class NoDecision extends Component {
           {
               (panels[textIndex] && panels[textIndex].text !== undefined) ? (
               <div className={panels[textIndex].cssClass}>
-                  <p className="speechbubbletext">
+                  <div className="speechbubbletext">
+                  
                   <div dangerouslySetInnerHTML={{ __html: panels[textIndex].text}}/>
-                </p>
+                </div>
               </div>
               ) : (
-                <div className="speech">
-                  <p className="speechbubbletext">
-                  <div dangerouslySetInnerHTML={{ __html: panels[textIndex]}}/>
-                  </p>
+                <div>
+                  <div className="speech">
+                    <div className="speechbubbletext">
+                      <div dangerouslySetInnerHTML={{ __html: panels[textIndex]}}/>
+                    </div>
+                  </div>  
+                    <div className="lama-container">
+                      <LDLamaSceptical className="lama-sceptical"/>
+                    </div>
+                    <div className="speechlawyer-container">
+                      <LDHeadHappy className="speechlawyer-happy"/>
+                    </div>
                 </div>
-              )
-          }
-          <div className="speechlawyer-container">
-            <LDHeadHappy className="speechlawyer-happy"/>
-          </div>
-          {ID === 25 &&
-            <h2>
-             <img src={Screencast} href="https://lizenzhinweisgenerator.de/?lang=en" className="defaultImg" alt="logo" />
-            </h2>
-          }
+          )
+        }
+          {attributionGenerator}
           {
             (textIndex === 0 && panels.length > 1) ? (
               <div className="buttoncontainer">

@@ -52,6 +52,16 @@ ol {
 	width: 90%;
 	position: absolute;
 	z-index: 10;
+	button {
+		background-color: $darkred;
+		border-style: none;
+		letter-spacing: 3px;
+		margin-left: 4em;
+		margin-top : 15px;
+		color: $button-text;
+		padding: 3px;
+		vertical-align:middle
+	}
 }
 
 .resourceContainer {
@@ -123,6 +133,40 @@ ol {
 .welcomepanel {
 	text-align: left;
 	margin-bottom: 5px;
+	label {
+		display: block;
+	}
+}
+
+.quizQuestions{
+	text-align: left;
+	width: 90%;
+	.question {
+		margin-top: 3em;
+		margin-bottom: 1em;
+		letter-spacing: 1.1px;
+		font-size: 20px;
+	}
+	button {
+		background-color: $darkred;
+		border-style: none; 
+		color: white;
+		padding: 14px 20px;
+		float: right;
+		margin-right: 10px;
+	}
+}
+.quizQuestion {
+	margin-bottom: 0.5em;
+	letter-spacing: 1.1px;
+	border-radius: 10px;
+	label {
+		display: inline-block;
+	}
+	.wrong {
+		font-size: 12px;
+	}
+
 }
 
 @media only screen and (max-width: 599px) {
