@@ -1,39 +1,72 @@
-import React, { Component } from 'react';
-import SideNavigation from '../components/SideNavigation';
-import { withRouter } from 'react-router';
-import data from '../data.json';
-import DropDown from './../components/DropDown';
-import BackButtonInactive from '../components/BackButtonInactive';
-import ForthButton from '../components/ForthButton';
+import React, { Component } from "react";
+import SideNavigation from "../components/SideNavigation";
+import { withRouter } from "react-router";
+import data from "../data.json";
+import BackButtonInactive from "../components/BackButtonInactive";
+import ForthButton from "../components/ForthButton";
+import Select from "react-select";
+import update from "immutability-helper";
+import { ReactComponent as LDHeadHappy } from "../images/Lawyerdude-head-happy.svg";
 
-const licenses = [
-  {explanation: "Alle", license: "CR und OC" },
-  {explanation: "Kann kostenlos geändert, freigegeben und verwendet werden", license: "unklar, da kommenzielle Nutzung nicht angegeben" } ,
-  {explanation: "Öffentliche Domäne", license: "CC-0" },
-  {explanation: "Kann kostenlos geändert, freigegeben und kommerziell verwendet werden", license: "CC-BY" },
-  {explanation: "Kann kostenlos freigegeben und verändert werden", license: "unklar, da Modifizierung und kommenzielle Nutzung nicht angegeben" },
-  {explanation: "Kann kostenlos freigegeben und kommerziell verwendet werden", license: "unklar, da keine Angabe zur Modifizierung" },
-  {explanation: "Alle Creative Commons", license: "CC-*" },
+import matchTheLicenseData from "./MatchTheLicenseData.json";
+
+const options = [
+  { value: "CC0", label: "CC0" },
+  { value: "CC-BY", label: "CC-BY" },
+  { value: "CC-BY-SA", label: "CC-BY-SA" },
+  { value: "CC-BY-ND", label: "CC-BY-ND" },
+  { value: "CC-BY-NC-SA", label: "CC-BY-NC-SA" },
+  { value: "CC-BY-NC-ND", label: "CC-BY-NC-ND" }
 ];
 
 class MatchTheLicense extends Component {
   constructor(props) {
     super(props);
-    this.child0 = React.createRef();
-    this.child1 = React.createRef();
-    this.child2 = React.createRef();
-    this.child3 = React.createRef();
-    this.child4 = React.createRef();
-    this.child5 = React.createRef();
-    this.child6 = React.createRef();
     this.state = {
-      headline: '',
+      headline: "",
       nextPageID: 0,
-      nextPage: '',
+      nextPage: "",
+      count: 0,
+      questions: [],
+      intro: true,
+      selectedOption: [
+        {
+          option: [],
+          errorText: "",
+          solutionText: ""
+        },
+        {
+          option: [],
+          errorText: "",
+          solutionText: ""
+        },
+        {
+          option: [],
+          errorText: "",
+          solutionText: ""
+        },
+        {
+          option: [],
+          errorText: "",
+          solutionText: ""
+        },
+        {
+          option: [],
+          errorText: "",
+          solutionText: ""
+        },
+        {
+          option: [],
+          errorText: "",
+          solutionText: ""
+        }
+      ]
     };
-    this.validateSelection = this.validateSelection.bind(this);
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
-
+    this.handleChange = this.handleChange.bind(this);
+    this.validate = this.validate.bind(this);
+    this.incCount = this.incCount.bind(this);
+    this.setIntro = this.setIntro.bind(this);
   }
 
   componentDidMount() {
@@ -47,57 +80,151 @@ class MatchTheLicense extends Component {
     this.setState({
       headline: filteredJSON[0].headline,
       nextPage: filteredJSON[0].nextPage,
-      nextPageID: nextPageID,
-    })
-  }
+      nextPageID: nextPageID
+    });
 
+    const matchTheLicenseString = JSON.stringify(matchTheLicenseData);
+    const licenseArray = JSON.parse(matchTheLicenseString);
+    this.setState({ questions: licenseArray });
+  }
 
   redirectToNextPage() {
     const { history } = this.props;
     const { nextPageID, nextPage } = this.state;
     history.push({
       pathname: nextPage,
-      state: { ID: nextPageID },
+      state: { ID: nextPageID }
     });
   }
 
-  validateSelection() {
-    this.child0.current.validate();
-    this.child1.current.validate();
-    this.child2.current.validate();
-    this.child3.current.validate();
-    this.child4.current.validate();
-    this.child5.current.validate();
-    this.child6.current.validate();
+  handleChange(index, checkedOption) {
+    const { count } = this.state;
+    this.setState({
+      selectedOption: update(this.state.selectedOption, {
+        [index + count]: { option: { $set: checkedOption } }
+      })
+    });
+  }
+
+  incCount() {
+    this.setState({ count: 3 });
+  }
+
+  setIntro() {
+    this.setState({ intro: false });
   }
 
 
+  validate() {
+    const { selectedOption, questions, count } = this.state;
+    let newState = selectedOption;
+    for (let i = 0; i < 3; i++) {
+      let correctSelectedSolutions = [];
+      const selectedOptionValues = selectedOption[i + count].option.map(
+        option => option.value
+      );
+      questions[i + count].validOptions.forEach(option =>
+        selectedOptionValues.includes(option)
+          ? correctSelectedSolutions.push(option)
+          : null
+      );
+
+      if (
+        questions[i + count].validOptions.length ===
+        correctSelectedSolutions.length
+      ) {
+        newState[i + count].solutionText =
+          "Congratulations! You got everything right!";
+        newState[i + count].errorText = "";
+      } else if (correctSelectedSolutions.length === 0) {
+        newState[i + count].errorText =
+          `Not quite right, you didn't get any correct solutions. The correct answers would have been ` +
+          questions[i + count].validOptions.map(option => option);
+        newState[i + count].solutionText = "";
+      } else {
+        newState[i + count].errorText =
+          `Almost right, you got ${correctSelectedSolutions.length} of ${
+            questions[i + count].validOptions.length
+          } correct solutions. The correct answers would have been ` +
+          questions[i + count].validOptions.map(option => option);
+        newState[i + count].solutionText = "";
+      }
+    }
+    this.setState({ selectedOption: newState });
+  }
+
   render() {
-   // const { headline} = this.state;
     const { ID } = this.props.location.state;
+    const { selectedOption, questions, count, intro } = this.state;
 
     return (
       <div className="MatchTheLicense">
-         <SideNavigation ID={ID}/>
+        <SideNavigation ID={ID} />
         <div className="pagecontent">
-          <h1>
-          Match the License
-          </h1>
-          <DropDown ref={this.child0} explanation={licenses[0].explanation} license={licenses[0].license}/>
-          <DropDown ref={this.child1} explanation={licenses[1].explanation} license={licenses[1].license}/>
-          <DropDown ref={this.child2} explanation={licenses[2].explanation} license={licenses[2].license}/>
-          <DropDown ref={this.child3} explanation={licenses[3].explanation} license={licenses[3].license}/>
-          <DropDown ref={this.child4} explanation={licenses[4].explanation} license={licenses[4].license}/>
-          <DropDown ref={this.child5} explanation={licenses[5].explanation} license={licenses[5].license}/>
-          <DropDown ref={this.child6} explanation={licenses[6].explanation} license={licenses[6].license}/>
-          <p></p>
-          <button onClick={this.validateSelection}>Validate</button>
+          <h1>Match the License</h1>
+          {intro ? (
+            <div>
+              <div className="speech">
+                <p className="speechbubbletext">
+                  You have experienced that the filter options search engines
+                  offer are not equal to the CC licenses one is actually looking
+                  for. Therefore, it is more important to focus on your
+                  intention when using a picture from the internet. To get an
+                  idea of the right license for your use case we prepared some
+                  examples. Now it’s your turn to find the right license! It is
+                  possible to choose multiple licenses.
+                </p>
+              </div>
+              <div className="speechlawyer-container">
+                <LDHeadHappy className="speechlawyer-happy" />
+              </div>
+            </div>
+          ) : (
+            <div>
+              {Array.from(Array(3), (e, i) => {
+                return (
+                  <div>
+                    <div>
+                      {questions.length > 0 && questions[i + count].text}
+                    </div>
+                    <Select
+                      value={selectedOption[i + count].option}
+                      onChange={ev => this.handleChange(i, ev)}
+                      options={options}
+                      isMulti
+                      className="basic-multi-select"
+                      classNamePrefix="select"
+                      isSearchable={false}
+                    />
+                    <div className="errorMessage">
+                      {selectedOption[i + count].errorText}
+                    </div>
+                    <div className="successMessage">
+                      {selectedOption[i + count].solutionText}
+                    </div>
+                  </div>
+                );
+              })}
+              <button onClick={() => this.validate()}>Check</button>
+            </div>
+          )}
         </div>
-        <p></p>
-        <div className="buttoncontainer">
-        <BackButtonInactive/>
-        <ForthButton nextText={this.redirectToNextPage} />
-        </div>
+        {intro ? (
+          <div className="buttoncontainer">
+            <BackButtonInactive />
+            <ForthButton nextText={this.setIntro} />
+          </div>
+        ) : count !== 3 ? (
+          <div className="buttoncontainer">
+            <BackButtonInactive />
+            <ForthButton nextText={this.incCount} />
+          </div>
+        ) : (
+          <div className="buttoncontainer">
+            <BackButtonInactive />
+            <ForthButton nextText={this.redirectToNextPage} />
+          </div>
+        )}
       </div>
     );
   }

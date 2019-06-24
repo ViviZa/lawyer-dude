@@ -1,0 +1,52 @@
+[{
+        "text": "It’s almost your birthday and you are looking for a picture of a cake to print on the birthday invitations that you are sending to your friends.",
+        "validOptions": [
+            "CC0",
+            "CC-BY",
+            "CC-BY-SA",
+            "CC-BY-ND",
+            "CC-BY-NC-SA",
+            "CC-BY-NC-ND"
+        ]
+    },
+    {
+        "text": "You are a university student and found the perfect picture for a presentation you have to hold in class. What license should the picture have?",
+        "validOptions": [
+            "CC0",
+            "CC-BY",
+            "CC-BY-SA",
+            "CC-BY-ND",
+            "CC-BY-NC-SA",
+            "CC-BY-NC-ND"
+        ]
+    },
+    {
+        "text": "You are a professor at a university and are holding a lecture tomorrow. To visualize the teaching content you are looking for pictures online and find one. To make it fit the content you need to modify it a bit.",
+        "validOptions": [
+            "CC0",
+            "CC-BY",
+            "CC-BY-SA"
+        ]
+    },
+    {
+        "text": "You are working in a big company. Tomorrow you are expecting clients that are interested in your product. To give them more information about your product you are preparing a brochure for them. You feel like a picture would look nice on it so you go online to find the right one. ",
+        "validOptions": [
+            "CC0",
+            "CC-BY",
+            "CC-BY-ND"
+        ]
+    },
+    {
+        "text": "You are working at a marketing company. Your client is amnesty international. Together you create a big campagne that contains thousands of wallpapers that are presented in the center of the city. Although you are looking for a picture that is free to use after adding the slogan of the campagne to it you are not willing to publish your picture under a free license. What is the license you are looking for in that particular case?",
+        "validOptions": [
+            "CC0",
+            "CC-BY"
+        ]
+    },
+    {
+        "text": "You are a famous blogger on the social network Instagram. Besides that you are working a full-time job in a big company. So sometimes you are short on time and cannot post as much pictures as you would like to. You are helping yourself by using pictures from the internet. However, you don’t want your followers to know that so you are not willing to share the name of the creator. ",
+        "validOptions": [
+            "CC0"
+        ]
+    }
+]
