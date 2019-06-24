@@ -40,6 +40,13 @@ ol {
 	}
 }
 
+.welcomepanels {
+
+	li {
+		list-style-image: url(./images/bullet.svg);
+	}
+}
+
 .pagecontent {
 	height: 100%;
 	display: block;
