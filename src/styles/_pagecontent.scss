@@ -40,17 +40,28 @@ ol {
 	}
 }
 
+.welcomeblock {
+	margin-top: 8em;
+}
+
 .welcomepanels {
 
 	li {
 		list-style-image: url(./images/bullet.svg);
+
+		&:last-of-type {
+			font-size: 25px;
+			font-weight: 700;
+			padding: 1em 0;
+			list-style: none;
+		}
 	}
 }
 
 .pagecontent {
 	height: 100%;
 	display: block;
-	margin-left: 245px;
+	margin-left: 25em;
 	padding: 25px 130px;
 	text-align: center;
 }
