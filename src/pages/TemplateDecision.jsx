@@ -5,6 +5,7 @@ import data from '../data.json';
 import BackButton from '../components/BackButton';
 import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
+import { ReactComponent as LDFull } from '../images/Lawyerdude-side.svg';
 import { ReactComponent as LDHeadHappy } from '../images/Lawyerdude-head-happy.svg';
 import SettingsButton from '../components/SettingsButton';
 
@@ -107,20 +108,22 @@ class TemplateDecision extends Component {
               (panels[textIndex] && panels[textIndex].text !== undefined) ? (
               <div className={panels[textIndex].cssClass}>
                   <p className="speechbubbletext">
-                 <div dangerouslySetInnerHTML={{ __html: panels[textIndex].text}}/>
-                </p>
+                    <div dangerouslySetInnerHTML={{ __html: panels[textIndex].text}}/>
+                  </p>
+                  <LDFull className="fulllawyer"/>
               </div>
               ) : (
                 <div className="speech">
                   <p className="speechbubbletext">
                   <div dangerouslySetInnerHTML={{ __html: panels[textIndex]}}/>
                   </p>
+                  <div className="speechlawyer-container">
+                    <LDHeadHappy className="speechlawyer-happy"/>
+                  </div>
                 </div>
               )
             }
-          <div className="speechlawyer-container">
-            <LDHeadHappy className="speechlawyer-happy"/>
-          </div>
+          
           {
             (textIndex === 0 && panels.length > 1) ? (
               <div className="buttoncontainer">

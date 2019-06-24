@@ -6,6 +6,7 @@ import BackButton from '../components/BackButton';
 import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
 import SettingsButton from '../components/SettingsButton';
+import { ReactComponent as LDFull } from '../images/Lawyerdude-side.svg';
 import { ReactComponent as LDHeadHappy } from '../images/Lawyerdude-head-happy.svg';
 import Screencast from '../images/attribution-generator.gif'
 
@@ -91,20 +92,21 @@ class NoDecision extends Component {
               (panels[textIndex] && panels[textIndex].text !== undefined) ? (
               <div className={panels[textIndex].cssClass}>
                   <p className="speechbubbletext">
-                  <div dangerouslySetInnerHTML={{ __html: panels[textIndex].text}}/>
-                </p>
+                    <div dangerouslySetInnerHTML={{ __html: panels[textIndex].text}}/>
+                  </p>
+                  <LDFull className="fulllawyer"/>
               </div>
               ) : (
                 <div className="speech">
                   <p className="speechbubbletext">
-                  <div dangerouslySetInnerHTML={{ __html: panels[textIndex]}}/>
+                    <div dangerouslySetInnerHTML={{ __html: panels[textIndex]}}/>
                   </p>
+                  <div className="speechlawyer-container">
+                    <LDHeadHappy className="speechlawyer-happy"/>
+                  </div>
                 </div>
               )
           }
-          <div className="speechlawyer-container">
-            <LDHeadHappy className="speechlawyer-happy"/>
-          </div>
           {ID === 25 &&
             <h2>
              <img src={Screencast} href="https://lizenzhinweisgenerator.de/?lang=en" className="defaultImg" alt="logo" />

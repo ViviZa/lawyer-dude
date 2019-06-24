@@ -83,8 +83,20 @@ ol {
 }
 
 .resourceContainer {
-	border: 1px solid black;
-	white-space: pre-line;
+	background-color: $resource-background;
+	margin-top: 3.5em;
+	height: 43em;
+
+	.speechbubbletext {
+		position: relative;
+		font-size: 20px;
+		padding: 3em 4.5em;
+		line-height: 2em;
+		width: 50%;
+		text-align: left;
+		margin: 0;
+		float: left;
+	}
 }
 
 .buttoncontainer {
