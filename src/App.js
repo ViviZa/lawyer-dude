@@ -66,8 +66,7 @@ class App extends Component {
           <Route exact path="/matchthelicense" component={() => <MatchTheLicense addingPages={this.addingPages}/>}/>
           <Route exact path="/collectinfo" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/stealingpictures" component={() => <Jailpage addingPages={this.addingPages}/>}/>
-          <Route exact path="/attributionGenerator1" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
-          <Route exact path="/attributionGenerator2" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
+          <Route exact path="/attributionGenerator" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
           <Route exact path="/findthelicence1" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
           <Route exact path="/findthelicence2" component={() => <FindTheLicence addingPages={this.addingPages}/>}/>
       </Router>

@@ -94,15 +94,15 @@ class NoDecision extends Component {
           {
               (panels[textIndex] && panels[textIndex].text !== undefined) ? (
               <div className={panels[textIndex].cssClass}>
-                  <p className="speechbubbletext">
+                  <div className="speechbubbletext">
                   <div dangerouslySetInnerHTML={{ __html: panels[textIndex].text}}/>
-                </p>
+                </div>
               </div>
               ) : (
                 <div className="speech">
-                  <p className="speechbubbletext">
-                  <div dangerouslySetInnerHTML={{ __html: panels[textIndex]}}/>
-                  </p>
+                  <div className="speechbubbletext">
+                    <div dangerouslySetInnerHTML={{ __html: panels[textIndex]}}/>
+                  </div>
                 </div>
               )
           }
