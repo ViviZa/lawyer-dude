@@ -94,6 +94,11 @@ class NoDecision extends Component {
                   <p className="speechbubbletext">
                     <div dangerouslySetInnerHTML={{ __html: panels[textIndex].text}}/>
                   </p>
+                  {ID === 25 &&
+                    <div className="attribution-container">
+                      <img src={Screencast} href="https://lizenzhinweisgenerator.de/?lang=en" className="attribution-screencast" alt="attribution-generator" />
+                    </div>
+                  }
                   <LDFull className="fulllawyer"/>
               </div>
               ) : (
@@ -106,11 +111,6 @@ class NoDecision extends Component {
                   </div>
                 </div>
               )
-          }
-          {ID === 25 &&
-            <h2>
-             <img src={Screencast} href="https://lizenzhinweisgenerator.de/?lang=en" className="defaultImg" alt="logo" />
-            </h2>
           }
           {
             (textIndex === 0 && panels.length > 1) ? (
