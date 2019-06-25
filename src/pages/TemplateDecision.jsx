@@ -111,16 +111,19 @@ class TemplateDecision extends Component {
                 </p>
               </div>
               ) : (
-                <div className="speech">
-                  <p className="speechbubbletext">
-                  <div dangerouslySetInnerHTML={{ __html: panels[textIndex]}}/>
-                  </p>
+                <div>
+                  <div className="speech">
+                    <p className="speechbubbletext">
+                    <div dangerouslySetInnerHTML={{ __html: panels[textIndex]}}/>
+                    </p>
+                  </div>
+                  <div className="speechlawyer-container">
+                    <LDHeadHappy className="speechlawyer-happy"/>
+                  </div>
                 </div>
               )
             }
-          <div className="speechlawyer-container">
-            <LDHeadHappy className="speechlawyer-happy"/>
-          </div>
+          
           {
             (textIndex === 0 && panels.length > 1) ? (
               <div className="buttoncontainer">
