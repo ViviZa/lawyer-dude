@@ -6,6 +6,8 @@ import BackButton from '../components/BackButton';
 import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
 import { ReactComponent as LDHeadHappy } from '../images/Lawyerdude-head-happy.svg';
+import  { ReactComponent as LDLamaSceptical } from '../images/Lawyerdude-llama-head-sceptical.svg';
+import  { ReactComponent as LDLamaHappy } from '../images/Lawyerdude-llama-head-happy.svg';
 import SettingsButton from '../components/SettingsButton';
 
 class TemplateDecision extends Component {
@@ -94,6 +96,12 @@ class TemplateDecision extends Component {
   render() {
     const { panels, textIndex, headline, decisions } = this.state;
     const { ID } = this.props.location.state;
+    let lamasMood;
+    if(textIndex === panels.length-1){
+      lamasMood = <LDLamaHappy className="lama-happy"/>;
+    } else {
+      lamasMood = <LDLamaSceptical className="lama-sceptical"/>;
+    }
 
     return (
       <div className="Startpage">
@@ -117,6 +125,9 @@ class TemplateDecision extends Component {
                     <div dangerouslySetInnerHTML={{ __html: panels[textIndex]}}/>
                     </p>
                   </div>
+                  <div className="lama-container">
+                      {lamasMood}
+                    </div>
                   <div className="speechlawyer-container">
                     <LDHeadHappy className="speechlawyer-happy"/>
                   </div>
