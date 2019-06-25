@@ -70,16 +70,6 @@ ol {
 	width: 90%;
 	position: absolute;
 	z-index: 10;
-	button {
-		background-color: $darkred;
-		border-style: none;
-		letter-spacing: 3px;
-		margin-left: 4em;
-		margin-top : 15px;
-		color: $button-text;
-		padding: 3px;
-		vertical-align:middle
-	}
 }
 
 .resourceContainer {

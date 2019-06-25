@@ -10,6 +10,7 @@
 
 .fulllawyer  {
 	display: inline-block;
+	float: right;
 	width: 30%;
 	margin:  15% 0 15% 12%;
 }
@@ -44,7 +45,6 @@
 .jail-speech {
 	font-size: 22px;
 	position: relative;
-	margin-top: 5%;
 	margin-left: 45%;
 
 	&:before {
@@ -83,6 +83,7 @@
 .resourceContainer {
 
 	.fulllawyer {
+		float: none;
 		margin: 7em 3.5em 0 0;
 	}
 }
@@ -129,6 +130,11 @@
 	.st6{fill:#FFCC33;}
 	.st7{fill:#C61A2F;}
 	.st8{fill:#FFCC00;}
+}
+
+#back-arrow {
+	float: left;
+	padding: 0.3em 0.9em 0.3em 0.3em;
 }
 
 @media only screen and (max-width: 599px) {

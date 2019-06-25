@@ -1,6 +1,6 @@
 @import "variables";
 
-.StartButton, .save-name-btn, .load-img-btn, .url-upload-btn {
+.StartButton, .save-name-btn, .load-img-btn, .url-upload-btn, .jail-back-btn {
 	color: $button-text;
 	border-radius: 100px;
 	border-style: none; 
@@ -30,6 +30,11 @@
 	&:focus {
 		outline: none;
 	}
+}
+
+.jail-back-btn {
+	line-height: 2.4;
+	margin: 55px 55px 0 55px;
 }
 
 .SettingsButton {
