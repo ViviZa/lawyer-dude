@@ -1,6 +1,6 @@
 @import "variables";
 
-.StartButton, .save-name-btn, .load-img-btn, .url-upload-btn, .jail-back-btn {
+.StartButton, .save-name-btn, .load-img-btn, .url-upload-btn, .jail-back-btn, .quiz-btn {
 	color: $button-text;
 	border-radius: 100px;
 	border-style: none; 
@@ -33,8 +33,14 @@
 }
 
 .jail-back-btn {
+	cursor: pointer;
 	line-height: 2.4;
 	margin: 55px 55px 0 55px;
+}
+
+.quiz-btn {
+	float: none; 
+	margin: 0 0 0 32em;
 }
 
 .SettingsButton {

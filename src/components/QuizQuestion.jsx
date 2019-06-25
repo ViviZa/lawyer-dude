@@ -5,7 +5,7 @@ class Question extends Component {
     constructor(props){
       super(props);
       this.state = {
-        color : "white",
+        color : "#e1e1e1",
         isChecked : false,
         isChosenCorrectly : false,
       };

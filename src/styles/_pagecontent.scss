@@ -155,36 +155,48 @@ ol {
 .welcomepanel {
 	text-align: left;
 	margin-bottom: 5px;
+
 	label {
 		display: block;
 	}
 }
 
-.quizQuestions{
+.quizQuestions {
+
 	text-align: left;
 	width: 90%;
+	margin: auto;
+
 	.question {
 		margin-top: 3em;
 		margin-bottom: 1em;
 		letter-spacing: 1.1px;
 		font-size: 20px;
 	}
-	button {
-		background-color: $darkred;
-		border-style: none; 
-		color: white;
-		padding: 14px 20px;
-		float: right;
-		margin-right: 10px;
-	}
 }
+
 .quizQuestion {
-	margin-bottom: 0.5em;
+	background-color: $resource-background;
+	padding: 1em;
+	margin-bottom: 0.1em;
 	letter-spacing: 1.1px;
-	border-radius: 10px;
+
+	input {
+		margin: 0.7em 1.5em;
+	}
+
+	input[type=checkbox] {
+		-ms-transform: scale(2);
+		-moz-transform: scale(2);
+		-webkit-transform: scale(2);
+		-o-transform: scale(2);
+		transform: scale(2);
+	}
+
 	label {
 		display: inline-block;
 	}
+
 	.wrong {
 		font-size: 12px;
 	}
