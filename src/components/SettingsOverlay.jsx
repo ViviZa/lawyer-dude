@@ -10,10 +10,10 @@ class SettingsOverlay extends Component {
                         <button className="button-close-overlay" onClick={this.props.handleClose}>X</button>
                         <h2>Settings</h2>
                         <ul>
-                        <li><button className="settings" onClick={this.props.goBack}>Go back to previous page</button></li>
-                        <li><a href="/">Start from beginning</a></li>
-                        <li><a href="/impressum" className="settings">About</a></li>
-                        <li>Switch language: <a>en </a> |<a> de </a></li>
+                            <li><button onClick={this.props.goBack}>Go back to previous page</button></li>
+                            <li><a href="/">Start from beginning</a></li>
+                            <li><a href="/impressum">About</a></li>
+                            <li>Switch language: <a>en </a> |<a> de </a></li>
                         </ul>
                     </div>
                 </div>
