@@ -104,20 +104,17 @@ class FindTheLicense extends Component {
           <h1>{headline}</h1>
           {(panels[textIndex] !== undefined) ? (
           <div className="quizQuestions">
-            <div className="question">
-              {panels[textIndex].question}
-              <button className="quiz-btn" onClick={this.validate}>Submit answers</button>
-            </div>
-           
-            <QuizQuestion ref={this.child1} id={choices[0].id} choice={choices[0].choice} rightAnswers={panels[textIndex].correctAnswers} />
-            <QuizQuestion ref={this.child2} id={choices[1].id} choice={choices[1].choice} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion ref={this.child3} id={choices[2].id} choice={choices[2].choice} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion ref={this.child4} id={choices[3].id} choice={choices[3].choice} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion ref={this.child5} id={choices[4].id} choice={choices[4].choice} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion ref={this.child6} id={choices[5].id} choice={choices[5].choice} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion ref={this.child7} id={choices[6].id} choice={choices[6].choice} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion ref={this.child8} id={choices[7].id} choice={choices[7].choice} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion ref={this.child9} id={choices[8].id} choice={choices[8].choice} rightAnswers={panels[textIndex].correctAnswers}/>
+            <div className="question">{panels[textIndex].question}</div>
+            <QuizQuestion key={"question1"+textIndex} ref={this.child1} id={choices[0].id} choice={choices[0].choice} rightAnswers={panels[textIndex].correctAnswers} />
+            <QuizQuestion key={"question2"+textIndex}  ref={this.child2} id={choices[1].id} choice={choices[1].choice} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion key={"question3"+textIndex}  ref={this.child3} id={choices[2].id} choice={choices[2].choice} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion key={"question4"+textIndex}  ref={this.child4} id={choices[3].id} choice={choices[3].choice} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion key={"question5"+textIndex}  ref={this.child5} id={choices[4].id} choice={choices[4].choice} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion key={"question6"+textIndex}  ref={this.child6} id={choices[5].id} choice={choices[5].choice} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion key={"question7"+textIndex}  ref={this.child7} id={choices[6].id} choice={choices[6].choice} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion key={"question8"+textIndex}  ref={this.child8} id={choices[7].id} choice={choices[7].choice} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion key={"question9"+textIndex}  ref={this.child9} id={choices[8].id} choice={choices[8].choice} rightAnswers={panels[textIndex].correctAnswers}/>
+            <button onClick={this.validate}>Check</button>
           </div>
           ) : ( <div></div>)}
           {
