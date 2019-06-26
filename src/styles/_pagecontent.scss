@@ -383,7 +383,38 @@ ol {
 
 @media (min-width: 1260px) and (max-width: 1440px) {
 
+	h1 {
+		margin: 10px;
+	}
+
 	.startpagecontent {
 		padding-top: 3.5em;
+	}
+
+	.welcomeblock {
+		margin-top: 4.5em;
+	}
+
+	.welcomepanels {
+		font-size: 14px;
+
+		li {
+			list-style-image: url(./images/bullet.svg);
+	
+			&:last-of-type {
+				font-size: 14px;
+				font-weight: 700;
+				padding: 0.2em 0;
+				list-style: none;
+			}
+		}
+	}
+
+	.pagecontent {
+		margin-left: 15em;
+	}
+
+	.buttoncontainer {
+		bottom: 1em;
 	}
 }

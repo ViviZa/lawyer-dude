@@ -57,6 +57,7 @@
 	height: 58px;
 	width: 58px;
 }
+
 .Overlay {
 	position: fixed;
 	background: $background-white;
@@ -227,5 +228,17 @@
 
 	.StartButton {
 		margin: 44px;
+	}
+
+	.ForthButton {
+		height: 55px;
+		width: 55px;
+		padding: 10px 10px 14px 16px;
+	}
+
+	.BackButton, .btn_inactive {
+		height: 55px;
+		width: 55px;
+		padding: 10px 16px 14px 10px;
 	}
 }
