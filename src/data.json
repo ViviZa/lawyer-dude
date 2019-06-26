@@ -111,21 +111,31 @@
     "panels": [
       "Alright then. Let’s find a nice image that fits your needs.",
       "I believe you now know the very basics of open licensing by now, so let’s take a look at the so called CC licenses before we continue.",
-      {
-        "text": "So now we get into open licensing a little deeper. I would like to introduce you to the CC legal tools. Don’t worry we’ll make it simple and concentrate on the CC licenses that are the most relevant for your context. In the end you will know how you can use a freely licensed image. I promise.",
-        "type": "resource"
-      },
+      "So now we get into open licensing a little deeper. I would like to introduce you to the CC legal tools. Don’t worry we’ll make it simple and concentrate on the CC licenses that are the most relevant for your context. In the end you will know how you can use a freely licensed image. I promise.",
       {
         "text": "Before we start let’s have a look at a symbol which I'm sure you've met many times before: \n This pictogram shows you that this image is protected by copyright as explained at the very beginning. It is usually used to indicate that the rights holder reserves all rights. Copying, distributing, modifying is not allowed unless you ask for permission to use it (“all rights reserved”).",
-        "type": "resource"
+        "type": "resource",
+        "images": [""]
       },
       {
-        "text": "The absolute opposite to this is when rights holders waive all rights and place their works in the public domain. \n This pictogram states that all rights are granted for any use of a work in any way and for any purpose (“no rights reserved”). Works in the public domain are free of protection. Either because the term of protection has expired or they were not copyright-protected in the first place. \n Creative Commons additionally offers a second tool that causes a similar legal status like the public domain tool: CC0. Rights holders are actively waiving all rights from their works. Consequently, all worksimages licensed under CC0 can be used by anyone without any restrictions or obligations.",
-        "type": "resource"
+        "text": "The absolute opposite to this is when rights holders waive all rights and place their works in the public domain. \n This pictogram states that all rights are granted for any use of a work in any way and for any purpose (“no rights reserved”). Works in the public domain are free of protection. Either because the term of protection has expired or they were not copyright-protected in the first place.",
+        "type": "resource",
+        "images": ["images/pd.svg"]
       },
       {
-        "text": "Now you already know the two public domain tools (or so called “waivers”). Let’s have a look at the CC licenses. \n \n Each license contains at least one of four basic elements which are illustrated by abbreviations and pictograms. These elements can be combined with each other. Licenses’ names always start with the “CC” abbreviation. Let’s have a look how this might look like: \n BY stands for “attribution” and means you have to mention the author and other parties designated for attribution. The corresponding license is therefore called “CC BY”. It means that you are free to use the work in any way and for any purpose - it therefore is the most permissive type of all CC licences. By the way, every license contains the obligation to name the author (i. e. every CC license contains the “BY” element). \n SA stands for “Share Alike” and means that anyone who modifies the original work must share the adapted version under a CC BY-SA license or a compatible licence. Apart from this, all license conditions of the CC BY license are still valid here. \n ND stands for “No Derivatives” which means that you are not allowed to modify the image in any way. The corresponding license is called “CC BY-ND”. Apart from this, all license conditions of the CC BY license are still valid here. \n NC stands for “Non Commercial” and states - contrary to the previous mentioned licenses - that you are not allowed to use the workimage commercially. With “CC BY-NC” any reproduction or modification of an image in order to realise a commercial gain is not permitted. Apart from this, all license conditions of the CC BY license are still valid here.",
-        "type": "resource"
+        "text": "Creative Commons additionally offers a second tool that causes a similar legal status like the public domain tool: CC0. Rights holders are actively waiving all rights from their works. Consequently, all worksimages licensed under CC0 can be used by anyone without any restrictions or obligations.",
+        "type": "resource",
+        "images": ["images/Cc-zero.svg"]
+      },
+      {
+        "text": "Now you already know the two public domain tools (or so called “waivers”). Let’s have a look at the CC licenses. \n \n Each license contains at least one of four basic elements which are illustrated by abbreviations and pictograms. These elements can be combined with each other. Licenses’ names always start with the “CC” abbreviation. Let’s have a look how this might look like: \n BY stands for “attribution” and means you have to mention the author and other parties designated for attribution. The corresponding license is therefore called “CC BY”. It means that you are free to use the work in any way and for any purpose - it therefore is the most permissive type of all CC licences. By the way, every license contains the obligation to name the author (i. e. every CC license contains the “BY” element).",
+        "type": "resource",
+        "images": ["images/Cc-by.svg"]
+      },
+      {
+        "text":  "SA stands for “Share Alike” and means that anyone who modifies the original work must share the adapted version under a CC BY-SA license or a compatible licence. Apart from this, all license conditions of the CC BY license are still valid here. \n ND stands for “No Derivatives” which means that you are not allowed to modify the image in any way. The corresponding license is called “CC BY-ND”. Apart from this, all license conditions of the CC BY license are still valid here. \n NC stands for “Non Commercial” and states - contrary to the previous mentioned licenses - that you are not allowed to use the workimage commercially. With “CC BY-NC” any reproduction or modification of an image in order to realise a commercial gain is not permitted. Apart from this, all license conditions of the CC BY license are still valid here.",
+        "type": "resource",
+        "images": ["images/CC-sa.svg", "images/CC-nd.svg", "images/Cc-nc.svg"]
       },
       {
         "text": "As if that weren't enough the four elements can be combined. But don’t worry we won’t go any deeper into this. Maybe you can keep in mind a simple rule: \nThe more restrictions a license contains the less it is compatible with the idea of free cultural works or the open definition. To give you one example, let me shortly introduce the most restrictive CC license to you: CC BY-NC-ND. You may not use a work commercially, nor modify it. So, you're probably gonna agree with me that this isn't necessarily making sharing easier.",
