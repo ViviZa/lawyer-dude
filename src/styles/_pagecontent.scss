@@ -387,6 +387,11 @@ ol {
 		margin: 10px;
 	}
 
+	ol {
+		height: 8em; 
+		overflow: scroll;
+	}
+
 	.startpagecontent {
 		padding-top: 3.5em;
 	}
@@ -432,6 +437,10 @@ ol {
 
 	.speechbubbletext, .answerbubbletext, .speechbubbletext-jail {
 		font-size: 14px;
+	}
+
+	.answerbubbletext {
+		font-size: 12px;
 	}
 
 	.entername-form {
