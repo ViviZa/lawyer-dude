@@ -40,10 +40,28 @@ ol {
 	}
 }
 
+.welcomeblock {
+	margin-top: 8em;
+}
+
+.welcomepanels {
+
+	li {
+		list-style-image: url(./images/bullet.svg);
+
+		&:last-of-type {
+			font-size: 25px;
+			font-weight: 700;
+			padding: 1em 0;
+			list-style: none;
+		}
+	}
+}
+
 .pagecontent {
 	height: 100%;
 	display: block;
-	margin-left: 245px;
+	margin-left: 25em;
 	padding: 25px 130px;
 	text-align: center;
 }
@@ -52,21 +70,25 @@ ol {
 	width: 90%;
 	position: absolute;
 	z-index: 10;
-	button {
-		background-color: $darkred;
-		border-style: none;
-		letter-spacing: 3px;
-		margin-left: 4em;
-		margin-top : 15px;
-		color: $button-text;
-		padding: 3px;
-		vertical-align:middle
-	}
 }
 
 .resourceContainer {
-	border: 1px solid black;
-	white-space: pre-line;
+	background-color: $resource-background;
+	margin-top: 3.5em;
+	height: 43em;
+
+	.speechbubbletext {
+		position: relative;
+		font-size: 20px;
+		padding: 0 1.5em;
+		margin: 3em;
+		line-height: 2em;
+		width: 50%;
+		text-align: left;
+		float: left;
+		height: 25em;
+		overflow: scroll;
+	}
 }
 
 .buttoncontainer {
@@ -122,6 +144,10 @@ ol {
 	transform: rotate(-45deg);
 }
 
+.speechlawyer-sceptical-container {
+	margin-top: 2em;
+}
+
 .welcomepanels {
 	position: relative;
 	margin-right: 5%;
@@ -133,40 +159,57 @@ ol {
 .welcomepanel {
 	text-align: left;
 	margin-bottom: 5px;
+
 	label {
 		display: block;
 	}
 }
 
-.quizQuestions{
+.quizQuestions {
+
 	text-align: left;
 	width: 90%;
+	margin: auto;
+
 	.question {
 		margin-top: 3em;
 		margin-bottom: 1em;
 		letter-spacing: 1.1px;
 		font-size: 20px;
 	}
-	button {
-		background-color: $darkred;
-		border-style: none; 
-		color: white;
-		padding: 14px 20px;
-		float: right;
-		margin-right: 10px;
-	}
 }
+
 .quizQuestion {
-	margin-bottom: 0.5em;
+	background-color: $resource-background;
+	padding: 1em;
+	margin-bottom: 0.1em;
 	letter-spacing: 1.1px;
-	border-radius: 10px;
+
+	input {
+		margin: 0.7em 1.5em;
+	}
+
+	input[type=checkbox] {
+		-ms-transform: scale(2);
+		-moz-transform: scale(2);
+		-webkit-transform: scale(2);
+		-o-transform: scale(2);
+		transform: scale(2);
+	}
+
 	label {
 		display: inline-block;
 	}
+
 	.wrong {
 		font-size: 12px;
 	}
+}
 
+.attribution-container {
+	float: left;
+	margin-top: -23em;
+	margin-left: 5.5em;
 }
 
 @media only screen and (max-width: 599px) {

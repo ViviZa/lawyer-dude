@@ -9,10 +9,10 @@
 }
 
 .fulllawyer  {
-	display: inline-block; 
+	display: inline-block;
 	float: right;
 	width: 30%;
-	margin: 5%;
+	margin:  15% 0 15% 12%;
 }
 
 .lawyericon {
@@ -60,7 +60,6 @@
 .jail-speech {
 	font-size: 22px;
 	position: relative;
-	margin-top: 5%;
 	margin-left: 45%;
 
 	&:before {
@@ -96,6 +95,14 @@
 	}
 }
 
+.resourceContainer {
+
+	.fulllawyer {
+		float: none;
+		margin: 7em 3.5em 0 0;
+	}
+}
+
 .Jailpage {
 	background: url(./images/Jail.svg) no-repeat;
 		 background-size: 100%;
@@ -118,9 +125,7 @@
 }
 
 .settings-svg{
-	height: 58px;
-	width: 58px;
-	padding: 5px;
+	padding: 0.1em;
 }
 
 #lawyer-icon {
@@ -163,6 +168,11 @@
 	.st6{fill:#601717;}
 	.st7{fill:#CC6969;}
 	.st8{fill:#F2F2F2;}
+}
+
+#back-arrow {
+	float: left;
+	padding: 0.3em 0.9em 0.3em 0.3em;
 }
 
 @media only screen and (max-width: 599px) {
