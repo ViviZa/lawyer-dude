@@ -420,7 +420,7 @@
       "That doesn’t sound too bad.",
       "Well, if the search engines already filters the images for me I should be able to just use them without taking further action."
     ],
-    "nextPage": ["/usingfreelicences", "/usinggoogle", "/stealingpictures"],
+    "nextPage": ["/usingfreelicences", "/matchthelicense", "/stealingpictures"],
     "nextPageIDs": [7, 21, 300]
   },
   {
@@ -464,6 +464,14 @@
     ],
     "nextPage": ["/usingsearchengines", "/collectinfo"],
     "nextPageIDs": [18, 23]
+  },
+  {
+    "id": 22,
+    "pageurl": "/matchthelicense",
+    "headline": "Match the License",
+    "panels": [],
+    "nextPage": ["/usinggoogle"],
+    "nextPageIDs": [21]
   },
   {
     "id": 23,
