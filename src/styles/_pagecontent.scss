@@ -87,17 +87,7 @@ ol {
 		text-align: left;
 		float: left;
 		height: 25em;
-       	}
-	.resource-images {
-		width: 50%;
-	}
-
-	.resource-image {
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-		width: 3rem;
-		height: 3rem;
+		overflow: scroll;
 	}
 }
 
@@ -183,18 +173,46 @@ ol {
 	}
 }
 
-.quizQuestions {
+.matchSection {
+	display: inline-block;
+	background-color: $resource-background;
+	margin: auto 0;
+}
+
+.quizQuestions, .matchQuestions {
 
 	text-align: left;
 	width: 90%;
 	margin: auto;
 
-	.question {
+	.question, .matchQuestion {
 		margin-top: 3em;
 		margin-bottom: 1em;
 		letter-spacing: 1.1px;
 		font-size: 20px;
 	}
+
+	.matchQuestion {
+		width: 30em;
+		margin: 1.5em;
+		font-size: 18px;
+		text-align: left;
+	}
+
+	.basic-multi-select {
+		float: right;
+		width: 30em;
+		margin: 2em 1.5em;
+	}
+}
+
+.matchQuestions {
+	text-align: center;
+}
+
+.matchQuestion {
+	width: 25em;
+	float: left;
 }
 
 .quizQuestion {

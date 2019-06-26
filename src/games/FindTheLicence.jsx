@@ -56,6 +56,7 @@ class FindTheLicense extends Component {
       headline: '',
       nextPageID: 0,
       nextPage: '',
+      buttonClicked : false,
       };
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
     this.nextText = this.nextText.bind(this);
@@ -87,6 +88,7 @@ class FindTheLicense extends Component {
         return {textIndex: prevState.textIndex + 1}
      })
     }
+    this.setState({buttonClicked :false});
   }
 
   previousText() {
@@ -117,11 +119,14 @@ class FindTheLicense extends Component {
     this.child7.current.validate();
     this.child8.current.validate();
     this.child9.current.validate();
+    this.setState({buttonClicked :true});
   }
 
   render() {
     const { ID } = this.props.location.state;
-    const { panels, textIndex, headline } = this.state;
+    const { panels, textIndex, headline, buttonClicked } = this.state;
+    console.log(this.state.buttonClicked);
+
     return (
       <div className="FindTheLicense">
          <SideNavigation ID={ID}/>
@@ -130,9 +135,8 @@ class FindTheLicense extends Component {
           <h1>{headline}</h1>
           {(panels[textIndex] !== undefined) ? (
           <div className="quizQuestions">
-            <div className="question">{panels[textIndex].question}
+            <div className="question" dangerouslySetInnerHTML={{ __html: panels[textIndex].question}}></div>
             <button className="quiz-btn" onClick={this.validate}>Submit answers</button>
-            </div>
             <QuizQuestion key={"question1"+textIndex} ref={this.child1} option={options[0]} rightAnswers={panels[textIndex].correctAnswers} />
             <QuizQuestion key={"question2"+textIndex}  ref={this.child2} option={options[1]} rightAnswers={panels[textIndex].correctAnswers}/>
             <QuizQuestion key={"question3"+textIndex}  ref={this.child3} option={options[2]} rightAnswers={panels[textIndex].correctAnswers}/>
@@ -145,23 +149,24 @@ class FindTheLicense extends Component {
             </div>
           ) : ( <div></div>)}
           {
-            (textIndex === 0 && panels.length > 1) ? (
+            (textIndex === 0 && panels.length > 1 && buttonClicked === true) ? (
               <div className="buttoncontainer">
                 <BackButtonInactive/>
                 <ForthButton nextText={this.nextText} />
               </div>
             ) : (
-                textIndex + 1 < panels.length ? (
+                textIndex + 1 < panels.length  && buttonClicked === true) ? (
                   <div className="buttoncontainer">
                     <BackButton previousText={this.previousText} />
                     <ForthButton nextText={this.nextText} />
                   </div>
                 ) : (
+                  buttonClicked === true ? (
                     <div className="buttoncontainer">
                       <BackButton previousText={this.previousText} />
                       <ForthButton nextText={this.redirectToNextPage} />
                     </div>
-                  ))
+                  ) : (<div></div>))
           }
         <p></p>
       </div>
