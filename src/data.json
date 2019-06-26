@@ -531,44 +531,15 @@
     "pageurl": "/findthelicence2",
     "headline": "CC Licenses and their Use Cases",
     "panels": [
-      { "question": "What is allowed under a CC0?",
+      { "question": "What is allowed under a <b> CC0 </b>?",
         "correctAnswers": [1,2,3,4,5,6,7,8,9]
       },
-      { "question": "What is allowed under a CC-BY licence?",
+      { "question": "What is allowed under a <b>CC-BY</b> licence?",
         "correctAnswers": [2,3,4,5,7,8,9]
       },
-      { "question": "What is allowed under a CC-BY-SA licence?",
+      { "question": "What is allowed under a <b>CC-BY-SA</b> licence?",
         "correctAnswers": [1]
       }     
-    ],
-    "answers" : [
-      { "id": 1,
-        "choice": "Edit and print the image on a flyer for a public event. Don’t mention the creator and source."
-      },
-      { "id": 2,
-        "choice": "Print the image on a shirt and give it to a friend as a present."
-      },
-      { "id": 3,
-        "choice": "Sell the image on a website as a wallpaper."
-      },
-      { "id": 4,
-        "choice": "Use the image as marketing material for a fitness studio."
-      },
-      { "id": 5,
-        "choice": "Use the image as a profile picture on an online dating platform."
-      },
-      { "id": 6,
-        "choice": "Use the image in a bachelor thesis without mentioning the creator and source."
-      },
-      { "id": 7,
-        "choice": "Print and use the image as a poster for a political party."
-      },
-      { "id": 8,
-        "choice": "Edit the image and sell it as a postcard print."
-      },
-      { "id": 9,
-        "choice": "Use the image for a birthday invitation."
-      }
     ],
     "nextPage": "/usinglicence",
     "nextPageIDs": [12]
