@@ -9,9 +9,6 @@ h1 {
 	padding-top: 14%;
 	height: 100%;
 	text-align: center;
-	@media screen and (max-width:2000px) {
-		padding-top: 2%;
-	}
 
 	h1 {
 		color: $darkblue;
@@ -381,5 +378,12 @@ ol {
 		margin-top: 55%;
 		margin-left: 0;
 		z-index: 10px;
+	}
+}
+
+@media (min-width: 1260px) and (max-width: 1440px) {
+
+	.startpagecontent {
+		padding-top: 3.5em;
 	}
 }
