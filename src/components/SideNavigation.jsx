@@ -116,7 +116,7 @@ class SideNavigation extends Component {
           );
         })}
         <li className="li-inactive">
-          <a href="#">Unlock first</a>
+          <a href="#">Unlock story</a>
         </li>
       </ul>
     );
