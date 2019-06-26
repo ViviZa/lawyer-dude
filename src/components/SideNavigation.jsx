@@ -20,6 +20,7 @@ class SideNavigation extends Component {
 
   componentDidMount() {
     const { ID } = this.props;
+    if (ID > 700) return;
     let visitedPages = JSON.parse(localStorage.getItem("visitedPages"));
     const dataString = JSON.stringify(data);
     const jsonData = JSON.parse(dataString);
@@ -94,27 +95,36 @@ class SideNavigation extends Component {
   renderPages(visitedPages, ID) {
     return (
       <ul>
-        {visitedPages.map(page => {
-          return (
-            <li className="linkWrapper" key={page.id}>
-              <div className={page.id === ID ? "focusIndicator" : ""}>
-                &nbsp;
+        {
+          ID > 700 ? (
+            <li className="linkWrapper hover" onClick={() => this.props.history.goBack()}>
+              <div className="sideNavigationLink">
+                RETURN TO TUTORIAL
               </div>
-              <Link
-                className={
-                  page.id === ID ? "highlightedLink" : "sideNavigationLink"
-                }
-                to={{
-                  pathname: page.pageurl,
-                  state: { ID: page.id }
-                }}
-              >
-                <div ref={page.id === ID ? this.highlightedLink : ""} />
-                {page.headline}
-              </Link>
             </li>
-          );
-        })}
+
+          ) : (
+              visitedPages.map(page => {
+                return (
+                  <li className="linkWrapper" key={page.id}>
+                    <div className={page.id === ID ? "focusIndicator" : ""}>
+                      &nbsp;
+              </div>
+                    <Link
+                      className={
+                        page.id === ID ? "highlightedLink" : "sideNavigationLink"
+                      }
+                      to={{
+                        pathname: page.pageurl,
+                        state: { ID: page.id }
+                      }}
+                    >
+                      <div ref={page.id === ID ? this.highlightedLink : ""} />
+                      {page.headline}
+                    </Link>
+                  </li>
+                );
+              }))}
         <li className="li-inactive">
           <a href="#">Unlock first</a>
         </li>

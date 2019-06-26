@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
+import SideNavigation from "../components/SideNavigation";
 import SettingsButton from "../components/SettingsButton";
 import imprintData from './ImprintData.json';
 
@@ -33,6 +34,7 @@ class Imprint extends Component {
 
     return (
       <div className="Imprint">
+        <SideNavigation ID={777} />
         <SettingsButton goBack={() => this.props.history.goBack()} />
         <button onClick={() => this.props.history.goBack()}>
           <svg width="21px" height="36px" viewBox="0 0 21 36" version="1.1">
