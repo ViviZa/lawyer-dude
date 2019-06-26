@@ -6,6 +6,7 @@ import BackButton from '../components/BackButton';
 import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
 import SettingsButton from '../components/SettingsButton';
+import { ReactComponent as LDFull } from '../images/Lawyerdude-side.svg';
 import { ReactComponent as LDHeadHappy } from '../images/Lawyerdude-head-happy.svg';
 import Screencast from '../images/attribution-generator.gif';
 import  { ReactComponent as LDLamaSceptical } from '../images/Lawyerdude-llama-head-sceptical.svg';
@@ -100,6 +101,12 @@ class NoDecision extends Component {
                   
                   <div dangerouslySetInnerHTML={{ __html: panels[textIndex].text}}/>
                 </div>
+                  {ID === 25 &&
+                    <div className="attribution-container">
+                      <img src={Screencast} href="https://lizenzhinweisgenerator.de/?lang=en" className="attribution-screencast" alt="attribution-generator" />
+                    </div>
+                  }
+                  <LDFull className="fulllawyer"/>
               </div>
               ) : (
                 <div>

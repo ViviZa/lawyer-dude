@@ -98,7 +98,6 @@ appendExtImage(event) {
 
     return (
       <div className="MatchTheLicense">
-       <button onClick={() => this.props.history.goBack()}>Go Back</button>
          <SideNavigation ID={ID}/>
         <div className="pagecontent">
           <h1>

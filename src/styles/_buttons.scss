@@ -1,6 +1,6 @@
 @import "variables";
 
-.StartButton, .save-name-btn, .load-img-btn, .url-upload-btn {
+.StartButton, .save-name-btn, .load-img-btn, .url-upload-btn, .jail-back-btn, .quiz-btn {
 	color: $button-text;
 	border-radius: 100px;
 	border-style: none; 
@@ -32,6 +32,17 @@
 	}
 }
 
+.jail-back-btn {
+	cursor: pointer;
+	line-height: 2.4;
+	margin: 55px 55px 0 55px;
+}
+
+.quiz-btn {
+	float: none; 
+	margin: 0 0 0 32em;
+}
+
 .SettingsButton {
 	border-style: none; 
 	background-color: $darkred;
@@ -39,38 +50,61 @@
 	margin-right: 15px;
 	margin-top: 15px;
 	text-align: center;
-	letter-spacing: 3px;
+	height: 58px;
+	width: 58px;
 }
 .Overlay {
-	position: fixed;;
-	background: white;
+	position: fixed;
+	background: $background-white;
 	padding: 2%;
-	width: 60%;
+	width: 24em;
 	height: 40%;
 	top:50%;
-	left:50%;
+	left: 60%;
 	transform: translate(-50%,-50%);
+
+	h2 {
+		font-size: 32px;
+		margin: 0;
+		text-transform: uppercase;
+	}
+
+	ul {
+		padding: 0;
+		margin: 3em 0;
+	}
+
 	.button-close-overlay {
+		cursor: pointer;
+		color: $darkred;
 		float: right;
 		background: white;
-		font-size: 18px;
+		font-size: 28px;
+		font-weight: 700;
+		margin-top: 0.2em;
 	}
+
 	a {
-		text-decoration:none;
+		text-decoration: none;
 	}
-	a:visited {color: inherit;}
+
+	a:visited {
+		color: inherit;
+	}
+
 	button {
 		border-style: none;
 		padding-left: 1px;
 		font-family: inherit;
 		background: white;
-		font-size: 16px;
+		font-size: 24px;
 		letter-spacing: 3px;
 	}
 
 	ul li a:hover, ul li a:focus {
-		color:$yellow;
+		color: $yellow;
 	   }
+
 	ul li button:hover, ul li button:focus {
 		color: $yellow;
 	}   
@@ -78,8 +112,9 @@
 	li {
 		color: inherit;
 		display: block;
-		margin-bottom: 6px;
+		margin: 1em 0;
 		list-style-type: none;
+		font-size: 24px;
 	}	
 }
 
