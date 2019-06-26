@@ -130,9 +130,8 @@ class FindTheLicense extends Component {
           <h1>{headline}</h1>
           {(panels[textIndex] !== undefined) ? (
           <div className="quizQuestions">
-            <div className="question">{panels[textIndex].question}
+            <div className="question" dangerouslySetInnerHTML={{ __html: panels[textIndex].question}}></div>
             <button className="quiz-btn" onClick={this.validate}>Submit answers</button>
-            </div>
             <QuizQuestion key={"question1"+textIndex} ref={this.child1} option={options[0]} rightAnswers={panels[textIndex].correctAnswers} />
             <QuizQuestion key={"question2"+textIndex}  ref={this.child2} option={options[1]} rightAnswers={panels[textIndex].correctAnswers}/>
             <QuizQuestion key={"question3"+textIndex}  ref={this.child3} option={options[2]} rightAnswers={panels[textIndex].correctAnswers}/>
