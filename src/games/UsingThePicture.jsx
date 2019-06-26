@@ -5,15 +5,16 @@ import data from '../data.json';
 import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
 import Select from 'react-select';
+import { Link } from 'react-router-dom';
 
 const options = [
-  { value: '1', label: 'CC BY'},
-  { value: '2', label: 'CC BY-SA'},
-  { value: '3', label: 'CC BY-ND' },
-  { value: '4', label: 'CC BY-NC' },
-  { value: '5', label: 'CC BY-NC-SA' },
-  { value: '6', label: 'CC BY-NC-ND' },
-  { value: '7', label: 'CC-0'}
+  { value: '1', label: 'CC BY', link: "https://creativecommons.org/licenses/by/4.0/"},
+  { value: '2', label: 'CC BY-SA', link: "https://creativecommons.org/licenses/by-sa/4.0/"},
+  { value: '3', label: 'CC BY-ND', link: "https://creativecommons.org/licenses/by-nd/4.0/"},
+  { value: '4', label: 'CC BY-NC', link: "https://creativecommons.org/licenses/by-nc/4.0/"},
+  { value: '5', label: 'CC BY-NC-SA', link: "https://creativecommons.org/licenses/by-nc-sa/4.0/"},
+  { value: '6', label: 'CC BY-NC-ND', link: "https://creativecommons.org/licenses/by-nc-nd/4.0/"},
+  { value: '7', label: 'CC-0', link: "https://creativecommons.org/publicdomain/zero/1.0/"}
 ];
 
 class MatchTheLicense extends Component {
@@ -102,7 +103,7 @@ appendExtImage(event) {
          <SideNavigation ID={ID}/>
         <div className="pagecontent">
           <h1>
-         Using the Picture
+         Using the Image
           </h1>
           {
             !noticeCreated && (
@@ -128,25 +129,26 @@ appendExtImage(event) {
           </div>
           <div>
             <div className="licenceProperty-container">
-              <input className="picture-specs-input" type="text" value={link} onChange={(ev) => this.updateTextFieldValue(ev, 'link')} />
+              <input className="picture-specs-input" type="text" required value={link} onChange={(ev) => this.updateTextFieldValue(ev, 'link')} />
               <div className="licenceProperty">Link</div>
             </div>
           </div>
           <div>
             <div className="licenceProperty-container">
-              <input className="picture-specs-input" type="text" value={copywriter} onChange={(ev) => this.updateTextFieldValue(ev, 'copywriter')} />
-              <div className="licenceProperty">Copywriter</div>
+              <input className="picture-specs-input" type="text" required value={copywriter} onChange={(ev) => this.updateTextFieldValue(ev, 'copywriter')} />
+              <div className="licenceProperty">Rights Holder</div>
             </div>
           </div>
           <div>
             <div className="selectProperty-container">
-              <div className="selectProperty">License</div>
+              <div className="selectProperty">License Notice</div>
               <div className="license-select-wrap">
                 <Select
                       value={license}
                       onChange={this.handleDropdownChange}
                       options={options}
                       className="licenseDropdown"
+                      required
                   />
               </div>
             </div>
@@ -156,7 +158,7 @@ appendExtImage(event) {
           ) : (
             <div>
                 <p>{title}</p>
-                License: {copywriter}, {license.label},
+                License: {copywriter}, <a href={license.link} target="_blank" rel="noopener noreferrer">{license.label}</a>,
                 <p>{link}</p>
                 <BackButtonInactive/>
                 <ForthButton nextText={this.redirectToNextPage} />
