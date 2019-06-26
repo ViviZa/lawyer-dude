@@ -21,7 +21,7 @@
 			list-style-type: none;
 			padding: 15px 10px;
 
-			a {
+			a , div{
 				font-weight: 600;
 				text-transform: uppercase;
 				color: $nav-reached;
@@ -73,6 +73,9 @@
 	margin-right: 15px;
 }
 
+.hover{
+	cursor: pointer;
+}
 .navNarrow {
 
 	i {

@@ -11,7 +11,7 @@ class SettingsOverlay extends Component {
                         <h2>Settings</h2>
                         <ul>
                         <li><a href="/">Start from beginning</a></li>
-                        <li><a href="/impressum" className="settings">Imprint</a></li>
+                        <li><a href="/imprint" className="settings">Imprint and Disclaimer</a></li>
                         <li>Switch language: <a>en </a> |<a> de </a></li>
                         </ul>
                     </div>
