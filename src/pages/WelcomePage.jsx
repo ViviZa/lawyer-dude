@@ -60,9 +60,7 @@ class WelcomePage extends Component {
           <div className="welcomeblock">
             <LDFull className="fulllawyer"/>  
             <div className="welcomepanels">
-                <p>
-                    {panels.map((panel) => <li className="welcomepanel">{panel}</li>)}
-                </p>
+                    {panels.map((panel) => <li className="welcomepanel"><p>{panel}</p></li>)}
             </div>
           </div>
           <div className="buttoncontainer">

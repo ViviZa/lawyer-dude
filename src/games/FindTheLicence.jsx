@@ -8,6 +8,35 @@ import ForthButton from '../components/ForthButton';
 import SettingsButton from '../components/SettingsButton';
 import QuizQuestion from './../components/QuizQuestion';
 
+const options = [
+  { "id": 1,
+    "choice": "Edit and print the image on a flyer for a public event. Don’t mention the creator and source."
+  },
+  { "id": 2,
+    "choice": "Print the image on a shirt and give it to a friend as a present."
+  },
+  { "id": 3,
+    "choice": "Sell the image on a website as a wallpaper."
+  },
+  { "id": 4,
+    "choice": "Use the image as marketing material for a fitness studio."
+  },
+  { "id": 5,
+    "choice": "Use the image as a profile picture on an online dating platform."
+  },
+  { "id": 6,
+    "choice": "Use the image in a bachelor thesis without mentioning the creator and source."
+  },
+  { "id": 7,
+    "choice": "Print and use the image as a poster for a political party."
+  },
+  { "id": 8,
+    "choice": "Edit the image and sell it as a postcard print."
+  },
+  { "id": 9,
+    "choice": "Use the image for a birthday invitation."
+  }
+];
 
 class FindTheLicense extends Component {
   constructor(props) {
@@ -27,9 +56,7 @@ class FindTheLicense extends Component {
       headline: '',
       nextPageID: 0,
       nextPage: '',
-      choices: [],
-      quizAnswers: new Set()
-        };
+      };
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
     this.nextText = this.nextText.bind(this);
     this.previousText = this.previousText.bind(this);
@@ -49,7 +76,6 @@ class FindTheLicense extends Component {
       headline: filteredJSON[0].headline,
       nextPage: filteredJSON[0].nextPage,
       nextPageID: nextPageID,
-      choices : filteredJSON[0].answers,
     })
     }
 
@@ -95,7 +121,7 @@ class FindTheLicense extends Component {
 
   render() {
     const { ID } = this.props.location.state;
-    const { panels, textIndex, headline, choices } = this.state;
+    const { panels, textIndex, headline } = this.state;
     return (
       <div className="FindTheLicense">
          <SideNavigation ID={ID}/>
@@ -104,18 +130,19 @@ class FindTheLicense extends Component {
           <h1>{headline}</h1>
           {(panels[textIndex] !== undefined) ? (
           <div className="quizQuestions">
-            <div className="question">{panels[textIndex].question}</div>
-            <QuizQuestion ref={this.child1} id={choices[0].id} choice={choices[0].choice} rightAnswers={panels[textIndex].correctAnswers} />
-            <QuizQuestion ref={this.child2} id={choices[1].id} choice={choices[1].choice} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion ref={this.child3} id={choices[2].id} choice={choices[2].choice} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion ref={this.child4} id={choices[3].id} choice={choices[3].choice} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion ref={this.child5} id={choices[4].id} choice={choices[4].choice} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion ref={this.child6} id={choices[5].id} choice={choices[5].choice} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion ref={this.child7} id={choices[6].id} choice={choices[6].choice} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion ref={this.child8} id={choices[7].id} choice={choices[7].choice} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion ref={this.child9} id={choices[8].id} choice={choices[8].choice} rightAnswers={panels[textIndex].correctAnswers}/>
-            <button onClick={this.validate}>Check</button>
-          </div>
+            <div className="question">{panels[textIndex].question}
+            <button className="quiz-btn" onClick={this.validate}>Submit answers</button>
+            </div>
+            <QuizQuestion key={"question1"+textIndex} ref={this.child1} option={options[0]} rightAnswers={panels[textIndex].correctAnswers} />
+            <QuizQuestion key={"question2"+textIndex}  ref={this.child2} option={options[1]} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion key={"question3"+textIndex}  ref={this.child3} option={options[2]} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion key={"question4"+textIndex}  ref={this.child4} option={options[3]} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion key={"question5"+textIndex}  ref={this.child5} option={options[4]} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion key={"question6"+textIndex}  ref={this.child6} option={options[5]} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion key={"question7"+textIndex}  ref={this.child7} option={options[6]} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion key={"question8"+textIndex}  ref={this.child8} option={options[7]} rightAnswers={panels[textIndex].correctAnswers}/>
+            <QuizQuestion key={"question9"+textIndex}  ref={this.child9} option={options[8]} rightAnswers={panels[textIndex].correctAnswers}/>
+            </div>
           ) : ( <div></div>)}
           {
             (textIndex === 0 && panels.length > 1) ? (

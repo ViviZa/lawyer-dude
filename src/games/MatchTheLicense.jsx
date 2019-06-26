@@ -165,26 +165,27 @@ class MatchTheLicense extends Component {
           {intro ? (
             <div>
               <div className="speech">
-                <p className="speechbubbletext">
-                  You have experienced that the filter options search engines
+                <div className="speechbubbletext">
+                  <div>You have experienced that the filter options search engines
                   offer are not equal to the CC licenses one is actually looking
                   for. Therefore, it is more important to focus on your
                   intention when using a picture from the internet. To get an
                   idea of the right license for your use case we prepared some
                   examples. Now it’s your turn to find the right license! It is
                   possible to choose multiple licenses.
-                </p>
+                  </div>
+                </div>
               </div>
               <div className="speechlawyer-container">
                 <LDHeadHappy className="speechlawyer-happy" />
               </div>
             </div>
           ) : (
-            <div>
+            <div className="matchQuestions">
               {Array.from(Array(3), (e, i) => {
                 return (
-                  <div>
-                    <div>
+                  <div className="matchSection">
+                    <div className="matchQuestion">
                       {questions.length > 0 && questions[i + count].text}
                     </div>
                     <Select
@@ -205,7 +206,7 @@ class MatchTheLicense extends Component {
                   </div>
                 );
               })}
-              <button onClick={() => this.validate()}>Check</button>
+              <button className="match-btn" onClick={() => this.validate()}>Submit answers</button>
             </div>
           )}
         </div>

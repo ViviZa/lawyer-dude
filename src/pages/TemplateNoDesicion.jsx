@@ -6,6 +6,7 @@ import BackButton from '../components/BackButton';
 import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
 import SettingsButton from '../components/SettingsButton';
+import { ReactComponent as LDFull } from '../images/Lawyerdude-side.svg';
 import { ReactComponent as LDHeadHappy } from '../images/Lawyerdude-head-happy.svg';
 import Screencast from '../images/attribution-generator.gif';
 import  { ReactComponent as LDLamaSceptical } from '../images/Lawyerdude-llama-head-sceptical.svg';
@@ -82,7 +83,7 @@ class NoDecision extends Component {
     let attributionGenerator = <div />;
 
     if (ID === 24 && textIndex===4) {
-      attributionGenerator = <img src={Screencast} className="defaultImg" alt="logo" />
+      attributionGenerator = <img src={Screencast} className="attribution-screencast" alt="attribution-generator" />
     };
 
     return (
@@ -97,10 +98,12 @@ class NoDecision extends Component {
               (panels[textIndex] && panels[textIndex].text !== undefined) ? (
               <div className={panels[textIndex].cssClass}>
                   <div className="speechbubbletext">
-                  
-                  <div dangerouslySetInnerHTML={{ __html: panels[textIndex].text}}/>
-                </div>
-              </div>
+                    <div dangerouslySetInnerHTML={{ __html: panels[textIndex].text}}/></div>
+                    <div className="attribution-container">
+                      {attributionGenerator}
+                    </div>
+                    <LDFull className="fulllawyer"/>
+                  </div>
               ) : (
                 <div>
                   <div className="speech">
@@ -117,7 +120,6 @@ class NoDecision extends Component {
                 </div>
           )
         }
-          {attributionGenerator}
           {
             (textIndex === 0 && panels.length > 1) ? (
               <div className="buttoncontainer">
