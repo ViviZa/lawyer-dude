@@ -87,7 +87,6 @@ ol {
 		text-align: left;
 		float: left;
 		height: 25em;
-		overflow: scroll;
 	}
 }
 
@@ -107,7 +106,8 @@ ol {
 	div {
 		height: inherit; 
 		padding: 0 1em;
-		overflow: scroll;
+		overflow-y: scroll;
+		overflow-y: auto;
 	}
 }
 
