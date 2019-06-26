@@ -414,6 +414,18 @@ ol {
 		margin-left: 15em;
 	}
 
+	.resourceContainer {
+		margin-top: 2.5em;
+		height: 25em;
+
+		.speechbubbletext {
+			font-size: 14px;
+			padding: 0 1em;
+			margin: 2em;
+			line-height: 2em;
+		}
+	}
+
 	.buttoncontainer {
 		bottom: 1em;
 	}
