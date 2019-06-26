@@ -87,7 +87,17 @@ ol {
 		text-align: left;
 		float: left;
 		height: 25em;
-		overflow: scroll;
+       	}
+	.resource-images {
+		width: 50%;
+	}
+
+	.resource-image {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		width: 3rem;
+		height: 3rem;
 	}
 }
 
@@ -107,7 +117,8 @@ ol {
 	div {
 		height: inherit; 
 		padding: 0 1em;
-		overflow: scroll;
+		overflow-y: scroll;
+		overflow-y: auto;
 	}
 }
 

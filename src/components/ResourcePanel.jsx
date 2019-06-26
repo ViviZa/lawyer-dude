@@ -8,10 +8,10 @@ const ResourcePanel = props => {
     <div className="resourceContainer">
       <div className="speechbubbletext">
         <div dangerouslySetInnerHTML={{ __html: text }} />
-      </div>
-        {images && images.map((image, index) => (
-          <img key={index} src={image} alt="" />
-        ))}
+          {images && images.map((image, index) => (
+            <img className="resource-image" key={index} src={image} alt="" />
+          ))}
+      </div>  
         <LDFull className="fulllawyer"/>
     </div>
   );
