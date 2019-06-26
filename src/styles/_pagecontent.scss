@@ -99,9 +99,16 @@ ol {
 }
 
 .speechbubbletext, .answerbubbletext, .speechbubbletext-jail {
+	height: 6em;
 	padding: 8%;
 	position: relative;
 	letter-spacing: 1.1px;
+
+	div {
+		height: inherit; 
+		padding: 0 1em;
+		overflow: scroll;
+	}
 }
 
 .speechbubbletext-jail {
@@ -138,8 +145,8 @@ ol {
 .speechlawyer-container, .speechlawyer-sceptical-container {
 	display: inline-block; 
 	float: right;
-	margin-top: 15%;
-	margin-right: -13%;
+	margin-top: 1em;
+	margin-right: -8em;
 	width: 20%;
 	transform: rotate(-45deg);
 }
@@ -208,7 +215,7 @@ ol {
 
 .attribution-container {
 	float: left;
-	margin-top: -23em;
+	margin-top: -15em;
 	margin-left: 5.5em;
 }
 

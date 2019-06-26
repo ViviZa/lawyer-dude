@@ -83,7 +83,7 @@ class NoDecision extends Component {
     let attributionGenerator = <div />;
 
     if (ID === 24 && textIndex===4) {
-      attributionGenerator = <img src={Screencast} className="defaultImg" alt="logo" />
+      attributionGenerator = <img src={Screencast} className="attribution-screencast" alt="attribution-generator" />
     };
 
     return (
@@ -98,16 +98,12 @@ class NoDecision extends Component {
               (panels[textIndex] && panels[textIndex].text !== undefined) ? (
               <div className={panels[textIndex].cssClass}>
                   <div className="speechbubbletext">
-                  
-                  <div dangerouslySetInnerHTML={{ __html: panels[textIndex].text}}/>
-                </div>
-                  {ID === 25 &&
+                    <div dangerouslySetInnerHTML={{ __html: panels[textIndex].text}}/></div>
                     <div className="attribution-container">
-                      <img src={Screencast} href="https://lizenzhinweisgenerator.de/?lang=en" className="attribution-screencast" alt="attribution-generator" />
+                      {attributionGenerator}
                     </div>
-                  }
-                  <LDFull className="fulllawyer"/>
-              </div>
+                    <LDFull className="fulllawyer"/>
+                  </div>
               ) : (
                 <div>
                   <div className="speech">
@@ -124,7 +120,6 @@ class NoDecision extends Component {
                 </div>
           )
         }
-          {attributionGenerator}
           {
             (textIndex === 0 && panels.length > 1) ? (
               <div className="buttoncontainer">
