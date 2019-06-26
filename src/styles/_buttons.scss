@@ -1,6 +1,6 @@
 @import "variables";
 
-.StartButton, .save-name-btn, .load-img-btn, .url-upload-btn, .jail-back-btn, .quiz-btn {
+.StartButton, .save-name-btn, .load-img-btn, .url-upload-btn, .jail-back-btn, .quiz-btn, .match-btn {
 	color: $button-text;
 	border-radius: 100px;
 	border-style: none; 
@@ -41,6 +41,10 @@
 .quiz-btn {
 	float: none; 
 	margin: 0 0 0 32em;
+}
+
+.match-btn {
+	margin: 3em auto;
 }
 
 .SettingsButton {

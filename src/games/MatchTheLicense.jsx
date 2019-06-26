@@ -181,11 +181,11 @@ class MatchTheLicense extends Component {
               </div>
             </div>
           ) : (
-            <div>
+            <div className="matchQuestions">
               {Array.from(Array(3), (e, i) => {
                 return (
-                  <div>
-                    <div>
+                  <div className="matchSection">
+                    <div className="matchQuestion">
                       {questions.length > 0 && questions[i + count].text}
                     </div>
                     <Select
@@ -206,7 +206,7 @@ class MatchTheLicense extends Component {
                   </div>
                 );
               })}
-              <button onClick={() => this.validate()}>Check</button>
+              <button className="match-btn" onClick={() => this.validate()}>Submit answers</button>
             </div>
           )}
         </div>
