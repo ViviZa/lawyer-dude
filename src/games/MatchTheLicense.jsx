@@ -165,15 +165,16 @@ class MatchTheLicense extends Component {
           {intro ? (
             <div>
               <div className="speech">
-                <p className="speechbubbletext">
-                  You have experienced that the filter options search engines
+                <div className="speechbubbletext">
+                  <div>You have experienced that the filter options search engines
                   offer are not equal to the CC licenses one is actually looking
                   for. Therefore, it is more important to focus on your
                   intention when using a picture from the internet. To get an
                   idea of the right license for your use case we prepared some
                   examples. Now it’s your turn to find the right license! It is
                   possible to choose multiple licenses.
-                </p>
+                  </div>
+                </div>
               </div>
               <div className="speechlawyer-container">
                 <LDHeadHappy className="speechlawyer-happy" />
