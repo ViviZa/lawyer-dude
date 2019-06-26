@@ -5,7 +5,6 @@ import data from '../data.json';
 import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
 import Select from 'react-select';
-import { Link } from 'react-router-dom';
 
 const options = [
   { value: '1', label: 'CC BY', link: "https://creativecommons.org/licenses/by/4.0/"},
@@ -30,6 +29,7 @@ class MatchTheLicense extends Component {
       copywriter: '',
       license: '',
       title: '',
+      error: false,
       noticeCreated: false,
     };
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
@@ -81,17 +81,20 @@ appendExtImage(event) {
   }
 
   createNotice() {
-    this.setState({noticeCreated: true});
+    const {link, copywriter, license} = this.state;
+    if (link === '' || copywriter === '' || license === ''){
+      this.setState({error: true});
+    } else {
+      this.setState({noticeCreated: true, error: false});
+    }
   }
 
   render() {
     const { ID } = this.props.location.state;
 
-    let { imgUrl, submitted, link, license, copywriter, title, noticeCreated } = this.state;
+    let { imgUrl, submitted, link, license, copywriter, title, noticeCreated, error } = this.state;
     let imgView;
     if (submitted) {
-        // TODO resize external image
-        // TODO is it a valid image url?
         imgView = (<img src={imgUrl} className='imageContent' alt={imgUrl} />);
     } else {
         imgView = (<div className="previewText">Please submit an image URL.</div>);
@@ -128,27 +131,53 @@ appendExtImage(event) {
           </div>
           <div>
             <div className="licenceProperty-container">
-              <input className="picture-specs-input" type="text" required value={link} onChange={(ev) => this.updateTextFieldValue(ev, 'link')} />
+            <div>
+              <input className={(link === '' && error) ? "errorContainer" :"picture-specs-input"} type="text" value={link} onChange={(ev) => this.updateTextFieldValue(ev, 'link')} />
               <div className="licenceProperty">Link</div>
+              {
+                (link === '' && error) && (
+                  <div>
+                    This field is required!
+                    </div>
+                )
+              }
+              </div>
             </div>
           </div>
           <div>
             <div className="licenceProperty-container">
-              <input className="picture-specs-input" type="text" required value={copywriter} onChange={(ev) => this.updateTextFieldValue(ev, 'copywriter')} />
+              <div>
+              <input className={(copywriter === '' && error) ? "errorContainer" :"picture-specs-input"} type="text" value={copywriter} onChange={(ev) => this.updateTextFieldValue(ev, 'copywriter')} />
+              {
+                (copywriter === '' && error) && (
+                  <div>
+                    This field is required!
+                    </div>
+                )
+              }
+              </div>
               <div className="licenceProperty">Rights Holder</div>
             </div>
           </div>
           <div>
             <div className="selectProperty-container">
               <div className="selectProperty">License Notice</div>
-              <div className="license-select-wrap">
+              <div>
+              <div className={(license === '' && error) ? "errorContainer" :"license-select-wrap"}>
                 <Select
                       value={license}
                       onChange={this.handleDropdownChange}
                       options={options}
                       className="licenseDropdown"
-                      required
                   />
+              </div>
+              {
+                (license === '' && error) && (
+                  <div>
+                    This field is required!
+                    </div>
+                )
+              }
               </div>
             </div>
           </div>
