@@ -1,18 +1,18 @@
 [
     {
         "headline": "",
-        "text": "This Guideline was created by student of the HTW Berlin (University of Applied Sciences Berlin) in cooperation with Wikimedia Deutschland.\nThe project is based on the original concept from NAME1, NAME2, NAME3.\nThank you! "
-    },    
+        "text": "This Guideline was created by students of the HTW Berlin (University of Applied Sciences Berlin) in cooperation with Wikimedia Deutschland e.V..\nThe project is based on the original concept from Martin Boy, Anja Kammer, Timo Neumann, Laura Seidler.\nThank you!"
+    },
     {
-        "headline": "Imprint",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam pellentesque nec nam aliquam sem. Sed nisi lacus sed viverra tellus in. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Gravida quis blandit turpis cursus in hac. Sit amet porttitor eget dolor morbi non arcu risus quis. Odio ut enim blandit volutpat maecenas volutpat blandit. Fames ac turpis egestas integer eget. Turpis egestas integer eget aliquet nibh praesent. Tempor commodo ullamcorper a lacus vestibulum. Malesuada pellentesque elit eget gravida cum sociis natoque. Mauris rhoncus aenean vel elit scelerisque mauris."
+        "headline": "Concept and Implementation",
+        "text": "Christina Beltran Ramos, Veronika Babic, Lina Kriebel, Vivian Zaddach, Simon Binder, Mario Schütz\n\nsupported by\n\nWikimedia Deutschland e.V.\nThis course unit is licensed under Creative Commons Attribution 4.0 International (CC BY-SA 4.0). The full license text can be found at:\n\nhttps://creativecommons.org/licenses/by-sa/4.0/deed.de "
+    },
+    {
+        "headline": "License notice",
+        "text": "Christina Beltran Ramos, Veronika Babic, Lina Kriebel, Vivian Zaddach, Simon Binder, Mario Schütz, Lawyer Dude - An e-learning unit on using images from the internet without going to jail, CC BY-SA 4.0"
     },
     {
         "headline": "Disclaimer",
-        "text": "Nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus. Mauris ultrices eros in cursus turpis. Consectetur adipiscing elit pellentesque habitant morbi. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices dui. Augue neque gravida in fermentum. Diam in arcu cursus euismod quis viverra. A erat nam at lectus urna duis convallis convallis. Fames ac turpis egestas maecenas. Aliquam etiam erat velit scelerisque in dictum. Semper viverra nam libero justo laoreet sit amet. Et tortor consequat id porta nibh venenatis cras. Purus in massa tempor nec feugiat nisl. Purus viverra accumsan in nisl nisi scelerisque eu ultrices. Augue ut lectus arcu bibendum. Diam phasellus vestibulum lorem sed risus ultricies. Nunc lobortis mattis aliquam faucibus. At quis risus sed vulputate odio ut. Laoreet sit amet cursus sit amet."
-    },
-    {
-        "headline": "Legal Notice",
-        "text": "Ullamcorper velit sed ullamcorper morbi tincidunt. Lectus magna fringilla urna porttitor rhoncus dolor purus non. Nulla malesuada pellentesque elit eget gravida. Dui vivamus arcu felis bibendum ut. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam purus. Leo urna molestie at elementum. Amet nulla facilisi morbi tempus. Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Ac felis donec et odio pellentesque diam volutpat. Viverra aliquet eget sit amet tellus cras adipiscing. Accumsan tortor posuere ac ut consequat semper. Duis ultricies lacus sed turpis tincidunt id. A lacus vestibulum sed arcu non odio euismod lacinia at. Velit euismod in pellentesque massa placerat duis. Aenean et tortor at risus viverra adipiscing. Pellentesque diam volutpat commodo sed egestas egestas fringilla."
+        "text": "No legal advice!\n\nThis tool is designed to facilitate the compliant re-use of certain copyright-protected images. However, it can never cover all use cases and characteristics, and thus cannot replace qualified legal advice by a lawyer."
     }
 ]
