@@ -5,6 +5,7 @@ import data from '../data.json';
 import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
 import Select from 'react-select';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 const options = [
   { value: '1', label: 'CC BY', link: "https://creativecommons.org/licenses/by/4.0/"},
@@ -31,6 +32,7 @@ class MatchTheLicense extends Component {
       title: '',
       error: false,
       noticeCreated: false,
+      copied: false,
     };
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
     this.changeImgUrl = this.changeImgUrl.bind(this);
@@ -92,7 +94,7 @@ appendExtImage(event) {
   render() {
     const { ID } = this.props.location.state;
 
-    let { imgUrl, submitted, link, license, copywriter, title, noticeCreated, error } = this.state;
+    let { imgUrl, submitted, link, license, copywriter, title, noticeCreated, error, copied } = this.state;
     let imgView;
     if (submitted) {
         imgView = (<img src={imgUrl} className='imageContent' alt={imgUrl} />);
@@ -185,11 +187,18 @@ appendExtImage(event) {
           </div>
           ) : (
             <div>
-                <p>{title}</p>
-                License: {copywriter}, <a href={license.link} target="_blank" rel="noopener noreferrer">{license.label}</a>,
-                <p>{link}</p>
-                <BackButtonInactive/>
-                <ForthButton nextText={this.redirectToNextPage} />
+              <div>
+                <p><a href={link} target="_blank" rel="noopener noreferrer">{title}</a></p>
+                License: {copywriter}, <a href={license.link} target="_blank" rel="noopener noreferrer">{license.label}</a>
+                <CopyToClipboard text={`Title: ${title}, \n License: ${copywriter}, ${license.label}, \n Link: ${link}`} onCopy={() => this.setState({copied: true})}>
+                  <div>
+                      <button className="load-img-btn">Copy to clipboard</button>
+                      {copied && <span>Copied!</span>}
+                  </div>
+                </CopyToClipboard>
+              </div>
+              <BackButtonInactive/>
+              <ForthButton nextText={this.redirectToNextPage} />
             </div>
           )
           }
