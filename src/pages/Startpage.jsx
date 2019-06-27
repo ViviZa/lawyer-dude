@@ -12,7 +12,7 @@ class Startpage extends Component {
       panels: [],
       headline: '',
       nextPage: '',
-      nextPageID: 0,
+      nextPageID: '',
     };
 
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
