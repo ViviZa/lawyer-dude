@@ -2,8 +2,8 @@
     "id": 0,
     "pageurl": "/",
     "headline": "The Lawyer Dude",
-    "nextPage": "/learninggoals",
-    "nextPageIDs": [1]
+    "nextPage": "/overview",
+    "nextPageIDs": [100]
   },
   {
     "id": 1,
@@ -551,6 +551,28 @@
     ],
     "nextPage": "/usinglicence",
     "nextPageIDs": [12]
+  },
+  {
+    "id": 100,
+    "pageurl": "/overview",
+    "headline": "Welcome to the Lawyer Dude",
+    "tutorial": [
+      { "head": "The Lawyer Dude \nTutorial",
+        "text": "This tutorial will show you how to correctly license images from the Internet and use them for your own purposes. In about 30 minutes you will click through your individual story and learn all the important facts about open content, creative commons and the license notice. Don't worry, the Lawyer Dude is always at your side to help you when things get tricky. Can you manage to get the license notice for your picture without going to jail?"
+      }
+    ],
+    "resources": [
+      { "head": "Resources",
+        "text": "Here you find all the collected resources about Open Content, Creative Commons, License notices and much more from the world of image licenses. The Lawyer Dude provides you with all the facts and explanations - what are you waiting for?"
+      }
+    ],
+    "games": [
+      { "head": "Games",
+        "text": "Do you want to improve or just check your knowledge on Open Content, Creative Commons and alike? You've come to the right place. Play all the games featured in the Lawyer Dude Tutorial again and learn in a fun way what to look out for when using images from the Internet."
+      }
+    ],
+    "nextPage": ["/learninggoals", "/resources", "/games"],
+    "nextPageIDs": [1, 101, 102]
   },
   {
     "id": 300,
