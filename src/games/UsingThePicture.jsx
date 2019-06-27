@@ -41,6 +41,12 @@ class MatchTheLicense extends Component {
   }
 
   componentDidMount() {
+    if (!this.props.location.state) {
+      this.props.history.push({
+        pathname: "/",
+      });
+      return <div/>;
+    }
     const { ID } = this.props.location.state;
     const { addingPages } = this.props;
     addingPages(ID);
@@ -92,6 +98,12 @@ appendExtImage(event) {
   }
 
   render() {
+    if (!this.props.location.state) {
+      this.props.history.push({
+        pathname: "/",
+      });
+      return <div/>;
+    }
     const { ID } = this.props.location.state;
 
     let { imgUrl, submitted, link, license, copywriter, title, noticeCreated, error, copied } = this.state;
