@@ -47,7 +47,7 @@ class Overview extends Component {
   redirectToNextPage(index) {
     const { history } = this.props;
     const { nextPageIDs, nextPages } = this.state;
-    
+
     history.push({
       pathname: nextPages[index],
       state: { ID: nextPageIDs[index] },
