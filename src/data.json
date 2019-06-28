@@ -40,19 +40,19 @@
       "Don’t worry. I know that there is a lot of confusion about using images from the internet. But it is actually not that complicated. Let’s just do it together, alright?",
       {
         "text": "When using images from the internet, you can’t avoid talking about copyright. Traditional copyright though is a rather restrictive regime which gives copyright holders exclusive rights (as in “all rights reserved” as a default). Neither copying and distributing nor modifying is permitted without an explicit permission. Only a few use cases get special permissions directly from the law. These so called copyright exceptions are reserved for certain users like teachers in public schools, journalists, judges and so on. Everybody else must rely on explicit permissions from the copyright holders. Unfortunately, this makes traditional copyright not quite compatible with the digital age. ",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "In this way open licensing (or free licensing) is particularly important in a digital context. Open licensing is meant to make granting permissions easier, which in turn makes reusing content like images easier: Open content is “pre-permitted-to-use content”. This enables others to use this content like images and hand it over to others. Thereby it is a way for creators and rights holders to spread their work more easily - by allowing others to use, share and mix their work without needing to ask for (added individual) permission in advance. By the help of open license models, rights holders determine how their work may be used (“some rights reserved” instead of the default “all rights reserved”). More on this later.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "Unless otherwise stated, the “all rights reserved” rule usually applies: As mentioned before, you are not allowed to use others people’s works without asking for permission. Use in this context is anything beyond consumption of the impression which means anything beyond looking at images, listening to music and so on. So if the rights holder did not give you the explicit right to use, publish or modify the image you have no right to do so. You can imagine that this could be difficult for you if you want to use an image online.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "By contrast, there is the open content licensing model invented by Creative Commons, the so called CC licenses. If someone publishes her or his own work under such a license, this means that only “some rights are reserved”. Through the use of CC licenses, millions of people have made their photos, videos and other creative content globally available for everyone to use. You can use freely licensed images as long as you follow some basic rules that are defined in the license conditions. One condition all CC licenses have in common is attribution. It aims to ensure that right holders to get the credit for their work they deserve. Just like you, the next time you publish your own image! \n In addition, Creative Commons also provides a tool that allows rights holders to waive all rights and place a work in the public domain (“all rights granted”).",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       "“Now, that you are on board - what brought you here anyway?”"
     ],
@@ -72,27 +72,27 @@
       "I believe you now know the very basics of open licensing by now, so let’s take a look at the so called CC licenses.",
       {
         "text": "So now we get into open licensing a little deeper. I would like to introduce you to the CC legal tools. Don’t worry we’ll make it simple and concentrate on the CC licenses that are the most relevant for your context. In the end you will know how you can use a freely licensed image. I promise.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "Before we start let’s have a look at a symbol which I'm sure you've met many times before: \n This pictogram shows you that this image is protected by copyright as explained at the very beginning. It is usually used to indicate that the rights holder reserves all rights. Copying, distributing, modifying is not allowed unless you ask for permission to use it (“all rights reserved”).",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "The absolute opposite to this is when rights holders waive all rights and place their works in the public domain. \n This pictogram states that all rights are granted for any use of a work in any way and for any purpose (“no rights reserved”). Works in the public domain are free of protection. Either because the term of protection has expired or they were not copyright-protected in the first place. \n Creative Commons additionally offers a second tool that causes a similar legal status like the public domain tool: CC0. Rights holders are actively waiving all rights from their works. Consequently, all worksimages licensed under CC0 can be used by anyone without any restrictions or obligations.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "Now you already know the two public domain tools (or so called “waivers”). Let’s have a look at the CC licenses. \n \n Each license contains at least one of four basic elements which are illustrated by abbreviations and pictograms. These elements can be combined with each other. Licenses’ names always start with the “CC” abbreviation. Let’s have a look how this might look like: \n BY stands for “attribution” and means you have to mention the author and other parties designated for attribution. The corresponding license is therefore called “CC BY”. It means that you are free to use the work in any way and for any purpose - it therefore is the most permissive type of all CC licences. By the way, every license contains the obligation to name the author (i. e. every CC license contains the “BY” element). \n SA stands for “Share Alike” and means that anyone who modifies the original work must share the adapted version under a CC BY-SA license or a compatible licence. Apart from this, all license conditions of the CC BY license are still valid here. \n ND stands for “No Derivatives” which means that you are not allowed to modify the image in any way. The corresponding license is called “CC BY-ND”. Apart from this, all license conditions of the CC BY license are still valid here. \n NC stands for “Non Commercial” and states - contrary to the previous mentioned licenses - that you are not allowed to use the workimage commercially. With “CC BY-NC” any reproduction or modification of an image in order to realise a commercial gain is not permitted. Apart from this, all license conditions of the CC BY license are still valid here.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "As if that weren't enough the four elements can be combined. But don’t worry we won’t go any deeper into this. Maybe you can keep in mind a simple rule: \nThe more restrictions a license contains the less it is compatible with the idea of free cultural works or the open definition. To give you one example, let me shortly introduce the most restrictive CC license to you: CC BY-NC-ND. You may not use a work commercially, nor modify it. So, you're probably gonna agree with me that this isn't necessarily making sharing easier.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "This infographic may help you to better understand the CC license spectrum between “public domain/most open” (top) and “all rights reserved/least open” (bottom). Hint: Focus on the darker green area and therefore on the public domain tools “PD” and “CC0” as well as the two CC licenses “CC BY” and “CC BY-SA”. ",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       "Are you aware of which of the licenses I just explained applies to your image?"
     ],
@@ -111,29 +111,39 @@
     "panels": [
       "Alright then. Let’s find a nice image that fits your needs.",
       "I believe you now know the very basics of open licensing by now, so let’s take a look at the so called CC licenses before we continue.",
-      {
-        "text": "So now we get into open licensing a little deeper. I would like to introduce you to the CC legal tools. Don’t worry we’ll make it simple and concentrate on the CC licenses that are the most relevant for your context. In the end you will know how you can use a freely licensed image. I promise.",
-        "cssClass": "resourceContainer"
-      },
+      "So now we get into open licensing a little deeper. I would like to introduce you to the CC legal tools. Don’t worry we’ll make it simple and concentrate on the CC licenses that are the most relevant for your context. In the end you will know how you can use a freely licensed image. I promise.",
       {
         "text": "Before we start let’s have a look at a symbol which I'm sure you've met many times before: \n This pictogram shows you that this image is protected by copyright as explained at the very beginning. It is usually used to indicate that the rights holder reserves all rights. Copying, distributing, modifying is not allowed unless you ask for permission to use it (“all rights reserved”).",
-        "cssClass": "resourceContainer"
+        "type": "resource",
+        "images": [""]
       },
       {
-        "text": "The absolute opposite to this is when rights holders waive all rights and place their works in the public domain. \n This pictogram states that all rights are granted for any use of a work in any way and for any purpose (“no rights reserved”). Works in the public domain are free of protection. Either because the term of protection has expired or they were not copyright-protected in the first place. \n Creative Commons additionally offers a second tool that causes a similar legal status like the public domain tool: CC0. Rights holders are actively waiving all rights from their works. Consequently, all worksimages licensed under CC0 can be used by anyone without any restrictions or obligations.",
-        "cssClass": "resourceContainer"
+        "text": "The absolute opposite to this is when rights holders waive all rights and place their works in the public domain. \n This pictogram states that all rights are granted for any use of a work in any way and for any purpose (“no rights reserved”). Works in the public domain are free of protection. Either because the term of protection has expired or they were not copyright-protected in the first place.",
+        "type": "resource",
+        "images": ["images/pd.svg"]
       },
       {
-        "text": "Now you already know the two public domain tools (or so called “waivers”). Let’s have a look at the CC licenses. \n \n Each license contains at least one of four basic elements which are illustrated by abbreviations and pictograms. These elements can be combined with each other. Licenses’ names always start with the “CC” abbreviation. Let’s have a look how this might look like: \n BY stands for “attribution” and means you have to mention the author and other parties designated for attribution. The corresponding license is therefore called “CC BY”. It means that you are free to use the work in any way and for any purpose - it therefore is the most permissive type of all CC licences. By the way, every license contains the obligation to name the author (i. e. every CC license contains the “BY” element). \n SA stands for “Share Alike” and means that anyone who modifies the original work must share the adapted version under a CC BY-SA license or a compatible licence. Apart from this, all license conditions of the CC BY license are still valid here. \n ND stands for “No Derivatives” which means that you are not allowed to modify the image in any way. The corresponding license is called “CC BY-ND”. Apart from this, all license conditions of the CC BY license are still valid here. \n NC stands for “Non Commercial” and states - contrary to the previous mentioned licenses - that you are not allowed to use the workimage commercially. With “CC BY-NC” any reproduction or modification of an image in order to realise a commercial gain is not permitted. Apart from this, all license conditions of the CC BY license are still valid here.",
-        "cssClass": "resourceContainer"
+        "text": "Creative Commons additionally offers a second tool that causes a similar legal status like the public domain tool: CC0. Rights holders are actively waiving all rights from their works. Consequently, all worksimages licensed under CC0 can be used by anyone without any restrictions or obligations.",
+        "type": "resource",
+        "images": ["images/Cc-zero.svg"]
+      },
+      {
+        "text": "Now you already know the two public domain tools (or so called “waivers”). Let’s have a look at the CC licenses. \n \n Each license contains at least one of four basic elements which are illustrated by abbreviations and pictograms. These elements can be combined with each other. Licenses’ names always start with the “CC” abbreviation. Let’s have a look how this might look like: \n BY stands for “attribution” and means you have to mention the author and other parties designated for attribution. The corresponding license is therefore called “CC BY”. It means that you are free to use the work in any way and for any purpose - it therefore is the most permissive type of all CC licences. By the way, every license contains the obligation to name the author (i. e. every CC license contains the “BY” element).",
+        "type": "resource",
+        "images": ["images/Cc-by.svg"]
+      },
+      {
+        "text":  "SA stands for “Share Alike” and means that anyone who modifies the original work must share the adapted version under a CC BY-SA license or a compatible licence. Apart from this, all license conditions of the CC BY license are still valid here. \n ND stands for “No Derivatives” which means that you are not allowed to modify the image in any way. The corresponding license is called “CC BY-ND”. Apart from this, all license conditions of the CC BY license are still valid here. \n NC stands for “Non Commercial” and states - contrary to the previous mentioned licenses - that you are not allowed to use the workimage commercially. With “CC BY-NC” any reproduction or modification of an image in order to realise a commercial gain is not permitted. Apart from this, all license conditions of the CC BY license are still valid here.",
+        "type": "resource",
+        "images": ["images/CC-sa.svg", "images/CC-nd.svg", "images/Cc-nc.svg"]
       },
       {
         "text": "As if that weren't enough the four elements can be combined. But don’t worry we won’t go any deeper into this. Maybe you can keep in mind a simple rule: \nThe more restrictions a license contains the less it is compatible with the idea of free cultural works or the open definition. To give you one example, let me shortly introduce the most restrictive CC license to you: CC BY-NC-ND. You may not use a work commercially, nor modify it. So, you're probably gonna agree with me that this isn't necessarily making sharing easier.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "This infographic may help you to better understand the CC license spectrum between “public domain/most open” (top) and “all rights reserved/least open” (bottom). Hint: Focus on the darker green area and therefore on the public domain tools “PD” and “CC0” as well as the two CC licenses “CC BY” and “CC BY-SA”. ",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       "Where do you usually look for images?"
     ],
@@ -169,23 +179,23 @@
       "I know, you probably expect me to show you a magical way on how to find images, that you can easily use. Well, there is something just like that.",
       {
         "text": "There are many different image repositories on the internet. Not all of them are free to use in any context. The biggest repository for free licensed images is Wikimedia Commons. So, let me tell you something about this first. \n\n Wikimedia Commons hosts more than 54 million media files such as images, audio and video files that are free to use for all!",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "On Wikimedia Commons you can not only find images, but also audio and video files. You have likely seen images from Wikimedia Commons before as Wikipedia gets its images and other media files from Wikimedia Commons. The great thing about Wikimedia Commons is that all media files are published under a free license or in the public domain. That means, as you might remember, that you can use them for free and process them further as long as you comply with the conditions for using them. You can even use them commercially. You have already gotten to know the different CC licenses, so you should already be familiar with them!",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "Please be advised that nothing found in simple online searches has necessarily been reviewed by professionals with the expertise necessary to provide you with complete, accurate or reliable information.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "There are also lots of other repositories like for example www.flickr.com or www.pixabay.com and many more. If you don't find anything on Wikimedia Commons, you'll definitely find it there. However, the ways licenses are displayed there are a little different and they often set limits to the context of use. Flickr for example hosts many non-free images, so always keep that in mind! So check carefully. Pixabay and some other repositories even decided to make up their own licenses that they claim “free to use”, but they often set limits you should inform yourself about. ",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "If you want, you can easily find great images on Wikimedia Commons. The media files on Wikimedia Commons were shared by thousands of volunteers or even governmental institutions that decided to provide their data to the platform. Right now there are almost 40,000 active users on the platform. It would be great if maybe you would also decide one day to contribute to Wikimedia Commons too to make knowledge even more accessible!",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       "Now I’ve told you a lot about repositories. What do you think so far?"
     ],
@@ -222,31 +232,31 @@
       "I'd love to!",
       {
         "text": "Now let me tell you more about Wikimedia Commons. It is a rapidly growing media file repository of common and freely licensed media content – in the form of images, audio and video files – to which anyone can contribute. The collection is compiled, prepared and made available jointly by volunteers and cultural institutions.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "Unlike traditional media repositories, Wikimedia Commons is free. Everyone is allowed to copy, use and modify any files here freely as long as they follow the terms specified by the author; this often means crediting the source and author(s) appropriately and releasing copies/improvements under the same freedom to others. The license conditions of each individual media file can be found on their description page.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "The material in the repository is ordered into categories and presented in galleries – in fact, working with Wikimedia Commons is incredibly simple. Three categories of the media archive are particularly good examples of the outstanding quality of the collection and the high standards of its contributorsusers: “Featured Pictures”, “Quality Images” and “Valued Images”.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "Search and find\nHere’s how to find files in Wikimedia Commons really quickly:\n\nFrom Wikipedia, for example, you can get to the image integrated in an article quickly and simply by clicking on it (or on the file name for audio or video elements). A click on the link “description page there” then takes you to the media database. Another option is a direct keyword search on: commons.wikimedia.org. Or get inspired by clicking through the media archive’s category system! And if you get lost, you can still take the way through CC-Search and look through the results.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "Copyright and use\nAll files on Wikimedia Commons must either be in the public domain or under a free license. Most pictures in Wikimedia Commons are licensed under a CC BY- SA license, that ensures that free licensed images also stay free in the future.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "In this license the copyright holder of a work has to be named (BY) and the file, in particular when it is edited, must be shared on the same terms (SA = share alike), also when it’s edited.\nTo meet the standards of the Wikimedia projects it is important in all cases to indicate the copyright holder and the license on the respective image description page of the medium.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "General Disclaimer: \n\nPlease be advised that nothing found in simple online searches has necessarily been reviewed by professionals with the expertise necessary to provide you with complete, accurate or reliable information.\n\nThat's not to say that you won't find valuable and accurate information at the Wikimedia Commons, however please be advised that Wikimedia Commons   as a community project cannot guarantee, in any way whatsoever, the validity of the information found here. However, the volunteers are very attentive to copyright rules and have a very close eye on the content of their platform. So it’s not very likely to stumble on images that are actually not usable.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       "So was hälst du davon?"
     ],
@@ -315,19 +325,19 @@
       "A license notice consists of four components: ",
       {
         "text": "1. Title - What is the name of the material? \n If a title was provided for the material, include it. Sometimes a title is not provided; in that case, don't worry about it.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "2. Author - Who owns the material? \n Name the author or authors of the material in question. Sometimes, the licensor may want you to give credit to some other entity, like a company or pseudonym. In rare cases, the licensor may not want to be attributed at all. In all of these cases, just do what they request.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "3. Source - Where can I find it? \n Since you somehow accessed the material, you know where to find it. Provide the source of the material so others can, too. Since we live in the age of the Internet, this is usually a URL or hyperlink where the material resides.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "4. License - How can I use it? \n There are six different CC licenses; which one is the material under? Name and provide a link to it, eg. http://creativecommons.org/licenses/by/4.0/ for CC BY.\n→ If the licensor included a license notice with more information, include that as well.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       "Good. Should we do it?"
     ],
@@ -361,11 +371,11 @@
       "If the image you want to use is not freely licensed, it gets complicated as well. Of course you can ask the creator if you can use their image, but in most cases this requires some research and patience. To be honest, in this case, too, I would advise you to look for another image that is freely licensed. That makes the whole thing much easier!",
       {
         "text": "If you can find out the rights owner of the image, you can try to contact him. If he allows you to use it in the context you want, you are lucky. Maybe it is worth asking him also if he wants to be named or not.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "If you use it regardless of permission: \nUsing images publicly without permission is a copyright infringement, as is removal of any copyright information or the unauthorized exhibition, reproduction or alteration of an image. Using an image without permission will result in legal consequences such as cessation of infringement and to damages, claims to remove all unauthorized copies and even pecuniary compensation.\n",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       "There are many other ways to find freely licensed images. I can show you some examples of online repositories, which you can use or give you an introduction on how to use a search engine to find those freely licensed images.",
       "What do you want to do next?"
@@ -432,19 +442,19 @@
       "That depends. You need to create a license notice for most images from the internet if you want to use them. But - surprise - there are a few exceptions.",
       {
         "text": "1. Title - What is the name of the material? \n If a title was provided for the material, include it. Sometimes a title is not provided; in that case, don't worry about it.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "2. Author - Who owns the material? \n Name the author or authors of the material in question. Sometimes, the licensor may want you to give credit to some other entity, like a company or pseudonym. In rare cases, the licensor may not want to be attributed at all. In all of these cases, just do what they request.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "3. Source - Where can I find it? \n Since you somehow accessed the material, you know where to find it. Provide the source of the material so others can, too. Since we live in the age of the Internet, this is usually a URL or hyperlink where the material resides.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "4. License - How can I use it? \n There are six different CC licenses; which one is the material under? Name and provide a link to it, eg. http://creativecommons.org/licenses/by/4.0/ for CC BY.\n→ If the licensor included a license notice with more information, include that as well.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       "But don't worry. There is a tool that will help you."
     ],
@@ -482,19 +492,19 @@
       "Fine. Now that you found an image, you have to collect the legal information in order to be able to use it.",
       {
       "text": "1. Title - What is the name of the material? \n If a title was provided for the material, include it. Sometimes a title is not provided; in that case, don't worry about it.",
-      "cssClass": "resourceContainer"
+      "type": "resource"
       },
       {
         "text": "2. Author - Who owns the material? \n Name the author or authors of the material in question. Sometimes, the licensor may want you to give credit to some other entity, like a company or pseudonym. In rare cases, the licensor may not want to be attributed at all. In all of these cases, just do what they request.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "3. Source - Where can I find it? \n Since you somehow accessed the material, you know where to find it. Provide the source of the material so others can, too. Since we live in the age of the Internet, this is usually a URL or hyperlink where the material resides.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "4. License - How can I use it? \n There are six different CC licenses; which one is the material under? Name and provide a link to it, eg. http://creativecommons.org/licenses/by/4.0/ for CC BY.\n→ If the licensor included a license notice with more information, include that as well.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       "Let’s start by checking the image source."
     ],
@@ -516,7 +526,8 @@
       "To use the Attribution Generator follow these steps:",
       {
         "text": "1. Insert a web address of a Wikimedia Commons image or a Wikipedia article. <br> 2. Answer the questions about the intended use to create a correct license notice. <br> 3. Read how to use the license notice. <br> 4. Copy the generated license notice and insert it into your publication to use the image correctly.",
-        "cssClass": "resourceContainer"
+        "type": "resource",
+        "images": ["/images/attribution-generator.gif"]
       },
       "Alles verstanden? Probiere den Lizenzhinweis Generator doch gleich mal hier aus: https://lizenzhinweisgenerator.de/?lang=en"
       ],
@@ -583,23 +594,23 @@
       "But don’t worry, I am here to help you out.",
       {
         "text": "Actually, it's quite simple! Just ask yourself the following questions before you use an image from the Internet:",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "Who is the creator of the picture? \nNever use an image whose creator you do not know, because the creator is the one who must give you permission to use their image. Exception: the license under which the image is published does not require the creator to be named.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "Is the image licensed for use?\nRemember, there are four different cases:\nall rights reserved (copyright)\nThe classic copyright prohibits you from any use of the image. Leave it alone or contact the creator and get their permission to use the image.\nsome rights reserved\nThis includes the CC licenses. You must make sure that your use case is covered by the license to be able to use the image.\nall rights granted (public domain)\nJackpot! You are allowed to use the image in any case.\nno information\nIf you cannot find any information about the license, you must assume that the image is under classic copyright and this means that you are not allowed to use it without explicit permission from the copyright holder.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "What information do I need to provide if I want to use the image?\nThis depends on your specific use case. A so-called license notice generally consists of \nthe title of the image (if there is one),\nthe name or names of the creator,\nthe source,\nand the license.",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       {
         "text": "See, it's not that difficult. Just follow these rules and we'll never see each other in this place again. And in case of doubt: search for a new image, of which you are sure about the license. ",
-        "cssClass": "resourceContainer"
+        "type": "resource"
       },
       "Go on, try it again."
     ],

@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
-import SideNavigation from '../components/SideNavigation';
-import { withRouter } from 'react-router';
-import data from '../data.json';
-import BackButton from '../components/BackButton';
-import BackButtonInactive from '../components/BackButtonInactive';
-import ForthButton from '../components/ForthButton';
-import SettingsButton from '../components/SettingsButton';
-import { ReactComponent as LDFull } from '../images/Lawyerdude-side.svg';
-import { ReactComponent as LDHeadHappy } from '../images/Lawyerdude-head-happy.svg';
-import Screencast from '../images/attribution-generator.gif';
-import  { ReactComponent as LDLamaSceptical } from '../images/Lawyerdude-llama-head-sceptical.svg';
+import React, { Component } from "react";
+import SideNavigation from "../components/SideNavigation";
+import { withRouter } from "react-router";
+import data from "../data.json";
+import BackButton from "../components/BackButton";
+import BackButtonInactive from "../components/BackButtonInactive";
+import ForthButton from "../components/ForthButton";
+import SettingsButton from "../components/SettingsButton";
+import { ReactComponent as LDHeadHappy } from "../images/Lawyerdude-head-happy.svg";
+import { ReactComponent as LDLamaSceptical } from "../images/Lawyerdude-llama-head-sceptical.svg";
+import ResourcePanel from "./../components/ResourcePanel";
 
 class NoDecision extends Component {
   constructor(props) {
@@ -17,9 +16,9 @@ class NoDecision extends Component {
     this.state = {
       textIndex: 0,
       panels: [],
-      headline: '',
+      headline: "",
       nextPageID: 0,
-      nextPage: '',
+      nextPage: ""
     };
     this.nextText = this.nextText.bind(this);
     this.previousText = this.previousText.bind(this);
@@ -45,8 +44,8 @@ class NoDecision extends Component {
       panels: filteredJSON[0].panels,
       headline: filteredJSON[0].headline,
       nextPage: filteredJSON[0].nextPage,
-      nextPageID: nextPageID,
-    })
+      nextPageID: nextPageID
+    });
   }
 
   redirectToNextPage() {
@@ -54,7 +53,7 @@ class NoDecision extends Component {
     const { nextPageID, nextPage } = this.state;
     history.push({
       pathname: nextPage,
-      state: { ID: nextPageID },
+      state: { ID: nextPageID }
     });
   }
 
@@ -65,12 +64,12 @@ class NoDecision extends Component {
   }
 
   nextText() {
-    const { panels, textIndex } = this.state
+    const { panels, textIndex } = this.state;
     const theSize = panels.length - 1;
     if (textIndex >= 0 && textIndex < theSize) {
       this.setState(prevState => {
-        return {textIndex: prevState.textIndex + 1}
-     })
+        return { textIndex: prevState.textIndex + 1 };
+      });
     }
   }
 
@@ -78,8 +77,8 @@ class NoDecision extends Component {
     const theSize = this.state.panels.length - 1;
     if (this.state.textIndex > 0 && this.state.textIndex <= theSize) {
       this.setState(prevState => {
-        return {textIndex: prevState.textIndex - 1}
-     })
+        return { textIndex: prevState.textIndex - 1 };
+      });
     }
   }
 
@@ -97,66 +96,53 @@ class NoDecision extends Component {
       });
     }
     const { ID } = this.props.location.state;
-    let attributionGenerator = <div />;
-
-    if (ID === 24 && textIndex===4) {
-      attributionGenerator = <img src={Screencast} className="attribution-screencast" alt="attribution-generator" />
-    };
-
     return (
       <div className="Startpage">
-        <SideNavigation ID={ID}/>
-        <SettingsButton goBack={() => this.props.history.goBack()}/>
+        <SideNavigation ID={ID} />
+        <SettingsButton goBack={() => this.props.history.goBack()} />
         <div className="pagecontent">
-          <h1 className="headline">
-            {headline}
-          </h1>
-          {
-              (panels[textIndex] && panels[textIndex].text !== undefined) ? (
-              <div className={panels[textIndex].cssClass}>
-                  <div className="speechbubbletext">
-                    <div dangerouslySetInnerHTML={{ __html: panels[textIndex].text}}/></div>
-                    <div className="attribution-container">
-                      {attributionGenerator}
-                    </div>
-                    <LDFull className="fulllawyer"/>
-                  </div>
-              ) : (
-                <div>
-                  <div className="speech">
-                    <div className="speechbubbletext">
-                      <div dangerouslySetInnerHTML={{ __html: panels[textIndex]}}/>
-                    </div>
-                  </div>  
-                    <div className="lama-container">
-                      <LDLamaSceptical className="lama-sceptical"/>
-                    </div>
-                    <div className="speechlawyer-container">
-                      <LDHeadHappy className="speechlawyer-happy"/>
-                    </div>
+          <h1 className="headline">{headline}</h1>
+          {(panels[textIndex] &&
+          panels[textIndex].text !== undefined &&
+          panels[textIndex].type === "resource") ? (
+            <ResourcePanel
+              text={panels[textIndex].text}
+              images={panels[textIndex].images}
+            />
+          ) : (
+            <div>
+              <div className="speech">
+                <div className="speechbubbletext">
+                  <div
+                    dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
+                  />
                 </div>
-          )
-        }
-          {
-            (textIndex === 0 && panels.length > 1) ? (
-              <div className="buttoncontainer">
-                <BackButtonInactive/>
-                <ForthButton nextText={this.nextText} />
               </div>
-            ) : (
-                textIndex + 1 < panels.length ? (
-                  <div className="buttoncontainer">
-                    <BackButton previousText={this.previousText} />
-                    <ForthButton nextText={this.nextText} />
-                  </div>
-                ) : (
-                    <div className="buttoncontainer">
-                      <BackButtonInactive/>
-                      <ForthButton nextText={this.redirectToNextPage} />
-                    </div>
-                  ))
-          }
-          <p></p>
+              <div className="lama-container">
+                <LDLamaSceptical className="lama-sceptical" />
+              </div>
+              <div className="speechlawyer-container">
+                <LDHeadHappy className="speechlawyer-happy" />
+              </div>
+            </div>
+          )}
+          {textIndex === 0 && panels.length > 1 ? (
+            <div className="buttoncontainer">
+              <BackButtonInactive />
+              <ForthButton nextText={this.nextText} />
+            </div>
+          ) : textIndex + 1 < panels.length ? (
+            <div className="buttoncontainer">
+              <BackButton previousText={this.previousText} />
+              <ForthButton nextText={this.nextText} />
+            </div>
+          ) : (
+            <div className="buttoncontainer">
+              <BackButtonInactive />
+              <ForthButton nextText={this.redirectToNextPage} />
+            </div>
+          )}
+          <p />
         </div>
       </div>
     );
