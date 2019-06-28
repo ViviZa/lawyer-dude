@@ -20,6 +20,12 @@ class WelcomePage extends Component {
   }
 
   componentDidMount() {
+    if (!this.props.location.state) {
+      this.props.history.push({
+        pathname: "/",
+      });
+      return <div/>
+    }
     const { ID } = this.props.location.state;
     const { addingPages } = this.props;
     addingPages(ID);
@@ -46,6 +52,12 @@ class WelcomePage extends Component {
 
   render() {
     const { panels, headline } = this.state;
+    if (!this.props.location.state) {
+      this.props.history.push({
+        pathname: "/",
+      });
+      return <div/>
+    }
     const { ID } = this.props.location.state;
 
     return (

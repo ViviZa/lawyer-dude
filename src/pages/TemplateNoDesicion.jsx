@@ -27,6 +27,12 @@ class NoDecision extends Component {
   }
 
   componentDidMount() {
+    if (!this.props.location.state) {
+      this.props.history.push({
+        pathname: "/",
+      });
+      return <div/>
+    }
     const { ID } = this.props.location.state;
     const { addingPages } = this.props;
     addingPages(ID);
@@ -77,7 +83,18 @@ class NoDecision extends Component {
   }
 
   render() {
+    if (!this.props.location.state) {
+      this.props.history.push({
+        pathname: "/",
+      });
+      return <div/>;
+    }
     const { panels, textIndex, headline } = this.state;
+    if (!this.props.location.state) {
+      this.props.history.push({
+        pathname: "/",
+      });
+    }
     const { ID } = this.props.location.state;
     return (
       <div className="Startpage">

@@ -65,6 +65,12 @@ class FindTheLicense extends Component {
   }
 
   componentDidMount() {
+    if (!this.props.location.state) {
+      this.props.history.push({
+        pathname: "/",
+      });
+      return <div/>;
+    }
     const { ID } = this.props.location.state;
     const { addingPages } = this.props;
     addingPages(ID);
@@ -123,6 +129,12 @@ class FindTheLicense extends Component {
   }
 
   render() {
+    if (!this.props.location.state) {
+      this.props.history.push({
+        pathname: "/",
+      });
+      return <div/>;
+    }
     const { ID } = this.props.location.state;
     const { panels, textIndex, headline, buttonClicked } = this.state;
     console.log(this.state.buttonClicked);

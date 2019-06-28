@@ -29,6 +29,12 @@ class TemplateDecision extends Component {
   }
 
   componentDidMount() {
+    if (!this.props.location.state) {
+      this.props.history.push({
+        pathname: "/",
+      });
+      return <div/>
+    }
     const { ID } = this.props.location.state;
     const { addingPages } = this.props;
     addingPages(ID);
@@ -98,6 +104,12 @@ class TemplateDecision extends Component {
   }
 
   render() {
+    if (!this.props.location.state) {
+      this.props.history.push({
+        pathname: "/",
+      });
+      return <div/>;
+    }
     const { panels, textIndex, headline, decisions } = this.state;
     const { ID } = this.props.location.state;
     let lamasMood;

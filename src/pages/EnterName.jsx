@@ -84,6 +84,12 @@ class EnterName extends Component {
   }
 
   render() {
+    if (this.props.location.state === undefined) {
+      this.props.history.push({
+        pathname: "/",
+      });
+      return <div/>;
+    }
     const { panels, textIndex, headline, errorText } = this.state;
     const { ID } = this.props.location.state;
     return (
