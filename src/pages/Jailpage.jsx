@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import data from '../data.json';
 import { withRouter } from 'react-router';
 import { ReactComponent as LDHeadSceptical } from '../images/Lawyerdude-head-sceptical.svg';
+import JailGameTwo from '../games/JailGameTwo.jsx';
 
 
 class Jailpage extends Component {
@@ -97,6 +98,7 @@ class Jailpage extends Component {
               <div dangerouslySetInnerHTML={{ __html: panels[textIndex]}}/>
             </p>
           </div>
+          <JailGameTwo />
           <div className="speechlawyer-sceptical-container">
             <LDHeadSceptical className="speechlawyer-sceptical"/>
           </div>
