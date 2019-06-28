@@ -112,11 +112,8 @@ class NoDecision extends Component {
           ) : (
             <div>
               <div className="speech">
-                <div className="speechbubbletext">
-                  <div
-                    dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
-                  />
-                </div>
+                <div className="speechbubbletext"
+                    dangerouslySetInnerHTML={{ __html: panels[textIndex] }} />
               </div>
               <div className="lama-container">
                 <LDLamaSceptical className="lama-sceptical" />

@@ -135,11 +135,9 @@ class TemplateDecision extends Component {
           ) : (
             <div>
               <div className="speech">
-                <p className="speechbubbletext">
-                  <div
+                <p className="speechbubbletext"
                     dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
-                  />
-                </p>
+                />
               </div>
               <div className="lama-container">{lamasMood}</div>
               <div className="speechlawyer-container">

@@ -102,9 +102,8 @@ class EnterName extends Component {
             <Llama className="entername-llama" />
           </div>
           <div className="speech entername">
-            <div className="speechbubbletext entername">
-              <div dangerouslySetInnerHTML={{ __html: panels[textIndex] }} />
-            </div>
+            <div className="speechbubbletext entername"
+               dangerouslySetInnerHTML={{ __html: panels[textIndex] }} />
           </div>
           <div className="speechlawyer-container entername">
             <LDHeadHappy className="speechlawyer-happy" />
