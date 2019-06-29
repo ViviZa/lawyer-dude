@@ -63,27 +63,28 @@ class Overview extends Component {
         <SettingsButton goBack={() => this.props.history.goBack()} />
         <div className="startpagecontent overviewpagecontent">
           <h1 className="headline">{headline}</h1>
-          <div class="boxRow">
-            <div class="contentBox">
+          <div className="container">
+            <div className="row">
+            <div class="contentBox col">
               <LDhappy className="boxlawyer" />
               <h3 className="headline">{headlineTutorial}</h3>
               <p className="contentText">{textTutorial}</p>
-              <button class="StartButton hover" onClick={() => this.redirectToNextPage(0)}>START</button>
+              <button className="StartButton hover" onClick={() => this.redirectToNextPage(0)}>START</button>
             </div>
-            <div class="contentBox">
+            <div className="contentBox col">
               <LDhappy className="boxlawyer" />
               <h3 className="headline">{headlineResources}</h3>
               <p className="contentText">{textResources}</p>
-              <button class="StartButton hover" onClick={() => this.redirectToNextPage(1)}>READ</button>
+              <button className="StartButton hover" onClick={() => this.redirectToNextPage(1)}>READ</button>
             </div>
-            <div class="contentBox">
+            <div className="contentBox col">
               <LDhappy className="boxlawyer" />
               <h3 className="headline">{headlineGames}</h3>
               <p className="contentText">{textGames}</p>
-              <button class="StartButton hover" onClick={() => this.redirectToNextPage(2)}>PLAY</button>
+              <button className="StartButton hover" onClick={() => this.redirectToNextPage(2)}>PLAY</button>
+            </div>
             </div>
           </div>
-          <p></p>
         </div>
       </div>
     );
