@@ -44,7 +44,7 @@ label {
 	font-weight: bold;
 	text-transform: uppercase;
 	color: rgb(132, 132, 132);
-	width: 40%;
+	// width: 40%;
 	margin-left: auto;
 	margin-right: auto;
 	padding-right: 25px;
@@ -90,7 +90,7 @@ label {
 @media only screen and (max-width: 599px) {
 	
 	.entername-label {
-		width: 65%;
+		// width: 65%;
 		margin-left: 0;
 		margin-right: 0;
 		float: left;
@@ -99,7 +99,7 @@ label {
 	.entername-input {
 
 		&.entername-input {
-			margin: 0;
+			// margin: 0;
 		}
 	}
 
