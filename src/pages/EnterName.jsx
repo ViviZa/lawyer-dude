@@ -109,12 +109,12 @@ class EnterName extends Component {
             <LDHeadHappy className="speechlawyer-happy" />
           </div>
           {textIndex === 0 ? (
-            <div className="buttoncontainer">
+            <div className="buttoncontainer col">
               <BackButtonInactive />
               <ForthButton nextText={this.nextText} />
             </div>
           ) : textIndex + 1 < panels.length ? (
-            <div className="buttoncontainer">
+            <div className="buttoncontainer col">
               <BackButton previousText={this.previousText} />
               <ForthButton nextText={this.nextText} />
             </div>

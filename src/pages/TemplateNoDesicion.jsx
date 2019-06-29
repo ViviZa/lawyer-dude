@@ -124,17 +124,17 @@ class NoDecision extends Component {
             </div>
           )}
           {textIndex === 0 && panels.length > 1 ? (
-            <div className="buttoncontainer">
+            <div className="buttoncontainer col">
               <BackButtonInactive />
               <ForthButton nextText={this.nextText} />
             </div>
           ) : textIndex + 1 < panels.length ? (
-            <div className="buttoncontainer">
+            <div className="buttoncontainer col">
               <BackButton previousText={this.previousText} />
               <ForthButton nextText={this.nextText} />
             </div>
           ) : (
-            <div className="buttoncontainer">
+            <div className="buttoncontainer col">
               <BackButtonInactive />
               <ForthButton nextText={this.redirectToNextPage} />
             </div>

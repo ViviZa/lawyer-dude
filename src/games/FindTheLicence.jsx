@@ -162,19 +162,19 @@ class FindTheLicense extends Component {
           ) : ( <div></div>)}
           {
             (textIndex === 0 && panels.length > 1 && buttonClicked === true) ? (
-              <div className="buttoncontainer">
+              <div className="buttoncontainer col">
                 <BackButtonInactive/>
                 <ForthButton nextText={this.nextText} />
               </div>
             ) : (
                 textIndex + 1 < panels.length  && buttonClicked === true) ? (
-                  <div className="buttoncontainer">
+                  <div className="buttoncontainer col">
                     <BackButton previousText={this.previousText} />
                     <ForthButton nextText={this.nextText} />
                   </div>
                 ) : (
                   buttonClicked === true ? (
-                    <div className="buttoncontainer">
+                    <div className="buttoncontainer col">
                       <BackButton previousText={this.previousText} />
                       <ForthButton nextText={this.redirectToNextPage} />
                     </div>
