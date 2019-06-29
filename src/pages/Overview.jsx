@@ -61,7 +61,7 @@ class Overview extends Component {
       <div className="Overview">
 
         <SettingsButton goBack={() => this.props.history.goBack()} />
-        <div className="startpagecontent">
+        <div className="startpagecontent overviewpagecontent">
           <h1 className="headline">{headline}</h1>
           <div class="boxRow">
             <div class="contentBox">
