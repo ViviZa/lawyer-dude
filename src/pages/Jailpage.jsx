@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import data from '../data.json';
 import { withRouter } from 'react-router';
 import { ReactComponent as LDHeadSceptical } from '../images/Lawyerdude-head-sceptical.svg';
-import JailGameTwo from '../games/JailGameTwo.jsx';
+import JailGameTwo from '../games/JailGameTwo/JailGameTwo.jsx';
 
 
 class Jailpage extends Component {
