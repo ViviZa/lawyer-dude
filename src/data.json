@@ -382,7 +382,7 @@
     "headline": "Success",
     "panels": [
       "Well done! Following the steps you just learned will help you using images the legal way and avoid going to jail.",
-      "<DISCLAIMER>",
+      "-----DISCLAIMER-----",
       "Actually, there are multiple ways to get here. Would you like to learn more about this topic?"
     ],
     "decisions": [
@@ -412,7 +412,7 @@
     "headline": "How to use search engines",
     "panels": [
       "Google sure is a great place to find images, but there is more. Let me show you.",
-      "<EXPLAINING SEARCH ENGINES>"
+      "-----EXPLAINING SEARCH ENGINES-----"
     ],
     "decisions": [
       "There must be something easier!",
@@ -517,7 +517,7 @@
         "type": "resource",
         "images": ["/images/attribution-generator.gif"]
       },
-      "Alles verstanden? Probiere den Lizenzhinweis Generator doch gleich mal hier aus: https://lizenzhinweisgenerator.de/?lang=en"
+      "Alles verstanden? Probiere den Lizenzhinweis Generator doch gleich mal hier aus: <a href=\"https://lizenzhinweisgenerator.de/?lang=en\">https://lizenzhinweisgenerator.de/?lang=en</a>"
       ],
     "nextPage": "/success",
     "nextPageIDs": [16]

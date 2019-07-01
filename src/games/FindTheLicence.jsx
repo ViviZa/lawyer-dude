@@ -57,6 +57,7 @@ class FindTheLicense extends Component {
       nextPageID: 0,
       nextPage: '',
       buttonClicked : false,
+      correctAnswersText : "",
       };
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
     this.nextText = this.nextText.bind(this);
@@ -116,6 +117,8 @@ class FindTheLicense extends Component {
   }
 
   validate() {
+    const { panels, textIndex } = this.state;
+
     this.child1.current.validate();
     this.child2.current.validate();
     this.child3.current.validate();
@@ -126,6 +129,10 @@ class FindTheLicense extends Component {
     this.child8.current.validate();
     this.child9.current.validate();
     this.setState({buttonClicked :true});
+
+    let answerText = "The correct answers would have been: " + panels[textIndex].correctAnswers;
+
+    this.setState({correctAnswersText: answerText });
   }
 
   render() {
@@ -136,7 +143,7 @@ class FindTheLicense extends Component {
       return <div/>;
     }
     const { ID } = this.props.location.state;
-    const { panels, textIndex, headline, buttonClicked } = this.state;
+    const { panels, textIndex, headline, buttonClicked, correctAnswersText } = this.state;
     console.log(this.state.buttonClicked);
 
     return (
@@ -148,6 +155,7 @@ class FindTheLicense extends Component {
           {(panels[textIndex] !== undefined) ? (
           <div className="quizQuestions">
             <div className="question" dangerouslySetInnerHTML={{ __html: panels[textIndex].question}}></div>
+            {correctAnswersText}
             <button className="quiz-btn" onClick={this.validate}>Submit answers</button>
             <QuizQuestion key={"question1"+textIndex} ref={this.child1} option={options[0]} rightAnswers={panels[textIndex].correctAnswers} />
             <QuizQuestion key={"question2"+textIndex}  ref={this.child2} option={options[1]} rightAnswers={panels[textIndex].correctAnswers}/>
