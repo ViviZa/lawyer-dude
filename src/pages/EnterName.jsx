@@ -84,12 +84,6 @@ class EnterName extends Component {
   }
 
   render() {
-    if (this.props.location.state === undefined) {
-      this.props.history.push({
-        pathname: "/",
-      });
-      return <div/>;
-    }
     const { panels, textIndex, headline, errorText } = this.state;
     const { ID } = this.props.location.state;
     return (
@@ -102,46 +96,43 @@ class EnterName extends Component {
             <Llama className="entername-llama" />
           </div>
           <div className="speech entername">
-            <div className="speechbubbletext entername"
-               dangerouslySetInnerHTML={{ __html: panels[textIndex] }} />
+            <div className="speechbubbletext entername">
+              <div dangerouslySetInnerHTML={{ __html: panels[textIndex] }} />
+            </div>
           </div>
           <div className="speechlawyer-container entername">
             <LDHeadHappy className="speechlawyer-happy" />
           </div>
           {textIndex === 0 ? (
-            <div className="buttoncontainer col">
+            <div className="buttoncontainer">
               <BackButtonInactive />
               <ForthButton nextText={this.nextText} />
             </div>
           ) : textIndex + 1 < panels.length ? (
-            <div className="buttoncontainer col">
+            <div className="buttoncontainer">
               <BackButton previousText={this.previousText} />
               <ForthButton nextText={this.nextText} />
             </div>
           ) : (
-            <div className="entername-form container">
+            <div className="entername-form">
               <form onSubmit={event => this.redirectToNextPage(event)}>
-                <div className="row">
-                  <div className="col-12 col-sm-6 col-md-6">
                 <div className={"errorMessage"}>{errorText}</div>
-                <input
+                <label className="entername-label">
+                  <input
                     className="entername-input"
                     type="text"
                     value={this.state.username}
                     onChange={this.handleChange}
-                    />
-                <label className="entername-label">Enter your name</label>
-                    </div>
-                    <div className="col-12 col-sm-6 col-md-6">
+                  />
+                  Enter your name
+                </label>
                 <button
                   className="save-name-btn"
                   type="submit"
                   value="Let's go"
-                  >
+                >
                   Let's go
                   </button>
-                  </div>
-                </div>
               </form>
             </div>
           )}

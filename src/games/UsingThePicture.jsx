@@ -5,16 +5,15 @@ import data from '../data.json';
 import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
 import Select from 'react-select';
-import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 const options = [
-  { value: '1', label: 'CC BY', link: "https://creativecommons.org/licenses/by/4.0/"},
-  { value: '2', label: 'CC BY-SA', link: "https://creativecommons.org/licenses/by-sa/4.0/"},
-  { value: '3', label: 'CC BY-ND', link: "https://creativecommons.org/licenses/by-nd/4.0/"},
-  { value: '4', label: 'CC BY-NC', link: "https://creativecommons.org/licenses/by-nc/4.0/"},
-  { value: '5', label: 'CC BY-NC-SA', link: "https://creativecommons.org/licenses/by-nc-sa/4.0/"},
-  { value: '6', label: 'CC BY-NC-ND', link: "https://creativecommons.org/licenses/by-nc-nd/4.0/"},
-  { value: '7', label: 'CC-0', link: "https://creativecommons.org/publicdomain/zero/1.0/"}
+  { value: '1', label: 'CC BY'},
+  { value: '2', label: 'CC BY-SA'},
+  { value: '3', label: 'CC BY-ND' },
+  { value: '4', label: 'CC BY-NC' },
+  { value: '5', label: 'CC BY-NC-SA' },
+  { value: '6', label: 'CC BY-NC-ND' },
+  { value: '7', label: 'CC-0'}
 ];
 
 class MatchTheLicense extends Component {
@@ -30,9 +29,7 @@ class MatchTheLicense extends Component {
       copywriter: '',
       license: '',
       title: '',
-      error: false,
       noticeCreated: false,
-      copied: false,
     };
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
     this.changeImgUrl = this.changeImgUrl.bind(this);
@@ -41,12 +38,6 @@ class MatchTheLicense extends Component {
   }
 
   componentDidMount() {
-    if (!this.props.location.state) {
-      this.props.history.push({
-        pathname: "/",
-      });
-      return <div/>;
-    }
     const { ID } = this.props.location.state;
     const { addingPages } = this.props;
     addingPages(ID);
@@ -89,26 +80,17 @@ appendExtImage(event) {
   }
 
   createNotice() {
-    const {link, copywriter, license} = this.state;
-    if (link === '' || copywriter === '' || license === ''){
-      this.setState({error: true});
-    } else {
-      this.setState({noticeCreated: true, error: false});
-    }
+    this.setState({noticeCreated: true});
   }
 
   render() {
-    if (!this.props.location.state) {
-      this.props.history.push({
-        pathname: "/",
-      });
-      return <div/>;
-    }
     const { ID } = this.props.location.state;
 
-    let { imgUrl, submitted, link, license, copywriter, title, noticeCreated, error, copied } = this.state;
+    let { imgUrl, submitted, link, license, copywriter, title, noticeCreated } = this.state;
     let imgView;
     if (submitted) {
+        // TODO resize external image
+        // TODO is it a valid image url?
         imgView = (<img src={imgUrl} className='imageContent' alt={imgUrl} />);
     } else {
         imgView = (<div className="previewText">Please submit an image URL.</div>);
@@ -119,7 +101,7 @@ appendExtImage(event) {
          <SideNavigation ID={ID}/>
         <div className="pagecontent">
           <h1>
-         Using the Image
+         Using the Picture
           </h1>
           {
             !noticeCreated && (
@@ -145,39 +127,20 @@ appendExtImage(event) {
           </div>
           <div>
             <div className="licenceProperty-container">
-            <div>
-              <input className={(link === '' && error) ? "errorContainer" :"picture-specs-input"} type="text" value={link} onChange={(ev) => this.updateTextFieldValue(ev, 'link')} />
+              <input className="picture-specs-input" type="text" value={link} onChange={(ev) => this.updateTextFieldValue(ev, 'link')} />
               <div className="licenceProperty">Link</div>
-              {
-                (link === '' && error) && (
-                  <div>
-                    This field is required!
-                    </div>
-                )
-              }
-              </div>
             </div>
           </div>
           <div>
             <div className="licenceProperty-container">
-              <div>
-              <input className={(copywriter === '' && error) ? "errorContainer" :"picture-specs-input"} type="text" value={copywriter} onChange={(ev) => this.updateTextFieldValue(ev, 'copywriter')} />
-              {
-                (copywriter === '' && error) && (
-                  <div>
-                    This field is required!
-                    </div>
-                )
-              }
-              </div>
-              <div className="licenceProperty">Rights Holder</div>
+              <input className="picture-specs-input" type="text" value={copywriter} onChange={(ev) => this.updateTextFieldValue(ev, 'copywriter')} />
+              <div className="licenceProperty">Copywriter</div>
             </div>
           </div>
           <div>
             <div className="selectProperty-container">
-              <div className="selectProperty">License Notice</div>
-              <div>
-              <div className={(license === '' && error) ? "errorContainer" :"license-select-wrap"}>
+              <div className="selectProperty">License</div>
+              <div className="license-select-wrap">
                 <Select
                       value={license}
                       onChange={this.handleDropdownChange}
@@ -185,32 +148,17 @@ appendExtImage(event) {
                       className="licenseDropdown"
                   />
               </div>
-              {
-                (license === '' && error) && (
-                  <div>
-                    This field is required!
-                    </div>
-                )
-              }
-              </div>
             </div>
           </div>
           <button className="url-upload-btn" onClick={this.createNotice}>Save</button>
           </div>
           ) : (
             <div>
-              <div>
-                <p><a href={link} target="_blank" rel="noopener noreferrer">{title}</a></p>
-                License: {copywriter}, <a href={license.link} target="_blank" rel="noopener noreferrer">{license.label}</a>
-                <CopyToClipboard text={`Title: ${title}, \n License: ${copywriter}, ${license.label}, \n Link: ${link}`} onCopy={() => this.setState({copied: true})}>
-                  <div>
-                      <button className="load-img-btn">Copy to clipboard</button>
-                      {copied && <span>Copied!</span>}
-                  </div>
-                </CopyToClipboard>
-              </div>
-              <BackButtonInactive/>
-              <ForthButton nextText={this.redirectToNextPage} />
+                <p>{title}</p>
+                License: {copywriter}, {license.label},
+                <p>{link}</p>
+                <BackButtonInactive/>
+                <ForthButton nextText={this.redirectToNextPage} />
             </div>
           )
           }

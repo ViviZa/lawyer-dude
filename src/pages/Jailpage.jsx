@@ -21,12 +21,6 @@ class Jailpage extends Component {
   }
 
   componentDidMount() {
-    if (!this.props.location.state) {
-      this.props.history.push({
-        pathname: "/",
-      });
-      return <div/>;
-    }
     const { ID } = this.props.location.state;
     const dataString = JSON.stringify(data);
     let jsonData = JSON.parse(dataString);

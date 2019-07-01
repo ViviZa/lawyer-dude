@@ -65,12 +65,6 @@ class FindTheLicense extends Component {
   }
 
   componentDidMount() {
-    if (!this.props.location.state) {
-      this.props.history.push({
-        pathname: "/",
-      });
-      return <div/>;
-    }
     const { ID } = this.props.location.state;
     const { addingPages } = this.props;
     addingPages(ID);
@@ -129,12 +123,6 @@ class FindTheLicense extends Component {
   }
 
   render() {
-    if (!this.props.location.state) {
-      this.props.history.push({
-        pathname: "/",
-      });
-      return <div/>;
-    }
     const { ID } = this.props.location.state;
     const { panels, textIndex, headline, buttonClicked } = this.state;
     console.log(this.state.buttonClicked);
@@ -162,19 +150,19 @@ class FindTheLicense extends Component {
           ) : ( <div></div>)}
           {
             (textIndex === 0 && panels.length > 1 && buttonClicked === true) ? (
-              <div className="buttoncontainer col">
+              <div className="buttoncontainer">
                 <BackButtonInactive/>
                 <ForthButton nextText={this.nextText} />
               </div>
             ) : (
                 textIndex + 1 < panels.length  && buttonClicked === true) ? (
-                  <div className="buttoncontainer col">
+                  <div className="buttoncontainer">
                     <BackButton previousText={this.previousText} />
                     <ForthButton nextText={this.nextText} />
                   </div>
                 ) : (
                   buttonClicked === true ? (
-                    <div className="buttoncontainer col">
+                    <div className="buttoncontainer">
                       <BackButton previousText={this.previousText} />
                       <ForthButton nextText={this.redirectToNextPage} />
                     </div>

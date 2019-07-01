@@ -3,19 +3,15 @@
 
 .imgView {
     margin: 0 auto;
-	width: 30rem;
+	width: 700px;
+	height: 25%;
 }
 
 .imageContent {
     width: 100%;
+    height: -webkit-fill-available;
 }
 
 .licenceProperty {
     display: inline-block;
-}
-
-.errorContainer {
-    border: 1px solid red;
-    margin-bottom: 10px;
-    width: 100%;
 }

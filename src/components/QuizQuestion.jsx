@@ -22,8 +22,6 @@ class Question extends Component {
       this.setState({ validationText : "-> That would have been right" });
     } else {
       this.setState({ color : "#69BFAF"});
-      this.setState({ validationText : "" });
-
     }
   }
 

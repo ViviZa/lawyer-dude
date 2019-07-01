@@ -14,8 +14,6 @@ import UsingThePicture from './games/UsingThePicture';
 import WelcomePage from './pages/WelcomePage';
 import FindTheLicence from './games/FindTheLicence';
 import Imprint from './pages/Imprint';
-import Overview from './pages/Overview';
-import JailGame1 from './games/JailGame1';
 
 const history = createBrowserHistory()
 library.add(faBars);
@@ -73,9 +71,6 @@ class App extends Component {
           <Route exact path="/findthelicence1" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
           <Route exact path="/findthelicence2" component={() => <FindTheLicence addingPages={this.addingPages}/>}/>
           <Route exact path="/imprint" component={() => <Imprint addingPages={this.addingPages}/>}/>
-          <Route exact path="/overview" component={() => <Overview addingPages={this.addingPages}/>}/>
-          <Route exact path="/jailgame1" component={() => <JailGame1 addingPages={this.addingPages}/>}/>
-
       </Router>
     );
   }
