@@ -71,7 +71,7 @@
         "type": "resource"
       },
       {
-        "text": "Now you already know the two public domain tools (or so called “waivers”). Let’s have a look at the CC licenses. \n \n Each license contains at least one of four basic elements which are illustrated by abbreviations and pictograms. These elements can be combined with each other. Licenses’ names always start with the “CC” abbreviation. Let’s have a look how this might look like: \n BY stands for “attribution” and means you have to mention the author and other parties designated for attribution. The corresponding license is therefore called “CC BY”. It means that you are free to use the work in any way and for any purpose - it therefore is the most permissive type of all CC licences. By the way, every license contains the obligation to name the author (i. e. every CC license contains the “BY” element). \n SA stands for “Share Alike” and means that anyone who modifies the original work must share the adapted version under a CC BY-SA license or a compatible licence. Apart from this, all license conditions of the CC BY license are still valid here. \n ND stands for “No Derivatives” which means that you are not allowed to modify the image in any way. The corresponding license is called “CC BY-ND”. Apart from this, all license conditions of the CC BY license are still valid here. \n NC stands for “Non Commercial” and states - contrary to the previous mentioned licenses - that you are not allowed to use the workimage commercially. With “CC BY-NC” any reproduction or modification of an image in order to realise a commercial gain is not permitted. Apart from this, all license conditions of the CC BY license are still valid here.",
+        "text": "Now you already know the two public domain tools (or so called “waivers”). Let’s have a look at the CC licenses. \n \n Each license contains at least one of four basic elements which are illustrated by abbreviations and pictograms. These elements can be combined with each other. Licenses’ names always start with the “CC” abbreviation. Let’s have a look how this might look like: \n BY stands for “attribution” and means you have to mention the author and other parties designated for attribution. The corresponding license is therefore called “CC BY”. It means that you are free to use the work in any way and for any purpose - it therefore is the most permissive type of all CC licenses. By the way, every license contains the obligation to name the author (i. e. every CC license contains the “BY” element). \n SA stands for “Share Alike” and means that anyone who modifies the original work must share the adapted version under a CC BY-SA license or a compatible lisence. Apart from this, all license conditions of the CC BY license are still valid here. \n ND stands for “No Derivatives” which means that you are not allowed to modify the image in any way. The corresponding license is called “CC BY-ND”. Apart from this, all license conditions of the CC BY license are still valid here. \n NC stands for “Non Commercial” and states - contrary to the previous mentioned licenses - that you are not allowed to use the workimage commercially. With “CC BY-NC” any reproduction or modification of an image in order to realise a commercial gain is not permitted. Apart from this, all license conditions of the CC BY license are still valid here.",
         "type": "resource"
       },
       {
@@ -89,7 +89,7 @@
       "To be honest, I don’t know.",
       "Forget about the image! Is there a way to directly access those freely licensed images you just mentioned?"
     ],
-    "nextPage": ["/stealingpictures", "/understandingsource", "/usingfreelicences"],
+    "nextPage": ["/stealingpictures", "/understandingsource", "/usingfreelicenses"],
     "nextPageIDs": [300, 6, 7]
   },
   {
@@ -116,12 +116,12 @@
         "images": ["images/Cc-zero.svg"]
       },
       {
-        "text": "Now you already know the two public domain tools (or so called “waivers”). Let’s have a look at the CC licenses. \n \n Each license contains at least one of four basic elements which are illustrated by abbreviations and pictograms. These elements can be combined with each other. Licenses’ names always start with the “CC” abbreviation. Let’s have a look how this might look like: \n BY stands for “attribution” and means you have to mention the author and other parties designated for attribution. The corresponding license is therefore called “CC BY”. It means that you are free to use the work in any way and for any purpose - it therefore is the most permissive type of all CC licences. By the way, every license contains the obligation to name the author (i. e. every CC license contains the “BY” element).",
+        "text": "Now you already know the two public domain tools (or so called “waivers”). Let’s have a look at the CC licenses. \n \n Each license contains at least one of four basic elements which are illustrated by abbreviations and pictograms. These elements can be combined with each other. Licenses’ names always start with the “CC” abbreviation. Let’s have a look how this might look like: \n BY stands for “attribution” and means you have to mention the author and other parties designated for attribution. The corresponding license is therefore called “CC BY”. It means that you are free to use the work in any way and for any purpose - it therefore is the most permissive type of all CC licenses. By the way, every license contains the obligation to name the author (i. e. every CC license contains the “BY” element).",
         "type": "resource",
         "images": ["images/Cc-by.svg"]
       },
       {
-        "text":  "SA stands for “Share Alike” and means that anyone who modifies the original work must share the adapted version under a CC BY-SA license or a compatible licence. Apart from this, all license conditions of the CC BY license are still valid here. \n ND stands for “No Derivatives” which means that you are not allowed to modify the image in any way. The corresponding license is called “CC BY-ND”. Apart from this, all license conditions of the CC BY license are still valid here. \n NC stands for “Non Commercial” and states - contrary to the previous mentioned licenses - that you are not allowed to use the workimage commercially. With “CC BY-NC” any reproduction or modification of an image in order to realise a commercial gain is not permitted. Apart from this, all license conditions of the CC BY license are still valid here.",
+        "text":  "SA stands for “Share Alike” and means that anyone who modifies the original work must share the adapted version under a CC BY-SA license or a compatible license. Apart from this, all license conditions of the CC BY license are still valid here. \n ND stands for “No Derivatives” which means that you are not allowed to modify the image in any way. The corresponding license is called “CC BY-ND”. Apart from this, all license conditions of the CC BY license are still valid here. \n NC stands for “Non Commercial” and states - contrary to the previous mentioned licenses - that you are not allowed to use the workimage commercially. With “CC BY-NC” any reproduction or modification of an image in order to realise a commercial gain is not permitted. Apart from this, all license conditions of the CC BY license are still valid here.",
         "type": "resource",
         "images": ["images/CC-sa.svg", "images/CC-nd.svg", "images/Cc-nc.svg"]
       },
@@ -139,7 +139,7 @@
       "Google.",
       "I don’t know. You tell me!"
     ],
-    "nextPage": ["/usingsearchengines", "/usingfreelicences"],
+    "nextPage": ["/usingsearchengines", "/usingfreelicenses"],
     "nextPageIDs": [18, 7]
   },
   {
@@ -161,7 +161,7 @@
   },
   {
     "id": 7,
-    "pageurl": "/usingfreelicences",
+    "pageurl": "/usingfreelicenses",
     "headline": "How to use online repositories",
     "panels": [
       "I know, you probably expect me to show you a magical way on how to find images, that you can easily use. Well, there is something just like that.",
@@ -270,12 +270,12 @@
       "Yes, it is one of the CC licenses.",
       "It says “all rights reserved”."
     ],
-    "nextPage": ["/dontusetheimage", "/dontusetheimage", "/gettinglicence", "/dontusetheimage"],
+    "nextPage": ["/dontusetheimage", "/dontusetheimage", "/gettinglicense", "/dontusetheimage"],
     "nextPageIDs": [15, 15, 11, 15]
   },
   {
     "id": 11,
-    "pageurl": "/gettinglicence",
+    "pageurl": "/gettinglicense",
     "headline": "Understand the license",
     "panels": [
       "Great, that makes life pretty easy.",
@@ -285,12 +285,12 @@
     "decisions": [
       "OK."
     ],
-    "nextPage": ["/findthelicence2"],
+    "nextPage": ["/findthelicense"],
     "nextPageIDs": [27]
   },
   {
     "id": 12,
-    "pageurl": "/usinglicence",
+    "pageurl": "/usinglicense",
     "headline": "Use the image",
     "panels": [
       "Well done. Now you should feel comfortable to apply your knowledge.",
@@ -301,7 +301,7 @@
       "Sure, let’s do it.",
       "I still don’t understand if I can use the image for my purpose."
     ],
-    "nextPage": ["/findthelicence2", "/creatingnotice", "/dontusetheimage"],
+    "nextPage": ["/findthelicense", "/creatingnotice", "/dontusetheimage"],
     "nextPageIDs": [27, 13, 15]
   },
   {
@@ -373,7 +373,7 @@
       "If I can not find any legal information how else should I credit it? It’s the creators fault, not mine.",
       "Show me how to use a search engine, please."
     ],
-    "nextPage": ["/usingfreelicences", "/stealingpictures", "/usingsearchengines"],
+    "nextPage": ["/usingfreelicenses", "/stealingpictures", "/usingsearchengines"],
     "nextPageIDs": [7, 300, 18]
   },
   {
@@ -391,7 +391,7 @@
       "Is there a way to find free images on Google?",
       "What about a specific image I found on a website?"
     ],
-    "nextPage": ["/finish", "/usingfreelicences", "/searchingonline", "/picturesfrominternet"],
+    "nextPage": ["/finish", "/usingfreelicenses", "/searchingonline", "/picturesfrominternet"],
     "nextPageIDs": [17, 7, 5, 4]
   },
   {
@@ -403,8 +403,8 @@
       "If you would like to get more information, you are always very welcome to return to this tutorial. Or even start right now by exploring our resources.",
       "Would you like to test yourself on your newly acquired knowledge or just want to have some fun? Go ahead and play all the tutorial games in our “Games” section."
     ],
-    "nextPage": ["/placeholder"],
-    "nextPageIDs": [123]
+    "nextPage": ["/overview"],
+    "nextPageIDs": [100]
   },
   {
     "id": 18,
@@ -419,7 +419,7 @@
       "That doesn’t sound too bad.",
       "Well, if the search engines already filters the images for me I should be able to just use them without taking further action."
     ],
-    "nextPage": ["/usingfreelicences", "/matchthelicense", "/stealingpictures"],
+    "nextPage": ["/usingfreelicenses", "/matchthelicense", "/stealingpictures"],
     "nextPageIDs": [7, 21, 300]
   },
   {
@@ -500,7 +500,7 @@
       "OK.",
       "Really? That already sounds like a lot of work to me. Please tell me, that there is an easier way to use the image."
     ],
-    "nextPage": ["/understandingsource", "/usingfreelicences"],
+    "nextPage": ["/understandingsource", "/usingfreelicenses"],
     "nextPageIDs": [6, 7]
   },
   {
@@ -524,21 +524,21 @@
   },
   {
     "id": 27,
-    "pageurl": "/findthelicence2",
+    "pageurl": "/findthelicense",
     "headline": "CC Licenses and their Use Cases",
     "panels": [
       "The cc licenses itself are easy to understand but how about it’s usage in real life? In the following you have to decide if the given use cases are legal under the given license. If so, please mark them as correct.",
       { "question": "What is allowed under a <b> CC0 </b>?",
         "correctAnswers": [1,2,3,4,5,6,7,8,9]
       },
-      { "question": "What is allowed under a <b>CC-BY</b> licence?",
+      { "question": "What is allowed under a <b>CC-BY</b> license?",
         "correctAnswers": [2,3,4,5,7,8,9]
       },
-      { "question": "What is allowed under a <b>CC-BY-SA</b> licence?",
+      { "question": "What is allowed under a <b>CC-BY-SA</b> license?",
         "correctAnswers": [1]
       }     
     ],
-    "nextPage": "/usinglicence",
+    "nextPage": "/usinglicense",
     "nextPageIDs": [12]
   },
   {
@@ -566,7 +566,7 @@
   {
     "id": 102,
     "pageurl": "/games",
-    "nextPage": ["/overview","/matchthelicense", "/findthelicence2", "/jailgame1"],
+    "nextPage": ["/overview","/matchthelicense", "/findthelicense", "/jailgame1"],
     "nextPageIDs": [100, 103, 104, 105]
   },
   {
@@ -577,17 +577,17 @@
   },
   {
     "id": 104,
-    "pageurl": "/findthelicence2",
+    "pageurl": "/findthelicense",
     "headline": "CC Licenses and their Use Cases",
     "panels": [
       "The cc licenses itself are easy to understand but how about it’s usage in real life? In the following you have to decide if the given use cases are legal under the given license. If so, please mark them as correct.",
       { "question": "What is allowed under a <b> CC0 </b>?",
         "correctAnswers": [1,2,3,4,5,6,7,8,9]
       },
-      { "question": "What is allowed under a <b>CC-BY</b> licence?",
+      { "question": "What is allowed under a <b>CC-BY</b> license?",
         "correctAnswers": [2,3,4,5,7,8,9]
       },
-      { "question": "What is allowed under a <b>CC-BY-SA</b> licence?",
+      { "question": "What is allowed under a <b>CC-BY-SA</b> license?",
         "correctAnswers": [1]
       }     
     ],
