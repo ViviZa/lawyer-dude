@@ -3,6 +3,7 @@ import SideNavigation from "../components/SideNavigation";
 import { withRouter } from "react-router";
 import data from "../data.json";
 import BackButtonInactive from "../components/BackButtonInactive";
+import BackButton from "../components/BackButton";
 import ForthButton from "../components/ForthButton";
 import Select from "react-select";
 import update from "immutability-helper";
@@ -67,6 +68,7 @@ class MatchTheLicense extends Component {
     this.validate = this.validate.bind(this);
     this.incCount = this.incCount.bind(this);
     this.setIntro = this.setIntro.bind(this);
+    this.redirectToLastPage = this.redirectToLastPage.bind(this);
   }
 
   componentDidMount() {
@@ -112,12 +114,19 @@ class MatchTheLicense extends Component {
     });
   }
 
-  incCount() {
-    this.setState({ count: 3 });
+  incCount(value) {
+    this.setState({ count: value });
   }
 
   setIntro() {
-    this.setState({ intro: false });
+    const {intro} = this.state;
+    this.setState({ intro: !intro });
+  }
+
+  redirectToLastPage() {
+    const goBack = true;
+    localStorage.setItem("goBack", JSON.stringify(goBack));
+    this.props.history.goBack();
   }
 
 
@@ -224,17 +233,17 @@ class MatchTheLicense extends Component {
         </div>
         {intro ? (
           <div className="buttoncontainer col">
-            <BackButtonInactive />
+            <BackButton previousText={this.redirectToLastPage}/>
             <ForthButton nextText={this.setIntro} />
           </div>
         ) : count !== 3 ? (
           <div className="buttoncontainer col">
-            <BackButtonInactive />
-            <ForthButton nextText={this.incCount} />
+            <BackButton previousText={this.setIntro} />
+            <ForthButton nextText={() => this.incCount(3)} />
           </div>
         ) : (
           <div className="buttoncontainer col">
-            <BackButtonInactive />
+            <BackButton previousText={() => this.incCount(-3)} />
             <ForthButton nextText={this.redirectToNextPage} />
           </div>
         )}
