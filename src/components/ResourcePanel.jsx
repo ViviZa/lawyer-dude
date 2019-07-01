@@ -6,7 +6,7 @@ const ResourcePanel = props => {
 
   return (
     <div className="resourceContainer">
-      <div className="resourceText"  >
+      <div className="speechbubbletext"  >
         <div dangerouslySetInnerHTML={{ __html: text }} />
           {images && images.map((image, index) => (
             <img className="resource-image" key={index} src={image} alt="" />
