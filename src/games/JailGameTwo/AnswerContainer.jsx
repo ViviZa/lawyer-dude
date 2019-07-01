@@ -1,17 +1,6 @@
 import React from 'react'
 import { useDrop } from 'react-dnd'
-const style = {
-  height: '12rem',
-  width: '12rem',
-  marginRight: '1.5rem',
-  marginBottom: '1.5rem',
-  color: 'black',
-  padding: '1rem',
-  textAlign: 'center',
-  fontSize: '1rem',
-  lineHeight: 'normal',
-  float: 'left',
-}
+
 const AnswerContainer = ({ accept, lastDroppedItem, onDrop }) => {
   const [{ isOver, canDrop }, drop] = useDrop({
     accept,
@@ -29,13 +18,13 @@ const AnswerContainer = ({ accept, lastDroppedItem, onDrop }) => {
     backgroundColor = 'darkkhaki'
   }
   return (
-    <div ref={drop} style={{ ...style, backgroundColor }}>
+    <div ref={drop} className="answer-container" style={{backgroundColor }}>
       {isActive
         ? 'Release to drop'
         : ""}
 
       {lastDroppedItem && (
-        <img src={lastDroppedItem.src} alt=""/>
+        <img src={lastDroppedItem.src} alt="" className="cc-icon"/>
       )}
     </div>
   )

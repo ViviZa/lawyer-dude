@@ -74,7 +74,7 @@ class JailGameTwo extends Component {
   validate() {
     const { answers } = this.state;
     answers.map((answer, index) =>
-      answer.lastDroppedItem.src === solution[index].src
+      answer.lastDroppedItem && answer.lastDroppedItem.src === solution[index].src
         ? (answer.errorText = "")
         : (answer.errorText = `Wrong answer, the correct solution would have been ${
             solution[index].name
@@ -86,9 +86,18 @@ class JailGameTwo extends Component {
   render() {
     const { answers, submit } = this.state;
     return (
-      <div>
+      <div class="jailgametwo-container">
         <DndProvider backend={HTML5Backend}>
-          <div style={{ overflow: "hidden", clear: "both" }}>
+          <div>
+            To get out of jail you have to manage the following tasks correctly. Good luck! Match the icons to the correct license module.
+          </div>
+          <div className="images-container">
+            {images.map(({ src, type }, index) => (
+              <Box src={src} type={type} key={index} />
+            ))}
+          </div>
+
+          <div className="images-container">
             {answers.map(
               ({ accepts, lastDroppedItem, exercise, errorText }, index) => (
                 <div key={index}>
@@ -109,12 +118,6 @@ class JailGameTwo extends Component {
                 </div>
               )
             )}
-          </div>
-
-          <div style={{ overflow: "hidden", clear: "both" }}>
-            {images.map(({ src, type }, index) => (
-              <Box src={src} type={type} key={index} />
-            ))}
           </div>
         </DndProvider>
         <button className="match-btn" onClick={() => this.validate()}>
