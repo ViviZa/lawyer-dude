@@ -544,7 +544,6 @@
     "nextPage": "/findthelicence2",
     "nextPageIDs": [27]
   },
-
   {
     "id": 27,
     "pageurl": "/findthelicence2",
@@ -620,5 +619,54 @@
   {
     "id": 777,
     "pageurl": "/imprint"
+  },
+  {
+    "id": 28,
+    "pageurl": "/jailgame1",
+    "headline": "Get out of jail Game",
+    "panels": [
+      { "question": "Which of the following statements apply to the CC BY-SA license?",
+        "correctAnswers": [1,4,5],
+        "choices" : [
+          { "id": 1,
+            "choice": "The content is bound to the original or a compatible license."
+          },
+          { "id": 2,
+            "choice": "Modification of the content is prohibited."
+          },
+          { "id": 3,
+            "choice": "The commercial use of the content is prohibited."
+          },
+          { "id": 4,
+            "choice": "Wikipedia content is published under this license."
+          },
+          { "id": 5,
+            "choice": "The name of the license holder must be stated."
+          }
+        ]
+      },
+      { "question": "Which of the following statements apply to the CC-BY license?",
+        "correctAnswers": [1],
+        "choices" : [
+          { "id": 1,
+            "choice": "The name of the license holder must be stated."
+          },
+          { "id": 2,
+            "choice": "The content is bound to the original or a compatible license."
+          },
+          { "id": 3,
+            "choice": "Modification of the content is prohibited."
+          },
+          { "id": 4,
+            "choice": "Wikipedia content is published under this license."
+          },
+          { "id": 5,
+            "choice": "PLACEHOLDER"
+          }
+        ]
+      }
+    ],
+    "nextPage": "/placeholder",
+    "nextPageIDs": [123]
   }
 ]
