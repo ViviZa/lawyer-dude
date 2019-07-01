@@ -9,13 +9,15 @@ import update from "immutability-helper";
 const images = [
   { src: "images/Cc-nd.svg", type: "image", name: "CC-ND" },
   { src: "images/Cc-by.svg", type: "image", name: "CC-BY" },
-  { src: "images/Cc-sa.svg", type: "image", name: "CC-SA" }
+  { src: "images/Cc-sa.svg", type: "image", name: "CC-SA" },
+  { src: "images/Cc-nc.svg", type: "image", name: "CC-NC" }
 ];
 
 const solution = [
   { src: "images/Cc-by.svg", name: "CC-BY" },
   { src: "images/Cc-sa.svg", name: "CC-SA" },
-  { src: "images/Cc-nd.svg", name: "CC-ND" }
+  { src: "images/Cc-nd.svg", name: "CC-ND" },
+  { src: "images/Cc-nc.svg", name: "CC-NC" }
 ];
 
 class JailGameTwo extends Component {
@@ -40,6 +42,12 @@ class JailGameTwo extends Component {
           lastDroppedItem: null,
           accepts: "image",
           exercise: "ND (no derivatives)",
+          errorText: ""
+        },
+        {
+          lastDroppedItem: null,
+          accepts: "image",
+          exercise: "NC (non commercial)",
           errorText: ""
         }
       ]
