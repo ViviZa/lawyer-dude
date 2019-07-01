@@ -23,6 +23,7 @@ class JailGame1 extends Component {
       nextPageID: 0,
       nextPage: '',
       buttonClicked : false,
+      correctAnswersText : "",
       };
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
     this.nextText = this.nextText.bind(this);
@@ -55,6 +56,8 @@ class JailGame1 extends Component {
      })
     }
     this.setState({buttonClicked :false});
+    this.setState({correctAnswersText: "" });
+
   }
 
   previousText() {
@@ -76,17 +79,21 @@ class JailGame1 extends Component {
   }
 
   validate() {
+    const { panels, textIndex} = this.state;
     this.child1.current.validate();
     this.child2.current.validate();
     this.child3.current.validate();
     this.child4.current.validate();
     this.child5.current.validate();
     this.setState({buttonClicked :true});
+    let answerText = "The correct answers are: " + panels[textIndex].correctAnswers;
+
+    this.setState({correctAnswersText: answerText });
   }
 
   render() {
     const { ID } = this.props.location.state;
-    const { panels, textIndex, headline, buttonClicked } = this.state;
+    const { panels, textIndex, headline, buttonClicked, correctAnswersText} = this.state;
     console.log(this.state.buttonClicked);
 
     return (
@@ -98,6 +105,7 @@ class JailGame1 extends Component {
           {(panels[textIndex] !== undefined) ? (
           <div className="quizQuestions">
             <div className="question" dangerouslySetInnerHTML={{ __html: panels[textIndex].question}}></div>
+            {correctAnswersText}
             <button className="quiz-btn" onClick={this.validate}>Submit answers</button>
             <QuizQuestion key={"question1"+textIndex} ref={this.child1} option={panels[textIndex].choices[0]} rightAnswers={panels[textIndex].correctAnswers} />
             <QuizQuestion key={"question2"+textIndex}  ref={this.child2} option={panels[textIndex].choices[1]} rightAnswers={panels[textIndex].correctAnswers}/>
