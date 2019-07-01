@@ -5,6 +5,8 @@ import Box from "./Box";
 import { DndProvider } from "react-dnd";
 import AnswerContainer from "./AnswerContainer";
 import update from "immutability-helper";
+import BackButtonInactive from "../../components/BackButtonInactive";
+import ForthButton from "../../components/ForthButton";
 
 const images = [
   { src: "images/Cc-nd.svg", type: "image", name: "CC-ND" },
@@ -78,7 +80,7 @@ class JailGameTwo extends Component {
             solution[index].name
           }`)
     );
-    this.setState({ answers , submit: true});
+    this.setState({ answers, submit: true });
   }
 
   render() {
@@ -97,13 +99,13 @@ class JailGameTwo extends Component {
                     key={index}
                   />
                   <div>{exercise}</div>
-                  {
-                    (submit && errorText !== "") ? (
-                      <div style={{ color: "red" }}>{errorText}</div>
-                    ) : (
-                      submit && <div style={{ color: "green" }}>Correct Answer!</div>
+                  {submit && errorText !== "" ? (
+                    <div style={{ color: "red" }}>{errorText}</div>
+                  ) : (
+                    submit && (
+                      <div style={{ color: "green" }}>Correct Answer!</div>
                     )
-                  }
+                  )}
                 </div>
               )
             )}
@@ -118,6 +120,12 @@ class JailGameTwo extends Component {
         <button className="match-btn" onClick={() => this.validate()}>
           Submit answers
         </button>
+        {submit && (
+          <div>
+            <BackButtonInactive />
+            <ForthButton nextText={() => this.props.history.goBack()} />
+          </div>
+        )}
       </div>
     );
   }
