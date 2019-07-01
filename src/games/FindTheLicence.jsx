@@ -96,6 +96,8 @@ class FindTheLicense extends Component {
      })
     }
     this.setState({buttonClicked :false});
+    this.setState({correctAnswersText: "" });
+
   }
 
   previousText() {

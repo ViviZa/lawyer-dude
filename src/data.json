@@ -54,7 +54,7 @@
         "text": "By contrast, there is the open content licensing model invented by Creative Commons, the so called CC licenses. If someone publishes her or his own work under such a license, this means that only “some rights are reserved”. Through the use of CC licenses, millions of people have made their photos, videos and other creative content globally available for everyone to use. You can use freely licensed images as long as you follow some basic rules that are defined in the license conditions. One condition all CC licenses have in common is attribution. It aims to ensure that right holders to get the credit for their work they deserve. Just like you, the next time you publish your own image! \n In addition, Creative Commons also provides a tool that allows rights holders to waive all rights and place a work in the public domain (“all rights granted”).",
         "type": "resource"
       },
-      "“Now, that you are on board - what brought you here anyway?”"
+      "Now, that you are on board - what brought you here anyway?"
     ],
     "decisions": [
       "I found a nice image on the internet that I would like to use. Can you show me how to use it correctly?",
@@ -583,6 +583,36 @@
     ],
     "nextPage": ["/learninggoals", "/resources", "/games"],
     "nextPageIDs": [1, 101, 102]
+  },
+  {
+    "id": 102,
+    "pageurl": "/games",
+    "nextPage": ["/matchthelicense", "/findthelicence2"],
+    "nextPageIDs": [103, 104]
+  },
+  {
+    "id": 103,
+    "pageurl": "/matchthelicense",
+    "nextPage": ["/games"],
+    "nextPageIDs": [102]
+  },
+  {
+    "id": 104,
+    "pageurl": "/findthelicence2",
+    "headline": "CC Licenses and their Use Cases",
+    "panels": [
+      { "question": "What is allowed under a <b> CC0 </b>?",
+        "correctAnswers": [1,2,3,4,5,6,7,8,9]
+      },
+      { "question": "What is allowed under a <b>CC-BY</b> licence?",
+        "correctAnswers": [2,3,4,5,7,8,9]
+      },
+      { "question": "What is allowed under a <b>CC-BY-SA</b> licence?",
+        "correctAnswers": [1]
+      }     
+    ],
+    "nextPage": ["/games"],
+    "nextPageIDs": [102]
   },
   {
     "id": 300,
