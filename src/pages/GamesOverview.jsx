@@ -44,14 +44,20 @@ class GamesOverview extends Component {
     return (
       <div className="Startpage">
         <SettingsButton goBack={() => this.props.history.goBack()} />
-        <div className="pagecontent">
+        <div className="startpagecontent overviewpagecontent">
           <h1 className="headline">Games</h1>
-            <div className="gamescontainer">
-                <button onClick={() => this.redirectToNextPage(0)}>Match the License</button>
+          <div className="container">
+            <div className="row">
+                <div class="contentBox col">
+                    <p className="contentText">Match the License</p>
+                    <button className="StartButton hover" onClick={() => this.redirectToNextPage(0)}>PLAY</button>
+                </div>
+                <div className="contentBox col">
+                    <p className="contentText">CC Licenses and their Use Cases</p>
+                    <button className="StartButton hover"  onClick={() => this.redirectToNextPage(1)}>PLAY</button>
+                </div>
             </div>
-            <div className="gamescontainer">
-                <button onClick={() => this.redirectToNextPage(1)}>CC Licenses and their Use Cases</button>
-            </div>
+          </div>  
         </div>
       </div>
     );
