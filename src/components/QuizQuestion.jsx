@@ -35,7 +35,7 @@ class Question extends Component {
         return (
             <div className="quizQuestion" style={{background: color}}>
                 <label className="choice">
-                <p>{this.props.option.id}</p>  
+                {this.props.option.id}
                 <input
                   name="isChecked"
                   type="checkbox"

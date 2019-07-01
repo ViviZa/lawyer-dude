@@ -132,7 +132,7 @@ class FindTheLicense extends Component {
     this.child9.current.validate();
     this.setState({buttonClicked :true});
 
-    let answerText = "The correct answers would have been: " + panels[textIndex].correctAnswers;
+    let answerText = "The correct answers are: " + panels[textIndex].correctAnswers;
 
     this.setState({correctAnswersText: answerText });
   }
