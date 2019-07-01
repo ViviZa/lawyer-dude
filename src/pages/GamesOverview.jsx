@@ -44,7 +44,7 @@ class GamesOverview extends Component {
     return (
       <div className="Startpage">
         <SettingsButton goBack={() => this.props.history.goBack()} />
-        <button className="jail-back-btn"onClick={() => this.props.history.goBack()}> 
+        <button className="jail-back-btn" onClick={() => this.redirectToNextPage(0)}> 
             Back to overview
         </button>
         <div className="startpagecontent overviewpagecontent">
@@ -53,15 +53,15 @@ class GamesOverview extends Component {
             <div className="row">
                 <div class="contentBox col">
                     <p className="contentText">Match the License</p>
-                    <button className="StartButton hover" onClick={() => this.redirectToNextPage(0)}>PLAY</button>
-                </div>
-                <div className="contentBox col">
-                    <p className="contentText">CC Licenses and their Use Cases</p>
                     <button className="StartButton hover" onClick={() => this.redirectToNextPage(1)}>PLAY</button>
                 </div>
                 <div className="contentBox col">
+                    <p className="contentText">CC Licenses and their Use Cases</p>
+                    <button className="StartButton hover" onClick={() => this.redirectToNextPage(2)}>PLAY</button>
+                </div>
+                <div className="contentBox col">
                     <p className="contentText">JailGame 1</p>
-                    <button className="StartButton hover" onClick={() => this.redirectToNextPage(2)} >PLAY</button>
+                    <button className="StartButton hover" onClick={() => this.redirectToNextPage(3)} >PLAY</button>
                 </div>
                 <div className="contentBox col">
                     <p className="contentText">Jail Game 2</p>
