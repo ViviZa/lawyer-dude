@@ -90,8 +90,8 @@ ol {
 
 .resourceContainer {
 	background-color: $resource-background;
-	margin-top: 3.5em;
-	height: 43em;
+	// margin-top: 3.5em;
+	// height: 43em;
 
 	.speechbubbletext {
 		position: relative;
@@ -99,12 +99,29 @@ ol {
 		padding: 0 1.5em;
 		margin: 3em;
 		line-height: 2em;
-		width: 50%;
+		// width: 50%;
 		text-align: left;
 		float: left;
-		height: 25em;
+		// height: 25em;
 		overflow: scroll;
 	}
+	
+	.resourcetext {
+		position: relative;
+		font-size: 20px;
+		padding: 0 1.5em;
+		margin: 3em;
+		line-height: 2em;
+		// width: 50%;
+		text-align: left;
+		float: left;
+		// height: 25em;
+		overflow: scroll;
+		&::before{
+			box-sizing: unset
+		}
+	}
+	
 }
 
 .buttoncontainer {
