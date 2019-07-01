@@ -24,6 +24,7 @@ class NoDecision extends Component {
     this.previousText = this.previousText.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
+    this.redirectToLastPage = this.redirectToLastPage.bind(this);
   }
 
   componentDidMount() {
@@ -45,6 +46,13 @@ class NoDecision extends Component {
       headline: filteredJSON[0].headline,
       nextPage: filteredJSON[0].nextPage,
       nextPageID: nextPageID
+    }, () => {
+      const goBack = JSON.parse(localStorage.getItem("goBack"));
+      if (goBack) {
+        const goBack = false;
+        localStorage.setItem("goBack", JSON.stringify(goBack));
+        this.setState({ textIndex: this.state.panels.length - 1 });
+      }
     });
   }
 
@@ -80,6 +88,12 @@ class NoDecision extends Component {
         return { textIndex: prevState.textIndex - 1 };
       });
     }
+  }
+
+  redirectToLastPage() {
+    const goBack = true;
+    localStorage.setItem("goBack", JSON.stringify(goBack));
+    this.props.history.goBack();
   }
 
   render() {
@@ -125,7 +139,7 @@ class NoDecision extends Component {
           )}
           {textIndex === 0 && panels.length > 1 ? (
             <div className="buttoncontainer col">
-              <BackButtonInactive />
+              <BackButton previousText={this.redirectToLastPage} />
               <ForthButton nextText={this.nextText} />
             </div>
           ) : textIndex + 1 < panels.length ? (

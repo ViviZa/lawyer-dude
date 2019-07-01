@@ -25,6 +25,7 @@ class EnterName extends Component {
     this.previousText = this.previousText.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
+    this.redirectToLastPage = this.redirectToLastPage.bind(this);
   }
 
   componentDidMount() {
@@ -40,6 +41,13 @@ class EnterName extends Component {
       headline: filteredJSON[0].headline,
       nextPage: filteredJSON[0].nextPage,
       nextPageID: nextPageID
+    }, () => {
+      const goBack = JSON.parse(localStorage.getItem("goBack"));
+      if (goBack) {
+        const goBack = false;
+        localStorage.setItem("goBack", JSON.stringify(goBack));
+        this.setState({ textIndex: this.state.panels.length - 1 });
+      }
     });
   }
 
@@ -83,6 +91,12 @@ class EnterName extends Component {
     }
   }
 
+  redirectToLastPage() {
+    const goBack = true;
+    localStorage.setItem("goBack", JSON.stringify(goBack));
+    this.props.history.goBack();
+  }
+
   render() {
     if (this.props.location.state === undefined) {
       this.props.history.push({
@@ -110,7 +124,7 @@ class EnterName extends Component {
           </div>
           {textIndex === 0 ? (
             <div className="buttoncontainer col">
-              <BackButtonInactive />
+              <BackButton previousText={this.redirectToLastPage}/>
               <ForthButton nextText={this.nextText} />
             </div>
           ) : textIndex + 1 < panels.length ? (

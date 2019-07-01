@@ -64,6 +64,7 @@ class FindTheLicense extends Component {
     this.nextText = this.nextText.bind(this);
     this.previousText = this.previousText.bind(this);
     this.validate = this.validate.bind(this);
+    this.redirectToLastPage = this.redirectToLastPage.bind(this);
   }
 
   componentDidMount() {
@@ -108,6 +109,12 @@ class FindTheLicense extends Component {
         return {textIndex: prevState.textIndex - 1}
      })
     }
+  }
+
+  redirectToLastPage() {
+    const goBack = true;
+    localStorage.setItem("goBack", JSON.stringify(goBack));
+    this.props.history.goBack();
   }
 
   redirectToNextPage() {
@@ -186,7 +193,7 @@ class FindTheLicense extends Component {
           {
             (textIndex === 0) ? (
               <div className="buttoncontainer col">
-                <BackButtonInactive/>
+                <BackButton previousText={this.redirectToLastPage}/>
                 <ForthButton nextText={this.nextText} />
               </div>
             ) : (
