@@ -575,8 +575,8 @@
   {
     "id": 102,
     "pageurl": "/games",
-    "nextPage": ["/matchthelicense", "/findthelicence2"],
-    "nextPageIDs": [103, 104]
+    "nextPage": ["/matchthelicense", "/findthelicence2", "/jailgame1"],
+    "nextPageIDs": [103, 104, 105]
   },
   {
     "id": 103,
@@ -598,6 +598,55 @@
       { "question": "What is allowed under a <b>CC-BY-SA</b> licence?",
         "correctAnswers": [1]
       }     
+    ],
+    "nextPage": ["/games"],
+    "nextPageIDs": [102]
+  },
+  {
+    "id": 105,
+    "pageurl": "/jailgame1",
+    "headline": "Get out of jail Game",
+    "panels": [
+      { "question": "Which of the following statements apply to the CC BY-SA license?",
+        "correctAnswers": [1,4,5],
+        "choices" : [
+          { "id": 1,
+            "choice": "The content is bound to the original or a compatible license."
+          },
+          { "id": 2,
+            "choice": "Modification of the content is prohibited."
+          },
+          { "id": 3,
+            "choice": "The commercial use of the content is prohibited."
+          },
+          { "id": 4,
+            "choice": "Wikipedia content is published under this license."
+          },
+          { "id": 5,
+            "choice": "The name of the license holder must be stated."
+          }
+        ]
+      },
+      { "question": "Which of the following statements apply to the CC-BY license?",
+        "correctAnswers": [1],
+        "choices" : [
+          { "id": 1,
+            "choice": "The name of the license holder must be stated."
+          },
+          { "id": 2,
+            "choice": "The content is bound to the original or a compatible license."
+          },
+          { "id": 3,
+            "choice": "Modification of the content is prohibited."
+          },
+          { "id": 4,
+            "choice": "Wikipedia content is published under this license."
+          },
+          { "id": 5,
+            "choice": "PLACEHOLDER"
+          }
+        ]
+      }
     ],
     "nextPage": ["/games"],
     "nextPageIDs": [102]

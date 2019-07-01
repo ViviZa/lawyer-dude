@@ -54,7 +54,15 @@ class GamesOverview extends Component {
                 </div>
                 <div className="contentBox col">
                     <p className="contentText">CC Licenses and their Use Cases</p>
-                    <button className="StartButton hover"  onClick={() => this.redirectToNextPage(1)}>PLAY</button>
+                    <button className="StartButton hover" onClick={() => this.redirectToNextPage(1)}>PLAY</button>
+                </div>
+                <div className="contentBox col">
+                    <p className="contentText">JailGame 1</p>
+                    <button className="StartButton hover" onClick={() => this.redirectToNextPage(2)} >PLAY</button>
+                </div>
+                <div className="contentBox col">
+                    <p className="contentText">Jail Game 2</p>
+                    <button className="StartButton hover">PLAY</button>
                 </div>
             </div>
           </div>  
