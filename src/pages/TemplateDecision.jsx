@@ -3,7 +3,6 @@ import SideNavigation from "../components/SideNavigation";
 import { withRouter } from "react-router";
 import data from "../data.json";
 import BackButton from "../components/BackButton";
-import BackButtonInactive from "../components/BackButtonInactive";
 import ForthButton from "../components/ForthButton";
 import { ReactComponent as LDHeadHappy } from "../images/Lawyerdude-head-happy.svg";
 import { ReactComponent as LDLamaSceptical } from "../images/Lawyerdude-llama-head-sceptical.svg";
@@ -26,14 +25,15 @@ class TemplateDecision extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
     this.replaceUsername = this.replaceUsername.bind(this);
+    this.redirectToLastPage = this.redirectToLastPage.bind(this);
   }
 
   componentDidMount() {
     if (!this.props.location.state) {
       this.props.history.push({
-        pathname: "/",
+        pathname: "/"
       });
-      return <div/>
+      return <div />;
     }
     const { ID } = this.props.location.state;
     const { addingPages } = this.props;
@@ -50,7 +50,15 @@ class TemplateDecision extends Component {
         nextPages: filteredJSON[0].nextPage,
         nextPageIDs: nextPageIDs
       },
-      () => this.replaceUsername()
+      () => {
+        this.replaceUsername();
+        const goBack = JSON.parse(localStorage.getItem("goBack"));
+        if (goBack) {
+          const goBack = false;
+          localStorage.setItem("goBack", JSON.stringify(goBack));
+          this.setState({ textIndex: this.state.panels.length - 1 });
+        }
+      }
     );
   }
 
@@ -103,12 +111,18 @@ class TemplateDecision extends Component {
     }
   }
 
+  redirectToLastPage() {
+    const goBack = true;
+    localStorage.setItem("goBack", JSON.stringify(goBack));
+    this.props.history.goBack();
+  }
+
   render() {
     if (!this.props.location.state) {
       this.props.history.push({
-        pathname: "/",
+        pathname: "/"
       });
-      return <div/>;
+      return <div />;
     }
     const { panels, textIndex, headline, decisions } = this.state;
     const { ID } = this.props.location.state;
@@ -135,11 +149,10 @@ class TemplateDecision extends Component {
           ) : (
             <div>
               <div className="speech">
-                <p className="speechbubbletext">
-                  <div
-                    dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
-                  />
-                </p>
+                <p
+                  className="speechbubbletext"
+                  dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
+                />
               </div>
               <div className="lama-container">{lamasMood}</div>
               <div className="speechlawyer-container">
@@ -149,12 +162,12 @@ class TemplateDecision extends Component {
           )}
 
           {textIndex === 0 && panels.length > 1 ? (
-            <div className="buttoncontainer">
-              <BackButtonInactive />
+            <div className="buttoncontainer col">
+              <BackButton previousText={this.redirectToLastPage} />
               <ForthButton nextText={this.nextText} />
             </div>
           ) : textIndex + 1 < panels.length ? (
-            <div className="buttoncontainer">
+            <div className="buttoncontainer col">
               <BackButton previousText={this.previousText} />
               <ForthButton nextText={this.nextText} />
             </div>

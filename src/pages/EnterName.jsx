@@ -25,6 +25,7 @@ class EnterName extends Component {
     this.previousText = this.previousText.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
+    this.redirectToLastPage = this.redirectToLastPage.bind(this);
   }
 
   componentDidMount() {
@@ -40,6 +41,13 @@ class EnterName extends Component {
       headline: filteredJSON[0].headline,
       nextPage: filteredJSON[0].nextPage,
       nextPageID: nextPageID
+    }, () => {
+      const goBack = JSON.parse(localStorage.getItem("goBack"));
+      if (goBack) {
+        const goBack = false;
+        localStorage.setItem("goBack", JSON.stringify(goBack));
+        this.setState({ textIndex: this.state.panels.length - 1 });
+      }
     });
   }
 
@@ -83,6 +91,12 @@ class EnterName extends Component {
     }
   }
 
+  redirectToLastPage() {
+    const goBack = true;
+    localStorage.setItem("goBack", JSON.stringify(goBack));
+    this.props.history.goBack();
+  }
+
   render() {
     if (this.props.location.state === undefined) {
       this.props.history.push({
@@ -102,43 +116,46 @@ class EnterName extends Component {
             <Llama className="entername-llama" />
           </div>
           <div className="speech entername">
-            <div className="speechbubbletext entername">
-              <div dangerouslySetInnerHTML={{ __html: panels[textIndex] }} />
-            </div>
+            <div className="speechbubbletext entername"
+               dangerouslySetInnerHTML={{ __html: panels[textIndex] }} />
           </div>
           <div className="speechlawyer-container entername">
             <LDHeadHappy className="speechlawyer-happy" />
           </div>
           {textIndex === 0 ? (
-            <div className="buttoncontainer">
-              <BackButtonInactive />
+            <div className="buttoncontainer col">
+              <BackButton previousText={this.redirectToLastPage}/>
               <ForthButton nextText={this.nextText} />
             </div>
           ) : textIndex + 1 < panels.length ? (
-            <div className="buttoncontainer">
+            <div className="buttoncontainer col">
               <BackButton previousText={this.previousText} />
               <ForthButton nextText={this.nextText} />
             </div>
           ) : (
-            <div className="entername-form">
+            <div className="entername-form container">
               <form onSubmit={event => this.redirectToNextPage(event)}>
+                <div className="row">
+                  <div className="col-12 col-sm-6 col-md-6">
                 <div className={"errorMessage"}>{errorText}</div>
-                <label className="entername-label">
-                  <input
+                <input
                     className="entername-input"
                     type="text"
                     value={this.state.username}
                     onChange={this.handleChange}
-                  />
-                  Enter your name
-                </label>
+                    />
+                <label className="entername-label">Enter your name</label>
+                    </div>
+                    <div className="col-12 col-sm-6 col-md-6">
                 <button
                   className="save-name-btn"
                   type="submit"
                   value="Let's go"
-                >
+                  >
                   Let's go
                   </button>
+                  </div>
+                </div>
               </form>
             </div>
           )}

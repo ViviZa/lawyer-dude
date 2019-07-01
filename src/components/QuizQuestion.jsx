@@ -8,7 +8,6 @@ class Question extends Component {
         color : "#e1e1e1",
         isChecked : false,
         isChosenCorrectly : false,
-        validationText : "",
       };
       this.handleInputChange = this.handleInputChange.bind(this);
       this.validate = this.validate.bind(this);
@@ -19,9 +18,10 @@ class Question extends Component {
     if(!rightAnswers.includes(option.id) && this.state.isChecked === true ) {
       this.setState({ color : "#F26D75" });
     }else if (rightAnswers.includes(option.id) && this.state.isChecked===false){
-      this.setState({ validationText : "-> That would have been right" });
+      this.setState({ color : "#F26D75" });
     } else {
       this.setState({ color : "#69BFAF"});
+      this.setState({ validationText : "" });
     }
   }
 
@@ -31,10 +31,11 @@ class Question extends Component {
   }
 
     render(){
-      const { isChecked, color, validationText } = this.state;
+      const { isChecked, color } = this.state;
         return (
             <div className="quizQuestion" style={{background: color}}>
                 <label className="choice">
+                {this.props.option.id}
                 <input
                   name="isChecked"
                   type="checkbox"
@@ -44,7 +45,6 @@ class Question extends Component {
                   />
                   {this.props.option.choice}
               </label>
-              <div>{validationText}</div>
             </div>
         )
     }

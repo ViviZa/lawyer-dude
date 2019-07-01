@@ -24,6 +24,7 @@ class NoDecision extends Component {
     this.previousText = this.previousText.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
+    this.redirectToLastPage = this.redirectToLastPage.bind(this);
   }
 
   componentDidMount() {
@@ -45,6 +46,13 @@ class NoDecision extends Component {
       headline: filteredJSON[0].headline,
       nextPage: filteredJSON[0].nextPage,
       nextPageID: nextPageID
+    }, () => {
+      const goBack = JSON.parse(localStorage.getItem("goBack"));
+      if (goBack) {
+        const goBack = false;
+        localStorage.setItem("goBack", JSON.stringify(goBack));
+        this.setState({ textIndex: this.state.panels.length - 1 });
+      }
     });
   }
 
@@ -82,6 +90,12 @@ class NoDecision extends Component {
     }
   }
 
+  redirectToLastPage() {
+    const goBack = true;
+    localStorage.setItem("goBack", JSON.stringify(goBack));
+    this.props.history.goBack();
+  }
+
   render() {
     if (!this.props.location.state) {
       this.props.history.push({
@@ -112,11 +126,8 @@ class NoDecision extends Component {
           ) : (
             <div>
               <div className="speech">
-                <div className="speechbubbletext">
-                  <div
-                    dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
-                  />
-                </div>
+                <div className="speechbubbletext"
+                    dangerouslySetInnerHTML={{ __html: panels[textIndex] }} />
               </div>
               <div className="lama-container">
                 <LDLamaSceptical className="lama-sceptical" />
@@ -127,17 +138,17 @@ class NoDecision extends Component {
             </div>
           )}
           {textIndex === 0 && panels.length > 1 ? (
-            <div className="buttoncontainer">
-              <BackButtonInactive />
+            <div className="buttoncontainer col">
+              <BackButton previousText={this.redirectToLastPage} />
               <ForthButton nextText={this.nextText} />
             </div>
           ) : textIndex + 1 < panels.length ? (
-            <div className="buttoncontainer">
+            <div className="buttoncontainer col">
               <BackButton previousText={this.previousText} />
               <ForthButton nextText={this.nextText} />
             </div>
           ) : (
-            <div className="buttoncontainer">
+            <div className="buttoncontainer col">
               <BackButtonInactive />
               <ForthButton nextText={this.redirectToNextPage} />
             </div>
