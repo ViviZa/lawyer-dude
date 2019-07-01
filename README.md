@@ -9,12 +9,12 @@ Run the app in the development mode:<br>
 npm start
 ```
 
-Launches the test runner in the interactive watch mode.<br>
+Launch the test runner in the interactive watch mode:<br>
 ```bash
 npm test
 ```
 
-Builds the app for production to the `build` folder.<br>
+Build the app for production to the `build` folder:<br>
 ```bash
 npm run build
 ```
