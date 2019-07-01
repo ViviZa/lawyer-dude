@@ -70,6 +70,12 @@ class MatchTheLicense extends Component {
   }
 
   componentDidMount() {
+    if (!this.props.location.state) {
+      this.props.history.push({
+        pathname: "/",
+      });
+      return <div/>
+    }
     const { ID } = this.props.location.state;
     const { addingPages } = this.props;
     addingPages(ID);
@@ -154,6 +160,12 @@ class MatchTheLicense extends Component {
   }
 
   render() {
+    if (!this.props.location.state) {
+      this.props.history.push({
+        pathname: "/",
+      });
+      return <div/>
+    }
     const { ID } = this.props.location.state;
     const { selectedOption, questions, count, intro } = this.state;
 
@@ -211,17 +223,17 @@ class MatchTheLicense extends Component {
           )}
         </div>
         {intro ? (
-          <div className="buttoncontainer">
+          <div className="buttoncontainer col">
             <BackButtonInactive />
             <ForthButton nextText={this.setIntro} />
           </div>
         ) : count !== 3 ? (
-          <div className="buttoncontainer">
+          <div className="buttoncontainer col">
             <BackButtonInactive />
             <ForthButton nextText={this.incCount} />
           </div>
         ) : (
-          <div className="buttoncontainer">
+          <div className="buttoncontainer col">
             <BackButtonInactive />
             <ForthButton nextText={this.redirectToNextPage} />
           </div>

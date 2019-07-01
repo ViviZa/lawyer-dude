@@ -20,6 +20,12 @@ class WelcomePage extends Component {
   }
 
   componentDidMount() {
+    if (!this.props.location.state) {
+      this.props.history.push({
+        pathname: "/",
+      });
+      return <div/>
+    }
     const { ID } = this.props.location.state;
     const { addingPages } = this.props;
     addingPages(ID);
@@ -46,6 +52,12 @@ class WelcomePage extends Component {
 
   render() {
     const { panels, headline } = this.state;
+    if (!this.props.location.state) {
+      this.props.history.push({
+        pathname: "/",
+      });
+      return <div/>
+    }
     const { ID } = this.props.location.state;
 
     return (
@@ -53,17 +65,21 @@ class WelcomePage extends Component {
         <SideNavigation ID={ID}/>
         <SettingsButton goBack={() => this.props.history.goBack()}/>
         <div className="pagecontent">
-          
           <h1 className="headline">
             {headline}
           </h1>
-          <div className="welcomeblock">
-            <LDFull className="fulllawyer"/>  
-            <div className="welcomepanels">
+          <div className="container">
+            <div className="row">
+
+          <div className="welcomeblock ">
+            <LDFull className="fulllawyer col-12 col-sm-6 col-md-6 col-lg-12 "/>  
+            <div className="welcomepanels col-12 col-sm-6 col-md-6 col-lg-12">
                     {panels.map((panel) => <li className="welcomepanel"><p>{panel}</p></li>)}
             </div>
+            </div>
           </div>
-          <div className="buttoncontainer">
+          </div>
+          <div className="buttoncontainer col">
             <BackButtonInactive/>
             <ForthButton nextText={this.redirectToNextPage} />
           </div>
