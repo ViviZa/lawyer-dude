@@ -1,0 +1,41 @@
+.resourceContainer {
+	background-color: $resource-background;
+	position: relative;
+	height: 28em;
+	overflow: auto;
+
+	.speechbubbletext {
+		position: relative;
+		font-size: 20px;
+		padding: 0 1.5em;
+		margin: 3em;
+		line-height: 2em;
+		// width: 50%;
+		text-align: left;
+		float: left;
+		// height: 25em;
+		overflow: scroll;
+	}	
+}
+
+.resourcetext {
+	position: relative;
+	font-size: 20px;
+	line-height: 2em;
+	text-align: left;
+	float: left;
+	height: auto;
+	
+	&::before{
+		box-sizing: unset
+	}
+	div {
+		height: inherit; 
+		padding: 1em;
+	}
+}
+
+.spaceCol {
+    height: 2%;
+    background-color: $resource-background;
+}

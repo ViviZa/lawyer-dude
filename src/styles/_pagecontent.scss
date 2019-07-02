@@ -88,41 +88,7 @@ ol {
 	z-index: 10;
 }
 
-.resourceContainer {
-	background-color: $resource-background;
-	// margin-top: 3.5em;
-	// height: 43em;
 
-	.speechbubbletext {
-		position: relative;
-		font-size: 20px;
-		padding: 0 1.5em;
-		margin: 3em;
-		line-height: 2em;
-		// width: 50%;
-		text-align: left;
-		float: left;
-		// height: 25em;
-		overflow: scroll;
-	}
-	
-	.resourcetext {
-		position: relative;
-		font-size: 20px;
-		padding: 0 1.5em;
-		margin: 3em;
-		line-height: 2em;
-		// width: 50%;
-		text-align: left;
-		float: left;
-		// height: 25em;
-		overflow: scroll;
-		&::before{
-			box-sizing: unset
-		}
-	}
-	
-}
 
 .buttoncontainer {
 	position: absolute;
@@ -281,38 +247,6 @@ ol {
 	margin-left: 5.5em;
 }
 
-.Imprint {
-	background-color: lighten($darkblue, 72%);
-
-	.pagecontent {
-
-		.contentText {
-			text-align: left;
-		}
-
-		div:nth-child(2) {
-			color:$darkblue;
-			font-size: 24px;
-			font-weight: 700;
-			margin: 3em 0;
-			text-transform: uppercase;
-			text-align: center;
-		}
-
-		h2 {
-			font-size: 26px;
-			text-align: left;
-
-			&:after {
-				content: "";
-				background-color: #000;
-				width: 0.5em;
-				height: 0.3em;
-			}
-		}
-	}
-}
-
 @media only screen and (max-width: 599px) {
   
 	h1 {
@@ -456,17 +390,20 @@ ol {
 		margin-left: 15em;
 	}
 
-	.resourceContainer {
-		margin-top: 2.5em;
-		height: 25em;
 
-		.speechbubbletext {
-			font-size: 14px;
-			padding: 0 1em;
-			margin: 2em;
-			line-height: 2em;
-		}
-	}
+	// .resourceContainer {
+	// 	margin-top: 2.5em;
+	// 	// height: 25em;
+	// 	position: relative;
+	// 	height: auto;
+
+	// 	.speechbubbletext {
+	// 		font-size: 14px;
+	// 		padding: 0 1em;
+	// 		margin: 2em;
+	// 		line-height: 2em;
+	// 	}
+	// }
 
 	.buttoncontainer {
 		bottom: 1em;

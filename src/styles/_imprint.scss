@@ -1,0 +1,31 @@
+.Imprint {
+	background-color: lighten($darkblue, 72%);
+
+	.pagecontent {
+
+		.contentText {
+			text-align: left;
+		}
+
+		div:nth-child(2) {
+			color:$darkblue;
+			font-size: 24px;
+			font-weight: 700;
+			margin: 3em 0;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		h2 {
+			font-size: 26px;
+			text-align: left;
+
+			&:after {
+				content: "";
+				background-color: #000;
+				width: 0.5em;
+				height: 0.3em;
+			}
+		}
+	}
+}
