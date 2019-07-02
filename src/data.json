@@ -1,739 +1,744 @@
 [{
-    "id": 0,
-    "pageurl": "/",
-    "headline": "The Lawyer Dude",
-    "nextPage": "/overview",
-    "nextPageIDs": [100]
-  },
-  {
-    "id": 1,
-    "pageurl": "/learninggoals",
-    "headline": "What you learn in this story",
-    "panels": [
-      "This online learning unit will help you to understand how to use images from the internet.",
-      "You will learn about the differences of all rights reserved, some rights reserved and no rights reserved images and what information is mandatory in order to legally use them.",
-      "You will also be introduced to different tools and repositories that can help you find free licensed images on the internet.",
-      "Find your own path through the game and be rewarded by acquiring a lot of helpful knowledge.",
-      "OK, lets learn how to use images from the internet without going to jail!"
-    ],
-    "nextPage": "/entername",
-    "nextPageIDs": [2]
-  },
-  {
-    "id": 2,
-    "pageurl": "/entername",
-    "headline": "Introduce yourself",
-    "panels": [
-      "Hello. Are you interested in learning about copyright and free licenses? That’s great, you came to the right place.",
-      "But, how rude of me! I totally forgot to introduce myself. I am the Lawyer Dude, your legal advisor and I am here to help you.",
-      "Before we start our exciting journey through the beautiful world of licenses, how shall I call you?"
-    ],
-    "nextPage": "/introduction",
-    "nextPageIDs": [3]
-  },
-  {
-    "id": 3,
-    "pageurl": "/introduction",
-    "headline": "Let's get started",
-    "panels": [
-      "Hey {username}, nice to meet you.",
-      "Don’t worry. I know that there is a lot of confusion about using images from the internet. But it is actually not that complicated. Let’s just do it together, alright?",
-      {
-        "text": "When using images from the internet, you can’t avoid talking about copyright. Traditional copyright though is a rather restrictive regime which gives copyright holders exclusive rights (as in “all rights reserved” as a default). Neither copying and distributing nor modifying is permitted without an explicit permission. Only a few use cases get special permissions directly from the law. These so called copyright exceptions are reserved for certain users like teachers in public schools, journalists, judges and so on. Everybody else must rely on explicit permissions from the copyright holders. Unfortunately, this makes traditional copyright not quite compatible with the digital age. In this way open licensing (or free licensing) is particularly important in a digital context. Open licensing is meant to make granting permissions easier, which in turn makes reusing content like images easier: Open content is “pre-permitted-to-use content”. This enables others to use this content like images and hand it over to others. Thereby it is a way for creators and rights holders to spread their work more easily - by allowing others to use, share and mix their work without needing to ask for (added individual) permission in advance. By the help of open license models, rights holders determine how their work may be used (“some rights reserved” instead of the default “all rights reserved”). More on this later. Unless otherwise stated, the “all rights reserved” rule usually applies: As mentioned before, you are not allowed to use others people’s works without asking for permission. Use in this context is anything beyond consumption of the impression which means anything beyond looking at images, listening to music and so on. So if the rights holder did not give you the explicit right to use, publish or modify the image you have no right to do so. You can imagine that this could be difficult for you if you want to use an image online. By contrast, there is the open content licensing model invented by Creative Commons, the so called CC licenses. If someone publishes her or his own work under such a license, this means that only “some rights are reserved”. Through the use of CC licenses, millions of people have made their photos, videos and other creative content globally available for everyone to use. You can use freely licensed images as long as you follow some basic rules that are defined in the license conditions. One condition all CC licenses have in common is attribution. It aims to ensure that right holders to get the credit for their work they deserve. Just like you, the next time you publish your own image! \n In addition, Creative Commons also provides a tool that allows rights holders to waive all rights and place a work in the public domain (“all rights granted”).",
-        "type": "resource"
-      },
-      "Now, that you are on board - what brought you here anyway?"
-    ],
-    "decisions": [
-      "I found a nice image on the internet that I would like to use. Can you show me how to use it correctly?",
-      "I am not sure where to look for an image that I can use for my own purpose. Can you help me?"
-    ],
-    "nextPage": ["/picturesfrominternet", "/searchingonline"],
-    "nextPageIDs": [4, 5]
-  },
-  {
-    "id": 4,
-    "pageurl": "/picturesfrominternet",
-    "headline": "How to use images from the internet",
-    "panels": [
-      "Of course I can help you. Let me show you how to find out if you are allowed to and how to use an image from the internet.",
-      "I believe you now know the very basics of open licensing by now, so let’s take a look at the so called CC licenses.",
-      {
-        "text": "So now we get into open licensing a little deeper. I would like to introduce you to the CC legal tools. Don’t worry we’ll make it simple and concentrate on the CC licenses that are the most relevant for your context. In the end you will know how you can use a freely licensed image. I promise.",
-        "type": "resource"
-      },
-      {
-        "text": "Before we start let’s have a look at a symbol which I'm sure you've met many times before: \n This pictogram shows you that this image is protected by copyright as explained at the very beginning. It is usually used to indicate that the rights holder reserves all rights. Copying, distributing, modifying is not allowed unless you ask for permission to use it (“all rights reserved”).",
-        "type": "resource"
-      },
-      {
-        "text": "The absolute opposite to this is when rights holders waive all rights and place their works in the public domain. \n This pictogram states that all rights are granted for any use of a work in any way and for any purpose (“no rights reserved”). Works in the public domain are free of protection. Either because the term of protection has expired or they were not copyright-protected in the first place. \n Creative Commons additionally offers a second tool that causes a similar legal status like the public domain tool: CC0. Rights holders are actively waiving all rights from their works. Consequently, all worksimages licensed under CC0 can be used by anyone without any restrictions or obligations.",
-        "type": "resource"
-      },
-      {
-        "text": "Now you already know the two public domain tools (or so called “waivers”). Let’s have a look at the CC licenses. \n \n Each license contains at least one of four basic elements which are illustrated by abbreviations and pictograms. These elements can be combined with each other. Licenses’ names always start with the “CC” abbreviation. Let’s have a look how this might look like: \n BY stands for “attribution” and means you have to mention the author and other parties designated for attribution. The corresponding license is therefore called “CC BY”. It means that you are free to use the work in any way and for any purpose - it therefore is the most permissive type of all CC licences. By the way, every license contains the obligation to name the author (i. e. every CC license contains the “BY” element). \n SA stands for “Share Alike” and means that anyone who modifies the original work must share the adapted version under a CC BY-SA license or a compatible licence. Apart from this, all license conditions of the CC BY license are still valid here. \n ND stands for “No Derivatives” which means that you are not allowed to modify the image in any way. The corresponding license is called “CC BY-ND”. Apart from this, all license conditions of the CC BY license are still valid here. \n NC stands for “Non Commercial” and states - contrary to the previous mentioned licenses - that you are not allowed to use the workimage commercially. With “CC BY-NC” any reproduction or modification of an image in order to realise a commercial gain is not permitted. Apart from this, all license conditions of the CC BY license are still valid here.",
-        "type": "resource"
-      },
-      {
-        "text": "As if that weren't enough the four elements can be combined. But don’t worry we won’t go any deeper into this. Maybe you can keep in mind a simple rule: \nThe more restrictions a license contains the less it is compatible with the idea of free cultural works or the open definition. To give you one example, let me shortly introduce the most restrictive CC license to you: CC BY-NC-ND. You may not use a work commercially, nor modify it. So, you're probably gonna agree with me that this isn't necessarily making sharing easier.",
-        "type": "resource"
-      },
-      {
-        "text": "This infographic may help you to better understand the CC license spectrum between “public domain/most open” (top) and “all rights reserved/least open” (bottom). Hint: Focus on the darker green area and therefore on the public domain tools “PD” and “CC0” as well as the two CC licenses “CC BY” and “CC BY-SA”. ",
-        "type": "resource"
-      },
-      "Are you aware of which of the licenses I just explained applies to your image?"
-    ],
-    "decisions": [
-      "Phhh, that is way too complicated. I will just use the image. No one ever will find out anyways.",
-      "To be honest, I don’t know.",
-      "Forget about the image! Is there a way to directly access those freely licensed images you just mentioned?"
-    ],
-    "nextPage": ["/stealingpictures", "/understandingsource", "/usingfreelicences"],
-    "nextPageIDs": [300, 6, 7]
-  },
-  {
-    "id": 5,
-    "pageurl": "/searchingonline",
-    "headline": "How to search for images online",
-    "panels": [
-      "Alright then. Let’s find a nice image that fits your needs.",
-      "I believe you now know the very basics of open licensing by now, so let’s take a look at the so called CC licenses before we continue.",
-      "So now we get into open licensing a little deeper. I would like to introduce you to the CC legal tools. Don’t worry we’ll make it simple and concentrate on the CC licenses that are the most relevant for your context. In the end you will know how you can use a freely licensed image. I promise.",
-      {
-        "text": "Before we start let’s have a look at a symbol which I'm sure you've met many times before: \n This pictogram shows you that this image is protected by copyright as explained at the very beginning. It is usually used to indicate that the rights holder reserves all rights. Copying, distributing, modifying is not allowed unless you ask for permission to use it (“all rights reserved”).",
-        "type": "resource",
-        "images": [""]
-      },
-      {
-        "text": "The absolute opposite to this is when rights holders waive all rights and place their works in the public domain. \n This pictogram states that all rights are granted for any use of a work in any way and for any purpose (“no rights reserved”). Works in the public domain are free of protection. Either because the term of protection has expired or they were not copyright-protected in the first place.",
-        "type": "resource",
-        "images": ["images/pd.svg"]
-      },
-      {
-        "text": "Creative Commons additionally offers a second tool that causes a similar legal status like the public domain tool: CC0. Rights holders are actively waiving all rights from their works. Consequently, all worksimages licensed under CC0 can be used by anyone without any restrictions or obligations.",
-        "type": "resource",
-        "images": ["images/Cc-zero.svg"]
-      },
-      {
-        "text": "Now you already know the two public domain tools (or so called “waivers”). Let’s have a look at the CC licenses. \n \n Each license contains at least one of four basic elements which are illustrated by abbreviations and pictograms. These elements can be combined with each other. Licenses’ names always start with the “CC” abbreviation. Let’s have a look how this might look like: \n BY stands for “attribution” and means you have to mention the author and other parties designated for attribution. The corresponding license is therefore called “CC BY”. It means that you are free to use the work in any way and for any purpose - it therefore is the most permissive type of all CC licences. By the way, every license contains the obligation to name the author (i. e. every CC license contains the “BY” element).",
-        "type": "resource",
-        "images": ["images/Cc-by.svg"]
-      },
-      {
-        "text":  "SA stands for “Share Alike” and means that anyone who modifies the original work must share the adapted version under a CC BY-SA license or a compatible licence. Apart from this, all license conditions of the CC BY license are still valid here. \n ND stands for “No Derivatives” which means that you are not allowed to modify the image in any way. The corresponding license is called “CC BY-ND”. Apart from this, all license conditions of the CC BY license are still valid here. \n NC stands for “Non Commercial” and states - contrary to the previous mentioned licenses - that you are not allowed to use the workimage commercially. With “CC BY-NC” any reproduction or modification of an image in order to realise a commercial gain is not permitted. Apart from this, all license conditions of the CC BY license are still valid here.",
-        "type": "resource",
-        "images": ["images/CC-sa.svg", "images/CC-nd.svg", "images/Cc-nc.svg"]
-      },
-      {
-        "text": "As if that weren't enough the four elements can be combined. But don’t worry we won’t go any deeper into this. Maybe you can keep in mind a simple rule: \nThe more restrictions a license contains the less it is compatible with the idea of free cultural works or the open definition. To give you one example, let me shortly introduce the most restrictive CC license to you: CC BY-NC-ND. You may not use a work commercially, nor modify it. So, you're probably gonna agree with me that this isn't necessarily making sharing easier.",
-        "type": "resource"
-      },
-      {
-        "text": "This infographic may help you to better understand the CC license spectrum between “public domain/most open” (top) and “all rights reserved/least open” (bottom). Hint: Focus on the darker green area and therefore on the public domain tools “PD” and “CC0” as well as the two CC licenses “CC BY” and “CC BY-SA”. ",
-        "type": "resource"
-      },
-      "Where do you usually look for images?"
-    ],
-    "decisions": [
-      "Google.",
-      "I don’t know. You tell me!"
-    ],
-    "nextPage": ["/usingsearchengines", "/usingfreelicences"],
-    "nextPageIDs": [18, 7]
-  },
-  {
-    "id": 6,
-    "pageurl": "/understandingsource",
-    "headline": "Understanding the Source",
-    "panels": [
-      "No problem. I can help you to find all the information you need in order to use the image. First let’s start with the source of an image.",
-      "As I already mentioned before, there are three different ways of licensing images. Many images that can be found online have all rights reserved. Here you need to ask for permission to use the image. Some images have some rights reserved. Those are covered by the CC licenses. And some images are under the public domain, so there are no rights reserved. These images are free to use without any further restrictions.",
-      "If you want to use the image, you need to tell others where the image is from and how it is licensed. So first, where did you find your image?"
-    ],
-    "decisions": [
-      "Seriously? I don't remember. Somewhere on the internet.",
-      "I’ve saved the source link.",
-      "I found it somewhere on Wikimedia Commons or Wikipedia."
-    ],
-    "nextPage": ["/dontusetheimage", "/findingholder", "usingwiki"],
-    "nextPageIDs": [15, 8, 9]
-  },
-  {
-    "id": 7,
-    "pageurl": "/usingfreelicences",
-    "headline": "How to use online repositories",
-    "panels": [
-      "I know, you probably expect me to show you a magical way on how to find images, that you can easily use. Well, there is something just like that.",
-      {
-        "text": "There are many different image repositories on the internet. Not all of them are free to use in any context. The biggest repository for free licensed images is Wikimedia Commons. So, let me tell you something about this first. \n\n Wikimedia Commons hosts more than 54 million media files such as images, audio and video files that are free to use for all!",
-        "type": "resource"
-      },
-      {
-        "text": "On Wikimedia Commons you can not only find images, but also audio and video files. You have likely seen images from Wikimedia Commons before as Wikipedia gets its images and other media files from Wikimedia Commons. The great thing about Wikimedia Commons is that all media files are published under a free license or in the public domain. That means, as you might remember, that you can use them for free and process them further as long as you comply with the conditions for using them. You can even use them commercially. You have already gotten to know the different CC licenses, so you should already be familiar with them!",
-        "type": "resource"
-      },
-      {
-        "text": "Please be advised that nothing found in simple online searches has necessarily been reviewed by professionals with the expertise necessary to provide you with complete, accurate or reliable information.",
-        "type": "resource"
-      },
-      {
-        "text": "There are also lots of other repositories like for example www.flickr.com or www.pixabay.com and many more. If you don't find anything on Wikimedia Commons, you'll definitely find it there. However, the ways licenses are displayed there are a little different and they often set limits to the context of use. Flickr for example hosts many non-free images, so always keep that in mind! So check carefully. Pixabay and some other repositories even decided to make up their own licenses that they claim “free to use”, but they often set limits you should inform yourself about. ",
-        "type": "resource"
-      },
-      {
-        "text": "If you want, you can easily find great images on Wikimedia Commons. The media files on Wikimedia Commons were shared by thousands of volunteers or even governmental institutions that decided to provide their data to the platform. Right now there are almost 40,000 active users on the platform. It would be great if maybe you would also decide one day to contribute to Wikimedia Commons too to make knowledge even more accessible!",
-        "type": "resource"
-      },
-      "Now I’ve told you a lot about repositories. What do you think so far?"
-    ],
-    "decisions": [
-      "Wow, I love it. Tell me more about Wikimedia Commons!",
-      "I am not convinced yet. Aren’t there more possibilities?"
-    ],
-    "nextPage": ["/usingwiki", "/usingsearchengines"],
-    "nextPageIDs": [9, 18]
-  },
-  {
-    "id": 8,
-    "pageurl": "/findingholder",
-    "headline": "Who is the creator of the image?",
-    "panels": [
-      "That’s good! The image’s source is one component of the so called license notice that we will have to create. You should write down or copy the link now, in order to use it for the license notice later.",
-      "Another very important thing is to know the copyright holder of the image.",
-      "The copyright holder is the creator of the image and the one who decides what other people are allowed or not allowed to do with it.",
-      "Are you able to find out the name of the creator of your image?"
-    ],
-    "decisions": [
-      "I don’t care who created the image!",
-      "Found it!",
-      "No, I cannot find any information on that."
-    ],
-    "nextPage": ["/stealingpictures", "/copyrightinfo", "/dontusetheimage"],
-    "nextPageIDs": [300, 10, 15]
-  },
-  {
-    "id": 9,
-    "pageurl": "/usingwiki",
-    "headline": "How to use Wikimedia Commons",
-    "panels": [
-      "I'd love to!",
-      {
-        "text": "Now let me tell you more about Wikimedia Commons. It is a rapidly growing media file repository of common and freely licensed media content – in the form of images, audio and video files – to which anyone can contribute. The collection is compiled, prepared and made available jointly by volunteers and cultural institutions.",
-        "type": "resource"
-      },
-      {
-        "text": "Unlike traditional media repositories, Wikimedia Commons is free. Everyone is allowed to copy, use and modify any files here freely as long as they follow the terms specified by the author; this often means crediting the source and author(s) appropriately and releasing copies/improvements under the same freedom to others. The license conditions of each individual media file can be found on their description page.",
-        "type": "resource"
-      },
-      {
-        "text": "The material in the repository is ordered into categories and presented in galleries – in fact, working with Wikimedia Commons is incredibly simple. Three categories of the media archive are particularly good examples of the outstanding quality of the collection and the high standards of its contributorsusers: “Featured Pictures”, “Quality Images” and “Valued Images”.",
-        "type": "resource"
-      },
-      {
-        "text": "Search and find\nHere’s how to find files in Wikimedia Commons really quickly:\n\nFrom Wikipedia, for example, you can get to the image integrated in an article quickly and simply by clicking on it (or on the file name for audio or video elements). A click on the link “description page there” then takes you to the media database. Another option is a direct keyword search on: commons.wikimedia.org. Or get inspired by clicking through the media archive’s category system! And if you get lost, you can still take the way through CC-Search and look through the results.",
-        "type": "resource"
-      },
-      {
-        "text": "Copyright and use\nAll files on Wikimedia Commons must either be in the public domain or under a free license. Most pictures in Wikimedia Commons are licensed under a CC BY- SA license, that ensures that free licensed images also stay free in the future.",
-        "type": "resource"
-      },
-      {
-        "text": "In this license the copyright holder of a work has to be named (BY) and the file, in particular when it is edited, must be shared on the same terms (SA = share alike), also when it’s edited.\nTo meet the standards of the Wikimedia projects it is important in all cases to indicate the copyright holder and the license on the respective image description page of the medium.",
-        "type": "resource"
-      },
-      {
-        "text": "General Disclaimer: \n\nPlease be advised that nothing found in simple online searches has necessarily been reviewed by professionals with the expertise necessary to provide you with complete, accurate or reliable information.\n\nThat's not to say that you won't find valuable and accurate information at the Wikimedia Commons, however please be advised that Wikimedia Commons   as a community project cannot guarantee, in any way whatsoever, the validity of the information found here. However, the volunteers are very attentive to copyright rules and have a very close eye on the content of their platform. So it’s not very likely to stumble on images that are actually not usable.",
-        "type": "resource"
-      },
-      "So was hälst du davon?"
-    ],
-    "decisions": [
-      "That’s it? So how do I use these images?",
-      "Cool, that's very easy. Thank you for showing me where to get images that don’t need an annoying license notice!"
-    ],
-    "nextPage": ["/usingwiki2", "/stealingpictures"],
-    "nextPageIDs": [20, 300]
-  },
-  {
-    "id": 10,
-    "pageurl": "/copyrightinfo",
-    "headline": "Am I allowed to use the image?",
-    "panels": [
-      "Good. You already found two important components for the license notice. Don’t forget to note down the copyright holder now. You will need it later.",
-      "Now it is time to have a look at the copyright information itself.",
-      "Did the author provide any information on how the image can be used by others?"
-    ],
-    "decisions": [
-      "No, I was looking for it but couldn’t find any information!",
-      "Yes, but I am not sure, what they actually mean.",
-      "Yes, it is one of the CC licenses.",
-      "It says “all rights reserved”."
-    ],
-    "nextPage": ["/dontusetheimage", "/dontusetheimage", "/gettinglicence", "/dontusetheimage"],
-    "nextPageIDs": [15, 15, 11, 15]
-  },
-  {
-    "id": 11,
-    "pageurl": "/gettinglicence",
-    "headline": "Understand the license",
-    "panels": [
-      "Great, that makes life pretty easy.",
-      "But although the CC licenses are clearly structured as you’ve already seen, it can be difficult to interpret them properly in a specific use case.",
-      "Let’s have a look at some examples together."
-    ],
-    "decisions": [
-      "OK."
-    ],
-    "nextPage": ["/findthelicence1"],
-    "nextPageIDs": [26]
-  },
-  {
-    "id": 12,
-    "pageurl": "/usinglicence",
-    "headline": "Use the image",
-    "panels": [
-      "Well done. Now you should feel comfortable to apply your knowledge.",
-      "Do you feel comfortable to use the image now?"
-    ],
-    "decisions": [
-      "Let me have a look at the examples again.",
-      "Sure, let’s do it.",
-      "I still don’t understand if I can use the image for my purpose."
-    ],
-    "nextPage": ["/findthelicence1", "/creatingnotice", "/dontusetheimage"],
-    "nextPageIDs": [26, 13, 15]
-  },
-  {
-    "id": 13,
-    "pageurl": "/creatingnotice",
-    "headline": "Create the license notice",
-    "panels": [
-      "Now that you collected all necessary information it’s time to create the license notice.",
-      "A license notice consists of four components: ",
-      {
-        "text": "1. Title - What is the name of the material? \n If a title was provided for the material, include it. Sometimes a title is not provided; in that case, don't worry about it.",
-        "type": "resource"
-      },
-      {
-        "text": "2. Author - Who owns the material? \n Name the author or authors of the material in question. Sometimes, the licensor may want you to give credit to some other entity, like a company or pseudonym. In rare cases, the licensor may not want to be attributed at all. In all of these cases, just do what they request.",
-        "type": "resource"
-      },
-      {
-        "text": "3. Source - Where can I find it? \n Since you somehow accessed the material, you know where to find it. Provide the source of the material so others can, too. Since we live in the age of the Internet, this is usually a URL or hyperlink where the material resides.",
-        "type": "resource"
-      },
-      {
-        "text": "4. License - How can I use it? \n There are six different CC licenses; which one is the material under? Name and provide a link to it, eg. http://creativecommons.org/licenses/by/4.0/ for CC BY.\n→ If the licensor included a license notice with more information, include that as well.",
-        "type": "resource"
-      },
-      "Good. Should we do it?"
-    ],
-    "decisions": [
-      "Yeah, let's go!",
-      "Actually, I’m still not sure about it..."
-    ],
-    "nextPage": ["/usingpicture", "/dontusetheimage"],
-    "nextPageIDs": [14, 15]
-  },
-  {
-    "id": 14,
-    "pageurl": "/usingpicture",
-    "headline": "Using the picture",
-    "panels": [
-      "Great! Now you have all the information you need to use your picture from the internet without going to jail."
-    ],
-    "decisions": [
-      "Not sure, tell me more.",
-      "Cool."
-    ],
-    "nextPage": ["/success"],
-    "nextPageIDs": [16]
-  },
-  {
-    "id": 15,
-    "pageurl": "/dontusetheimage",
-    "headline": "Don't use the image",
-    "panels": [
-      "“Well, this is a difficult case. If you're missing certain information about the image or you're unsure whether the information you found is really correct, I advise you not to use the image.",
-      "If the image you want to use is not freely licensed, it gets complicated as well. Of course you can ask the creator if you can use their image, but in most cases this requires some research and patience. To be honest, in this case, too, I would advise you to look for another image that is freely licensed. That makes the whole thing much easier!",
-      {
-        "text": "If you can find out the rights owner of the image, you can try to contact him. If he allows you to use it in the context you want, you are lucky. Maybe it is worth asking him also if he wants to be named or not.",
-        "type": "resource"
-      },
-      {
-        "text": "If you use it regardless of permission: \nUsing images publicly without permission is a copyright infringement, as is removal of any copyright information or the unauthorized exhibition, reproduction or alteration of an image. Using an image without permission will result in legal consequences such as cessation of infringement and to damages, claims to remove all unauthorized copies and even pecuniary compensation.\n",
-        "type": "resource"
-      },
-      "There are many other ways to find freely licensed images. I can show you some examples of online repositories, which you can use or give you an introduction on how to use a search engine to find those freely licensed images.",
-      "What do you want to do next?"
-    ],
-    "decisions": [
-      "Tell me more about those repositories!",
-      "If I can not find any legal information how else should I credit it? It’s the creators fault, not mine.",
-      "Show me how to use a search engine, please."
-    ],
-    "nextPage": ["/usingfreelicences", "/stealingpictures", "/usingsearchengines"],
-    "nextPageIDs": [7, 300, 18]
-  },
-  {
-    "id": 16,
-    "pageurl": "/success",
-    "headline": "Success",
-    "panels": [
-      "Well done! Following the steps you just learned will help you using images the legal way and avoid going to jail.",
-      "-----DISCLAIMER-----",
-      "Actually, there are multiple ways to get here. Would you like to learn more about this topic?"
-    ],
-    "decisions": [
-      "Thanks, that's enough licenses for now!",
-      "Tell me more about the use of repositories.",
-      "Is there a way to find free images on Google?",
-      "What about a specific image I found on a website?"
-    ],
-    "nextPage": ["/finish", "/usingfreelicences", "/searchingonline", "/picturesfrominternet"],
-    "nextPageIDs": [17, 7, 5, 4]
-  },
-  {
-    "id": 17,
-    "pageurl": "/finish",
-    "headline": "Finish",
-    "panels": [
-      "Thank you {username}, it’s been a pleasure to introduce you to the world of licenses and open content.",
-      "If you would like to get more information, you are always very welcome to return to this tutorial. Or even start right now by exploring our resources.",
-      "Would you like to test yourself on your newly acquired knowledge or just want to have some fun? Go ahead and play all the tutorial games in our “Games” section."
-    ],
-    "nextPage": ["/placeholder"],
-    "nextPageIDs": [123]
-  },
-  {
-    "id": 18,
-    "pageurl": "/usingsearchengines",
-    "headline": "How to use search engines",
-    "panels": [
-      "Google sure is a great place to find images, but there is more. Let me show you.",
-      "-----EXPLAINING SEARCH ENGINES-----"
-    ],
-    "decisions": [
-      "There must be something easier!",
-      "That doesn’t sound too bad.",
-      "Well, if the search engines already filters the images for me I should be able to just use them without taking further action."
-    ],
-    "nextPage": ["/usingfreelicences", "/matchthelicense", "/stealingpictures"],
-    "nextPageIDs": [7, 21, 300]
-  },
-  {
-    "id": 20,
-    "pageurl": "usingwiki2",
-    "headline": "Create a license notice",
-    "panels": [
-      "That depends. You need to create a license notice for most images from the internet if you want to use them. But - surprise - there are a few exceptions.",
-      {
-        "text": "1. Title - What is the name of the material? \n If a title was provided for the material, include it. Sometimes a title is not provided; in that case, don't worry about it.",
-        "type": "resource"
-      },
-      {
-        "text": "2. Author - Who owns the material? \n Name the author or authors of the material in question. Sometimes, the licensor may want you to give credit to some other entity, like a company or pseudonym. In rare cases, the licensor may not want to be attributed at all. In all of these cases, just do what they request.",
-        "type": "resource"
-      },
-      {
-        "text": "3. Source - Where can I find it? \n Since you somehow accessed the material, you know where to find it. Provide the source of the material so others can, too. Since we live in the age of the Internet, this is usually a URL or hyperlink where the material resides.",
-        "type": "resource"
-      },
-      {
-        "text": "4. License - How can I use it? \n There are six different CC licenses; which one is the material under? Name and provide a link to it, eg. http://creativecommons.org/licenses/by/4.0/ for CC BY.\n→ If the licensor included a license notice with more information, include that as well.",
-        "type": "resource"
-      },
-      "But don't worry. There is a tool that will help you."
-    ],
-    "nextPage": "/attributionGenerator",
-    "nextPageIDs": [24]
-  },
-  {
-    "id": 21,
-    "pageurl": "/usinggoogle",
-    "headline": "Find your image",
-    "panels": [
-      "Good. Now apply your knowledge to find a nice free licensed image with the help of a search engine of your choice.",
-      "Whenever you feel like you found a nice image, we can continue."
-    ],
-    "decisions": [
-      "Let me see those use cases again.",
-      "Alright, found one."
-    ],
-    "nextPage": ["/usingsearchengines", "/collectinfo"],
-    "nextPageIDs": [18, 23]
-  },
-  {
-    "id": 22,
-    "pageurl": "/matchthelicense",
-    "headline": "Match the License",
-    "panels": [],
-    "nextPage": ["/usinggoogle"],
-    "nextPageIDs": [21]
-  },
-  {
-    "id": 23,
-    "pageurl": "/collectinfo",
-    "headline": "Collecting information",
-    "panels": [
-      "Fine. Now that you found an image, you have to collect the legal information in order to be able to use it.",
-      {
+  "id": 0,
+  "pageurl": "/",
+  "headline": "The Lawyer Dude",
+  "nextPage": "/overview",
+  "nextPageIDs": [100]
+},
+{
+  "id": 1,
+  "pageurl": "/learninggoals",
+  "headline": "What you learn in this story",
+  "panels": [
+    "This online learning unit will help you to understand how to use images from the internet.",
+    "You will learn about the differences of all rights reserved, some rights reserved and no rights reserved images and what information is mandatory in order to legally use them.",
+    "You will also be introduced to different tools and repositories that can help you find free licensed images on the internet.",
+    "Find your own path through the game and be rewarded by acquiring a lot of helpful knowledge.",
+    "OK, lets learn how to use images from the internet without going to jail!"
+  ],
+  "nextPage": "/entername",
+  "nextPageIDs": [2]
+},
+{
+  "id": 2,
+  "pageurl": "/entername",
+  "headline": "Introduce yourself",
+  "panels": [
+    "Hello. Are you interested in learning about copyright and free licenses? That’s great, you came to the right place.",
+    "But, how rude of me! I totally forgot to introduce myself. I am the Lawyer Dude, your legal advisor and I am here to help you.",
+    "Before we start our exciting journey through the beautiful world of licenses, how shall I call you?"
+  ],
+  "nextPage": "/introduction",
+  "nextPageIDs": [3]
+},
+{
+  "id": 3,
+  "pageurl": "/introduction",
+  "headline": "Let's get started",
+  "panels": [
+    "Hey {username}, nice to meet you.",
+    "Don’t worry. I know that there is a lot of confusion about using images from the internet. But it is actually not that complicated. Let’s just do it together, alright?",
+    {
+      "text": "When using images from the internet, you can’t avoid talking about copyright. Traditional copyright though is a rather restrictive regime which gives copyright holders exclusive rights (as in “all rights reserved” as a default). Neither copying and distributing nor modifying is permitted without an explicit permission. Only a few use cases get special permissions directly from the law. These so called copyright exceptions are reserved for certain users like teachers in public schools, journalists, judges and so on. Everybody else must rely on explicit permissions from the copyright holders. Unfortunately, this makes traditional copyright not quite compatible with the digital age. In this way open licensing (or free licensing) is particularly important in a digital context. Open licensing is meant to make granting permissions easier, which in turn makes reusing content like images easier: Open content is “pre-permitted-to-use content”. This enables others to use this content like images and hand it over to others. Thereby it is a way for creators and rights holders to spread their work more easily - by allowing others to use, share and mix their work without needing to ask for (added individual) permission in advance. By the help of open license models, rights holders determine how their work may be used (“some rights reserved” instead of the default “all rights reserved”). More on this later. Unless otherwise stated, the “all rights reserved” rule usually applies: As mentioned before, you are not allowed to use others people’s works without asking for permission. Use in this context is anything beyond consumption of the impression which means anything beyond looking at images, listening to music and so on. So if the rights holder did not give you the explicit right to use, publish or modify the image you have no right to do so. You can imagine that this could be difficult for you if you want to use an image online. By contrast, there is the open content licensing model invented by Creative Commons, the so called CC licenses. If someone publishes her or his own work under such a license, this means that only “some rights are reserved”. Through the use of CC licenses, millions of people have made their photos, videos and other creative content globally available for everyone to use. You can use freely licensed images as long as you follow some basic rules that are defined in the license conditions. One condition all CC licenses have in common is attribution. It aims to ensure that right holders to get the credit for their work they deserve. Just like you, the next time you publish your own image! \n In addition, Creative Commons also provides a tool that allows rights holders to waive all rights and place a work in the public domain (“all rights granted”).",
+      "type": "resource"
+    },
+    "Now, that you are on board - what brought you here anyway?"
+  ],
+  "decisions": [
+    "I found a nice image on the internet that I would like to use. Can you show me how to use it correctly?",
+    "I am not sure where to look for an image that I can use for my own purpose. Can you help me?"
+  ],
+  "nextPage": ["/picturesfrominternet", "/searchingonline"],
+  "nextPageIDs": [4, 5]
+},
+{
+  "id": 4,
+  "pageurl": "/picturesfrominternet",
+  "headline": "How to use images from the internet",
+  "panels": [
+    "Of course I can help you. Let me show you how to find out if you are allowed to and how to use an image from the internet.",
+    "I believe you now know the very basics of open licensing by now, so let’s take a look at the so called CC licenses.",
+    {
+      "text": "So now we get into open licensing a little deeper. I would like to introduce you to the CC legal tools. Don’t worry we’ll make it simple and concentrate on the CC licenses that are the most relevant for your context. In the end you will know how you can use a freely licensed image. I promise.",
+      "type": "resource"
+    },
+    {
+      "text": "Before we start let’s have a look at a symbol which I'm sure you've met many times before: \n This pictogram shows you that this image is protected by copyright as explained at the very beginning. It is usually used to indicate that the rights holder reserves all rights. Copying, distributing, modifying is not allowed unless you ask for permission to use it (“all rights reserved”).",
+      "type": "resource"
+    },
+    {
+      "text": "The absolute opposite to this is when rights holders waive all rights and place their works in the public domain. \n This pictogram states that all rights are granted for any use of a work in any way and for any purpose (“no rights reserved”). Works in the public domain are free of protection. Either because the term of protection has expired or they were not copyright-protected in the first place. \n Creative Commons additionally offers a second tool that causes a similar legal status like the public domain tool: CC0. Rights holders are actively waiving all rights from their works. Consequently, all worksimages licensed under CC0 can be used by anyone without any restrictions or obligations.",
+      "type": "resource"
+    },
+    {
+      "text": "Now you already know the two public domain tools (or so called “waivers”). Let’s have a look at the CC licenses. \n \n Each license contains at least one of four basic elements which are illustrated by abbreviations and pictograms. These elements can be combined with each other. Licenses’ names always start with the “CC” abbreviation. Let’s have a look how this might look like: \n BY stands for “attribution” and means you have to mention the author and other parties designated for attribution. The corresponding license is therefore called “CC BY”. It means that you are free to use the work in any way and for any purpose - it therefore is the most permissive type of all CC licences. By the way, every license contains the obligation to name the author (i. e. every CC license contains the “BY” element). \n SA stands for “Share Alike” and means that anyone who modifies the original work must share the adapted version under a CC BY-SA license or a compatible licence. Apart from this, all license conditions of the CC BY license are still valid here. \n ND stands for “No Derivatives” which means that you are not allowed to modify the image in any way. The corresponding license is called “CC BY-ND”. Apart from this, all license conditions of the CC BY license are still valid here. \n NC stands for “Non Commercial” and states - contrary to the previous mentioned licenses - that you are not allowed to use the workimage commercially. With “CC BY-NC” any reproduction or modification of an image in order to realise a commercial gain is not permitted. Apart from this, all license conditions of the CC BY license are still valid here.",
+      "type": "resource"
+    },
+    {
+      "text": "As if that weren't enough the four elements can be combined. But don’t worry we won’t go any deeper into this. Maybe you can keep in mind a simple rule: \nThe more restrictions a license contains the less it is compatible with the idea of free cultural works or the open definition. To give you one example, let me shortly introduce the most restrictive CC license to you: CC BY-NC-ND. You may not use a work commercially, nor modify it. So, you're probably gonna agree with me that this isn't necessarily making sharing easier.",
+      "type": "resource"
+    },
+    {
+      "text": "This infographic may help you to better understand the CC license spectrum between “public domain/most open” (top) and “all rights reserved/least open” (bottom). Hint: Focus on the darker green area and therefore on the public domain tools “PD” and “CC0” as well as the two CC licenses “CC BY” and “CC BY-SA”. ",
+      "type": "resource"
+    },
+    "Are you aware of which of the licenses I just explained applies to your image?"
+  ],
+  "decisions": [
+    "Phhh, that is way too complicated. I will just use the image. No one ever will find out anyways.",
+    "To be honest, I don’t know.",
+    "Forget about the image! Is there a way to directly access those freely licensed images you just mentioned?"
+  ],
+  "nextPage": ["/stealingpictures", "/understandingsource", "/usingfreelicences"],
+  "nextPageIDs": [300, 6, 7]
+},
+{
+  "id": 5,
+  "pageurl": "/searchingonline",
+  "headline": "How to search for images online",
+  "panels": [
+    "Alright then. Let’s find a nice image that fits your needs.",
+    "I believe you now know the very basics of open licensing by now, so let’s take a look at the so called CC licenses before we continue.",
+    "So now we get into open licensing a little deeper. I would like to introduce you to the CC legal tools. Don’t worry we’ll make it simple and concentrate on the CC licenses that are the most relevant for your context. In the end you will know how you can use a freely licensed image. I promise.",
+    {
+      "text": "Before we start let’s have a look at a symbol which I'm sure you've met many times before: \n This pictogram shows you that this image is protected by copyright as explained at the very beginning. It is usually used to indicate that the rights holder reserves all rights. Copying, distributing, modifying is not allowed unless you ask for permission to use it (“all rights reserved”).",
+      "type": "resource",
+      "images": [""]
+    },
+    {
+      "text": "The absolute opposite to this is when rights holders waive all rights and place their works in the public domain. \n This pictogram states that all rights are granted for any use of a work in any way and for any purpose (“no rights reserved”). Works in the public domain are free of protection. Either because the term of protection has expired or they were not copyright-protected in the first place.",
+      "type": "resource",
+      "images": ["images/pd.svg"]
+    },
+    {
+      "text": "Creative Commons additionally offers a second tool that causes a similar legal status like the public domain tool: CC0. Rights holders are actively waiving all rights from their works. Consequently, all worksimages licensed under CC0 can be used by anyone without any restrictions or obligations.",
+      "type": "resource",
+      "images": ["images/Cc-zero.svg"]
+    },
+    {
+      "text": "Now you already know the two public domain tools (or so called “waivers”). Let’s have a look at the CC licenses. \n \n Each license contains at least one of four basic elements which are illustrated by abbreviations and pictograms. These elements can be combined with each other. Licenses’ names always start with the “CC” abbreviation. Let’s have a look how this might look like: \n BY stands for “attribution” and means you have to mention the author and other parties designated for attribution. The corresponding license is therefore called “CC BY”. It means that you are free to use the work in any way and for any purpose - it therefore is the most permissive type of all CC licences. By the way, every license contains the obligation to name the author (i. e. every CC license contains the “BY” element).",
+      "type": "resource",
+      "images": ["images/Cc-by.svg"]
+    },
+    {
+      "text":  "SA stands for “Share Alike” and means that anyone who modifies the original work must share the adapted version under a CC BY-SA license or a compatible licence. Apart from this, all license conditions of the CC BY license are still valid here. \n ND stands for “No Derivatives” which means that you are not allowed to modify the image in any way. The corresponding license is called “CC BY-ND”. Apart from this, all license conditions of the CC BY license are still valid here. \n NC stands for “Non Commercial” and states - contrary to the previous mentioned licenses - that you are not allowed to use the workimage commercially. With “CC BY-NC” any reproduction or modification of an image in order to realise a commercial gain is not permitted. Apart from this, all license conditions of the CC BY license are still valid here.",
+      "type": "resource",
+      "images": ["images/CC-sa.svg", "images/CC-nd.svg", "images/Cc-nc.svg"]
+    },
+    {
+      "text": "As if that weren't enough the four elements can be combined. But don’t worry we won’t go any deeper into this. Maybe you can keep in mind a simple rule: \nThe more restrictions a license contains the less it is compatible with the idea of free cultural works or the open definition. To give you one example, let me shortly introduce the most restrictive CC license to you: CC BY-NC-ND. You may not use a work commercially, nor modify it. So, you're probably gonna agree with me that this isn't necessarily making sharing easier.",
+      "type": "resource"
+    },
+    {
+      "text": "This infographic may help you to better understand the CC license spectrum between “public domain/most open” (top) and “all rights reserved/least open” (bottom). Hint: Focus on the darker green area and therefore on the public domain tools “PD” and “CC0” as well as the two CC licenses “CC BY” and “CC BY-SA”. ",
+      "type": "resource"
+    },
+    "Where do you usually look for images?"
+  ],
+  "decisions": [
+    "Google.",
+    "I don’t know. You tell me!"
+  ],
+  "nextPage": ["/usingsearchengines", "/usingfreelicences"],
+  "nextPageIDs": [18, 7]
+},
+{
+  "id": 6,
+  "pageurl": "/understandingsource",
+  "headline": "Understanding the Source",
+  "panels": [
+    "No problem. I can help you to find all the information you need in order to use the image. First let’s start with the source of an image.",
+    "As I already mentioned before, there are three different ways of licensing images. Many images that can be found online have all rights reserved. Here you need to ask for permission to use the image. Some images have some rights reserved. Those are covered by the CC licenses. And some images are under the public domain, so there are no rights reserved. These images are free to use without any further restrictions.",
+    "If you want to use the image, you need to tell others where the image is from and how it is licensed. So first, where did you find your image?"
+  ],
+  "decisions": [
+    "Seriously? I don't remember. Somewhere on the internet.",
+    "I’ve saved the source link.",
+    "I found it somewhere on Wikimedia Commons or Wikipedia."
+  ],
+  "nextPage": ["/dontusetheimage", "/findingholder", "usingwiki"],
+  "nextPageIDs": [15, 8, 9]
+},
+{
+  "id": 7,
+  "pageurl": "/usingfreelicences",
+  "headline": "How to use online repositories",
+  "panels": [
+    "I know, you probably expect me to show you a magical way on how to find images, that you can easily use. Well, there is something just like that.",
+    {
+      "text": "There are many different image repositories on the internet. Not all of them are free to use in any context. The biggest repository for free licensed images is Wikimedia Commons. So, let me tell you something about this first. \n\n Wikimedia Commons hosts more than 54 million media files such as images, audio and video files that are free to use for all!",
+      "type": "resource"
+    },
+    {
+      "text": "On Wikimedia Commons you can not only find images, but also audio and video files. You have likely seen images from Wikimedia Commons before as Wikipedia gets its images and other media files from Wikimedia Commons. The great thing about Wikimedia Commons is that all media files are published under a free license or in the public domain. That means, as you might remember, that you can use them for free and process them further as long as you comply with the conditions for using them. You can even use them commercially. You have already gotten to know the different CC licenses, so you should already be familiar with them!",
+      "type": "resource"
+    },
+    {
+      "text": "Please be advised that nothing found in simple online searches has necessarily been reviewed by professionals with the expertise necessary to provide you with complete, accurate or reliable information.",
+      "type": "resource"
+    },
+    {
+      "text": "There are also lots of other repositories like for example www.flickr.com or www.pixabay.com and many more. If you don't find anything on Wikimedia Commons, you'll definitely find it there. However, the ways licenses are displayed there are a little different and they often set limits to the context of use. Flickr for example hosts many non-free images, so always keep that in mind! So check carefully. Pixabay and some other repositories even decided to make up their own licenses that they claim “free to use”, but they often set limits you should inform yourself about. ",
+      "type": "resource"
+    },
+    {
+      "text": "If you want, you can easily find great images on Wikimedia Commons. The media files on Wikimedia Commons were shared by thousands of volunteers or even governmental institutions that decided to provide their data to the platform. Right now there are almost 40,000 active users on the platform. It would be great if maybe you would also decide one day to contribute to Wikimedia Commons too to make knowledge even more accessible!",
+      "type": "resource"
+    },
+    "Now I’ve told you a lot about repositories. What do you think so far?"
+  ],
+  "decisions": [
+    "Wow, I love it. Tell me more about Wikimedia Commons!",
+    "I am not convinced yet. Aren’t there more possibilities?"
+  ],
+  "nextPage": ["/usingwiki", "/usingsearchengines"],
+  "nextPageIDs": [9, 18]
+},
+{
+  "id": 8,
+  "pageurl": "/findingholder",
+  "headline": "Who is the creator of the image?",
+  "panels": [
+    "That’s good! The image’s source is one component of the so called license notice that we will have to create. You should write down or copy the link now, in order to use it for the license notice later.",
+    "Another very important thing is to know the copyright holder of the image.",
+    "The copyright holder is the creator of the image and the one who decides what other people are allowed or not allowed to do with it.",
+    "Are you able to find out the name of the creator of your image?"
+  ],
+  "decisions": [
+    "I don’t care who created the image!",
+    "Found it!",
+    "No, I cannot find any information on that."
+  ],
+  "nextPage": ["/stealingpictures", "/copyrightinfo", "/dontusetheimage"],
+  "nextPageIDs": [300, 10, 15]
+},
+{
+  "id": 9,
+  "pageurl": "/usingwiki",
+  "headline": "How to use Wikimedia Commons",
+  "panels": [
+    "I'd love to!",
+    {
+      "text": "Now let me tell you more about Wikimedia Commons. It is a rapidly growing media file repository of common and freely licensed media content – in the form of images, audio and video files – to which anyone can contribute. The collection is compiled, prepared and made available jointly by volunteers and cultural institutions.",
+      "type": "resource"
+    },
+    {
+      "text": "Unlike traditional media repositories, Wikimedia Commons is free. Everyone is allowed to copy, use and modify any files here freely as long as they follow the terms specified by the author; this often means crediting the source and author(s) appropriately and releasing copies/improvements under the same freedom to others. The license conditions of each individual media file can be found on their description page.",
+      "type": "resource"
+    },
+    {
+      "text": "The material in the repository is ordered into categories and presented in galleries – in fact, working with Wikimedia Commons is incredibly simple. Three categories of the media archive are particularly good examples of the outstanding quality of the collection and the high standards of its contributorsusers: “Featured Pictures”, “Quality Images” and “Valued Images”.",
+      "type": "resource"
+    },
+    {
+      "text": "Search and find\nHere’s how to find files in Wikimedia Commons really quickly:\n\nFrom Wikipedia, for example, you can get to the image integrated in an article quickly and simply by clicking on it (or on the file name for audio or video elements). A click on the link “description page there” then takes you to the media database. Another option is a direct keyword search on: commons.wikimedia.org. Or get inspired by clicking through the media archive’s category system! And if you get lost, you can still take the way through CC-Search and look through the results.",
+      "type": "resource"
+    },
+    {
+      "text": "Copyright and use\nAll files on Wikimedia Commons must either be in the public domain or under a free license. Most pictures in Wikimedia Commons are licensed under a CC BY- SA license, that ensures that free licensed images also stay free in the future.",
+      "type": "resource"
+    },
+    {
+      "text": "In this license the copyright holder of a work has to be named (BY) and the file, in particular when it is edited, must be shared on the same terms (SA = share alike), also when it’s edited.\nTo meet the standards of the Wikimedia projects it is important in all cases to indicate the copyright holder and the license on the respective image description page of the medium.",
+      "type": "resource"
+    },
+    {
+      "text": "General Disclaimer: \n\nPlease be advised that nothing found in simple online searches has necessarily been reviewed by professionals with the expertise necessary to provide you with complete, accurate or reliable information.\n\nThat's not to say that you won't find valuable and accurate information at the Wikimedia Commons, however please be advised that Wikimedia Commons   as a community project cannot guarantee, in any way whatsoever, the validity of the information found here. However, the volunteers are very attentive to copyright rules and have a very close eye on the content of their platform. So it’s not very likely to stumble on images that are actually not usable.",
+      "type": "resource"
+    },
+    "So was hälst du davon?"
+  ],
+  "decisions": [
+    "That’s it? So how do I use these images?",
+    "Cool, that's very easy. Thank you for showing me where to get images that don’t need an annoying license notice!"
+  ],
+  "nextPage": ["/usingwiki2", "/stealingpictures"],
+  "nextPageIDs": [20, 300]
+},
+{
+  "id": 10,
+  "pageurl": "/copyrightinfo",
+  "headline": "Am I allowed to use the image?",
+  "panels": [
+    "Good. You already found two important components for the license notice. Don’t forget to note down the copyright holder now. You will need it later.",
+    "Now it is time to have a look at the copyright information itself.",
+    "Did the author provide any information on how the image can be used by others?"
+  ],
+  "decisions": [
+    "No, I was looking for it but couldn’t find any information!",
+    "Yes, but I am not sure, what they actually mean.",
+    "Yes, it is one of the CC licenses.",
+    "It says “all rights reserved”."
+  ],
+  "nextPage": ["/dontusetheimage", "/dontusetheimage", "/gettinglicence", "/dontusetheimage"],
+  "nextPageIDs": [15, 15, 11, 15]
+},
+{
+  "id": 11,
+  "pageurl": "/gettinglicence",
+  "headline": "Understand the license",
+  "panels": [
+    "Great, that makes life pretty easy.",
+    "But although the CC licenses are clearly structured as you’ve already seen, it can be difficult to interpret them properly in a specific use case.",
+    "Let’s have a look at some examples together."
+  ],
+  "decisions": [
+    "OK."
+  ],
+  "nextPage": ["/findthelicence1"],
+  "nextPageIDs": [26]
+},
+{
+  "id": 12,
+  "pageurl": "/usinglicence",
+  "headline": "Use the image",
+  "panels": [
+    "Well done. Now you should feel comfortable to apply your knowledge.",
+    "Do you feel comfortable to use the image now?"
+  ],
+  "decisions": [
+    "Let me have a look at the examples again.",
+    "Sure, let’s do it.",
+    "I still don’t understand if I can use the image for my purpose."
+  ],
+  "nextPage": ["/findthelicence1", "/creatingnotice", "/dontusetheimage"],
+  "nextPageIDs": [26, 13, 15]
+},
+{
+  "id": 13,
+  "pageurl": "/creatingnotice",
+  "headline": "Create the license notice",
+  "panels": [
+    "Now that you collected all necessary information it’s time to create the license notice.",
+    "A license notice consists of four components: ",
+    {
       "text": "1. Title - What is the name of the material? \n If a title was provided for the material, include it. Sometimes a title is not provided; in that case, don't worry about it.",
       "type": "resource"
-      },
-      {
-        "text": "2. Author - Who owns the material? \n Name the author or authors of the material in question. Sometimes, the licensor may want you to give credit to some other entity, like a company or pseudonym. In rare cases, the licensor may not want to be attributed at all. In all of these cases, just do what they request.",
-        "type": "resource"
-      },
-      {
-        "text": "3. Source - Where can I find it? \n Since you somehow accessed the material, you know where to find it. Provide the source of the material so others can, too. Since we live in the age of the Internet, this is usually a URL or hyperlink where the material resides.",
-        "type": "resource"
-      },
-      {
-        "text": "4. License - How can I use it? \n There are six different CC licenses; which one is the material under? Name and provide a link to it, eg. http://creativecommons.org/licenses/by/4.0/ for CC BY.\n→ If the licensor included a license notice with more information, include that as well.",
-        "type": "resource"
-      },
-      "Let’s start by checking the image source."
+    },
+    {
+      "text": "2. Author - Who owns the material? \n Name the author or authors of the material in question. Sometimes, the licensor may want you to give credit to some other entity, like a company or pseudonym. In rare cases, the licensor may not want to be attributed at all. In all of these cases, just do what they request.",
+      "type": "resource"
+    },
+    {
+      "text": "3. Source - Where can I find it? \n Since you somehow accessed the material, you know where to find it. Provide the source of the material so others can, too. Since we live in the age of the Internet, this is usually a URL or hyperlink where the material resides.",
+      "type": "resource"
+    },
+    {
+      "text": "4. License - How can I use it? \n There are six different CC licenses; which one is the material under? Name and provide a link to it, eg. http://creativecommons.org/licenses/by/4.0/ for CC BY.\n→ If the licensor included a license notice with more information, include that as well.",
+      "type": "resource"
+    },
+    "Good. Should we do it?"
+  ],
+  "decisions": [
+    "Yeah, let's go!",
+    "Actually, I’m still not sure about it..."
+  ],
+  "nextPage": ["/usingpicture", "/dontusetheimage"],
+  "nextPageIDs": [14, 15]
+},
+{
+  "id": 14,
+  "pageurl": "/usingpicture",
+  "headline": "Using the picture",
+  "panels": [
+    "Great! Now you have all the information you need to use your picture from the internet without going to jail."
+  ],
+  "decisions": [
+    "Not sure, tell me more.",
+    "Cool."
+  ],
+  "nextPage": ["/success"],
+  "nextPageIDs": [16]
+},
+{
+  "id": 15,
+  "pageurl": "/dontusetheimage",
+  "headline": "Don't use the image",
+  "panels": [
+    "“Well, this is a difficult case. If you're missing certain information about the image or you're unsure whether the information you found is really correct, I advise you not to use the image.",
+    "If the image you want to use is not freely licensed, it gets complicated as well. Of course you can ask the creator if you can use their image, but in most cases this requires some research and patience. To be honest, in this case, too, I would advise you to look for another image that is freely licensed. That makes the whole thing much easier!",
+    {
+      "text": "If you can find out the rights owner of the image, you can try to contact him. If he allows you to use it in the context you want, you are lucky. Maybe it is worth asking him also if he wants to be named or not.",
+      "type": "resource"
+    },
+    {
+      "text": "If you use it regardless of permission: \nUsing images publicly without permission is a copyright infringement, as is removal of any copyright information or the unauthorized exhibition, reproduction or alteration of an image. Using an image without permission will result in legal consequences such as cessation of infringement and to damages, claims to remove all unauthorized copies and even pecuniary compensation.\n",
+      "type": "resource"
+    },
+    "There are many other ways to find freely licensed images. I can show you some examples of online repositories, which you can use or give you an introduction on how to use a search engine to find those freely licensed images.",
+    "What do you want to do next?"
+  ],
+  "decisions": [
+    "Tell me more about those repositories!",
+    "If I can not find any legal information how else should I credit it? It’s the creators fault, not mine.",
+    "Show me how to use a search engine, please."
+  ],
+  "nextPage": ["/usingfreelicences", "/stealingpictures", "/usingsearchengines"],
+  "nextPageIDs": [7, 300, 18]
+},
+{
+  "id": 16,
+  "pageurl": "/success",
+  "headline": "Success",
+  "panels": [
+    "Well done! Following the steps you just learned will help you using images the legal way and avoid going to jail.",
+    "-----DISCLAIMER-----",
+    "Actually, there are multiple ways to get here. Would you like to learn more about this topic?"
+  ],
+  "decisions": [
+    "Thanks, that's enough licenses for now!",
+    "Tell me more about the use of repositories.",
+    "Is there a way to find free images on Google?",
+    "What about a specific image I found on a website?"
+  ],
+  "nextPage": ["/finish", "/usingfreelicences", "/searchingonline", "/picturesfrominternet"],
+  "nextPageIDs": [17, 7, 5, 4]
+},
+{
+  "id": 17,
+  "pageurl": "/finish",
+  "headline": "Finish",
+  "panels": [
+    "Thank you {username}, it’s been a pleasure to introduce you to the world of licenses and open content.",
+    "If you would like to get more information, you are always very welcome to return to this tutorial. Or even start right now by exploring our resources.",
+    "Would you like to test yourself on your newly acquired knowledge or just want to have some fun? Go ahead and play all the tutorial games in our “Games” section."
+  ],
+  "nextPage": ["/placeholder"],
+  "nextPageIDs": [123]
+},
+{
+  "id": 18,
+  "pageurl": "/usingsearchengines",
+  "headline": "How to use search engines",
+  "panels": [
+    "Google sure is a great place to find images, but there is more. Let me show you.",
+    "-----EXPLAINING SEARCH ENGINES-----"
+  ],
+  "decisions": [
+    "There must be something easier!",
+    "That doesn’t sound too bad.",
+    "Well, if the search engines already filters the images for me I should be able to just use them without taking further action."
+  ],
+  "nextPage": ["/usingfreelicences", "/matchthelicense", "/stealingpictures"],
+  "nextPageIDs": [7, 21, 300]
+},
+{
+  "id": 20,
+  "pageurl": "usingwiki2",
+  "headline": "Create a license notice",
+  "panels": [
+    "That depends. You need to create a license notice for most images from the internet if you want to use them. But - surprise - there are a few exceptions.",
+    {
+      "text": "1. Title - What is the name of the material? \n If a title was provided for the material, include it. Sometimes a title is not provided; in that case, don't worry about it.",
+      "type": "resource"
+    },
+    {
+      "text": "2. Author - Who owns the material? \n Name the author or authors of the material in question. Sometimes, the licensor may want you to give credit to some other entity, like a company or pseudonym. In rare cases, the licensor may not want to be attributed at all. In all of these cases, just do what they request.",
+      "type": "resource"
+    },
+    {
+      "text": "3. Source - Where can I find it? \n Since you somehow accessed the material, you know where to find it. Provide the source of the material so others can, too. Since we live in the age of the Internet, this is usually a URL or hyperlink where the material resides.",
+      "type": "resource"
+    },
+    {
+      "text": "4. License - How can I use it? \n There are six different CC licenses; which one is the material under? Name and provide a link to it, eg. http://creativecommons.org/licenses/by/4.0/ for CC BY.\n→ If the licensor included a license notice with more information, include that as well.",
+      "type": "resource"
+    },
+    "But don't worry. There is a tool that will help you."
+  ],
+  "nextPage": "/attributionGenerator",
+  "nextPageIDs": [24]
+},
+{
+  "id": 21,
+  "pageurl": "/usinggoogle",
+  "headline": "Find your image",
+  "panels": [
+    "Good. Now apply your knowledge to find a nice free licensed image with the help of a search engine of your choice.",
+    "Whenever you feel like you found a nice image, we can continue."
+  ],
+  "decisions": [
+    "Let me see those use cases again.",
+    "Alright, found one."
+  ],
+  "nextPage": ["/usingsearchengines", "/collectinfo"],
+  "nextPageIDs": [18, 23]
+},
+{
+  "id": 22,
+  "pageurl": "/matchthelicense",
+  "headline": "Match the License",
+  "panels": [],
+  "nextPage": ["/usinggoogle"],
+  "nextPageIDs": [21]
+},
+{
+  "id": 23,
+  "pageurl": "/collectinfo",
+  "headline": "Collecting information",
+  "panels": [
+    "Fine. Now that you found an image, you have to collect the legal information in order to be able to use it.",
+    {
+    "text": "1. Title - What is the name of the material? \n If a title was provided for the material, include it. Sometimes a title is not provided; in that case, don't worry about it.",
+    "type": "resource"
+    },
+    {
+      "text": "2. Author - Who owns the material? \n Name the author or authors of the material in question. Sometimes, the licensor may want you to give credit to some other entity, like a company or pseudonym. In rare cases, the licensor may not want to be attributed at all. In all of these cases, just do what they request.",
+      "type": "resource"
+    },
+    {
+      "text": "3. Source - Where can I find it? \n Since you somehow accessed the material, you know where to find it. Provide the source of the material so others can, too. Since we live in the age of the Internet, this is usually a URL or hyperlink where the material resides.",
+      "type": "resource"
+    },
+    {
+      "text": "4. License - How can I use it? \n There are six different CC licenses; which one is the material under? Name and provide a link to it, eg. http://creativecommons.org/licenses/by/4.0/ for CC BY.\n→ If the licensor included a license notice with more information, include that as well.",
+      "type": "resource"
+    },
+    "Let’s start by checking the image source."
+  ],
+  "decisions": [
+    "OK.",
+    "Really? That already sounds like a lot of work to me. Please tell me, that there is an easier way to use the image."
+  ],
+  "nextPage": ["/understandingsource", "/usingfreelicences"],
+  "nextPageIDs": [6, 7]
+},
+{
+  "id": 24,
+  "pageurl": "/attributionGenerator",
+  "headline": "Attribution Generator",
+  "panels": [
+    "Wikimedia Commons offers a tool called “Attribution Generator”.",
+    "This tool makes it easy to reuse images from Wikipedia and the free media archive Wikimedia Commons by generating license information. That means that you can easily comply the license conditions by using the tool.",
+    "These license information are based on a near-verbatim translation of the initial German text snippets, which were drafted with the copyright law of Germany in mind. With the help of this tool you can easily comply the license conditions.",
+    "To use the Attribution Generator follow these steps:",
+    {
+      "text": "1. Insert a web address of a Wikimedia Commons image or a Wikipedia article. <br> 2. Answer the questions about the intended use to create a correct license notice. <br> 3. Read how to use the license notice. <br> 4. Copy the generated license notice and insert it into your publication to use the image correctly.",
+      "type": "resource",
+      "images": ["/images/attribution-generator.gif"]
+    },
+    "Alles verstanden? Probiere den Lizenzhinweis Generator doch gleich mal hier aus: <a href=\"https://lizenzhinweisgenerator.de/?lang=en\">https://lizenzhinweisgenerator.de/?lang=en</a>"
     ],
-    "decisions": [
-      "OK.",
-      "Really? That already sounds like a lot of work to me. Please tell me, that there is an easier way to use the image."
-    ],
-    "nextPage": ["/understandingsource", "/usingfreelicences"],
-    "nextPageIDs": [6, 7]
-  },
-  {
-    "id": 24,
-    "pageurl": "/attributionGenerator",
-    "headline": "Attribution Generator",
-    "panels": [
-      "Wikimedia Commons offers a tool called “Attribution Generator”.",
-      "This tool makes it easy to reuse images from Wikipedia and the free media archive Wikimedia Commons by generating license information. That means that you can easily comply the license conditions by using the tool.",
-      "These license information are based on a near-verbatim translation of the initial German text snippets, which were drafted with the copyright law of Germany in mind. With the help of this tool you can easily comply the license conditions.",
-      "To use the Attribution Generator follow these steps:",
-      {
-        "text": "1. Insert a web address of a Wikimedia Commons image or a Wikipedia article. <br> 2. Answer the questions about the intended use to create a correct license notice. <br> 3. Read how to use the license notice. <br> 4. Copy the generated license notice and insert it into your publication to use the image correctly.",
-        "type": "resource",
-        "images": ["/images/attribution-generator.gif"]
-      },
-      "Alles verstanden? Probiere den Lizenzhinweis Generator doch gleich mal hier aus: <a href=\"https://lizenzhinweisgenerator.de/?lang=en\">https://lizenzhinweisgenerator.de/?lang=en</a>"
-      ],
-    "nextPage": "/success",
-    "nextPageIDs": [16]
-  },
-  {
-    "id": 26,
-    "pageurl": "/findthelicence1",
-    "headline": "CC Licenses and their Use Cases",
-    "panels": [
-      "The cc licenses itself are easy to understand but how about it’s usage in real life? In the following you have to decide if the given use cases are legal under the given license. If so, please mark them as correct."
-    ],
-    "nextPage": "/findthelicence2",
-    "nextPageIDs": [27]
-  },
-  {
-    "id": 27,
-    "pageurl": "/findthelicence2",
-    "headline": "CC Licenses and their Use Cases",
-    "panels": [
-      { "question": "What is allowed under a <b> CC0 </b>?",
-        "correctAnswers": [1,2,3,4,5,6,7,8,9]
-      },
-      { "question": "What is allowed under a <b>CC-BY</b> licence?",
-        "correctAnswers": [2,3,4,5,7,8,9]
-      },
-      { "question": "What is allowed under a <b>CC-BY-SA</b> licence?",
-        "correctAnswers": [1]
-      }     
-    ],
-    "nextPage": "/usinglicence",
-    "nextPageIDs": [12]
-  },
-  {
-    "id": 100,
-    "pageurl": "/overview",
-    "headline": "Welcome to the Lawyer Dude",
-    "tutorial": [
-      { "head": "The Lawyer Dude \nTutorial",
-        "text": "This tutorial will show you how to correctly license images from the Internet and use them for your own purposes. In about 30 minutes you will click through your individual story and learn all the important facts about open content, creative commons and the license notice. Don't worry, the Lawyer Dude is always at your side to help you when things get tricky. Can you manage to get the license notice for your picture without going to jail?"
-      }
-    ],
-    "resources": [
-      { "head": "Resources",
-        "text": "Here you find all the collected resources about Open Content, Creative Commons, License notices and much more from the world of image licenses. The Lawyer Dude provides you with all the facts and explanations - what are you waiting for?"
-      }
-    ],
-    "games": [
-      { "head": "Games",
-        "text": "Do you want to improve or just check your knowledge on Open Content, Creative Commons and alike? You've come to the right place. Play all the games featured in the Lawyer Dude Tutorial again and learn in a fun way what to look out for when using images from the Internet."
-      }
-    ],
-    "nextPage": ["/learninggoals", "/resources", "/games"],
-    "nextPageIDs": [1, 101, 102]
-  },
-  {
-    "id": 102,
-    "pageurl": "/games",
-    "nextPage": ["/matchthelicense", "/findthelicence2", "/jailgame1"],
-    "nextPageIDs": [103, 104, 105]
-  },
-  {
-    "id": 103,
-    "pageurl": "/matchthelicense",
-    "nextPage": ["/games"],
-    "nextPageIDs": [102]
-  },
-  {
-    "id": 104,
-    "pageurl": "/findthelicence2",
-    "headline": "CC Licenses and their Use Cases",
-    "panels": [
-      { "question": "What is allowed under a <b> CC0 </b>?",
-        "correctAnswers": [1,2,3,4,5,6,7,8,9]
-      },
-      { "question": "What is allowed under a <b>CC-BY</b> licence?",
-        "correctAnswers": [2,3,4,5,7,8,9]
-      },
-      { "question": "What is allowed under a <b>CC-BY-SA</b> licence?",
-        "correctAnswers": [1]
-      }     
-    ],
-    "nextPage": ["/games"],
-    "nextPageIDs": [102]
-  },
-  {
-    "id": 105,
-    "pageurl": "/jailgame1",
-    "headline": "Get out of jail Game",
-    "panels": [
-      { "question": "Which of the following statements apply to the CC BY-SA license?",
-        "correctAnswers": [1,4,5],
-        "choices" : [
-          { "id": 1,
-            "choice": "The content is bound to the original or a compatible license."
-          },
-          { "id": 2,
-            "choice": "Modification of the content is prohibited."
-          },
-          { "id": 3,
-            "choice": "The commercial use of the content is prohibited."
-          },
-          { "id": 4,
-            "choice": "Wikipedia content is published under this license."
-          },
-          { "id": 5,
-            "choice": "The name of the license holder must be stated."
-          }
-        ]
-      },
-      { "question": "Which of the following statements apply to the CC-BY license?",
-        "correctAnswers": [1],
-        "choices" : [
-          { "id": 1,
-            "choice": "The name of the license holder must be stated."
-          },
-          { "id": 2,
-            "choice": "The content is bound to the original or a compatible license."
-          },
-          { "id": 3,
-            "choice": "Modification of the content is prohibited."
-          },
-          { "id": 4,
-            "choice": "Wikipedia content is published under this license."
-          },
-          { "id": 5,
-            "choice": "PLACEHOLDER"
-          }
-        ]
-      }
-    ],
-    "nextPage": ["/games"],
-    "nextPageIDs": [102]
-  },
-  {
-    "id": 300,
-    "pageurl": "/stealingpictures",
-    "headline": "You are in jail!",
-    "panels": [
-      "Uh oh. I'm afraid that’s not the way to go. If you want to use an image from the internet you have to follow the rules.",
-      "But don’t worry, I am here to help you out.",
-      {
-        "text": "Actually, it's quite simple! Just ask yourself the following questions before you use an image from the Internet:",
-        "type": "resource"
-      },
-      {
-        "text": "Who is the creator of the picture? \nNever use an image whose creator you do not know, because the creator is the one who must give you permission to use their image. Exception: the license under which the image is published does not require the creator to be named.",
-        "type": "resource"
-      },
-      {
-        "text": "Is the image licensed for use?\nRemember, there are four different cases:\nall rights reserved (copyright)\nThe classic copyright prohibits you from any use of the image. Leave it alone or contact the creator and get their permission to use the image.\nsome rights reserved\nThis includes the CC licenses. You must make sure that your use case is covered by the license to be able to use the image.\nall rights granted (public domain)\nJackpot! You are allowed to use the image in any case.\nno information\nIf you cannot find any information about the license, you must assume that the image is under classic copyright and this means that you are not allowed to use it without explicit permission from the copyright holder.",
-        "type": "resource"
-      },
-      {
-        "text": "What information do I need to provide if I want to use the image?\nThis depends on your specific use case. A so-called license notice generally consists of \nthe title of the image (if there is one),\nthe name or names of the creator,\nthe source,\nand the license.",
-        "type": "resource"
-      },
-      {
-        "text": "See, it's not that difficult. Just follow these rules and we'll never see each other in this place again. And in case of doubt: search for a new image, of which you are sure about the license. ",
-        "type": "resource"
-      },
-      "Go on, try it again."
-    ],
-    "nextPage": "/",
-    "nextPageIDs": [0]
-  },
-  {
-    "id": 777,
-    "pageurl": "/imprint"
-  },
-  {
-    "id": 28,
-    "pageurl": "/jailgame1",
-    "headline": "Get out of jail Game",
-    "panels": [
-      { "question": "Which of the following statements apply to the CC BY-SA license?",
-        "correctAnswers": [1,4,5],
-        "choices" : [
-          { "id": 1,
-            "choice": "The content is bound to the original or a compatible license."
-          },
-          { "id": 2,
-            "choice": "Modification of the content is prohibited."
-          },
-          { "id": 3,
-            "choice": "The commercial use of the content is prohibited."
-          },
-          { "id": 4,
-            "choice": "Wikipedia content is published under this license."
-          },
-          { "id": 5,
-            "choice": "The name of the license holder must be stated."
-          }
-        ]
-      },
-      { "question": "Which of the following statements apply to the CC-BY license?",
-        "correctAnswers": [1],
-        "choices" : [
-          { "id": 1,
-            "choice": "The name of the license holder must be stated."
-          },
-          { "id": 2,
-            "choice": "The content is bound to the original or a compatible license."
-          },
-          { "id": 3,
-            "choice": "Modification of the content is prohibited."
-          },
-          { "id": 4,
-            "choice": "Wikipedia content is published under this license."
-          },
-          { "id": 5,
-            "choice": "PLACEHOLDER"
-          }
-        ]
-      }
-    ],
-    "nextPage": "/placeholder",
-    "nextPageIDs": [123]
-  }
+  "nextPage": "/success",
+  "nextPageIDs": [16]
+},
+{
+  "id": 26,
+  "pageurl": "/findthelicence1",
+  "headline": "CC Licenses and their Use Cases",
+  "panels": [
+    "The cc licenses itself are easy to understand but how about it’s usage in real life? In the following you have to decide if the given use cases are legal under the given license. If so, please mark them as correct."
+  ],
+  "nextPage": "/findthelicence2",
+  "nextPageIDs": [27]
+},
+{
+  "id": 27,
+  "pageurl": "/findthelicence2",
+  "headline": "CC Licenses and their Use Cases",
+  "panels": [
+    { "question": "What is allowed under a <b> CC0 </b>?",
+      "correctAnswers": [1,2,3,4,5,6,7,8,9]
+    },
+    { "question": "What is allowed under a <b>CC-BY</b> licence?",
+      "correctAnswers": [2,3,4,5,7,8,9]
+    },
+    { "question": "What is allowed under a <b>CC-BY-SA</b> licence?",
+      "correctAnswers": [1]
+    }     
+  ],
+  "nextPage": "/usinglicence",
+  "nextPageIDs": [12]
+},
+{
+  "id": 100,
+  "pageurl": "/overview",
+  "headline": "Welcome to the Lawyer Dude",
+  "tutorial": [
+    { "head": "The Lawyer Dude \nTutorial",
+      "text": "This tutorial will show you how to correctly license images from the Internet and use them for your own purposes. In about 30 minutes you will click through your individual story and learn all the important facts about open content, creative commons and the license notice. Don't worry, the Lawyer Dude is always at your side to help you when things get tricky. Can you manage to get the license notice for your picture without going to jail?"
+    }
+  ],
+  "resources": [
+    { "head": "Resources",
+      "text": "Here you find all the collected resources about Open Content, Creative Commons, License notices and much more from the world of image licenses. The Lawyer Dude provides you with all the facts and explanations - what are you waiting for?"
+    }
+  ],
+  "games": [
+    { "head": "Games",
+      "text": "Do you want to improve or just check your knowledge on Open Content, Creative Commons and alike? You've come to the right place. Play all the games featured in the Lawyer Dude Tutorial again and learn in a fun way what to look out for when using images from the Internet."
+    }
+  ],
+  "nextPage": ["/learninggoals", "/resources", "/games"],
+  "nextPageIDs": [1, 101, 102]
+},
+{
+  "id": 101,
+  "pageurl": "/resources",
+  "headline": "Resources"
+},
+{
+  "id": 102,
+  "pageurl": "/games",
+  "nextPage": ["/matchthelicense", "/findthelicence2", "/jailgame1"],
+  "nextPageIDs": [103, 104, 105]
+},
+{
+  "id": 103,
+  "pageurl": "/matchthelicense",
+  "nextPage": ["/games"],
+  "nextPageIDs": [102]
+},
+{
+  "id": 104,
+  "pageurl": "/findthelicence2",
+  "headline": "CC Licenses and their Use Cases",
+  "panels": [
+    { "question": "What is allowed under a <b> CC0 </b>?",
+      "correctAnswers": [1,2,3,4,5,6,7,8,9]
+    },
+    { "question": "What is allowed under a <b>CC-BY</b> licence?",
+      "correctAnswers": [2,3,4,5,7,8,9]
+    },
+    { "question": "What is allowed under a <b>CC-BY-SA</b> licence?",
+      "correctAnswers": [1]
+    }     
+  ],
+  "nextPage": ["/games"],
+  "nextPageIDs": [102]
+},
+{
+  "id": 105,
+  "pageurl": "/jailgame1",
+  "headline": "Get out of jail Game",
+  "panels": [
+    { "question": "Which of the following statements apply to the CC BY-SA license?",
+      "correctAnswers": [1,4,5],
+      "choices" : [
+        { "id": 1,
+          "choice": "The content is bound to the original or a compatible license."
+        },
+        { "id": 2,
+          "choice": "Modification of the content is prohibited."
+        },
+        { "id": 3,
+          "choice": "The commercial use of the content is prohibited."
+        },
+        { "id": 4,
+          "choice": "Wikipedia content is published under this license."
+        },
+        { "id": 5,
+          "choice": "The name of the license holder must be stated."
+        }
+      ]
+    },
+    { "question": "Which of the following statements apply to the CC-BY license?",
+      "correctAnswers": [1],
+      "choices" : [
+        { "id": 1,
+          "choice": "The name of the license holder must be stated."
+        },
+        { "id": 2,
+          "choice": "The content is bound to the original or a compatible license."
+        },
+        { "id": 3,
+          "choice": "Modification of the content is prohibited."
+        },
+        { "id": 4,
+          "choice": "Wikipedia content is published under this license."
+        },
+        { "id": 5,
+          "choice": "PLACEHOLDER"
+        }
+      ]
+    }
+  ],
+  "nextPage": ["/games"],
+  "nextPageIDs": [102]
+},
+{
+  "id": 300,
+  "pageurl": "/stealingpictures",
+  "headline": "You are in jail!",
+  "panels": [
+    "Uh oh. I'm afraid that’s not the way to go. If you want to use an image from the internet you have to follow the rules.",
+    "But don’t worry, I am here to help you out.",
+    {
+      "text": "Actually, it's quite simple! Just ask yourself the following questions before you use an image from the Internet:",
+      "type": "resource"
+    },
+    {
+      "text": "Who is the creator of the picture? \nNever use an image whose creator you do not know, because the creator is the one who must give you permission to use their image. Exception: the license under which the image is published does not require the creator to be named.",
+      "type": "resource"
+    },
+    {
+      "text": "Is the image licensed for use?\nRemember, there are four different cases:\nall rights reserved (copyright)\nThe classic copyright prohibits you from any use of the image. Leave it alone or contact the creator and get their permission to use the image.\nsome rights reserved\nThis includes the CC licenses. You must make sure that your use case is covered by the license to be able to use the image.\nall rights granted (public domain)\nJackpot! You are allowed to use the image in any case.\nno information\nIf you cannot find any information about the license, you must assume that the image is under classic copyright and this means that you are not allowed to use it without explicit permission from the copyright holder.",
+      "type": "resource"
+    },
+    {
+      "text": "What information do I need to provide if I want to use the image?\nThis depends on your specific use case. A so-called license notice generally consists of \nthe title of the image (if there is one),\nthe name or names of the creator,\nthe source,\nand the license.",
+      "type": "resource"
+    },
+    {
+      "text": "See, it's not that difficult. Just follow these rules and we'll never see each other in this place again. And in case of doubt: search for a new image, of which you are sure about the license. ",
+      "type": "resource"
+    },
+    "Go on, try it again."
+  ],
+  "nextPage": "/",
+  "nextPageIDs": [0]
+},
+{
+  "id": 777,
+  "pageurl": "/imprint"
+},
+{
+  "id": 28,
+  "pageurl": "/jailgame1",
+  "headline": "Get out of jail Game",
+  "panels": [
+    { "question": "Which of the following statements apply to the CC BY-SA license?",
+      "correctAnswers": [1,4,5],
+      "choices" : [
+        { "id": 1,
+          "choice": "The content is bound to the original or a compatible license."
+        },
+        { "id": 2,
+          "choice": "Modification of the content is prohibited."
+        },
+        { "id": 3,
+          "choice": "The commercial use of the content is prohibited."
+        },
+        { "id": 4,
+          "choice": "Wikipedia content is published under this license."
+        },
+        { "id": 5,
+          "choice": "The name of the license holder must be stated."
+        }
+      ]
+    },
+    { "question": "Which of the following statements apply to the CC-BY license?",
+      "correctAnswers": [1],
+      "choices" : [
+        { "id": 1,
+          "choice": "The name of the license holder must be stated."
+        },
+        { "id": 2,
+          "choice": "The content is bound to the original or a compatible license."
+        },
+        { "id": 3,
+          "choice": "Modification of the content is prohibited."
+        },
+        { "id": 4,
+          "choice": "Wikipedia content is published under this license."
+        },
+        { "id": 5,
+          "choice": "PLACEHOLDER"
+        }
+      ]
+    }
+  ],
+  "nextPage": "/placeholder",
+  "nextPageIDs": [123]
+}
 ]
