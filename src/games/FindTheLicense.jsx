@@ -7,6 +7,7 @@ import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
 import SettingsButton from '../components/SettingsButton';
 import QuizQuestion from './../components/QuizQuestion';
+import { ReactComponent as LDHeadHappy } from "../images/Lawyerdude-head-happy.svg";
 
 const options = [
   { "id": 1,
@@ -63,6 +64,7 @@ class FindTheLicense extends Component {
     this.nextText = this.nextText.bind(this);
     this.previousText = this.previousText.bind(this);
     this.validate = this.validate.bind(this);
+    this.redirectToLastPage = this.redirectToLastPage.bind(this);
   }
 
   componentDidMount() {
@@ -96,6 +98,8 @@ class FindTheLicense extends Component {
      })
     }
     this.setState({buttonClicked :false});
+    this.setState({correctAnswersText: "" });
+
   }
 
   previousText() {
@@ -105,6 +109,12 @@ class FindTheLicense extends Component {
         return {textIndex: prevState.textIndex - 1}
      })
     }
+  }
+
+  redirectToLastPage() {
+    const goBack = true;
+    localStorage.setItem("goBack", JSON.stringify(goBack));
+    this.props.history.goBack();
   }
 
   redirectToNextPage() {
@@ -130,7 +140,7 @@ class FindTheLicense extends Component {
     this.child9.current.validate();
     this.setState({buttonClicked :true});
 
-    let answerText = "The correct answers would have been: " + panels[textIndex].correctAnswers;
+    let answerText = "The correct answers are: " + panels[textIndex].correctAnswers;
 
     this.setState({correctAnswersText: answerText });
   }
@@ -152,8 +162,9 @@ class FindTheLicense extends Component {
          <SettingsButton goBack={() => this.props.history.goBack()}/>
         <div className="pagecontent">
           <h1>{headline}</h1>
-          {(panels[textIndex] !== undefined) ? (
-          <div className="quizQuestions">
+          {(panels[textIndex] &&
+          panels[textIndex].question !== undefined) ? (
+            <div className="quizQuestions">
             <div className="question" dangerouslySetInnerHTML={{ __html: panels[textIndex].question}}></div>
             {correctAnswersText}
             <button className="quiz-btn" onClick={this.validate}>Submit answers</button>
@@ -167,11 +178,22 @@ class FindTheLicense extends Component {
             <QuizQuestion key={"question8"+textIndex}  ref={this.child8} option={options[7]} rightAnswers={panels[textIndex].correctAnswers}/>
             <QuizQuestion key={"question9"+textIndex}  ref={this.child9} option={options[8]} rightAnswers={panels[textIndex].correctAnswers}/>
             </div>
-          ) : ( <div></div>)}
+          ) : (
+            <div>
+            <div className="speech">
+              <p className="speechbubbletext"
+                  dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
+              />
+            </div>
+            <div className="speechlawyer-container">
+              <LDHeadHappy className="speechlawyer-happy" />
+            </div>
+            </div>
+          )}
           {
-            (textIndex === 0 && panels.length > 1 && buttonClicked === true) ? (
+            (textIndex === 0) ? (
               <div className="buttoncontainer col">
-                <BackButtonInactive/>
+                <BackButton previousText={this.redirectToLastPage}/>
                 <ForthButton nextText={this.nextText} />
               </div>
             ) : (
