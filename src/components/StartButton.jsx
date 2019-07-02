@@ -6,7 +6,7 @@ class StartButton extends Component {
         const {nextText} = this.props;
         return (
             <button onClick={nextText} className="StartButton">
-            Commence le eLearning
+            Get started
             </button>
         )
     }

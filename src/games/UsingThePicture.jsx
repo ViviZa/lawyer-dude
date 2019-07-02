@@ -6,6 +6,7 @@ import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
 import Select from 'react-select';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+import BackButton from './../components/BackButton';
 
 const options = [
   { value: '1', label: 'CC BY', link: "https://creativecommons.org/licenses/by/4.0/"},
@@ -38,6 +39,7 @@ class MatchTheLicense extends Component {
     this.changeImgUrl = this.changeImgUrl.bind(this);
     this.appendExtImage = this.appendExtImage.bind(this);
     this.createNotice = this.createNotice.bind(this);
+    this.redirectToLastPage = this.redirectToLastPage.bind(this);
   }
 
   componentDidMount() {
@@ -95,6 +97,12 @@ appendExtImage(event) {
     } else {
       this.setState({noticeCreated: true, error: false});
     }
+  }
+
+  redirectToLastPage() {
+    const goBack = true;
+    localStorage.setItem("goBack", JSON.stringify(goBack));
+    this.props.history.goBack();
   }
 
   render() {
@@ -209,7 +217,7 @@ appendExtImage(event) {
                   </div>
                 </CopyToClipboard>
               </div>
-              <BackButtonInactive/>
+              <BackButton previousText={this.redirectToLastPage}/>
               <ForthButton nextText={this.redirectToNextPage} />
             </div>
           )
