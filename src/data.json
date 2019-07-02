@@ -246,7 +246,7 @@
         "text": "General Disclaimer: \n\nPlease be advised that nothing found in simple online searches has necessarily been reviewed by professionals with the expertise necessary to provide you with complete, accurate or reliable information.\n\nThat's not to say that you won't find valuable and accurate information at the Wikimedia Commons, however please be advised that Wikimedia Commons   as a community project cannot guarantee, in any way whatsoever, the validity of the information found here. However, the volunteers are very attentive to copyright rules and have a very close eye on the content of their platform. So it’s not very likely to stumble on images that are actually not usable.",
         "type": "resource"
       },
-      "So was hälst du davon?"
+      "Great, right?"
     ],
     "decisions": [
       "That’s it? So how do I use these images?",
@@ -509,15 +509,16 @@
     "headline": "Attribution Generator",
     "panels": [
       "Wikimedia Commons offers a tool called “Attribution Generator”.",
-      "This tool makes it easy to reuse images from Wikipedia and the free media archive Wikimedia Commons by generating license information. That means that you can easily comply the license conditions by using the tool.",
+      "This tool makes it easy to reuse images from Wikipedia and the free media archive Wikimedia Commons by generating license information.",
       "These license information are based on a near-verbatim translation of the initial German text snippets, which were drafted with the copyright law of Germany in mind. With the help of this tool you can easily comply the license conditions.",
       "To use the Attribution Generator follow these steps:",
       {
-        "text": "1. Insert a web address of a Wikimedia Commons image or a Wikipedia article. <br> 2. Answer the questions about the intended use to create a correct license notice. <br> 3. Read how to use the license notice. <br> 4. Copy the generated license notice and insert it into your publication to use the image correctly.",
+        "text": "<ol> <li>Insert a web address of a Wikimedia Commons image or a Wikipedia article.</li> <li>Answer the questions about the intended use to create a correct license notice.</li> <li>Read how to use the license notice.</li> <li>Copy the generated license notice and insert it into your publication to use the image correctly.</li> <ol>",
         "type": "resource",
         "images": ["/images/attribution-generator.gif"]
       },
-      "Alles verstanden? Probiere den Lizenzhinweis Generator doch gleich mal hier aus: <a href=\"https://lizenzhinweisgenerator.de/?lang=en\">https://lizenzhinweisgenerator.de/?lang=en</a>"
+      "Pretty cool, huh? Just try it yourself, you will be amazed how easy it is: \n\n <a href=\"https://lizenzhinweisgenerator.de/?lang=en\",>lizenzhinweisgenerator.de</a>",
+      "Now I've told you the secret how to use images from the internet without going to jail! But let's not keep this knowledge secret any further - share your knowledge about open content so that everyone can participate."
       ],
     "nextPage": "/success",
     "nextPageIDs": [16]
