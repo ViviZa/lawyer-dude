@@ -12,10 +12,12 @@
 
 .licenceProperty {
     display: inline-block;
+    text-align: left;
+    width: 100%;
 }
 
 .errorContainer {
     border: 1px solid red;
     margin-bottom: 10px;
-    width: 100%;
+    width: 60%;
 }

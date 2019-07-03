@@ -1,42 +1,69 @@
-import React, { Component } from 'react';
-import SideNavigation from '../components/SideNavigation';
-import { withRouter } from 'react-router';
-import data from '../data.json';
-import ForthButton from '../components/ForthButton';
-import Select from 'react-select';
-import {CopyToClipboard} from 'react-copy-to-clipboard';
-import BackButton from './../components/BackButton';
+import React, { Component } from "react";
+import SideNavigation from "../components/SideNavigation";
+import { withRouter } from "react-router";
+import data from "../data.json";
+import ForthButton from "../components/ForthButton";
+import Select from "react-select";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import BackButton from "./../components/BackButton";
 
 const options = [
-  { value: '1', label: 'CC BY', link: "https://creativecommons.org/licenses/by/4.0/"},
-  { value: '2', label: 'CC BY-SA', link: "https://creativecommons.org/licenses/by-sa/4.0/"},
-  { value: '3', label: 'CC BY-ND', link: "https://creativecommons.org/licenses/by-nd/4.0/"},
-  { value: '4', label: 'CC BY-NC', link: "https://creativecommons.org/licenses/by-nc/4.0/"},
-  { value: '5', label: 'CC BY-NC-SA', link: "https://creativecommons.org/licenses/by-nc-sa/4.0/"},
-  { value: '6', label: 'CC BY-NC-ND', link: "https://creativecommons.org/licenses/by-nc-nd/4.0/"},
-  { value: '7', label: 'CC-0', link: "https://creativecommons.org/publicdomain/zero/1.0/"}
+  {
+    value: "1",
+    label: "CC BY",
+    link: "https://creativecommons.org/licenses/by/4.0/"
+  },
+  {
+    value: "2",
+    label: "CC BY-SA",
+    link: "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  {
+    value: "3",
+    label: "CC BY-ND",
+    link: "https://creativecommons.org/licenses/by-nd/4.0/"
+  },
+  {
+    value: "4",
+    label: "CC BY-NC",
+    link: "https://creativecommons.org/licenses/by-nc/4.0/"
+  },
+  {
+    value: "5",
+    label: "CC BY-NC-SA",
+    link: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+  },
+  {
+    value: "6",
+    label: "CC BY-NC-ND",
+    link: "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+  },
+  {
+    value: "7",
+    label: "CC-0",
+    link: "https://creativecommons.org/publicdomain/zero/1.0/"
+  }
 ];
 
 class UsingTheImage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      headline: '',
+      headline: "",
       nextPageID: 0,
-      nextPage: '',
+      nextPage: "",
       submitted: false,
-      imgUrl: '',
-      link: '',
-      copywriter: '',
-      license: '',
-      title: '',
+      imgUrl: "",
+      link: "",
+      copywriter: "",
+      license: "",
+      title: "",
       error: false,
       noticeCreated: false,
-      copied: false,
+      copied: false
     };
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
     this.changeImgUrl = this.changeImgUrl.bind(this);
-    this.appendExtImage = this.appendExtImage.bind(this);
     this.createNotice = this.createNotice.bind(this);
     this.redirectToLastPage = this.redirectToLastPage.bind(this);
   }
@@ -44,9 +71,9 @@ class UsingTheImage extends Component {
   componentDidMount() {
     if (!this.props.location.state) {
       this.props.history.push({
-        pathname: "/",
+        pathname: "/"
       });
-      return <div/>;
+      return <div />;
     }
     const { ID } = this.props.location.state;
     const { addingPages } = this.props;
@@ -58,43 +85,37 @@ class UsingTheImage extends Component {
     this.setState({
       headline: filteredJSON[0].headline,
       nextPage: filteredJSON[0].nextPage,
-      nextPageID: nextPageID,
-    })
+      nextPageID: nextPageID
+    });
   }
 
   changeImgUrl(event) {
-    this.setState({ imgUrl: event.target.value, submitted: false })
-}
+    this.setState({ imgUrl: event.target.value, submitted: false });
+  }
 
-updateTextFieldValue(event, key) {
-  this.setState({ [key]: event.target.value})
-}
+  updateTextFieldValue(event, key) {
+    this.setState({ [key]: event.target.value });
+  }
 
-handleDropdownChange = (license) => {
-  this.setState({ license });
-}
-
-appendExtImage(event) {
-    event.preventDefault();
-    this.setState({ submitted: true })
-}
-
+  handleDropdownChange = license => {
+    this.setState({ license });
+  };
 
   redirectToNextPage() {
     const { history } = this.props;
     const { nextPageID, nextPage } = this.state;
     history.push({
       pathname: nextPage,
-      state: { ID: nextPageID },
+      state: { ID: nextPageID }
     });
   }
 
   createNotice() {
-    const {link, copywriter, license} = this.state;
-    if (link === '' || copywriter === '' || license === ''){
-      this.setState({error: true});
+    const { license } = this.state;
+    if (license === "") {
+      this.setState({ error: true });
     } else {
-      this.setState({noticeCreated: true, error: false});
+      this.setState({ noticeCreated: true, error: false, submitted: true });
     }
   }
 
@@ -104,125 +125,155 @@ appendExtImage(event) {
     this.props.history.goBack();
   }
 
-  render() {
-    if (!this.props.location.state) {
-      this.props.history.push({
-        pathname: "/",
-      });
-      return <div/>;
-    }
-    const { ID } = this.props.location.state;
-
-    let { imgUrl, submitted, link, license, copywriter, title, noticeCreated, error, copied } = this.state;
-    let imgView;
-    if (submitted) {
-        imgView = (<img src={imgUrl} className='imageContent' alt={imgUrl} />);
-    } else {
-        imgView = (<div className="previewText">Please submit an image URL.</div>);
-    }
-
+  renderFirstPage() {
+    const { imgUrl, link, license, copywriter, title, error } = this.state;
     return (
-      <div className="MatchTheLicense">
-         <SideNavigation ID={ID}/>
-        <div className="pagecontent">
-          <h1>
-         Using the Image
-          </h1>
-          {
-            !noticeCreated && (
-              <form className="url-form" onSubmit={(event) => this.appendExtImage(event)}>
-                <label className="url-label">
-                    <input className="picture-upload-input" type="text" value={imgUrl} onChange={this.changeImgUrl} />
-                    Paste your image URL
-                </label>
-                <input className="load-img-btn" type="submit" value="Load image" />
-            </form>
-            )
-          }
-          <div className="imgView">
-              {imgView}
-          </div>
-         { !noticeCreated ? ( 
+      <div>
         <div>
+          <div className="licenceProperty-container">
+            <input
+              className="picture-upload-input"
+              name="image-upload"
+              type="text"
+              value={imgUrl}
+              onChange={this.changeImgUrl}
+              placeholder="Please submit your image URL here"
+            />
+            <label for="image-upload" className="licenceProperty">
+              Paste your image URL
+            </label>
+          </div>
+        </div>
+        <div>
+          <div className="licenceProperty-container">
+            <input
+              className="picture-specs-input"
+              name="title"
+              type="text"
+              value={title}
+              onChange={ev => this.updateTextFieldValue(ev, "title")}
+              placeholder="What is the name of the image?"
+            />
+            <label for="title" className="licenceProperty">
+              Title
+            </label>
+          </div>
           <div>
             <div className="licenceProperty-container">
-              <input className="picture-specs-input" type="text" value={title} onChange={(ev) => this.updateTextFieldValue(ev, 'title')} />
-              <div className="licenceProperty">Title</div>
+              <input
+                className="picture-specs-input"
+                type="text"
+                value={copywriter}
+                onChange={ev => this.updateTextFieldValue(ev, "copywriter")}
+                name="author"
+                placeholder="Who owns the image?"
+              />
+              <label for="author" className="licenceProperty">
+                Author
+              </label>
             </div>
           </div>
           <div>
             <div className="licenceProperty-container">
-            <div>
-              <input className={(link === '' && error) ? "errorContainer" :"picture-specs-input"} type="text" value={link} onChange={(ev) => this.updateTextFieldValue(ev, 'link')} />
-              <div className="licenceProperty">Link</div>
-              {
-                (link === '' && error) && (
-                  <div>
-                    This field is required!
-                    </div>
-                )
-              }
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="licenceProperty-container">
-              <div>
-              <input className={(copywriter === '' && error) ? "errorContainer" :"picture-specs-input"} type="text" value={copywriter} onChange={(ev) => this.updateTextFieldValue(ev, 'copywriter')} />
-              {
-                (copywriter === '' && error) && (
-                  <div>
-                    This field is required!
-                    </div>
-                )
-              }
-              </div>
-              <div className="licenceProperty">Rights Holder</div>
+              <input
+                className="picture-specs-input"
+                name="source"
+                type="text"
+                value={link}
+                onChange={ev => this.updateTextFieldValue(ev, "link")}
+                placeholder="Where can I find it?"
+              />
+              <label for="source" className="licenceProperty">
+                Source
+              </label>
             </div>
           </div>
           <div>
             <div className="selectProperty-container">
-              <div className="selectProperty">License Notice</div>
               <div>
-              <div className={(license === '' && error) ? "errorContainer" :"license-select-wrap"}>
-                <Select
-                      value={license}
-                      onChange={this.handleDropdownChange}
-                      options={options}
-                      className="licenseDropdown"
+                <div
+                  className={
+                    license === "" && error
+                      ? "errorContainer"
+                      : "license-select-wrap"
+                  }
+                >
+                  <Select
+                    value={license}
+                    onChange={this.handleDropdownChange}
+                    options={options}
+                    className="licenseDropdown"
                   />
-              </div>
-              {
-                (license === '' && error) && (
-                  <div>
-                    This field is required!
-                    </div>
-                )
-              }
+                  <div className="selectProperty">License Notice</div>
+                </div>
+                  {license === "" && error && (
+                    <span>Please select a license</span>
+                  )}
               </div>
             </div>
           </div>
-          <button className="url-upload-btn" onClick={this.createNotice}>Save</button>
-          </div>
-          ) : (
+          <button className="url-upload-btn" onClick={this.createNotice}>
+            Save
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  renderSecondPage() {
+    const { imgUrl, link, license, copywriter, title, copied } = this.state;
+    return (
+      <div>
+        <div className="imgView">
+          <img src={imgUrl} className="imageContent" alt={imgUrl} />
+        </div>
+        <div>
+          <p>
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              {title}
+            </a>
+          </p>
+          License: {copywriter},{" "}
+          <a href={license.link} target="_blank" rel="noopener noreferrer">
+            {license.label}
+          </a>
+          <CopyToClipboard
+            text={`Title: ${title}, \n License: ${copywriter}, ${
+              license.label
+            }, \n Link: ${link}`}
+            onCopy={() => this.setState({ copied: true })}
+          >
             <div>
-              <div>
-                <p><a href={link} target="_blank" rel="noopener noreferrer">{title}</a></p>
-                License: {copywriter}, <a href={license.link} target="_blank" rel="noopener noreferrer">{license.label}</a>
-                <CopyToClipboard text={`Title: ${title}, \n License: ${copywriter}, ${license.label}, \n Link: ${link}`} onCopy={() => this.setState({copied: true})}>
-                  <div>
-                      <button className="load-img-btn">Copy to clipboard</button>
-                      {copied && <span>Copied!</span>}
-                  </div>
-                </CopyToClipboard>
-              </div>
-              <BackButton previousText={this.redirectToLastPage}/>
-              <ForthButton nextText={this.redirectToNextPage} />
+              <button className="load-img-btn">Copy to clipboard</button>
+              {copied && <span>Copied!</span>}
             </div>
-          )
-          }
+          </CopyToClipboard>
         </div>
+        <BackButton previousText={this.redirectToLastPage} />
+        <ForthButton nextText={this.redirectToNextPage} />
+      </div>
+    );
+  }
+
+  render() {
+    if (!this.props.location.state) {
+      this.props.history.push({
+        pathname: "/"
+      });
+      return <div />;
+    }
+    const { ID } = this.props.location.state;
+
+    const { noticeCreated } = this.state;
+
+    return (
+      <div className="MatchTheLicense">
+        <SideNavigation ID={ID} />
+        <div className="pagecontent">
+          <h1>Using the Image</h1>
+          {!noticeCreated ? this.renderFirstPage() : this.renderSecondPage()}
         </div>
+      </div>
     );
   }
 }
