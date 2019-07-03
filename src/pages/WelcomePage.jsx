@@ -75,7 +75,7 @@ class WelcomePage extends Component {
             <LDFull className="fulllawyer col-12 col-sm-6 col-md-6 col-lg-12 "/>  
             <div className="welcomepanels col-12 col-sm-6 col-md-6 col-lg-12">
               <ul>
-                  {panels.map((panel) => <li className="welcomepanel">{panel}</li>)}
+                  {panels.map((panel, index) => <li key={index} className="welcomepanel">{panel}</li>)}
               </ul>
             </div>
             </div>

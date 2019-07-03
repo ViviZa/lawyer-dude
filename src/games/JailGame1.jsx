@@ -79,11 +79,8 @@ class JailGame1 extends Component {
 
   render() {
     const { panels, textIndex, headline, buttonClicked, correctAnswersText} = this.state;
-    console.log(this.state.buttonClicked);
-
     return (
-      <div className="JailGame1">
-        <div className="pagecontent">
+      <div className="jailgametwo-container">
           <h1>{headline}</h1>
           {(panels[textIndex] !== undefined) ? (
           <div className="quizQuestions">
@@ -114,11 +111,11 @@ class JailGame1 extends Component {
                     <div className="buttoncontainer">
                       <BackButton previousText={this.previousText} />
                       <ForthButton nextText={() => this.props.history.goBack()} />
+                      {this.props.showExitText()}
                     </div>
                   ) : (<div></div>))
           }
         <p></p>
-      </div>
       </div>
     );
   }

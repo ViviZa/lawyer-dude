@@ -76,9 +76,7 @@ class JailGameTwo extends Component {
     answers.map((answer, index) =>
       answer.lastDroppedItem && answer.lastDroppedItem.src === solution[index].src
         ? (answer.errorText = "")
-        : (answer.errorText = `Wrong answer, the correct solution would have been ${
-            solution[index].name
-          }`)
+        : (answer.errorText = `Wrong answer`)
     );
     this.setState({ answers, submit: true });
   }
@@ -88,7 +86,7 @@ class JailGameTwo extends Component {
     return (
       <div class="jailgametwo-container">
         <DndProvider backend={HTML5Backend}>
-          <div>
+          <div className="jailgame-text">
             To get out of jail you have to manage the following tasks correctly. Good luck! Match the icons to the correct license module.
           </div>
           <div className="images-container">
