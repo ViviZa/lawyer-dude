@@ -43,9 +43,11 @@ class Resources extends Component {
     const { headline } = this.state;
     return (
       <div className="Resources">
-        <SideNavigation ID={ID} />
         <SettingsButton goBack={() => this.props.history.goBack()} />
-        <div className="startpagecontent overviewpagecontent">
+        <button className="jail-back-btn" onClick={() => this.props.history.goBack()}> 
+          Back to overview
+        </button>
+        <div className="pagecontent   ">
           <h1 className="headline">{headline}</h1>
           <div className="container">
               <LDhappy className="boxlawyer" />
