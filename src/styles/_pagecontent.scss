@@ -47,6 +47,10 @@ ol {
 
 .welcomepanels {
 
+	ul {
+		list-style-position: outside;
+	}
+
 	li {
 		list-style-image: url(./images/bullet.svg);
 
