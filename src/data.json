@@ -64,15 +64,18 @@
       },
       {
         "text": "Before we start let’s have a look at a symbol which I'm sure you've met many times before: <br><br> This pictogram shows you that this image is protected by copyright as explained at the very beginning. It is usually used to indicate that the rights holder reserves all rights. Copying, distributing, modifying is not allowed unless you ask for permission to use it (<b>“all rights reserved”</b>).",
-        "type": "resource"
+        "type": "resource",
+        "images": [""]
       },
       {
         "text": "The absolute opposite to this is when rights holders waive all rights and place their works in the public domain. <br><br> This pictogram states that all rights are granted for any use of a work in any way and for any purpose (<b>“all rights granted”</b>). Works in the public domain are free of protection. Either because the term of protection has expired or they were not copyright-protected in the first place. <br> Creative Commons additionally offers a second tool that causes a similar legal status like the public domain tool: CC0. Rights holders are actively waiving all rights from their works. Consequently, all works licensed under CC0 can be used by anyone without any restrictions or obligations (<b>“all rights waived”</b>).",
-        "type": "resource"
+        "type": "resource",
+        "images": ["images/pd.svg", "images/Cc-zero.svg"]
       },
       {
         "text": "Now you already know the public domain tool (or so called “waiver”). Let’s have a look at the CC licenses. <br><br> Each license contains at least one of four basic elements which are illustrated by abbreviations and pictograms. These elements can be combined with each other. Licenses’ names always start with the “CC” abbreviation. Let’s have a look how this might look like: <br><br> BY stands for “attribution” and means you have to mention the author and other parties designated for attribution. The corresponding license is therefore called “CC BY”. It means that you are free to use the work in any way and for any purpose - it therefore is the most permissive type of all CC licences. By the way, every license contains the obligation to name the author (i. e. every CC license contains the “BY” element). <br><br> SA stands for “Share Alike” and means that anyone who modifies the original work must share the adapted version under a CC BY-SA license or a compatible licence. Apart from this, all license conditions of the CC BY license are still valid here. <br><br> ND stands for “No Derivatives” which means that you are not allowed to modify the work in any way. The corresponding license is called “CC BY-ND”. Apart from this, all license conditions of the CC BY license are still valid here. <br><br> NC stands for “Non Commercial” and states - contrary to the previous mentioned licenses - that you are not allowed to use the work commercially. With “CC BY-NC” any reproduction or modification of a workin order to realise a commercial gain is not permitted. Apart from this, all license conditions of the CC BY license are still valid here.",
-        "type": "resource"
+        "type": "resource",
+        "images": ["images/Cc-by.svg", "images/Cc-sa.svg", "images/Cc-nd", "images/Cc-nc"]
       },
       {
         "text": "As if that weren't enough the four elements can be combined. But don’t worry we won’t go any deeper into this. Maybe you can keep in mind a <i>simple rule</i>: <br> The more restrictions a license contains the less it is compatible with the idea of <i>free cultural works</i> or the <i>open definition</i>. To give you one example, let me shortly introduce the most restrictive CC license to you: CC BY-NC-ND. You may not use a work commercially, nor modify it. So, you're probably gonna agree with me that this isn't necessarily making sharing easier.",
@@ -80,7 +83,8 @@
       },
       {
         "text": "This infographic may help you to better understand the CC license spectrum between “public domain/most open” (top) and “all rights reserved/least open” (bottom). Hint: Focus on the darker green area and therefore on the public domain tools “PD” and “CC0” as well as the two CC licenses “CC BY” and “CC BY-SA”.",
-        "type": "resource"
+        "type": "resource",
+        "images": ["images/Creative_Commons_Lizenzspektrum_DE.svg"]
       },
       "Are you aware of which of the licenses I just explained applies to your image?"
     ],
