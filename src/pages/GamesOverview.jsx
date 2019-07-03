@@ -27,7 +27,6 @@ class GamesOverview extends Component {
     })
   }
 
-
   redirectToNextPage(index) {
     const { history } = this.props;
     const { nextPageIDs, nextPages } = this.state;
@@ -37,7 +36,6 @@ class GamesOverview extends Component {
       state: { ID: nextPageIDs[index] },
     });
   }
-
 
   render() {
     return (
@@ -50,7 +48,7 @@ class GamesOverview extends Component {
           <h1 className="headline">Games</h1>
           <div className="container">
             <div className="row">
-                <div class="contentBox col">
+                <div className="contentBox col">
                     <p className="contentText">Match the License</p>
                     <button className="StartButton hover" onClick={() => this.redirectToNextPage(1)}>PLAY</button>
                 </div>
@@ -59,12 +57,12 @@ class GamesOverview extends Component {
                     <button className="StartButton hover" onClick={() => this.redirectToNextPage(2)}>PLAY</button>
                 </div>
                 <div className="contentBox col">
-                    <p className="contentText">JailGame 1</p>
+                    <p className="contentText">Jail Game 1</p>
                     <button className="StartButton hover" onClick={() => this.redirectToNextPage(3)} >PLAY</button>
                 </div>
                 <div className="contentBox col">
                     <p className="contentText">Jail Game 2</p>
-                    <button className="StartButton hover">PLAY</button>
+                    <button className="StartButton hover" onClick={() => this.redirectToNextPage(4)}>PLAY</button>
                 </div>
             </div>
           </div>  

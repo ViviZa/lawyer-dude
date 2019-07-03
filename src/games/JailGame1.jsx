@@ -33,12 +33,10 @@ class JailGame1 extends Component {
     const dataString = JSON.stringify(data);
     let jsonData = JSON.parse(dataString);
     const filteredJSON = jsonData.filter(values => values.id === ID);
-    const nextPageID = filteredJSON[0].nextPageIDs[0];
     this.setState({
       panels: filteredJSON[0].panels,
       headline: filteredJSON[0].headline,
-      nextPage: filteredJSON[0].nextPage,
-      nextPageID: nextPageID,
+      nextPage: filteredJSON[0].nextPage
     })
     }
 
@@ -72,16 +70,20 @@ class JailGame1 extends Component {
     this.child4.current.validate();
     this.child5.current.validate();
     this.setState({buttonClicked :true});
-    let answerText = "The correct answers are: " + panels[textIndex].correctAnswers;
-
+    let answerText;
+    if(panels[textIndex].correctAnswers.length === 1){
+      answerText = "The correct answer is: " + panels[textIndex].correctAnswers;
+    } else {
+      answerText = "The correct answers are: " + panels[textIndex].correctAnswers;
+    }
     this.setState({correctAnswersText: answerText });
   }
 
   render() {
-    const { panels, textIndex, headline, buttonClicked, correctAnswersText} = this.state;
+    const { panels, textIndex, buttonClicked, correctAnswersText} = this.state;
     return (
       <div className="jailgametwo-container">
-          <h1>{headline}</h1>
+          <h1>Get out of jail Game</h1>
           {(panels[textIndex] !== undefined) ? (
           <div className="quizQuestions">
             <div className="question" dangerouslySetInnerHTML={{ __html: panels[textIndex].question}}></div>
@@ -111,7 +113,6 @@ class JailGame1 extends Component {
                     <div className="buttoncontainer">
                       <BackButton previousText={this.previousText} />
                       <ForthButton nextText={() => this.props.history.goBack()} />
-                      {this.props.showExitText()}
                     </div>
                   ) : (<div></div>))
           }

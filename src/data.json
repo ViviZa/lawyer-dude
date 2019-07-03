@@ -520,8 +520,8 @@
   {
     "id": 102,
     "pageurl": "/games",
-    "nextPage": ["/overview","/matchthelicense", "/findthelicense", "/jailgame1"],
-    "nextPageIDs": [100, 103, 104, 105]
+    "nextPage": ["/overview","/matchthelicense", "/findthelicense", "/jailgame1", "/jailgame2"],
+    "nextPageIDs": [100, 103, 104]
   },
   {
     "id": 103,
@@ -550,7 +550,6 @@
   },
   {
     "id": 105,
-    "pageurl": "/jailgame1",
     "headline": "Get out of jail Game",
     "panels": [
       { "question": "Which of the following statements apply to the CC BY-SA license?",
@@ -593,9 +592,7 @@
           }
         ]
       }
-    ],
-    "nextPage": ["/games"],
-    "nextPageIDs": [102]
+    ]
   },
   {
     "id": 300,
