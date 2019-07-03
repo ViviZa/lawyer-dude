@@ -65,7 +65,7 @@ class Overview extends Component {
           <h1 className="headline">{headline}</h1>
           <div className="container">
             <div className="row">
-            <div class="contentBox col">
+            <div className="contentBox col">
               <LDhappy className="boxlawyer" />
               <h3 className="headline" dangerouslySetInnerHTML={{ __html: headlineTutorial }} />
               <div className="contentText"  dangerouslySetInnerHTML={{ __html: textTutorial }} />
