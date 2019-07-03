@@ -1,5 +1,4 @@
 import React from "react";
-import { ReactComponent as LDFull } from '../images/Lawyerdude-side.svg';
 
 const ResourcePanel = props => {
   const { text, images } = props;
