@@ -76,9 +76,7 @@ class JailGameTwo extends Component {
     answers.map((answer, index) =>
       answer.lastDroppedItem && answer.lastDroppedItem.src === solution[index].src
         ? (answer.errorText = "")
-        : (answer.errorText = `Wrong answer ${
-            solution[index].name
-          }`)
+        : (answer.errorText = `Wrong answer`)
     );
     this.setState({ answers, submit: true });
   }
