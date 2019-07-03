@@ -229,7 +229,6 @@ class MatchTheLicense extends Component {
               <button className="match-btn" onClick={() => this.validate()}>Submit answers</button>
             </div>
           )}
-        </div>
         {intro ? (
           <div className="buttoncontainer col">
             <BackButton previousText={this.redirectToLastPage}/>
@@ -246,6 +245,7 @@ class MatchTheLicense extends Component {
             <ForthButton nextText={this.redirectToNextPage} />
           </div>
         )}
+        </div>
       </div>
     );
   }
