@@ -17,7 +17,7 @@ const options = [
   { value: '7', label: 'CC-0', link: "https://creativecommons.org/publicdomain/zero/1.0/"}
 ];
 
-class MatchTheLicense extends Component {
+class UsingTheImage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -227,4 +227,4 @@ appendExtImage(event) {
   }
 }
 
-export default withRouter(MatchTheLicense);
+export default withRouter(UsingTheImage);

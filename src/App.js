@@ -10,7 +10,7 @@ import NoDesicion from './pages/TemplateNoDesicion';
 import EnterName from './pages/EnterName.jsx';
 import TemplateDecision from './pages/TemplateDecision';
 import MatchTheLicense from './games/MatchTheLicense';
-import UsingThePicture from './games/UsingThePicture';
+import UsingTheImage from './games/UsingThePicture';
 import WelcomePage from './pages/WelcomePage';
 import FindTheLicense from './games/FindTheLicense';
 import Imprint from './pages/Imprint';
@@ -59,7 +59,7 @@ class App extends Component {
           <Route exact path="/gettinglicense" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/usinglicense" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/creatingnotice" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
-          <Route exact path="/usingimage" component={() => <UsingThePicture addingPages={this.addingPages}/>}/>
+          <Route exact path="/usingimage" component={() => <UsingTheImage addingPages={this.addingPages}/>}/>
           <Route exact path="/dontusetheimage" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/moreinformation" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/usingsearchengines" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
