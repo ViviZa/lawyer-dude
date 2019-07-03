@@ -1,7 +1,6 @@
 # lawyer-dude [![Build Status](https://api.travis-ci.com/ViviZa/lawyer-dude.svg?branch=master)](https://travis-ci.com/ViviZa/lawyer-dude)
 
-This e-learning tutorial will show the user how to correctly license images from the internet and how to use them for own purposes. In about 30 minutes the user will click through an individual story and learn all the important facts about open content, creative commons and the license notice. The Lawyer Dude is always at the users side to help out when things get tricky.
-
+The Lawyer Dude tutorial shows users how to correctly license images from the Internet and use them for their own purposes. Users click through their individual story and learn all the important facts about open content, Creative Commons and license notices.
 ### Getting started
 Run the app in the development mode:<br>
 
