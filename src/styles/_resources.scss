@@ -25,7 +25,6 @@
 	float: left;
 	height: auto;
 	height: 6em;
-	padding: 8%;
 	letter-spacing: 1.1px;
 
 	
@@ -34,11 +33,6 @@
 	}
 	div {
 		height: inherit; 
-		padding: 1em;
+		padding: 1em 1em 2em 1em;
 	}
-}
-
-.spaceCol {
-    height: 2%;
-    background-color: $resource-background;
 }
