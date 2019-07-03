@@ -67,14 +67,14 @@ class Overview extends Component {
             <div className="row">
             <div class="contentBox col">
               <LDhappy className="boxlawyer" />
-              <h3 className="headline">{headlineTutorial}</h3>
-              <p className="contentText">{textTutorial}</p>
+              <h3 className="headline" dangerouslySetInnerHTML={{ __html: headlineTutorial }} />
+              <div className="contentText"  dangerouslySetInnerHTML={{ __html: textTutorial }} />
               <button className="StartButton hover" onClick={() => this.redirectToNextPage(0)}>START</button>
             </div>
             <div className="contentBox col">
               <LDhappy className="boxlawyer" />
               <h3 className="headline">{headlineResources}</h3>
-              <p className="contentText">{textResources}</p>
+              <div className="contentText" dangerouslySetInnerHTML={{ __html: textResources }} />
               <button className="StartButton hover" onClick={() => this.redirectToNextPage(1)}>READ</button>
             </div>
             <div className="contentBox col">
