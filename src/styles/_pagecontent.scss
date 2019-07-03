@@ -325,7 +325,8 @@ ol {
 	.startpagecontent {
 
 		h1 {
-			font-size: 68px;
+			font-size: 1.5rem;
+			font-weight: 600;
 			// margin: 285px 25px 25px 25px;
 			line-height: 1.3;
 		}
@@ -333,6 +334,10 @@ ol {
 		h3 {
 			line-height: 1.4;
 		}
+	}
+	h1 {
+		font-size: 1.5rem;
+		font-weight: 600;
 	}
 
 	.pagecontent {
