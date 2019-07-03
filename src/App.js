@@ -15,9 +15,9 @@ import WelcomePage from './pages/WelcomePage';
 import FindTheLicense from './games/FindTheLicense';
 import Imprint from './pages/Imprint';
 import Overview from './pages/Overview';
+import Resources from './pages/Resources';
 import JailGame1 from './games/JailGame1';
 import GamesOverview from './pages/GamesOverview';
-import Resources from './pages/Resources';
 
 const history = createBrowserHistory()
 library.add(faBars);
