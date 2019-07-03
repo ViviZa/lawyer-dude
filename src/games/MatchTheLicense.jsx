@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import SideNavigation from "../components/SideNavigation";
 import { withRouter } from "react-router";
 import data from "../data.json";
-import BackButtonInactive from "../components/BackButtonInactive";
 import BackButton from "../components/BackButton";
 import ForthButton from "../components/ForthButton";
 import Select from "react-select";
@@ -230,7 +229,6 @@ class MatchTheLicense extends Component {
               <button className="match-btn" onClick={() => this.validate()}>Submit answers</button>
             </div>
           )}
-        </div>
         {intro ? (
           <div className="buttoncontainer col">
             <BackButton previousText={this.redirectToLastPage}/>
@@ -247,6 +245,7 @@ class MatchTheLicense extends Component {
             <ForthButton nextText={this.redirectToNextPage} />
           </div>
         )}
+        </div>
       </div>
     );
   }

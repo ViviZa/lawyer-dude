@@ -127,7 +127,7 @@ class SideNavigation extends Component {
                 );
               }))}
         {
-          (ID != 16) && (ID < 700) && (
+          (ID != 16) && (ID < 100) && (
             <li className="li-inactive">
               <a href="#">Unlock first</a>
             </li>

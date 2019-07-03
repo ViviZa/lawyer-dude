@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import SideNavigation from '../components/SideNavigation';
 import { withRouter } from 'react-router';
 import data from '../data.json';
-import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
 import Select from 'react-select';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
