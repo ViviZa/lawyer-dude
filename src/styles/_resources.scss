@@ -20,11 +20,14 @@
 
 .resourcetext {
 	position: relative;
-	font-size: 20px;
 	line-height: 2em;
 	text-align: left;
 	float: left;
 	height: auto;
+	height: 6em;
+	padding: 8%;
+	letter-spacing: 1.1px;
+
 	
 	&::before{
 		box-sizing: unset

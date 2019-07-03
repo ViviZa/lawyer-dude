@@ -353,9 +353,17 @@ ol {
 }
 
 @media (min-width: 1260px) and (max-width: 1440px) {
+	.overviewpagecontent{
+		h1{
+			font-size: 1.5rem;
+			font-weight: 600;
+		}
+	}
 
 	h1 {
 		margin: 10px;
+		font-size: 1.5rem;
+		font-weight: 600;
 	}
 
 	ol {
