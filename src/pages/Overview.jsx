@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import data from '../data.json';
 import { ReactComponent as LDhappy } from '../images/Lawyerdude-head-happy.svg';
+import { ReactComponent as TutorialIcon } from '../images/tutorial_icon.svg';
+import { ReactComponent as ResourceIcon } from '../images/resource_icon.svg';
+import { ReactComponent as GameIcon } from '../images/game_icon.svg';
 import SettingsButton from '../components/SettingsButton.jsx';
 
 class Overview extends Component {
@@ -65,23 +68,29 @@ class Overview extends Component {
           <h1 className="headline">{headline}</h1>
           <div className="container">
             <div className="row">
-            <div class="contentBox col">
-              <LDhappy className="boxlawyer" />
-              <h3 className="headline" dangerouslySetInnerHTML={{ __html: headlineTutorial }} />
+            <div className="contentBox col">
+              <div className="iconcontainer">
+                <TutorialIcon className="boxicon" />
+                <h3 className="headline" dangerouslySetInnerHTML={{ __html: headlineTutorial }} />
+              </div>
               <div className="contentText"  dangerouslySetInnerHTML={{ __html: textTutorial }} />
-              <button className="StartButton hover" onClick={() => this.redirectToNextPage(0)}>START</button>
+              <button className="StartButton" onClick={() => this.redirectToNextPage(0)}>START</button>
             </div>
             <div className="contentBox col">
-              <LDhappy className="boxlawyer" />
-              <h3 className="headline">{headlineResources}</h3>
+              <div className="iconcontainer">
+                <ResourceIcon className="boxicon" />
+                <h3 className="headline">{headlineResources}</h3>
+              </div>
               <div className="contentText" dangerouslySetInnerHTML={{ __html: textResources }} />
-              <button className="StartButton hover" onClick={() => this.redirectToNextPage(1)}>READ</button>
+              <button className="StartButton" onClick={() => this.redirectToNextPage(1)}>READ</button>
             </div>
             <div className="contentBox col">
-              <LDhappy className="boxlawyer" />
-              <h3 className="headline">{headlineGames}</h3>
-              <p className="contentText">{textGames}</p>
-              <button className="StartButton hover" onClick={() => this.redirectToNextPage(2)}>PLAY</button>
+              <div className="iconcontainer">
+                <GameIcon className="boxicon" />
+                <h3 className="headline">{headlineGames}</h3>
+              </div>
+              <div className="contentText" dangerouslySetInnerHTML={{ __html: textGames }} />
+              <button className="StartButton" onClick={() => this.redirectToNextPage(2)}>PLAY</button>
             </div>
             </div>
           </div>
