@@ -191,24 +191,24 @@ class UsingTheImage extends Component {
           <div>
             <div className="selectProperty-container">
               <div>
-                <div
-                  className={
-                    license === "" && error
-                      ? "errorContainer"
-                      : "license-select-wrap"
-                  }
-                >
+                <div className="license-select-wrap">
                   <Select
                     value={license}
                     onChange={this.handleDropdownChange}
                     options={options}
-                    className="licenseDropdown"
+                    className={
+                      license === "" && error
+                        ? "errorDropdown"
+                        : "licenseDropdown"
+                    }
                   />
-                  <div className="selectProperty">License Notice</div>
                 </div>
-                  {license === "" && error && (
-                    <span>Please select a license</span>
-                  )}
+                  {license === "" && error ? (
+                    <div className="using-image-error">Please select a license</div>
+                    ): (
+                      <div className="using-image-error">&nbsp;</div>
+                    )}
+                    <div className="selectProperty">License Notice</div>
               </div>
             </div>
           </div>
