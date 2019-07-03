@@ -4,9 +4,9 @@ import data from '../data.json';
 import BackButton from '../components/BackButton';
 import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
-import QuizQuestion from '../components/QuizQuestion';
+import QuizQuestion from '../components/game/QuizQuestion';
 
-class JailGame1 extends Component {
+class JailGameOne extends Component {
   constructor(props) {
     super(props);
     this.child1 = React.createRef();
@@ -121,4 +121,4 @@ class JailGame1 extends Component {
   }
 }
 
-export default withRouter(JailGame1);
+export default withRouter(JailGameOne);
