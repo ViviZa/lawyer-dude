@@ -30,8 +30,21 @@
   float: left;
 }
 
+.jail-button {
+  padding-bottom: 0.5rem;
+  left: 50%;
+}
+
 
 .jailgametwo-container{
     background-color: white;
     width: 70rem;
+    padding: 1rem;
+}
+
+.answercontainer{
+  width: 7rem;
+  height: 7rem;
+  display: inline-block;
+  margin: 1rem;
 }

@@ -100,7 +100,7 @@ class JailGameTwo extends Component {
           <div className="images-container">
             {answers.map(
               ({ accepts, lastDroppedItem, exercise, errorText }, index) => (
-                <div key={index}>
+                <div key={index} className="answercontainer">
                   <AnswerContainer
                     accept={accepts}
                     lastDroppedItem={lastDroppedItem}
@@ -124,7 +124,7 @@ class JailGameTwo extends Component {
           Submit answers
         </button>
         {submit && (
-          <div>
+          <div className="buttoncontainer jail-button">
             <BackButtonInactive />
             <ForthButton nextText={() => this.props.history.goBack()} />
           </div>

@@ -20,7 +20,7 @@ const AnswerContainer = ({ accept, lastDroppedItem, onDrop }) => {
   return (
     <div ref={drop} className="answer-container" style={{backgroundColor }}>
       {isActive
-        ? 'Release to drop'
+        ? ""
         : ""}
 
       {lastDroppedItem && (

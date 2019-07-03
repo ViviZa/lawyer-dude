@@ -114,20 +114,24 @@ class Jailpage extends Component {
               </div>
             </div>
           )}
-          {textIndex === 0 && panels.length > 1 ? (
-            <div>
-              <ForthButton nextText={this.nextText} />
-            </div>
-          ) : textIndex + 1 < panels.length ? (
-            <div>
-              <BackButton previousText={this.previousText} />
-              <ForthButton nextText={this.nextText} />
-            </div>
-          ) : (
-            !showGame && (
-              <ForthButton nextText={() => this.setState({ showGame: true })} />
-            )
-          )}
+          <div className="buttoncontainer">
+            {textIndex === 0 && panels.length > 1 ? (
+              <div>
+                <ForthButton nextText={this.nextText} />
+              </div>
+            ) : textIndex + 1 < panels.length ? (
+              <div>
+                <BackButton previousText={this.previousText} />
+                <ForthButton nextText={this.nextText} />
+              </div>
+            ) : (
+              !showGame && (
+                <ForthButton
+                  nextText={() => this.setState({ showGame: true })}
+                />
+              )
+            )}
+          </div>
         </div>
       </div>
     );
