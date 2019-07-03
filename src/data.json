@@ -381,7 +381,7 @@
       "Well, if the search engines already filters the images for me I should be able to just use them without taking further action."
     ],
     "nextPage": ["/usingfreelicenses", "/matchthelicense", "/stealingimages"],
-    "nextPageIDs": [7, 21, 300]
+    "nextPageIDs": [7, 22, 300]
   },
   {
     "id": 20,
@@ -500,6 +500,11 @@
     ],
     "nextPage": ["/learninggoals", "/resources", "/games"],
     "nextPageIDs": [1, 101, 102]
+  },
+  {
+    "id": 101,
+    "pageurl": "/resources",
+    "headline": "Resources"
   },
   {
     "id": 102,

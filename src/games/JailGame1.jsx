@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import SideNavigation from '../components/SideNavigation';
 import { withRouter } from 'react-router';
 import data from '../data.json';
 import BackButton from '../components/BackButton';
 import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
-import SettingsButton from '../components/SettingsButton';
 import QuizQuestion from '../components/QuizQuestion';
 
 class JailGame1 extends Component {
@@ -25,16 +23,13 @@ class JailGame1 extends Component {
       buttonClicked : false,
       correctAnswersText : "",
       };
-    this.redirectToNextPage = this.redirectToNextPage.bind(this);
     this.nextText = this.nextText.bind(this);
     this.previousText = this.previousText.bind(this);
     this.validate = this.validate.bind(this);
   }
 
   componentDidMount() {
-    const { ID } = this.props.location.state;
-    const { addingPages } = this.props;
-    addingPages(ID);
+    const { ID } = this.props;
     const dataString = JSON.stringify(data);
     let jsonData = JSON.parse(dataString);
     const filteredJSON = jsonData.filter(values => values.id === ID);
@@ -69,15 +64,6 @@ class JailGame1 extends Component {
     }
   }
 
-  redirectToNextPage() {
-    const { history } = this.props;
-    const { nextPageID, nextPage } = this.state;
-    history.push({
-      pathname: nextPage,
-      state: { ID: nextPageID },
-    });
-  }
-
   validate() {
     const { panels, textIndex} = this.state;
     this.child1.current.validate();
@@ -92,14 +78,11 @@ class JailGame1 extends Component {
   }
 
   render() {
-    const { ID } = this.props.location.state;
     const { panels, textIndex, headline, buttonClicked, correctAnswersText} = this.state;
     console.log(this.state.buttonClicked);
 
     return (
       <div className="JailGame1">
-         <SideNavigation ID={ID}/>
-         <SettingsButton goBack={() => this.props.history.goBack()}/>
         <div className="pagecontent">
           <h1>{headline}</h1>
           {(panels[textIndex] !== undefined) ? (
@@ -130,7 +113,7 @@ class JailGame1 extends Component {
                   buttonClicked === true ? (
                     <div className="buttoncontainer">
                       <BackButton previousText={this.previousText} />
-                      <ForthButton nextText={this.redirectToNextPage} />
+                      <ForthButton nextText={() => this.props.history.goBack()} />
                     </div>
                   ) : (<div></div>))
           }
