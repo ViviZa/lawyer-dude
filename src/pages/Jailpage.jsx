@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import data from "../data.json";
 import { withRouter } from "react-router";
 import { ReactComponent as LDHeadSceptical } from "../images/Lawyerdude-head-sceptical.svg";
-import JailGameTwo from "../games/JailGameTwo/JailGameTwo.jsx";
-import JailGame1 from "../games/JailGame1";
+import JailGameTwo from "../games/JailGameTwo.jsx";
+import JailGameOne from "../games/JailGameOne";
 import ForthButton from "./../components/ForthButton";
 import BackButton from "./../components/BackButton";
 import ResourcePanel from "./../components/ResourcePanel";
@@ -91,7 +91,7 @@ class Jailpage extends Component {
             randomGame === 0 ? (
               <JailGameTwo />
             ) : (
-              <JailGame1 ID={28} />
+              <JailGameOne ID={28} />
             )
           ) : panels[textIndex] &&
             panels[textIndex].text !== undefined &&
