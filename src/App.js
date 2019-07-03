@@ -15,6 +15,7 @@ import WelcomePage from './pages/WelcomePage';
 import FindTheLicense from './games/FindTheLicense';
 import Imprint from './pages/Imprint';
 import Overview from './pages/Overview';
+import Resources from './pages/Resources';
 import JailGame1 from './games/JailGame1';
 import GamesOverview from './pages/GamesOverview';
 
@@ -74,6 +75,7 @@ class App extends Component {
           <Route exact path="/findthelicense" component={() => <FindTheLicense addingPages={this.addingPages}/>}/>
           <Route exact path="/imprint" component={() => <Imprint addingPages={this.addingPages}/>}/>
           <Route exact path="/overview" component={() => <Overview addingPages={this.addingPages}/>}/>
+          <Route exact path="/resources" component={() => <Resources addingPages={this.addingPages}/>}/>
           <Route exact path="/jailgame1" component={() => <JailGame1 addingPages={this.addingPages}/>}/>
           <Route exact path="/games" component={() => <GamesOverview/>}/>
       </Router>

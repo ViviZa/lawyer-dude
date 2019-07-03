@@ -502,6 +502,11 @@
     "nextPageIDs": [1, 101, 102]
   },
   {
+    "id": 101,
+    "pageurl": "/resources",
+    "headline": "Resources"
+  },
+  {
     "id": 102,
     "pageurl": "/games",
     "nextPage": ["/overview","/matchthelicense", "/findthelicense", "/jailgame1"],
