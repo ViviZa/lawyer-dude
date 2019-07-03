@@ -221,10 +221,25 @@
 		padding-left: 5px;
 		line-height: 1.3;
 	}
+	.SettingsButton{
+		position: fixed;
+		margin-top: 0;
+		margin-right: 0;
+		background-color: unset;
+		width: 30px;
+		height: 28px; 
+	}
 } 
 
 @media (min-width: 600px) and (max-width: 768px) {
-
+	.SettingsButton{
+		position: fixed;
+		margin-top: 0;
+		margin-right: 0;
+		background-color: unset;
+		width: 30px;
+		height: 28px; 
+	}
 }
 
 @media (min-width: 1260px) and (max-width: 1440px) {

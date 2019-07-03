@@ -5,7 +5,7 @@ import {Route, Router} from 'react-router-dom';
 import './App.scss';
 import { createBrowserHistory } from "history";
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faCog } from '@fortawesome/free-solid-svg-icons';
 import NoDesicion from './pages/TemplateNoDesicion';
 import EnterName from './pages/EnterName.jsx';
 import TemplateDecision from './pages/TemplateDecision';
@@ -22,6 +22,7 @@ import GamesOverview from './pages/GamesOverview';
 const history = createBrowserHistory()
 library.add(faBars);
 library.add(faTimes);
+library.add(faCog);
 
 class App extends Component {
   constructor(props) {
