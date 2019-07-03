@@ -25,6 +25,7 @@ class NoDecision extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
     this.redirectToLastPage = this.redirectToLastPage.bind(this);
+    this.replaceUsername = this.replaceUsername.bind(this);
   }
 
   componentDidMount() {
@@ -47,6 +48,7 @@ class NoDecision extends Component {
       nextPage: filteredJSON[0].nextPage,
       nextPageID: nextPageID
     }, () => {
+      this.replaceUsername();
       const goBack = JSON.parse(localStorage.getItem("goBack"));
       if (goBack) {
         const goBack = false;
@@ -54,6 +56,20 @@ class NoDecision extends Component {
         this.setState({ textIndex: this.state.panels.length - 1 });
       }
     });
+  }
+
+  replaceUsername() {
+    const { panels } = this.state;
+    const username = localStorage.getItem("username");
+    let usernameParsed = JSON.parse(username);
+    const newPanels = panels.map(panel => {
+      if (!panel["text"]) {
+        return panel.replace("{username}", usernameParsed);
+      } else {
+        return panel;
+      }
+    });
+    this.setState({ panels: newPanels });
   }
 
   redirectToNextPage() {
