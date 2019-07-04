@@ -25,30 +25,24 @@ class Resources extends Component {
     localStorage.removeItem('visitedPages');
     localStorage.setItem('visitedPages', JSON.stringify(filteredJSON));
 
-    let resources = [];
-    jsonData.forEach(obj => {
-      let added = false;
-      if(obj.panels !== undefined){
-        obj.panels.forEach(panel => {
-          if(panel.type === 'resource' & !added){ 
-            resources.push(obj);
-            added = true;
-          }
-        });
-      }
-    });
     let toc = '';
     let content = '';
     let anchorId = 0;
-    resources.forEach ( resource => {
-      let headline = resource.headline; 
-      toc += "<div classname='resourceTOCr'><a href='/resources#" + anchorId + "' >" + headline + "</a></div>"
+    jsonData.forEach(obj => {
+      let added = false;
+      let headline = obj.headline; 
       let text = '';
-      resource.panels.forEach (panel => {
-        if(panel.type === 'resource'){ 
-          text += panel.text;
-        }
-      })
+      if(obj.panels !== undefined){
+        obj.panels.forEach(panel => {
+          if(panel.type === 'resource' & !added){
+            toc += "<div classname='resourceTOC'><a href='/resources#" + anchorId + "' >" + headline + "</a></div>"
+            added = true;
+          }
+          if(panel.type === 'resource'){ 
+            text += panel.text;
+          }
+        });
+      }
       content += "<div className='contentHeadline'><h3 id=" + anchorId + ">" + headline + "</h3></div><div className='contentText'>" + text + "</div>";
       anchorId++;
     });
