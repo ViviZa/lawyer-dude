@@ -294,7 +294,7 @@
   {
     "id": 14,
     "pageurl": "/usingimage",
-    "headline": "Using the image",
+    "headline": "Generate the license notice",
     "panels": [
       "Great! Now you have all the information you need to use your image from the internet without going to jail."
     ],
@@ -302,6 +302,7 @@
       "Not sure, tell me more.",
       "Cool."
     ],
+    "disclaimer" : "Please note that missing or incorrect information in the license notice will cause that license conditions are being violated. Only if the rights holder or licensor omits certain information, you don't have to mention it (clearly you can't because you don't know them). Be sure to place the license notice close to the work. A usual proximity for the respective medium (e.g. website, script, presentation) is sufficient. A good rule of thumb is that users can find the license information as intuitively and easily as possible. Please credit the author as he wants to be credited. This can sometimes be different than shown here.",
     "nextPage": ["/success"],
     "nextPageIDs": [16]
   },

@@ -6,6 +6,9 @@ import ForthButton from "../components/ForthButton";
 import Select from "react-select";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import BackButton from "./../components/BackButton";
+import Placeholder from "../images/index.png";
+import { ReactComponent as LDHeadHappy } from "../images/Lawyerdude-head-happy.svg";
+import { ReactComponent as LDLamaSceptical } from "../images/Lawyerdude-llama-head-sceptical.svg";
 
 const options = [
   {
@@ -60,12 +63,19 @@ class UsingTheImage extends Component {
       title: "",
       error: false,
       noticeCreated: false,
-      copied: false
+      copied: false,
+      licenseNotice: "",
+      disclaimer: "",
+      textIndex: 0,
+      panels: []
     };
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
     this.changeImgUrl = this.changeImgUrl.bind(this);
     this.createNotice = this.createNotice.bind(this);
     this.redirectToLastPage = this.redirectToLastPage.bind(this);
+    this.resetValues = this.resetValues.bind(this);
+    this.nextText = this.nextText.bind(this);
+    this.previousText = this.previousText.bind(this);
   }
 
   componentDidMount() {
@@ -84,7 +94,9 @@ class UsingTheImage extends Component {
     const nextPageID = filteredJSON[0].nextPageIDs[0];
     this.setState({
       headline: filteredJSON[0].headline,
+      panels: filteredJSON[0].panels,
       nextPage: filteredJSON[0].nextPage,
+      disclaimer: filteredJSON[0].disclaimer,
       nextPageID: nextPageID
     });
   }
@@ -111,11 +123,18 @@ class UsingTheImage extends Component {
   }
 
   createNotice() {
-    const { license } = this.state;
+    const { license, title, copywriter, link } = this.state;
     if (license === "") {
       this.setState({ error: true });
     } else {
-      this.setState({ noticeCreated: true, error: false, submitted: true });
+      const licenseNotice = `${copywriter}${link && ` (`}${link}${link &&
+        `), `}${title && `"`}${title}${title && `", `}${license.link}`;
+      this.setState({
+        noticeCreated: true,
+        error: false,
+        submitted: true,
+        licenseNotice
+      });
     }
   }
 
@@ -123,6 +142,30 @@ class UsingTheImage extends Component {
     const goBack = true;
     localStorage.setItem("goBack", JSON.stringify(goBack));
     this.props.history.goBack();
+  }
+
+  resetValues() {
+    this.setState({
+      noticeCreated: false,
+      error: false,
+      submitted: false,
+      licenseNotice: ""
+    });
+  }
+
+  nextText() {
+    this.setState(prevState => {
+      return { textIndex: prevState.textIndex + 1 };
+    });
+  }
+
+  previousText() {
+    const theSize = this.state.panels.length - 1;
+    if (this.state.textIndex > 0 && this.state.textIndex <= theSize) {
+      this.setState(prevState => {
+        return { textIndex: prevState.textIndex - 1 };
+      });
+    }
   }
 
   renderFirstPage() {
@@ -139,7 +182,7 @@ class UsingTheImage extends Component {
               onChange={this.changeImgUrl}
               placeholder="Please submit your image URL here"
             />
-            <label for="image-upload" className="licenceProperty">
+            <label htmlFor="image-upload" className="licenceProperty">
               Paste your image URL
             </label>
           </div>
@@ -154,7 +197,7 @@ class UsingTheImage extends Component {
               onChange={ev => this.updateTextFieldValue(ev, "title")}
               placeholder="What is the name of the image?"
             />
-            <label for="title" className="licenceProperty">
+            <label htmlFor="title" className="licenceProperty">
               Title
             </label>
           </div>
@@ -168,7 +211,7 @@ class UsingTheImage extends Component {
                 name="author"
                 placeholder="Who owns the image?"
               />
-              <label for="author" className="licenceProperty">
+              <label htmlFor="author" className="licenceProperty">
                 Author
               </label>
             </div>
@@ -183,7 +226,7 @@ class UsingTheImage extends Component {
                 onChange={ev => this.updateTextFieldValue(ev, "link")}
                 placeholder="Where can I find it?"
               />
-              <label for="source" className="licenceProperty">
+              <label htmlFor="source" className="licenceProperty">
                 Source
               </label>
             </div>
@@ -203,17 +246,20 @@ class UsingTheImage extends Component {
                     }
                   />
                 </div>
-                  {license === "" && error ? (
-                    <div className="using-image-error">Please select a license</div>
-                    ): (
-                      <div className="using-image-error">&nbsp;</div>
-                    )}
-                    <div className="selectProperty">License Notice</div>
+                {license === "" && error ? (
+                  <div className="using-image-error">
+                    Please select a license
+                  </div>
+                ) : (
+                  <div className="using-image-error">&nbsp;</div>
+                )}
+                <div className="selectProperty">License</div>
               </div>
             </div>
           </div>
+          <BackButton previousText={this.previousText} />
           <button className="url-upload-btn" onClick={this.createNotice}>
-            Save
+            Generate
           </button>
         </div>
       </div>
@@ -221,35 +267,36 @@ class UsingTheImage extends Component {
   }
 
   renderSecondPage() {
-    const { imgUrl, link, license, copywriter, title, copied } = this.state;
+    const { imgUrl, copied, licenseNotice, disclaimer } = this.state;
     return (
       <div>
         <div className="imgView">
-          <img src={imgUrl} className="imageContent" alt={imgUrl} />
+          {imgUrl ? (
+            <img src={imgUrl} className="imageContent" alt={imgUrl} />
+          ) : (
+            <img src={Placeholder} className="imageContent" alt={imgUrl} />
+          )}
         </div>
-        <div>
-          <p>
-            <a href={link} target="_blank" rel="noopener noreferrer">
-              {title}
-            </a>
-          </p>
-          License: {copywriter},{" "}
-          <a href={license.link} target="_blank" rel="noopener noreferrer">
-            {license.label}
-          </a>
+        <div className="notice-container">
+          <div className="copy-button">License notice:</div>
+          <textarea
+            className="license-notice"
+            value={licenseNotice}
+            onChange={ev => this.updateTextFieldValue(ev, "licenseNotice")}
+          />
           <CopyToClipboard
-            text={`Title: ${title}, \n License: ${copywriter}, ${
-              license.label
-            }, \n Link: ${link}`}
+            text={licenseNotice}
             onCopy={() => this.setState({ copied: true })}
+            className="copy-button"
           >
             <div>
-              <button className="load-img-btn">Copy to clipboard</button>
+              <button className="load-img-btn copy">Copy to clipboard</button>
               {copied && <span>Copied!</span>}
             </div>
           </CopyToClipboard>
         </div>
-        <BackButton previousText={this.redirectToLastPage} />
+        <div>{disclaimer}</div>
+        <BackButton previousText={this.resetValues} />
         <ForthButton nextText={this.redirectToNextPage} />
       </div>
     );
@@ -263,15 +310,59 @@ class UsingTheImage extends Component {
       return <div />;
     }
     const { ID } = this.props.location.state;
-
-    const { noticeCreated } = this.state;
-
+    const { noticeCreated, headline, panels, textIndex } = this.state;
     return (
       <div className="MatchTheLicense">
         <SideNavigation ID={ID} />
         <div className="pagecontent">
-          <h1>Using the Image</h1>
-          {!noticeCreated ? this.renderFirstPage() : this.renderSecondPage()}
+          <h1>{headline}</h1>
+          {textIndex === 0 && panels.length >= 1 ? (
+            <div>
+              <div>
+                <div className="speech">
+                  <div
+                    className="speechbubbletext"
+                    dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
+                  />
+                </div>
+                <div className="lama-container">
+                  <LDLamaSceptical className="lama-sceptical" />
+                </div>
+                <div className="speechlawyer-container">
+                  <LDHeadHappy className="speechlawyer-happy" />
+                </div>
+              </div>
+              <div className="buttoncontainer col">
+                <BackButton previousText={this.redirectToLastPage} />
+                <ForthButton nextText={this.nextText} />
+              </div>
+            </div>
+          ) : textIndex + 1 < panels.length ? (
+            <div>
+              <div>
+                <div className="speech">
+                  <div
+                    className="speechbubbletext"
+                    dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
+                  />
+                </div>
+                <div className="lama-container">
+                  <LDLamaSceptical className="lama-sceptical" />
+                </div>
+                <div className="speechlawyer-container">
+                  <LDHeadHappy className="speechlawyer-happy" />
+                </div>
+              </div>
+              <div className="buttoncontainer col">
+                <BackButton previousText={this.previousText} />
+                <ForthButton nextText={this.nextText} />
+              </div>
+            </div>
+          ) : !noticeCreated ? (
+            this.renderFirstPage()
+          ) : (
+            this.renderSecondPage()
+          )}
         </div>
       </div>
     );
