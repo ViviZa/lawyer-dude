@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
-import { Link } from "react-router-dom";
 import data from '../data.json';
 import SettingsButton from '../components/SettingsButton.jsx';
 
@@ -10,7 +9,7 @@ class Resources extends Component {
     this.state = {
       headline: '',
       resources: [],
-      glossar: '',
+      toc: '',
       content: '',
     };
 
@@ -38,26 +37,25 @@ class Resources extends Component {
         });
       }
     });
-    let glossar = '';
+    let toc = '';
     let content = '';
     let anchorId = 0;
     resources.forEach ( resource => {
-      let headline = resource.headline;
-      // glossar += "<div classname='resourceGlossar'><Link to='#" + anchorId + "'>" + headline + "</Link></div>"  
-      glossar += "<div classname='resourceGlossar'><a href='/resources#" + anchorId + "' >" + headline + "</a></div>"
+      let headline = resource.headline; 
+      toc += "<div classname='resourceTOCr'><a href='/resources#" + anchorId + "' >" + headline + "</a></div>"
       let text = '';
       resource.panels.forEach (panel => {
         if(panel.type === 'resource'){ 
           text += panel.text;
         }
       })
-      content += "<div className='contentHeadline'><h2 id=" + anchorId + ">" + headline + "</h2></div><div className='contentText'>" + text + "</div>";
+      content += "<div className='contentHeadline'><h3 id=" + anchorId + ">" + headline + "</h3></div><div className='contentText'>" + text + "</div>";
       anchorId++;
     });
     
     this.setState({
       headline: filteredJSON[0].headline,
-      glossar: glossar,
+      toc: toc,
       content: content,
     })
   }
@@ -73,18 +71,20 @@ class Resources extends Component {
   }
   
   render() {
-    const { headline, glossar, content } = this.state;
+    const { headline, toc, content } = this.state;
     return (
       <div className="Resources">
-        <SettingsButton goBack={() => this.props.history.goBack()} />
-        <button className="jail-back-btn" onClick={() => this.props.history.goBack()}> 
-          Back to overview
-        </button>
+        <div className="topBar">
+          <SettingsButton goBack={() => this.props.history.goBack()} />
+          <button className="jail-back-btn" onClick={() => this.props.history.goBack()}> 
+            Back to overview
+          </button>
+        </div>
         <div className="pagecontent   ">
           <h1 className="headline">{headline}</h1>
           <div className="container">
-          <div className="resGlossar" dangerouslySetInnerHTML={{ __html: glossar }} />
-          <div className="resContent" dangerouslySetInnerHTML={{ __html: content }} />
+            <div className="resGlossar" dangerouslySetInnerHTML={{ __html: toc }} />
+            <div className="resContent" dangerouslySetInnerHTML={{ __html: content }} />
           </div>
         </div>
       </div>
