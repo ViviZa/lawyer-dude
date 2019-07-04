@@ -5,7 +5,7 @@ import data from '../data.json';
 import BackButton from '../components/BackButton';
 import ForthButton from '../components/ForthButton';
 import SettingsButton from '../components/SettingsButton';
-import QuizQuestion from './../components/QuizQuestion';
+import QuizQuestion from './../components/game/QuizQuestion';
 import { ReactComponent as LDHeadHappy } from "../images/Lawyerdude-head-happy.svg";
 
 const options = [

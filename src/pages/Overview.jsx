@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import data from '../data.json';
-import { ReactComponent as LDhappy } from '../images/Lawyerdude-head-happy.svg';
 import { ReactComponent as TutorialIcon } from '../images/tutorial_icon.svg';
 import { ReactComponent as ResourceIcon } from '../images/resource_icon.svg';
 import { ReactComponent as GameIcon } from '../images/game_icon.svg';

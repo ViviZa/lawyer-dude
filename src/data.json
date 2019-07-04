@@ -535,7 +535,8 @@
     "pageurl": "/findthelicense",
     "headline": "CC Licenses and their Use Cases",
     "panels": [
-      "The CC licenses itself are easy to understand but how about it’s usage in real life? In the following you have to decide if the given use cases are legal under the given license. If so, please mark them as correct.",
+      "The cc licenses itself are easy to understand but how about it’s usage in real life? In this game you have to decide if you are allowed to use an image under the given license in the described use case.",
+      "Simply select all use cases that are valid for the given license.",
       { "question": "What is allowed under a <b> CC0 </b>?",
         "correctAnswers": [1,2,3,4,5,6,7,8,9]
       },
@@ -609,7 +610,7 @@
         "text": "Well...come to jail! Actually, it's quite simple! Just ask yourself the following questions before you use an image from the Internet: <br> <b>Who is the author of the image?</b> <br> Do not use images from the internet that come without any copyright information. Because if it is not a freely licensed image, you need the permission of the author to use the image. The only exception is that the rules the image was published under do not require attribution at all (see the public domain waiver “CC0”). <br><br> <b>How may I use the image?</b> <br> Remember, there are four different options: <br><br> <ul> <li><i>All rights reserved</i> <br> Copyright prohibits any use of the image without the author’s permission. So rather use another image or contact the author and ask for permission to use it.</li> <li><i>Some rights reserved</i> <br> By the help of open license models like the CC licenses, rights holders determine how their work may be used. You can use freely licensed images without asking for permission as long as you follow the conditions defined in the license. </li><li><i>All rights granted</i> <br> Jackpot! The author of the image waived all rights and placed it in the public domain. You are allowed to use the image without any restrictions or obligations. </li><li><i>No information</i> <br> If you cannot find any copyright information using the image without permission is very certainly not permitted. </li></ul> <br><br> <b>What information do I have to provide if I want to use an image?</b> <br>  This depends on your specific use case. A so-called <b>license notice</b> generally consists of <br> <ul> <li> the <i>title</i> of the image (if there is one), <li>the name of the <i>author</i>,</li><li>the <i>source</i> of the image,</li><li>and the link to the <i>license</i>.</li></ul> <br><br> See, it's actually not that difficult. Just follow these simple rules and we'll never see each other in this place again. In case of doubt simply start a new search and select a freely licensed image that contains all necessary information for a correct license notice.",
         "type": "resource"
       },
-      "Go on, try it again."
+      "But before I can get you out you have to master this..."
     ],
     "nextPage": "/",
     "nextPageIDs": [0]
@@ -621,7 +622,7 @@
   {
     "id": 28,
     "pageurl": "/jailgame1",
-    "headline": "Get out of jail Game",
+    "headline": "Get out of jail",
     "panels": [
       { "question": "Which of the following statements apply to the CC BY-SA license?",
         "correctAnswers": [1,4,5],
