@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
-import SideNavigation from "../components/SideNavigation";
 import data from '../data.json';
 import { ReactComponent as LDhappy } from '../images/Lawyerdude-head-happy.svg';
 import SettingsButton from '../components/SettingsButton.jsx';
@@ -39,7 +38,6 @@ class Resources extends Component {
   }
 
   render() {
-    const { ID } = this.props.location.state;
     const { headline } = this.state;
     return (
       <div className="Resources">
