@@ -28,19 +28,31 @@ class Resources extends Component {
 
     let resources = [];
     jsonData.forEach(obj => {
+      let added = false;
       if(obj.panels !== undefined){
         obj.panels.forEach(panel => {
-          if(panel.type === 'resource') resources.push(obj);
+          if(panel.type === 'resource' & !added){ 
+            resources.push(obj);
+            added = true;
+          }
         });
       }
     });
     let glossar = '';
     let content = '';
+    let anchorId = 0;
     resources.forEach ( resource => {
       let headline = resource.headline;
-      glossar += "<div classname='resourceGlossar'><Link to='#" + headline + "'>" + headline + "</Link></div>"  
-      // let text = resource.text;
-      // content += "<div className='contentHeadline'><h2 id=" + headline + ">" + headline + "</h2></div><div className='contentText'>" + text + "</div>";
+      // glossar += "<div classname='resourceGlossar'><Link to='#" + anchorId + "'>" + headline + "</Link></div>"  
+      glossar += "<div classname='resourceGlossar'><a href='/resources#" + anchorId + "' >" + headline + "</a></div>"
+      let text = '';
+      resource.panels.forEach (panel => {
+        if(panel.type === 'resource'){ 
+          text += panel.text;
+        }
+      })
+      content += "<div className='contentHeadline'><h2 id=" + anchorId + ">" + headline + "</h2></div><div className='contentText'>" + text + "</div>";
+      anchorId++;
     });
     
     this.setState({
@@ -62,7 +74,6 @@ class Resources extends Component {
   
   render() {
     const { headline, glossar, content } = this.state;
-    console.log(glossar);
     return (
       <div className="Resources">
         <SettingsButton goBack={() => this.props.history.goBack()} />
@@ -72,7 +83,8 @@ class Resources extends Component {
         <div className="pagecontent   ">
           <h1 className="headline">{headline}</h1>
           <div className="container">
-          <div dangerouslySetInnerHTML={{ __html: glossar }} />
+          <div className="resGlossar" dangerouslySetInnerHTML={{ __html: glossar }} />
+          <div className="resContent" dangerouslySetInnerHTML={{ __html: content }} />
           </div>
         </div>
       </div>
