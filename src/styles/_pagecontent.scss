@@ -26,6 +26,22 @@ h1 {
 
 .overviewpagecontent {
 	padding-top: 2%;
+
+	h3 {
+		font-size: 1.5rem;
+		font-weight: 600;
+		line-height: 1.6;
+		height: 3.2em;
+		margin: 1em auto;
+
+	}
+
+	.contentText {
+		padding: 2em 1em;
+		text-align: left;
+		letter-spacing: 2px;
+		height: 21em;
+	}
 }
 
 ol {
@@ -74,16 +90,14 @@ ol {
 
 .contentBox {
 	background-color: whitesmoke;
-	// height: 40%;
-	// width: 24%;
+	height: 44em;
 	margin: 1em;
 	padding: 20px 20px;
 	text-align: center;
 }
 
-.boxlawyer {
-	height: 18%;
-	width: 18%;
+.boxicon {
+	height: 7em;
 }
 
 .jailpagecontent {
