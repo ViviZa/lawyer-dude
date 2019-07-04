@@ -50,6 +50,10 @@
 	text-decoration: none;
 	width: calc(100% - 27px);
 	display: inline-block;
+
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 .linkWrapper {
@@ -73,9 +77,6 @@
 	margin-right: 15px;
 }
 
-.hover{
-	cursor: pointer;
-}
 .navNarrow {
 
 	i {

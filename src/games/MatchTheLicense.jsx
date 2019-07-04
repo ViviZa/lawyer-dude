@@ -186,13 +186,10 @@ class MatchTheLicense extends Component {
             <div>
               <div className="speech">
                 <div className="speechbubbletext">
-                  <div>You have experienced that the filter options search engines
-                  offer are not equal to the CC licenses one is actually looking
-                  for. Therefore, it is more important to focus on your
-                  intention when using a picture from the internet. To get an
-                  idea of the right license for your use case we prepared some
-                  examples. Now it’s your turn to find the right license! It is
-                  possible to choose multiple licenses.
+                  <div>Unfortunately you can't rely on search engine tools to filter images by CC licenses - that's what I just explained to you.
+                       Therefore it is important that you focus on your specific use case if you are looking for an image on the internet.
+                       To get a better sense of which licenses are suitable for your use case, you can test it here with a few examples.
+                       Select the licenses that are correct for the described use case. It is possible to select multiple licenses.
                   </div>
                 </div>
               </div>
