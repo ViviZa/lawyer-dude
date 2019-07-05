@@ -37,12 +37,12 @@ class Resources extends Component {
           if(panel.type === 'resource'){
             headline = obj.headline;
             if(!added) {
-              toc += "<div classname='resourceTOC'><a href='/resources#" + anchorId + "' >" + headline + "</a></div>";
+              toc += "<a href='/resources#" + anchorId + "' >" + headline + "</a></br>";
               added = true;
             }
             text += panel.text;
             if(panel.images !== undefined){
-              images = "<div className='resImages'>";
+              images = "<div class='resImages'>";
               panel.images.forEach(image => {
                 images += "<img src='" + image + "' />";
               });
@@ -51,7 +51,7 @@ class Resources extends Component {
             text += images;
           }
         });
-        if(headline !== '' ) content += "<div className='contentHeadline'><h3 id=" + anchorId + ">" + headline + "</h3></div><div className='contentText'>" + text + "</div>";
+        if(headline !== '' ) content += "<div class='contentHeadline'><h3 id=" + anchorId + ">" + headline + "</h3></div><div class='contentText'>" + text + "</div>";
       }
       anchorId++;
     });
@@ -89,8 +89,8 @@ class Resources extends Component {
         <div className="pagecontent">
 
           <h1 className="headline">{headline}</h1>
+          <div className="resToC" dangerouslySetInnerHTML={{ __html: toc }} />
           <div className="container">
-            <div className="resToC" dangerouslySetInnerHTML={{ __html: toc }} />
             <div className="resContent" dangerouslySetInnerHTML={{ __html: content }} />
           </div>
         </div>
