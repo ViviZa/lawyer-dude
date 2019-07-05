@@ -7,6 +7,7 @@ import ForthButton from "../components/ForthButton";
 import Select from "react-select";
 import update from "immutability-helper";
 import { ReactComponent as LDHeadHappy } from "../images/Lawyerdude-head-happy.svg";
+import { ReactComponent as LDLamaSceptical } from "../images/Lawyerdude-llama-head-sceptical.svg";
 
 import matchTheLicenseData from "./MatchTheLicenseData.json";
 
@@ -24,11 +25,12 @@ class MatchTheLicense extends Component {
     super(props);
     this.state = {
       headline: "",
+      textIndex: 0,
+      panels: [],
       nextPageID: 0,
       nextPage: "",
       count: 0,
       questions: [],
-      intro: true,
       selectedOption: [
         {
           option: [],
@@ -65,17 +67,18 @@ class MatchTheLicense extends Component {
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.validate = this.validate.bind(this);
-    this.incCount = this.incCount.bind(this);
-    this.setIntro = this.setIntro.bind(this);
+    this.setCount = this.setCount.bind(this);
     this.redirectToLastPage = this.redirectToLastPage.bind(this);
+    this.nextText = this.nextText.bind(this);
+    this.previousText = this.previousText.bind(this);
   }
 
   componentDidMount() {
     if (!this.props.location.state) {
       this.props.history.push({
-        pathname: "/",
+        pathname: "/"
       });
-      return <div/>
+      return <div />;
     }
     const { ID } = this.props.location.state;
     const { addingPages } = this.props;
@@ -87,6 +90,7 @@ class MatchTheLicense extends Component {
     this.setState({
       headline: filteredJSON[0].headline,
       nextPage: filteredJSON[0].nextPage,
+      panels: filteredJSON[0].panels,
       nextPageID: nextPageID
     });
 
@@ -113,13 +117,20 @@ class MatchTheLicense extends Component {
     });
   }
 
-  incCount(value) {
-    this.setState({ count: value });
+  nextText() {
+    this.setState(prevState => {
+      return { textIndex: prevState.textIndex + 1 };
+    });
   }
 
-  setIntro() {
-    const {intro} = this.state;
-    this.setState({ intro: !intro });
+  previousText() {
+    this.setState(prevState => {
+      return { textIndex: prevState.textIndex - 1 };
+    });
+  }
+
+  setCount(value) {
+    this.setState({ count: value });
   }
 
   redirectToLastPage() {
@@ -127,7 +138,6 @@ class MatchTheLicense extends Component {
     localStorage.setItem("goBack", JSON.stringify(goBack));
     this.props.history.goBack();
   }
-
 
   validate() {
     const { selectedOption, questions, count } = this.state;
@@ -170,28 +180,29 @@ class MatchTheLicense extends Component {
   render() {
     if (!this.props.location.state) {
       this.props.history.push({
-        pathname: "/",
+        pathname: "/"
       });
-      return <div/>
+      return <div />;
     }
     const { ID } = this.props.location.state;
-    const { selectedOption, questions, count, intro } = this.state;
+    const { selectedOption, questions, count, textIndex, panels } = this.state;
 
     return (
       <div className="MatchTheLicense">
         <SideNavigation ID={ID} />
         <div className="pagecontent">
           <h1>Match the License</h1>
-          {intro ? (
+          {textIndex === 0 && panels.length >= 1 ? (
             <div>
               <div className="speech">
                 <div className="speechbubbletext">
-                  <div>Unfortunately you can't rely on search engine tools to filter images by CC licenses - that's what I just explained to you.
-                       Therefore it is important that you focus on your specific use case if you are looking for an image on the internet.
-                       To get a better sense of which licenses are suitable for your use case, you can test it here with a few examples.
-                       Select the licenses that are correct for the described use case. It is possible to select multiple licenses.
-                  </div>
+                  <div
+                    dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
+                  />
                 </div>
+              </div>
+              <div className="lama-container">
+                <LDLamaSceptical className="lama-sceptical" />
               </div>
               <div className="speechlawyer-container">
                 <LDHeadHappy className="speechlawyer-happy" />
@@ -201,7 +212,7 @@ class MatchTheLicense extends Component {
             <div className="matchQuestions">
               {Array.from(Array(3), (e, i) => {
                 return (
-                  <div className="matchSection">
+                  <div className="matchSection" key={i}>
                     <div className="matchQuestion">
                       {questions.length > 0 && questions[i + count].text}
                     </div>
@@ -223,25 +234,32 @@ class MatchTheLicense extends Component {
                   </div>
                 );
               })}
-              <button className="match-btn" onClick={() => this.validate()}>Submit answers</button>
+              <button className="match-btn" onClick={() => this.validate()}>
+                Submit answers
+              </button>
             </div>
           )}
-        {intro ? (
-          <div className="buttoncontainer col">
-            <BackButton previousText={this.redirectToLastPage}/>
-            <ForthButton nextText={this.setIntro} />
-          </div>
-        ) : count !== 3 ? (
-          <div className="buttoncontainer col">
-            <BackButton previousText={this.setIntro} />
-            <ForthButton nextText={() => this.incCount(3)} />
-          </div>
-        ) : (
-          <div className="buttoncontainer col">
-            <BackButton previousText={() => this.incCount(-3)} />
-            <ForthButton nextText={this.redirectToNextPage} />
-          </div>
-        )}
+          {textIndex === 0 && panels.length >= 1 ? (
+            <div className="buttoncontainer col">
+              <BackButton previousText={this.redirectToLastPage} />
+              <ForthButton nextText={this.nextText} />
+            </div>
+          ) : textIndex + 1 < panels.length ? (
+            <div className="buttoncontainer col">
+              <BackButton previousText={this.previousText} />
+              <ForthButton nextText={this.nextText} />
+            </div>
+          ) : count !== 3 ? (
+            <div className="buttoncontainer col">
+              <BackButton previousText={this.previousText} />
+              <ForthButton nextText={() => this.setCount(3)} />
+            </div>
+          ) : (
+            <div className="buttoncontainer col">
+              <BackButton previousText={() => this.setCount(0)} />
+              <ForthButton nextText={this.redirectToNextPage} />
+            </div>
+          )}
         </div>
       </div>
     );

@@ -429,7 +429,9 @@
     "id": 22,
     "pageurl": "/matchthelicense",
     "headline": "Match the License",
-    "panels": [],
+    "panels": [
+      "Unfortunately you can't rely on search engine tools to filter images by CC licenses - that's what I just explained to you. Therefore it is important that you focus on your specific use case if you are looking for an image on the internet. To get a better sense of which licenses are suitable for your use case, you can test it here with a few examples. Select the licenses that are correct for the described use case. It is possible to select multiple licenses."
+    ],
     "nextPage": ["/usinggoogle"],
     "nextPageIDs": [21]
   },
