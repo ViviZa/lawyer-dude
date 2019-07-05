@@ -1,13 +1,15 @@
 .resourceContainer {
 	background-color: $resource-background;
 	position: relative;
-	height: 28em;
+	height: 46em;
+	padding: 3em;
 	overflow: auto;
 
+	// Ist diese Klasse redundant, wenn resourcetext als neue Klasse hinzugefuegt wurde?
 	.speechbubbletext {
 		position: relative;
 		font-size: 20px;
-		padding: 0 1.5em;
+		padding: 2.5em;
 		margin: 3em;
 		line-height: 2em;
 		// width: 50%;
@@ -22,17 +24,16 @@
 	position: relative;
 	line-height: 2em;
 	text-align: left;
-	float: left;
-	height: auto;
-	height: 6em;
+	height: 100%;
 	letter-spacing: 1.1px;
-
+	overflow: hidden;
+	overflow-y: scroll;
 	
 	&::before{
-		box-sizing: unset
+		box-sizing: unset;
 	}
+
 	div {
-		height: inherit; 
-		padding: 1em 1em 2em 1em;
+		height: auto;
 	}
 }
