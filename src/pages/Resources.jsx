@@ -63,13 +63,11 @@ class Resources extends Component {
     })
   }
   
-  redirectToNextPage(index) {
-    const { history } = this.props;
-    const { nextPageIDs, nextPages } = this.state;
-    
+  redirectToNextPage(id) {
+    const { history } = this.props;    
     history.push({
-      pathname: nextPages[index],
-      state: { ID: nextPageIDs[index] },
+      pathname: '/overview',
+      state: { ID: id },
     });
   }
   
@@ -82,9 +80,7 @@ class Resources extends Component {
         {topBtn}
         <div id="top" className="topBar">
           <SettingsButton goBack={() => this.props.history.goBack()} />
-          <button className="jail-back-btn" onClick={() => this.props.history.goBack()}> 
-            Back to overview
-          </button>
+          <button className="StartButton" onClick={() => this.redirectToNextPage(100)} title="Return to overview page">Return</button>
         </div>
         <div className="pagecontent">
 
