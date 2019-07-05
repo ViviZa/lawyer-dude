@@ -37,3 +37,10 @@
 		height: auto;
 	}
 }
+
+@media (min-width: 1260px) and (max-width: 1440px) {
+	
+	.resourceContainer {
+		height: 26em;
+	}
+}
