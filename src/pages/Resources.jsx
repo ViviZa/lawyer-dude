@@ -30,16 +30,25 @@ class Resources extends Component {
     jsonData.forEach(obj => {
       let added = false;
       let headline = '';
+      let images = '';
       let text = '';
       if(obj.panels !== undefined){
         obj.panels.forEach(panel => {
           if(panel.type === 'resource'){
-            headline = obj.headline; 
+            headline = obj.headline;
             if(!added) {
-              toc += "<div classname='resourceTOC'><a href='/resources#" + anchorId + "' >" + headline + "</a></div>"
+              toc += "<div classname='resourceTOC'><a href='/resources#" + anchorId + "' >" + headline + "</a></div>";
               added = true;
             }
             text += panel.text;
+            if(panel.images !== undefined){
+              images = "<div className='resImages'>";
+              panel.images.forEach(image => {
+                images += "<img src='" + image + "' />";
+              });
+              images += "</div>";
+            }
+            text += images;
           }
         });
         if(headline !== '' ) content += "<div className='contentHeadline'><h3 id=" + anchorId + ">" + headline + "</h3></div><div className='contentText'>" + text + "</div>";
