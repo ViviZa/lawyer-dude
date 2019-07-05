@@ -12,10 +12,49 @@
 
 .licenceProperty {
     display: inline-block;
+    text-align: left;
+    width: 100%;
 }
 
 .errorContainer {
     border: 1px solid red;
     margin-bottom: 10px;
+    width: 60%;
+}
+
+.licenseDropdown{
     width: 100%;
+}
+
+.errorDropdown {
+    outline: 3px auto red;
+    display: inline-block;
+    width: 100%;
+}
+
+.license-notice{
+    display: inline-block;
+    width: 25rem;
+    height: 13rem;
+}
+
+.copy-button{
+    display: inline-block;
+    vertical-align: top;
+    margin: 1rem;
+
+    & .copy{
+        margin: 0px;
+    }
+}
+
+.notice-container {
+    margin-top: 2rem;
+}
+
+.using-image-error{
+    height: 2rem;
+    display: inline-block;
+    width: 15rem;
+    margin-left: 1rem;
 }
