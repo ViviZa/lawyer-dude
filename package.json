@@ -20,7 +20,6 @@
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^3.0.1",
-    "react-scroll-up-button": "^1.6.4",
     "react-select": "^2.4.4"
   },
   "scripts": {
