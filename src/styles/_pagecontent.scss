@@ -382,8 +382,10 @@ ol {
 }
 
 @media (min-width: 1260px) and (max-width: 1440px) {
-	.overviewpagecontent{
-		h1{
+	
+	.overviewpagecontent {
+		
+		h1 {
 			font-size: 1.5rem;
 			font-weight: 600;
 		}
@@ -427,6 +429,8 @@ ol {
 		margin-left: 15em;
 	}
 
+	
+
 
 	// .resourceContainer {
 	// 	margin-top: 2.5em;
@@ -457,6 +461,23 @@ ol {
 	.entername-form {
 		margin-top: 8em;
 		margin-left: 10em;
+	}
+
+	.quizQuestions, .matchQuestions {
+
+		.matchQuestion { 
+			height: 5em;
+			width: 25em;
+			font-size: 16px;
+			line-height: 1.2;
+			margin: 1.5em 1em 1.5em 1.5em;
+			overflow-y: scroll;
+		}
+
+		.basic-multi-select {
+			width: 12em;
+			margin: 2em 1.5em;
+		}
 	}
 
 	.attribution-container {
