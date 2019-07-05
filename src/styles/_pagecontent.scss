@@ -389,6 +389,20 @@ ol {
 			font-size: 1.5rem;
 			font-weight: 600;
 		}
+
+		h3 {
+			font-size: 1.2em;
+			line-height: 1.2;
+			margin: 0 auto;
+		}
+
+		.contentText {
+			padding: 0.5em;
+			letter-spacing: 1.4;
+			line-height: 1.4; 
+			font-size: 14px;
+			height: 13em;
+		}
 	}
 
 	h1 {
@@ -404,6 +418,12 @@ ol {
 
 	.startpagecontent {
 		padding-top: 3.5em;
+	}
+
+	.Overview {
+		.startpagecontent {
+			padding-top: 1%;
+		}
 	}
 
 	.welcomeblock {
@@ -429,9 +449,14 @@ ol {
 		margin-left: 15em;
 	}
 
+	.contentBox {
+		height: 26.5em;
+	}
+
+	.boxicon {
+		height: 4em;
+	}
 	
-
-
 	// .resourceContainer {
 	// 	margin-top: 2.5em;
 	// 	// height: 25em;
