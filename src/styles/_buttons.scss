@@ -137,6 +137,7 @@
 .overlay-hidden {
 	display: none; 
 }
+
 .Overview {
 
 	.Overlay {
@@ -246,6 +247,27 @@
 		height: 55px;
 		width: 55px;
 		padding: 10px 10px 14px 16px;
+	}
+
+	.Overlay {
+		left: 58%;
+		height: 42%;
+
+		h2 {
+			font-size: 26px;
+		}
+
+		.button-close-overlay {
+			margin-top: -0.2em;
+		}
+
+		ul {
+			margin: 1.8em 0;
+		}
+
+		li {
+			font-size: 18px;
+		}	
 	}
 
 	.BackButton, .btn_inactive {
