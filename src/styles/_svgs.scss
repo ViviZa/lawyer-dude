@@ -28,7 +28,7 @@
 	display: inline-block; 
 	float: left;
 	width: 20%;
-	margin-top: 23.5em;
+	margin-top: 19em;
 	margin-left: -8em;
 }
 
@@ -73,7 +73,7 @@
 	font-weight: 600;
 	position: relative;
 	width: 60%;
-	margin-top: 10em;
+	margin-top: 6em;
 	margin-left: 10em;
 
 	&:before {
@@ -101,6 +101,14 @@
 		 background-size: 100%;
 	background-position: left bottom;
 	display: grid;
+}
+
+.resourcetext {
+
+	.resource-image {
+		width: 10em;
+		margin: 2.8em;
+	}
 }
 
 #llama {

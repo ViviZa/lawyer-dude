@@ -115,16 +115,23 @@ ol {
 }
 
 .speechbubbletext, .answerbubbletext, .speechbubbletext-jail {
-	height: 6em;
-	padding: 8%;
+	height: 11em;
+	padding: 2.5em;
 	position: relative;
 	letter-spacing: 1.1px;
+	overflow-y: scroll;
 
 	div {
 		height: inherit; 
 		padding: 0 1em;
 		overflow-y: scroll;
 		overflow-y: auto;
+	}
+
+	a {
+		background-color: #FFF;
+		color: $darkblue;
+		padding: 0.8em 1.2em;
 	}
 }
 
@@ -162,7 +169,7 @@ ol {
 .speechlawyer-container, .speechlawyer-sceptical-container {
 	display: inline-block; 
 	float: right;
-	margin-top: 7em;
+	margin-top: 1em;
 	margin-right: -8em;
 	width: 20%;
 	transform: rotate(-45deg);
