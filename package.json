@@ -50,13 +50,13 @@
     "react-app-polyfill": "^0.2.2",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dev-utils": "^8.0.0",
-    "react-dnd": "^8.0.3",
-    "react-dnd-html5-backend": "^8.0.3",
+    "react-dnd": "^9.0.1",
+    "react-dnd-html5-backend": "^9.0.0",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^3.0.1",
-    "react-select": "^2.4.4"
+    "react-select": "^2.4.4",
     "resolve": "1.10.0",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
@@ -106,7 +106,7 @@
       "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
     "transformIgnorePatterns": [
-      "/node_modules/(?!(react-dnd-html-backend)/)"
+      "<rootDir>/node_modules/(?!(react-dnd|dnd-core|react-dnd-html5-backend))"
     ],
     "moduleNameMapper": {
       "^react-native$": "react-native-web",
