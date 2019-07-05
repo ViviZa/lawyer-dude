@@ -137,7 +137,12 @@
 .overlay-hidden {
 	display: none; 
 }
+.Overview {
 
+	.Overlay {
+		left: 50%;
+	}
+}
 .BackButton {
 	border-radius: 50%;
 	border-style: none; 
