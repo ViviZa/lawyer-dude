@@ -149,7 +149,7 @@ class TemplateDecision extends Component {
           ) : (
             <div>
               <div className="speech">
-                <p
+                <div
                   className="speechbubbletext"
                   dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
                 />
