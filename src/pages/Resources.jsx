@@ -20,7 +20,6 @@ class Resources extends Component {
     const { ID } = this.props.location.state;
     const dataString = JSON.stringify(data);
     let jsonData = JSON.parse(dataString);
-    // this.resources(jsonData);
     const filteredJSON = jsonData.filter(values => values.id === ID);
     localStorage.removeItem('visitedPages');
     localStorage.setItem('visitedPages', JSON.stringify(filteredJSON));
@@ -30,20 +29,21 @@ class Resources extends Component {
     let anchorId = 0;
     jsonData.forEach(obj => {
       let added = false;
-      let headline = obj.headline; 
+      let headline = '';
       let text = '';
       if(obj.panels !== undefined){
         obj.panels.forEach(panel => {
-          if(panel.type === 'resource' & !added){
-            toc += "<div classname='resourceTOC'><a href='/resources#" + anchorId + "' >" + headline + "</a></div>"
-            added = true;
-          }
-          if(panel.type === 'resource'){ 
+          if(panel.type === 'resource'){
+            headline = obj.headline; 
+            if(!added) {
+              toc += "<div classname='resourceTOC'><a href='/resources#" + anchorId + "' >" + headline + "</a></div>"
+              added = true;
+            }
             text += panel.text;
           }
         });
+        if(headline !== '' ) content += "<div className='contentHeadline'><h3 id=" + anchorId + ">" + headline + "</h3></div><div className='contentText'>" + text + "</div>";
       }
-      content += "<div className='contentHeadline'><h3 id=" + anchorId + ">" + headline + "</h3></div><div className='contentText'>" + text + "</div>";
       anchorId++;
     });
     
@@ -66,18 +66,22 @@ class Resources extends Component {
   
   render() {
     const { headline, toc, content } = this.state;
+    const topBtn = (<a href="/resources#top" className="top-btn" title="Go to top">Top</a>)
+
     return (
       <div className="Resources">
-        <div className="topBar">
+        {topBtn}
+        <div id="top" className="topBar">
           <SettingsButton goBack={() => this.props.history.goBack()} />
           <button className="jail-back-btn" onClick={() => this.props.history.goBack()}> 
             Back to overview
           </button>
         </div>
-        <div className="pagecontent   ">
+        <div className="pagecontent">
+
           <h1 className="headline">{headline}</h1>
           <div className="container">
-            <div className="resGlossar" dangerouslySetInnerHTML={{ __html: toc }} />
+            <div className="resToC" dangerouslySetInnerHTML={{ __html: toc }} />
             <div className="resContent" dangerouslySetInnerHTML={{ __html: content }} />
           </div>
         </div>

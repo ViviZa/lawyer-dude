@@ -1,6 +1,6 @@
 @import "variables";
 
-.StartButton, .save-name-btn, .load-img-btn, .url-upload-btn, .jail-back-btn, .quiz-btn, .match-btn {
+.StartButton, .save-name-btn, .load-img-btn, .url-upload-btn, .jail-back-btn, .quiz-btn, .match-btn, .top-btn {
 	color: $button-text;
 	border-radius: 100px;
 	border-style: none; 
@@ -29,6 +29,19 @@
 
 	&:hover {
 		cursor: pointer;
+	}
+}
+
+.top-btn {
+	bottom: 20px;
+	right: 10px;
+	position: absolute;
+	// display: none;
+
+	&:hover {
+		background-color: red;
+		text-decoration: none;
+		color: #ffffff;
 	}
 }
 
