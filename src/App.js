@@ -10,13 +10,13 @@ import NoDesicion from './pages/TemplateNoDesicion';
 import EnterName from './pages/EnterName.jsx';
 import TemplateDecision from './pages/TemplateDecision';
 import MatchTheLicense from './games/MatchTheLicense';
-import UsingThePicture from './games/UsingThePicture';
+import UsingTheImage from './games/UsingThePicture';
 import WelcomePage from './pages/WelcomePage';
 import FindTheLicense from './games/FindTheLicense';
 import Imprint from './pages/Imprint';
 import Overview from './pages/Overview';
 import Resources from './pages/Resources';
-import JailGame1 from './games/JailGame1';
+import JailGameOne from './games/JailGameOne';
 import GamesOverview from './pages/GamesOverview';
 
 const history = createBrowserHistory()
@@ -59,7 +59,7 @@ class App extends Component {
           <Route exact path="/gettinglicense" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/usinglicense" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/creatingnotice" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
-          <Route exact path="/usingimage" component={() => <UsingThePicture addingPages={this.addingPages}/>}/>
+          <Route exact path="/usingimage" component={() => <UsingTheImage addingPages={this.addingPages}/>}/>
           <Route exact path="/dontusetheimage" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/moreinformation" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/usingsearchengines" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
@@ -76,7 +76,7 @@ class App extends Component {
           <Route exact path="/imprint" component={() => <Imprint addingPages={this.addingPages}/>}/>
           <Route exact path="/overview" component={() => <Overview addingPages={this.addingPages}/>}/>
           <Route exact path="/resources" component={() => <Resources addingPages={this.addingPages}/>}/>
-          <Route exact path="/jailgame1" component={() => <JailGame1 addingPages={this.addingPages}/>}/>
+          <Route exact path="/jailgame1" component={() => <JailGameOne addingPages={this.addingPages}/>}/>
           <Route exact path="/games" component={() => <GamesOverview/>}/>
       </Router>
     );

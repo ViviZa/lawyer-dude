@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router";
 import HTML5Backend from "react-dnd-html5-backend";
-import Box from "./Box";
+import Box from "../components/game/Box";
 import { DndProvider } from "react-dnd";
-import AnswerContainer from "./AnswerContainer";
+import AnswerContainer from "../components/game/AnswerContainer";
 import update from "immutability-helper";
-import BackButtonInactive from "../../components/BackButtonInactive";
-import ForthButton from "../../components/ForthButton";
+import BackButtonInactive from "../components/BackButtonInactive";
+import ForthButton from "../components/ForthButton";
 
 const images = [
   { src: "images/Cc-nd.svg", type: "image", name: "CC-ND" },
@@ -76,9 +76,7 @@ class JailGameTwo extends Component {
     answers.map((answer, index) =>
       answer.lastDroppedItem && answer.lastDroppedItem.src === solution[index].src
         ? (answer.errorText = "")
-        : (answer.errorText = `Wrong answer, the correct solution would have been ${
-            solution[index].name
-          }`)
+        : (answer.errorText = `Wrong answer`)
     );
     this.setState({ answers, submit: true });
   }
@@ -88,8 +86,8 @@ class JailGameTwo extends Component {
     return (
       <div class="jailgametwo-container">
         <DndProvider backend={HTML5Backend}>
-          <div>
-            To get out of jail you have to manage the following tasks correctly. Good luck! Match the icons to the correct license module.
+          <div className="jailgame-text">
+            Drag and drop the correct icons to the license modules.
           </div>
           <div className="images-container">
             {images.map(({ src, type }, index) => (

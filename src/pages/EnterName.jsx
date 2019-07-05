@@ -55,6 +55,7 @@ class EnterName extends Component {
       event.preventDefault();
       this.setState({ errorText: "Please enter a name!" });
     } else {
+      event.preventDefault();
       this.setState({ errorText: "" });
       localStorage.setItem("username", JSON.stringify(this.state.username));
       const { history } = this.props;
