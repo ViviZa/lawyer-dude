@@ -24,6 +24,7 @@ class Jailpage extends Component {
     this.previousText = this.previousText.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
+    this.toggleJail = this.toggleJail.bind(this);
   }
 
   componentDidMount() {
@@ -82,6 +83,11 @@ class Jailpage extends Component {
     }
   }
 
+  toggleJail(){
+    const {showGame} = this.state;
+    this.setState({showGame: !showGame})
+  }
+
   render() {
     const { panels, textIndex, showGame, randomGame } = this.state;
     return (
@@ -89,7 +95,7 @@ class Jailpage extends Component {
         <div className="jailpagecontent">
           {showGame ? (
             randomGame === 0 ? (
-              <JailGameTwo />
+              <JailGameTwo ID={106} showJail={this.toggleJail}/>
             ) : (
               <JailGameOne ID={28} />
             )
@@ -103,11 +109,11 @@ class Jailpage extends Component {
           ) : (
             <div>
               <div className="jail-speech">
-                <p className="speechbubbletext-jail">
+                <div className="speechbubbletext-jail">
                   <div
                     dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
                   />
-                </p>
+                </div>
               </div>
               <div className="speechlawyer-sceptical-container">
                 <LDHeadSceptical className="speechlawyer-sceptical" />
@@ -127,7 +133,7 @@ class Jailpage extends Component {
             ) : (
               !showGame && (
                 <ForthButton
-                  nextText={() => this.setState({ showGame: true })}
+                  nextText={() => this.toggleJail()}
                 />
               )
             )}
