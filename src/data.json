@@ -104,7 +104,7 @@
       {
         "text": "<b>NC</b> stands for “Non Commercial” and states - contrary to the previous mentioned licenses - that you are not allowed to use the work commercially. With “CC BY-NC” any reproduction or modification of a workin order to realise a commercial gain is not permitted. Apart from this, all license conditions of the CC BY license are still valid here.",
         "type": "resource",
-        "images": ["images/Cc-by.svg", "images/Cc-sa.svg", "images/Cc-nd.svg", "images/Cc-nc.svg"]
+        "images": ["images/Cc-nc.svg"]
       },
       {
         "text": "As if that weren't enough the four elements can be combined. But don’t worry we won’t go any deeper into this. Maybe you can keep in mind a simple rule: <br>The more restrictions a license contains the less it is compatible with the idea of <a href=\"https://freedomdefined.org/Definition\">free cultural works</a> or the <a href=\"https://opendefinition.org/\">open definition</a>. To give you one example, let me shortly introduce the most restrictive CC license to you: CC BY-NC-ND. This code means: You may not use a work commercially, nor modify it. So, you're probably gonna agree with me that this isn't necessarily making sharing easier. <br><br>Please note, that free licenses regulate the right of the author. There are, however, other rights to be observed, such as moral rights such as the right to one's own image. These are not restricted by free licenses. Trademark rights and data protection regulations also remain unaffected. <br><br>This infographic may help you to better understand the CC license spectrum between “public domain/most open” (top) and “all rights reserved/least open” (bottom). Hint: Focus on the darker green area and therefore on the public domain tools “PD” and “CC0” as well as the two CC licenses “CC BY” and “CC BY-SA”. \n",
@@ -166,7 +166,7 @@
       {
         "text": "<b>NC</b> stands for “Non Commercial” and states - contrary to the previous mentioned licenses - that you are not allowed to use the work commercially. With “CC BY-NC” any reproduction or modification of a workin order to realise a commercial gain is not permitted. Apart from this, all license conditions of the CC BY license are still valid here.",
         "type": "resource",
-        "images": ["images/Cc-by.svg", "images/Cc-sa.svg", "images/Cc-nd.svg", "images/Cc-nc.svg"]
+        "images": ["images/Cc-nc.svg"]
       },
       {
         "text": "As if that weren't enough the four elements can be combined. But don’t worry we won’t go any deeper into this. Maybe you can keep in mind a simple rule: <br>The more restrictions a license contains the less it is compatible with the idea of <a href=\"https://freedomdefined.org/Definition\">free cultural works</a> or the <a href=\"https://opendefinition.org/\">open definition</a>. To give you one example, let me shortly introduce the most restrictive CC license to you: CC BY-NC-ND. This code means: You may not use a work commercially, nor modify it. So, you're probably gonna agree with me that this isn't necessarily making sharing easier. <br><br>Please note, that free licenses regulate the right of the author. There are, however, other rights to be observed, such as moral rights such as the right to one's own image. These are not restricted by free licenses. Trademark rights and data protection regulations also remain unaffected. <br><br>This infographic may help you to better understand the CC license spectrum between “public domain/most open” (top) and “all rights reserved/least open” (bottom). Hint: Focus on the darker green area and therefore on the public domain tools “PD” and “CC0” as well as the two CC licenses “CC BY” and “CC BY-SA”. \n",
@@ -486,7 +486,8 @@
     "pageurl": "/matchthelicense",
     "headline": "Match the License",
     "panels": [
-      "Unfortunately you can't rely on search engine tools to filter images by CC licenses - that's what I just explained to you. Therefore it is important that you focus on your specific use case if you are looking for an image on the internet. To get a better sense of which licenses are suitable for your use case, you can test it here with a few examples. Select the licenses that are correct for the described use case. It is possible to select multiple licenses."
+      "Unfortunately you can't rely on search engine tools to filter images by CC licenses - that's what I just explained to you. Therefore it is important that you focus on your specific use case if you are looking for an image on the internet. To get a better sense of which licenses are suitable for your use case, you can test it here with a few examples.",
+      "Select the licenses that are correct for the described use case. It is possible to select multiple licenses."
     ],
     "nextPage": ["/usinggoogle"],
     "nextPageIDs": [21]
@@ -533,18 +534,19 @@
   {
     "id": 27,
     "pageurl": "/findthelicense",
-    "headline": "CC Licenses and their Use Cases",
+    "headline": "Understand the use case",
     "panels": [
-      "The CC licenses itself are easy to understand but how about it’s usage in real life? In the following you have to decide if the given use cases are legal under the given license. If so, please mark them as correct.",
-      { "question": "What is allowed under a <b> CC0 </b>?",
+      "The CC licenses are easy to understand but what about the usage in real life? In this game you have to decide if you are allowed to use an image under the given license in the described use case.",
+      "Simply select all use cases that are valid for the given license.",
+      { "question": "What are you allowed to do with an image under the <b>CC0 license</b>?",
         "correctAnswers": [1,2,3,4,5,6,7,8,9]
       },
-      { "question": "What is allowed under a <b>CC-BY</b> license?",
+      { "question": "What are you allowed to do with an image under the <b>CC-BY license</b>?",
         "correctAnswers": [2,3,4,5,7,8,9]
       },
-      { "question": "What is allowed under a <b>CC-BY-SA</b> license?",
-        "correctAnswers": [1]
-      }     
+      { "question": "What are you allowed to do with an image under the <b>CC-BY-SA license</b>?",
+        "correctAnswers": [2,3,4,5,7,8,9]
+      }
     ],
     "nextPage": "/usinglicense",
     "nextPageIDs": [12]
@@ -585,27 +587,29 @@
   {
     "id": 103,
     "pageurl": "/matchthelicense",
-    "panels" : [],
+    "panels" : [
+      "Select the licenses that are correct for the described use case. It is possible to select multiple licenses."
+    ],
     "nextPage": ["/games"],
     "nextPageIDs": [102]
   },
   {
     "id": 104,
     "pageurl": "/findthelicense",
-    "headline": "CC Licenses and their Use Cases",
+    "headline": "Understand the use case",
     "panels": [
-      "The cc licenses itself are easy to understand but how about it’s usage in real life? In this game you have to decide if you are allowed to use an image under the given license in the described use case.",
+      "The CC licenses are easy to understand but what about the usage in real life? In this game you have to decide if you are allowed to use an image under the given license in the described use case.",
       "Simply select all use cases that are valid for the given license.",
-      { "question": "What is allowed under a <b> CC0 </b>?",
+      { "question": "What are you allowed to do with an image under the <b>CC0 license</b>?",
         "correctAnswers": [1,2,3,4,5,6,7,8,9]
       },
-      { "question": "What is allowed under a <b>CC-BY</b> license?",
+      { "question": "What are you allowed to do with an image under the <b>CC-BY license</b>?",
         "correctAnswers": [2,3,4,5,7,8,9]
       },
-      { "question": "What is allowed under a <b>CC-BY-SA</b> license?",
-        "correctAnswers": [1]
+      { "question": "What are you allowed to do with an image under the <b>CC-BY-SA license</b>?",
+        "correctAnswers": [2,3,4,5,7,8,9]
       },
-      "TOLL DU HAST DAS SPIEL GELÖST"     
+      "Well done!"
     ],
     "nextPage": ["/games"],
     "nextPageIDs": [102]
@@ -613,10 +617,10 @@
   {
     "id": 105,
     "pageurl": "/jailgame1",
-    "headline": "Get out of jail Game",
+    "headline": "True or false?",
     "panels": [
-      "Enter here the text that is supposed to appear before the game! (just one text if possible)",
-      { "question": "Which of the following statements apply to the CC BY-SA license?",
+      "Answer the following questions correctly and you will be free to go.",
+      { "question": "Which of the following statements apply to the <b>CC BY-SA license</b>?",
         "correctAnswers": [1,4,5],
         "choices" : [
           { "id": 1,
@@ -632,18 +636,18 @@
             "choice": "Wikipedia content is published under this license."
           },
           { "id": 5,
-            "choice": "The name of the license holder must be stated."
+            "choice": "The name of the author must be stated."
           }
         ]
       },
-      { "question": "Which of the following statements apply to the CC-BY license?",
+      { "question": "Which of the following statements apply to the <b>CC-BY license</b>?",
         "correctAnswers": [1],
         "choices" : [
           { "id": 1,
-            "choice": "The name of the license holder must be stated."
+            "choice": "The name of the author must be stated."
           },
           { "id": 2,
-            "choice": "The content is bound to the original or a compatible license."
+            "choice": "TThe content is bound to the original or a compatible license."
           },
           { "id": 3,
             "choice": "Modification of the content is prohibited."
@@ -656,7 +660,7 @@
           }
         ]
       },
-      "Enter here the text after the game (only one panel works!)"
+      "You're lucky! This time I let you go, but think of the rules before you use the next time a picture from the Internet."
     ],
     "nextPage": ["/games"],
     "nextPageIDs": [102]
@@ -664,10 +668,9 @@
   {
     "id": 106,
     "pageurl": "/jailgame2",
-    "headline": "Get out of jail Game",
+    "headline": "Drop the icon!",
     "panels": [
-      "Enter here the text that is supposed to appear before the game!",
-      "Enter here another text!"
+      "Drag and drop the correct icons to the license modules and you will be free to go."
     ],
     "images" :[
       { "src": "images/Cc-nd.svg", "type": "image", "name": "CC-ND" },
@@ -682,7 +685,7 @@
       { "src": "images/Cc-nc.svg", "name": "CC-NC" }
     ],
     "exitTexts": [
-      "Enter here the text after the game (only one panel works!)"
+      "You're lucky! This time I let you go, but think of the rules before you use the next time a picture from the Internet."
     ],
     "nextPage": ["/games"],
     "nextPageIDs": [102]
@@ -706,54 +709,5 @@
   {
     "id": 777,
     "pageurl": "/imprint"
-  },
-  {
-    "id": 28,
-    "pageurl": "/jailgame1",
-    "headline": "Get out of jail",
-    "panels": [
-      { "question": "Which of the following statements apply to the CC BY-SA license?",
-        "correctAnswers": [1,4,5],
-        "choices" : [
-          { "id": 1,
-            "choice": "The content is bound to the original or a compatible license."
-          },
-          { "id": 2,
-            "choice": "Modification of the content is prohibited."
-          },
-          { "id": 3,
-            "choice": "The commercial use of the content is prohibited."
-          },
-          { "id": 4,
-            "choice": "Wikipedia content is published under this license."
-          },
-          { "id": 5,
-            "choice": "The name of the license holder must be stated."
-          }
-        ]
-      },
-      { "question": "Which of the following statements apply to the CC-BY license?",
-        "correctAnswers": [1],
-        "choices" : [
-          { "id": 1,
-            "choice": "The name of the license holder must be stated."
-          },
-          { "id": 2,
-            "choice": "The content is bound to the original or a compatible license."
-          },
-          { "id": 3,
-            "choice": "Modification of the content is prohibited."
-          },
-          { "id": 4,
-            "choice": "Wikipedia content is published under this license."
-          },
-          { "id": 5,
-            "choice": "PLACEHOLDER"
-          }
-        ]
-      }
-    ],
-    "nextPage": "/placeholder",
-    "nextPageIDs": [123]
   }
 ]

@@ -10,7 +10,7 @@ import { ReactComponent as LDHeadHappy } from "../images/Lawyerdude-head-happy.s
 
 const options = [
   { "id": 1,
-    "choice": "Edit and print the image on a flyer for a public event. Don’t mention the creator and source."
+    "choice": "Edit and print the image on a flyer for a public event. Don’t mention the author and source. "
   },
   { "id": 2,
     "choice": "Print the image on a shirt and give it to a friend as a present."
@@ -25,13 +25,13 @@ const options = [
     "choice": "Use the image as a profile picture on an online dating platform."
   },
   { "id": 6,
-    "choice": "Use the image in a bachelor thesis without mentioning the creator and source."
+    "choice": "Use the image in a bachelor thesis without mentioning the author and source."
   },
   { "id": 7,
     "choice": "Print and use the image as a poster for a political party."
   },
   { "id": 8,
-    "choice": "Edit the image and sell it as a postcard print."
+    "choice": "Edit the image and sell it as a postcard print without indicating the modification."
   },
   { "id": 9,
     "choice": "Use the image for a birthday invitation."
