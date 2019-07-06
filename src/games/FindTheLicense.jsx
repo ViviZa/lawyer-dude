@@ -167,52 +167,61 @@ class FindTheLicense extends Component {
           <h1>{headline}</h1>
           {(panels[textIndex] &&
           panels[textIndex].question !== undefined) ? (
+            <div>
             <div className="quizQuestions">
             <div className="question" dangerouslySetInnerHTML={{ __html: panels[textIndex].question}}></div>
-            {correctAnswersText}
-            <button className="quiz-btn" onClick={this.validate}>Submit answers</button>
-            <QuizQuestion key={"question1"+textIndex} ref={this.child1} option={options[0]} rightAnswers={panels[textIndex].correctAnswers} />
-            <QuizQuestion key={"question2"+textIndex}  ref={this.child2} option={options[1]} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion key={"question3"+textIndex}  ref={this.child3} option={options[2]} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion key={"question4"+textIndex}  ref={this.child4} option={options[3]} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion key={"question5"+textIndex}  ref={this.child5} option={options[4]} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion key={"question6"+textIndex}  ref={this.child6} option={options[5]} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion key={"question7"+textIndex}  ref={this.child7} option={options[6]} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion key={"question8"+textIndex}  ref={this.child8} option={options[7]} rightAnswers={panels[textIndex].correctAnswers}/>
-            <QuizQuestion key={"question9"+textIndex}  ref={this.child9} option={options[8]} rightAnswers={panels[textIndex].correctAnswers}/>
-            </div>
+              {correctAnswersText}
+              <button className="quiz-btn" onClick={this.validate}>Submit answers</button>
+              <QuizQuestion key={"question1"+textIndex} ref={this.child1} option={options[0]} rightAnswers={panels[textIndex].correctAnswers} />
+              <QuizQuestion key={"question2"+textIndex}  ref={this.child2} option={options[1]} rightAnswers={panels[textIndex].correctAnswers}/>
+              <QuizQuestion key={"question3"+textIndex}  ref={this.child3} option={options[2]} rightAnswers={panels[textIndex].correctAnswers}/>
+              <QuizQuestion key={"question4"+textIndex}  ref={this.child4} option={options[3]} rightAnswers={panels[textIndex].correctAnswers}/>
+              <QuizQuestion key={"question5"+textIndex}  ref={this.child5} option={options[4]} rightAnswers={panels[textIndex].correctAnswers}/>
+              <QuizQuestion key={"question6"+textIndex}  ref={this.child6} option={options[5]} rightAnswers={panels[textIndex].correctAnswers}/>
+              <QuizQuestion key={"question7"+textIndex}  ref={this.child7} option={options[6]} rightAnswers={panels[textIndex].correctAnswers}/>
+              <QuizQuestion key={"question8"+textIndex}  ref={this.child8} option={options[7]} rightAnswers={panels[textIndex].correctAnswers}/>
+              <QuizQuestion key={"question9"+textIndex}  ref={this.child9} option={options[8]} rightAnswers={panels[textIndex].correctAnswers}/>
+              </div>
+            {
+              (textIndex + 1 < panels.length  && buttonClicked === true) ? (
+                    <div className="buttoncontainer col">
+                      <BackButton previousText={this.previousText} />
+                      <ForthButton nextText={this.nextText} />
+                    </div>
+                  ) :(<div></div>)
+            }
+          </div>
           ) : (
             <div>
-            <div className="speech">
-              <p className="speechbubbletext"
-                  dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
-              />
-            </div>
-            <div className="speechlawyer-container">
-              <LDHeadHappy className="speechlawyer-happy" />
-            </div>
-            </div>
-          )}
-          {
-            (textIndex === 0) ? (
-              <div className="buttoncontainer col">
-                <BackButton previousText={this.redirectToLastPage}/>
-                <ForthButton nextText={this.nextText} />
+              <div className="speech">
+                <p className="speechbubbletext"
+                    dangerouslySetInnerHTML={{ __html: panels[textIndex] }}/>
               </div>
-            ) : (
-                textIndex + 1 < panels.length  && buttonClicked === true) ? (
+              <div className="speechlawyer-container">
+                <LDHeadHappy className="speechlawyer-happy" />
+              </div>
+              {
+                (textIndex === 0) ? (
                   <div className="buttoncontainer col">
-                    <BackButton previousText={this.previousText} />
+                    <BackButton previousText={this.redirectToLastPage}/>
                     <ForthButton nextText={this.nextText} />
                   </div>
                 ) : (
-                  buttonClicked === true ? (
-                    <div className="buttoncontainer col">
-                      <BackButton previousText={this.previousText} />
-                      <ForthButton nextText={this.redirectToNextPage} />
-                    </div>
-                  ) : (<div></div>))
-          }
+                    textIndex + 1 < panels.length) ? (
+                      <div className="buttoncontainer col">
+                        <BackButton previousText={this.previousText} />
+                        <ForthButton nextText={this.nextText} />
+                      </div>
+                    ) : (
+                      textIndex === panels.length-1 ? (
+                        <div className="buttoncontainer col">
+                          <BackButton previousText={this.previousText} />
+                          <ForthButton nextText={this.redirectToNextPage} />
+                        </div>
+                      ) : (<div></div>))
+              }
+          </div>
+          )}
         <p></p>
       </div>
       </div>
