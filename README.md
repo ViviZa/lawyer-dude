@@ -2,7 +2,7 @@
 
 The Lawyer Dude tutorial shows users how to correctly license images from the Internet and use them for their own purposes. Users click through their individual story and learn all the important facts about open content, Creative Commons and license notices.
 
-![Alt text](src/images/Lawyerdude-side.svg?raw=true "The Lawyer-Dude")
+![Alt text](src/images/Lawyerdude-side.png "The Lawyer-Dude")
 
 ### Getting started
 Run the app in the development mode:<br>
