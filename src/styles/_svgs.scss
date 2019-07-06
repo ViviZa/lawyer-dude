@@ -24,19 +24,11 @@
 	width: 85%;
 }
 
-.lama-sceptical {
+.lama-sceptical, .lama-happy {
 	display: inline-block; 
 	float: left;
 	width: 20%;
-	margin-top: 14em;
-	margin-left: -8em;
-}
-
-.lama-happy {
-	display: inline-block; 
-	float: left;
-	width: 20%;
-	margin-top: 14em;
+	margin-top: 19em;
 	margin-left: -8em;
 }
 
@@ -81,7 +73,7 @@
 	font-weight: 600;
 	position: relative;
 	width: 60%;
-	margin-top: 3em;
+	margin-top: 6em;
 	margin-left: 10em;
 
 	&:before {
@@ -109,6 +101,14 @@
 		 background-size: 100%;
 	background-position: left bottom;
 	display: grid;
+}
+
+.resourcetext {
+
+	.resource-image {
+		width: 10em;
+		margin: 2.8em;
+	}
 }
 
 #llama {
@@ -293,7 +293,7 @@
 	}
 
 	.lama-sceptical, .lama-happy {
-		margin-top: 5em;
+		margin-top: 7.7em;
 		margin-left: -4em;
 	}
 

@@ -7,20 +7,9 @@ import AnswerContainer from "../components/game/AnswerContainer";
 import update from "immutability-helper";
 import BackButtonInactive from "../components/BackButtonInactive";
 import ForthButton from "../components/ForthButton";
-
-const images = [
-  { src: "images/Cc-nd.svg", type: "image", name: "CC-ND" },
-  { src: "images/Cc-by.svg", type: "image", name: "CC-BY" },
-  { src: "images/Cc-sa.svg", type: "image", name: "CC-SA" },
-  { src: "images/Cc-nc.svg", type: "image", name: "CC-NC" }
-];
-
-const solution = [
-  { src: "images/Cc-by.svg", name: "CC-BY" },
-  { src: "images/Cc-sa.svg", name: "CC-SA" },
-  { src: "images/Cc-nd.svg", name: "CC-ND" },
-  { src: "images/Cc-nc.svg", name: "CC-NC" }
-];
+import data from "../data.json";
+import BackButton from "./../components/BackButton";
+import SpeechBubbleContainer from "../components/SpeechBubbleContainer";
 
 class JailGameTwo extends Component {
   constructor(props) {
@@ -52,10 +41,48 @@ class JailGameTwo extends Component {
           exercise: "NC (non commercial)",
           errorText: ""
         }
-      ]
+      ],
+      images: [],
+      solution: [],
+      textIndex: 0,
+      panels: [],
+      exitText: [],
+      showExitText: false,
     };
     this.handleDrop = this.handleDrop.bind(this);
     this.validate = this.validate.bind(this);
+    this.previousText = this.previousText.bind(this);
+    this.nextText = this.nextText.bind(this);
+    this.toggleExitText = this.toggleExitText.bind(this);  
+  }
+
+  componentDidMount() {
+    const { ID } = this.props;
+    const dataString = JSON.stringify(data);
+    let jsonData = JSON.parse(dataString);
+    const filteredJSON = jsonData.filter(values => values.id === ID);
+    const nextPageID = filteredJSON[0].nextPageIDs[0];
+    this.setState({
+      panels: filteredJSON[0].panels,
+      exitText: filteredJSON[0].exitTexts,
+      headline: filteredJSON[0].headline,
+      nextPage: filteredJSON[0].nextPage,
+      nextPageID: nextPageID,
+      images: filteredJSON[0].images,
+      solution: filteredJSON[0].solution
+    });
+  }
+
+  nextText() {
+    this.setState(prevState => {
+      return { textIndex: prevState.textIndex + 1 };
+    });
+  }
+
+  previousText() {
+    this.setState(prevState => {
+      return { textIndex: prevState.textIndex - 1 };
+    });
   }
 
   handleDrop(index, item) {
@@ -72,19 +99,25 @@ class JailGameTwo extends Component {
   }
 
   validate() {
-    const { answers } = this.state;
+    const { answers, solution } = this.state;
     answers.map((answer, index) =>
-      answer.lastDroppedItem && answer.lastDroppedItem.src === solution[index].src
+      answer.lastDroppedItem &&
+      answer.lastDroppedItem.src === solution[index].src
         ? (answer.errorText = "")
         : (answer.errorText = `Wrong answer`)
     );
     this.setState({ answers, submit: true });
   }
 
-  render() {
-    const { answers, submit } = this.state;
+  toggleExitText() {
+    const {showExitText} = this.state;
+    this.setState({showExitText: !showExitText});
+  }
+
+  renderGame() {
+    const { answers, submit, images } = this.state;
     return (
-      <div class="jailgametwo-container">
+      <div className="jailgametwo-container">
         <DndProvider backend={HTML5Backend}>
           <div className="jailgame-text">
             Drag and drop the correct icons to the license modules.
@@ -94,7 +127,6 @@ class JailGameTwo extends Component {
               <Box src={src} type={type} key={index} />
             ))}
           </div>
-
           <div className="images-container">
             {answers.map(
               ({ accepts, lastDroppedItem, exercise, errorText }, index) => (
@@ -124,9 +156,49 @@ class JailGameTwo extends Component {
         {submit && (
           <div className="buttoncontainer jail-button">
             <BackButtonInactive />
-            <ForthButton nextText={() => this.props.history.goBack()} />
+            <ForthButton nextText={() => this.toggleExitText()} />
           </div>
         )}
+      </div>
+    );
+  }
+
+  render() {
+    const { textIndex, panels, showExitText, exitText } = this.state;
+    const { showJail } = this.props;
+    return (
+      <div>
+        { showExitText ? (
+              <div>
+                <div>
+                  <SpeechBubbleContainer panels={exitText} textIndex={0} jail/>
+                </div>
+                <div className="buttoncontainer">
+                  <BackButton previousText={this.toggleExitText} />
+                  <ForthButton nextText={(() => this.props.history.goBack())} />
+                </div>
+              </div>
+        ) : ( panels && textIndex === 0 && panels.length >= 1 ? (
+          <div>
+            <SpeechBubbleContainer panels={panels} textIndex={textIndex} jail/>
+            <div className="buttoncontainer">
+              <BackButton previousText={showJail} />
+              <ForthButton nextText={this.nextText} />
+            </div>
+          </div>
+        ) : panels && textIndex + 1 <= panels.length ? (
+          <div>
+            <div>
+              <SpeechBubbleContainer panels={panels} textIndex={textIndex} jail/>
+            </div>
+            <div className="buttoncontainer">
+              <BackButton previousText={this.previousText} />
+              <ForthButton nextText={this.nextText} />
+            </div>
+          </div>
+        ) : (
+          this.renderGame()
+        ))}
       </div>
     );
   }
