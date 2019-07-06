@@ -1,6 +1,9 @@
 # lawyer-dude [![Build Status](https://api.travis-ci.com/ViviZa/lawyer-dude.svg?branch=master)](https://travis-ci.com/ViviZa/lawyer-dude)
 
 The Lawyer Dude tutorial shows users how to correctly license images from the Internet and use them for their own purposes. Users click through their individual story and learn all the important facts about open content, Creative Commons and license notices.
+
+![Alt text](src/images/Lawyerdude-side.png)
+
 ### Getting started
 Run the app in the development mode:<br>
 
@@ -19,3 +22,8 @@ npm run build
 ```
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+## License
+Unless indicated otherwise, this learning unit is licensed under Creative Commons Attribution 4.0 International (CC BY-SA 4.0). The full license text can be found at:
+[https://creativecommons.org/licenses/by-sa/4.0/deed.de](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
