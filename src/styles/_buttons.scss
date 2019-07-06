@@ -151,6 +151,12 @@
 	display: none; 
 }
 
+.Overview {
+
+	.Overlay {
+		left: 50%;
+	}
+}
 .BackButton {
 	border-radius: 50%;
 	border-style: none; 
@@ -256,15 +262,48 @@
 		padding: 10px 10px 14px 16px;
 	}
 
+	.Overlay {
+		left: 58%;
+		height: 42%;
+
+		h2 {
+			font-size: 26px;
+		}
+
+		.button-close-overlay {
+			margin-top: -0.2em;
+		}
+
+		ul {
+			margin: 1.8em 0;
+		}
+
+		li {
+			font-size: 18px;
+		}	
+	}
+
 	.BackButton, .btn_inactive {
 		height: 55px;
 		width: 55px;
 		padding: 10px 16px 14px 10px;
 	}
 
+	.match-btn {
+		margin: 0.5em;
+		float: right;
+	}
+
 	.option_btn {
 		font-size: 12px;
 		font-weight: 600;
 		line-height: 1.6;
+	}
+
+	.overviewpagecontent {
+
+		.StartButton {
+			margin: 0.7em;
+		}
 	}
 }
