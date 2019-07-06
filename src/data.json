@@ -557,6 +557,7 @@
     "pageurl": "/jailgame1",
     "headline": "Get out of jail Game",
     "panels": [
+      "Enter here the text that is supposed to appear before the game! (just one text if possible)",
       { "question": "Which of the following statements apply to the CC BY-SA license?",
         "correctAnswers": [1,4,5],
         "choices" : [
@@ -596,7 +597,8 @@
             "choice": "PLACEHOLDER"
           }
         ]
-      }
+      },
+      "Enter here the text after the game (only one panel works!)"
     ],
     "nextPage": ["/games"],
     "nextPageIDs": [102]

@@ -97,7 +97,7 @@ class Jailpage extends Component {
             randomGame === 0 ? (
               <JailGameTwo ID={106} showJail={this.toggleJail}/>
             ) : (
-              <JailGameOne ID={28} />
+              <JailGameOne ID={105} showJail={this.toggleJail}/>
             )
           ) : panels[textIndex] &&
             panels[textIndex].text !== undefined &&
