@@ -529,6 +529,7 @@
   {
     "id": 103,
     "pageurl": "/matchthelicense",
+    "panels" : [],
     "nextPage": ["/games"],
     "nextPageIDs": [102]
   },
