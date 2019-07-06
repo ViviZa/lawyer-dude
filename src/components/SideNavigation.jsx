@@ -84,7 +84,9 @@ class SideNavigation extends Component {
       linksEl.style.display = "block";
       linksEl.style.background = "rgba(13, 62, 89, 0.9)";
       linksEl.style.height = "100%";
-      speechEl.style.zIndex = "-10";
+      if(speechEl){
+        speechEl.style.zIndex = "-10";
+      }
     }
   }
 
@@ -148,7 +150,9 @@ class SideNavigation extends Component {
       );
     } else {
       menuIcon = (
+        <>
         <FontAwesomeIcon icon="bars" size="lg" onClick={this.burgerToggle} />
+        </>
       );
     }
     return (

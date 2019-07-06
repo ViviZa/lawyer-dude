@@ -579,12 +579,13 @@
   {
     "id": 102,
     "pageurl": "/games",
-    "nextPage": ["/overview","/matchthelicense", "/findthelicense", "/jailgame1"],
-    "nextPageIDs": [100, 103, 104, 105]
+    "nextPage": ["/overview","/matchthelicense", "/findthelicense", "/jailgame1", "/jailgame2"],
+    "nextPageIDs": [100, 103, 104, 105, 106]
   },
   {
     "id": 103,
     "pageurl": "/matchthelicense",
+    "panels" : [],
     "nextPage": ["/games"],
     "nextPageIDs": [102]
   },
@@ -603,7 +604,8 @@
       },
       { "question": "What is allowed under a <b>CC-BY-SA</b> license?",
         "correctAnswers": [1]
-      }     
+      },
+      "TOLL DU HAST DAS SPIEL GELÖST"     
     ],
     "nextPage": ["/games"],
     "nextPageIDs": [102]
@@ -613,6 +615,7 @@
     "pageurl": "/jailgame1",
     "headline": "Get out of jail Game",
     "panels": [
+      "Enter here the text that is supposed to appear before the game! (just one text if possible)",
       { "question": "Which of the following statements apply to the CC BY-SA license?",
         "correctAnswers": [1,4,5],
         "choices" : [
@@ -649,10 +652,37 @@
             "choice": "Wikipedia content is published under this license."
           },
           { "id": 5,
-            "choice": "PLACEHOLDER"
+            "choice": "The commercial use of the content is prohibited."
           }
         ]
-      }
+      },
+      "Enter here the text after the game (only one panel works!)"
+    ],
+    "nextPage": ["/games"],
+    "nextPageIDs": [102]
+  },
+  {
+    "id": 106,
+    "pageurl": "/jailgame2",
+    "headline": "Get out of jail Game",
+    "panels": [
+      "Enter here the text that is supposed to appear before the game!",
+      "Enter here another text!"
+    ],
+    "images" :[
+      { "src": "images/Cc-nd.svg", "type": "image", "name": "CC-ND" },
+      { "src": "images/Cc-by.svg", "type": "image", "name": "CC-BY" },
+      { "src": "images/Cc-sa.svg", "type": "image", "name": "CC-SA" },
+      { "src": "images/Cc-nc.svg", "type": "image", "name": "CC-NC" }
+    ],
+     "solution": [
+      { "src": "images/Cc-by.svg", "name": "CC-BY" },
+      { "src": "images/Cc-sa.svg", "name": "CC-SA" },
+      { "src": "images/Cc-nd.svg", "name": "CC-ND" },
+      { "src": "images/Cc-nc.svg", "name": "CC-NC" }
+    ],
+    "exitTexts": [
+      "Enter here the text after the game (only one panel works!)"
     ],
     "nextPage": ["/games"],
     "nextPageIDs": [102]

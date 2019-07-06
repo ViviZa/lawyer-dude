@@ -115,16 +115,23 @@ ol {
 }
 
 .speechbubbletext, .answerbubbletext, .speechbubbletext-jail {
-	height: 6em;
-	padding: 8%;
+	height: 11em;
+	padding: 2.5em;
 	position: relative;
 	letter-spacing: 1.1px;
+	overflow-y: scroll;
 
 	div {
 		height: inherit; 
 		padding: 0 1em;
 		overflow-y: scroll;
 		overflow-y: auto;
+	}
+
+	a {
+		background-color: #FFF;
+		color: $darkblue;
+		padding: 0.8em 1.2em;
 	}
 }
 
@@ -135,7 +142,7 @@ ol {
 }
 
 .entername-form {
-	margin-top: 25%;
+	margin-top: 28em;
 	margin-left: 25%;
 }
 
@@ -375,10 +382,26 @@ ol {
 }
 
 @media (min-width: 1260px) and (max-width: 1440px) {
-	.overviewpagecontent{
-		h1{
+	
+	.overviewpagecontent {
+		
+		h1 {
 			font-size: 1.5rem;
 			font-weight: 600;
+		}
+
+		h3 {
+			font-size: 1.2em;
+			line-height: 1.2;
+			margin: 0 auto;
+		}
+
+		.contentText {
+			padding: 0.5em;
+			letter-spacing: 1.4;
+			line-height: 1.4; 
+			font-size: 14px;
+			height: 13em;
 		}
 	}
 
@@ -395,6 +418,12 @@ ol {
 
 	.startpagecontent {
 		padding-top: 3.5em;
+	}
+
+	.Overview {
+		.startpagecontent {
+			padding-top: 1%;
+		}
 	}
 
 	.welcomeblock {
@@ -420,7 +449,14 @@ ol {
 		margin-left: 15em;
 	}
 
+	.contentBox {
+		height: 26.5em;
+	}
 
+	.boxicon {
+		height: 4em;
+	}
+	
 	// .resourceContainer {
 	// 	margin-top: 2.5em;
 	// 	// height: 25em;
@@ -450,6 +486,23 @@ ol {
 	.entername-form {
 		margin-top: 8em;
 		margin-left: 10em;
+	}
+
+	.quizQuestions, .matchQuestions {
+
+		.matchQuestion { 
+			height: 5em;
+			width: 25em;
+			font-size: 16px;
+			line-height: 1.2;
+			margin: 1.5em 1em 1.5em 1.5em;
+			overflow-y: scroll;
+		}
+
+		.basic-multi-select {
+			width: 12em;
+			margin: 2em 1.5em;
+		}
 	}
 
 	.attribution-container {
