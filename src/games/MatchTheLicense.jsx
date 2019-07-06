@@ -6,8 +6,7 @@ import BackButton from "../components/BackButton";
 import ForthButton from "../components/ForthButton";
 import Select from "react-select";
 import update from "immutability-helper";
-import { ReactComponent as LDHeadHappy } from "../images/Lawyerdude-head-happy.svg";
-import { ReactComponent as LDLamaSceptical } from "../images/Lawyerdude-llama-head-sceptical.svg";
+import SpeechBubbleContainer from "./../components/SpeechBubbleContainer";
 
 import matchTheLicenseData from "./MatchTheLicenseData.json";
 
@@ -193,21 +192,7 @@ class MatchTheLicense extends Component {
         <div className="pagecontent">
           <h1>Match the License</h1>
           {textIndex === 0 && panels.length >= 1 ? (
-            <div>
-              <div className="speech">
-                <div className="speechbubbletext">
-                  <div
-                    dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
-                  />
-                </div>
-              </div>
-              <div className="lama-container">
-                <LDLamaSceptical className="lama-sceptical" />
-              </div>
-              <div className="speechlawyer-container">
-                <LDHeadHappy className="speechlawyer-happy" />
-              </div>
-            </div>
+            <SpeechBubbleContainer panels={panels} textIndex={textIndex}/>
           ) : (
             <div className="matchQuestions">
               {Array.from(Array(3), (e, i) => {

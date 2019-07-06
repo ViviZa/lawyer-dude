@@ -4,11 +4,9 @@ import { withRouter } from "react-router";
 import data from "../data.json";
 import BackButton from "../components/BackButton";
 import ForthButton from "../components/ForthButton";
-import { ReactComponent as LDHeadHappy } from "../images/Lawyerdude-head-happy.svg";
-import { ReactComponent as LDLamaSceptical } from "../images/Lawyerdude-llama-head-sceptical.svg";
-import { ReactComponent as LDLamaHappy } from "../images/Lawyerdude-llama-head-happy.svg";
 import SettingsButton from "../components/SettingsButton";
 import ResourcePanel from "./../components/ResourcePanel";
+import SpeechBubbleContainer from './../components/SpeechBubbleContainer';
 
 class TemplateDecision extends Component {
   constructor(props) {
@@ -126,12 +124,6 @@ class TemplateDecision extends Component {
     }
     const { panels, textIndex, headline, decisions } = this.state;
     const { ID } = this.props.location.state;
-    let lamasMood;
-    if (textIndex === panels.length - 1) {
-      lamasMood = <LDLamaHappy className="lama-happy" />;
-    } else {
-      lamasMood = <LDLamaSceptical className="lama-sceptical" />;
-    }
 
     return (
       <div className="Startpage">
@@ -147,18 +139,7 @@ class TemplateDecision extends Component {
               images={panels[textIndex].images}
             />
           ) : (
-            <div>
-              <div className="speech">
-                <div
-                  className="speechbubbletext"
-                  dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
-                />
-              </div>
-              <div className="lama-container">{lamasMood}</div>
-              <div className="speechlawyer-container">
-                <LDHeadHappy className="speechlawyer-happy" />
-              </div>
-            </div>
+            <SpeechBubbleContainer panels={panels} textIndex={textIndex}/>
           )}
 
           {textIndex === 0 && panels.length > 1 ? (

@@ -1,10 +1,18 @@
 import React from "react";
 import { ReactComponent as LDHeadHappy } from "../images/Lawyerdude-head-happy.svg";
 import { ReactComponent as LDLamaSceptical } from "../images/Lawyerdude-llama-head-sceptical.svg";
+import { ReactComponent as LDLamaHappy } from "../images/Lawyerdude-llama-head-happy.svg";
 import { ReactComponent as LDHeadSceptical } from "../images/Lawyerdude-head-sceptical.svg";
 
 const SpeechBubbleContainer = props => {
   const { panels, textIndex, jail } = props;
+
+  let lamasMood;
+  if (textIndex === panels.length - 1) {
+    lamasMood = <LDLamaHappy className="lama-happy" />;
+  } else {
+    lamasMood = <LDLamaSceptical className="lama-sceptical" />;
+  }
 
   return (
     <div>
@@ -13,11 +21,7 @@ const SpeechBubbleContainer = props => {
           <div dangerouslySetInnerHTML={{ __html: panels[textIndex] }} />
         </div>
       </div>
-      {!jail && (
-        <div className="lama-container">
-          <LDLamaSceptical className="lama-sceptical" />
-        </div>
-      )}
+      {!jail && <div className="lama-container">{lamasMood}</div>}
       <div className="speechlawyer-container">
         {jail ? (
           <LDHeadSceptical className="speechlawyer-sceptical" />
