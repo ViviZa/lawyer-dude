@@ -17,6 +17,7 @@ import Imprint from './pages/Imprint';
 import Overview from './pages/Overview';
 import Resources from './pages/Resources';
 import JailGameOne from './games/JailGameOne';
+import JailGameTwo from './games/JailGameTwo';
 import GamesOverview from './pages/GamesOverview';
 
 const history = createBrowserHistory()
@@ -76,7 +77,8 @@ class App extends Component {
           <Route exact path="/imprint" component={() => <Imprint addingPages={this.addingPages}/>}/>
           <Route exact path="/overview" component={() => <Overview addingPages={this.addingPages}/>}/>
           <Route exact path="/resources" component={() => <Resources addingPages={this.addingPages}/>}/>
-          <Route exact path="/jailgame1" component={() => <JailGameOne addingPages={this.addingPages}/>}/>
+          <Route exact path="/jailgame1" component={() => <JailGameOne ID={105}/>}/>
+          <Route exact path="/jailgame2" component={() => <JailGameTwo ID={106}/>}/>
           <Route exact path="/games" component={() => <GamesOverview/>}/>
       </Router>
     );

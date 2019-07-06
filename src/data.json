@@ -523,8 +523,8 @@
   {
     "id": 102,
     "pageurl": "/games",
-    "nextPage": ["/overview","/matchthelicense", "/findthelicense", "/jailgame1"],
-    "nextPageIDs": [100, 103, 104, 105]
+    "nextPage": ["/overview","/matchthelicense", "/findthelicense", "/jailgame1", "/jailgame2"],
+    "nextPageIDs": [100, 103, 104, 105, 106]
   },
   {
     "id": 103,
