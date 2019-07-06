@@ -142,6 +142,7 @@
 	}
 
 	.navNarrow {
+		background-color: $yellow;
 
 		i {
 			float: right;
@@ -167,10 +168,11 @@
 	}
 
 	.navNarrow {
+		background-color: $yellow;
 
 		i {
 			float: right;
-			padding: 12px 15px;
+			padding: 12px 34px 12px 15px;
 		}
 
 		.narrowLinks {
