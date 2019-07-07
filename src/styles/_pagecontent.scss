@@ -307,11 +307,15 @@ ol {
 	}
 
 	.speechbubbletext {
-		padding: 1.1em;
+		padding: 1.5em;
 		
 		&.entername {
 			padding: 7%;
 		}
+	}
+
+	.answerbubbletext {
+		padding: 1.5em;
 	}
 
 	.speechbubbletext-jail {

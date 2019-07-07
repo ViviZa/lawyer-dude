@@ -185,6 +185,12 @@
 		width: 30%;
 	}
 
+	.lama-sceptical, .lama-happy {
+		position: absolute; 
+		bottom: -5px;
+		left: 9em;
+	}
+
 	.speech {
 		font-size: 14px;
 		margin-left: 0;
@@ -227,8 +233,9 @@
 	}
 
 	.answer {
-		width: 88%;
-		margin-top: 50%;
+		font-size: 14px;
+		width: 18em;
+		margin-top: 6em;
 		margin-left: 0;
 
 		&:before {
