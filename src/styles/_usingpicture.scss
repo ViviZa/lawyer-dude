@@ -52,9 +52,15 @@
     margin-top: 2rem;
 }
 
+.select-container {
+    display: flex;
+}
+
 .using-image-error{
     height: 2rem;
     display: inline-block;
-    width: 15rem;
+    width: 30%;
     margin-left: 1rem;
+    box-sizing: border-box;
+    text-align: initial;
 }
