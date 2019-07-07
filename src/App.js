@@ -58,7 +58,7 @@ class App extends Component {
           <Route exact path="/findingholder" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/usingwiki" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/copyrightinfo" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
-          <Route exact path="/gettinglicense" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/gettinglicense" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
           <Route exact path="/usinglicense" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/creatingnotice" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/usingimage" component={() => <UsingTheImage addingPages={this.addingPages}/>}/>

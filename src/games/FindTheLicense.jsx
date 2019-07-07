@@ -9,10 +9,8 @@ import QuizQuestion from "./../components/game/QuizQuestion";
 import SpeechBubbleContainer from "./../components/SpeechBubbleContainer";
 
 const options = [
-  {
-    id: 1,
-    choice:
-      "Edit and print the image on a flyer for a public event. Don’t mention the creator and source."
+  { "id": 1,
+    "choice": "Edit and print the image on a flyer for a public event. Don’t mention the author and source. "
   },
   {
     id: 2,
@@ -32,12 +30,18 @@ const options = [
     choice:
       "Use the image in a bachelor thesis without mentioning the creator and source."
   },
-  {
-    id: 7,
-    choice: "Print and use the image as a poster for a political party."
+  { "id": 6,
+    "choice": "Use the image in a bachelor thesis without mentioning the author and source."
   },
-  { id: 8, choice: "Edit the image and sell it as a postcard print." },
-  { id: 9, choice: "Use the image for a birthday invitation." }
+  { "id": 7,
+    "choice": "Print and use the image as a poster for a political party."
+  },
+  { "id": 8,
+    "choice": "Edit the image and sell it as a postcard print without indicating the modification."
+  },
+  { "id": 9,
+    "choice": "Use the image for a birthday invitation."
+  }
 ];
 
 class FindTheLicense extends Component {
