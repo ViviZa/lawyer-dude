@@ -42,11 +42,11 @@ class Resources extends Component {
             }
             text += panel.text;
             if(panel.images !== undefined){
-              images = "<div class='resImages'>";
+              images = "<br><br><div class='resImages'>";
               panel.images.forEach(image => {
                 images += "<img src='" + image + "' />";
               });
-              images += "</div>";
+              images += "</div><br><br>";
             }
             text += images;
           }
@@ -85,7 +85,7 @@ class Resources extends Component {
         <div className="pagecontent">
           <h1 className="headline">{headline}</h1>
           <div className="resToC" dangerouslySetInnerHTML={{ __html: toc }} />
-          <div className="resContent" dangerouslySetInnerHTML={{ __html: content }} />
+          <div className="resourcetext" dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       </div>
     );
