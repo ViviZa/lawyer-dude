@@ -51,7 +51,7 @@ class Resources extends Component {
             text += images;
           }
         });
-        if(headline !== '' ) content += "<div class='contentHeadline'><h3 id=" + anchorId + ">" + headline + "</h3></div><div class='contentText'>" + text + "</div>";
+        if(headline !== '' ) content += "<div class='resBox'><div class='contentHeadline'><h3 id=" + anchorId + ">" + headline + "</h3></div><div class='contentText'>" + text + "</div></div>";
       }
       anchorId++;
     });
@@ -83,12 +83,9 @@ class Resources extends Component {
           <button className="StartButton" onClick={() => this.redirectToNextPage(100)} title="Return to overview page">Return</button>
         </div>
         <div className="pagecontent">
-
           <h1 className="headline">{headline}</h1>
           <div className="resToC" dangerouslySetInnerHTML={{ __html: toc }} />
-          <div className="container">
-            <div className="resContent" dangerouslySetInnerHTML={{ __html: content }} />
-          </div>
+          <div className="resContent" dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       </div>
     );
@@ -96,3 +93,4 @@ class Resources extends Component {
 }
 
 export default withRouter(Resources);
+
