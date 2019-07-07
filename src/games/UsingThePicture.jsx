@@ -159,12 +159,9 @@ class UsingTheImage extends Component {
   }
 
   previousText() {
-    const theSize = this.state.panels.length - 1;
-    if (this.state.textIndex > 0 && this.state.textIndex <= theSize) {
-      this.setState(prevState => {
-        return { textIndex: prevState.textIndex - 1 };
-      });
-    }
+    this.setState(prevState => {
+      return { textIndex: prevState.textIndex - 1 };
+    });
   }
 
   renderFirstPage() {
@@ -232,7 +229,7 @@ class UsingTheImage extends Component {
           </div>
           <div>
             <div className="selectProperty-container">
-              <div>
+              <div className="select-container">
                 <div className="license-select-wrap">
                   <Select
                     value={license}
@@ -252,8 +249,8 @@ class UsingTheImage extends Component {
                 ) : (
                   <div className="using-image-error">&nbsp;</div>
                 )}
-                <div className="selectProperty">License</div>
               </div>
+              <div className="selectProperty">License</div>
             </div>
           </div>
           <BackButton previousText={this.previousText} />
