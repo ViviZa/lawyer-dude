@@ -313,6 +313,12 @@ ol {
 		}
 	}
 
+	.contentText {
+		font-size: 14px;
+		line-height: 1.5;
+		margin: 25px 0;
+	}
+
 	ol {
 		padding-left: 20px;
 	}
@@ -326,7 +332,7 @@ ol {
 	}
 
 	.pagecontent {
-		margin-left: 15px;
+		margin-left: 0;
 		padding: 35px 25px 25px 25px;
 		text-align: center;
 	}
