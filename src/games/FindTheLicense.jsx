@@ -9,26 +9,24 @@ import QuizQuestion from "./../components/game/QuizQuestion";
 import SpeechBubbleContainer from "./../components/SpeechBubbleContainer";
 
 const options = [
-  { "id": 1,
+  {
+    "id": 1,
     "choice": "Edit and print the image on a flyer for a public event. Don’t mention the author and source. "
   },
   {
-    id: 2,
-    choice: "Print the image on a shirt and give it to a friend as a present."
-  },
-  { id: 3, choice: "Sell the image on a website as a wallpaper." },
-  {
-    id: 4,
-    choice: "Use the image as marketing material for a fitness studio."
+    "id": 2,
+    "choice": "Print the image on a shirt and give it to a friend as a present."
   },
   {
-    id: 5,
-    choice: "Use the image as a profile picture on an online dating platform."
+    "id": 3,
+    "choice": "Sell the image on a website as a wallpaper." },
+  {
+    "id": 4,
+    "choice": "Use the image as marketing material for a fitness studio."
   },
   {
-    id: 6,
-    choice:
-      "Use the image in a bachelor thesis without mentioning the creator and source."
+    "id": 5,
+    "choice": "Use the image as a profile picture on an online dating platform."
   },
   { "id": 6,
     "choice": "Use the image in a bachelor thesis without mentioning the author and source."
@@ -180,16 +178,18 @@ class FindTheLicense extends Component {
           {panels[textIndex] && panels[textIndex].question !== undefined ? (
             <div>
               <div className="quizQuestions">
-                <div
-                  className="question"
-                  dangerouslySetInnerHTML={{
-                    __html: panels[textIndex].question
-                  }}
-                />
-                {correctAnswersText}
-                <button className="quiz-btn" onClick={this.validate}>
-                  Submit answers
-                </button>
+                <div className="quiz-topsection">
+                  <div
+                    className="question"
+                    dangerouslySetInnerHTML={{
+                      __html: panels[textIndex].question
+                    }}
+                  />
+                  {correctAnswersText}
+                  <button className="quiz-btn" onClick={this.validate}>
+                    Submit answers
+                  </button>
+                </div>
                 <QuizQuestion
                   key={"question1" + textIndex}
                   ref={this.child1}
