@@ -130,6 +130,11 @@
 }
 
 @media only screen and (max-width: 599px) {
+
+	nav {
+		position: absolute; 
+		z-index: 10;
+	}
 	
 	.SideNavigation {
 		width: 100%;
@@ -142,7 +147,6 @@
 	}
 
 	.navNarrow {
-		background-color: $yellow;
 
 		i {
 			float: right;
