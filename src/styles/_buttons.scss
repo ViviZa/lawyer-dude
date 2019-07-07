@@ -165,7 +165,8 @@
 
 		&.save-name-btn {
 			margin: 25px;
-			padding: 22px 25px;
+			padding: 10px 25px;
+			font-size: 16px;
 		}
 	}
 
@@ -194,6 +195,10 @@
 		background-color: unset;
 		width: 37px;
 		height: 45px; 
+	}
+
+	.save-name-btn {
+		margin: 0px;
 	}
 }
 
