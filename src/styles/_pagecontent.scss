@@ -217,6 +217,7 @@ ol {
 		margin-bottom: 1em;
 		letter-spacing: 1.1px;
 		font-size: 20px;
+		float: left;
 	}
 
 	.matchQuestion {
@@ -267,6 +268,10 @@ ol {
 	.wrong {
 		font-size: 12px;
 	}
+}
+
+.quiz-topsection {
+	display: inline-block;
 }
 
 .attribution-container {
