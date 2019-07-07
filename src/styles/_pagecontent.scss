@@ -110,6 +110,11 @@ ol {
 	z-index: 10;
 	margin:auto;
 	text-align: center;
+
+	.resourceContainer {
+		background-color: $jailresource-background;
+		color: #FFF;
+	}
 }
 
 .buttoncontainer {
@@ -574,6 +579,16 @@ ol {
 	}
 
 	.quizQuestions, .matchQuestions {
+
+		width: 100%;
+
+		.question {
+			margin-top: 1em;
+		}
+
+		.quizQuestion {
+			line-height: 1.1;
+		}
 
 		.matchQuestion { 
 			height: 5em;

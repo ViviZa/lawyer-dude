@@ -60,7 +60,9 @@
 }
 
 .quiz-btn {
-	margin: 3em 0 1em 30em;
+	position: absolute; 
+	right: 8em;
+	margin: 3em 3em;
 }
 
 .match-btn {
@@ -146,6 +148,13 @@
 	}
 }
 
+.Jailpage {
+
+	.buttoncontainer {
+		left: 50%;
+	}
+}
+
 @media only screen and (max-width: 599px) {
   
 	.StartButton {
@@ -177,6 +186,7 @@
 } 
 
 @media (min-width: 600px) and (max-width: 768px) {
+
 	.SettingsButton{
 		position: fixed;
 		margin-top: 0;
@@ -200,6 +210,10 @@
 	}
 	.game-back-btn {
 		margin-top: -2em;
+	}
+
+	.quiz-btn {
+		margin: 0.6em 3em;
 	}
 
 	.BackButton, .btn_inactive {
