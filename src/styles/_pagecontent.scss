@@ -2,6 +2,7 @@
 
 h1 {
 	margin: 25px;
+	font-weight: 600;
 }
 
 .startpagecontent {
@@ -288,6 +289,27 @@ ol {
 
 		h3 {
 			line-height: 1.4;
+			font-size: 1.2rem;
+		}
+
+		&.overviewpagecontent {
+
+			height: auto;
+
+			h1 {
+				font-size: 22px;
+				margin: 45px 25px;
+			}
+
+			h3 {
+				margin: 0.5em auto;
+			}
+
+			.contentText {
+				padding: 1em 0;
+				height: 13em;
+				font-size: 14px;
+			}
 		}
 	}
 
@@ -304,6 +326,14 @@ ol {
 	.buttoncontainer {
 		bottom: 2%;
 		left: 52%;
+	}
+
+	.contentBox {
+		height: 28em;
+	} 
+
+	.boxicon {
+		height: 4em;
 	}
 
 	.speechbubbletext {
@@ -341,7 +371,7 @@ ol {
 	.llama-container {
 		float: none;
 	}
-} 
+}
 
 
 @media (min-width: 600px) and (max-width: 768px) {
