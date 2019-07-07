@@ -71,92 +71,6 @@
 	width: 58px;
 }
 
-.Overlay {
-	position: fixed;
-	background: $background-white;
-	padding: 2%;
-	width: 24em;
-	height: 40%;
-	top:50%;
-	left: 60%;
-	transform: translate(-50%,-50%);
-
-	h2 {
-		font-size: 32px;
-		margin: 0;
-		text-transform: uppercase;
-	}
-
-	ul {
-		padding: 0;
-		margin: 3em 0;
-	}
-
-	.button-close-overlay {
-		cursor: pointer;
-		color: $darkred;
-		float: right;
-		background: white;
-		font-size: 28px;
-		font-weight: 700;
-		margin-top: 0.2em;
-	}
-
-	a,p {
-		text-decoration: none;
-	}
-
-	a:visited {
-		color: inherit;
-	}
-
-	button {
-		border-style: none;
-		padding-left: 1px;
-		font-family: inherit;
-		background: white;
-		font-size: 24px;
-		letter-spacing: 3px;
-	}
-
-	ul li a:hover, ul li a:focus {
-		color: $yellow;
-	   }
-
-	ul li button:hover, ul li button:focus {
-		color: $yellow;
-	}   
-
-	li {
-		color: inherit;
-		display: block;
-		margin: 1em 0;
-		list-style-type: none;
-		font-size: 24px;
-	}	
-}
-
-.overlay-shown {
-	display : block;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width:100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.6);
-	z-index: 10;
-}
-
-.overlay-hidden {
-	display: none; 
-}
-
-.Overview {
-
-	.Overlay {
-		left: 50%;
-	}
-}
 .BackButton {
 	border-radius: 50%;
 	border-style: none; 
@@ -244,10 +158,25 @@
 		padding-left: 5px;
 		line-height: 1.3;
 	}
+	.SettingsButton{
+		position: fixed;
+		margin-top: 0;
+		margin-right: 0;
+		background-color: unset;
+		width: 30px;
+		height: 33px; 
+	}
 } 
 
 @media (min-width: 600px) and (max-width: 768px) {
-
+	.SettingsButton{
+		position: fixed;
+		margin-top: 0;
+		margin-right: 0;
+		background-color: unset;
+		width: 37px;
+		height: 45px; 
+	}
 }
 
 @media (min-width: 1260px) and (max-width: 1440px) {
@@ -260,27 +189,6 @@
 		height: 55px;
 		width: 55px;
 		padding: 10px 10px 14px 16px;
-	}
-
-	.Overlay {
-		left: 58%;
-		height: 42%;
-
-		h2 {
-			font-size: 26px;
-		}
-
-		.button-close-overlay {
-			margin-top: -0.2em;
-		}
-
-		ul {
-			margin: 1.8em 0;
-		}
-
-		li {
-			font-size: 18px;
-		}	
 	}
 
 	.BackButton, .btn_inactive {
