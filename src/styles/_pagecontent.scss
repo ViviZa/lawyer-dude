@@ -279,6 +279,17 @@ ol {
 		margin: 10px;
 	}
 
+	.container {
+		margin: 0;
+		padding: 0 0 60px 0;
+	}
+
+	.contentText {
+		font-size: 14px;
+		line-height: 1.5;
+		margin: 25px 0;
+	}
+
 	.startpagecontent {
 
 		h1 {
@@ -309,14 +320,9 @@ ol {
 				padding: 1em 0;
 				height: 13em;
 				font-size: 14px;
+				margin: 0;
 			}
 		}
-	}
-
-	.contentText {
-		font-size: 14px;
-		line-height: 1.5;
-		margin: 25px 0;
 	}
 
 	ol {
@@ -329,6 +335,29 @@ ol {
 
 	.welcomepanels {
 		font-size: 14px;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+
+		ul {
+			padding: 0 1.5em;
+		}
+
+		li {
+			list-style-image: none;
+			list-style-type: none;
+			background-image: url('./images/bullet.svg');
+			background-repeat: no-repeat;
+			background-position: 0px 10px;
+			padding-left: 20px;
+			background-size: 5px;
+	
+			&:last-of-type {
+				font-size: 15px;
+				padding: 1em 0 1em 20px;
+				background-image: none;
+			}
+		}
 	}
 
 	.pagecontent {
