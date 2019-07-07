@@ -1,18 +1,23 @@
 [
     {
         "headline": "",
-        "text": "This learning unit was created by students of the HTW Berlin (University of Applied Sciences Berlin) in cooperation with Wikimedia Deutschland e.V.<br><br>The project is based on the original concept by <br>Martin Boy, Anja Kammer, Timo Neumann, Laura Seidler. <br><br>Thank you!"
+        "text": "This learning unit was created by students of the HTW Berlin (University of Applied Sciences Berlin) in cooperation with Wikimedia Deutschland e.V.<br><br>The project is based on the original concept by <br>Martin Boy, Anja Kammer, Timo Neumann, Laura Seidler. <br><br>Thank you!<br><br>"
     },
     {
         "headline": "Revised Concept and Implementation",
-        "text": "Veronika Babic, Cristina Beltran Ramos, Simon Binder, Lina Kriebel, Mario Schütz, Vivian Zaddach: Lawyer Dude - An e-learning unit on using images from the internet without going to jail <br><br>Unless indicated otherwise, this learning unit is licensed under Creative Commons Attribution 4.0 International (CC BY-SA 4.0). The full license text can be found at: <a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.de\">https://creativecommons.org/licenses/by-sa/4.0/deed.de</a> <br><br>This tool was supported by Wikimedia Deutschland e.V. (Christina Rupprecht/Elly Köpf) <br><br>"
+        "text": "Veronika Babic, Cristina Beltran Ramos, Simon Binder, Lina Kriebel, Mario Schütz, Vivian Zaddach: Lawyer Dude - A learning unit on using images from the internet without going to jail.<br><br>Unless indicated otherwise, this learning unit is licensed under Creative Commons Attribution 4.0 International (CC BY-SA 4.0). The full license text can be found at:<br><br><a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.de\">https://creativecommons.org/licenses/by-sa/4.0/deed.de</a><br><br><img src=\"images/wmde.png\" /><br><br>This tool was supported by Wikimedia Deutschland e.V. (Christina Rupprecht/Elly Köpf)<br><br>",
+        "image": "images/wmde.svg"
     },
     {
         "headline": "Disclaimer",
-        "text": "No legal advice! <br>This tool is designed to facilitate the compliant re-use of certain copyright-protected images. However, it can never cover all use cases and characteristics, and thus cannot replace qualified legal advice by a lawyer.<br><br>"
+        "text": "No legal advice!<br>This tool is designed to facilitate the compliant re-use of certain copyright-protected images. However, it can never cover all use cases and characteristics, and thus cannot replace qualified legal advice by a lawyer.<br><br>"
     },
     {
         "headline": "Contact",
-        "text": "HTW Berlin<br>Debora Weber-Wulff <br>FB 4<br>Treskowallee 8<br>10318 Berlin <br><br>"
+        "text": "Hochschule für Technik und Wirtschaft Berlin<br>(University of Applied Sciences Berlin)<br>Prof. Dr. Debora Weber-Wulff<br>Fachbereich 4<br>Treskowallee 8<br>10318 Berlin<br><br>"
+    },
+    {
+        "headline": "Privacy Policy",
+        "text": "For information on privacy, please read the HTW privacy guiodelines: <a href=\"https://www.htw-berlin.de/datenschutz/\">https://www.htw-berlin.de/datenschutz/</a><br><br><b>No data collected</b><br><br>"
     }
 ]
