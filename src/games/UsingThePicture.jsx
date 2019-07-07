@@ -7,8 +7,7 @@ import Select from "react-select";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import BackButton from "./../components/BackButton";
 import Placeholder from "../images/index.png";
-import { ReactComponent as LDHeadHappy } from "../images/Lawyerdude-head-happy.svg";
-import { ReactComponent as LDLamaSceptical } from "../images/Lawyerdude-llama-head-sceptical.svg";
+import SpeechBubbleContainer from "./../components/SpeechBubbleContainer";
 
 const options = [
   {
@@ -318,20 +317,7 @@ class UsingTheImage extends Component {
           <h1>{headline}</h1>
           {textIndex === 0 && panels.length >= 1 ? (
             <div>
-              <div>
-                <div className="speech">
-                  <div
-                    className="speechbubbletext"
-                    dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
-                  />
-                </div>
-                <div className="lama-container">
-                  <LDLamaSceptical className="lama-sceptical" />
-                </div>
-                <div className="speechlawyer-container">
-                  <LDHeadHappy className="speechlawyer-happy" />
-                </div>
-              </div>
+              <SpeechBubbleContainer panels={panels} textIndex={textIndex} />
               <div className="buttoncontainer col">
                 <BackButton previousText={this.redirectToLastPage} />
                 <ForthButton nextText={this.nextText} />
@@ -339,20 +325,7 @@ class UsingTheImage extends Component {
             </div>
           ) : textIndex + 1 < panels.length ? (
             <div>
-              <div>
-                <div className="speech">
-                  <div
-                    className="speechbubbletext"
-                    dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
-                  />
-                </div>
-                <div className="lama-container">
-                  <LDLamaSceptical className="lama-sceptical" />
-                </div>
-                <div className="speechlawyer-container">
-                  <LDHeadHappy className="speechlawyer-happy" />
-                </div>
-              </div>
+              <SpeechBubbleContainer panels={panels} textIndex={textIndex} />
               <div className="buttoncontainer col">
                 <BackButton previousText={this.previousText} />
                 <ForthButton nextText={this.nextText} />

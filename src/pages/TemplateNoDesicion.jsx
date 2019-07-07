@@ -6,9 +6,8 @@ import BackButton from "../components/BackButton";
 import BackButtonInactive from "../components/BackButtonInactive";
 import ForthButton from "../components/ForthButton";
 import SettingsButton from "../components/SettingsButton";
-import { ReactComponent as LDHeadHappy } from "../images/Lawyerdude-head-happy.svg";
-import { ReactComponent as LDLamaSceptical } from "../images/Lawyerdude-llama-head-sceptical.svg";
 import ResourcePanel from "./../components/ResourcePanel";
+import SpeechBubbleContainer from './../components/SpeechBubbleContainer';
 
 class NoDecision extends Component {
   constructor(props) {
@@ -140,18 +139,7 @@ class NoDecision extends Component {
               images={panels[textIndex].images}
             />
           ) : (
-            <div>
-              <div className="speech">
-                <div className="speechbubbletext"
-                    dangerouslySetInnerHTML={{ __html: panels[textIndex] }} />
-              </div>
-              <div className="lama-container">
-                <LDLamaSceptical className="lama-sceptical" />
-              </div>
-              <div className="speechlawyer-container">
-                <LDHeadHappy className="speechlawyer-happy" />
-              </div>
-            </div>
+            <SpeechBubbleContainer panels={panels} textIndex={textIndex}/>
           )}
           {textIndex === 0 && panels.length > 1 ? (
             <div className="buttoncontainer col">
