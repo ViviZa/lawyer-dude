@@ -1,6 +1,6 @@
 @import "variables";
 
-.StartButton, .save-name-btn, .load-img-btn, .url-upload-btn, .jail-back-btn, .quiz-btn, .match-btn, .top-btn {
+.StartButton, .save-name-btn, .load-img-btn, .url-upload-btn, .jail-back-btn, .game-back-btn, .quiz-btn, .match-btn, .top-btn {
 	color: $button-text;
 	border-radius: 100px;
 	border-style: none; 
@@ -49,6 +49,14 @@
 	cursor: pointer;
 	line-height: 2.4;
 	margin: 55px 55px 0 55px;
+}
+
+.game-back-btn {
+	cursor: pointer;
+	line-height: 2.4;
+	position: absolute;
+	left: 2em;
+	margin: 0;
 }
 
 .quiz-btn {

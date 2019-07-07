@@ -184,7 +184,7 @@
 		bottom: -4px;
 		width: 30%;
 	}
-	
+
 	.fulllawyer  {
 		float: none;
 		width: 40%;
@@ -255,6 +255,15 @@
 		background-size: cover;
 		background-position: center center;
 	}
+
+	.resourcetext {
+
+		.resource-image {
+			width: 3em;
+			margin: 1.5em 0.5em 0 0.5em;
+		}
+	}
+
 	#settings g {
 		stroke: #000000;
 	}

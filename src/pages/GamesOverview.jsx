@@ -43,27 +43,38 @@ class GamesOverview extends Component {
     return (
       <div className="Startpage">
         <SettingsButton goBack={() => this.props.history.goBack()} />
-        <button className="jail-back-btn" onClick={() => this.props.history.goBack()}> 
-            Return to overview
-        </button>
         <div className="startpagecontent overviewpagecontent">
+          <button className="game-back-btn" onClick={() => this.props.history.goBack()}> 
+              Return to overview
+          </button>
           <h1 className="headline">Games</h1>
           <div className="container">
             <div className="row">
-                <div class="contentBox col">
-                    <p className="contentText">Match the License</p>
+                <div className="gameContentBox col">
+                    <div className="iconcontainer">
+                      <h3 className="headline">Match the License</h3>
+                    </div>
                     <button className="StartButton hover" onClick={() => this.redirectToNextPage(1)}>PLAY</button>
                 </div>
-                <div className="contentBox col">
-                    <p className="contentText">CC Licenses and their Use Cases</p>
+                <div className="gameContentBox col">
+                    <div className="iconcontainer">
+                      <h3 className="headline">CC Licenses and their Use Cases</h3>
+                    </div>
                     <button className="StartButton hover" onClick={() => this.redirectToNextPage(2)}>PLAY</button>
                 </div>
-                <div className="contentBox col">
-                    <p className="contentText">JailGame 1</p>
+            </div>
+
+            <div className="row">
+                <div className="gameContentBox col">
+                    <div className="iconcontainer">
+                      <h3 className="headline">Jail Game 1</h3>
+                    </div>
                     <button className="StartButton hover" onClick={() => this.redirectToNextPage(3)} >PLAY</button>
                 </div>
-                <div className="contentBox col">
-                    <p className="contentText">Jail Game 2</p>
+                <div className="gameContentBox col">
+                    <div className="iconcontainer">
+                      <h3 className="headline">Jail Game 2</h3>
+                    </div>
                     <button className="StartButton hover" onClick={() => this.redirectToNextPage(4)}>PLAY</button>
                 </div>
             </div>

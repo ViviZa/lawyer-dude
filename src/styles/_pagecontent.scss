@@ -89,12 +89,16 @@ ol {
 }
 
 
-.contentBox {
+.contentBox, .gameContentBox {
 	background-color: whitesmoke;
 	height: 44em;
 	margin: 1em;
 	padding: 20px 20px;
 	text-align: center;
+}
+
+.gameContentBox {
+	height: 22em;
 }
 
 .boxicon {
@@ -277,11 +281,6 @@ ol {
 		font-size: 18px;
 		line-height: 1.2;
 		margin: 1em;
-	}
-
-	.container {
-		margin: 0;
-		padding: 0 0 60px 0;
 	}
 
 	.contentText {
