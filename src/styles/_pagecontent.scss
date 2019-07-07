@@ -273,9 +273,9 @@ ol {
 @media only screen and (max-width: 599px) {
   
 	h1 {
-		font-size: 22px;
-		line-height: 1.5;
-		margin: 0 15px 15px 15px;
+		font-size: 18px;
+		line-height: 1.2;
+		margin: 10px;
 	}
 
 	.startpagecontent {
@@ -297,7 +297,7 @@ ol {
 
 	.pagecontent {
 		margin-left: 15px;
-		padding: 25px;
+		padding: 35px 25px 25px 25px;
 		text-align: center;
 	}
 
@@ -307,6 +307,7 @@ ol {
 	}
 
 	.speechbubbletext {
+		padding: 1.1em;
 		
 		&.entername {
 			padding: 7%;
