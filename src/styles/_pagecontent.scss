@@ -509,10 +509,6 @@ ol {
 		font-weight: 600;
 	}
 
-	ol {
-		height: 8em; 
-	}
-
 	.startpagecontent {
 		padding-top: 3.5em;
 	}
@@ -565,6 +561,10 @@ ol {
 	.speechbubbletext, .answerbubbletext, .speechbubbletext-jail {
 		font-size: 14px;
 		height: 9em;
+
+		ol {
+			height: 8em; 
+		}
 	}
 
 	.answerbubbletext {
