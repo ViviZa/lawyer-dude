@@ -86,7 +86,6 @@ class WelcomePage extends Component {
             <BackButtonInactive />
             <ForthButton nextText={this.redirectToNextPage} />
           </div>
-          <p />
         </div>
       </div>
     );
