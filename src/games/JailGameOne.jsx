@@ -95,12 +95,12 @@ class JailGameOne extends Component {
             <div className="question" dangerouslySetInnerHTML={{ __html: panels[textIndex].question}}></div>
             <div className="quizQuestions">
                 <p>{correctAnswersText}</p>
-                <button className="quiz-btn" onClick={this.validate}>Submit answers</button>
                 <QuizQuestion key={"question1"+textIndex} ref={this.child1} option={panels[textIndex].choices[0]} rightAnswers={panels[textIndex].correctAnswers} />
                 <QuizQuestion key={"question2"+textIndex}  ref={this.child2} option={panels[textIndex].choices[1]} rightAnswers={panels[textIndex].correctAnswers}/>
                 <QuizQuestion key={"question3"+textIndex}  ref={this.child3} option={panels[textIndex].choices[2]} rightAnswers={panels[textIndex].correctAnswers}/>
                 <QuizQuestion key={"question4"+textIndex}  ref={this.child4} option={panels[textIndex].choices[3]} rightAnswers={panels[textIndex].correctAnswers}/>
                 <QuizQuestion key={"question5"+textIndex}  ref={this.child5} option={panels[textIndex].choices[4]} rightAnswers={panels[textIndex].correctAnswers}/>
+                <button className="quiz-btn" onClick={this.validate}>Submit answers</button>
               </div>
               {
               (textIndex + 1 < panels.length  && buttonClicked === true) ? (
