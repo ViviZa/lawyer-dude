@@ -92,8 +92,8 @@ class JailGameOne extends Component {
           {(panels[textIndex] !== undefined && panels[textIndex].question !== undefined) ? (
           <div className="jailgametwo-container">  
             <h1>{headline}</h1>
+            <div className="question" dangerouslySetInnerHTML={{ __html: panels[textIndex].question}}></div>
             <div className="quizQuestions">
-              <div className="question" dangerouslySetInnerHTML={{ __html: panels[textIndex].question}}></div>
                 <p>{correctAnswersText}</p>
                 <button className="quiz-btn" onClick={this.validate}>Submit answers</button>
                 <QuizQuestion key={"question1"+textIndex} ref={this.child1} option={panels[textIndex].choices[0]} rightAnswers={panels[textIndex].correctAnswers} />
