@@ -24,6 +24,7 @@ class JailGameOne extends Component {
       nextPage: '',
       buttonClicked : false,
       correctAnswersText : "",
+      cssClass : [],
       };
     this.nextText = this.nextText.bind(this);
     this.previousText = this.previousText.bind(this);
@@ -39,6 +40,7 @@ class JailGameOne extends Component {
     this.setState({
       panels: filteredJSON[0].panels,
       headline: filteredJSON[0].headline,
+      cssClass: filteredJSON[0].cssClass,
       nextPage: filteredJSON[0].nextPage,
       nextPageID: nextPageID,
     })
@@ -86,9 +88,10 @@ class JailGameOne extends Component {
   }
 
   render() {
-    const { panels, textIndex, headline, buttonClicked, correctAnswersText} = this.state;
+    console.log();
+    const { panels, textIndex, headline, buttonClicked, correctAnswersText, cssClass} = this.state;
     return (
-      <div>
+      <div className={cssClass[0]}>
           {(panels[textIndex] !== undefined && panels[textIndex].question !== undefined) ? (
           <div className="jailgametwo-container">  
             <h1>{headline}</h1>
@@ -112,7 +115,7 @@ class JailGameOne extends Component {
               }
             </div>
           ) : ( 
-          <div >
+          <div className={cssClass[1]}>
             <SpeechBubbleContainer panels={panels} textIndex={textIndex} jail/>
             {
             (textIndex === 0 && panels.length > 1 ) ? (

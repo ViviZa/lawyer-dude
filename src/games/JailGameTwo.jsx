@@ -48,6 +48,7 @@ class JailGameTwo extends Component {
       panels: [],
       exitText: [],
       showExitText: false,
+      cssClass : [],
     };
     this.handleDrop = this.handleDrop.bind(this);
     this.validate = this.validate.bind(this);
@@ -66,6 +67,7 @@ class JailGameTwo extends Component {
       panels: filteredJSON[0].panels,
       exitText: filteredJSON[0].exitTexts,
       headline: filteredJSON[0].headline,
+      cssClass: filteredJSON[0].cssClass,
       nextPage: filteredJSON[0].nextPage,
       nextPageID: nextPageID,
       images: filteredJSON[0].images,
@@ -115,8 +117,9 @@ class JailGameTwo extends Component {
   }
 
   renderGame() {
-    const { answers, submit, images } = this.state;
+    const { answers, submit, images, cssClass } = this.state;
     return (
+      <div className={cssClass[0]}>
       <div className="jailgametwo-container">
         <DndProvider backend={HTML5Backend}>
           <div className="jailgame-text">
@@ -160,16 +163,17 @@ class JailGameTwo extends Component {
           </div>
         )}
       </div>
+      </div>
     );
   }
 
   render() {
-    const { textIndex, panels, showExitText, exitText } = this.state;
+    const { textIndex, panels, showExitText, exitText, cssClass } = this.state;
     const { showJail } = this.props;
     return (
       <div>
         { showExitText ? (
-              <div>
+              <div className={cssClass[1]}>
                 <div>
                   <SpeechBubbleContainer panels={exitText} textIndex={0} jail/>
                 </div>
@@ -187,7 +191,7 @@ class JailGameTwo extends Component {
             </div>
           </div>
         ) : panels && textIndex + 1 <= panels.length ? (
-          <div>
+          <div  className={cssClass[1]}>
             <div>
               <SpeechBubbleContainer panels={panels} textIndex={textIndex} jail/>
             </div>

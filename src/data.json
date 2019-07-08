@@ -619,6 +619,7 @@
     "id": 105,
     "pageurl": "/jailgame1",
     "headline": "True or false?",
+    "cssClass" : ["jailcontainer", "jailpagecontent"],
     "panels": [
       "Answer the following questions correctly and you will be free to go.",
       { "question": "Which of the following statements apply to the <b>CC BY-SA license</b>?",
@@ -670,6 +671,7 @@
     "id": 106,
     "pageurl": "/jailgame2",
     "headline": "Drop the icon!",
+    "cssClass" : ["jailcontainer", "jailpagecontent"],
     "panels": [
       "Drag and drop the correct icons to the license modules and you will be free to go."
     ],
