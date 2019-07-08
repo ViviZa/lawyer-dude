@@ -172,7 +172,6 @@ class TemplateDecision extends Component {
               </div>
             </div>
           )}
-          <p />
         </div>
       </div>
     );

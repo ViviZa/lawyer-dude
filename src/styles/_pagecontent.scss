@@ -499,7 +499,6 @@ ol {
 
 	ol {
 		height: 8em; 
-		overflow: scroll;
 	}
 
 	.startpagecontent {
@@ -567,6 +566,7 @@ ol {
 
 	.speechbubbletext, .answerbubbletext, .speechbubbletext-jail {
 		font-size: 14px;
+		height: 9em;
 	}
 
 	.answerbubbletext {
