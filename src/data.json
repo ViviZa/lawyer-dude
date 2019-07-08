@@ -648,7 +648,7 @@
             "choice": "The name of the author must be stated."
           },
           { "id": 2,
-            "choice": "TThe content is bound to the original or a compatible license."
+            "choice": "The content is bound to the original or a compatible license."
           },
           { "id": 3,
             "choice": "Modification of the content is prohibited."
