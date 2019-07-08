@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import data from "../data.json";
 import { withRouter } from "react-router";
-import { ReactComponent as LDHeadSceptical } from "../images/Lawyerdude-head-sceptical.svg";
+import SpeechBubbleContainer from './../components/SpeechBubbleContainer';
 import JailGameTwo from "../games/JailGameTwo.jsx";
 import JailGameOne from "../games/JailGameOne";
 import ForthButton from "./../components/ForthButton";
@@ -107,18 +107,7 @@ class Jailpage extends Component {
               images={panels[textIndex].images}
             />
           ) : (
-            <div>
-              <div className="jail-speech">
-                <div className="speechbubbletext-jail">
-                  <div
-                    dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
-                  />
-                </div>
-              </div>
-              <div className="speechlawyer-sceptical-container">
-                <LDHeadSceptical className="speechlawyer-sceptical" />
-              </div>
-            </div>
+            <SpeechBubbleContainer panels={panels} textIndex={textIndex} jail/>
           )}
           <div className="buttoncontainer">
             {textIndex === 0 && panels.length > 1 ? (

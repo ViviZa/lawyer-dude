@@ -35,19 +35,22 @@ class EnterName extends Component {
     let jsonData = JSON.parse(dataString);
     const filteredJSON = jsonData.filter(values => values.id === ID);
     const nextPageID = filteredJSON[0].nextPageIDs[0];
-    this.setState({
-      panels: filteredJSON[0].panels,
-      headline: filteredJSON[0].headline,
-      nextPage: filteredJSON[0].nextPage,
-      nextPageID: nextPageID
-    }, () => {
-      const goBack = JSON.parse(localStorage.getItem("goBack"));
-      if (goBack) {
-        const goBack = false;
-        localStorage.setItem("goBack", JSON.stringify(goBack));
-        this.setState({ textIndex: this.state.panels.length - 1 });
+    this.setState(
+      {
+        panels: filteredJSON[0].panels,
+        headline: filteredJSON[0].headline,
+        nextPage: filteredJSON[0].nextPage,
+        nextPageID: nextPageID
+      },
+      () => {
+        const goBack = JSON.parse(localStorage.getItem("goBack"));
+        if (goBack) {
+          const goBack = false;
+          localStorage.setItem("goBack", JSON.stringify(goBack));
+          this.setState({ textIndex: this.state.panels.length - 1 });
+        }
       }
-    });
+    );
   }
 
   redirectToNextPage(event) {
@@ -100,9 +103,9 @@ class EnterName extends Component {
   render() {
     if (this.props.location.state === undefined) {
       this.props.history.push({
-        pathname: "/",
+        pathname: "/"
       });
-      return <div/>;
+      return <div />;
     }
     const { panels, textIndex, headline, errorText } = this.state;
     const { ID } = this.props.location.state;
@@ -116,15 +119,16 @@ class EnterName extends Component {
             <Llama className="entername-llama" />
           </div>
           <div className="speech entername">
-            <div className="speechbubbletext entername"
-               dangerouslySetInnerHTML={{ __html: panels[textIndex] }} />
+            <div className="speechbubbletext entername">
+              <div dangerouslySetInnerHTML={{ __html: panels[textIndex] }} />
+            </div>
           </div>
           <div className="speechlawyer-container entername">
             <LDHeadHappy className="speechlawyer-happy" />
           </div>
           {textIndex === 0 ? (
             <div className="buttoncontainer col">
-              <BackButton previousText={this.redirectToLastPage}/>
+              <BackButton previousText={this.redirectToLastPage} />
               <ForthButton nextText={this.nextText} />
             </div>
           ) : textIndex + 1 < panels.length ? (
@@ -137,23 +141,23 @@ class EnterName extends Component {
               <form onSubmit={event => this.redirectToNextPage(event)}>
                 <div className="row">
                   <div className="col-12 col-sm-6 col-md-6">
-                <div className={"errorMessage"}>{errorText}</div>
-                <input
-                    className="entername-input"
-                    type="text"
-                    value={this.state.username}
-                    onChange={this.handleChange}
+                    <div className={"errorMessage"}>{errorText}</div>
+                    <input
+                      className="entername-input"
+                      type="text"
+                      value={this.state.username}
+                      onChange={this.handleChange}
                     />
-                <label className="entername-label">Enter your name</label>
-                    </div>
-                    <div className="col-12 col-sm-6 col-md-6">
-                <button
-                  className="save-name-btn"
-                  type="submit"
-                  value="Let's go"
-                  >
-                  Let's go
-                  </button>
+                    <label className="entername-label">Enter your name</label>
+                  </div>
+                  <div className="col-12 col-sm-6 col-md-6">
+                    <button
+                      className="save-name-btn"
+                      type="submit"
+                      value="Let's go"
+                    >
+                      Let's go
+                    </button>
                   </div>
                 </div>
               </form>

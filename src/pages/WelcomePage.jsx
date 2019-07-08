@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import SideNavigation from '../components/SideNavigation';
-import { withRouter } from 'react-router';
-import data from '../data.json';
-import BackButtonInactive from '../components/BackButtonInactive';
-import ForthButton from '../components/ForthButton';
-import { ReactComponent as LDFull } from '../images/Lawyerdude-side.svg';
-import SettingsButton from '../components/SettingsButton';
+import React, { Component } from "react";
+import SideNavigation from "../components/SideNavigation";
+import { withRouter } from "react-router";
+import data from "../data.json";
+import BackButtonInactive from "../components/BackButtonInactive";
+import ForthButton from "../components/ForthButton";
+import { ReactComponent as LDFull } from "../images/Lawyerdude-side.svg";
+import SettingsButton from "../components/SettingsButton";
 
 class WelcomePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       panels: [],
-      headline: '',
+      headline: "",
       nextPageID: 0,
-      nextPage: '',
+      nextPage: ""
     };
     this.redirectToNextPage = this.redirectToNextPage.bind(this);
   }
@@ -22,9 +22,9 @@ class WelcomePage extends Component {
   componentDidMount() {
     if (!this.props.location.state) {
       this.props.history.push({
-        pathname: "/",
+        pathname: "/"
       });
-      return <div/>
+      return <div />;
     }
     const { ID } = this.props.location.state;
     const { addingPages } = this.props;
@@ -37,8 +37,8 @@ class WelcomePage extends Component {
       panels: filteredJSON[0].panels,
       headline: filteredJSON[0].headline,
       nextPage: filteredJSON[0].nextPage,
-      nextPageID: nextPageID,
-    })
+      nextPageID: nextPageID
+    });
   }
 
   redirectToNextPage() {
@@ -46,7 +46,7 @@ class WelcomePage extends Component {
     const { nextPageID, nextPage } = this.state;
     history.push({
       pathname: nextPage,
-      state: { ID: nextPageID },
+      state: { ID: nextPageID }
     });
   }
 
@@ -54,38 +54,39 @@ class WelcomePage extends Component {
     const { panels, headline } = this.state;
     if (!this.props.location.state) {
       this.props.history.push({
-        pathname: "/",
+        pathname: "/"
       });
-      return <div/>
+      return <div />;
     }
     const { ID } = this.props.location.state;
 
     return (
       <div className="Startpage">
-        <SideNavigation ID={ID}/>
-        <SettingsButton goBack={() => this.props.history.goBack()}/>
+        <SideNavigation ID={ID} />
+        <SettingsButton goBack={() => this.props.history.goBack()} />
         <div className="pagecontent">
-          <h1 className="headline">
-            {headline}
-          </h1>
+          <h1 className="headline">{headline}</h1>
           <div className="container">
             <div className="row">
-
-          <div className="welcomeblock ">
-            <LDFull className="fulllawyer col-12 col-sm-6 col-md-6 col-lg-12 "/>  
-            <div className="welcomepanels col-12 col-sm-6 col-md-6 col-lg-12">
-              <ul>
-                  {panels.map((panel, index) => <li key={index} className="welcomepanel">{panel}</li>)}
-              </ul>
+              <div className="welcomeblock ">
+                <LDFull className="fulllawyer col-12 col-sm-6 col-md-6 col-lg-12 " />
+                <div className="welcomepanels col-12 col-sm-6 col-md-6 col-lg-12">
+                  <ul>
+                    {panels.map((panel, index) => (
+                      <li key={index} className="welcomepanel">
+                        <div dangerouslySetInnerHTML={{ __html: panel }} />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
-            </div>
-          </div>
           </div>
           <div className="buttoncontainer col">
-            <BackButtonInactive/>
+            <BackButtonInactive />
             <ForthButton nextText={this.redirectToNextPage} />
           </div>
-          <p></p>
+          <p />
         </div>
       </div>
     );

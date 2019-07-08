@@ -2,6 +2,7 @@
 
 h1 {
 	margin: 25px;
+	font-weight: 600;
 }
 
 .startpagecontent {
@@ -88,12 +89,16 @@ ol {
 }
 
 
-.contentBox {
+.contentBox, .gameContentBox {
 	background-color: whitesmoke;
 	height: 44em;
 	margin: 1em;
 	padding: 20px 20px;
 	text-align: center;
+}
+
+.gameContentBox {
+	height: 22em;
 }
 
 .boxicon {
@@ -105,6 +110,11 @@ ol {
 	z-index: 10;
 	margin:auto;
 	text-align: center;
+
+	.resourceContainer {
+		background-color: $jailresource-background;
+		color: #FFF;
+	}
 }
 
 .buttoncontainer {
@@ -119,7 +129,6 @@ ol {
 	padding: 2.5em;
 	position: relative;
 	letter-spacing: 1.1px;
-	overflow-y: scroll;
 
 	div {
 		height: inherit; 
@@ -213,6 +222,7 @@ ol {
 		margin-bottom: 1em;
 		letter-spacing: 1.1px;
 		font-size: 20px;
+		float: left;
 	}
 
 	.matchQuestion {
@@ -265,6 +275,10 @@ ol {
 	}
 }
 
+.quiz-topsection {
+	display: inline-block;
+}
+
 .attribution-container {
 	float: left;
 	margin-top: -15em;
@@ -274,9 +288,15 @@ ol {
 @media only screen and (max-width: 599px) {
   
 	h1 {
-		font-size: 22px;
+		font-size: 18px;
+		line-height: 1.2;
+		margin: 1em;
+	}
+
+	.contentText {
+		font-size: 14px;
 		line-height: 1.5;
-		margin: 0 15px 15px 15px;
+		margin: 25px 0;
 	}
 
 	.startpagecontent {
@@ -289,6 +309,28 @@ ol {
 
 		h3 {
 			line-height: 1.4;
+			font-size: 1.2rem;
+		}
+
+		&.overviewpagecontent {
+
+			height: auto;
+
+			h1 {
+				font-size: 22px;
+				margin: 45px 25px;
+			}
+
+			h3 {
+				margin: 0.5em auto;
+			}
+
+			.contentText {
+				padding: 1em 0;
+				height: 13em;
+				font-size: 14px;
+				margin: 0;
+			}
 		}
 	}
 
@@ -296,9 +338,40 @@ ol {
 		padding-left: 20px;
 	}
 
+	.welcomeblock {
+		margin-top: 1em;
+	}
+
+	.welcomepanels {
+		font-size: 14px;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+
+		ul {
+			padding: 0 1.5em;
+		}
+
+		li {
+			list-style-image: none;
+			list-style-type: none;
+			background-image: url('./images/bullet.svg');
+			background-repeat: no-repeat;
+			background-position: 0px 10px;
+			padding-left: 20px;
+			background-size: 5px;
+	
+			&:last-of-type {
+				font-size: 15px;
+				padding: 1em 0 1em 20px;
+				background-image: none;
+			}
+		}
+	}
+
 	.pagecontent {
-		margin-left: 15px;
-		padding: 25px;
+		margin-left: 0;
+		padding: 35px 25px 25px 25px;
 		text-align: center;
 	}
 
@@ -307,11 +380,24 @@ ol {
 		left: 52%;
 	}
 
+	.contentBox {
+		height: 28em;
+	} 
+
+	.boxicon {
+		height: 4em;
+	}
+
 	.speechbubbletext {
+		padding: 1.5em;
 		
 		&.entername {
 			padding: 7%;
 		}
+	}
+
+	.answerbubbletext {
+		padding: 1.5em;
 	}
 
 	.speechbubbletext-jail {
@@ -337,7 +423,7 @@ ol {
 	.llama-container {
 		float: none;
 	}
-} 
+}
 
 
 @media (min-width: 600px) and (max-width: 768px) {
@@ -453,6 +539,10 @@ ol {
 		height: 26.5em;
 	}
 
+	.gameContentBox {
+		height: 11em;
+	}
+
 	.boxicon {
 		height: 4em;
 	}
@@ -489,6 +579,16 @@ ol {
 	}
 
 	.quizQuestions, .matchQuestions {
+
+		width: 100%;
+
+		.question {
+			margin-top: 1em;
+		}
+
+		.quizQuestion {
+			line-height: 1.1;
+		}
 
 		.matchQuestion { 
 			height: 5em;

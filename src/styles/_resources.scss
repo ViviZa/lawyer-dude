@@ -50,6 +50,20 @@
 		display: flex;
 	}
 }
+@media only screen and (max-width: 599px) {
+
+	.resourceContainer {
+		padding: 1em;
+		margin-bottom: 6em;
+		height: auto;
+	}
+
+	.resourcetext {
+		font-size: 14px;
+		line-height: 1.5;
+		margin: 1em 0;
+	}
+}
 
 @media (min-width: 1260px) and (max-width: 1440px) {
 	

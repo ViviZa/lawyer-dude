@@ -80,12 +80,14 @@ label {
 .licenceProperty-container, .selectProperty-container {
 	width: 70%;
 	margin: auto;
+	text-align: initial;
 }
 
 .license-select-wrap {
-	padding-top: 15px;
 	display: inline-block;
 	width: 70%;
+	box-sizing: border-box;
+	text-align: initial;
 }
 
 @media only screen and (max-width: 599px) {
@@ -96,5 +98,12 @@ label {
 		margin-right: 0;
 		float: left;
 	}
+}
 
+@media (min-width: 1260px) and (max-width: 1440px) {
+
+	.choice {
+		margin: 0;
+		font-size: 0.9em;
+	}
 }

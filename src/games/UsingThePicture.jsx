@@ -4,11 +4,9 @@ import { withRouter } from "react-router";
 import data from "../data.json";
 import ForthButton from "../components/ForthButton";
 import Select from "react-select";
-import { CopyToClipboard } from "react-copy-to-clipboard";
 import BackButton from "./../components/BackButton";
 import Placeholder from "../images/index.png";
-import { ReactComponent as LDHeadHappy } from "../images/Lawyerdude-head-happy.svg";
-import { ReactComponent as LDLamaSceptical } from "../images/Lawyerdude-llama-head-sceptical.svg";
+import SpeechBubbleContainer from "./../components/SpeechBubbleContainer";
 
 const options = [
   {
@@ -57,13 +55,11 @@ class UsingTheImage extends Component {
       nextPage: "",
       submitted: false,
       imgUrl: "",
-      link: "",
       copywriter: "",
       license: "",
       title: "",
       error: false,
       noticeCreated: false,
-      copied: false,
       licenseNotice: "",
       disclaimer: "",
       textIndex: 0,
@@ -76,6 +72,7 @@ class UsingTheImage extends Component {
     this.resetValues = this.resetValues.bind(this);
     this.nextText = this.nextText.bind(this);
     this.previousText = this.previousText.bind(this);
+    this.setDisabled = this.setDisabled.bind(this);
   }
 
   componentDidMount() {
@@ -123,11 +120,11 @@ class UsingTheImage extends Component {
   }
 
   createNotice() {
-    const { license, title, copywriter, link } = this.state;
+    const { license, title, copywriter, imgUrl } = this.state;
     if (license === "") {
       this.setState({ error: true });
     } else {
-      const licenseNotice = `${copywriter}${link && ` (`}${link}${link &&
+      const licenseNotice = `${copywriter}${imgUrl && ` (`}${imgUrl}${imgUrl &&
         `), `}${title && `"`}${title}${title && `", `}${license.link}`;
       this.setState({
         noticeCreated: true,
@@ -160,16 +157,18 @@ class UsingTheImage extends Component {
   }
 
   previousText() {
-    const theSize = this.state.panels.length - 1;
-    if (this.state.textIndex > 0 && this.state.textIndex <= theSize) {
-      this.setState(prevState => {
-        return { textIndex: prevState.textIndex - 1 };
-      });
-    }
+    this.setState(prevState => {
+      return { textIndex: prevState.textIndex - 1 };
+    });
+  }
+
+  setDisabled(){
+    const { imgUrl, license, copywriter, title, } = this.state;
+    return (!(imgUrl !== '' && license !== '' && copywriter !== '' && title !== ''));
   }
 
   renderFirstPage() {
-    const { imgUrl, link, license, copywriter, title, error } = this.state;
+    const { imgUrl, license, copywriter, title, error } = this.state;
     return (
       <div>
         <div>
@@ -222,8 +221,8 @@ class UsingTheImage extends Component {
                 className="picture-specs-input"
                 name="source"
                 type="text"
-                value={link}
-                onChange={ev => this.updateTextFieldValue(ev, "link")}
+                value={imgUrl}
+                onChange={ev => this.updateTextFieldValue(ev, "imgUrl")}
                 placeholder="Where can I find it?"
               />
               <label htmlFor="source" className="licenceProperty">
@@ -233,7 +232,7 @@ class UsingTheImage extends Component {
           </div>
           <div>
             <div className="selectProperty-container">
-              <div>
+              <div className="select-container">
                 <div className="license-select-wrap">
                   <Select
                     value={license}
@@ -253,12 +252,12 @@ class UsingTheImage extends Component {
                 ) : (
                   <div className="using-image-error">&nbsp;</div>
                 )}
-                <div className="selectProperty">License</div>
               </div>
+              <div className="selectProperty">License</div>
             </div>
           </div>
           <BackButton previousText={this.previousText} />
-          <button className="url-upload-btn" onClick={this.createNotice}>
+          <button className="url-upload-btn" onClick={this.createNotice} disabled={this.setDisabled()}>
             Generate
           </button>
         </div>
@@ -267,7 +266,7 @@ class UsingTheImage extends Component {
   }
 
   renderSecondPage() {
-    const { imgUrl, copied, licenseNotice, disclaimer } = this.state;
+    const { imgUrl, licenseNotice, disclaimer } = this.state;
     return (
       <div>
         <div className="imgView">
@@ -284,16 +283,6 @@ class UsingTheImage extends Component {
             value={licenseNotice}
             onChange={ev => this.updateTextFieldValue(ev, "licenseNotice")}
           />
-          <CopyToClipboard
-            text={licenseNotice}
-            onCopy={() => this.setState({ copied: true })}
-            className="copy-button"
-          >
-            <div>
-              <button className="load-img-btn copy">Copy to clipboard</button>
-              {copied && <span>Copied!</span>}
-            </div>
-          </CopyToClipboard>
         </div>
         <div>{disclaimer}</div>
         <BackButton previousText={this.resetValues} />
@@ -318,20 +307,7 @@ class UsingTheImage extends Component {
           <h1>{headline}</h1>
           {textIndex === 0 && panels.length >= 1 ? (
             <div>
-              <div>
-                <div className="speech">
-                  <div
-                    className="speechbubbletext"
-                    dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
-                  />
-                </div>
-                <div className="lama-container">
-                  <LDLamaSceptical className="lama-sceptical" />
-                </div>
-                <div className="speechlawyer-container">
-                  <LDHeadHappy className="speechlawyer-happy" />
-                </div>
-              </div>
+              <SpeechBubbleContainer panels={panels} textIndex={textIndex} />
               <div className="buttoncontainer col">
                 <BackButton previousText={this.redirectToLastPage} />
                 <ForthButton nextText={this.nextText} />
@@ -339,20 +315,7 @@ class UsingTheImage extends Component {
             </div>
           ) : textIndex + 1 < panels.length ? (
             <div>
-              <div>
-                <div className="speech">
-                  <div
-                    className="speechbubbletext"
-                    dangerouslySetInnerHTML={{ __html: panels[textIndex] }}
-                  />
-                </div>
-                <div className="lama-container">
-                  <LDLamaSceptical className="lama-sceptical" />
-                </div>
-                <div className="speechlawyer-container">
-                  <LDHeadHappy className="speechlawyer-happy" />
-                </div>
-              </div>
+              <SpeechBubbleContainer panels={panels} textIndex={textIndex} />
               <div className="buttoncontainer col">
                 <BackButton previousText={this.previousText} />
                 <ForthButton nextText={this.nextText} />
