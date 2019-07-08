@@ -44,7 +44,7 @@ class GamesOverview extends Component {
       <div className="Startpage">
         <SettingsButton goBack={() => this.props.history.goBack()} />
         <div className="startpagecontent overviewpagecontent">
-          <button className="game-back-btn" onClick={() => this.props.history.goBack()}> 
+          <button className="game-back-btn" onClick={() => this.redirectToNextPage(0)}> 
               Return to overview
           </button>
           <h1 className="headline">Games</h1>
@@ -58,7 +58,7 @@ class GamesOverview extends Component {
                 </div>
                 <div className="gameContentBox col">
                     <div className="iconcontainer">
-                      <h3 className="headline">CC Licenses and their Use Cases</h3>
+                      <h3 className="headline">Understand the use case</h3>
                     </div>
                     <button className="StartButton hover" onClick={() => this.redirectToNextPage(2)}>PLAY</button>
                 </div>
