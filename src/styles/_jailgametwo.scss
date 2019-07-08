@@ -14,10 +14,6 @@
     margin: auto;
 }
 
-.jailgame-text {
-  font-size: 25px;
-}
-
 .images-container {
     margin-top: 1em;
     width: 100%;
@@ -78,4 +74,13 @@
   font-weight: 600;
   width: inherit;
   margin-top: 1.5em;
+}
+
+@media (min-width: 1260px) and (max-width: 1440px) {
+
+  .jailgametwo-container {
+    width: 50rem;
+    margin: 2em auto;
+  }
+
 }
