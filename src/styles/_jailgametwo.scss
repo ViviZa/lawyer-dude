@@ -48,11 +48,11 @@
 }
 
 
-.jailgametwo-container{
+.jailgametwo-container {
     background-color: white;
     width: 70rem;
     padding: 1rem;
-    display: inline-block;
+    margin: 8em auto;
     text-align: center;
 }
 
@@ -61,4 +61,13 @@
   height: 7rem;
   display: inline-block;
   margin: 1rem;
+}
+
+.jailgame-intro-container {
+  padding: 3em 9em;
+  height: 100%;
+}
+
+.quiz-btn-container {
+  text-align: center;
 }

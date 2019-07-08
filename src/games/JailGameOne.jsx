@@ -100,7 +100,9 @@ class JailGameOne extends Component {
                 <QuizQuestion key={"question3"+textIndex}  ref={this.child3} option={panels[textIndex].choices[2]} rightAnswers={panels[textIndex].correctAnswers}/>
                 <QuizQuestion key={"question4"+textIndex}  ref={this.child4} option={panels[textIndex].choices[3]} rightAnswers={panels[textIndex].correctAnswers}/>
                 <QuizQuestion key={"question5"+textIndex}  ref={this.child5} option={panels[textIndex].choices[4]} rightAnswers={panels[textIndex].correctAnswers}/>
-                <button className="quiz-btn" onClick={this.validate}>Submit answers</button>
+                <div className="quiz-btn-container">
+                  <button className="quiz-btn" onClick={this.validate}>Submit answers</button>
+                </div>
               </div>
               {
               (textIndex + 1 < panels.length  && buttonClicked === true) ? (
@@ -112,7 +114,7 @@ class JailGameOne extends Component {
               }
             </div>
           ) : ( 
-          <div >
+          <div className="jailgame-intro-container">
             <SpeechBubbleContainer panels={panels} textIndex={textIndex} jail/>
             {
             (textIndex === 0 && panels.length > 1 ) ? (

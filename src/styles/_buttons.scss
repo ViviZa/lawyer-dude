@@ -155,10 +155,18 @@
 	}
 }
 
-.Jailpage {
+.Jailpage, .jailgame-intro-container, .jailgametwo-container {
 
 	.buttoncontainer {
 		left: 50%;
+	}
+}
+
+.jailgametwo-container {
+
+	.quiz-btn {
+		position: relative;
+		right: 0;
 	}
 }
 
