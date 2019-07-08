@@ -44,7 +44,7 @@ class GamesOverview extends Component {
       <div className="Startpage">
         <SettingsButton goBack={() => this.props.history.goBack()} />
         <div className="startpagecontent overviewpagecontent">
-          <button className="game-back-btn" onClick={() => this.props.history.goBack()}> 
+          <button className="game-back-btn" onClick={() => this.redirectToNextPage(0)}> 
               Return to overview
           </button>
           <h1 className="headline">Games</h1>
