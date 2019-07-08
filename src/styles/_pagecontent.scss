@@ -231,8 +231,8 @@ ol {
 	}
 
 	.basic-multi-select {
-		float: right;
 		width: 30em;
+		height: 100%;
 		margin: 2em 1.5em;
 	}
 }
@@ -554,20 +554,6 @@ ol {
 		height: 4em;
 	}
 	
-	// .resourceContainer {
-	// 	margin-top: 2.5em;
-	// 	// height: 25em;
-	// 	position: relative;
-	// 	height: auto;
-
-	// 	.speechbubbletext {
-	// 		font-size: 14px;
-	// 		padding: 0 1em;
-	// 		margin: 2em;
-	// 		line-height: 2em;
-	// 	}
-	// }
-
 	.buttoncontainer {
 		bottom: 1em;
 	}
@@ -586,8 +572,12 @@ ol {
 		margin-left: 10em;
 	}
 
-	.quizQuestions, .matchQuestions {
+	.matchSection {
+		height: 9em;
+		overflow-y: scroll;
+	}
 
+	.quizQuestions, .matchQuestions {
 		width: 100%;
 
 		.question {
@@ -599,16 +589,11 @@ ol {
 		}
 
 		.matchQuestion { 
-			height: 5em;
-			width: 25em;
 			font-size: 16px;
 			line-height: 1.2;
-			margin: 1.5em 1em 1.5em 1.5em;
-			overflow-y: scroll;
 		}
 
 		.basic-multi-select {
-			width: 12em;
 			margin: 2em 1.5em;
 		}
 	}
