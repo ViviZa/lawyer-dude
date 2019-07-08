@@ -661,7 +661,7 @@
           }
         ]
       },
-      "You're lucky! This time I let you go, but think of the rules before you use the next time a picture from the Internet."
+      "You're lucky! This time I let you go, but think of the rules before you use an image from the Internet the next time."
     ],
     "nextPage": ["/games"],
     "nextPageIDs": [102]
@@ -686,7 +686,7 @@
       { "src": "images/Cc-nc.svg", "name": "CC-NC" }
     ],
     "exitTexts": [
-      "You're lucky! This time I let you go, but think of the rules before you use the next time a picture from the Internet."
+      "You're lucky! This time I let you go, but think of the rules before you use an image from the Internet the next time."
     ],
     "nextPage": ["/games"],
     "nextPageIDs": [102]
