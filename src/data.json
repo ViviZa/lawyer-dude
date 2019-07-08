@@ -408,7 +408,7 @@
     "panels": [
       "Thank you {username}, it’s been a pleasure to introduce you to the world of licenses and open content.",
       "If you would like to get more information, you are always very welcome to return to this tutorial. Or even start right now by exploring our resources.",
-      "WWould you like to test your newly acquired knowledge or just want to have some fun? Go ahead and play all the tutorial games in our “Games” section."
+      "Would you like to test your newly acquired knowledge or just want to have some fun? Go ahead and play all the tutorial games in our “Games” section."
     ],
     "nextPage": ["/overview"],
     "nextPageIDs": [100]
@@ -525,7 +525,7 @@
         "type": "resource",
         "images": [{"path": "/images/attribution-generator.gif", "css": "wiki-image"}]
       },
-      "Pretty cool, huh? Just try it yourself, you will be amazed how easy it is: <br><br> <a href=\"https://lizenzhinweisgenerator.de/?lang=en\",>lizenzhinweisgenerator.de</a>",
+      "Pretty cool, huh? Just try it yourself, you will be amazed how easy it is: <br><br> <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://lizenzhinweisgenerator.de/?lang=en\",>https://lizenzhinweisgenerator.de/?lang=en</a>",
       "Now I've told you the secret how to use images from the internet without going to jail! But let's not keep this knowledge secret any further - share your knowledge about open content so that everyone can participate."
       ],
     "nextPage": "/success",
