@@ -82,9 +82,9 @@ class Resources extends Component {
           <SettingsButton goBack={() => this.props.history.goBack()} />
           <button className="StartButton" onClick={() => this.redirectToNextPage(100)} title="Return to overview page">Return</button>
         </div>
-        <div className="pagecontent">
           <h1 className="headline">{headline}</h1>
           <div className="resToC" dangerouslySetInnerHTML={{ __html: toc }} />
+        <div className="pagecontent">
           <div className="resourcetext" dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       </div>
