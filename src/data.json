@@ -546,7 +546,8 @@
       },
       { "question": "What are you allowed to do with an image under the <b>CC-BY-SA license</b>?",
         "correctAnswers": [2,3,4,5,7,8,9]
-      }
+      },
+      "Well done!"
     ],
     "nextPage": "/usinglicense",
     "nextPageIDs": [12]

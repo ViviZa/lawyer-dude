@@ -34,8 +34,12 @@ class Imprint extends Component {
 
     return (
       <div className="Imprint">
-        <SideNavigation ID={777} />
-        <SettingsButton goBack={() => this.props.history.goBack()} />
+        <div id="top" className="topBar">
+          <SettingsButton goBack={() => this.props.history.goBack()} />
+          <button className="jail-back-btn" onClick={() => this.props.history.goBack()}>
+            RETURN
+          </button>
+        </div>
         <div className="pagecontent">
           <div dangerouslySetInnerHTML={{ __html: contentBlock }} />
           <p></p>

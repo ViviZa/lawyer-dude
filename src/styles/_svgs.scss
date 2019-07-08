@@ -20,7 +20,7 @@
 }
 
 .speechlawyer-sceptical {
-	margin-top: 5%;
+	margin-top: 3.5em;
 	width: 85%;
 }
 
@@ -53,7 +53,7 @@
 .jail-speech {
 	font-size: 22px;
 	position: relative;
-	margin-left: 45%;
+	margin-left: 55%;
 
 	&:before {
 	 	content: "";
@@ -185,6 +185,18 @@
 		width: 30%;
 	}
 
+	.fulllawyer  {
+		float: none;
+		width: 40%;
+		margin:  5% auto;
+	}
+
+	.lama-sceptical, .lama-happy {
+		position: absolute; 
+		bottom: -5px;
+		left: 9em;
+	}
+
 	.speech {
 		font-size: 14px;
 		margin-left: 0;
@@ -207,7 +219,7 @@
 		
 			&:before {
 				padding-bottom: 75%;
-				 background: url(./images/speechbubble-s.svg) no-repeat;
+				 background: url(./images/speechbubble-320.svg) no-repeat;
 				 background-size: 100%;
 				left: 0;
 				top: 0;
@@ -227,8 +239,9 @@
 	}
 
 	.answer {
-		width: 88%;
-		margin-top: 50%;
+		font-size: 14px;
+		width: 18em;
+		margin-top: 6em;
 		margin-left: 0;
 
 		&:before {
@@ -242,6 +255,15 @@
 		background-size: cover;
 		background-position: center center;
 	}
+
+	.resourcetext {
+
+		.resource-image {
+			width: 3em;
+			margin: 1.5em 0.5em 0 0.5em;
+		}
+	}
+
 	#settings g {
 		stroke: #000000;
 	}
@@ -251,7 +273,7 @@
 
 	.startlawyer {
 		width: 23%;
-	}	
+	}
 	
 	.answer {
 		width: 70%;

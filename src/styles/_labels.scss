@@ -98,5 +98,12 @@ label {
 		margin-right: 0;
 		float: left;
 	}
+}
 
+@media (min-width: 1260px) and (max-width: 1440px) {
+
+	.choice {
+		margin: 0;
+		font-size: 0.9em;
+	}
 }
