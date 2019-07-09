@@ -282,7 +282,7 @@
 	}
 } 
 
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 767px) {
 
 	.startlawyer {
 		width: 23%;
@@ -315,6 +315,17 @@
 		background-size: cover;
 		background-position: center center;
 	}
+	#settings g {
+		stroke: $darkblue;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1259px) {
+
+	.startlawyer {
+		width: 28%;
+	}
+
 	#settings g {
 		stroke: $darkblue;
 	}

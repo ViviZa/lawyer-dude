@@ -305,6 +305,10 @@ ol {
 	margin-left: 5.5em;
 }
 
+.iconcontainer {
+	height: auto;
+}
+
 @media only screen and (max-width: 599px) {
   
 	h1 {
@@ -499,7 +503,7 @@ ol {
 }
 
 
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 767px) {
 
 	.startpagecontent {
 
@@ -514,6 +518,7 @@ ol {
 			line-height: 1.4;
 		}
 	}
+
 	h1 {
 		font-size: 1.5rem;
 		font-weight: 600;
@@ -537,6 +542,66 @@ ol {
 		margin-top: 25%;
 		margin-left: 0;
 		z-index: 10px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1259px) {
+
+	.startpagecontent {
+
+		h1 {
+			margin: 85px 25px 25px 25px;
+			line-height: 1.3;
+		}
+
+		h3 {
+			line-height: 1.4;
+			font-size: 1.7rem;
+		}
+
+		&.overviewpagecontent {
+
+			height: auto;
+
+			h1 {
+				font-size: 32px;
+				margin: 45px 25px;
+			}
+
+			h3 {
+				margin: 0.5em auto;
+			}
+
+			.contentText {
+				padding: 1em 0;
+				height: 16em;
+				font-size: 14px;
+				margin: 0;
+			}
+
+			.iconcontainer {
+
+				.headline {
+					height: 4.2em;
+				}
+			}
+
+			.contentBox {
+				height: 38em;
+		
+				&:last-of-type {
+					height: 26em;
+
+					.headline {
+						height: 1.5em;
+					}
+
+					.contentText {
+						height: 7em;
+					}
+				}
+			} 
+		}
 	}
 }
 

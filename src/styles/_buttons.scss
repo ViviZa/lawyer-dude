@@ -209,7 +209,7 @@
 	}
 } 
 
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 767px) {
 
 	.SettingsButton{
 		position: fixed;
@@ -225,6 +225,16 @@
 	}
 }
 
+@media (min-width: 768px) and (max-width: 1259px) {
+
+	.SettingsButton{
+		position: fixed;
+		margin-top: -0.2em;
+		margin-right: 0;
+		background-color: unset;
+		width: 6%;
+	}
+}
 @media (min-width: 1260px) and (max-width: 1440px) {
 
 	.StartButton {
