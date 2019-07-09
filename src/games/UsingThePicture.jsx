@@ -284,7 +284,7 @@ class UsingTheImage extends Component {
             onChange={ev => this.updateTextFieldValue(ev, "licenseNotice")}
           />
         </div>
-        <div>{disclaimer}</div>
+        <div dangerouslySetInnerHTML={{ __html: disclaimer }} />
         <BackButton previousText={this.resetValues} />
         <ForthButton nextText={this.redirectToNextPage} />
       </div>
