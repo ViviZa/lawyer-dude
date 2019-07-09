@@ -424,6 +424,24 @@ ol {
 	.llama-container {
 		float: none;
 	}
+
+	.quizQuestions, .matchQuestions {
+
+		width: unset;
+		margin-bottom: 6em;
+
+		.matchQuestion {
+			width: 22em;
+			margin: 1em;
+			font-size: 14px;
+		}
+
+		.basic-multi-select {
+			float: right;
+			width: 19em;
+			margin: 0 1em 1em 1em;
+		}
+	}
 }
 
 
