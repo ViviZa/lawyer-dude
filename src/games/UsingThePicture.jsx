@@ -277,7 +277,7 @@ class UsingTheImage extends Component {
           )}
         </div>
         <div className="notice-container">
-          <div className="copy-button">License notice:</div>
+          <div className="copy-button">One possible license notice:</div>
           <textarea
             className="license-notice"
             value={licenseNotice}
