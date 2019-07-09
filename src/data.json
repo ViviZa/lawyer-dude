@@ -79,37 +79,37 @@
       {
         "text": "The absolute opposite to this is when rights holders waive all rights and place their works in the public domain. <br><br> This pictogram states that all rights are granted for any use of a work in any way and for any purpose (<b>“all rights granted”</b>). Works in the public domain are free of protection. Either because the term of protection has expired or they were not copyright-protected in the first place.",
         "type": "resource",
-        "images": ["images/pd.svg"]
+        "images": [{"path":"images/pd.svg", "css": "resource-image"}]
       },
       {
         "text": "Creative Commons additionally offers a second tool that causes a similar legal status like the public domain tool: CC0. Rights holders are actively waiving all rights from their works. Consequently, all works licensed under CC0 can be used by anyone without any restrictions or obligations (<b>“all rights waived”</b>).",
         "type": "resource",
-        "images": ["images/Cc-zero.svg"]
+        "images": [{"path":"images/Cc-zero.svg", "css": "resource-image"}]
       },
       {
         "text": "Now you already know the public domain tool (or so called “waiver”). Let’s have a look at the CC licenses. <br><br> Each license contains at least one of four basic elements which are illustrated by abbreviations and pictograms. These elements can be combined with each other. Licenses’ names always start with the “CC” abbreviation. Let’s have a look how this might look like: <br><br> <b>BY</b> stands for “attribution” and means you have to mention the author and other parties designated for attribution. The corresponding license is therefore called “CC BY”. It means that you are free to use the work in any way and for any purpose - it therefore is the most permissive type of all CC licences. By the way, every license contains the obligation to name the author (i. e. every CC license contains the “BY” element).",
         "type": "resource",
-        "images": ["images/Cc-by.svg"]
+        "images": [{"path":"images/Cc-by.svg", "css": "resource-image"}]
       },
       {
         "text": "<b>SA</b> stands for “Share Alike” and means that anyone who modifies the original work must share the adapted version under a CC BY-SA license or a compatible licence. Apart from this, all license conditions of the CC BY license are still valid here.",
         "type": "resource",
-        "images": ["images/Cc-sa.svg"]
+        "images": [{"path":"images/Cc-sa.svg", "css": "resource-image"}]
       },
       {
         "text": "<b>ND</b> stands for “No Derivatives” which means that you are not allowed to modify the work in any way. The corresponding license is called “CC BY-ND”. Apart from this, all license conditions of the CC BY license are still valid here.",
         "type": "resource",
-        "images": ["images/Cc-nd.svg"]
+        "images": [{"path":"images/Cc-nd.svg", "css": "resource-image"}]
       },
       {
         "text": "<b>NC</b> stands for “Non Commercial” and states - contrary to the previous mentioned licenses - that you are not allowed to use the work commercially. With “CC BY-NC” any reproduction or modification of a workin order to realise a commercial gain is not permitted. Apart from this, all license conditions of the CC BY license are still valid here.",
         "type": "resource",
-        "images": ["images/Cc-nc.svg"]
+        "images": [{"path":"images/Cc-nc.svg", "css": "resource-image"}]
       },
       {
         "text": "As if that weren't enough the four elements can be combined. But don’t worry we won’t go any deeper into this. Maybe you can keep in mind a simple rule: <br>The more restrictions a license contains the less it is compatible with the idea of <a href=\"https://freedomdefined.org/Definition\">free cultural works</a> or the <a href=\"https://opendefinition.org/\">open definition</a>. To give you one example, let me shortly introduce the most restrictive CC license to you: CC BY-NC-ND. This code means: You may not use a work commercially, nor modify it. So, you're probably gonna agree with me that this isn't necessarily making sharing easier. <br><br>Please note, that free licenses regulate the right of the author. There are, however, other rights to be observed, such as moral rights such as the right to one's own image. These are not restricted by free licenses. Trademark rights and data protection regulations also remain unaffected. <br><br>This infographic may help you to better understand the CC license spectrum between “public domain/most open” (top) and “all rights reserved/least open” (bottom). Hint: Focus on the darker green area and therefore on the public domain tools “PD” and “CC0” as well as the two CC licenses “CC BY” and “CC BY-SA”. <br><br> <i>License information: <br><br>Pictograms: <br>Copyright: https://commons.wikimedia.org/wiki/File:Copyright.svg, public domain <br> Public domain: https://commons.wikimedia.org/wiki/File:Cc-public_domain_mark_white.svg, public domain <br> CC0: https://de.wikipedia.org/wiki/Datei:Cc-zero.svg, public domain <br> BY: https://commons.wikimedia.org/wiki/File:Cc-by_new.svg, public domain <br> SA: https://commons.wikimedia.org/wiki/File:Share_Alike.svg, <br> ND: https://commons.wikimedia.org/wiki/File:Cc-nd.svg, public domain <br> NC: https://commons.wikimedia.org/wiki/File:Creative_Commons_%22Non-Commercial%22_icon_(SVG,_nominal_64x64).svg, public domain <br><br>Visualisation license spectrum: <br> Shaddim; original CC license symbols by Creative Commons, Creative commons license spectrum, CC BY 4.0 https://creativecommons.org/licenses/by/4.0/ , 3.7.2019, 10.30",
         "type": "resource",
-        "images": ["images/Creative_Commons_Lizenzspektrum_DE.svg"]
+        "images": [{"path":"images/Creative_Commons_Lizenzspektrum_DE.svg", "css": "resource-image"}]
       },
       "I am sure this was a lot of stuff for the beginning, so let’s go on with your image.",
       "Are you aware of which of the licenses I just explained applies to your image?"
@@ -141,37 +141,37 @@
       {
         "text": "The absolute opposite to this is when rights holders waive all rights and place their works in the public domain. <br><br> This pictogram states that all rights are granted for any use of a work in any way and for any purpose (<b>“all rights granted”</b>). Works in the public domain are free of protection. Either because the term of protection has expired or they were not copyright-protected in the first place.",
         "type": "resource",
-        "images": ["images/pd.svg"]
+        "images": [{"path":"images/pd.svg", "css":"resource-image"}]
       },
       {
         "text": "Creative Commons additionally offers a second tool that causes a similar legal status like the public domain tool: CC0. Rights holders are actively waiving all rights from their works. Consequently, all works licensed under CC0 can be used by anyone without any restrictions or obligations (<b>“all rights waived”</b>).",
         "type": "resource",
-        "images": ["images/Cc-zero.svg"]
+        "images": [{"path":"images/Cc-zero.svg", "css": "resource-image"}]
       },
       {
         "text": "Now you already know the public domain tool (or so called “waiver”). Let’s have a look at the CC licenses. <br><br> Each license contains at least one of four basic elements which are illustrated by abbreviations and pictograms. These elements can be combined with each other. Licenses’ names always start with the “CC” abbreviation. Let’s have a look how this might look like: <br><br> <b>BY</b> stands for “attribution” and means you have to mention the author and other parties designated for attribution. The corresponding license is therefore called “CC BY”. It means that you are free to use the work in any way and for any purpose - it therefore is the most permissive type of all CC licences. By the way, every license contains the obligation to name the author (i. e. every CC license contains the “BY” element).",
         "type": "resource",
-        "images": ["images/Cc-by.svg"]
+        "images": [{"path":"images/Cc-by.svg", "css": "resource-image"}]
       },
       {
         "text": "<b>SA</b> stands for “Share Alike” and means that anyone who modifies the original work must share the adapted version under a CC BY-SA license or a compatible licence. Apart from this, all license conditions of the CC BY license are still valid here.",
         "type": "resource",
-        "images": ["images/Cc-sa.svg"]
+        "images": [{"path": "images/Cc-sa.svg", "css": "resource-image"}]
       },
       {
         "text": "<b>ND</b> stands for “No Derivatives” which means that you are not allowed to modify the work in any way. The corresponding license is called “CC BY-ND”. Apart from this, all license conditions of the CC BY license are still valid here.",
         "type": "resource",
-        "images": ["images/Cc-nd.svg"]
+        "images": [{"path":"images/Cc-nd.svg", "css": "resource-image"}]
       },
       {
         "text": "<b>NC</b> stands for “Non Commercial” and states - contrary to the previous mentioned licenses - that you are not allowed to use the work commercially. With “CC BY-NC” any reproduction or modification of a workin order to realise a commercial gain is not permitted. Apart from this, all license conditions of the CC BY license are still valid here.",
         "type": "resource",
-        "images": ["images/Cc-nc.svg"]
+        "images": [{"path":"images/Cc-nc.svg", "css": "resource-image"}]
       },
       {
         "text": "As if that weren't enough the four elements can be combined. But don’t worry we won’t go any deeper into this. Maybe you can keep in mind a simple rule: <br>The more restrictions a license contains the less it is compatible with the idea of <a href=\"https://freedomdefined.org/Definition\">free cultural works</a> or the <a href=\"https://opendefinition.org/\">open definition</a>. To give you one example, let me shortly introduce the most restrictive CC license to you: CC BY-NC-ND. This code means: You may not use a work commercially, nor modify it. So, you're probably gonna agree with me that this isn't necessarily making sharing easier. <br><br>Please note, that free licenses regulate the right of the author. There are, however, other rights to be observed, such as moral rights such as the right to one's own image. These are not restricted by free licenses. Trademark rights and data protection regulations also remain unaffected. <br><br>This infographic may help you to better understand the CC license spectrum between “public domain/most open” (top) and “all rights reserved/least open” (bottom). Hint: Focus on the darker green area and therefore on the public domain tools “PD” and “CC0” as well as the two CC licenses “CC BY” and “CC BY-SA”. <br><br> <i>License information: <br><br>Pictograms: <br>Copyright: https://commons.wikimedia.org/wiki/File:Copyright.svg, public domain <br> Public domain: https://commons.wikimedia.org/wiki/File:Cc-public_domain_mark_white.svg, public domain <br> CC0: https://de.wikipedia.org/wiki/Datei:Cc-zero.svg, public domain <br> BY: https://commons.wikimedia.org/wiki/File:Cc-by_new.svg, public domain <br> SA: https://commons.wikimedia.org/wiki/File:Share_Alike.svg, <br> ND: https://commons.wikimedia.org/wiki/File:Cc-nd.svg, public domain <br> NC: https://commons.wikimedia.org/wiki/File:Creative_Commons_%22Non-Commercial%22_icon_(SVG,_nominal_64x64).svg, public domain <br><br>Visualisation license spectrum: <br> Shaddim; original CC license symbols by Creative Commons, Creative commons license spectrum, CC BY 4.0 https://creativecommons.org/licenses/by/4.0/ , 3.7.2019, 10.30",
         "type": "resource",
-        "images": ["images/Creative_Commons_Lizenzspektrum_DE.svg"]
+        "images": [{"path":"images/Creative_Commons_Lizenzspektrum_DE.svg", "css": "resource-image"}]
       },
       "I am sure this was a lot of stuff for the beginning, so let’s go on with your image.",
       "Where do you usually look for images?"
@@ -209,7 +209,7 @@
       {
         "text": "There are many different image repositories on the internet. Not all of them are free to use in any context. The biggest repository for free licensed images is <a href=\"https://commons.wikimedia.org/wiki/Main_Page\">Wikimedia Commons</a>. So, let’s have look at it first. <br><br> <b>Wikimedia Commons</b> hosts more than 50 million media files such as images, audio and video files that are free to use for all!",
         "type": "resource",
-        "images": ["images/wikimedia_commons.png"]
+        "images": [{"path": "images/wikimedia_commons.png", "css": "wiki-image"}]
       },
       {
         "text": "You have likely seen images from Wikimedia Commons before as Wikipedia gets its images and other media files from Wikimedia Commons. The great thing about Wikimedia Commons is that all media files are published under a free license or in the public domain. That means that you can use, share or mix them as long as you comply with the license conditions. You can even use them commercially. By now, you have already gotten to know the different CC licenses, so I  hope you are already familiar with them!",
@@ -408,7 +408,7 @@
     "panels": [
       "Thank you {username}, it’s been a pleasure to introduce you to the world of licenses and open content.",
       "If you would like to get more information, you are always very welcome to return to this tutorial. Or even start right now by exploring our resources.",
-      "WWould you like to test your newly acquired knowledge or just want to have some fun? Go ahead and play all the tutorial games in our “Games” section."
+      "Would you like to test your newly acquired knowledge or just want to have some fun? Go ahead and play all the tutorial games in our “Games” section."
     ],
     "nextPage": ["/overview"],
     "nextPageIDs": [100]
@@ -426,12 +426,12 @@
       {
         "text": "Let’s go and have look at Google search together. In order to search for images only you need to click on “Images” in the menu bar underneath the search box. Keep in mind that all displayed images are not yet sorted by license - that’s the default setting.",
         "type": "resource",
-        "images": ["images/google_search.png"]
+        "images": [{"path": "images/google_search.png", "css": "wiki-image"}]
       },
       {
         "text": "Now you can further refine your search by only searching for images that are freely licensed or in the public domain. Under “tool” another menu bar pops up. Here you find a selection of “usage rights”. You now see four different “labeled for reuse” options that allow you to search for freely licensed images only.",
         "type": "resource",
-        "images": ["images/google_licenses.png"]
+        "images": [{"path":"images/google_licenses.png", "css": "wiki-image"}]
       },
       {
         "text": "Google will now show you search results from many different repositories such as Wikimedia Commons, Flickr and others. When you click on an image, the message \"Images may be subject to copyright.\" is usually displayed below the enlarged image. Now you should start looking for more copyright information. All you have to do is click on the image and you will be redirected to the original, in most cases you will be directed to one of the above mentioned repositories. All necessary copyright information should be provided next to the image. <br><br>However, please be advised that nothing found in simple online searches has necessarily been reviewed by professionals with the expertise necessary to provide you with complete, accurate or reliable information.",
@@ -521,11 +521,11 @@
       "However, a tool can never cover all use cases and characteristics, and thus cannot replace qualified legal advice by a lawyer.",
       "To use the Attribution Generator follow these steps:",
       {
-        "text": "<ol> <li>Insert a web address of a Wikimedia Commons image or a Wikipedia article to start the tool</li> <li>Answer the questions about the intended use to create a correct license notice</li> <li>Read how to use the license notice</li> <li>Copy the generated license notice and insert it into your publication to use the image correctly</li> <ol>",
+        "text": "<ol> <li>Insert a web address of a Wikimedia Commons image or a Wikipedia article to start the tool</li> <li>Answer the questions about the intended use to create a correct license notice</li> <li>Read how to use the license notice</li> <li>Copy the generated license notice and insert it into your publication to use the image correctly</li> </ol>",
         "type": "resource",
-        "images": ["/images/attribution-generator.gif"]
+        "images": [{"path": "/images/attribution-generator.gif", "css": "wiki-image"}]
       },
-      "Pretty cool, huh? Just try it yourself, you will be amazed how easy it is: <br><br> <a href=\"https://lizenzhinweisgenerator.de/?lang=en\",>lizenzhinweisgenerator.de</a>",
+      "Pretty cool, huh? Just try it yourself, you will be amazed how easy it is: <br><br> <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://lizenzhinweisgenerator.de/?lang=en\",>https://lizenzhinweisgenerator.de/?lang=en</a>",
       "Now I've told you the secret how to use images from the internet without going to jail! But let's not keep this knowledge secret any further - share your knowledge about open content so that everyone can participate."
       ],
     "nextPage": "/success",
