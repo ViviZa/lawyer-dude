@@ -155,8 +155,14 @@ ol {
 	margin-left: 25%;
 }
 
-.errorMessage {
-	color: $darkred;
+.errorMessage, .successMessage {
+	color: $darkred;	
+	float: right;
+	width: 34em;
+	font-size: 14px;
+	font-weight: 600;
+	margin: 0 1.5em 1.5em 1.5em;
+	text-transform: uppercase;
 }
 
 .successMessage {
@@ -208,7 +214,7 @@ ol {
 .matchSection {
 	display: inline-block;
 	background-color: $resource-background;
-	margin: auto 0;
+	margin: 0.1em 0;
 }
 
 .quizQuestions, .matchQuestions {
@@ -376,6 +382,17 @@ ol {
 		text-align: center;
 	}
 
+	.container {
+		margin-bottom: 6em;
+	}
+
+	.overviewpagecontent {
+
+		.container {
+			margin-bottom: 0;
+		}
+	}
+
 	.buttoncontainer {
 		bottom: 2%;
 		left: 52%;
@@ -420,6 +437,14 @@ ol {
 			margin-top: 5%;
 		}
 	}
+	
+	.errorMessage {
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 1.4em;
+		padding: 2em 1em;
+		text-transform: uppercase;
+	}
 
 	.llama-container {
 		float: none;
@@ -431,14 +456,14 @@ ol {
 		margin-bottom: 6em;
 
 		.matchQuestion {
-			width: 22em;
+			width: 21em;
 			margin: 1em;
 			font-size: 14px;
 		}
 
 		.basic-multi-select {
 			float: right;
-			width: 19em;
+			width: 18.5em;
 			margin: 0 1em 1em 1em;
 		}
 	}
