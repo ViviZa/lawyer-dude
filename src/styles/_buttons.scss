@@ -229,10 +229,11 @@
 
 	.SettingsButton{
 		position: fixed;
-		margin-top: -0.2em;
+		margin-top: -0.1em;
 		margin-right: 0;
+		margin-left: 0.5em;
 		background-color: unset;
-		width: 6%;
+		width: 5%;
 	}
 }
 @media (min-width: 1260px) and (max-width: 1440px) {
