@@ -336,6 +336,18 @@
 		width: 30%;
 		margin:  15% 0;
 	}
+
+	.speech {
+	
+		&:before {
+			padding-bottom: 75%;
+			 background: url(./images/speechbubble-320.svg) no-repeat;
+			 background-size: 100%;
+			left: 0;
+			top: 0;
+		}
+	}
+
 	#settings g {
 		stroke: $darkblue;
 		stroke-width: 5;

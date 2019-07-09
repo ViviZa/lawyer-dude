@@ -609,6 +609,25 @@ ol {
 		}
 	}
 
+	.speechbubbletext {
+		padding: 1.5em;
+		
+		&.entername {
+			padding: 2em;
+			height: 9em;
+		}
+	}
+
+	.entername-form {
+		margin-top: 25em;
+		margin-left: 2em;
+	}	
+
+	.speechlawyer-container, .speechlawyer-sceptical-container {
+		margin-top: 8.5em;
+		margin-right: -2em;
+	}
+
 	.welcomeblock {
 		margin-top: 2em;
 	}
