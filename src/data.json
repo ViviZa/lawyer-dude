@@ -556,14 +556,14 @@
     "id": 100,
     "pageurl": "/overview",
     "headline": "Welcome to the Lawyer Dude",
-    "tutorial": [
-      { "head": "The Lawyer Dude Tutorial",
-        "text": "This tutorial will show you how to correctly license images from the Internet and use them for your own purposes. Click through your individual story and learn all the important facts about open content, Creative Commons and license notices."
-      }
-    ],
     "resources": [
       { "head": "Resources",
         "text": "You are more into reading? Here you find an overview of all the collected resources about Open Content, Creative Commons, License notices and much more from the world of online images. The Lawyer Dude provides you with all the facts and explanations - what are you waiting for?"
+      }
+    ],
+    "tutorial": [
+      { "head": "The Lawyer Dude Tutorial",
+        "text": "This tutorial will show you how to correctly license images from the Internet and use them for your own purposes. Click through your individual story and learn all the important facts about open content, Creative Commons and license notices."
       }
     ],
     "games": [
