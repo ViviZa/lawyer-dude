@@ -346,10 +346,23 @@
 	
 		&:before {
 			padding-bottom: 75%;
-			 background: url(./images/speechbubble-320.svg) no-repeat;
-			 background-size: 100%;
+			background: url(./images/speechbubble-320.svg) no-repeat;
+			background-size: 100%;
 			left: 0;
 			top: 0;
+		}
+	}
+
+	.jail-speech {
+		
+		margin-top: 5%;
+		margin-left: 0;
+		margin-right: -20%;
+		text-align: center;
+	
+		&:before {
+			padding-bottom: 75%;
+			background: url(./images/speechbubble-jail-320.svg) no-repeat;
 		}
 	}
 
@@ -361,6 +374,15 @@
 			content: "";
 			padding-bottom: 75%;
 			background: url(./images/answerbubble-320.svg) no-repeat;
+		}
+	}
+
+	.jailgame-intro-container {
+
+		.speechlawyer-container {    
+			width: 35%;
+			margin-top: 4.5em;
+			margin-right: -9em;
 		}
 	}
 

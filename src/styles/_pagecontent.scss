@@ -572,8 +572,6 @@ ol {
 
 		&.overviewpagecontent {
 
-			height: 100%;
-
 			h1 {
 				font-size: 32px;
 				margin: 45px 25px;
@@ -585,40 +583,19 @@ ol {
 
 			.contentText {
 				padding: 1em 0;
-				height: 16em;
+				height: 26em;
 				font-size: 14px;
 				margin: 0;
 			}
 
 			.iconcontainer {
 
-				.headline {
+				.headline {    
+					font-size: 1.2em;
 					height: 4.2em;
-				}
-			}
-
-			.contentBox {
-				height: 38em;
-		
-				&:last-of-type {
-					height: 26em;
-
-					.headline {
-						height: 1.5em;
-					}
-
-					.contentText {
-						height: 7em;
-					}
+					width: 100%;
 				}
 			} 
-		}
-	}
-
-	.Overview {
-
-		.overviewpagecontent {
-			height: auto;
 		}
 	}
 
@@ -694,6 +671,10 @@ ol {
 			width: 36em;
 			float: none;
 		}
+	}
+
+	.matchQuestions {
+		margin-bottom: 6em;
 	}
 
 	.matchSection {
