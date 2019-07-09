@@ -43,6 +43,13 @@ h1 {
 		letter-spacing: 2px;
 		height: 21em;
 	}
+
+	.contentBox:nth-of-type(2) {
+		border: solid 2px $brightred;
+		-webkit-box-shadow: 0 0 0.5em rgba(242, 109, 117, 0.5);
+		-moz-box-shadow: 0 0 0.5em rgba(242, 109, 117, 0.5);
+		box-shadow: 0 0 0.5em rgba(242, 109, 117, 0.5);
+	}
 }
 
 ol {
