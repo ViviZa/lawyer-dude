@@ -200,10 +200,11 @@
 
 	.SettingsButton{
 		position: fixed;
-		margin-top: 0;
+		margin-top: -0.5em;
+		margin-left: 0.4em;
 		margin-right: 0;
 		background-color: unset;
-		width: 11%;
+		width: 10%;
 		height: 7%; 
 		z-index: 100;
 	}
@@ -231,7 +232,7 @@
 		position: fixed;
 		margin-top: -0.1em;
 		margin-right: 0;
-		margin-left: 0.5em;
+		margin-left: 1em;
 		background-color: unset;
 		width: 5%;
 	}

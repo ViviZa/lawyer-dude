@@ -277,8 +277,13 @@
 		}
 	}
 
+	.settings-svg {
+		padding: 0;
+	}
+
 	#settings g {
-		stroke: #000000;
+		stroke: $darkblue;
+		stroke-width: 5;
 	}
 } 
 
@@ -317,6 +322,7 @@
 	}
 	#settings g {
 		stroke: $darkblue;
+		stroke-width: 5;
 	}
 }
 
@@ -326,8 +332,13 @@
 		width: 28%;
 	}
 
+	.fulllawyer  {
+		width: 30%;
+		margin:  15% 0;
+	}
 	#settings g {
 		stroke: $darkblue;
+		stroke-width: 5;
 	}
 }
 

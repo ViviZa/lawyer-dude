@@ -76,13 +76,19 @@ ol {
 	}
 
 	li {
-		list-style-image: url(./images/bullet.svg);
+		list-style-image: none;
+		list-style-type: none;
+		background-image: url('./images/bullet.svg');
+		background-repeat: no-repeat;
+		background-position: 0px 13px;
+		padding-left: 20px;
+		background-size: 10px;
 
 		&:last-of-type {
 			font-size: 25px;
 			font-weight: 700;
-			padding: 1em 0;
-			list-style: none;
+			padding: 1em 0 1em 0.7em;
+			background-image: none;
 		}
 	}
 }
@@ -373,14 +379,10 @@ ol {
 		padding: 0;
 
 		ul {
-			padding: 0 1.5em;
+			padding: 0;
 		}
 
 		li {
-			list-style-image: none;
-			list-style-type: none;
-			background-image: url('./images/bullet.svg');
-			background-repeat: no-repeat;
 			background-position: 0px 10px;
 			padding-left: 20px;
 			background-size: 5px;
@@ -388,7 +390,6 @@ ol {
 			&:last-of-type {
 				font-size: 15px;
 				padding: 1em 0 1em 20px;
-				background-image: none;
 			}
 		}
 	}
@@ -547,6 +548,10 @@ ol {
 
 @media (min-width: 768px) and (max-width: 1259px) {
 
+	h1 {
+		margin: 1em;
+	}
+
 	.startpagecontent {
 
 		h1 {
@@ -604,10 +609,29 @@ ol {
 		}
 	}
 
+	.welcomeblock {
+		margin-top: 2em;
+	}
+
+	.welcomepanels {
+		width: 70%;
+		max-width: 100%;
+		font-size: 18px;
+
+		li:last-of-type {
+			font-size: 20px;
+		}
+	}
+	
 	.pagecontent {
 		margin-left: 0;
 		padding: 45px 25px 25px 25px;
 		text-align: center;
+	}
+
+	.buttoncontainer {
+		bottom: 2%;
+		left: 50%;
 	}
 }
 
