@@ -66,3 +66,10 @@
     box-sizing: border-box;
     text-align: initial;
 }
+
+@media (min-width: 1260px) and (max-width: 1440px) {
+
+    .select-container {
+        width: 30em;
+    }
+}

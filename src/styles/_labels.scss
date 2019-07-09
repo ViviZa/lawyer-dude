@@ -108,6 +108,37 @@ label {
 
 @media (min-width: 1260px) and (max-width: 1440px) {
 
+	input, label {
+		font-size: 14px;
+	}
+	
+	input {
+		padding: 10px;
+	}
+
+	.picture-upload-input, .picture-specs-input, .entername-input {
+		margin-top: 0;
+		margin-bottom: 0.2em;
+	
+		&.picture-specs-input {
+			margin-top: 0.5em;
+		}
+	}
+
+	.url-label, .licenceProperty, .selectProperty, .entername-label {
+		font-size: 11px;
+
+
+		&.selectProperty {
+			padding-top: 1.2em;
+		}
+	}
+
+	.licenceProperty-container, .selectProperty-container {
+		margin: 0.2em auto;
+		text-align: initial;
+	}
+
 	.choice {
 		margin: 0;
 		font-size: 0.9em;
