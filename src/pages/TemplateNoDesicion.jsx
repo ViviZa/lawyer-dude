@@ -153,7 +153,7 @@ class NoDecision extends Component {
             </div>
           ) : (
             <div className="buttoncontainer col">
-              <BackButtonInactive />
+              <BackButton previousText={this.previousText} />
               <ForthButton nextText={this.redirectToNextPage} />
             </div>
           )}
