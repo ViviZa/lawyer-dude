@@ -76,13 +76,13 @@ class Overview extends Component {
               <button className="StartButton" onClick={() => this.redirectToNextPage(1)}>READ</button>
             </div>
             <div className="contentBox col">
-                          <div className="iconcontainer">
-                            <TutorialIcon className="boxicon" />
-                            <h3 className="headline" dangerouslySetInnerHTML={{ __html: headlineTutorial }} />
-                          </div>
-                          <div className="contentText"  dangerouslySetInnerHTML={{ __html: textTutorial }} />
-                          <button className="StartButton" onClick={() => this.redirectToNextPage(0)}>START</button>
-                        </div>
+              <div className="iconcontainer">
+                <TutorialIcon className="boxicon" />
+                <h3 className="headline" dangerouslySetInnerHTML={{ __html: headlineTutorial }} />
+              </div>
+                <div className="contentText"  dangerouslySetInnerHTML={{ __html: textTutorial }} />
+                <button className="StartButton" onClick={() => this.redirectToNextPage(0)}>START</button>
+            </div>
             <div className="contentBox col">
               <div className="iconcontainer">
                 <GameIcon className="boxicon" />
