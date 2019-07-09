@@ -155,7 +155,7 @@ ol {
 	margin-left: 25%;
 }
 
-.errorMessage, .successMessage {
+.errorMessage, .successMessage, .correctAnswers {
 	color: $darkred;	
 	float: right;
 	width: 34em;
@@ -165,8 +165,8 @@ ol {
 	text-transform: uppercase;
 }
 
-.successMessage {
-	color: darkgreen;
+.successMessage, .correctAnswers {
+	color: $darkgreen;
 }
 
 .validation {
@@ -438,11 +438,19 @@ ol {
 		}
 	}
 	
-	.errorMessage, .successMessage {
+	.errorMessage, .successMessage, .correctAnswers {
 		width: auto;
 		height: auto;
 		font-size: 12px;
 		line-height: 1.4em;
+	}
+
+	.correctAnswers {
+		font-size: 16px;
+		margin: 0.5em 0;
+		padding: 1em;
+		text-align: center;
+		background-color: lighten($lightgreen, 10%);
 	}
 
 	.llama-container {
@@ -453,6 +461,11 @@ ol {
 
 		width: unset;
 		margin-bottom: 6em;
+
+		.question {
+			font-size: 16px;
+			margin-top: 0;
+		}
 
 		.matchQuestion {    
 			width: 20.5em;
