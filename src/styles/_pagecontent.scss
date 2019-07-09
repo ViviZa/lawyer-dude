@@ -439,9 +439,10 @@ ol {
 	}
 	
 	.errorMessage, .successMessage {
+		width: auto;
+		height: auto;
 		font-size: 12px;
 		line-height: 1.4em;
-		margin: 2em 1em;
 	}
 
 	.llama-container {
@@ -453,15 +454,15 @@ ol {
 		width: unset;
 		margin-bottom: 6em;
 
-		.matchQuestion {
-			width: 21em;
+		.matchQuestion {    
+			width: 20.5em;
 			margin: 1em;
-			font-size: 14px;
+			font-size: 12px;
 		}
 
 		.basic-multi-select {
-			float: right;
-			width: 18.5em;
+			float: left;
+			width: 15em;
 			margin: 0 1em 1em 1em;
 		}
 	}
