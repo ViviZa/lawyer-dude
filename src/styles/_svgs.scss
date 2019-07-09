@@ -337,6 +337,11 @@
 		margin:  15% 0;
 	}
 
+	.lama-sceptical, .lama-happy {
+		margin-top: 24em;
+		margin-left: 0;
+	}
+
 	.speech {
 	
 		&:before {
@@ -345,6 +350,17 @@
 			 background-size: 100%;
 			left: 0;
 			top: 0;
+		}
+	}
+
+	.answer {
+		width: 73%;
+		margin-left: 8em;
+
+		&:before {
+			content: "";
+			padding-bottom: 75%;
+			background: url(./images/answerbubble-320.svg) no-repeat;
 		}
 	}
 
