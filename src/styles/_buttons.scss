@@ -16,7 +16,7 @@
 		// margin: 55px 25px;
 	}
 
-	&.load-img-btn, &.url-upload-btn {
+	&.load-img-btn {
 		font-size: 16px;
 		height: 40px;
 		margin: 35px;
@@ -32,8 +32,7 @@
 	}
 
 	&:disabled {
-		border: 1px solid #999999;
-		background-color: #cccccc;
+		background-color: #D4D4D4;
 		color: #666666;
 		cursor: not-allowed;
 	}
@@ -72,6 +71,10 @@
 }
 
 .match-btn {
+	margin: 3em auto;
+}
+
+.url-upload-btn {
 	margin: 3em auto;
 }
 

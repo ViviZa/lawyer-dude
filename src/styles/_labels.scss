@@ -56,12 +56,10 @@ label {
 	}
 
 	&.selectProperty {
-		float: left;
-		width: 15%;
 		text-align: left;
 		letter-spacing: 1px;
 		margin: 0;
-		padding-top: 25px;
+		padding-top: 0.8em;
 	}
 }
 
@@ -79,8 +77,12 @@ label {
 
 .licenceProperty-container, .selectProperty-container {
 	width: 70%;
-	margin: auto;
+	margin: 1em auto;
 	text-align: initial;
+}
+
+.selectProperty-container {
+	margin: 2.5em auto 1em auto;
 }
 
 .license-select-wrap {
