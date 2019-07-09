@@ -74,7 +74,7 @@
       {
         "text": "Before we start let’s have a look at a symbol which I'm sure you've met many times before: <br><br> This pictogram shows you that this image is protected by copyright as explained at the very beginning. It is usually used to indicate that the rights holder reserves all rights. Copying, distributing, modifying is not allowed unless you ask for permission to use it (<b>“all rights reserved”</b>).",
         "type": "resource",
-        "images": [""]
+        "images": [{"path":"images/copyright.svg", "css": "resource-image"}]
       },
       {
         "text": "The absolute opposite to this is when rights holders waive all rights and place their works in the public domain. <br><br> This pictogram states that all rights are granted for any use of a work in any way and for any purpose (<b>“all rights granted”</b>). Works in the public domain are free of protection. Either because the term of protection has expired or they were not copyright-protected in the first place.",
@@ -136,7 +136,7 @@
       {
         "text": "Before we start let’s have a look at a symbol which I'm sure you've met many times before: <br><br> This pictogram shows you that this image is protected by copyright as explained at the very beginning. It is usually used to indicate that the rights holder reserves all rights. Copying, distributing, modifying is not allowed unless you ask for permission to use it (<b>“all rights reserved”</b>).",
         "type": "resource",
-        "images": [""]
+        "images": [{"path":"images/copyright.svg", "css": "resource-image"}]
       },
       {
         "text": "The absolute opposite to this is when rights holders waive all rights and place their works in the public domain. <br><br> This pictogram states that all rights are granted for any use of a work in any way and for any purpose (<b>“all rights granted”</b>). Works in the public domain are free of protection. Either because the term of protection has expired or they were not copyright-protected in the first place.",
