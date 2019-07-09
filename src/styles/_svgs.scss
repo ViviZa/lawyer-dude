@@ -98,8 +98,8 @@
 
 .Jailpage {
 	background: url(./images/Jail.svg) no-repeat;
-		 background-size: 100%;
-	background-position: left bottom;
+		 background-size: cover;
+	background-position: center center;
 	display: grid;
 }
 
@@ -382,6 +382,17 @@
 			width: 25%;
 			margin-top: 0.5em;
 			margin-right: -2em;
+		}
+	}
+
+	.Jailpage {
+
+		.jailgame-intro-container {
+
+			.speechlawyer-container {
+				margin-top: 4.5em;
+				margin-right: -2em;
+			}
 		}
 	}
 

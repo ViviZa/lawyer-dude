@@ -169,7 +169,7 @@ class JailGameTwo extends Component {
     const { textIndex, panels, showExitText, exitText } = this.state;
     const { showJail } = this.props;
     return (
-      <div className="jailgame-intro-container">
+      <div className="pagecontent jailgame">
         { showExitText ? (
               <div>
                 <div>

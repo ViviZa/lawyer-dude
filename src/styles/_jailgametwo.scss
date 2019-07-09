@@ -41,7 +41,6 @@
   left: 50%;
 }
 
-
 .jailgametwo-container {
     background-color: white;
     width: 70rem;
@@ -91,9 +90,24 @@
 
 @media (min-width: 1260px) and (max-width: 1440px) {
 
+  .answer-container {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .answercontainer {
+      width: 6rem;
+      height: 6rem;
+  }
+
+  .images-container {
+    margin-top: 0;
+    height: 8rem;
+  }
+
   .jailgametwo-container {
     width: 50rem;
-    margin: 2em auto;
+    margin: 0em auto;
   }
 
 }

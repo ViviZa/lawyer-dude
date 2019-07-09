@@ -99,6 +99,13 @@ ol {
 	margin-left: 25em;
 	padding: 25px 130px;
 	text-align: center;
+
+	&.jailgame {
+
+		.buttoncontainer {
+			left: 50%;
+		}
+	}
 }
 
 
@@ -129,6 +136,7 @@ ol {
 		color: #FFF;
 	}
 }
+
 
 .buttoncontainer {
 	position: absolute;
@@ -625,6 +633,12 @@ ol {
 		height: 20em;
 	}
 
+	.speechbubbletext-jail {
+		font-size: 24px;
+		height: 9em;
+	}
+
+
 	.entername-form {
 		margin-top: 25em;
 		margin-left: 2em;
@@ -646,6 +660,13 @@ ol {
 	.speechlawyer-container, .speechlawyer-sceptical-container {
 		margin-top: 8.5em;
 		margin-right: -2em;
+	}
+
+	.jailpagecontent {
+		
+		.speechlawyer-container, .speechlawyer-sceptical-container {
+			margin-top: 4.5em;
+		}
 	}
 
 	.welcomeblock {
