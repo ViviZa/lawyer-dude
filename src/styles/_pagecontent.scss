@@ -566,7 +566,7 @@ ol {
 
 		&.overviewpagecontent {
 
-			height: auto;
+			height: 100%;
 
 			h1 {
 				font-size: 32px;
@@ -609,6 +609,25 @@ ol {
 		}
 	}
 
+	.Overview {
+
+		.overviewpagecontent {
+			height: auto;
+		}
+	}
+
+	.container {
+		margin-bottom: 6em;
+	}
+
+	.overviewpagecontent {
+	
+		.container {
+			margin-bottom: 0;
+		}
+
+	}
+
 	.speechbubbletext {
 		padding: 1.5em;
 		
@@ -628,6 +647,12 @@ ol {
 		margin-left: 2em;
 	}	
 
+	.errorMessage, .successMessage, .correctAnswers {	
+		float: none;
+		width: 85%;
+		margin: 1.5em auto;
+	}
+
 	.speechlawyer-container, .speechlawyer-sceptical-container {
 		margin-top: 8.5em;
 		margin-right: -2em;
@@ -646,7 +671,15 @@ ol {
 			font-size: 20px;
 		}
 	}
-	
+
+	.matchSection {
+		width: 100%;
+	}
+
+	.match-question-text {
+		width: 100%;
+	}
+
 	.pagecontent {
 		margin-left: 0;
 		padding: 45px 25px 25px 25px;
