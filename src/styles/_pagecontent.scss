@@ -438,12 +438,10 @@ ol {
 		}
 	}
 	
-	.errorMessage {
+	.errorMessage, .successMessage {
 		font-size: 12px;
-		font-weight: 600;
 		line-height: 1.4em;
-		padding: 2em 1em;
-		text-transform: uppercase;
+		margin: 2em 1em;
 	}
 
 	.llama-container {
@@ -556,6 +554,14 @@ ol {
 		}
 	}
 
+	.errorMessage, .successMessage {
+		width: 60em;
+		font-size: 11px;
+		font-weight: 600;
+		margin: -0.5em 1.5em 0.5em 1.5em;
+		text-transform: uppercase;
+	}
+
 	.welcomeblock {
 		margin-top: 4.5em;
 	}
@@ -627,7 +633,7 @@ ol {
 		width: 100%;
 
 		.question {
-			font-size: 16px;
+			font-size: 14px;
 			margin-top: 1em;
 			width: 30em;
 		}
@@ -638,16 +644,16 @@ ol {
 
 		.matchQuestion { 
 			height: 5em;
-			width: 25em;
-			font-size: 16px;
-			line-height: 1.2;
-			margin: 1.5em 1em 1.5em 1.5em;
+			width: 23em;
+			font-size: 14px;
+			line-height: 1.4;
+			margin: 1em;
 			overflow-y: scroll;
 		}
 
 		.basic-multi-select {
-			width: 12em;
-			margin: 2em 1.5em;
+			width: 24em;
+			margin: 1em 1em 1em 0;
 		}
 	}
 
