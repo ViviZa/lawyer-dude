@@ -10,7 +10,7 @@ const ResourcePanel = props => {
       <div className= "resourcetext col">
         <div dangerouslySetInnerHTML={{ __html: text }}/>
           {images && images.map((image, index) => (
-            <img className="resource-image" key={index} src={image} alt="" />
+            <img className={image.css} key={index} src={image.path} alt="" />
             ))}
       </div>
       </div>

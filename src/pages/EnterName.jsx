@@ -140,7 +140,7 @@ class EnterName extends Component {
             <div className="entername-form container">
               <form onSubmit={event => this.redirectToNextPage(event)}>
                 <div className="row">
-                  <div className="col-12 col-sm-6 col-md-6">
+                  <div className="col-7 col-md-6" id="colInputPadding">
                     <div className={"errorMessage"}>{errorText}</div>
                     <input
                       className="entername-input"
@@ -150,7 +150,7 @@ class EnterName extends Component {
                     />
                     <label className="entername-label">Enter your name</label>
                   </div>
-                  <div className="col-12 col-sm-6 col-md-6">
+                  <div className="col-5 col-md-6">
                     <button
                       className="save-name-btn"
                       type="submit"

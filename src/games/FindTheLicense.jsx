@@ -185,7 +185,7 @@ class FindTheLicense extends Component {
                       __html: panels[textIndex].question
                     }}
                   />
-                  {correctAnswersText}
+                  <p className="correctAnswers"> {correctAnswersText} </p>
                   <button className="quiz-btn" onClick={this.validate}>
                     Submit answers
                   </button>

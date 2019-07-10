@@ -50,16 +50,6 @@ class MatchTheLicense extends Component {
           option: [],
           errorText: "",
           solutionText: ""
-        },
-        {
-          option: [],
-          errorText: "",
-          solutionText: ""
-        },
-        {
-          option: [],
-          errorText: "",
-          solutionText: ""
         }
       ]
     };
@@ -141,7 +131,7 @@ class MatchTheLicense extends Component {
   validate() {
     const { selectedOption, questions, count } = this.state;
     let newState = selectedOption;
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 2; i++) {
       let correctSelectedSolutions = [];
       const selectedOptionValues = selectedOption[i + count].option.map(
         option => option.value
@@ -192,24 +182,32 @@ class MatchTheLicense extends Component {
         <div className="pagecontent">
           <h1>Match the License</h1>
           {textIndex === 0 && panels.length >= 1 ? (
-            <SpeechBubbleContainer panels={panels} textIndex={textIndex}/>
+            <SpeechBubbleContainer panels={panels} textIndex={textIndex} />
           ) : (
             <div className="matchQuestions">
-              {Array.from(Array(3), (e, i) => {
+              {Array.from(Array(2), (e, i) => {
                 return (
                   <div className="matchSection" key={i}>
                     <div className="matchQuestion">
-                      {questions.length > 0 && questions[i + count].text}
+                      <div className="match-question-container">
+                        <div
+                          className="match-question-text"
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              questions.length > 0 && questions[i + count].text
+                          }}
+                        />
+                        <Select
+                          value={selectedOption[i + count].option}
+                          onChange={ev => this.handleChange(i, ev)}
+                          options={options}
+                          isMulti
+                          className="basic-multi-select"
+                          classNamePrefix="select"
+                          isSearchable={false}
+                        />
+                      </div>
                     </div>
-                    <Select
-                      value={selectedOption[i + count].option}
-                      onChange={ev => this.handleChange(i, ev)}
-                      options={options}
-                      isMulti
-                      className="basic-multi-select"
-                      classNamePrefix="select"
-                      isSearchable={false}
-                    />
                     <div className="errorMessage">
                       {selectedOption[i + count].errorText}
                     </div>
@@ -234,10 +232,10 @@ class MatchTheLicense extends Component {
               <BackButton previousText={this.previousText} />
               <ForthButton nextText={this.nextText} />
             </div>
-          ) : count !== 3 ? (
+          ) : count !== 2 ? (
             <div className="buttoncontainer col">
               <BackButton previousText={this.previousText} />
-              <ForthButton nextText={() => this.setCount(3)} />
+              <ForthButton nextText={() => this.setCount(2)} />
             </div>
           ) : (
             <div className="buttoncontainer col">
