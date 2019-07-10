@@ -97,9 +97,9 @@ class Jailpage extends Component {
         <div className="jailpagecontent">
           {showGame ? (
             randomGame === 0 ? (
-              <JailGameTwo ID={106} showJail={this.toggleJail} cssGameClass="jailgametwo-container" cssLaywerClass="jailpagecontent" showNavigation={false}/>
+              <JailGameTwo ID={106} showJail={this.toggleJail} cssGameClass="jailgametwo-container" cssLaywerClass="" showNavigation={false}/>
             ) : (
-              <JailGameOne ID={105} showJail={this.toggleJail} cssGameClass="jailgametwo-container" cssLaywerClass="jailpagecontent" showNavigation={false}/>
+              <JailGameOne ID={105} showJail={this.toggleJail} cssGameClass="jailgametwo-container" cssLaywerClass="" showNavigation={false}/>
             )
           ) : panels[textIndex] &&
             panels[textIndex].text !== undefined &&
