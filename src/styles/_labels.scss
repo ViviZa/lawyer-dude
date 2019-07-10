@@ -91,6 +91,10 @@ label {
 }
 
 @media only screen and (max-width: 599px) {
+
+	input, label {
+		font-size: 14px;
+	}
 	
 	.entername-label {
 		// width: 65%;
