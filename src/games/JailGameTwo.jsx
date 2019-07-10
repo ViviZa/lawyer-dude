@@ -190,7 +190,7 @@ class JailGameTwo extends Component {
                 </div>
               </div>
         ) : ( panels && textIndex === 0 && panels.length >= 1 ? (
-          <div className="jailpagecontent">
+          <div>
             {showNavigation === true &&
                 <SideNavigation ID={1000} />
                 }
