@@ -107,7 +107,7 @@ ol {
 		.buttoncontainer {
 			left: 50%;
 		}
-}
+	}
 }
 
 
@@ -502,6 +502,17 @@ ol {
 		float: none;
 	}
 
+	.match-question-container {
+		display: inline; 
+	}
+
+	.match-question-text {
+		width: 100%;
+		height: 7em;
+		margin: 0;
+		overflow-y: scroll;
+	}
+
 	.quizQuestions, .matchQuestions {
 
 		width: unset;
@@ -514,9 +525,8 @@ ol {
 		}
 
 		.basic-multi-select {
-			float: left;
-			width: 15em;
-			margin: 0 1em 1em 1em;
+			width: 100%;
+			margin: 1.5em 1em 1em 1em;
 		}
 }
 
@@ -745,6 +755,7 @@ ol {
 	}
 
 	.matchSection {
+		height: auto;
 		width: 100%;
 	}
 
