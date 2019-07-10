@@ -6,7 +6,7 @@ import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
 import QuizQuestion from '../components/game/QuizQuestion';
 import SpeechBubbleContainer from "../components/SpeechBubbleContainer";
-
+import SettingsButton from "../components/SettingsButton";
 
 class JailGameOne extends Component {
   constructor(props) {
@@ -90,7 +90,8 @@ class JailGameOne extends Component {
     return (
       <div>
           {(panels[textIndex] !== undefined && panels[textIndex].question !== undefined) ? (
-          <div className="jailgametwo-container">  
+          <div className="jailgametwo-container">
+            <SettingsButton goBack={() => this.props.history.goBack()} />
             <h1>{headline}</h1>
             <div className="question" dangerouslySetInnerHTML={{ __html: panels[textIndex].question}}></div>
             <div className="quizQuestions">
@@ -113,6 +114,7 @@ class JailGameOne extends Component {
             </div>
           ) : ( 
           <div >
+            <SettingsButton goBack={() => this.props.history.goBack()} />
             <SpeechBubbleContainer panels={panels} textIndex={textIndex} jail/>
             {
             (textIndex === 0 && panels.length > 1 ) ? (
