@@ -159,7 +159,7 @@
 	}
 } 
 
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 767px) {
 	
 	.SideNavigation {
 		width: 100%;
@@ -183,6 +183,33 @@
 			margin: 50px 0 0 0;
 		}
 	}
+}
+
+@media (min-width: 768px) and (max-width: 1259px) {
+	
+	.SideNavigation {
+		width: 100%;
+		height: 1em;
+		background-color: $yellow;
+	}
+
+	.logo-box {
+		display: none;
+	}
+
+	.navNarrow {
+		background-color: $yellow;
+
+		i {
+			float: right;
+			padding: 1em 2em;
+		}
+
+		.narrowLinks {
+			margin: 50px 0 0 0;
+		}
+	}
+
 }
 
 @media (min-width: 1260px) and (max-width: 1440px) {
