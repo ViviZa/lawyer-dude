@@ -374,7 +374,7 @@ ol {
 
 		&.overviewpagecontent {
 
-			height: 100%;
+			height: auto;
 
 			h1 {
 				font-size: 22px;
@@ -602,6 +602,8 @@ ol {
 
 		&.overviewpagecontent {
 
+			height: 100%;
+
 			h1 {
 				font-size: 32px;
 				margin: 45px 25px;
@@ -626,12 +628,6 @@ ol {
 					width: 100%;
 				}
 			} 
-		}
-	}
-	.Overview {
-
-		.overviewpagecontent {
-			height: auto;
 		}
 	}
 
