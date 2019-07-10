@@ -156,12 +156,18 @@ ol {
 	margin-left: 25%;
 }
 
-.errorMessage {
-	color: $darkred;
+.errorMessage, .successMessage, .correctAnswers {
+	color: $darkred;	
+	float: right;
+	width: 34em;
+	font-size: 14px;
+	font-weight: 600;
+	margin: 0 1.5em 1.5em 1.5em;
+	text-transform: uppercase;
 }
 
-.successMessage {
-	color: darkgreen;
+.successMessage, .correctAnswers {
+	color: $darkgreen;
 }
 
 .validation {
@@ -209,9 +215,13 @@ ol {
 .matchSection {
 	display: inline-block;
 	background-color: $resource-background;
+<<<<<<< HEAD
+	margin: 0.1em 0;
+=======
 	margin: auto 0;
 	margin-bottom: 0.5em;
 	padding: 1em;
+>>>>>>> master
 }
 
 .quizQuestions, .matchQuestions {
@@ -286,6 +296,7 @@ ol {
 
 .quiz-topsection {
 	display: inline-block;
+	width: 100%;
 }
 
 .attribution-container {
@@ -384,6 +395,17 @@ ol {
 		text-align: center;
 	}
 
+	.container {
+		margin-bottom: 6em;
+	}
+
+	.overviewpagecontent {
+
+		.container {
+			margin-bottom: 0;
+		}
+	}
+
 	.buttoncontainer {
 		bottom: 2%;
 		left: 52%;
@@ -428,14 +450,51 @@ ol {
 			margin-top: 5%;
 		}
 	}
+	
+	.errorMessage, .successMessage, .correctAnswers {
+		width: auto;
+		height: auto;
+		font-size: 12px;
+		line-height: 1.4em;
+	}
+
+	.correctAnswers {
+		font-size: 16px;
+		margin: 0.5em 0;
+		padding: 1em;
+		text-align: center;
+		background-color: lighten($lightgreen, 10%);
+	}
 
 	.llama-container {
 		float: none;
 	}
 
-	#colInputPadding{
-		padding: 0px;
-	}
+	.quizQuestions, .matchQuestions {
+
+		width: unset;
+		margin-bottom: 6em;
+
+		.question {
+			font-size: 16px;
+			margin-top: 0;
+		}
+
+		.matchQuestion {    
+			width: 20.5em;
+			margin: 1em;
+			font-size: 12px;
+		}
+
+		.basic-multi-select {
+			float: left;
+			width: 15em;
+			margin: 0 1em 1em 1em;
+		}
+}
+
+#colInputPadding {
+	padding: 0px;
 }
 
 
@@ -520,6 +579,14 @@ ol {
 		}
 	}
 
+	.errorMessage, .successMessage {
+		width: 60em;
+		font-size: 11px;
+		font-weight: 600;
+		margin: -0.5em 1.5em 0.5em 1.5em;
+		text-transform: uppercase;
+	}
+
 	.welcomeblock {
 		margin-top: 4.5em;
 	}
@@ -586,7 +653,9 @@ ol {
 		width: 100%;
 
 		.question {
+			font-size: 14px;
 			margin-top: 1em;
+			width: 30em;
 		}
 
 		.quizQuestion {
@@ -594,12 +663,26 @@ ol {
 		}
 
 		.matchQuestion { 
+<<<<<<< HEAD
+			height: 5em;
+			width: 23em;
+			font-size: 14px;
+			line-height: 1.4;
+			margin: 1em;
+			overflow-y: scroll;
+		}
+
+		.basic-multi-select {
+			width: 24em;
+			margin: 1em 1em 1em 0;
+=======
 			font-size: 16px;
 			line-height: 1.2;
 		}
 
 		.basic-multi-select {
 			margin: 2em 1.5em;
+>>>>>>> master
 		}
 	}
 

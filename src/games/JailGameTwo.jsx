@@ -119,9 +119,9 @@ class JailGameTwo extends Component {
     return (
       <div className="jailgametwo-container">
         <DndProvider backend={HTML5Backend}>
-          <div className="jailgame-text">
+          <h1>
             Drag and drop the correct icons to the license modules.
-          </div>
+          </h1>
           <div className="images-container">
             {images.map(({ src, type }, index) => (
               <Box src={src} type={type} key={index} />
@@ -137,7 +137,7 @@ class JailGameTwo extends Component {
                     onDrop={item => this.handleDrop(index, item)}
                     key={index}
                   />
-                  <div>{exercise}</div>
+                  <div className="jailgame2-label">{exercise}</div>
                   {submit && errorText !== "" ? (
                     <div style={{ color: "red" }}>{errorText}</div>
                   ) : (
@@ -150,9 +150,11 @@ class JailGameTwo extends Component {
             )}
           </div>
         </DndProvider>
-        <button className="match-btn" onClick={() => this.validate()}>
-          Submit answers
-        </button>
+        <div className="match-btn-container">
+          <button className="match-btn" onClick={() => this.validate()}>
+            Submit answers
+          </button>
+        </div>
         {submit && (
           <div className="buttoncontainer jail-button">
             <BackButtonInactive />
@@ -167,7 +169,7 @@ class JailGameTwo extends Component {
     const { textIndex, panels, showExitText, exitText } = this.state;
     const { showJail } = this.props;
     return (
-      <div>
+      <div className="jailgame-intro-container">
         { showExitText ? (
               <div>
                 <div>

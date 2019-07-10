@@ -103,6 +103,14 @@
 	display: grid;
 }
 
+.jailgame-intro-container {
+
+	.speechlawyer-container {
+		margin-top: 4em;
+		margin-right: -11em;
+	}
+}
+
 .resourcetext {
 
 	.resource-image {
@@ -336,4 +344,12 @@
 	// 		margin: 4.5em 3em 0 0;
 	// 	}
 	// }
+
+	.jailgame-intro-container {
+
+		.speechlawyer-container {
+			margin-top: 1em;
+			margin-right: -9.5em;
+		}
+	}
 }
