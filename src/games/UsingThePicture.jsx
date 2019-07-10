@@ -73,6 +73,7 @@ class UsingTheImage extends Component {
     this.nextText = this.nextText.bind(this);
     this.previousText = this.previousText.bind(this);
     this.setDisabled = this.setDisabled.bind(this);
+    this.displayPlaceholder = this.displayPlaceholder.bind(this);
   }
 
   componentDidMount() {
@@ -268,13 +269,17 @@ class UsingTheImage extends Component {
     );
   }
 
+  displayPlaceholder() {
+    this.setState({ imgUrl: Placeholder });
+  }
+
   renderSecondPage() {
     const { imgUrl, licenseNotice, disclaimer } = this.state;
     return (
       <div>
         <div className="imgView">
           {imgUrl ? (
-            <img src={imgUrl} className="imageContent" alt={imgUrl} />
+            <img src={imgUrl} className="imageContent" alt={imgUrl} onError={this.displayPlaceholder} />
           ) : (
             <img src={Placeholder} className="imageContent" alt={imgUrl} />
           )}
