@@ -90,8 +90,8 @@ class JailGameOne extends Component {
     const { panels, textIndex, headline, buttonClicked, correctAnswersText} = this.state;
     const {cssGameClass, showNavigation} = this.props;
     return (
-      <div>
-          {showNavigation === true &&
+          <div className="pagecontent jailgame">
+            {showNavigation === true &&
               <SideNavigation ID={1000} />
           }
           {(panels[textIndex] !== undefined && panels[textIndex].question !== undefined) ? (
