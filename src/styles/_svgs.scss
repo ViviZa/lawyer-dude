@@ -108,6 +108,7 @@
 	.speechlawyer-container {
 		margin-top: 4em;
 		margin-right: -11em;
+	}
 }
 
 .resourcetext {
@@ -138,7 +139,7 @@
 	.st11{fill:#F2F2F2;}
 }
 
-.settings-svg{
+.settings-svg {
 	padding: 0.1em;
 }
 
@@ -319,10 +320,12 @@
 		background-size: cover;
 		background-position: center center;
 	}
+
 	#settings g {
 		stroke: $darkblue;
 	}
 }
+
 @media (min-width: 768px) and (max-width: 1259px) {
 
 	.startlawyer {
@@ -422,5 +425,4 @@
 	// 		margin: 4.5em 3em 0 0;
 	// 	}
 	// }
-}
 }
