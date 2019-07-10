@@ -13,9 +13,9 @@ const AnswerContainer = ({ accept, lastDroppedItem, onDrop }) => {
   const isActive = isOver && canDrop
   let backgroundColor = 'white'
   if (isActive) {
-    backgroundColor = '#0D3E59'
+    backgroundColor = 'darkgreen'
   } else if (canDrop) {
-    backgroundColor = '#dbeffa'
+    backgroundColor = 'darkkhaki'
   }
   return (
     <div ref={drop} className="answer-container" style={{backgroundColor }}>
