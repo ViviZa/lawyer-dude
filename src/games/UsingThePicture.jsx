@@ -256,14 +256,10 @@ class UsingTheImage extends Component {
               <div className="selectProperty">License</div>
             </div>
           </div>
-          <div className="upload-btn-container">
-            <button className="url-upload-btn" onClick={this.createNotice} disabled={this.setDisabled()}>
-              Generate
-            </button>
-          </div>
-          <div className="buttoncontainer col">
-            <BackButton previousText={this.previousText} />
-          </div>
+          <BackButton previousText={this.previousText} />
+          <button className="url-upload-btn" onClick={this.createNotice} disabled={this.setDisabled()}>
+            Generate
+          </button>
         </div>
       </div>
     );
@@ -289,10 +285,8 @@ class UsingTheImage extends Component {
           />
         </div>
         <div dangerouslySetInnerHTML={{ __html: disclaimer }} />
-        <div className="buttoncontainer col">
-          <BackButton previousText={this.resetValues} />
-          <ForthButton nextText={this.redirectToNextPage} />
-        </div>
+        <BackButton previousText={this.resetValues} />
+        <ForthButton nextText={this.redirectToNextPage} />
       </div>
     );
   }
