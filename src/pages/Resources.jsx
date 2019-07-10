@@ -102,10 +102,15 @@ class Resources extends Component {
               Return
           </button>
           </div>
-          <div>
-            <h1 className="headline">{headline}</h1>
-            <div className="resToC" dangerouslySetInnerHTML={{ __html: toc }} />
-            <div className="resContent" dangerouslySetInnerHTML={{ __html: content }} />
+          <div className="row">
+            <div className="col-4">
+              <div className="resToC" dangerouslySetInnerHTML={{ __html: toc }} />
+            </div>
+            <div className="col">
+              <h1 className="headline">{headline}</h1>
+              <div className="resContent" dangerouslySetInnerHTML={{ __html: content }} />
+              <p></p>
+            </div>
           </div>
         </div>
       </div>
