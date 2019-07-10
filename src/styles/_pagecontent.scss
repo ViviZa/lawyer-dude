@@ -187,6 +187,11 @@ ol {
 	text-transform: uppercase;
 }
 
+.message-container {
+	width: 100%;
+	height: 15em;
+}
+
 .successMessage, .correctAnswers {
 	color: $darkgreen;
 }
@@ -208,7 +213,9 @@ ol {
 	background-color: lighten($lightgreen, 10%);
 }
 
-
+.disableAnswers {
+	display: none;
+}
 
 .validation {
 	width: 10px;

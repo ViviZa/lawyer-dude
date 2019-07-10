@@ -209,11 +209,13 @@ class MatchTheLicense extends Component {
                         />
                       </div>
                     </div>
-                    <div className="errorMessage">
-                      {selectedOption[i + count].errorText}
-                    </div>
-                    <div className="successMessage">
-                      {selectedOption[i + count].solutionText}
+                    <div className="message-container">
+                      <div className="errorMessage">
+                        {selectedOption[i + count].errorText}
+                      </div>
+                      <div className="successMessage">
+                        {selectedOption[i + count].solutionText}
+                      </div>
                     </div>
                   </div>
                 );
