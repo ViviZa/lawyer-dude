@@ -1,7 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="197px" height="197px" version="1.1">
-    <circle cx="98" cy="98" r="98" fill="black"/>
-    <circle cx="98" cy="98" r="78" fill="#e1e1e1"/>
-    <circle cx="98" cy="98" r="55" fill="black"/>
-    <circle cx="98" cy="98" r="30" fill="#e1e1e1"/>
-    <rect x="115" y="85" width="45" height="25" fill="#e1e1e1"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 197 197" style="enable-background:new 0 0 197 197;" xml:space="preserve">
+<path d="M98,0C43.9,0,0,43.9,0,98s43.9,98,98,98s98-43.9,98-98S152.1,0,98,0z M98,176c-43.1,0-78-34.9-78-78s34.9-78,78-78
+	s78,34.9,78,78S141.1,176,98,176z"/>
+<path d="M125.5,110c-4.6,10.6-15.2,18-27.5,18c-16.6,0-30-13.4-30-30s13.4-30,30-30c11.9,0,22.2,6.9,27,17h26.4
+	c-5.8-24.1-27.5-42-53.5-42c-30.4,0-55,24.6-55,55s24.6,55,55,55c26.3,0,48.2-18.4,53.7-43H125.5z"/>
 </svg>
