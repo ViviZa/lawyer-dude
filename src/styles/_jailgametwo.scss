@@ -47,7 +47,8 @@
   left: 50%;
 }
 
-.jailgametwo-container {
+
+.jailgametwo-container{
     background-color: white;
     width: 70rem;
     padding: 1rem;
@@ -60,65 +61,4 @@
   height: 7rem;
   display: inline-block;
   margin: 1rem;
-}
-
-.jailgame-intro-container {
-  padding: 3em 9em;
-  height: 100%;
-}
-
-.quiz-btn-container, .match-btn-container, .upload-btn-container {
-  text-align: center;
-}
-
-.match-btn-container {
-  margin-top: 6em;
-}
-
-.jailgame2-label {
-  font-weight: 600;
-  width: inherit;
-  margin-top: 1.5em;
-}
-
-@media (min-width: 768px) and (max-width: 1259px) {
-
-  .jailgametwo-container {
-    width: 100%;
-    margin: 5em auto;
-  }
-
-  .jailgame-intro-container {
-    padding: 45px 25px 25px 25px;
-  }
-
-}
-
-@media (min-width: 1260px) and (max-width: 1440px) {
-
-  .answer-container {
-    height: 6rem;
-    width: 6rem;
-  }
-
-  .answercontainer {
-      width: 6rem;
-      height: 6rem;
-  }
-
-  .images-container {
-    margin-top: 0;
-    height: 8rem;
-  }
-
-  .upload-btn-container {
-    width: 70%;
-    margin: 0 auto;
-  }
-
-  .jailgametwo-container {
-    width: 50rem;
-    margin: 0em auto;
-  }
-
 }
