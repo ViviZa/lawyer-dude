@@ -641,14 +641,14 @@ ol {
 			margin-bottom: 0;
 		}
 
-}
+	}
 
 	.correctAnswers {
 		width: 100%;
 		font-size: 16px;
 		padding: 1em;
 		margin: 1.5em auto 0 auto;
-}
+	}
 
 	.speechbubbletext {
 		padding: 1.5em;
@@ -862,8 +862,18 @@ ol {
 	}
 
 	.matchSection {
-		height: 9em;
-		overflow-y: scroll;
+		height: auto;
+
+		.match-question-text {
+			height: 6em;
+			margin: 0 1em 1em 1em;
+			overflow-y: scroll;
+		}
+
+		.errorMessage, .successMessage {
+			width: auto;
+			font-size: 12px;
+		}
 	}
 
 	.quizQuestions, .matchQuestions {
