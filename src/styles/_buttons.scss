@@ -67,9 +67,7 @@
 }
 
 .quiz-btn {
-	position: absolute; 
-	right: 8em;
-	margin: 3em 3em;
+	margin: 1em;
 }
 
 .url-upload-btn {
@@ -268,12 +266,16 @@ url-upload-btn {
 		width: 55px;
 		padding: 10px 10px 14px 16px;
 	}
+
 	.game-back-btn {
 		margin-top: -2em;
 	}
 
 	.quiz-btn {
-		margin: 0.6em 3em;
+		float: right; 
+		font-size: 14px;
+		margin: 0.4em 0;
+		padding: 9px 25px;
 	}
 
 	.BackButton, .btn_inactive {
