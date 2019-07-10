@@ -53,7 +53,7 @@
 }
 
 .select-container {
-    display: flex;
+    display: block;
 }
 
 .using-image-error{
@@ -63,4 +63,24 @@
     margin-left: 1rem;
     box-sizing: border-box;
     text-align: initial;
+}
+
+@media (min-width: 768px) and (max-width: 1259px) {
+    .select-container {
+        width: 26em;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+
+    .select-container {
+        width: 13em;
+    }
+}
+
+@media (min-width: 1260px) and (max-width: 1440px) {
+
+    .select-container {
+        width: 30em;
+    }
 }
