@@ -67,10 +67,7 @@
     "panels": [
       "Of course I can help you. Let me show you how to find out if you are allowed to and how to use an image from the internet.",
       "I believe you now know the very basics of open licensing by now, so let’s take a look at the so called CC licenses.",
-      {
-        "text": "So now we get into open licensing a little deeper. I would like to introduce you to the CC legal tools. Don’t worry we’ll make it simple and concentrate on those the most relevant for your context. In the end you will know how you can use a freely licensed image. I promise.",
-        "type": "resource"
-      },
+      "So now we get into open licensing a little deeper. I would like to introduce you to the CC legal tools. Don’t worry we’ll make it simple and concentrate on those the most relevant for your context. In the end you will know how you can use a freely licensed image. I promise.",
       {
         "text": "Before we start let’s have a look at a symbol which I'm sure you've met many times before: <br><br> This pictogram shows you that this image is protected by copyright as explained at the very beginning. It is usually used to indicate that the rights holder reserves all rights. Copying, distributing, modifying is not allowed unless you ask for permission to use it (<b>“all rights reserved”</b>).",
         "type": "resource",
@@ -119,7 +116,7 @@
       "To be honest, I don’t know.",
       "Forget about the image! Is there a way to directly access those freely licensed images you just mentioned?"
     ],
-    "nextPage": ["/stealingimages", "/understandingsource", "/usingfreelicenses"],
+    "nextPage": ["/jail", "/understandingsource", "/usingfreelicenses"],
     "nextPageIDs": [300, 6, 7]
   },
   {
@@ -129,10 +126,7 @@
     "panels": [
       "Alright then. Let’s find a nice image that fits your needs.",
       "I believe you now know the very basics of open licensing, so let’s have a deeper look at the CC licenses before we continue.",
-      {
-        "text": "So now we get into open licensing a little deeper. I would like to introduce you to the CC legal tools. Don’t worry we’ll make it simple and concentrate on those the most relevant for your context. In the end you will know how you can use a freely licensed image. I promise.",
-        "type": "resource"
-      },
+      "So now we get into open licensing a little deeper. I would like to introduce you to the CC legal tools. Don’t worry we’ll make it simple and concentrate on those the most relevant for your context. In the end you will know how you can use a freely licensed image. I promise.",
       {
         "text": "Before we start let’s have a look at a symbol which I'm sure you've met many times before: <br><br> This pictogram shows you that this image is protected by copyright as explained at the very beginning. It is usually used to indicate that the rights holder reserves all rights. Copying, distributing, modifying is not allowed unless you ask for permission to use it (<b>“all rights reserved”</b>).",
         "type": "resource",
@@ -141,7 +135,7 @@
       {
         "text": "The absolute opposite to this is when rights holders waive all rights and place their works in the public domain. <br><br> This pictogram states that all rights are granted for any use of a work in any way and for any purpose (<b>“all rights granted”</b>). Works in the public domain are free of protection. Either because the term of protection has expired or they were not copyright-protected in the first place.",
         "type": "resource",
-        "images": [{"path":"images/pd.svg", "css":"resource-image"}]
+        "images": [{"path":"images/pd.svg", "css": "resource-image"}]
       },
       {
         "text": "Creative Commons additionally offers a second tool that causes a similar legal status like the public domain tool: CC0. Rights holders are actively waiving all rights from their works. Consequently, all works licensed under CC0 can be used by anyone without any restrictions or obligations (<b>“all rights waived”</b>).",
@@ -156,7 +150,7 @@
       {
         "text": "<b>SA</b> stands for “Share Alike” and means that anyone who modifies the original work must share the adapted version under a CC BY-SA license or a compatible licence. Apart from this, all license conditions of the CC BY license are still valid here.",
         "type": "resource",
-        "images": [{"path": "images/Cc-sa.svg", "css": "resource-image"}]
+        "images": [{"path":"images/Cc-sa.svg", "css": "resource-image"}]
       },
       {
         "text": "<b>ND</b> stands for “No Derivatives” which means that you are not allowed to modify the work in any way. The corresponding license is called “CC BY-ND”. Apart from this, all license conditions of the CC BY license are still valid here.",
@@ -197,7 +191,7 @@
       "I’ve saved the source link.",
       "I found it somewhere on Wikimedia Commons or Wikipedia."
     ],
-    "nextPage": ["/dontusetheimage", "/findingholder", "usingwiki"],
+    "nextPage": ["/dontusetheimage", "/findingauthor", "usingwiki"],
     "nextPageIDs": [15, 8, 9]
   },
   {
@@ -230,7 +224,7 @@
   },
   {
     "id": 8,
-    "pageurl": "/findingholder",
+    "pageurl": "/findingauthor",
     "headline": "Who is the creator of the image?",
     "panels": [
       "That’s good! The source of the image is one of the mandatory components of the so called license notice that we will have to create. You should save or copy the source link now, in order to use it for the license notice later.",
@@ -243,7 +237,7 @@
       "Found it!",
       "No, I cannot find any information on that."
     ],
-    "nextPage": ["/stealingimages", "/copyrightinfo", "/dontusetheimage"],
+    "nextPage": ["/jail", "/copyrightinfo", "/dontusetheimage"],
     "nextPageIDs": [300, 10, 15]
   },
   {
@@ -270,7 +264,7 @@
       "That’s it? So how do I use these images?",
       "Cool, that's very easy. Thank you for showing me where to find images that don’t require annoying license notices!"
     ],
-    "nextPage": ["/usingwiki2", "/stealingimages"],
+    "nextPage": ["/creatingnotice2", "/jail"],
     "nextPageIDs": [20, 300]
   },
   {
@@ -288,27 +282,27 @@
       "Yes, it is one of the CC licenses.",
       "It says “all rights reserved”."
     ],
-    "nextPage": ["/dontusetheimage", "/dontusetheimage", "/gettinglicense", "/dontusetheimage"],
+    "nextPage": ["/dontusetheimage", "/dontusetheimage", "/understandthelicense", "/dontusetheimage"],
     "nextPageIDs": [15, 15, 11, 15]
   },
   {
     "id": 11,
-    "pageurl": "/gettinglicense",
+    "pageurl": "/understandthelicense",
     "headline": "Understand the license",
     "panels": [
       "Great, that makes life pretty easy.",
       "Although the CC licenses are well structured and easy to understand, it can be difficult to interpret them properly for a specific use case.",
       "Let’s have a look at some examples together."
     ],
-    "nextPage": ["/findthelicense"],
+    "nextPage": ["/understandusecase"],
     "nextPageIDs": [27]
   },
   {
     "id": 12,
-    "pageurl": "/usinglicense",
+    "pageurl": "/usetheimage",
     "headline": "Use the image",
     "panels": [
-      "Well done. Now you should feel comfortable in putting into practice what you’ve just learned.",
+      "Now you should feel comfortable in putting into practice what you’ve just learned.",
       "Are we ready to use the image now?"
     ],
     "decisions": [
@@ -316,7 +310,7 @@
       "Sure, let’s do it.",
       "I still don’t understand if I can use the image for my purpose."
     ],
-    "nextPage": ["/findthelicense", "/creatingnotice", "/dontusetheimage"],
+    "nextPage": ["/understandusecase", "/creatingnotice", "/dontusetheimage"],
     "nextPageIDs": [27, 13, 15]
   },
   {
@@ -335,12 +329,12 @@
       "Yeah, let's go!",
       "Actually, I’m still not sure about it..."
     ],
-    "nextPage": ["/usingimage", "/dontusetheimage"],
+    "nextPage": ["/generatelicensenotice", "/dontusetheimage"],
     "nextPageIDs": [14, 15]
   },
   {
     "id": 14,
-    "pageurl": "/usingimage",
+    "pageurl": "/generatelicensenotice",
     "headline": "Generate the license notice",
     "panels": [
       "Great! Now you have all the information you need to use your image from the internet without going to jail."
@@ -380,7 +374,7 @@
       "If the author does not provide any information, how should I know what to provide? It’s the author’s fault, not mine.",
       "Show me how to use a search engine in order to find free licensed images, please."
     ],
-    "nextPage": ["/usingfreelicenses", "/stealingimages", "/usingsearchengines"],
+    "nextPage": ["/usingfreelicenses", "/jail", "/usingsearchengines"],
     "nextPageIDs": [7, 300, 18]
   },
   {
@@ -447,12 +441,12 @@
       "Sounds good to me.",
       "Well, if search engines already filter images for me I should be able to just use them without taking further actions."
     ],
-    "nextPage": ["/usingfreelicenses", "/matchthelicense", "/stealingimages"],
+    "nextPage": ["/usingfreelicenses", "/matchthelicense", "/jail"],
     "nextPageIDs": [7, 22, 300]
   },
   {
     "id": 20,
-    "pageurl": "usingwiki2",
+    "pageurl": "creatingnotice2",
     "headline": "Create a license notice",
     "panels": [
       "That depends. You need to create a license notice for most free licensed images if you want to use them. But - surprise - there are a few exceptions.",
@@ -532,7 +526,7 @@
   },
   {
     "id": 27,
-    "pageurl": "/findthelicense",
+    "pageurl": "/understandusecase",
     "headline": "Understand the use case",
     "panels": [
       "The CC licenses are easy to understand but what about the usage in real life? In this game you have to decide if you are allowed to use an image under the given license in the described use case.",
@@ -548,7 +542,7 @@
       },
       "Well done!"
     ],
-    "nextPage": "/usinglicense",
+    "nextPage": "/usetheimage",
     "nextPageIDs": [12]
   },
   {
@@ -581,7 +575,7 @@
   {
     "id": 102,
     "pageurl": "/games",
-    "nextPage": ["/overview","/matchthelicense", "/findthelicense", "/jailgame1", "/jailgame2"],
+    "nextPage": ["/overview","/matchthelicense", "/understandusecase", "/jailgame1", "/jailgame2"],
     "nextPageIDs": [100, 103, 104, 105, 106]
   },
   {
@@ -595,7 +589,7 @@
   },
   {
     "id": 104,
-    "pageurl": "/findthelicense",
+    "pageurl": "/understandusecase",
     "headline": "Understand the use case",
     "panels": [
       "The CC licenses are easy to understand but what about the usage in real life? In this game you have to decide if you are allowed to use an image under the given license in the described use case.",
@@ -692,7 +686,7 @@
   },
   {
     "id": 300,
-    "pageurl": "/stealingimages",
+    "pageurl": "/jail",
     "headline": "You are in jail!",
     "panels": [
       "Uh oh. I'm afraid that’s not the way to go. If you want to use an image from the internet you have to follow the rules.",
