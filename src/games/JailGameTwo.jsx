@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router";
+import SideNavigation from "../components/SideNavigation";
 import HTML5Backend from "react-dnd-html5-backend";
 import Box from "../components/game/Box";
 import { DndProvider } from "react-dnd";
@@ -117,8 +118,12 @@ class JailGameTwo extends Component {
 
   renderGame() {
     const { answers, submit, images } = this.state;
+    const {cssGameClass, showNavigation} = this.props;
     return (
-      <div className="jailgametwo-container">
+      <div className={cssGameClass}>
+        {showNavigation === true &&
+              <SideNavigation ID={1000} />
+          }
         <SettingsButton goBack={() => this.props.history.goBack()} />
         <DndProvider backend={HTML5Backend}>
           <div className="jailgame-text">
@@ -167,11 +172,14 @@ class JailGameTwo extends Component {
 
   render() {
     const { textIndex, panels, showExitText, exitText } = this.state;
-    const { showJail } = this.props;
+    const { showJail, showNavigation } = this.props;
     return (
-      <div>
+      <div className="pagecontent jailgame">
         { showExitText ? (
               <div>
+                {showNavigation === true &&
+                <SideNavigation ID={1000} />
+                }
                 <SettingsButton goBack={() => this.props.history.goBack()} />
                 <div>
                   <SpeechBubbleContainer panels={exitText} textIndex={0} jail/>
@@ -183,6 +191,9 @@ class JailGameTwo extends Component {
               </div>
         ) : ( panels && textIndex === 0 && panels.length >= 1 ? (
           <div>
+            {showNavigation === true &&
+                <SideNavigation ID={1000} />
+                }
             <SettingsButton goBack={() => this.props.history.goBack()} />
             <SpeechBubbleContainer panels={panels} textIndex={textIndex} jail/>
             <div className="buttoncontainer">
