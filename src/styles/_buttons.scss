@@ -44,6 +44,7 @@
 	right: 5px;
 	position: absolute;
 	// display: none;
+	z-index: +1;
 
 	&:hover {
 		background-color: red;
@@ -88,6 +89,7 @@
 	right: 2em;
 	position: absolute;
 	top: 2em;
+	z-index: +1;
 }
 
 .BackButton {
