@@ -16,7 +16,7 @@
 		// margin: 55px 25px;
 	}
 
-	&.load-img-btn, &.url-upload-btn {
+	&.load-img-btn {
 		font-size: 16px;
 		height: 40px;
 		margin: 35px;
@@ -32,8 +32,7 @@
 	}
 
 	&:disabled {
-		border: 1px solid #999999;
-		background-color: #cccccc;
+		background-color: #D4D4D4;
 		color: #666666;
 		cursor: not-allowed;
 	}
@@ -79,6 +78,12 @@
 .match-btn {
 	margin: 3em auto;
 }
+
+url-upload-btn {
+	margin: 3em auto;
+}
+
+
 
 .SettingsButton {
 	border-style: none; 
@@ -215,6 +220,28 @@
 
 	.save-name-btn {
 		margin: 0px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1259px) {
+
+	.StartButton, .save-name-btn, .load-img-btn, .url-upload-btn, .jail-back-btn, .game-back-btn, .quiz-btn, .match-btn, .top-btn {
+		padding: 12px 25px;
+		margin: 25px;
+		font-size: 16px;
+	}
+
+	.game-back-btn {
+		margin: 40px 25px 25px 0;
+	}
+
+	.SettingsButton{
+		position: fixed;
+		margin-top: -0.1em;
+		margin-right: 0;
+		margin-left: 1em;
+		background-color: unset;
+		width: 5%;
 	}
 }
 

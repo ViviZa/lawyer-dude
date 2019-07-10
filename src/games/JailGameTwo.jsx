@@ -174,7 +174,7 @@ class JailGameTwo extends Component {
     const { textIndex, panels, showExitText, exitText } = this.state;
     const { showJail, showNavigation } = this.props;
     return (
-      <div>
+      <div className="pagecontent jailgame">
         { showExitText ? (
               <div>
                 {showNavigation === true &&
