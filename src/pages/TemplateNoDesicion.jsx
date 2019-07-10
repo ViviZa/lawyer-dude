@@ -3,7 +3,6 @@ import SideNavigation from "../components/SideNavigation";
 import { withRouter } from "react-router";
 import data from "../data.json";
 import BackButton from "../components/BackButton";
-import BackButtonInactive from "../components/BackButtonInactive";
 import ForthButton from "../components/ForthButton";
 import SettingsButton from "../components/SettingsButton";
 import ResourcePanel from "./../components/ResourcePanel";
