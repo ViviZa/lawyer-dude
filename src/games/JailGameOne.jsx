@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
+import SideNavigation from "../components/SideNavigation";
 import data from '../data.json';
 import BackButton from '../components/BackButton';
 import BackButtonInactive from '../components/BackButtonInactive';
@@ -87,10 +88,14 @@ class JailGameOne extends Component {
 
   render() {
     const { panels, textIndex, headline, buttonClicked, correctAnswersText} = this.state;
+    const {cssGameClass, showNavigation} = this.props;
     return (
       <div>
+          {showNavigation === true &&
+              <SideNavigation ID={1000} />
+          }
           {(panels[textIndex] !== undefined && panels[textIndex].question !== undefined) ? (
-          <div className="jailgametwo-container">
+          <div className={cssGameClass}>
             <SettingsButton goBack={() => this.props.history.goBack()} />
             <h1>{headline}</h1>
             <div className="question" dangerouslySetInnerHTML={{ __html: panels[textIndex].question}}></div>
@@ -114,6 +119,9 @@ class JailGameOne extends Component {
             </div>
           ) : ( 
           <div >
+            {showNavigation === true &&
+              <SideNavigation ID={1000} />
+            }
             <SettingsButton goBack={() => this.props.history.goBack()} />
             <SpeechBubbleContainer panels={panels} textIndex={textIndex} jail/>
             {
