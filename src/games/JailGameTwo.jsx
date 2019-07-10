@@ -169,7 +169,7 @@ class JailGameTwo extends Component {
     const { textIndex, panels, showExitText, exitText } = this.state;
     const { showJail } = this.props;
     return (
-      <div className="pagecontent jailgame">
+      <div>
         { showExitText ? (
               <div>
                 <SettingsButton goBack={() => this.props.history.goBack()} />

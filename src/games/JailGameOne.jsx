@@ -88,7 +88,7 @@ class JailGameOne extends Component {
   render() {
     const { panels, textIndex, headline, buttonClicked, correctAnswersText} = this.state;
     return (
-      <div className="pagecontent jailgame">
+      <div>
           {(panels[textIndex] !== undefined && panels[textIndex].question !== undefined) ? (
           <div className="jailgametwo-container">
             <SettingsButton goBack={() => this.props.history.goBack()} />
