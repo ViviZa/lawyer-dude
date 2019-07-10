@@ -34,8 +34,8 @@ class Resources extends Component {
       if (obj.panels !== undefined) {
         obj.panels.forEach(panel => {
           let images = "";
-          if (panel.type === "resource") {
-            headline = obj.headline;
+          if (panel.type === "resource" && obj.resheadline !== undefined) {
+            headline = obj.resheadline;
             if (!added) {
               toc +=
                 "<a href='/resources#" +
@@ -95,18 +95,17 @@ class Resources extends Component {
     return (
       <div className="Resources">
         {topBtn}
-        <div id="top" className="topBar">
-          <SettingsButton goBack={() => this.props.history.goBack()} />
-          <button className="StartButton" onClick={() => this.redirectToNextPage(100)} title="Return to overview page">
-            Return
+        <div className="container">
+          <div id="top" className="row">
+            <SettingsButton goBack={() => this.props.history.goBack()} />
+            <button className="StartButton" onClick={() => this.redirectToNextPage(100)} title="Return to overview page">
+              Return
           </button>
-        </div>
-        <div>
-          <h1 className="headline">{headline}</h1>
-          <div className="resToC" dangerouslySetInnerHTML={{ __html: toc }} />
-          <div className="container">
-            <div className="resContent" dangerouslySetInnerHTML={{ __html: content }}
-            />
+          </div>
+          <div>
+            <h1 className="headline">{headline}</h1>
+            <div className="resToC" dangerouslySetInnerHTML={{ __html: toc }} />
+            <div className="resContent" dangerouslySetInnerHTML={{ __html: content }} />
           </div>
         </div>
       </div>
