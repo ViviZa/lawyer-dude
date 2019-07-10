@@ -34,20 +34,26 @@
 	}
 
 	div {
-		height: -webkit-fill-available;
+		height: max-content;
+	}
+}
+
+.Resources {
+
+	.resource-image {
+		width: 10em;
+		margin: 2.8em;
 	}
 
-	.resToC {
-		
+	.wiki-image {
+		width: 35em;
+		margin: 2.8em;
 	}
 
-	.resContent {
-
+	.contentHeadline {
+		margin-top: 2em;
 	}
-
-	.resImages {
-
-	}
+	
 }
 
 @media only screen and (max-width: 599px) {

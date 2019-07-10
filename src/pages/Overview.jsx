@@ -69,19 +69,19 @@ class Overview extends Component {
             <div className="row">
             <div className="contentBox col">
               <div className="iconcontainer">
-                <TutorialIcon className="boxicon" />
-                <h3 className="headline" dangerouslySetInnerHTML={{ __html: headlineTutorial }} />
-              </div>
-              <div className="contentText"  dangerouslySetInnerHTML={{ __html: textTutorial }} />
-              <button className="StartButton" onClick={() => this.redirectToNextPage(0)}>START</button>
-            </div>
-            <div className="contentBox col">
-              <div className="iconcontainer">
                 <ResourceIcon className="boxicon" />
                 <h3 className="headline">{headlineResources}</h3>
               </div>
               <div className="contentText" dangerouslySetInnerHTML={{ __html: textResources }} />
               <button className="StartButton" onClick={() => this.redirectToNextPage(1)}>READ</button>
+            </div>
+            <div className="contentBox col">
+              <div className="iconcontainer">
+                <TutorialIcon className="boxicon" />
+                <h3 className="headline" dangerouslySetInnerHTML={{ __html: headlineTutorial }} />
+              </div>
+                <div className="contentText"  dangerouslySetInnerHTML={{ __html: textTutorial }} />
+                <button className="StartButton" onClick={() => this.redirectToNextPage(0)}>START</button>
             </div>
             <div className="contentBox col">
               <div className="iconcontainer">

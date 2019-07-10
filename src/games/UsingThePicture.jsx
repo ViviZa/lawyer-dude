@@ -281,14 +281,14 @@ class UsingTheImage extends Component {
           )}
         </div>
         <div className="notice-container">
-          <div className="copy-button">License notice:</div>
+          <div className="copy-button">One possible license notice:</div>
           <textarea
             className="license-notice"
             value={licenseNotice}
             onChange={ev => this.updateTextFieldValue(ev, "licenseNotice")}
           />
         </div>
-        <div>{disclaimer}</div>
+        <div dangerouslySetInnerHTML={{ __html: disclaimer }} />
         <div className="buttoncontainer col">
           <BackButton previousText={this.resetValues} />
           <ForthButton nextText={this.redirectToNextPage} />

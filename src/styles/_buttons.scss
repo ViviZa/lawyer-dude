@@ -66,8 +66,9 @@
 }
 
 .quiz-btn {
-	float: right;
-	margin: 2em 1em 1em 0.5em;
+	position: absolute; 
+	right: 8em;
+	margin: 3em 3em;
 }
 
 .match-btn {
@@ -87,6 +88,9 @@
 	text-align: center;
 	height: 58px;
 	width: 58px;
+	right: 2em;
+	position: absolute;
+	top: 2em;
 }
 
 .BackButton {
@@ -157,18 +161,10 @@
 	}
 }
 
-.Jailpage, .jailgame-intro-container, .jailgametwo-container {
+.Jailpage {
 
 	.buttoncontainer {
 		left: 50%;
-	}
-}
-
-.jailgametwo-container {
-
-	.quiz-btn {
-		position: relative;
-		right: 0;
 	}
 }
 
@@ -214,6 +210,8 @@
 		width: 10%;
 		height: 7%; 
 		z-index: 100;
+		top: auto;
+		top: auto;
 	}
 } 
 
@@ -271,13 +269,6 @@
 
 	.quiz-btn {
 		margin: 0.6em 3em;
-	}
-
-	.jailgametwo-container {
-		
-		.quiz-btn {
-			margin: 0.6em;
-		}
 	}
 
 	.BackButton, .btn_inactive {

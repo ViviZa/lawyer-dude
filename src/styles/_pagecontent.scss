@@ -99,6 +99,7 @@ ol {
 	margin-left: 25em;
 	padding: 25px 130px;
 	text-align: center;
+	overflow: hidden;
 
 	&.jailgame {
 
@@ -176,18 +177,12 @@ ol {
 	margin-left: 25%;
 }
 
-.errorMessage, .successMessage, .correctAnswers {
-	color: $darkred;	
-	float: right;
-	width: 34em;
-	font-size: 14px;
-	font-weight: 600;
-	margin: 0 1.5em 1.5em 1.5em;
-	text-transform: uppercase;
+.errorMessage {
+	color: $darkred;
 }
 
-.successMessage, .correctAnswers {
-	color: $darkgreen;
+.successMessage {
+	color: darkgreen;
 }
 
 .correctAnswers {
@@ -319,7 +314,6 @@ ol {
 
 .quiz-topsection {
 	display: inline-block;
-	width: 100%;
 }
 
 .attribution-container {
@@ -423,17 +417,6 @@ ol {
 		margin-left: 0;
 		padding: 35px 25px 25px 25px;
 		text-align: center;
-	}
-
-	.container {
-		margin-bottom: 6em;
-	}
-
-	.overviewpagecontent {
-
-		.container {
-			margin-bottom: 0;
-		}
 	}
 
 	.buttoncontainer {
@@ -768,10 +751,6 @@ ol {
 		font-weight: 600;
 	}
 
-	ol {
-		height: 8em; 
-	}
-
 	.startpagecontent {
 		padding-top: 3.5em;
 	}
@@ -782,14 +761,6 @@ ol {
 		}
 	}
 
-	.errorMessage, .successMessage {
-		width: 60em;
-		font-size: 11px;
-		font-weight: 600;
-		margin: -0.5em 1.5em 0.5em 1.5em;
-		text-transform: uppercase;
-	}
-
 	.welcomeblock {
 		margin-top: 4.5em;
 	}
@@ -798,12 +769,15 @@ ol {
 		font-size: 14px;
 
 		li {
-			list-style-image: url(./images/bullet.svg);
+
+		background-position: 0px 9px;
+		padding-left: 20px;
+		background-size: 8px;
 	
 			&:last-of-type {
 				font-size: 14px;
 				font-weight: 700;
-				padding: 0.2em 0;
+				padding: 0.2em 0 0.2em 1.1em;
 				list-style: none;
 			}
 		}
@@ -832,6 +806,10 @@ ol {
 	.speechbubbletext, .answerbubbletext, .speechbubbletext-jail {
 		font-size: 14px;
 		height: 9em;
+
+		ol {
+			height: 8em; 
+		}
 	}
 
 	.answerbubbletext {
@@ -852,9 +830,7 @@ ol {
 		width: 100%;
 
 		.question {
-			font-size: 14px;
 			margin-top: 1em;
-			width: 30em;
 		}
 
 		.quizQuestion {

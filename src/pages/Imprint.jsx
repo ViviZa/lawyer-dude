@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
-import SideNavigation from "../components/SideNavigation";
 import SettingsButton from "../components/SettingsButton";
 import imprintData from './ImprintData.json';
 
