@@ -16,7 +16,7 @@
 		// margin: 55px 25px;
 	}
 
-	&.load-img-btn, &.url-upload-btn {
+	&.load-img-btn {
 		font-size: 16px;
 		height: 40px;
 		margin: 35px;
@@ -32,8 +32,7 @@
 	}
 
 	&:disabled {
-		border: 1px solid #999999;
-		background-color: #cccccc;
+		background-color: #D4D4D4;
 		color: #666666;
 		cursor: not-allowed;
 	}
@@ -73,9 +72,19 @@
 	margin: 3em 3em;
 }
 
+.url-upload-btn {
+	margin: 1em auto 6em auto;
+}
+
 .match-btn {
 	margin: 3em auto;
 }
+
+url-upload-btn {
+	margin: 3em auto;
+}
+
+
 
 .SettingsButton {
 	border-style: none; 
@@ -187,12 +196,22 @@
 		padding-left: 5px;
 		line-height: 1.3;
 	}
+
+	.quiz-btn {
+		margin: 1em 1em 1em 0.5em;
+	}	
+
+	.match-btn {
+		margin: 1em auto;
+	}
+
 	.SettingsButton{
 		position: fixed;
-		margin-top: 0;
-		margin-right: 0;
+		margin-top: -0.5em;
+		margin-left: 0.4em;
+		margin-right: 0; 
 		background-color: unset;
-		width: 11%;
+		width: 10%;
 		height: 7%; 
 		z-index: 100;
 		top: auto;
@@ -200,7 +219,7 @@
 	}
 } 
 
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 767px) {
 
 	.SettingsButton{
 		position: fixed;
@@ -213,6 +232,28 @@
 
 	.save-name-btn {
 		margin: 0px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1259px) {
+
+	.StartButton, .save-name-btn, .load-img-btn, .url-upload-btn, .jail-back-btn, .game-back-btn, .quiz-btn, .match-btn, .top-btn {
+		padding: 12px 25px;
+		margin: 25px;
+		font-size: 16px;
+	}
+
+	.game-back-btn {
+		margin: 40px 25px 25px 0;
+	}
+
+	.SettingsButton{
+		position: fixed;
+		margin-top: -0.1em;
+		margin-right: 0;
+		margin-left: 1em;
+		background-color: unset;
+		width: 5%;
 	}
 }
 
