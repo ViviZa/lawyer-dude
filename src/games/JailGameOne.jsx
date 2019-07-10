@@ -88,9 +88,9 @@ class JailGameOne extends Component {
 
   render() {
     const { panels, textIndex, headline, buttonClicked, correctAnswersText} = this.state;
-    const {cssGameClass, showNavigation} = this.props;
+    const {cssGameClass, showNavigation, cssLaywerClass} = this.props;
     return (
-          <div className="pagecontent jailgame">
+          <div className={cssLaywerClass}>
             {showNavigation === true &&
               <SideNavigation ID={1000} />
           }

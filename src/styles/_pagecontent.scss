@@ -187,6 +187,11 @@ ol {
 	text-transform: uppercase;
 }
 
+.message-container {
+	width: 100%;
+	height: 15em;
+}
+
 .successMessage, .correctAnswers {
 	color: $darkgreen;
 }
@@ -208,7 +213,9 @@ ol {
 	background-color: lighten($lightgreen, 10%);
 }
 
-
+.disableAnswers {
+	display: none;
+}
 
 .validation {
 	width: 10px;
@@ -435,6 +442,7 @@ ol {
 		margin-left: 0;
 		padding: 35px 25px 25px 25px;
 		text-align: center;
+		overflow-y: scroll;
 	}
 
 	.buttoncontainer {
@@ -564,6 +572,7 @@ ol {
 	.pagecontent {
 		margin-left: 0;
 		padding: 25px;
+		overflow-y: scroll;
 	}
 
 	.buttoncontainer {
@@ -756,6 +765,7 @@ ol {
 		margin-left: 0;
 		padding: 45px 25px 25px 25px;
 		text-align: center;
+		overflow-y: scroll;
 	}
 
 	.buttoncontainer {

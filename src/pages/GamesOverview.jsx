@@ -67,13 +67,13 @@ class GamesOverview extends Component {
             <div className="row">
                 <div className="gameContentBox col">
                     <div className="iconcontainer">
-                      <h3 className="headline">Jail Game 1</h3>
+                      <h3 className="headline">True or false?</h3>
                     </div>
                     <button className="StartButton hover" onClick={() => this.redirectToNextPage(3)} >PLAY</button>
                 </div>
                 <div className="gameContentBox col">
                     <div className="iconcontainer">
-                      <h3 className="headline">Jail Game 2</h3>
+                      <h3 className="headline">Drop the icon!</h3>
                     </div>
                     <button className="StartButton hover" onClick={() => this.redirectToNextPage(4)}>PLAY</button>
                 </div>
