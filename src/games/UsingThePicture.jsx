@@ -232,6 +232,7 @@ class UsingTheImage extends Component {
           </div>
           <div>
             <div className="selectProperty-container">
+              <div className="selectProperty">License</div>
               <div className="select-container">
                 <div className="license-select-wrap">
                   <Select
@@ -253,7 +254,6 @@ class UsingTheImage extends Component {
                   <div className="using-image-error">&nbsp;</div>
                 )}
               </div>
-              <div className="selectProperty">License</div>
             </div>
           </div>
           <div className="upload-btn-container">
