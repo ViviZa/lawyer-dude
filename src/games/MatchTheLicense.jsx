@@ -7,7 +7,7 @@ import ForthButton from "../components/ForthButton";
 import Select from "react-select";
 import update from "immutability-helper";
 import SpeechBubbleContainer from "./../components/SpeechBubbleContainer";
-
+import SettingsButton from "../components/SettingsButton";
 import matchTheLicenseData from "./MatchTheLicenseData.json";
 
 const options = [
@@ -178,6 +178,7 @@ class MatchTheLicense extends Component {
 
     return (
       <div className="MatchTheLicense">
+        <SettingsButton goBack={() => this.props.history.goBack()} />
         <SideNavigation ID={ID} />
         <div className="pagecontent">
           <h1>Match the License</h1>
