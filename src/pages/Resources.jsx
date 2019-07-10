@@ -45,7 +45,7 @@ class Resources extends Component {
                 "</a></br>";
               added = true;
             }
-            text += panel.text;
+            text += panel.text + "<br><br>";
             if (panel.images !== undefined) {
               images = "<div class='resImages'>";
               panel.images.forEach(image => {
