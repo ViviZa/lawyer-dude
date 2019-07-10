@@ -276,8 +276,13 @@
 		}
 	}
 
+	.settings-svg {
+		padding: 0;
+	}
+
 	#settings g {
-		stroke: #000000;
+		stroke: $darkblue;
+		stroke-width: 5;
 	}
 } 
 
