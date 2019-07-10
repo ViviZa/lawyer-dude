@@ -62,3 +62,47 @@
   display: inline-block;
   margin: 1rem;
 }
+
+.quiz-btn-container, .match-btn-container, .upload-btn-container {
+  text-align: center;
+  text-align: center;
+}
+
+
+@media (min-width: 768px) and (max-width: 1259px) {
+
+  .jailgametwo-container {
+    width: 100%;
+    margin: 5em auto;
+  }
+
+  .jailgame-intro-container {
+    padding: 45px 25px 25px 25px;
+  }
+
+
+}
+
+@media (min-width: 1260px) and (max-width: 1440px) {
+
+  .answer-container {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .answercontainer {
+      width: 6rem;
+      height: 6rem;
+  }
+
+  .images-container {
+    margin-top: 0;
+    height: 8rem;
+  }
+
+  .jailgametwo-container {
+    width: 50rem;
+    margin: 0em auto;
+  }
+
+}

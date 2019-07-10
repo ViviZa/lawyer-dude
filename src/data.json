@@ -36,6 +36,7 @@
     "id": 3,
     "pageurl": "/introduction",
     "headline": "Let's get started",
+    "resheadline": "Introduction to open content",
     "panels": [
       "Hey {username}, nice to meet you.",
       "Don’t worry. I know that there is a lot of confusion about using images from the internet. But it is actually not that complicated. Let’s just do it together, alright?",
@@ -123,6 +124,7 @@
     "id": 5,
     "pageurl": "/searchingonline",
     "headline": "How to search for images online",
+    "resheadline": "Introducing CC licenses",
     "panels": [
       "Alright then. Let’s find a nice image that fits your needs.",
       "I believe you now know the very basics of open licensing, so let’s have a deeper look at the CC licenses before we continue.",
@@ -198,6 +200,7 @@
     "id": 7,
     "pageurl": "/usingfreelicenses",
     "headline": "How to use online repositories",
+    "resheadline": "How t use online repositories",
     "panels": [
       "I know, you probably expect me to show you a magical way to find images that you can just use without much effort. Well, there is something just like that.",
       {
@@ -244,6 +247,7 @@
     "id": 9,
     "pageurl": "/usingwiki",
     "headline": "How to use Wikimedia Commons",
+    "resheadline": "How to use Wikimedia Commons",
     "panels": [
       "I'd love to!",
       {
@@ -351,6 +355,7 @@
     "id": 15,
     "pageurl": "/dontusetheimage",
     "headline": "Watch out!",
+    "resheadline": "The consequences",
     "panels": [
       "Well, this is a difficult case. If you're still missing certain information about the image or you're unsure whether the information you found is actually correct, I would recommend that you do not use it.",
       "If the image you want to use was not published under a free license, it actually becomes quite complicated. Of course you can ask the author if you can use her/his image, but in most cases this requires some research and patience. In this case, I would recommend to search for another image that has been published under a free license. That makes the whole thing a lot easier!",
@@ -410,6 +415,7 @@
     "id": 18,
     "pageurl": "/usingsearchengines",
     "headline": "How to use search engines",
+    "resheadline": "How to use search engines",
     "panels": [
       "Google certainly is a great place to find images, but there are many other options. Let me show you!",
       {
@@ -489,6 +495,7 @@
     "id": 23,
     "pageurl": "/collectinfo",
     "headline": "Collecting information",
+    "resheadline": "How to create a license notice",
     "panels": [
       "Fine. Now that you’ve found an image, you have to collect all copyright information you need in order to be able to use the image correctly.",
       {
@@ -508,6 +515,7 @@
     "id": 24,
     "pageurl": "/attributionGenerator",
     "headline": "Attribution Generator",
+    "resheadline": "How to use the Attribution Generator",
     "panels": [
       "Wikimedia Commons offers a tool called “Attribution Generator”.",
       "With the “Attribution Generator” Wikimedia Deutschland designed a tool that makes it easy to reuse images from Wikipedia and the free media archive Wikimedia Commons. It helps users to comply with the license conditions and simplify the use of freely licensed images by automatically compiling all relevant license information in to a so-called license notice. Of course, this way of creating license notices can also be adapted for other images not coming from Wikipedia or Wikimedia Commons.",
@@ -581,6 +589,7 @@
   {
     "id": 103,
     "pageurl": "/matchthelicense",
+    "headline" : "Match the License",
     "panels" : [
       "Select the licenses that are correct for the described use case. It is possible to select multiple licenses."
     ],
@@ -688,6 +697,7 @@
     "id": 300,
     "pageurl": "/jail",
     "headline": "You are in jail!",
+    "resheadline": "The rules of using images from the internet",
     "panels": [
       "Uh oh. I'm afraid that’s not the way to go. If you want to use an image from the internet you have to follow the rules.",
       "But don’t worry, I am here to help you out.",

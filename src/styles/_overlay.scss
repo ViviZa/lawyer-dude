@@ -124,6 +124,27 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 1259px) {
+
+	.Overlay {
+		left: 50%;
+		padding: 2em;
+
+		h2 {
+            font-size: 26px;
+            padding-top: 10px;
+        }
+
+        ul {
+            margin: 2em 0 3em 0;
+		}
+
+		.button-close-overlay {
+			margin-top: 0;
+		}
+	}
+}
+
 @media (min-width: 1260px) and (max-width: 1440px) {
     .Overlay {
 		left: 58%;

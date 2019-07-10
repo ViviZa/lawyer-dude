@@ -73,6 +73,7 @@ class UsingTheImage extends Component {
     this.nextText = this.nextText.bind(this);
     this.previousText = this.previousText.bind(this);
     this.setDisabled = this.setDisabled.bind(this);
+    this.displayPlaceholder = this.displayPlaceholder.bind(this);
   }
 
   componentDidMount() {
@@ -256,13 +257,20 @@ class UsingTheImage extends Component {
               <div className="selectProperty">License</div>
             </div>
           </div>
-          <BackButton previousText={this.previousText} />
-          <button className="url-upload-btn" onClick={this.createNotice} disabled={this.setDisabled()}>
-            Generate
-          </button>
+          <div className="upload-btn-container">
+            <button className="url-upload-btn" onClick={this.createNotice} disabled={this.setDisabled()}>
+            Generate </button>
+          </div>
+          <div className="buttoncontainer col">
+            <BackButton previousText={this.previousText} />
+          </div>
         </div>
       </div>
     );
+  }
+
+  displayPlaceholder() {
+    this.setState({ imgUrl: Placeholder });
   }
 
   renderSecondPage() {
@@ -271,7 +279,7 @@ class UsingTheImage extends Component {
       <div>
         <div className="imgView">
           {imgUrl ? (
-            <img src={imgUrl} className="imageContent" alt={imgUrl} />
+            <img src={imgUrl} className="imageContent" alt={imgUrl} onError={this.displayPlaceholder} />
           ) : (
             <img src={Placeholder} className="imageContent" alt={imgUrl} />
           )}
@@ -285,8 +293,10 @@ class UsingTheImage extends Component {
           />
         </div>
         <div dangerouslySetInnerHTML={{ __html: disclaimer }} />
-        <BackButton previousText={this.resetValues} />
-        <ForthButton nextText={this.redirectToNextPage} />
+        <div className="buttoncontainer col"> 
+          <BackButton previousText={this.resetValues} />
+          <ForthButton nextText={this.redirectToNextPage} />
+        </div>
       </div>
     );
   }
