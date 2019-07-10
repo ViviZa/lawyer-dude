@@ -91,12 +91,45 @@ label {
 }
 
 @media only screen and (max-width: 599px) {
+
+	input {
+		font-size: 14px;
+		font-size: 13px;
+	}
+
+	label {
+		font-size: 11px;
+	}
 	
 	.entername-label {
 		// width: 65%;
 		margin-left: 0;
 		margin-right: 0;
 		float: left;
+	}
+
+
+	.picture-upload-input, .picture-specs-input, .entername-input {
+		letter-spacing: 1.2px;
+		margin-top: 1em;
+
+		&.picture-specs-input {
+			margin-top: 1em;
+		}
+	}
+
+	.url-label, .licenceProperty, .selectProperty, .entername-label {
+		font-size: 11px;
+	}
+
+	.licenceProperty-container, .selectProperty-container {
+		width: 100%;
+		margin: 0.2em auto;
+		text-align: initial;
+	}
+
+	.selectProperty-container {
+		margin: 1.5em auto;
 	}
 }
 
@@ -105,5 +138,8 @@ label {
 	.choice {
 		margin: 0;
 		font-size: 0.9em;
+	}
+	.selectProperty-container {
+		margin: 0.5em auto;
 	}
 }
