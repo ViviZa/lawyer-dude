@@ -6,7 +6,7 @@ import BackButtonInactive from '../components/BackButtonInactive';
 import ForthButton from '../components/ForthButton';
 import QuizQuestion from '../components/game/QuizQuestion';
 import SpeechBubbleContainer from "../components/SpeechBubbleContainer";
-
+import SettingsButton from "../components/SettingsButton";
 
 class JailGameOne extends Component {
   constructor(props) {
@@ -90,22 +90,19 @@ class JailGameOne extends Component {
     return (
       <div>
           {(panels[textIndex] !== undefined && panels[textIndex].question !== undefined) ? (
-          <div className="jailgametwo-container">  
+          <div className="jailgametwo-container">
+            <SettingsButton goBack={() => this.props.history.goBack()} />
             <h1>{headline}</h1>
+            <div className="question" dangerouslySetInnerHTML={{ __html: panels[textIndex].question}}></div>
             <div className="quizQuestions">
-              <div className="quiz-topsection">
-                <div className="question" dangerouslySetInnerHTML={{ __html: panels[textIndex].question}}></div>
-                <div className="quiz-btn-container">
-                  <button className="quiz-btn" onClick={this.validate}>Submit answers</button>
-                </div>
+                <p>{correctAnswersText}</p>
+                <QuizQuestion key={"question1"+textIndex} ref={this.child1} option={panels[textIndex].choices[0]} rightAnswers={panels[textIndex].correctAnswers} />
+                <QuizQuestion key={"question2"+textIndex}  ref={this.child2} option={panels[textIndex].choices[1]} rightAnswers={panels[textIndex].correctAnswers}/>
+                <QuizQuestion key={"question3"+textIndex}  ref={this.child3} option={panels[textIndex].choices[2]} rightAnswers={panels[textIndex].correctAnswers}/>
+                <QuizQuestion key={"question4"+textIndex}  ref={this.child4} option={panels[textIndex].choices[3]} rightAnswers={panels[textIndex].correctAnswers}/>
+                <QuizQuestion key={"question5"+textIndex}  ref={this.child5} option={panels[textIndex].choices[4]} rightAnswers={panels[textIndex].correctAnswers}/>
+                <button className="quiz-btn" onClick={this.validate}>Submit answers</button>
               </div>
-              <p>{correctAnswersText}</p>
-              <QuizQuestion key={"question1"+textIndex} ref={this.child1} option={panels[textIndex].choices[0]} rightAnswers={panels[textIndex].correctAnswers} />
-              <QuizQuestion key={"question2"+textIndex}  ref={this.child2} option={panels[textIndex].choices[1]} rightAnswers={panels[textIndex].correctAnswers}/>
-              <QuizQuestion key={"question3"+textIndex}  ref={this.child3} option={panels[textIndex].choices[2]} rightAnswers={panels[textIndex].correctAnswers}/>
-              <QuizQuestion key={"question4"+textIndex}  ref={this.child4} option={panels[textIndex].choices[3]} rightAnswers={panels[textIndex].correctAnswers}/>
-              <QuizQuestion key={"question5"+textIndex}  ref={this.child5} option={panels[textIndex].choices[4]} rightAnswers={panels[textIndex].correctAnswers}/>
-            </div>
               {
               (textIndex + 1 < panels.length  && buttonClicked === true) ? (
                   <div className="buttoncontainer">
@@ -116,7 +113,8 @@ class JailGameOne extends Component {
               }
             </div>
           ) : ( 
-          <div className="jailgame-intro-container">
+          <div >
+            <SettingsButton goBack={() => this.props.history.goBack()} />
             <SpeechBubbleContainer panels={panels} textIndex={textIndex} jail/>
             {
             (textIndex === 0 && panels.length > 1 ) ? (

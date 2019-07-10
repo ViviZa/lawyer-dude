@@ -10,6 +10,7 @@ import ForthButton from "../components/ForthButton";
 import data from "../data.json";
 import BackButton from "./../components/BackButton";
 import SpeechBubbleContainer from "../components/SpeechBubbleContainer";
+import SettingsButton from "../components/SettingsButton";
 
 class JailGameTwo extends Component {
   constructor(props) {
@@ -118,10 +119,11 @@ class JailGameTwo extends Component {
     const { answers, submit, images } = this.state;
     return (
       <div className="jailgametwo-container">
+        <SettingsButton goBack={() => this.props.history.goBack()} />
         <DndProvider backend={HTML5Backend}>
-          <h1>
+          <div className="jailgame-text">
             Drag and drop the correct icons to the license modules.
-          </h1>
+          </div>
           <div className="images-container">
             {images.map(({ src, type }, index) => (
               <Box src={src} type={type} key={index} />
@@ -137,7 +139,7 @@ class JailGameTwo extends Component {
                     onDrop={item => this.handleDrop(index, item)}
                     key={index}
                   />
-                  <div className="jailgame2-label">{exercise}</div>
+                  <div>{exercise}</div>
                   {submit && errorText !== "" ? (
                     <div style={{ color: "red" }}>{errorText}</div>
                   ) : (
@@ -150,11 +152,9 @@ class JailGameTwo extends Component {
             )}
           </div>
         </DndProvider>
-        <div className="match-btn-container">
-          <button className="match-btn" onClick={() => this.validate()}>
-            Submit answers
-          </button>
-        </div>
+        <button className="match-btn" onClick={() => this.validate()}>
+          Submit answers
+        </button>
         {submit && (
           <div className="buttoncontainer jail-button">
             <BackButtonInactive />
@@ -169,9 +169,10 @@ class JailGameTwo extends Component {
     const { textIndex, panels, showExitText, exitText } = this.state;
     const { showJail } = this.props;
     return (
-      <div className="jailgame-intro-container">
+      <div>
         { showExitText ? (
               <div>
+                <SettingsButton goBack={() => this.props.history.goBack()} />
                 <div>
                   <SpeechBubbleContainer panels={exitText} textIndex={0} jail/>
                 </div>
@@ -182,6 +183,7 @@ class JailGameTwo extends Component {
               </div>
         ) : ( panels && textIndex === 0 && panels.length >= 1 ? (
           <div>
+            <SettingsButton goBack={() => this.props.history.goBack()} />
             <SpeechBubbleContainer panels={panels} textIndex={textIndex} jail/>
             <div className="buttoncontainer">
               <BackButton previousText={showJail} />
@@ -191,6 +193,7 @@ class JailGameTwo extends Component {
         ) : panels && textIndex + 1 <= panels.length ? (
           <div>
             <div>
+              <SettingsButton goBack={() => this.props.history.goBack()} />
               <SpeechBubbleContainer panels={panels} textIndex={textIndex} jail/>
             </div>
             <div className="buttoncontainer">
