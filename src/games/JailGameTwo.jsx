@@ -10,6 +10,7 @@ import ForthButton from "../components/ForthButton";
 import data from "../data.json";
 import BackButton from "./../components/BackButton";
 import SpeechBubbleContainer from "../components/SpeechBubbleContainer";
+import SettingsButton from "../components/SettingsButton";
 
 class JailGameTwo extends Component {
   constructor(props) {
@@ -118,6 +119,7 @@ class JailGameTwo extends Component {
     const { answers, submit, images } = this.state;
     return (
       <div className="jailgametwo-container">
+        <SettingsButton goBack={() => this.props.history.goBack()} />
         <DndProvider backend={HTML5Backend}>
           <div className="jailgame-text">
             Drag and drop the correct icons to the license modules.
@@ -170,6 +172,7 @@ class JailGameTwo extends Component {
       <div>
         { showExitText ? (
               <div>
+                <SettingsButton goBack={() => this.props.history.goBack()} />
                 <div>
                   <SpeechBubbleContainer panels={exitText} textIndex={0} jail/>
                 </div>
@@ -180,6 +183,7 @@ class JailGameTwo extends Component {
               </div>
         ) : ( panels && textIndex === 0 && panels.length >= 1 ? (
           <div>
+            <SettingsButton goBack={() => this.props.history.goBack()} />
             <SpeechBubbleContainer panels={panels} textIndex={textIndex} jail/>
             <div className="buttoncontainer">
               <BackButton previousText={showJail} />
@@ -189,6 +193,7 @@ class JailGameTwo extends Component {
         ) : panels && textIndex + 1 <= panels.length ? (
           <div>
             <div>
+              <SettingsButton goBack={() => this.props.history.goBack()} />
               <SpeechBubbleContainer panels={panels} textIndex={textIndex} jail/>
             </div>
             <div className="buttoncontainer">

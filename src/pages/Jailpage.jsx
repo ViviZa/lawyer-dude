@@ -7,6 +7,7 @@ import JailGameOne from "../games/JailGameOne";
 import ForthButton from "./../components/ForthButton";
 import BackButton from "./../components/BackButton";
 import ResourcePanel from "./../components/ResourcePanel";
+import SettingsButton from "../components/SettingsButton";
 
 class Jailpage extends Component {
   constructor(props) {
@@ -92,6 +93,7 @@ class Jailpage extends Component {
     const { panels, textIndex, showGame, randomGame } = this.state;
     return (
       <div className="Jailpage">
+        <SettingsButton goBack={() => this.props.history.goBack()} />
         <div className="jailpagecontent">
           {showGame ? (
             randomGame === 0 ? (
