@@ -55,26 +55,24 @@ class App extends Component {
           <Route exact path="/searchingonline" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/understandingsource" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/usingfreelicenses" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
-          <Route exact path="/findingholder" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/findingauthor" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/usingwiki" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/copyrightinfo" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
-          <Route exact path="/gettinglicense" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
-          <Route exact path="/usinglicense" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
+          <Route exact path="/understandthelicense" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
+          <Route exact path="/usetheimage" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/creatingnotice" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
-          <Route exact path="/usingimage" component={() => <UsingTheImage addingPages={this.addingPages}/>}/>
+          <Route exact path="/generatelicensenotice" component={() => <UsingTheImage addingPages={this.addingPages}/>}/>
           <Route exact path="/dontusetheimage" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
-          <Route exact path="/moreinformation" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/usingsearchengines" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
-          <Route exact path="/usingwiki2" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
+          <Route exact path="/creatingnotice2" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
           <Route exact path="/usinggoogle" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/success" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
           <Route exact path="/finish" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
-          <Route exact path="/jail" component={() => <Jailpage addingPages={this.addingPages}/>}/>
           <Route exact path="/matchthelicense" component={() => <MatchTheLicense addingPages={this.addingPages}/>}/>
           <Route exact path="/collectinfo" component={() => <TemplateDecision addingPages={this.addingPages}/>}/>
-          <Route exact path="/stealingimages" component={() => <Jailpage addingPages={this.addingPages}/>}/>
+          <Route exact path="/jail" component={() => <Jailpage addingPages={this.addingPages}/>}/>
           <Route exact path="/attributionGenerator" component={() => <NoDesicion addingPages={this.addingPages}/>}/>
-          <Route exact path="/findthelicense" component={() => <FindTheLicense addingPages={this.addingPages}/>}/>
+          <Route exact path="/understandusecase" component={() => <FindTheLicense addingPages={this.addingPages}/>}/>
           <Route exact path="/imprint" component={() => <Imprint addingPages={this.addingPages}/>}/>
           <Route exact path="/overview" component={() => <Overview addingPages={this.addingPages}/>}/>
           <Route exact path="/resources" component={() => <Resources addingPages={this.addingPages}/>}/>
