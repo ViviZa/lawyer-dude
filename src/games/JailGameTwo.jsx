@@ -172,9 +172,9 @@ class JailGameTwo extends Component {
 
   render() {
     const { textIndex, panels, showExitText, exitText } = this.state;
-    const { showJail, showNavigation } = this.props;
+    const { showJail, showNavigation, cssLaywerClass } = this.props;
     return (
-      <div>
+      <div className={cssLaywerClass}>
         { showExitText ? (
               <div>
                 {showNavigation === true &&
