@@ -16,7 +16,7 @@
 		// margin: 55px 25px;
 	}
 
-	&.load-img-btn, &.url-upload-btn {
+	&.load-img-btn {
 		font-size: 16px;
 		height: 40px;
 		margin: 35px;
@@ -32,8 +32,7 @@
 	}
 
 	&:disabled {
-		border: 1px solid #999999;
-		background-color: #cccccc;
+		background-color: #D4D4D4;
 		color: #666666;
 		cursor: not-allowed;
 	}
@@ -67,11 +66,16 @@
 }
 
 .quiz-btn {
-	float: right;
-	margin: 2em 1em 1em 0.5em;
+	position: absolute; 
+	right: 8em;
+	margin: 3em 3em;
 }
 
 .match-btn {
+	margin: 3em auto;
+}
+
+.url-upload-btn {
 	margin: 3em auto;
 }
 
@@ -157,18 +161,10 @@
 	}
 }
 
-.Jailpage, .jailgame-intro-container, .jailgametwo-container {
+.Jailpage {
 
 	.buttoncontainer {
 		left: 50%;
-	}
-}
-
-.jailgametwo-container {
-
-	.quiz-btn {
-		position: relative;
-		right: 0;
 	}
 }
 
@@ -197,16 +193,21 @@
 		margin: 1em 1em 1em 0.5em;
 	}	
 
+	.url-upload-btn {
+		margin: 1em auto 6em auto;
+	}
+
 	.match-btn {
 		margin: 1em auto;
 	}
 
 	.SettingsButton{
 		position: fixed;
-		margin-top: 0;
+		margin-top: -0.5em;
+		margin-left: 0.4em;
 		margin-right: 0;
 		background-color: unset;
-		width: 11%;
+		width: 10%;
 		height: 7%; 
 		z-index: 100;
 		top: auto;
@@ -214,7 +215,7 @@
 	}
 } 
 
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 767px) {
 
 	.SettingsButton{
 		position: fixed;
@@ -230,6 +231,27 @@
 	}
 }
 
+@media (min-width: 768px) and (max-width: 1259px) {
+
+	.StartButton, .save-name-btn, .load-img-btn, .url-upload-btn, .jail-back-btn, .game-back-btn, .quiz-btn, .match-btn, .top-btn {
+		padding: 12px 25px;
+		margin: 25px;
+		font-size: 16px;
+	}
+
+	.game-back-btn {
+		margin: 40px 25px 25px 0;
+	}
+
+	.SettingsButton{
+		position: fixed;
+		margin-top: -0.1em;
+		margin-right: 0;
+		margin-left: 1em;
+		background-color: unset;
+		width: 5%;
+	}
+}
 @media (min-width: 1260px) and (max-width: 1440px) {
 
 	.StartButton {
@@ -249,13 +271,6 @@
 		margin: 0.6em 3em;
 	}
 
-	.jailgametwo-container {
-		
-		.quiz-btn {
-			margin: 0.6em;
-		}
-	}
-
 	.BackButton, .btn_inactive {
 		height: 55px;
 		width: 55px;
@@ -264,6 +279,10 @@
 
 	.match-btn {
 		margin: 0.5em;
+	}
+
+	.url-upload-btn {
+		margin: 0.5em auto;
 	}
 
 	.option_btn {

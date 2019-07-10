@@ -43,6 +43,13 @@ h1 {
 		letter-spacing: 2px;
 		height: 21em;
 	}
+
+	.contentBox:nth-of-type(2) {
+		border: solid 2px $brightred;
+		-webkit-box-shadow: 0 0 0.5em rgba(242, 109, 117, 0.5);
+		-moz-box-shadow: 0 0 0.5em rgba(242, 109, 117, 0.5);
+		box-shadow: 0 0 0.5em rgba(242, 109, 117, 0.5);
+	}
 }
 
 ol {
@@ -69,13 +76,19 @@ ol {
 	}
 
 	li {
-		list-style-image: url(./images/bullet.svg);
+		list-style-image: none;
+		list-style-type: none;
+		background-image: url('./images/bullet.svg');
+		background-repeat: no-repeat;
+		background-position: 0px 13px;
+		padding-left: 20px;
+		background-size: 10px;
 
 		&:last-of-type {
 			font-size: 25px;
 			font-weight: 700;
-			padding: 1em 0;
-			list-style: none;
+			padding: 1em 0 1em 0.7em;
+			background-image: none;
 		}
 	}
 }
@@ -87,6 +100,13 @@ ol {
 	padding: 25px 130px;
 	text-align: center;
 	overflow: hidden;
+
+	&.jailgame {
+
+		.buttoncontainer {
+			left: 50%;
+		}
+	}
 }
 
 
@@ -117,6 +137,7 @@ ol {
 		color: #FFF;
 	}
 }
+
 
 .buttoncontainer {
 	position: absolute;
@@ -156,18 +177,21 @@ ol {
 	margin-left: 25%;
 }
 
-.errorMessage, .successMessage, .correctAnswers {
-	color: $darkred;	
-	float: right;
-	width: 34em;
-	font-size: 14px;
-	font-weight: 600;
-	margin: 0 1.5em 1.5em 1.5em;
-	text-transform: uppercase;
+.errorMessage {
+	color: $darkred;
 }
 
-.successMessage, .correctAnswers {
-	color: $darkgreen;
+.successMessage {
+	color: darkgreen;
+}
+
+.correctAnswers {
+	font-size: 20px;
+	width: 100%;
+	margin: 0.5em 0;
+	padding: 2em;
+	text-align: center;
+	background-color: lighten($lightgreen, 10%);
 }
 
 .validation {
@@ -215,13 +239,7 @@ ol {
 .matchSection {
 	display: inline-block;
 	background-color: $resource-background;
-<<<<<<< HEAD
 	margin: 0.1em 0;
-=======
-	margin: auto 0;
-	margin-bottom: 0.5em;
-	padding: 1em;
->>>>>>> master
 }
 
 .quizQuestions, .matchQuestions {
@@ -296,13 +314,16 @@ ol {
 
 .quiz-topsection {
 	display: inline-block;
-	width: 100%;
 }
 
 .attribution-container {
 	float: left;
 	margin-top: -15em;
 	margin-left: 5.5em;
+}
+
+.iconcontainer {
+	height: auto;
 }
 
 @media only screen and (max-width: 599px) {
@@ -323,13 +344,14 @@ ol {
 
 		h1 {
 			font-size: 44px;
-			// margin: 85px 25px 25px 25px;
+			margin: 0.5em 0;
 			line-height: 1.3;
 		}
 
 		h3 {
-			line-height: 1.4;
 			font-size: 1.2rem;
+			line-height: 1.4;
+			width: 95%;
 		}
 
 		&.overviewpagecontent {
@@ -347,7 +369,7 @@ ol {
 
 			.contentText {
 				padding: 1em 0;
-				height: 13em;
+				height: 16em;
 				font-size: 14px;
 				margin: 0;
 			}
@@ -369,14 +391,10 @@ ol {
 		padding: 0;
 
 		ul {
-			padding: 0 1.5em;
+			padding: 0;
 		}
 
 		li {
-			list-style-image: none;
-			list-style-type: none;
-			background-image: url('./images/bullet.svg');
-			background-repeat: no-repeat;
 			background-position: 0px 10px;
 			padding-left: 20px;
 			background-size: 5px;
@@ -384,8 +402,14 @@ ol {
 			&:last-of-type {
 				font-size: 15px;
 				padding: 1em 0 1em 20px;
-				background-image: none;
 			}
+		}
+	}
+
+	.MatchTheLicense {
+
+		.pagecontent {
+			margin-bottom: 9em;
 		}
 	}
 
@@ -395,24 +419,13 @@ ol {
 		text-align: center;
 	}
 
-	.container {
-		margin-bottom: 6em;
-	}
-
-	.overviewpagecontent {
-
-		.container {
-			margin-bottom: 0;
-		}
-	}
-
 	.buttoncontainer {
 		bottom: 2%;
 		left: 52%;
 	}
 
 	.contentBox {
-		height: 28em;
+		height: 31em;
 	} 
 
 	.boxicon {
@@ -450,6 +463,18 @@ ol {
 			margin-top: 5%;
 		}
 	}
+
+	.Jailpage {
+		
+		.speechlawyer-container {
+			margin-top: -1em;
+			margin-right: -0.5em;
+		}
+
+		.speechlawyer-sceptical, .speechlawyer-happy {
+			width: 100%;
+		} 
+	}
 	
 	.errorMessage, .successMessage, .correctAnswers {
 		width: auto;
@@ -460,10 +485,7 @@ ol {
 
 	.correctAnswers {
 		font-size: 16px;
-		margin: 0.5em 0;
 		padding: 1em;
-		text-align: center;
-		background-color: lighten($lightgreen, 10%);
 	}
 
 	.llama-container {
@@ -491,14 +513,15 @@ ol {
 			width: 15em;
 			margin: 0 1em 1em 1em;
 		}
+	}
+
+	#colInputPadding{
+		padding: 0px;
+	}
 }
 
-#colInputPadding {
-	padding: 0px;
-}
 
-
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 767px) {
 
 	.startpagecontent {
 
@@ -513,6 +536,7 @@ ol {
 			line-height: 1.4;
 		}
 	}
+
 	h1 {
 		font-size: 1.5rem;
 		font-weight: 600;
@@ -536,6 +560,164 @@ ol {
 		margin-top: 25%;
 		margin-left: 0;
 		z-index: 10px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1259px) {
+
+	h1 {
+		margin: 1em;
+	}
+
+	.startpagecontent {
+
+		h1 {
+			margin: 85px 25px 25px 25px;
+			line-height: 1.3;
+		}
+
+		h3 {
+			line-height: 1.4;
+			font-size: 1.7rem;
+		}
+
+		&.overviewpagecontent {
+
+			h1 {
+				font-size: 32px;
+				margin: 45px 25px;
+			}
+
+			h3 {
+				margin: 0.5em auto;
+			}
+
+			.contentText {
+				padding: 1em 0;
+				height: 26em;
+				font-size: 14px;
+				margin: 0;
+			}
+
+			.iconcontainer {
+
+				.headline {    
+					font-size: 1.2em;
+					height: 4.2em;
+					width: 100%;
+				}
+			} 
+		}
+	}
+
+	.container {
+		margin-bottom: 6em;
+	}
+
+	.overviewpagecontent {
+	
+		.container {
+			margin-bottom: 0;
+		}
+
+	}
+
+	.speechbubbletext {
+		padding: 1.5em;
+		
+		&.entername {
+			padding: 2em;
+			height: 9em;
+		}
+	}
+
+	.answerbubbletext {
+		width: 29em;
+		height: 20em;
+	}
+
+	.speechbubbletext-jail {
+		font-size: 24px;
+		height: 9em;
+	}
+
+
+	.entername-form {
+		margin-top: 25em;
+		margin-left: 2em;
+	}	
+
+	.errorMessage, .successMessage, .correctAnswers {	
+		float: none;
+		width: 85%;
+		margin: 1.5em auto;
+	}
+
+	.correctAnswers {
+		width: 100%;
+		font-size: 16px;
+		padding: 1em;
+		margin: 1.5em auto 0 auto;
+	}
+
+	.speechlawyer-container, .speechlawyer-sceptical-container {
+		margin-top: 8.5em;
+		margin-right: -2em;
+	}
+
+	.jailpagecontent {
+		
+		.speechlawyer-container, .speechlawyer-sceptical-container {
+			margin-top: 4.5em;
+		}
+	}
+
+	.welcomeblock {
+		margin-top: 2em;
+	}
+
+	.welcomepanels {
+		width: 70%;
+		max-width: 100%;
+		font-size: 18px;
+
+		li:last-of-type {
+			font-size: 20px;
+		}
+	}
+
+	.quizQuestions {
+
+		margin-bottom: 6em;
+	
+		.question {
+			font-size: 18px;
+			width: 36em;
+			float: none;
+		}
+	}
+
+	.matchQuestions {
+		margin-bottom: 6em;
+	}
+
+	.matchSection {
+		width: 100%;
+	}
+
+	.match-question-text {
+		width: 100%;
+	}
+
+	.pagecontent {
+		margin-left: 0;
+		padding: 45px 25px 25px 25px;
+		text-align: center;
+	}
+
+	.buttoncontainer {
+		bottom: 2%;
+		left: 50%;
 	}
 }
 
@@ -579,14 +761,6 @@ ol {
 		}
 	}
 
-	.errorMessage, .successMessage {
-		width: 60em;
-		font-size: 11px;
-		font-weight: 600;
-		margin: -0.5em 1.5em 0.5em 1.5em;
-		text-transform: uppercase;
-	}
-
 	.welcomeblock {
 		margin-top: 4.5em;
 	}
@@ -595,12 +769,15 @@ ol {
 		font-size: 14px;
 
 		li {
-			list-style-image: url(./images/bullet.svg);
+
+		background-position: 0px 9px;
+		padding-left: 20px;
+		background-size: 8px;
 	
 			&:last-of-type {
 				font-size: 14px;
 				font-weight: 700;
-				padding: 0.2em 0;
+				padding: 0.2em 0 0.2em 1.1em;
 				list-style: none;
 			}
 		}
@@ -653,9 +830,7 @@ ol {
 		width: 100%;
 
 		.question {
-			font-size: 14px;
 			margin-top: 1em;
-			width: 30em;
 		}
 
 		.quizQuestion {
@@ -663,7 +838,6 @@ ol {
 		}
 
 		.matchQuestion { 
-<<<<<<< HEAD
 			height: 5em;
 			width: 23em;
 			font-size: 14px;
@@ -675,14 +849,6 @@ ol {
 		.basic-multi-select {
 			width: 24em;
 			margin: 1em 1em 1em 0;
-=======
-			font-size: 16px;
-			line-height: 1.2;
-		}
-
-		.basic-multi-select {
-			margin: 2em 1.5em;
->>>>>>> master
 		}
 	}
 

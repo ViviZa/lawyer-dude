@@ -98,17 +98,9 @@
 
 .Jailpage {
 	background: url(./images/Jail.svg) no-repeat;
-		 background-size: 100%;
-	background-position: left bottom;
+		 background-size: cover;
+	background-position: center center;
 	display: grid;
-}
-
-.jailgame-intro-container {
-
-	.speechlawyer-container {
-		margin-top: 4em;
-		margin-right: -11em;
-	}
 }
 
 .resourcetext {
@@ -277,12 +269,17 @@
 		}
 	}
 
+	.settings-svg {
+		padding: 0;
+	}
+
 	#settings g {
-		stroke: #000000;
+		stroke: $darkblue;
+		stroke-width: 5;
 	}
 } 
 
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 767px) {
 
 	.startlawyer {
 		width: 23%;
@@ -317,6 +314,83 @@
 	}
 	#settings g {
 		stroke: $darkblue;
+		stroke-width: 5;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1259px) {
+
+	.startlawyer {
+		width: 28%;
+	}
+
+	.fulllawyer  {
+		width: 30%;
+		margin:  15% 0;
+	}
+
+	.lama-sceptical, .lama-happy {
+		margin-top: 24em;
+		margin-left: 0;
+	}
+
+	.speech {
+	
+		&:before {
+			padding-bottom: 75%;
+			background: url(./images/speechbubble-320.svg) no-repeat;
+			background-size: 100%;
+			left: 0;
+			top: 0;
+		}
+	}
+
+	.jail-speech {
+		
+		margin-top: 5%;
+		margin-left: 25%;
+		text-align: center;
+	
+		&:before {
+			padding-bottom: 75%;
+			background: url(./images/speechbubble-jail-320.svg) no-repeat;
+		}
+	}
+
+	.answer {
+		width: 73%;
+		margin-left: 8em;
+
+		&:before {
+			content: "";
+			padding-bottom: 75%;
+			background: url(./images/answerbubble-320.svg) no-repeat;
+		}
+	}
+
+	.jailgame-intro-container {
+
+		.speechlawyer-container {    
+			width: 25%;
+			margin-top: 0.5em;
+			margin-right: -2em;
+		}
+	}
+
+	.Jailpage {
+
+		.jailgame-intro-container {
+
+			.speechlawyer-container {
+				margin-top: 4.5em;
+				margin-right: -2em;
+			}
+		}
+	}
+
+	#settings g {
+		stroke: $darkblue;
+		stroke-width: 5;
 	}
 }
 
@@ -344,12 +418,4 @@
 	// 		margin: 4.5em 3em 0 0;
 	// 	}
 	// }
-
-	.jailgame-intro-container {
-
-		.speechlawyer-container {
-			margin-top: 1em;
-			margin-right: -9.5em;
-		}
-	}
 }

@@ -1,17 +1,22 @@
 @import "variables";
 
-.answer-container {
+.answer-container{
   height: 7rem;
   width: 7rem;
-  margin: 0;
+  margin-right: 1.5rem;
   color: black;
+  float: left;
   border: 1px solid black;
   border-radius: 50%;
-  display: grid;
+  display: grid
 }
 
 .cc-icon {
     margin: auto;
+}
+
+.jailgame-text {
+  font-size: 25px;
 }
 
 .images-container {
@@ -27,6 +32,7 @@
 }
 
 .box {
+  border: 1px dashed gray;
   background-color: white;
   padding: 0.5rem 1rem;
   margin-right: 1.5rem;
@@ -41,12 +47,11 @@
   left: 50%;
 }
 
-
 .jailgametwo-container {
     background-color: white;
     width: 70rem;
     padding: 1rem;
-    margin: 8em auto;
+    display: inline-block;
     text-align: center;
 }
 
@@ -54,7 +59,7 @@
   width: 7rem;
   height: 7rem;
   display: inline-block;
-  margin: 1.5rem;
+  margin: 1rem;
 }
 
 .jailgame-intro-container {
@@ -62,7 +67,7 @@
   height: 100%;
 }
 
-.quiz-btn-container, .match-btn-container {
+.quiz-btn-container, .match-btn-container, .upload-btn-container {
   text-align: center;
 }
 
@@ -76,11 +81,44 @@
   margin-top: 1.5em;
 }
 
+@media (min-width: 768px) and (max-width: 1259px) {
+
+  .jailgametwo-container {
+    width: 100%;
+    margin: 5em auto;
+  }
+
+  .jailgame-intro-container {
+    padding: 45px 25px 25px 25px;
+  }
+
+}
+
 @media (min-width: 1260px) and (max-width: 1440px) {
+
+  .answer-container {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .answercontainer {
+      width: 6rem;
+      height: 6rem;
+  }
+
+  .images-container {
+    margin-top: 0;
+    height: 8rem;
+  }
+
+  .upload-btn-container {
+    width: 70%;
+    margin: 0 auto;
+  }
 
   .jailgametwo-container {
     width: 50rem;
-    margin: 2em auto;
+    margin: 0em auto;
   }
 
 }
