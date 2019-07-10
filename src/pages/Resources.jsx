@@ -44,7 +44,7 @@ class Resources extends Component {
             if(panel.images !== undefined){
               images = "<br><br><div class='resImages'>";
               panel.images.forEach(image => {
-                images += "<img src='" + image + "' />";
+                images += "<img src='" + image + "'/>";
               });
               images += "</div><br><br>";
             }
@@ -84,8 +84,10 @@ class Resources extends Component {
         </div>
           <h1 className="headline">{headline}</h1>
           <div className="resToC" dangerouslySetInnerHTML={{ __html: toc }} />
+        <div className="container">
         <div className="pagecontent">
           <div className="resourcetext" dangerouslySetInnerHTML={{ __html: content }} />
+        </div>
         </div>
       </div>
     );
