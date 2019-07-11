@@ -529,10 +529,30 @@ ol {
 		overflow-y: scroll;
 	}
 
+	.quizQuestion {
+	
+		input {
+			margin: 0.4em 1em;
+		}
+	
+		input[type=checkbox] {
+			-ms-transform: scale(1.2);
+			-moz-transform: scale(1.2);
+			-webkit-transform: scale(1.2);
+			-o-transform: scale(1.2);
+			transform: scale(1.2);
+		}
+	}
+
 	.quizQuestions, .matchQuestions {
 
 		width: unset;
 		margin-bottom: 6em;
+
+		.question {
+			font-size: 16px;
+			width: 100%;
+		}
 
 		.matchQuestion {    
 			width: 20.5em;
