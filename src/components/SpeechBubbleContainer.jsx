@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactComponent as LDHeadHappy } from "../images/Lawyerdude-head-happy.svg";
-import { ReactComponent as LDLamaSceptical } from "../images/Lawyerdude-llama-head-sceptical.svg";
-import { ReactComponent as LDLamaHappy } from "../images/Lawyerdude-llama-head-happy.svg";
+import { ReactComponent as LDLamaSceptical } from "../images/Lawyerdude-llama-sceptical.svg";
+import { ReactComponent as LDLamaHappy } from "../images/Lawyerdude-llama-happy.svg";
 import { ReactComponent as LDHeadSceptical } from "../images/Lawyerdude-head-sceptical.svg";
 
 const SpeechBubbleContainer = props => {
