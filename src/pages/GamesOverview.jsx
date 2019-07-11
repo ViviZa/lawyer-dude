@@ -45,7 +45,7 @@ class GamesOverview extends Component {
 
   render() {
     return (
-      <div className="Startpage">
+      <div className="Startpage GamesOverview">
         <SettingsButton goBack={() => this.props.history.goBack()} />
         <div className="startpagecontent overviewpagecontent">
           <button className="game-back-btn" onClick={() => this.redirectToNextPage(0)}> 
