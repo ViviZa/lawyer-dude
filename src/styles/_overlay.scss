@@ -106,7 +106,11 @@
         ul{
             margin: 2em 0 3em 0;
         }
-    }
+	}
+	
+	.overlay-shown {
+		z-index: 100;
+	}
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
@@ -121,7 +125,6 @@
         ul{
             margin: 2em 0 3em 0;
         }
-
     }
 }
 
@@ -143,6 +146,10 @@
 		.button-close-overlay {
 			margin-top: 0;
 		}
+	}
+
+	.overlay-shown {
+		z-index: 100;
 	}
 }
 

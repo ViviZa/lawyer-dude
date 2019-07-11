@@ -292,6 +292,14 @@
 		stroke: $darkblue;
 		stroke-width: 5;
 	}
+
+	.Jailpage {
+
+		#settings g {
+			stroke: white;
+			stroke-width: 3;
+		}
+	}
 } 
 
 @media (min-width: 600px) and (max-width: 767px) {
