@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router';
+import React, { Component } from "react";
+import { withRouter } from "react-router";
 import SideNavigation from "../components/SideNavigation";
-import data from '../data.json';
-import BackButton from '../components/BackButton';
-import BackButtonInactive from '../components/BackButtonInactive';
-import ForthButton from '../components/ForthButton';
-import QuizQuestion from '../components/game/QuizQuestion';
+import data from "../data.json";
+import BackButton from "../components/BackButton";
+import BackButtonInactive from "../components/BackButtonInactive";
+import ForthButton from "../components/ForthButton";
+import QuizQuestion from "../components/game/QuizQuestion";
 import SpeechBubbleContainer from "../components/SpeechBubbleContainer";
 import SettingsButton from "../components/SettingsButton";
 
@@ -20,12 +20,12 @@ class JailGameOne extends Component {
     this.state = {
       textIndex: 0,
       panels: [],
-      headline: '',
+      headline: "",
       nextPageID: 0,
-      nextPage: '',
-      buttonClicked : false,
-      correctAnswersText : "",
-      };
+      nextPage: "",
+      buttonClicked: false,
+      correctAnswersText: ""
+    };
     this.nextText = this.nextText.bind(this);
     this.previousText = this.previousText.bind(this);
     this.validate = this.validate.bind(this);
@@ -41,64 +41,71 @@ class JailGameOne extends Component {
       panels: filteredJSON[0].panels,
       headline: filteredJSON[0].headline,
       nextPage: filteredJSON[0].nextPage,
-      nextPageID: nextPageID,
-    })
-    }
+      nextPageID: nextPageID
+    });
+  }
 
   nextText() {
-    const { panels, textIndex } = this.state
+    const { panels, textIndex } = this.state;
     const theSize = panels.length - 1;
     if (textIndex >= 0 && textIndex < theSize) {
       this.setState(prevState => {
-        return {textIndex: prevState.textIndex + 1}
-     })
+        return { textIndex: prevState.textIndex + 1 };
+      });
     }
-    this.setState({buttonClicked :false});
-    this.setState({correctAnswersText: "" });
-
+    this.setState({ buttonClicked: false });
+    this.setState({ correctAnswersText: "" });
   }
 
   previousText() {
     const theSize = this.state.panels.length - 1;
     if (this.state.textIndex > 0 && this.state.textIndex <= theSize) {
       this.setState(prevState => {
-        return {textIndex: prevState.textIndex - 1}
-     })
+        return { textIndex: prevState.textIndex - 1 };
+      });
     }
   }
 
   validate() {
-    const { panels, textIndex} = this.state;
+    const { panels, textIndex } = this.state;
     this.child1.current.validate();
     this.child2.current.validate();
     this.child3.current.validate();
     this.child4.current.validate();
     this.child5.current.validate();
-    this.setState({buttonClicked :true});
+    this.setState({ buttonClicked: true });
     let answerText;
-    if(panels[textIndex].correctAnswers.length === 1){
+    if (panels[textIndex].correctAnswers.length === 1) {
       answerText = "The correct answer is: " + panels[textIndex].correctAnswers;
-    }else {
-      answerText = "The correct answers are: " + panels[textIndex].correctAnswers;
+    } else {
+      answerText =
+        "The correct answers are: " + panels[textIndex].correctAnswers;
     }
-  
 
-    this.setState({correctAnswersText: answerText });
+    this.setState({ correctAnswersText: answerText });
   }
 
   render() {
-    const { panels, textIndex, headline, buttonClicked, correctAnswersText} = this.state;
-    const {cssGameClass, showNavigation, cssLaywerClass} = this.props;
+    const {
+      panels,
+      textIndex,
+      headline,
+      buttonClicked,
+      correctAnswersText
+    } = this.state;
+    const { cssGameClass, showNavigation, cssLaywerClass } = this.props;
     return (
-          <div className={cssLaywerClass}>
-            {showNavigation === true &&
-              <SideNavigation ID={1000} />
-          }
-          {(panels[textIndex] !== undefined && panels[textIndex].question !== undefined) ? (
+      <div className={cssLaywerClass}>
+        {showNavigation === true && <SideNavigation ID={1000} />}
+        <SettingsButton goBack={() => this.props.history.goBack()} />
+        {panels[textIndex] !== undefined &&
+        panels[textIndex].question !== undefined ? (
           <div className={cssGameClass}>
-            <SettingsButton goBack={() => this.props.history.goBack()} />
             <h1>{headline}</h1>
-            <div className="question" dangerouslySetInnerHTML={{ __html: panels[textIndex].question}}></div>
+            <div
+              className="question"
+              dangerouslySetInnerHTML={{ __html: panels[textIndex].question }}
+            />
             <div className="quizQuestions">
                 <div className="correctAnswers">{correctAnswersText}</div>
                 <QuizQuestion key={"question1"+textIndex} ref={this.child1} option={panels[textIndex].choices[0]} rightAnswers={panels[textIndex].correctAnswers} />
@@ -119,30 +126,34 @@ class JailGameOne extends Component {
               ) : (<div></div>)
               }
             </div>
-          ) : ( 
-          <div >
-            {showNavigation === true &&
-              <SideNavigation ID={1000} />
-            }
-            <SettingsButton goBack={() => this.props.history.goBack()} />
-            <SpeechBubbleContainer panels={panels} textIndex={textIndex} jail/>
-            {
-            (textIndex === 0 && panels.length > 1 ) ? (
+            {textIndex + 1 < panels.length && buttonClicked === true ? (
               <div className="buttoncontainer">
-                <BackButtonInactive/>
+                <BackButton previousText={this.previousText} />
                 <ForthButton nextText={this.nextText} />
               </div>
             ) : (
-                  textIndex === panels.length-1 ? (
-                    <div className="buttoncontainer">
-                      <BackButton previousText={this.previousText} />
-                      <ForthButton nextText={() => this.props.history.goBack()} />
-                    </div>
-                  ) : (<div></div>))
-          }
-          </div>)}
-
-        <p></p>
+              <div />
+            )}
+          </div>
+        ) : (
+          <div>
+            <SpeechBubbleContainer panels={panels} textIndex={textIndex} jail />
+            {textIndex === 0 && panels.length > 1 ? (
+              <div className="buttoncontainer">
+                <BackButtonInactive />
+                <ForthButton nextText={this.nextText} />
+              </div>
+            ) : textIndex === panels.length - 1 ? (
+              <div className="buttoncontainer">
+                <BackButton previousText={this.previousText} />
+                <ForthButton nextText={() => this.props.history.goBack()} />
+              </div>
+            ) : (
+              <div />
+            )}
+          </div>
+        )}
+        <p />
       </div>
     );
   }
