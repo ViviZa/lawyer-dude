@@ -112,6 +112,7 @@
 }
 
 @media (min-width: 1060px) {
+
 	.SideNavigation {
 		display: flex;
 		width: 18%;
@@ -186,6 +187,11 @@
 }
 
 @media (min-width: 768px) and (max-width: 1259px) {
+
+	nav {
+		position: absolute; 
+		z-index: 10;
+	}
 
 	.SideNavigation {
 		width: 100%;
