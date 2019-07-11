@@ -404,11 +404,17 @@ ol {
 				font-size: 14px;
 				margin: 0;
 			}
+
+			.iconcontainer {
+				margin-top: 0;
+			}
 		}
 	}
 
 	ol {
 		padding-left: 20px;
+		height: 10.5em;
+		overflow-y: scroll;
 	}
 
 	.welcomeblock {
@@ -690,11 +696,19 @@ ol {
 	.answerbubbletext {
 		width: 29em;
 		height: 20em;
+		margin-top: 8em;
 	}
 
 	.speechbubbletext-jail {
 		font-size: 24px;
 		height: 9em;
+	}
+
+	ol {
+		margin: 0;
+		padding: 0 2em;
+		height: 16em;
+		overflow-y: scroll;
 	}
 
 
