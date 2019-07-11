@@ -171,10 +171,15 @@
 	}
 }
 
+.center-btn-container {
+	text-align: center;
+}
+
 @media only screen and (max-width: 599px) {
   
 	.StartButton {
 		padding: 14px;
+		margin: 25px;
 	}
 
 	.save-name-btn {
@@ -207,6 +212,22 @@
 		z-index: 100;
 		top: -0.7em;
 		left: 0;
+	}
+
+	.gameContentBox {
+
+		.StartButton {
+			margin: 0 1em;
+		}
+	}
+
+	.game-back-btn {
+		position: relative;
+		float: right;
+		font-size: 14px;
+		padding: 7px 25px;
+		margin: 0 3em 2em 0;
+		letter-spacing: 1px;
 	}
 } 
 
@@ -275,7 +296,7 @@
 	}
 
 	.quiz-btn {
-		float: right; 
+		float: right;
 		font-size: 14px;
 		margin: 0.4em 0;
 		padding: 9px 25px;
