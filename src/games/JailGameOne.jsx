@@ -107,7 +107,7 @@ class JailGameOne extends Component {
               dangerouslySetInnerHTML={{ __html: panels[textIndex].question }}
             />
             <div className="quizQuestions">
-                <div className="correctAnswers">{correctAnswersText}</div>
+                {correctAnswersText !== "" && <div className="correctAnswers">{correctAnswersText}</div>}
                 <QuizQuestion key={"question1"+textIndex} ref={this.child1} option={panels[textIndex].choices[0]} rightAnswers={panels[textIndex].correctAnswers} />
                 <QuizQuestion key={"question2"+textIndex}  ref={this.child2} option={panels[textIndex].choices[1]} rightAnswers={panels[textIndex].correctAnswers}/>
                 <QuizQuestion key={"question3"+textIndex}  ref={this.child3} option={panels[textIndex].choices[2]} rightAnswers={panels[textIndex].correctAnswers}/>
