@@ -91,8 +91,29 @@
 
 @media only screen and (max-width: 599px) {
 
-    .select-container {
-        width: 13em;
+    .imgView {
+        margin: 0;
+        width: 100%;
+    }
+
+    .license-notice {
+        margin: 1rem 0 0 0;
+        padding: 1em;
+        width: 100%;
+    }
+
+    .copy-button {
+        margin: 2rem 1rem 0 0;
+    }
+
+    .notice-container {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .license-disclaimer {
+        margin-top: 2em;
+        padding: 1.5em;
     }
 }
 
