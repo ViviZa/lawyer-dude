@@ -580,6 +580,7 @@ ol {
 			line-height: 1.4;
 		}
 	}
+
 	h1 {
 		font-size: 1.5rem;
 		font-weight: 600;
@@ -639,13 +640,15 @@ ol {
 			}
 
 			.contentText {
-				padding: 1em 0;
+				padding: 0;
 				height: 26em;
 				font-size: 14px;
 				margin: 0;
 			}
 
 			.iconcontainer {
+
+				margin-top: 1em;
 
 				.headline {    
 					font-size: 1.2em;

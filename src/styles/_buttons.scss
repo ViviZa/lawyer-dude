@@ -234,6 +234,16 @@
 		font-size: 16px;
 	}
 
+	.startpagecontent {
+
+		&.overviewpagecontent {
+
+			.StartButton {
+				margin: 1em;
+			}
+		}
+	}
+
 	.game-back-btn {
 		margin: 40px 25px 25px 0;
 	}
