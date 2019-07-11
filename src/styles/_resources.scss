@@ -90,7 +90,7 @@
 	.resourceContainer {
 		padding: 1em;
 		margin-bottom: 6em;
-		height: auto;
+		height: 23em;
 	}
 
 	.Jailpage {
@@ -113,6 +113,7 @@
 }
 
 @media (min-width: 600px) and (max-width: 767px) {
+
 	.Resources {
 		.resContent {
 			h1 {
@@ -122,6 +123,13 @@
 		.resToC {
 			width: unset;
 		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1259px) {
+
+	.resourceContainer {
+		height: 42em;
 	}
 }
 
