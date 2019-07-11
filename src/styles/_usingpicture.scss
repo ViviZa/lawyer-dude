@@ -97,8 +97,19 @@
 }
 
 @media (min-width: 768px) and (max-width: 1259px) {
-    .select-container {
-        width: 26em;
+
+    .license-notice {
+        height: 9rem;
+        margin: 1rem 2rem;
+        padding: 1em 2em;
+        line-height: 1.5;
+    }
+    .copy-button {
+        margin: 1rem 2rem;
+    }
+
+    .notice-container {
+        width: 60%;
     }
 }
 

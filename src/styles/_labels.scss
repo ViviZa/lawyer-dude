@@ -130,6 +130,13 @@ label {
 	}
 }
 
+@media (min-width: 768px) and (max-width: 1259px) {
+
+	.license-select-wrap {
+		width: 75%;
+	}
+}
+
 @media (min-width: 1260px) and (max-width: 1440px) {
 	input, label {
 		font-size: 14px;
