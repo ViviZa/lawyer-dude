@@ -33,7 +33,8 @@ h1 {
 		font-weight: 600;
 		line-height: 1.6;
 		height: 3.2em;
-		margin: 1em auto;
+		margin: 0.5em auto;
+		width: 90%;
 
 	}
 
@@ -147,7 +148,7 @@ ol {
 }
 
 .speechbubbletext, .answerbubbletext, .speechbubbletext-jail {
-	height: 11em;
+	height: 9em;
 	padding: 2.5em;
 	position: relative;
 	letter-spacing: 1.1px;
@@ -232,7 +233,7 @@ ol {
 .speechlawyer-container, .speechlawyer-sceptical-container {
 	display: inline-block; 
 	float: right;
-	margin-top: 1em;
+	margin-top: 4em;
 	margin-right: -8em;
 	width: 20%;
 	transform: rotate(-45deg);
@@ -343,6 +344,7 @@ ol {
 
 .iconcontainer {
 	height: auto;
+	margin-top: 2em;
 }
 
 .quiz-topsection {
@@ -402,11 +404,17 @@ ol {
 				font-size: 14px;
 				margin: 0;
 			}
+
+			.iconcontainer {
+				margin-top: 0;
+			}
 		}
 	}
 
 	ol {
 		padding-left: 20px;
+		height: 10.5em;
+		overflow-y: scroll;
 	}
 
 	.welcomeblock {
@@ -578,6 +586,7 @@ ol {
 			line-height: 1.4;
 		}
 	}
+
 	h1 {
 		font-size: 1.5rem;
 		font-weight: 600;
@@ -637,13 +646,15 @@ ol {
 			}
 
 			.contentText {
-				padding: 1em 0;
+				padding: 0;
 				height: 26em;
 				font-size: 14px;
 				margin: 0;
 			}
 
 			.iconcontainer {
+
+				margin-top: 1em;
 
 				.headline {    
 					font-size: 1.2em;
@@ -685,11 +696,19 @@ ol {
 	.answerbubbletext {
 		width: 29em;
 		height: 20em;
+		margin-top: 8em;
 	}
 
 	.speechbubbletext-jail {
 		font-size: 24px;
 		height: 9em;
+	}
+
+	ol {
+		margin: 0;
+		padding: 0 2em;
+		height: 16em;
+		overflow-y: scroll;
 	}
 
 
@@ -786,6 +805,13 @@ ol {
 }
 
 @media (min-width: 1260px) and (max-width: 1440px) {
+
+	.startpagecontent {
+
+		h3 {
+			line-height: 1.4;
+		}
+	}	
 	
 	.overviewpagecontent {
 		
@@ -855,12 +881,25 @@ ol {
 		height: 26.5em;
 	}
 
-	.gameContentBox {
-		height: 11em;
-	}
-
 	.boxicon {
 		height: 4em;
+	}
+
+	.iconcontainer {
+		margin-top: 0;
+	}
+
+	.gameContentBox {
+		height: 11em;
+
+		.boxicon {
+			height: 3em;
+		}
+
+		h3 {
+			height: 1.2em;
+			margin: 0.5em auto;
+		}
 	}
 	
 	.buttoncontainer {
