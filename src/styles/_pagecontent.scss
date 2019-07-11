@@ -66,7 +66,7 @@ ol {
 }
 
 .welcomeblock {
-	margin-top: 8em;
+	margin-top: 6em;
 }
 
 .welcomepanels {
@@ -831,14 +831,17 @@ ol {
 
 	.welcomepanels {
 		font-size: 14px;
+		width: 74%;
 
 		li {
-			list-style-image: url(./images/bullet.svg);
+			background-position: 0px 8px;
+			padding-left: 20px;
+			background-size: 8px;
 	
 			&:last-of-type {
 				font-size: 14px;
 				font-weight: 700;
-				padding: 0.2em 0;
+				padding: 0.3em 1.3em;
 				list-style: none;
 			}
 		}
