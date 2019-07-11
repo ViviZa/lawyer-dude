@@ -70,9 +70,44 @@
 
 @media only screen and (max-width: 599px) {
 
+  .answer-container {
+    height: 7em;
+    width: 7em;
+    margin: 0 auto;
+    float: none;
+  }
+
   .jailgametwo-container {
     width: 90%;
     margin: 2em auto;
+  }
+
+  .images-container {
+
+    height: 6rem;
+
+      img {
+        height: 3em;
+        width: 3em;
+      }
+  }
+
+  .box {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0;
+  }
+
+  .answercontainer{
+    width: 5rem;
+    height: 5rem;
+    margin: 0;
+
+      div {
+        font-size: 9px;
+        font-weight: 600;
+        margin-top: 0.6em;
+      }
   }
 }
 
