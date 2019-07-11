@@ -214,7 +214,7 @@ ol {
 	font-size: 20px;
 	width: 100%;
 	margin: 0.5em 0;
-	padding: 2em;
+	padding: 1em;
 	text-align: center;
 	background-color: lighten($lightgreen, 10%);
 }
@@ -322,7 +322,7 @@ ol {
 
 .quizQuestion {
 	background-color: $resource-background;
-	padding: 1em;
+	padding: 0.5em;
 	margin-bottom: 0.1em;
 	letter-spacing: 1.1px;;
     float: left;
@@ -342,6 +342,7 @@ ol {
 
 	label {
 		display: inline-block;
+		margin: 0;
 	}
 
 	.wrong {
@@ -597,7 +598,7 @@ ol {
 	.correctAnswers {
 		font-size: 16px;
 		margin: 0.5em 0;
-		padding: 1em;
+		padding: 0.5em;
 		text-align: center;
 		background-color: lighten($lightgreen, 10%);
 	}
@@ -988,6 +989,7 @@ ol {
 	}
 
 	.quizQuestion {
+		padding: 1em;
 	
 		input {
 			margin: 0.4em 1em;
