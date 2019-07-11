@@ -517,12 +517,18 @@ ol {
 
 		.speechlawyer-container {
 			margin-top: -1em;
-			margin-right: -0.5em;
+			margin-right: 0.5em;
 		}
 
 		.speechlawyer-sceptical, .speechlawyer-happy {
 			width: 100%;
 		} 
+
+		.jailpagecontent {
+			overflow-y: scroll;
+			padding: 0;
+			margin: 0;
+		}
 	}
 
 	.llama-container {
@@ -607,6 +613,12 @@ ol {
 		margin-left: 0;
 		padding: 25px;
 		overflow-y: scroll;
+	}
+
+	.jailpagecontent {
+		overflow-y: scroll;
+		padding: 0;
+		margin: 0;
 	}
 
 	.buttoncontainer {
