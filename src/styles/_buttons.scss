@@ -215,6 +215,14 @@
 			margin: 0 1em;
 		}
 	}
+
+	.game-back-btn {
+		position: relative;
+		float: right;
+		font-size: 14px;
+		padding: 7px 25px;
+		margin: 0 3em 2em 0;
+	}
 } 
 
 @media (min-width: 600px) and (max-width: 767px) {
