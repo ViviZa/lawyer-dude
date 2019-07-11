@@ -157,6 +157,13 @@
 	}
 }
 
+.gameContentBox {
+
+	.StartButton {
+		margin: 0;
+	}
+}
+
 .Jailpage {
 
 	.buttoncontainer {
@@ -195,15 +202,11 @@
 
 	.SettingsButton{
 		position: fixed;
-		margin-top: -0.5em;
-		margin-left: 0.4em;
-		margin-right: 0; 
+		margin-right: 0;
 		background-color: unset;
-		width: 10%;
-		height: 7%; 
 		z-index: 100;
-		top: auto;
-		top: auto;
+		top: -0.7em;
+		left: 0;
 	}
 } 
 
@@ -231,24 +234,34 @@
 		font-size: 16px;
 	}
 
+	.startpagecontent {
+
+		&.overviewpagecontent {
+
+			.StartButton {
+				margin: 1em;
+			}
+		}
+	}
+
 	.game-back-btn {
 		margin: 40px 25px 25px 0;
 	}
 
 	.SettingsButton{
 		position: fixed;
-		margin-top: -0.1em;
 		margin-right: 0;
-		margin-left: 1em;
 		background-color: unset;
-		width: 5%;
+		z-index: 100;
+		top: -0.2em;
+		left: 0;
 	}
 }
 
 @media (min-width: 1260px) and (max-width: 1440px) {
 
 	.StartButton {
-		margin: 44px;
+		margin: 20px;
 	}
 
 	.ForthButton {
@@ -298,6 +311,14 @@
 
 		.StartButton {
 			margin: 0.7em;
+		}
+	}
+
+	.gameContentBox {
+
+		.StartButton {
+			margin: 0.2em;
+			padding: 7px 25px;
 		}
 	}
 }

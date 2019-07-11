@@ -1,1 +1,12 @@
-<svg id="game-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>true-false_icon</title><path d="M15.16,27.7A12.54,12.54,0,1,1,27.7,15.16,12.55,12.55,0,0,1,15.16,27.7Zm0-22a9.51,9.51,0,1,0,9.51,9.51A9.53,9.53,0,0,0,15.16,5.65Z"/><rect x="6.39" y="14.16" width="17.67" height="2" transform="translate(-6.25 15.88) rotate(-46.8)"/><g id="layer1"><path id="path4483" class="cls-1" d="M14.22,10l-2.88,2.88L9.51,11.08l-.78.78,2.61,2.62L15,10.81Z"/></g><rect x="16.05" y="18.2" width="5.27" height="1.25" transform="translate(-7.81 20.07) rotate(-47.91)"/><rect x="18.06" y="16.19" width="1.25" height="5.27" transform="translate(-7.8 17.38) rotate(-42.1)"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<svg id="true-false-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+    <defs><style>.cls-1{fill-rule:evenodd;}</style></defs>
+    <path d="M15.16,27.7A12.54,12.54,0,1,1,27.7,15.16,12.55,12.55,0,0,1,15.16,27.7Zm0-22a9.51,9.51,0,1,0,9.51,9.51A9.53,9.53,0,0,0,15.16,5.65Z"/>
+    <rect x="6.39" y="14.16" width="17.67" height="2" transform="translate(-6.25 15.88) rotate(-46.8)"/>
+    <g id="layer1">
+        <path id="path4483" class="cls-1" d="M14.22,10l-2.88,2.88L9.51,11.08l-.78.78,2.61,2.62L15,10.81Z"/>
+    </g>
+    <rect x="16.05" y="18.2" width="5.27" height="1.25" transform="translate(-7.81 20.07) rotate(-47.91)"/>
+    <rect x="18.06" y="16.19" width="1.25" height="5.27" transform="translate(-7.8 17.38) rotate(-42.1)"/>
+</svg>

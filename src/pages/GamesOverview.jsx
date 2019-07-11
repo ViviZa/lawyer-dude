@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router";
 import data from '../data.json';
+import { ReactComponent as DragIcon } from '../images/drag_icon.svg';
+import { ReactComponent as TrueFalseIcon } from '../images/true-false_icon.svg';
+import { ReactComponent as UseCaseIcon } from '../images/usecase_icon.svg';
+import { ReactComponent as MatchIcon } from '../images/switch_icon.svg';
 import SettingsButton from "../components/SettingsButton";
 
 class GamesOverview extends Component {
@@ -52,12 +56,14 @@ class GamesOverview extends Component {
             <div className="row">
                 <div className="gameContentBox col">
                     <div className="iconcontainer">
+                      <MatchIcon className="boxicon" />
                       <h3 className="headline">Match the License</h3>
                     </div>
                     <button className="StartButton hover" onClick={() => this.redirectToNextPage(1)}>PLAY</button>
                 </div>
                 <div className="gameContentBox col">
                     <div className="iconcontainer">
+                      <UseCaseIcon className="boxicon" />
                       <h3 className="headline">Understand the use case</h3>
                     </div>
                     <button className="StartButton hover" onClick={() => this.redirectToNextPage(2)}>PLAY</button>
@@ -67,12 +73,14 @@ class GamesOverview extends Component {
             <div className="row">
                 <div className="gameContentBox col">
                     <div className="iconcontainer">
+                      <TrueFalseIcon className="boxicon" />
                       <h3 className="headline">True or false?</h3>
                     </div>
                     <button className="StartButton hover" onClick={() => this.redirectToNextPage(3)} >PLAY</button>
                 </div>
                 <div className="gameContentBox col">
                     <div className="iconcontainer">
+                      <DragIcon className="boxicon" />
                       <h3 className="headline">Drop the icon!</h3>
                     </div>
                     <button className="StartButton hover" onClick={() => this.redirectToNextPage(4)}>PLAY</button>
