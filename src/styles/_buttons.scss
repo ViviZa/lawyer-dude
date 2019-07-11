@@ -208,6 +208,13 @@
 		top: -0.7em;
 		left: 0;
 	}
+
+	.gameContentBox {
+
+		.StartButton {
+			margin: 0 1em;
+		}
+	}
 } 
 
 @media (min-width: 600px) and (max-width: 767px) {
