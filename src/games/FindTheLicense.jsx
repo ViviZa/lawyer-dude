@@ -186,9 +186,6 @@ class FindTheLicense extends Component {
                     }}
                   />
                   <p className={`correctAnswers ${buttonClicked ? "" : "disableAnswers"}`}> {correctAnswersText} </p>
-                  <button className="quiz-btn" onClick={this.validate}>
-                    Submit answers
-                  </button>
                 </div>
                 <QuizQuestion
                   key={"question1" + textIndex}
@@ -244,6 +241,11 @@ class FindTheLicense extends Component {
                   option={options[8]}
                   rightAnswers={panels[textIndex].correctAnswers}
                 />
+                <div className="center-btn-container">
+                  <button className="quiz-btn" onClick={this.validate}>
+                      Submit answers
+                  </button>
+                </div>
               </div>
               {textIndex + 1 < panels.length && buttonClicked === true ? (
                 <div className="buttoncontainer col">

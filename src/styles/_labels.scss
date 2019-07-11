@@ -119,6 +119,13 @@ label {
 		font-size: 11px;
 	}
 
+	label {
+
+		&.choice {
+			font-size: 14px;
+		}
+	}
+
 	.licenceProperty-container, .selectProperty-container {
 		width: 100%;
 		margin: 0.2em auto;
