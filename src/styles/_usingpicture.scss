@@ -25,7 +25,7 @@
     width: 60%;
 }
 
-.licenseDropdown{
+.licenseDropdown {
     width: 100%;
 }
 
@@ -35,7 +35,7 @@
     width: 100%;
 }
 
-.license-notice{
+.license-notice {
     display: inline-block;
     font-size: 16px;
     letter-spacing: 3px;
@@ -48,7 +48,7 @@
     line-height: 2;
 }
 
-.copy-button{
+.copy-button {
     display: inline-block;
 	font-size: 14px;
 	font-weight: bold;
@@ -89,12 +89,6 @@
     padding: 3em 2em;
 }
 
-@media (min-width: 768px) and (max-width: 1259px) {
-    .select-container {
-        width: 26em;
-    }
-}
-
 @media only screen and (max-width: 599px) {
 
     .select-container {
@@ -102,6 +96,30 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 1259px) {
+    .select-container {
+        width: 26em;
+    }
+}
+
 @media (min-width: 1260px) and (max-width: 1440px) {
 
+    .license-notice {
+        height: 11rem;
+        margin: 0 2rem;
+    }
+
+    .copy-button {
+        margin: 1rem 2rem;
+    }
+
+    .notice-container {
+        width: 60%;
+    }
+
+    .license-disclaimer {
+        margin-top: 1.5em;
+        padding: 1.5em 1em;
+        font-size: 11px;
+    }
 }
