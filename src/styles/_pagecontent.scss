@@ -358,6 +358,10 @@ ol {
 }
 
 @media only screen and (max-width: 599px) {
+
+	body {
+		overflow-y: scroll;
+	}
   
 	h1 {
 		font-size: 18px;
@@ -454,7 +458,6 @@ ol {
 		margin-left: 0;
 		padding: 35px 25px 25px 25px;
 		text-align: center;
-		overflow-y: scroll;
 	}
 
 	.buttoncontainer {
@@ -574,6 +577,10 @@ ol {
 
 @media (min-width: 600px) and (max-width: 767px) {
 
+	body {
+		overflow-y: scroll;
+	}
+
 	.startpagecontent {
 
 		h1 {
@@ -595,7 +602,6 @@ ol {
 	.pagecontent {
 		margin-left: 0;
 		padding: 25px;
-		overflow-y: scroll;
 	}
 
 	.buttoncontainer {
@@ -615,6 +621,10 @@ ol {
 }
 
 @media (min-width: 768px) and (max-width: 1259px) {
+
+	body {
+		overflow-y: scroll;
+	}
 
 	h1 {
 		margin: 1em;
@@ -795,7 +805,6 @@ ol {
 		margin-left: 0;
 		padding: 45px 25px 25px 25px;
 		text-align: center;
-		overflow-y: scroll;
 	}
 
 	.buttoncontainer {
