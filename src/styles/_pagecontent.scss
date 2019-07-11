@@ -692,11 +692,18 @@ ol {
 	.answerbubbletext {
 		width: 29em;
 		height: 20em;
+		margin-top: 8em;
 	}
 
 	.speechbubbletext-jail {
 		font-size: 24px;
 		height: 9em;
+	}
+
+	ol {
+		margin: 0;
+		height: 16em;
+		overflow-y: scroll;
 	}
 
 
