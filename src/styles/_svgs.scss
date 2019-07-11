@@ -278,7 +278,6 @@
 	}
 
 	.settings-svg {
-		padding: 0;
 		width: 90%;
 	}
 
@@ -396,6 +395,10 @@
 		}
 	}
 
+	.settings-svg {
+		width: 90%;
+	}
+
 	#settings g {
 		stroke: $darkblue;
 		stroke-width: 5;
@@ -419,10 +422,6 @@
 		font-weight: 600;
 		margin-top: 2.5em;
 		margin-left: 9em;
-	}
-
-	.settings-svg { 
-		padding: 0;
 	}
 
 	#settings g {

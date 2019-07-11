@@ -240,11 +240,11 @@
 
 	.SettingsButton{
 		position: fixed;
-		margin-top: -0.1em;
 		margin-right: 0;
-		margin-left: 1em;
 		background-color: unset;
-		width: 5%;
+		z-index: 100;
+		top: -0.2em;
+		left: 0;
 	}
 }
 
