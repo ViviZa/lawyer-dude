@@ -361,8 +361,8 @@
 
 	.jail-speech {
 		
-		margin-top: 5em;
-		margin-left: 5em;
+		margin-top: -3em;
+		margin-left: 0em;
 		text-align: center;
 	
 		&:before {
@@ -380,6 +380,10 @@
 			padding-bottom: 75%;
 			background: url(./images/answerbubble-320.svg) no-repeat;
 		}
+	}
+
+	.jailpagecontent {
+		height: 100%;
 	}
 
 	.jailgame-intro-container {
@@ -408,6 +412,14 @@
 		stroke: $darkblue;
 		stroke-width: 5;
 	}
+
+	.Jailpage {
+
+		#settings g {
+			stroke: white;
+			stroke-width: 3;
+		}
+	}
 }
 
 
@@ -431,6 +443,14 @@
 
 	#settings g {
 		stroke-width: 4;
+	}
+
+	.jailpagecontent {
+
+		.speechlawyer-container {
+			margin-top: -0.5em;
+			margin-left: 2em;
+		}
 	}
 
 	// .resourceContainer {
