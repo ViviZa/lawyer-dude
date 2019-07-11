@@ -158,13 +158,11 @@ class TemplateDecision extends Component {
                 <ol type="A">
                   {decisions.map((decision, index) => {
                     return (
-                      <li>
-                        <div
+                      <li
                           className="option_btn"
                           onClick={() => this.redirectToNextPage(index)}
                         >
                           {decision}
-                        </div>
                       </li>
                     );
                   })}
