@@ -2,8 +2,8 @@
 <svg version="1.1" id="image-placeholder" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 48 36" style="enable-background:new 0 0 48 36;" xml:space="preserve">
 <g>
-	<path class="st0" d="M0,36h48V0H0V36z M2,34v-7.6l11-11l10,10l17-17l6,6V34H2z M46,2v9.6l-6-6l-17,17l-10-10l-11,11V2H46z"/>
-	<path class="st0" d="M23,15c2.8,0,5-2.2,5-5s-2.2-5-5-5s-5,2.2-5,5S20.2,15,23,15z M23,7c1.7,0,3,1.3,3,3s-1.3,3-3,3s-3-1.3-3-3
+	<path style="fill: #FFF;" d="M0,36h48V0H0V36z M2,34v-7.6l11-11l10,10l17-17l6,6V34H2z M46,2v9.6l-6-6l-17,17l-10-10l-11,11V2H46z"/>
+	<path style="fill: #FFF;" d="M23,15c2.8,0,5-2.2,5-5s-2.2-5-5-5s-5,2.2-5,5S20.2,15,23,15z M23,7c1.7,0,3,1.3,3,3s-1.3,3-3,3s-3-1.3-3-3
 		S21.3,7,23,7z"/>
 </g>
 </svg>

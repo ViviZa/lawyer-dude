@@ -2,12 +2,15 @@
 
 
 .imgView {
-    margin: 0 auto;
-	width: 30rem;
+	background-color: lighten($darkblue, 72%);
+    margin: 55px 0 0 0;
+    width: 40%;
+    float: left;
 }
 
 .imageContent {
     width: 100%;
+    padding: 2em;
 }
 
 .licenceProperty {
@@ -34,14 +37,26 @@
 
 .license-notice{
     display: inline-block;
-    width: 25rem;
+    font-size: 16px;
+    letter-spacing: 3px;
+	color: #A5A5A5;
+    border: 2px solid lighten(#A5A5A5, 20%);
+    margin: 1rem 1rem 1rem 3rem;
+    width: 90%;
     height: 13rem;
+    padding: 2em;
+    line-height: 2;
 }
 
 .copy-button{
     display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #A5A5A5;
     vertical-align: top;
-    margin: 1rem;
+    margin: 3rem 0 1rem 3rem;
+    width: 100%;
 
     & .copy{
         margin: 0px;
@@ -49,7 +64,9 @@
 }
 
 .notice-container {
-    margin-top: 2rem;
+    display: inline-block;
+    margin-top: 55px;
+    text-align: left;
 }
 
 .select-container {
@@ -63,6 +80,13 @@
     margin-left: 1rem;
     box-sizing: border-box;
     text-align: initial;
+}
+
+.license-disclaimer {
+    display: inline-block;
+    margin-top: 4em;
+    background-color: $resource-background;
+    padding: 3em 2em;
 }
 
 @media (min-width: 768px) and (max-width: 1259px) {
@@ -80,7 +104,4 @@
 
 @media (min-width: 1260px) and (max-width: 1440px) {
 
-    .select-container {
-        width: 30em;
-    }
 }

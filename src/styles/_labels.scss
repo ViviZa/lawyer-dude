@@ -146,6 +146,10 @@ label {
 		&.picture-specs-input {
 			margin-top: 0.5em;
 		}
+
+		&.picture-upload-input {
+			margin-top: 0.7em;
+		}
 	}
 
 	.url-label, .licenceProperty, .selectProperty, .entername-label {
@@ -154,6 +158,7 @@ label {
 
 		&.selectProperty {
 			padding-top: 1.2em;
+			margin: 0.6em 2em 1em 0;
 		}
 	}
 
@@ -166,7 +171,13 @@ label {
 		margin: 0;
 		font-size: 0.9em;
 	}
+
 	.selectProperty-container {
-		margin: 0.5em auto;
+		margin: 0 auto;
+	}
+
+	.license-select-wrap {
+		width: 81%;
+		margin: 0.5em 0;
 	}
 }

@@ -76,10 +76,6 @@
 	margin: 3em auto;
 }
 
-.url-upload-btn {
-	margin: 3em auto;
-}
-
 .SettingsButton {
 	border-style: none; 
 	background-color: $darkred;
@@ -281,6 +277,11 @@
 		height: 55px;
 		width: 55px;
 		padding: 10px 16px 14px 10px;
+	}
+
+	.url-upload-btn {
+		margin: 0 auto;
+		padding: 10px 25px;
 	}
 
 	.match-btn {
