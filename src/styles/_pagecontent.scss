@@ -857,12 +857,25 @@ ol {
 		height: 26.5em;
 	}
 
-	.gameContentBox {
-		height: 11em;
-	}
-
 	.boxicon {
 		height: 4em;
+	}
+
+	.iconcontainer {
+		margin-top: 0;
+	}
+
+	.gameContentBox {
+		height: 11em;
+
+		.boxicon {
+			height: 3em;
+		}
+
+		h3 {
+			height: 1.2em;
+			margin: 0.5em auto;
+		}
 	}
 	
 	.buttoncontainer {
