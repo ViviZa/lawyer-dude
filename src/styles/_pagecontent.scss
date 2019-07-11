@@ -128,11 +128,17 @@ ol {
 	height: 7em;
 }
 
+.Jailpage {
+	overflow: hidden;
+}
+
 .jailpagecontent {
-	width: 90%;
+	width: 100%;
 	z-index: 10;
 	margin:auto;
 	text-align: center;
+	overflow: hidden;
+	padding: 5em;
 
 	.resourceContainer {
 		background-color: $jailresource-background;
@@ -156,6 +162,11 @@ ol {
 	div {
 		height: inherit; 
 		padding: 0 1em;
+		overflow-y: scroll;
+		overflow-y: auto;
+	}
+
+	ol {
 		overflow-y: scroll;
 		overflow-y: auto;
 	}
@@ -911,7 +922,7 @@ ol {
 		height: 9em;
 
 		ol {
-			height: 8em; 
+			height: 10em; 
 		}
 	}
 
