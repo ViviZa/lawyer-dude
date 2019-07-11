@@ -2,12 +2,15 @@
 
 
 .imgView {
-    margin: 0 auto;
-	width: 30rem;
+	background-color: lighten($darkblue, 72%);
+    margin: 55px 0 0 0;
+    width: 40%;
+    float: left;
 }
 
 .imageContent {
     width: 100%;
+    padding: 2em;
 }
 
 .licenceProperty {
@@ -22,7 +25,7 @@
     width: 60%;
 }
 
-.licenseDropdown{
+.licenseDropdown {
     width: 100%;
 }
 
@@ -32,16 +35,28 @@
     width: 100%;
 }
 
-.license-notice{
+.license-notice {
     display: inline-block;
-    width: 25rem;
+    font-size: 16px;
+    letter-spacing: 3px;
+	color: #A5A5A5;
+    border: 2px solid lighten(#A5A5A5, 20%);
+    margin: 1rem 1rem 1rem 3rem;
+    width: 90%;
     height: 13rem;
+    padding: 2em;
+    line-height: 2;
 }
 
-.copy-button{
+.copy-button {
     display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #A5A5A5;
     vertical-align: top;
-    margin: 1rem;
+    margin: 3rem 0 1rem 3rem;
+    width: 100%;
 
     & .copy{
         margin: 0px;
@@ -49,7 +64,9 @@
 }
 
 .notice-container {
-    margin-top: 2rem;
+    display: inline-block;
+    margin-top: 55px;
+    text-align: left;
 }
 
 .select-container {
@@ -65,22 +82,76 @@
     text-align: initial;
 }
 
-@media (min-width: 768px) and (max-width: 1259px) {
-    .select-container {
-        width: 26em;
-    }
+.license-disclaimer {
+    display: inline-block;
+    margin-top: 4em;
+    background-color: $resource-background;
+    padding: 3em 2em;
 }
 
 @media only screen and (max-width: 599px) {
 
-    .select-container {
-        width: 13em;
+    .imgView {
+        margin: 0;
+        width: 100%;
+    }
+
+    .license-notice {
+        margin: 1rem 0 0 0;
+        padding: 1em;
+        width: 100%;
+    }
+
+    .copy-button {
+        margin: 2rem 1rem 0 0;
+    }
+
+    .notice-container {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .license-disclaimer {
+        margin-top: 2em;
+        padding: 1.5em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1259px) {
+
+    .license-notice {
+        height: 9rem;
+        margin: 1rem 2rem;
+        padding: 1em 2em;
+        line-height: 1.5;
+    }
+    .copy-button {
+        margin: 1rem 2rem;
+    }
+
+    .notice-container {
+        width: 60%;
     }
 }
 
 @media (min-width: 1260px) and (max-width: 1440px) {
 
-    .select-container {
-        width: 30em;
+    .license-notice {
+        height: 11rem;
+        margin: 0 2rem;
+    }
+
+    .copy-button {
+        margin: 1rem 2rem;
+    }
+
+    .notice-container {
+        width: 60%;
+    }
+
+    .license-disclaimer {
+        margin-top: 1.5em;
+        padding: 1.5em 1em;
+        font-size: 11px;
     }
 }

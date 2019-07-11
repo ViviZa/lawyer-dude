@@ -5,7 +5,7 @@ import data from "../data.json";
 import ForthButton from "../components/ForthButton";
 import Select from "react-select";
 import BackButton from "./../components/BackButton";
-import Placeholder from "../images/index.png";
+import Placeholder from "../images/image-placeholder.svg";
 import SpeechBubbleContainer from "./../components/SpeechBubbleContainer";
 
 const options = [
@@ -292,7 +292,7 @@ class UsingTheImage extends Component {
             onChange={ev => this.updateTextFieldValue(ev, "licenseNotice")}
           />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: disclaimer }} />
+        <div className="license-disclaimer" dangerouslySetInnerHTML={{ __html: disclaimer }} />
         <div className="buttoncontainer col"> 
           <BackButton previousText={this.resetValues} />
           <ForthButton nextText={this.redirectToNextPage} />
