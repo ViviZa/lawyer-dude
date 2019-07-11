@@ -57,6 +57,7 @@
 
 	.resToC {
 		position: absolute;
+		width: 20em;
 	}
 	
 	.resContent {
@@ -82,6 +83,7 @@
 
 		.resToC {
 			position: relative;
+			width: unset;
 		}
 	}
 
@@ -107,6 +109,19 @@
 		font-size: 14px;
 		line-height: 1.5;
 		margin: 1em 0;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+	.Resources {
+		.resContent {
+			h1 {
+				padding-left: 0;
+			}
+		}
+		.resToC {
+			width: unset;
+		}
 	}
 }
 
