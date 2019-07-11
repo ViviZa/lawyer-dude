@@ -55,6 +55,8 @@ h1 {
 
 ol {
 	margin: 0;
+	height: 15em;
+	overflow-y: scroll;
 
 	li:first-of-type {
 		padding-top: 0;
