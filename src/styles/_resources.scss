@@ -57,6 +57,7 @@
 
 	.resToC {
 		position: absolute;
+		width: 20em;
 	}
 	
 	.resContent {
@@ -70,6 +71,21 @@
 }
 
 @media only screen and (max-width: 599px) {
+
+	.Resources {
+		.resContent {
+			width: 100%;
+			float: none;
+			h1 {
+				padding-left: 0;
+			}
+		}
+
+		.resToC {
+			position: relative;
+			width: unset;
+		}
+	}
 
 	.resourceContainer {
 		padding: 1em;
@@ -93,6 +109,19 @@
 		font-size: 14px;
 		line-height: 1.5;
 		margin: 1em 0;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+	.Resources {
+		.resContent {
+			h1 {
+				padding-left: 0;
+			}
+		}
+		.resToC {
+			width: unset;
+		}
 	}
 }
 
