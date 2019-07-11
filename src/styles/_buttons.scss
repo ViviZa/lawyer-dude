@@ -229,6 +229,18 @@
 		margin: 0 3em 2em 0;
 		letter-spacing: 1px;
 	}
+
+	.Jailpage {
+
+		.SettingsButton {
+			position: fixed;
+			margin-right: 0;
+			background-color: $darkred;
+			z-index: 100;
+			top: 0.5em;
+			left: 0.5em;
+		}
+	}
 } 
 
 @media (min-width: 600px) and (max-width: 767px) {
@@ -276,6 +288,18 @@
 		z-index: 100;
 		top: -0.2em;
 		left: 0;
+	}
+
+	.Jailpage {
+
+		.SettingsButton {
+			position: fixed;
+			margin-right: 0;
+			background-color: $darkred;
+			z-index: 100;
+			top: 2em;
+			left: 2em;
+		}
 	}
 }
 
