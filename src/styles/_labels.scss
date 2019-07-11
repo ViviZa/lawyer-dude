@@ -59,6 +59,11 @@ label {
 		margin: 2em 2em 1em 0;
 		padding: 0.8em 1em;
 	}
+
+	&.license-property {
+		padding-top: 0;
+		margin: 0 2em 1em 0;
+	}
 }
 
 .url-form {
@@ -80,7 +85,6 @@ label {
 }
 
 .license-select-wrap {
-	display: inline-block;
 	width: 86%;
 	box-sizing: border-box;
 	text-align: initial;
